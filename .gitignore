@@ -1,0 +1,217 @@
+*.log
+*.sublime-project
+*.sublime-settings
+*.sublime-workspace
+build.properties*
+build.xml
+config
+destructiveChanges.xml
+package.xml
+resource-bundles/
+raw/node_modules/
+raw/docs/
+src/applications/
+src/classes/ChangePasswordController.cls
+src/classes/ChangePasswordController.cls-meta.xml
+src/classes/ChangePasswordControllerTest.cls
+src/classes/ChangePasswordControllerTest.cls-meta.xml
+src/classes/ForgotPasswordController.cls
+src/classes/ForgotPasswordController.cls-meta.xml
+src/classes/ForgotPasswordControllerTest.cls
+src/classes/ForgotPasswordControllerTest.cls-meta.xml
+src/classes/MyProfilePageController.cls
+src/classes/MyProfilePageController.cls-meta.xml
+src/classes/MyProfilePageControllerTest.cls
+src/classes/MyProfilePageControllerTest.cls-meta.xml
+src/classes/SiteLoginController.cls
+src/classes/SiteLoginController.cls-meta.xml
+src/classes/SiteLoginControllerTest.cls
+src/classes/SiteLoginControllerTest.cls-meta.xml
+src/classes/SiteRegisterController.cls
+src/classes/SiteRegisterController.cls-meta.xml
+src/classes/SiteRegisterControllerTest.cls
+src/classes/SiteRegisterControllerTest.cls-meta.xml
+src/components/SiteFooter.component
+src/components/SiteFooter.component-meta.xml
+src/components/SiteHeader.component
+src/components/SiteHeader.component-meta.xml
+src/layouts/Account-Account %28Marketing%29 Layout.layout
+src/layouts/Account-Account %28Sales%29 Layout.layout
+src/layouts/Account-Account %28Support%29 Layout.layout
+src/layouts/Account-Account Layout.layout
+src/layouts/Asset-Asset Layout.layout
+src/layouts/Campaign-Campaign Layout.layout
+src/layouts/CampaignMember-Campaign Member Page Layout.layout
+src/layouts/Case-Case %28Marketing%29 Layout.layout
+src/layouts/Case-Case %28Sales%29 Layout.layout
+src/layouts/Case-Case %28Support%29 Layout.layout
+src/layouts/Case-Case Layout.layout
+src/layouts/CaseClose-Close Case Layout.layout
+src/layouts/Contact-Contact %28Marketing%29 Layout.layout
+src/layouts/Contact-Contact %28Sales%29 Layout.layout
+src/layouts/Contact-Contact %28Support%29 Layout.layout
+src/layouts/Contact-Contact Layout.layout
+src/layouts/ContentVersion-Content Version Layout.layout
+src/layouts/Contract-Contract Layout.layout
+src/layouts/DandBCompany-D%26B Company Layout.layout
+src/layouts/DuplicateRecordSet-Duplicate Record Set Layout.layout
+src/layouts/Event-Event Layout.layout
+src/layouts/FeedItem-Feed Item Layout.layout
+src/layouts/Global-Global Layout.layout
+src/layouts/Goal-Goal Layout.layout
+src/layouts/GoalLink-Goal Link Layout.layout
+src/layouts/Idea-Idea Layout.layout
+src/layouts/JobTracker-Job Tracker Layout - Summer %2715.layout
+src/layouts/JobTracker-Job Tracker Layout - Winter %2716.layout
+src/layouts/JobTracker-Job Tracker Layout.layout
+src/layouts/Lead-Lead %28Marketing%29 Layout.layout
+src/layouts/Lead-Lead %28Sales%29 Layout.layout
+src/layouts/Lead-Lead %28Support%29 Layout.layout
+src/layouts/Lead-Lead Layout.layout
+src/layouts/Macro-Macro Layout.layout
+src/layouts/Metric-Completion Metric Layout.layout
+src/layouts/Metric-Formato de medici\303\263n de finalizaci\303\263n.layout
+src/layouts/Metric-Metric Layout.layout
+src/layouts/MetricDataLink-Metric Data Link Layout.layout
+src/layouts/Opportunity-Opportunity %28Marketing%29 Layout.layout
+src/layouts/Opportunity-Opportunity %28Sales%29 Layout.layout
+src/layouts/Opportunity-Opportunity %28Support%29 Layout.layout
+src/layouts/Opportunity-Opportunity Layout.layout
+src/layouts/OpportunityLineItem-Opportunity Product Layout.layout
+src/layouts/Order-Order Layout.layout
+src/layouts/OrderItem-Order Product Layout.layout
+src/layouts/Pricebook2-Price Book Layout.layout
+src/layouts/PricebookEntry-Price Book Entry Layout.layout
+src/layouts/Product2-Product Layout.layout
+src/layouts/SocialPersona-Social Persona Layout.layout
+src/layouts/SocialPost-Social Post Layout.layout
+src/layouts/Solution-Solution Layout.layout
+src/layouts/Task-Task Layout.layout
+src/layouts/User-User Layout.layout
+src/layouts/UserProvAccount-User Provisioning Account Layout.layout
+src/layouts/UserProvisioningLog-User Provisioning Log Layout.layout
+src/layouts/UserProvisioningRequest-User Provisioning Request Layout.layout
+src/layouts/WorkCoaching-Coaching Layout.layout
+src/layouts/WorkFeedback-Feedback Layout - Summer %2715.layout
+src/layouts/WorkFeedback-Feedback Layout - Winter %2716.layout
+src/layouts/WorkFeedback-Feedback Layout.layout
+src/layouts/WorkFeedbackQuestion-Feedback Question Layout - Summer %2715.layout
+src/layouts/WorkFeedbackQuestion-Feedback Question Layout - Winter %2716.layout
+src/layouts/WorkFeedbackQuestion-Feedback Question Layout.layout
+src/layouts/WorkFeedbackQuestionSet-Feedback Question Set Layout - Summer %2715.layout
+src/layouts/WorkFeedbackQuestionSet-Feedback Question Set Layout - Winter %2716.layout
+src/layouts/WorkFeedbackQuestionSet-Feedback Question Set Layout.layout
+src/layouts/WorkFeedbackRequest-Feedback Request Layout - Summer %2715.layout
+src/layouts/WorkFeedbackRequest-Feedback Request Layout - Winter %2716.layout
+src/layouts/WorkFeedbackRequest-Feedback Request Layout.layout
+src/layouts/WorkFeedbackTemplate-Feedback Template Layout.layout
+src/layouts/WorkPerformanceCycle-Performance Cycle Layout - Summer %2715.layout
+src/layouts/WorkPerformanceCycle-Performance Cycle Layout - Winter %2716.layout
+src/layouts/WorkPerformanceCycle-Performance Cycle Layout.layout
+src/objects/Account.object
+src/objects/AccountCleanInfo.object
+src/objects/AccountContactRole.object
+src/objects/Activity.object
+src/objects/Asset.object
+src/objects/AssistantProgress.object
+src/objects/Campaign.object
+src/objects/CampaignMember.object
+src/objects/Case.object
+src/objects/CaseContactRole.object
+src/objects/Contact.object
+src/objects/ContactCleanInfo.object
+src/objects/ContentVersion.object
+src/objects/Contract.object
+src/objects/ContractContactRole.object
+src/objects/DandBCompany.object
+src/objects/DuplicateRecordItem.object
+src/objects/DuplicateRecordSet.object
+src/objects/Event.object
+src/objects/FeedItem.object
+src/objects/ForecastingCategoryMapping.object
+src/objects/Idea.object
+src/objects/Lead.object
+src/objects/LeadCleanInfo.object
+src/objects/Macro.object
+src/objects/MacroAction.object
+src/objects/MacroInstruction.object
+src/objects/Opportunity.object
+src/objects/OpportunityCompetitor.object
+src/objects/OpportunityContactRole.object
+src/objects/OpportunityLineItem.object
+src/objects/Order.object
+src/objects/OrderItem.object
+src/objects/PartnerRole.object
+src/objects/Pricebook2.object
+src/objects/PricebookEntry.object
+src/objects/Product2.object
+src/objects/Site.object
+src/objects/SocialPersona.object
+src/objects/Solution.object
+src/objects/StreamingChannel.object
+src/objects/Task.object
+src/objects/User.object
+src/objects/UserProvisioningRequest.object
+src/package.xml
+src/pages/ChangePassword.page
+src/pages/ChangePassword.page-meta.xml
+src/pages/ForgotPassword.page
+src/pages/ForgotPassword.page-meta.xml
+src/pages/MyProfilePage.page
+src/pages/MyProfilePage.page-meta.xml
+src/pages/SiteLogin.page
+src/pages/SiteLogin.page-meta.xml
+src/pages/SiteRegister.page
+src/pages/SiteRegister.page-meta.xml
+src/pages/SiteRegisterConfirm.page
+src/pages/SiteRegisterConfirm.page-meta.xml
+src/pages/SiteTemplate.page
+src/pages/SiteTemplate.page-meta.xml
+src/sites/
+src/tabs/
+src/translations/
+src/workflows/Account.workflow
+src/workflows/Asset.workflow
+src/workflows/AssistantProgress.workflow
+src/workflows/Campaign.workflow
+src/workflows/CampaignMember.workflow
+src/workflows/Case.workflow
+src/workflows/Contact.workflow
+src/workflows/Contract.workflow
+src/workflows/DandBCompany.workflow
+src/workflows/DuplicateRecordItem.workflow
+src/workflows/DuplicateRecordSet.workflow
+src/workflows/Event.workflow
+src/workflows/FeedItem.workflow
+src/workflows/Goal.workflow
+src/workflows/GoalLink.workflow
+src/workflows/Idea.workflow
+src/workflows/Lead.workflow
+src/workflows/Macro.workflow
+src/workflows/MacroAction.workflow
+src/workflows/MacroInstruction.workflow
+src/workflows/Metric.workflow
+src/workflows/Opportunity.workflow
+src/workflows/OpportunityLineItem.workflow
+src/workflows/Order.workflow
+src/workflows/OrderItem.workflow
+src/workflows/Organization.workflow
+src/workflows/Product2.workflow
+src/workflows/Question.workflow
+src/workflows/Reply.workflow
+src/workflows/Site.workflow
+src/workflows/SocialPersona.workflow
+src/workflows/SocialPost.workflow
+src/workflows/Solution.workflow
+src/workflows/StreamingChannel.workflow
+src/workflows/Task.workflow
+src/workflows/User.workflow
+src/workflows/UserLicense.workflow
+src/workflows/UserProvisioningRequest.workflow
+src/workflows/WorkCoaching.workflow
+src/workflows/WorkFeedback.workflow
+src/workflows/WorkFeedbackQuestion.workflow
+src/workflows/WorkFeedbackQuestionSet.workflow
+src/workflows/WorkFeedbackRequest.workflow
+src/workflows/WorkFeedbackTemplate.workflow
+src/workflows/WorkPerformanceCycle.workflow
