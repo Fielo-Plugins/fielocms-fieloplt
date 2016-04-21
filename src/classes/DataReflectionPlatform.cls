@@ -35,7 +35,7 @@ public with sharing class DataReflectionDefault implements DataInterface{
                         }
                         newMapData.put(c.Id, BannerData.getBanners(fieldSet, program.Id, c.Id, c.Tag__c, c.Category__c, c.Limit__c.intValue(), 0, c.OrderBy__c));
                     }else if(c.ComponentLibrary__r.Name == 'Badges'){
-                        newMapData.put(c.Id, FrontEndUtil.getBadges(OrganizationUtil.getFieldSet(c.FieldSet__c), program.Id, c.Limit__c.intValue(), 0, c.OrderBy__c));
+                        newMapData.put(c.Id, getBadges(OrganizationUtil.getFieldSet(c.FieldSet__c), program.Id, c.Limit__c.intValue(), 0, c.OrderBy__c));
                     }else if(c.ComponentLibrary__r.Name == 'Branches'){
                         newMapData.put(c.Id, FrontEndUtil.getBranches(OrganizationUtil.getFieldSet(c.FieldSet__c), c.Limit__c.intValue(), 0, c.OrderBy__c));
                     }else if(c.ComponentLibrary__r.Name == 'Catalog'){
@@ -61,7 +61,7 @@ public with sharing class DataReflectionDefault implements DataInterface{
                         if(c.ComponentLibrary__r.LinkField__c != null){
                             fieldSet = OrganizationUtil.getJoinedList(fieldSet,new List<String>{c.ComponentLibary__r.LinkField__c});
                         }
-                        newMapData.put(c.Id, NavigationData.getNavigations(c.Navigation__c, fieldSet, program.Id));
+                        newMapData.put(c.Id, getNavigations(c.Navigation__c, fieldSet, program.Id));
                     }else if(c.ComponentLibrary__r.Name == 'Redemptions'){
                         String whereCondition = 'Redemption__r.Status__c != \'Open\' AND Redemption__r.Member__c = \'' + MemberUtil.getMemberId() + '\'';
                         Id redemptionId = c.RecordId__c;
@@ -163,7 +163,7 @@ public with sharing class DataReflectionDefault implements DataInterface{
                 newData.addAll(aux);
 
             }else if(component.ComponentLibrary__r.Name == 'Badges'){
-                List<sObject> aux = FrontEndUtil.getBadges(OrganizationUtil.getFieldSet(component.FieldSet__c), program.Id, Integer.valueOf(component.Limit__c), offset, orderBy);
+                List<sObject> aux = getBadges(OrganizationUtil.getFieldSet(component.FieldSet__c), program.Id, Integer.valueOf(component.Limit__c), offset, orderBy);
                 newData.addAll(aux);
             }else if(component.ComponentLibrary__r.Name == 'Branches'){
                 List<sObject> aux = FrontEndUtil.getBranches(OrganizationUtil.getFieldSet(component.FieldSet__c), Integer.valueOf(component.Limit__c), offset, orderBy);
@@ -212,7 +212,7 @@ public with sharing class DataReflectionDefault implements DataInterface{
                 List<sObject> aux = TransactionData.getTransactions(OrganizationUtil.getFieldSet(component.FieldSet__c), null, null, null, component.Limit__c.intValue(), offset, null, orderBy);
                 newData.addAll(aux);
             }else if(component.ComponentLibrary__r.Name == 'Navigation'){
-                List<sObject> aux = NavigationData.getNavigations(component.Navigation__c, OrganizationUtil.getFieldSet(component.FieldSet__c), program.Id);
+                List<sObject> aux = getNavigations(component.Navigation__c, OrganizationUtil.getFieldSet(component.FieldSet__c), program.Id);
                 newData.addAll(aux);
             }else if(component.ComponentLibrary__r.Name == 'Redemptions'){
                 String whereCondition = 'Redemption__r.Status__c = \'Close\' AND Redemption__r.Member__c = \'' + MemberUtil.getMemberId() + '\'';
@@ -238,6 +238,61 @@ public with sharing class DataReflectionDefault implements DataInterface{
         }
 
         return newData;
+    }
+
+    private static List<Badge__c> getBadges(List<String> fields, Id programId, Integer quantity, Integer offset, String orderBy){
+        List<Badge__c> badgeItems = new List<Badge__c>();
+        Set<String> fieldSet = new Set<String>();
+        if (fields != null){
+            fieldSet.addAll(fields);
+        }
+        fieldSet.addAll(new Set<String>{'Id', 'Name'});
+
+        String query = 'SELECT ';
+        for (String field : fieldSet){
+            query += field + ', ';
+        }
+        query = query.removeEnd(', ');
+
+        Id memberId = MemberUtil.getMemberId();
+        Set<Id> badgeIds = new Set<Id>();
+        for(BadgeMember__c bm : [Select Badge__c FROM BadgeMember__c WHERE Member__c =: memberId]){
+            badgeIds.add(bm.Badge__c);
+        }
+
+        query += ' FROM Badge__c WHERE Id In: badgeIds AND Program__c =: programId';
+
+        //LIMIT
+        if(quantity != null){
+            query += ' LIMIT ' + quantity;
+        }
+
+        //OFFSET
+        if(offset != null){
+            query += ' OFFSET ' + offset;
+        }
+
+        //ORDER by
+        if(String.isNotBlank(orderBy)){
+            query += ' ORDER BY ' + orderBy;
+        }
+
+        //return query;
+        system.debug('Badges query: '+query);
+        badgeItems = database.query(query);
+        //MemberUtil.filterSegments(bannerItems, RedemptionUtil.lookForMatchingRedemptionRulesCookie());
+
+        return badgeItems;
+    }
+
+    private static List<Navigation__c> getNavigations(Id parentId, List<String> fields, Id programId){
+        Set<Id> segNavIds = new Set<Id>();
+        for(SegmentDomain__c segDom : [SELECT Navigation__c FROM SegmentDomain__c WHERE Segment__c in : RedemptionUtil.lookForMatchingRedemptionRulesCookie()]){
+            segNavIds.add(segDom.Navigation__c);
+        }
+
+        String query = 'SELECT Name, CustomURL__c, FormulaURL__c, (SELECT Name, CustomURL__c, FormulaURL__c FROM Navigations__r ORDER BY Order__c) FROM Navigation__c WHERE Parent__c =: parentId AND Program__c =: programId AND (Id in : segNavIds OR HasSegments__c = false) ORDER BY Order__c';
+        return Database.query(query);
     }
 
 }

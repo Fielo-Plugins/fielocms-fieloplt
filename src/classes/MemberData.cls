@@ -19,7 +19,7 @@ public with sharing class MemberData implements FieloCMS.DataInterface{
                         }
                     }else if(c.ComponentReference__c == 'MemberSelection'){
                     	Site__c program = new ProgramsSelector().selectBySiteUrl();
-        	      		newMapData.put(c.Id, MemberService.getRelatedMembers(new Set<String>(OrganizationUtil.getFieldSet(c.FieldSet__c)), UserInfo.getUserId(), program.Id));
+        	      		newMapData.put(c.Id, getRelatedMembers(new Set<String>(OrganizationUtil.getFieldSet(c.FieldSet__c)), UserInfo.getUserId(), program.Id));
                     }else if(c.ComponentReference__c == 'OrganizationMembers'){
         	      		Member__c loggedMember = new MembersSelector(new Set<String>{'RecordType.DeveloperName'}).selectLoggedMember();
         	      		if(loggedMember.RecordType.DeveloperName == 'OrganizationAccount'){

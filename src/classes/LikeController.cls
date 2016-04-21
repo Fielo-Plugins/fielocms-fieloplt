@@ -7,7 +7,7 @@ global with sharing class LikeController {
         try {
             ComponentsEnabled__c settings = [SELECT SObject__c FROM ComponentsEnabled__c WHERE Name =: compReference];
             Member__c member = MemberUtil.getLoggedMember(null);
-            if ( MemberUtil.doLikeIt(member.Id, parentId, settings.sObject__c) ) {
+            if ( doLikeIt(member.Id, parentId, settings.sObject__c) ) {
                 result.refresh.add( new RemoteActionResult.RemoteActionRefresh('likeValue', 'true') );        
             } else {
                 result.refresh.add( new RemoteActionResult.RemoteActionRefresh('likeValue', 'false' ) );
@@ -24,6 +24,30 @@ global with sharing class LikeController {
         }
         
         return result;
+    }
+
+    private static Boolean doLikeIt(Id memberId, String parentId, String objectName){        
+        if(objectName == 'Reward__c'){
+            List<Like__c> likes = [SELECT Id, Member__c, ParentId__c FROM Like__c WHERE Member__c =: memberId AND Reward__c =: parentId];
+            if(likes.isEmpty()){
+                insert new Like__c(Member__c = memberId , Reward__c = parentId);
+                return true;
+            }else{
+                delete likes;
+                return false;
+            }
+        }else if(objectName == 'News__c'){
+            List<Like__c> likes = [SELECT Id, Member__c, ParentId__c FROM Like__c WHERE Member__c =: memberId AND News__c =: parentId];
+            if(likes.isEmpty()){
+                insert new Like__c(Member__c = memberId , News__c = parentId);
+                return true;
+            }else{
+                delete likes;
+                return false;
+            }
+        }
+
+        return null;
     }
 
 }

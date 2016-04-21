@@ -35,7 +35,7 @@ public with sharing class MemberCreateFromAccountExtension {
                 for ( String id : listAccountId ) {
                     accountIds.add(id);
                 }
-                createResults = MemberService.createFromAccounts(accountIds, programId);
+                createResults = createFromAccounts(accountIds, programId);
             } catch(Exception e) {
                 result.addMessage( new RemoteActionResult.RemoteActionMessage(e) );
             }
@@ -61,6 +61,57 @@ public with sharing class MemberCreateFromAccountExtension {
     */
     public List<SelectOption> getPrograms(){
         return SiteUtil.getProgramsSelectOptions();
+    }
+
+    private static Map<Id, String> createFromAccounts(Set<Id> accountIds, String programId){
+        Map<Id, String> errorsMap;
+        AccountsSelector accountsSelector = new AccountsSelector();
+
+        SObjectUnitOfWork uow = new SObjectUnitOfWork(new List<Schema.SobjectType>{Member__c.SObjectType});
+        Id indAccRT;
+        Id orgAccRT;
+
+        for(RecordType rt : new RecordTypesSelector().getRecordTypes(OrganizationUtil.getPrefixUnderScore() + 'Member__c')){
+            if(rt.DeveloperName == 'OrganizationAccount') orgAccRT = rt.Id;
+            if(rt.DeveloperName == 'IndividualAccount') indAccRT = rt.Id;
+        }
+
+        List<Id> accountIdsList = new List<Id>();
+
+        Map<Id, RecordType> accRecordTypesMap = new Map<Id, RecordType>(new RecordTypesSelector().getRecordTypes('Account'));
+
+        Map<Id,String> accountsNameMap = new Map<Id,String>();
+
+        for(Account acc : accountsSelector.selectByIdWithPersonAccountContacts(accountIds)){
+            accountsNameMap.put(acc.Id, acc.Name);
+            Member__c member = new Member__c(Program__c = programId, Account__c = acc.Id);
+
+            if(acc.get('RecordTypeId') != null && accRecordTypesMap.get((Id)acc.get('RecordTypeId')).DeveloperName == 'PersonAccount'){
+                member.RecordTypeId = indAccRT;
+                Contact c = acc.Contacts.get(0);
+                member.Contact__c = c.Id;
+                member.FirstName__c = c.FirstName;
+                member.LastName__c = c.LastName;
+                member.Email__c = c.Email;
+            }else{
+                member.RecordTypeId = orgAccRT;
+                member.OrganizationName__c = acc.Name;
+            }
+            accountIdsList.add(acc.Id);
+            uow.registerNew(member);
+        }
+
+        try {
+            uow.commitWork();
+        } catch(DMLException e) {
+            errorsMap = new Map<Id, String>();
+            //Message to return error
+            for(Integer i = 0; i < e.getNumDML() ; i++){
+                errorsMap.put(accountIdsList.get(e.getDmlIndex(i)), accountsNameMap.get(accountIdsList.get(e.getDmlIndex(i))) + ': ' + e.getDMLMessage(i));
+            }
+        }
+
+        return errorsMap;
     }
 
 }
