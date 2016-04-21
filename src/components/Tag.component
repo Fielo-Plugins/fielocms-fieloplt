@@ -1,0 +1,10 @@
+<apex:component layout="none" >
+    <apex:attribute name="record" type="SObject" description="" />
+    <apex:attribute name="field" type="Field" description="" />
+    <apex:attribute name="relatedListName" type="String" description="" />
+    <apex:attribute name="config" type="SObject" description="" />
+
+    <apex:repeat value="{!record[relatedListName]}" var="tagItem" >
+        <c:Image url="{!tagItem.Tag__r.AttachmentId__c}" />    
+    </apex:repeat>
+</apex:component>

@@ -1,0 +1,30 @@
+<apex:component controller="ShoppingCartController" allowDML="true" access="global" layout="none">
+    <apex:attribute name="config" type="SObject" description="" />
+    <apex:attribute name="recordSet" type="SObject[]" description="" />
+    <apex:attribute name="fieldSet" type="Field[]" description="" />
+    <apex:attribute name="compSettings" type="ComponentsEnabled__c" description="" />
+
+    <apex:panelGroup rendered="{!recordSet.size > 0 }" >
+
+    <apex:variable var="fieldValue" value="{!$ObjectType.Member__c.Name}" />
+    <apex:variable var="prefix" value="{!SUBSTITUTE(SUBSTITUTE(fieldValue,'Member__c',''),'__','.')}" />    
+
+	<div class="fielo-form js-has-message {!config['CSSClasses__c']}" data-componentid="{! config['Id'] }">
+	    <div data-componentid="{! config['Id'] }" class="fielo-message" ></div>
+	    <form class="fielo-form__shopping-cart js-to-be-initialized" data-remoteaction="" data-remotearguments="componentId,quantities" data-remoteobject="Redemption__c" >
+	        <input type="hidden" name="componentId" value="{! config['Id'] }" />    
+	    	<apex:componentBody />
+	        <div class="fielo-controls" >
+		        <button data-remoteaction="{!prefix}ShoppingCartController.save" class="fielo-button js-to-be-initialized fielo-button__save" >{!$Label.Save}</button>
+		        <button data-remoteaction="{!prefix}ShoppingCartController.emptyCart" class="fielo-button js-to-be-initialized fielo-button__empty-cart" >{!$Label.EmptyCart}</button>
+		        <button data-remoteaction="{!prefix}ShoppingCartController.checkout" class="fielo-button js-to-be-initialized fielo-button__checkout" >{!$Label.CreateVoucher}</button>
+		    </div>
+	    </form>
+	 </div>
+	</apex:panelGroup>
+	<apex:panelGroup rendered="{!recordSet.size == 0 }" >
+	<span>
+		{! $Label.ErrorNoItemShoppingCart}
+	</span>
+	</apex:panelGroup>
+</apex:component>

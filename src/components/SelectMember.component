@@ -1,0 +1,22 @@
+<apex:component layout="none" controller="SelectMemberController" >
+    <apex:attribute name="record" type="SObject" description="" />
+    <apex:attribute name="field" type="Field" description="" />
+    <apex:attribute name="config" type="SObject" description="" />
+    <apex:attribute name="type" type="String" description="" />
+
+    <apex:variable var="fieldValue" value="{!$ObjectType.Member__c.Name}" />
+    <apex:variable var="prefix" value="{!SUBSTITUTE(SUBSTITUTE(fieldValue,'Member__c',''),'__','.')}" />
+
+    <apex:panelGroup layout="none" rendered="{!(type == 'Member' || (record['OrganizationAccount__c'] != null && record['IsManager__c'] == true))}" >
+    <div class="fielo-form">
+        <form class="js-to-be-initialized fielo-form--is-component-{!config.ComponentLibrary__r.Name} {!config['CSSClasses__c']}" data-remoteaction="{!prefix}SelectMemberController.selectMember" data-remotearguments="componentId,memberId,type" data-componentid="{! config['Id'] }" >
+            <input type="hidden" name="componentId" value="{!config['id']}" />
+            <input type="hidden" name="memberId" value="{!record['Id']}" data-object-property="Id"  data-attribute-replace="value"/>
+            <input type="hidden" name="type" value="{!type}" />
+            <apex:panelGroup layout="none" rendered="{!!record[prefix+'Blocked__c']}">
+                <button type="submit" class="fielo-button fielo-button__submit" >{!IF(type == 'Member', $Label.LoginAsMember,$Label.LoginAsOrganization)}</button>
+            </apex:panelGroup>
+        </form>
+    </div>
+    </apex:panelGroup>
+</apex:component>

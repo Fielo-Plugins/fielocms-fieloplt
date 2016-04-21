@@ -1,0 +1,63 @@
+<apex:component layout="none" controller="RegisterStep2Controller" >
+	<apex:attribute name="compSettings" type="ComponentsEnabled__c" description="" />
+    <apex:attribute name="config" type="SObject" description="" />
+    <apex:attribute name="record" type="SObject" description="" assignTo="{!member}" />
+    <apex:attribute name="fieldSet" type="Field[]" description="" />
+
+    <apex:panelGroup layout="none" rendered="{!fieldSet.size == 0}">
+        <div class="fielo-message fielo-message--is-success">
+            <apex:outputText value="{!$Label.InfoRegisterApprovalInstructions}"/>
+        </div>
+    </apex:panelGroup>                 
+
+    <apex:panelGroup layout="none" rendered="{!status == 'Ok'}"> 
+        <!--<c:Form compSettings="{!compSettings}" config="{!config}" record="{!record}" fieldSet="{!fieldSet}" />-->
+        <apex:componentBody />
+    </apex:panelGroup>                
+
+    <apex:panelGroup layout="none" rendered="{!status == 'Member Completed'}">
+        <div>
+            <div class="fielo-message--is-error">{!$Label.ErrorRegistrationUserExists}</div>
+        </div>
+    </apex:panelGroup>
+
+    <apex:panelGroup layout="none" rendered="{!status == 'Invalid Member'}">
+        <div>
+            <div class="fielo-message--is-error">{!$Label.MemberInvalid}</div>
+        </div>
+    </apex:panelGroup>
+
+    <apex:panelGroup layout="none" rendered="{!status == 'Member in Approval'}">
+        <div class="fielo-message fielo-message--is-confirm">
+            <apex:outputText value="{!$Label.InfoMemberInApproval}"/>
+        </div>
+    </apex:panelGroup>
+
+    <apex:panelGroup layout="none" rendered="{!status == 'Member Rejected'}">
+        <div class="fielo-message fielo-message--is-confirm">
+            <apex:outputText value="{!$Label.MemberRejected}"/>
+        </div>
+    </apex:panelGroup>
+
+    <apex:panelGroup layout="none" rendered="{!status == 'Organization Account'}">
+        <div class="fielo-message fielo-message--is-confirm">
+            <apex:outputText value="{!$Label.OrganizationNotAllowed}"/>
+        </div>
+    </apex:panelGroup>
+    
+    <apex:panelGroup layout="none" rendered="{!status == 'Send for Approval'}">
+        <div class="fielo-title">{!$Label.Welcome}</div>
+    	<input type="button" styleClass="fielo-link" value="{!$Label.Continue}" onclick="continueRegistration();" />
+		<script>
+	    	function continueRegistration(){	    		
+	    		Visualforce.remoting.Manager.invokeAction('RegisterStep2Controller.continueRegistration', '{!record.Id}', function(result, event){		
+					if(result.messages != undefined && result.messages.length > 0){
+		                for (var i = 0; i < result.messages.length; i++) {		                    
+		                    alert(result.messages[i].summary);
+		                }
+		            }	                
+	    		}, {escape:true});
+	    	}
+	    </script>
+    </apex:panelGroup>
+</apex:component>

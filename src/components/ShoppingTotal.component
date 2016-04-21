@@ -1,0 +1,13 @@
+<apex:component layout="none">
+    <apex:attribute name="record" type="SObject" description="" />
+    <apex:attribute name="field" type="Field" description="" />
+    <apex:attribute name="config" type="SObject" description="" />
+    <apex:attribute name="relatedListName" type="String" description="" />
+
+    <!-- Chequea mediante la related list saca si esta en el Cart o no -->
+    <apex:variable var="total" value="{!0}" /> 
+    <apex:repeat value="{!record[relatedListName]}"  var="cartItem">
+        <apex:variable var="total" value="{! total + (cartItem.quantity__c * record['PointsCant__c']) }" />
+    </apex:repeat>
+    <span class="fielo-shopping__total">{!total}</span>
+</apex:component>
