@@ -1,10 +1,8 @@
-//NO DOCUMENT
 global with sharing class ShoppingCartController {
     
     @RemoteAction
-    global static RemoteActionResult save(Id componentId, String newQuantJSON){//Map<Id,Integer> newQuantitiesMap                
-        Member__c member = MemberUtil.getAllFieldsLoggedMember();
-        Redemption__c redemption = RedemptionUtil.getRedemption(member, 'FrontEnd');
+    global static RemoteActionResult save(Id componentId, String newQuantJSON){//Map<Id,Integer> newQuantitiesMap                        
+        Redemption__c redemption = RedemptionService.getOpenRedemption(MemberService.getCurrentMemberId(), 'FrontEnd');
         RemoteActionResult result = new RemoteActionResult();
         Savepoint sp = Database.setSavepoint();
         try{
@@ -47,14 +45,13 @@ global with sharing class ShoppingCartController {
         }
 
         if(redItemsWrapper.size() > 0){            
-            RedemptionUtil.addRedemptionItems(redemption.Id,redItemsWrapper);            
+            RedemptionService.addRedemptionItems(redemption.Id,redItemsWrapper);            
         }
     }
 
     @RemoteAction
-    global static RemoteActionResult checkout(Id componentId, String newQuantJSON){        
-        Member__c member = MemberUtil.getAllFieldsLoggedMember();
-        Redemption__c redemption = RedemptionUtil.getRedemption(member, 'FrontEnd');
+    global static RemoteActionResult checkout(Id componentId, String newQuantJSON){                
+        Redemption__c redemption = RedemptionUtil.getOpenRedemption(MemberService.getCurrentMemberId(), 'FrontEnd');
         Component__c component = [SELECT Id, DetailParameter__c, DetailPage__c FROM Component__c WHERE Id =: componentId];
         RemoteActionResult result = new RemoteActionResult();
         Savepoint sp = Database.setSavepoint();
@@ -63,7 +60,7 @@ global with sharing class ShoppingCartController {
                 Map<String,Object> newQuantitiesMap = (Map<String,Object>)JSON.deserializeUntyped(newQuantJSON);
                 saveCart(redemption, newQuantitiesMap);
             }
-            RedemptionUtil.closeRedemption(redemption);
+            RedemptionService.closeRedemption(redemption.Id);
             PageReference retPage = Page.Page;
             retPage.getParameters().put('pageId',component.DetailPage__c);
             retPage.getParameters().put(component.DetailParameter__c,redemption.Id);
@@ -89,7 +86,7 @@ global with sharing class ShoppingCartController {
         RemoteActionResult result = new RemoteActionResult();        
         Savepoint sp = Database.setSavepoint();
         try{
-            RedemptionUtil.deleteRedemption();
+            RedemptionService.deleteRedemptions(MemberService.getCurrentMemberId(), 'Open', 'FrontEnd');
             result.redirectURL = '#';
         }catch(Exception e){            
             Database.rollBack(sp);
@@ -99,8 +96,4 @@ global with sharing class ShoppingCartController {
         return result;
     }
 
-    global Member__c participant {get; set;}     
-    global Integer OrderItemSize {get; set;}
-    global Decimal RescuePoints {get; set;}
-    global ShoppingCartController(){} 
 }

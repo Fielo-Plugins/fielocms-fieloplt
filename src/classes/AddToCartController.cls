@@ -1,4 +1,3 @@
-//NO DOCUMENT
 global with sharing class AddToCartController {
    
     @RemoteAction
@@ -6,8 +5,7 @@ global with sharing class AddToCartController {
         Component__c component = [SELECT Id, DetailParameter__c, DetailPage__c FROM Component__c WHERE Id =: componentId];
         RemoteActionResult result = new RemoteActionResult();
         try{
-            Site__c program = SiteUtil.getSiteProgram(new List<String>{'ShoppingCart__c'});
-            Redemption__c redemption = RewardService.addToCart(rewardId, quantity, program.ShoppingCart__c);
+            Redemption__c redemption = RewardService.addToCart(MemberService.getCurrentMemberId(), rewardId, quantity, component.ShoppingCart__c);
             if(redemption != null){
                 if(redemption.Status__c == 'Open' || redemption.Status__c == null){
                     result.addMessage(new RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.SuccessRewardAddToChart)));

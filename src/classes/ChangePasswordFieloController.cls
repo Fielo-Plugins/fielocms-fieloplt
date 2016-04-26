@@ -1,9 +1,3 @@
-//NO DOCUMENT
-/**
-* @author Matias Trionfetti
-* @date   13/07/2011
-* @description  Class is used to change password in the site
-*/
 global with sharing class ChangePasswordFieloController {
 
     @RemoteAction
@@ -13,9 +7,9 @@ global with sharing class ChangePasswordFieloController {
         try{
             if(oldpassword == '') oldpassword = null;
             redirectPage = Site.changePassword(newPassword, verifyNewPassword, oldpassword);
-            Site__c program = SiteUtil.getSiteProgram(new List<String>{'MemberSelectionPage__c'});
-            if(program.MemberSelectionPage__c != null){
-                result.redirectURL = '/Page?pageId=' + program.MemberSelectionPage__c;
+            Site__c site = SiteUtil.getSiteProgram(new List<String>{'MemberSelectionPage__c'});
+            if(site.MemberSelectionPage__c != null){
+                result.redirectURL = '/Page?pageId=' + site.MemberSelectionPage__c;
             } else if(redirectPage != null){
                 result.redirectURL = redirectPage.getUrl();
             }
@@ -32,7 +26,4 @@ global with sharing class ChangePasswordFieloController {
         }
         return result;
     }
-
-    ///DEPRECATED
-    global static testmethod void testChangePasswordController(){}
 }

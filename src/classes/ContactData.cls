@@ -11,7 +11,7 @@ public with sharing class ContactData implements FieloCMS.DataInterface{
                         c.Qant__c = 5;
 
                     if(c.ComponentReference__c == 'InviteContacts'){
-                        Member__c loggedMember = MemberService.getLoggedMember(new Set<String>{'Account__c'});
+                        Member__c loggedMember = MemberService.getCurrentMember(new Set<String>{'Account__c'});
                         newMapData.put(c.Id, ContactService.getUnregisteredContacts(loggedMember.Account__c, null, c.Qant__c.intValue(), c.OrderBy__c));
                     }
                 }

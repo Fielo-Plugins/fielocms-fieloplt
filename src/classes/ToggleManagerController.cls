@@ -1,21 +1,21 @@
 //NO DOCUMENT
-global with sharing class BlockUnblockMemberController {
+global with sharing class ToggleManagerController {
 
     @RemoteAction
-    global static RemoteActionResult blockUnblockMember(Id componentId, Id memberId, String action){
-    	RemoteActionResult result = new RemoteActionResult();
+    global static RemoteActionResult toggleManager(Id componentId, Id memberId, String action){
+        RemoteActionResult result = new RemoteActionResult();
 
-    	try {
-    		MemberService.blockUnblock(MemberService.getCurrentMemberId(), new List<Id>{memberId});
+        try {
+            MemberService.toggleManager(MemberUtil.getMemberId(), new List<Id>{memberId}, action);
             result.addMessage(new RemoteActionResult.RemoteActionMessage(ApexPages.Severity.CONFIRM, Label.SuccessfulRemoteActionRefresh));
             result.redirectURL = '#';
-    	} catch(DMLException e) {
+        } catch(DMLException e) {
             result.addMessage(new RemoteActionResult.RemoteActionMessage(ApexPages.Severity.Error, e.getDMLMessage(0)));
         } catch (Exception e){
             result.addMessage(new RemoteActionResult.RemoteActionMessage(e, componentId));
         }
 
-    	if(ApexPages.hasMessages()){
+        if(ApexPages.hasMessages()){
             result.redirectURL = '';
             for(ApexPages.Message m : ApexPages.getMessages()){
                 result.addMessage(new RemoteActionResult.RemoteActionMessage(m));

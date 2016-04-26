@@ -1,9 +1,3 @@
-//NO DOCUMENT
-/**
-* @author Matias Trionfetti
-* @date 07/07/2011
-* @description Class used to do the Register in Two Step
-*/
 global without sharing class RegisterStep2Controller {
 
     public SObject member {get; set;}
@@ -50,16 +44,4 @@ global without sharing class RegisterStep2Controller {
         return result;
     }
 
-    /*global String password {get; set;}
-    global String confirmPassword {get; set;
-    global Member__c member {get; set;}
-    global String document2String {get; set;}
-    global Boolean checkMail {get; set;}
-    global Boolean userApprovalRegistration {get;set;}
-    global Boolean invalidContact {get; set;}
-    global Boolean confirmOneStepRegistration {get; set;}
-    global RegisterStep2Controller(){}
-    global PageReference confirmOneStepRegistration(){return null;}
-    global PageReference registerUser2(){return null;}
-    global PageReference cancelar(){return null;}*/
 }

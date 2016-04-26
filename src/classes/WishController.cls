@@ -2,11 +2,11 @@
 global class WishController {
     
     @RemoteAction
-    global static RemoteActionResult wish(Id rewardId, String WishController){                
+    global static RemoteActionResult wish(Id rewardId, String WishController){
         RemoteActionResult result = new RemoteActionResult();
         try {
             Member__c member = MemberUtil.getLoggedMember(null);
-            if ( doWish(member.Id,rewardId) ) {
+            if ( doWish(MemberService.getCurrentMemberId(),rewardId) ) {
                 result.refresh.add( new RemoteActionResult.RemoteActionRefresh( 'wish', 'true') );        
             } else {
                 result.refresh.add( new RemoteActionResult.RemoteActionRefresh( 'wish', 'false') );
@@ -21,7 +21,6 @@ global class WishController {
                 result.addMessage(new RemoteActionResult.RemoteActionMessage(m));
             }
         }
-        
         
         return result;
     }
