@@ -1,4 +1,4 @@
-public with sharing class RedemptionData {
+public with sharing class RedemptionAPI {
 	
 	public Map<Id, Object> getBulkData(List<Component__c> components){
         Site__c program = SiteUtil.getSiteProgram(new List<String>{'RewardView__c','NewsView__c','CustomPage__c', 'ShoppingCart__c'});

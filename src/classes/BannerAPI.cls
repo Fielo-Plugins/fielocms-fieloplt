@@ -1,4 +1,4 @@
-public with sharing class BannerData implements FieloCMS.DataInterface{
+public with sharing class BannerAPI implements FieloCMS.DataInterface{
 	
 	//BANNERS
     public Map<Id, Object> getBulkData(List<Component__c> components){

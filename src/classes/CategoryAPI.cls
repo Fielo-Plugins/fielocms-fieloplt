@@ -1,4 +1,4 @@
-public with sharing class CategoryData {
+public with sharing class CategoryAPI {
 	
 	public Map<Id, Object> getBulkData(List<Component__c> components){
         Map<String,ComponentLibrary__c> compSettingsMap = DataUtil.getComponentsEnabledMap(components);

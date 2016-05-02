@@ -1,4 +1,5 @@
-public with sharing class RewardData {
+public with sharing class NewsAPI {
+	
 
     public Map<Id, Object> getBulkData(List<Component__c> components){
         Site__c program = SiteUtil.getSiteProgram(new List<String>{'RewardView__c','NewsView__c','CustomPage__c', 'ShoppingCart__c'});
@@ -11,12 +12,18 @@ public with sharing class RewardData {
                     if(c.Limit__c == null)
                         c.Limit__c = 5;
 
-                    if(c.ComponentLibrary__r.Name == 'Catalog'){
-                        newMapData.put(c.Id, RewardData.getRewards(OrganizationUtil.getFieldSet(c.FieldSet__c), program.Id, null, c.Category__c != null ? new List<Id>{c.Category__c} : null, c.Tag__c, c.Limit__c.intValue(), 0, c.OrderBy__c, c.FilterBySegment__c));
-                    }else if(c.ComponentLibrary__r.Name == 'RewardDetail'){
-                        Id rewardId = c.RecordId__c;
-                        List<Reward__c> rewards = RewardData.getRewards(OrganizationUtil.getFieldSet(c.FieldSet__c), program.Id, ' Id = \'' + rewardId + '\'', null, null, 1, 0, null, null);
-                        newMapData.put(c.Id, (!rewards.isEmpty() ? rewards[0] : null));
+                    if(c.ComponentLibrary__r.Name == 'ContentFeed'){
+                        newMapData.put(c.Id, ContentFeedData.getNews(OrganizationUtil.getFieldSet(c.FieldSet__c), c.Id, null, null, null, c.Limit__c.intValue(), 0, c.OrderBy__c));
+                    }else if(c.ComponentLibrary__r.Name == 'ContentFeedWidget'){
+                        newMapData.put(c.Id, ContentFeedData.getNews(OrganizationUtil.getFieldSet(c.FieldSet__c), c.Id, null, c.Tag__c, c.Category__c, c.Limit__c.intValue(), 0, c.OrderBy__c));
+                    }else if(c.ComponentLibrary__r.Name == 'ContentFeedDetail'){
+                        Id newsId = c.RecordId__c;
+                        List<News__c> news = ContentFeedData.getNews(OrganizationUtil.getFieldSet(c.FieldSet__c), null, ' Id = \'' + newsId + '\'', null, null, 1, 0, null);
+                        newMapData.put(c.Id, (!news.isEmpty() ? news[0] : null));
+                    }if(c.ComponentLibrary__r.Name == 'ContentFeedDetail'){
+                        Id newsId = c.RecordId__c;
+                        List<News__c> news = ContentFeedData.getNews(OrganizationUtil.getFieldSet(c.FieldSet__c), null, ' Id = \'' + newsId + '\'', null, null, 1, 0, null);
+                        newMapData.put(c.Id, (!news.isEmpty() ? news[0] : null));
                     }
                 }
             }
@@ -67,5 +74,4 @@ public with sharing class RewardData {
             }
         }
     }
-
 }

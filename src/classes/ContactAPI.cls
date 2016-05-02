@@ -1,4 +1,4 @@
-public with sharing class ContactData implements FieloCMS.DataInterface{
+public with sharing class ContactAPI implements FieloCMS.DataInterface{
 	
 	public Map<Id, Object> getBulkData(List<Component__c> components){
         Map<String,ComponentLibrary__c> compSettingsMap = DataUtil.getComponentsEnabledMap(components);

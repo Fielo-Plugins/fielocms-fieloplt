@@ -1,4 +1,4 @@
-public with sharing class TransactionData {
+public with sharing class TransactionAPI {
 	
 	public Map<Id, Object> getBulkData(List<Component__c> components){
         Site__c program = SiteUtil.getSiteProgram(new List<String>{'RewardView__c','NewsView__c','CustomPage__c', 'ShoppingCart__c'});
