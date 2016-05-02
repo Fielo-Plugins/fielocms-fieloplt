@@ -1,5 +1,18 @@
-global with sharing class AddToCartController {
-   
+global with sharing class AddToCartController implements FieloCMS.SubComponentInterface {
+
+    public ApexPages.Component getSubComponent(Component__c config, Field field, SObject record){   
+        Component.AddToCart addToCart = new Component.AddToCart();
+        if(record != null){
+            addToCart.record = record;
+        }else{
+            addToCart.expressions.record = '{!record}';
+        }
+        addToCart.field = field;
+        addToCart.config = config;
+        addToCart.relatedListName = 'RedemptionItems__r';
+        return addToCart;
+    }
+
     @RemoteAction
     global static RemoteActionResult addToCart(Id componentId, Id rewardId, Integer quantity, Integer quantInCart){        
         Component__c component = [SELECT Id, DetailParameter__c, DetailPage__c FROM Component__c WHERE Id =: componentId];

@@ -1,5 +1,17 @@
-public with sharing class RedemptionAPI {
+public with sharing class RedemptionAPI implements FieloCMS.DataInterface, FieloCMS.ViewInterface{
 	
+    public ApexPages.Component getComponent(Component__c c){
+        if(OrganizationUtil.showComponent(compReference.Visibility__c)){
+            List<sObject> dataRecords = (List<sObject>)data;
+            List<Field> fieldSet = OrganizationUtil.getFieldsStructure(c, compReference.sObject__c);
+            Component.ShoppingCart shoppingCart = new Component.ShoppingCart(config = c, recordSet = dataRecords, fieldSet = fieldSet, compSettings = compReference);
+            ApexPages.Component listComponent = getListComponent(c, data, compReference);
+            attachListSubComponents(c, fieldSet, listComponent);
+            shoppingCart.childComponents.add(listComponent);
+            return shoppingCart;
+        }
+    }
+
 	public Map<Id, Object> getBulkData(List<Component__c> components){
         Site__c program = SiteUtil.getSiteProgram(new List<String>{'RewardView__c','NewsView__c','CustomPage__c', 'ShoppingCart__c'});
         Map<String,ComponentLibrary__c> compSettingsMap = DataUtil.getComponentsEnabledMap(components);

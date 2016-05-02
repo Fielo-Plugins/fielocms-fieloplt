@@ -1,5 +1,16 @@
-//NO DOCUMENT
-global with sharing class HandleInvitationsMembersController {
+global with sharing class HandleInvitationsMembersController implements FieloCMS.SubComponentInterface {
+
+    public ApexPages.Component getSubComponent(Component__c config, Field field, SObject record){   
+        Component.HandleInvitationsMembers handleInvitationsMembers = new Component.HandleInvitationsMembers();
+        handleInvitationsMembers.config = config;
+        handleInvitationsMembers.field = field;
+        if(record != null){
+            handleInvitationsMembers.record = record;
+        }else{
+            handleInvitationsMembers.expressions.record = '{!record}';
+        }
+        return handleInvitationsMembers;
+    }
 
     @RemoteAction
     global static RemoteActionResult resendInvitation(Id componentId, Id memberId){

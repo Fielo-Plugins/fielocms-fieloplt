@@ -1,5 +1,16 @@
-//NO DOCUMENT
-global with sharing class BlockUnblockMemberController {
+global with sharing class BlockUnblockMemberController implements FieloCMS.SubComponentInterface {
+
+    public ApexPages.Component getSubComponent(Component__c config, Field field, SObject record){   
+        Component.BlockUnblockMember blockUnblockMember = new Component.BlockUnblockMember();
+        blockUnblockMember.config = config;
+        blockUnblockMember.field = field;
+        if(record != null){
+            BlockUnblockMember.record = record;
+        }else{
+            BlockUnblockMember.expressions.record = '{!record}';
+        }
+        return BlockUnblockMember;
+    }
 
     @RemoteAction
     global static RemoteActionResult blockUnblockMember(Id componentId, Id memberId, String action){

@@ -1,6 +1,18 @@
-//NO DOCUMENT
-global with sharing class LikeController {
+global with sharing class LikeController implements FieloCMS.SubComponentInterface{
     
+    public ApexPages.Component getSubComponent(Component__c config, Field field, SObject record){
+        Component.Like likeComponent = new Component.Like();
+        if(record != null){
+            likeComponent.record = record;
+        }else{
+            likeComponent.expressions.record = '{!record}';
+        }
+        likeComponent.field = field;
+        likeComponent.config = config;
+        likeComponent.relatedListName = 'Likes__r';
+        return likeComponent;
+    }
+
     @RemoteAction
     global static RemoteActionResult likeRec(Id parentId, String compReference, String likeValue ){
         RemoteActionResult result = new RemoteActionResult();

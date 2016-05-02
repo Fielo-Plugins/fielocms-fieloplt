@@ -1,4 +1,4 @@
-public with sharing class TransactionAPI {
+public with sharing class TransactionAPI implements FieloCMS.DataInterface, FieloCMS.ControlInterface{
 	
 	public Map<Id, Object> getBulkData(List<Component__c> components){
         Site__c program = SiteUtil.getSiteProgram(new List<String>{'RewardView__c','NewsView__c','CustomPage__c', 'ShoppingCart__c'});
@@ -53,5 +53,44 @@ public with sharing class TransactionAPI {
                 newData.addAll(aux);
             }
         }
+    }
+    
+    public RemoteActionResult remoteComponentAction(Component__c component, sObject record){
+        ComponentLibrary__c compReference = [SELECT Id, Name FROM ComponentLibrary__c WHERE Id =: component.ComponentReference__c];
+        
+        Savepoint sp;
+
+        RemoteActionResult result = new RemoteActionResult();
+        List<RemoteActionResult.RemoteActionMessage> successMessages = new List<RemoteActionResult.RemoteActionMessage>();
+
+        try{                    
+            sp = Database.setSavepoint();
+            
+            Transaction__c trans = (Transaction__c)record;
+            trans.Type__c = (component.TransactionType__c != null && component.TransactionType__c != '') ? component.TransactionType__c : 'Code Insert';
+            CodeUtil.sendCode(trans);
+            successMessages.add(new RemoteActionResult.RemoteActionMessage( ApexPages.Severity.Info, Label.SuccessGetPointsMessageSite ));            
+        }catch(DmlException e){            
+            Database.rollback(sp);
+            if(ApexPages.hasMessages()){
+                result.redirectURL = '';
+                for(ApexPages.Message m : ApexPages.getMessages()){
+                    result.addMessage(new RemoteActionResult.RemoteActionMessage(m));
+                }
+            }
+            return result;
+        }catch(Exception e){
+            if(sp != null){
+                Database.rollback(sp);
+            }
+            result.addMessage(new RemoteActionResult.RemoteActionMessage(e));
+            return result;
+        }
+
+        if(!successMessages.isEmpty()){            
+            result.addMessages(successMessages);            
+        }
+
+        return result;
     }
 }

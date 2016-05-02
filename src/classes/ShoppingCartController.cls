@@ -1,5 +1,41 @@
-global with sharing class ShoppingCartController {
-    
+global with sharing class ShoppingCartController implements FieloCMS.SubComponentInterface {
+
+    public ApexPages.Component getSubComponent(Component__c config, Field field, SObject record){    
+        if(field.apiName == 'ShoppingQuantity'){
+            Component.ShoppingQuantity quant = new Component.ShoppingQuantity();
+            quant.config = config;
+            quant.field = field;
+            quant.relatedListName = 'RedemptionItems__r';
+            if(record != null){
+                quant.record = record;
+            }else{
+                quant.expressions.record = '{!record}';
+            }
+            return quant;
+        }else if(field.apiName == 'ShoppingTotal'){
+            Component.ShoppingTotal total = new Component.ShoppingTotal();
+            total.config = config;
+            total.field = field;
+            total.relatedListName = 'RedemptionItems__r';
+            if(record != null){
+                total.record = record;
+            }else{
+                total.expressions.record = '{!record}';
+            }
+            return total;
+        }else if(field.apiName == 'ShoppingDelete'){
+            Component.Delete del = new Component.Delete();
+            del.config = config;
+            del.field = field;
+            if(record != null){
+                del.record = record;
+            }else{
+                del.expressions.record = '{!record}';
+            }
+            return del;
+        }
+    }
+
     @RemoteAction
     global static RemoteActionResult save(Id componentId, String newQuantJSON){//Map<Id,Integer> newQuantitiesMap                        
         Redemption__c redemption = RedemptionService.getOpenRedemption(MemberService.getCurrentMemberId(), 'FrontEnd');

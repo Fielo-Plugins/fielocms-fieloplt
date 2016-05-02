@@ -1,6 +1,18 @@
-//NO DOCUMENT
-global class WishController {
+global class WishController implements FieloCMS.SubComponentInterface {
     
+    public ApexPages.Component getSubComponent(Component__c config, Field field, SObject record){
+        Component.Wish wishComponent = new Component.Wish();
+        if(record != null){
+            wishComponent.record = record;
+        }else{
+            wishComponent.expressions.record = '{!record}';
+        }
+        wishComponent.field = field;
+        wishComponent.config = config;
+        wishComponent.relatedListName = 'Members_Reward__r';
+        return wishComponent;
+    }
+
     @RemoteAction
     global static RemoteActionResult wish(Id rewardId, String WishController){
         RemoteActionResult result = new RemoteActionResult();
