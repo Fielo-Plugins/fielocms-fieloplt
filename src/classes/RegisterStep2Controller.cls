@@ -1,6 +1,22 @@
 global without sharing class RegisterStep2Controller {
 
-    public SObject member {get; set;}
+    public Boolean showPassword {get; set;}
+    public List<Field> fieldset {get; set;}    
+    public Member__c member {get{
+        if(member == null){     
+            Id memberId = ApexPages.currentPage().getParameters().get('memberId');
+            member = Database.query('SELECT ' + getFieldSet() + ' FROM FieloEE__Member__c WHERE Id =: memberId LIMIT 1');                
+        }
+        return member;
+    } set;}
+
+    private String getFieldset(){
+        List<String> fields = new List<String>();
+        for(Field field : fieldset){
+            fields.add(field.apiName);
+        }
+        return String.join(fields,',');        
+    }
 
     public Boolean showForm {get{if(!initLoaded) init(); return showForm;} private set;}
     public Boolean memberAlreadyRegistered {get{if(!initLoaded) init(); return memberAlreadyRegistered;} private set;}
@@ -15,10 +31,8 @@ global without sharing class RegisterStep2Controller {
     }
 
     private void init(){
-        initLoaded = true;
-        
-        Member__c m = (Member__c)member;
-        Id memberId = m != null ? m.Id : null;        
+        initLoaded = true;        
+        Id memberId = member != null ? member.Id : null;        
         status = MemberService.validateStatus(memberId);
     }
     
@@ -44,4 +58,30 @@ global without sharing class RegisterStep2Controller {
         return result;
     }
 
+    @RemoteAction
+    global static RemoteActionResult finishRegistration(SObject record, String password){    
+        try{
+            Member__c member = (Member__c)record;                
+            MemberService.finishRegistration(member);
+            if(showPassword){
+                PageReference passResult = MemberService.setPasswordAndLogin(record.Id, (String)passwordJson.get('Password'));
+                result.redirectURL = passResult.getUrl();
+            }
+        }catch(DmlException e){            
+            Database.rollback(sp);
+            if(ApexPages.hasMessages()){
+                result.redirectURL = '';
+                for(ApexPages.Message m : ApexPages.getMessages()){
+                    result.addMessage(new RemoteActionResult.RemoteActionMessage(m));
+                }
+            }
+            return result;
+        }catch(Exception e){
+            if(sp != null){
+                Database.rollback(sp);
+            }
+            result.addMessage(new RemoteActionResult.RemoteActionMessage(e));
+            return result;
+        }                
+    }  
 }

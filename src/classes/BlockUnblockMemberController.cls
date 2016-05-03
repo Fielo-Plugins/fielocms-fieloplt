@@ -1,8 +1,7 @@
 global with sharing class BlockUnblockMemberController implements FieloCMS.SubComponentInterface {
 
-    public ApexPages.Component getSubComponent(Component__c config, Field field, SObject record){   
-        Component.BlockUnblockMember blockUnblockMember = new Component.BlockUnblockMember();
-        blockUnblockMember.config = config;
+    public ApexPages.Component getSubComponent(Field field, SObject record){   
+        Component.BlockUnblockMember blockUnblockMember = new Component.BlockUnblockMember();        
         blockUnblockMember.field = field;
         if(record != null){
             BlockUnblockMember.record = record;
@@ -13,17 +12,17 @@ global with sharing class BlockUnblockMemberController implements FieloCMS.SubCo
     }
 
     @RemoteAction
-    global static RemoteActionResult blockUnblockMember(Id componentId, Id memberId, String action){
+    global static RemoteActionResult blockUnblockMember(Id memberId, String action){
     	RemoteActionResult result = new RemoteActionResult();
 
     	try {
-    		MemberService.blockUnblock(MemberService.getCurrentMemberId(), new List<Id>{memberId});
+    		FieloAlpha.MemberService.blockUnblock(new List<Id>{memberId}, action);
             result.addMessage(new RemoteActionResult.RemoteActionMessage(ApexPages.Severity.CONFIRM, Label.SuccessfulRemoteActionRefresh));
             result.redirectURL = '#';
     	} catch(DMLException e) {
             result.addMessage(new RemoteActionResult.RemoteActionMessage(ApexPages.Severity.Error, e.getDMLMessage(0)));
         } catch (Exception e){
-            result.addMessage(new RemoteActionResult.RemoteActionMessage(e, componentId));
+            result.addMessage(new RemoteActionResult.RemoteActionMessage(e));
         }
 
     	if(ApexPages.hasMessages()){

@@ -1,7 +1,6 @@
 <apex:component layout="none" controller="AddToCartController" >
     <apex:attribute name="record" type="SObject" description="" />
-    <apex:attribute name="field" type="Field" description="" />
-    <apex:attribute name="config" type="SObject" description="" />
+    <apex:attribute name="field" type="Field" description="" />    
     <apex:attribute name="relatedListName" type="String" description="" />
 
     <!-- Chequea mediante la related list saca si esta en el Cart o no -->
@@ -13,8 +12,7 @@
     <apex:variable var="fieldValue" value="{!$ObjectType.Member__c.Name}" />
     <apex:variable var="prefix" value="{!SUBSTITUTE(SUBSTITUTE(fieldValue,'Member__c',''),'__','.')}" />
     <div class="fielo-form">
-        <form class="fielo-form__add-to-cart js-to-be-initialized" data-remoteaction="{!prefix}AddToCartController.addToCart" data-remotearguments="componentId,recordId,quant,quantInCart" data-componentid="{! config['Id'] }" data-remoteobject="Redemption__c" data-alreadyincart="{!$Label.ShoppingExistingReward}">
-            <input type="hidden" name="componentId" value="{!config['id']}" />
+        <form class="fielo-form__add-to-cart js-to-be-initialized" data-remoteaction="{!prefix}AddToCartController.addToCart" data-remotearguments="recordId,quant,quantInCart" data-componentid="{! config['Id'] }" data-remoteobject="Redemption__c" data-alreadyincart="{!$Label.ShoppingExistingReward}">            
             <input type="hidden" name="recordId" value="{!record['Id']}" data-object-property="Id"  data-attribute-replace="value"/>
             <input type="number" name="quant" required="required" value="1" min="1" class="fielo-form__quantity"/>
             <input type="hidden" class="fielo-form__quantity-in-cart js-to-be-initialized" name="quantInCart" value="{!isInCart}" data-object-property="{!relatedListName}"  data-attribute-replace="value"/>

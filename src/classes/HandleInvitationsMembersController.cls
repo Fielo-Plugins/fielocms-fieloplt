@@ -1,8 +1,7 @@
 global with sharing class HandleInvitationsMembersController implements FieloCMS.SubComponentInterface {
 
-    public ApexPages.Component getSubComponent(Component__c config, Field field, SObject record){   
-        Component.HandleInvitationsMembers handleInvitationsMembers = new Component.HandleInvitationsMembers();
-        handleInvitationsMembers.config = config;
+    public ApexPages.Component getSubComponent(Field field, SObject record){   
+        Component.HandleInvitationsMembers handleInvitationsMembers = new Component.HandleInvitationsMembers();        
         handleInvitationsMembers.field = field;
         if(record != null){
             handleInvitationsMembers.record = record;
@@ -13,7 +12,7 @@ global with sharing class HandleInvitationsMembersController implements FieloCMS
     }
 
     @RemoteAction
-    global static RemoteActionResult resendInvitation(Id componentId, Id memberId){
+    global static RemoteActionResult resendInvitation(Id memberId){
         RemoteActionResult result = new RemoteActionResult();
 
         try {
@@ -23,7 +22,7 @@ global with sharing class HandleInvitationsMembersController implements FieloCMS
         } catch(DMLException e) {
             result.addMessage(new RemoteActionResult.RemoteActionMessage(ApexPages.Severity.Error, e.getDMLMessage(0)));
         } catch (Exception e){
-            result.addMessage(new RemoteActionResult.RemoteActionMessage(e, componentId));
+            result.addMessage(new RemoteActionResult.RemoteActionMessage(e));
         }
 
         if(ApexPages.hasMessages()){
@@ -37,15 +36,15 @@ global with sharing class HandleInvitationsMembersController implements FieloCMS
     }
 
     @RemoteAction
-    global static RemoteActionResult cancelInvitation(Id componentId, Id memberId){
+    global static RemoteActionResult cancelInvitation(Id memberId){
         RemoteActionResult result = new RemoteActionResult();
 
         try {
-            cancelInvitations(MemberUtil.getMemberId(), new Set<Id>{memberId});
+            cancelInvitations(new Set<Id>{memberId});
         } catch(DMLException e) {
             result.addMessage(new RemoteActionResult.RemoteActionMessage(ApexPages.Severity.Error, e.getDMLMessage(0)));
         } catch (Exception e){
-            result.addMessage(new RemoteActionResult.RemoteActionMessage(e, componentId));
+            result.addMessage(new RemoteActionResult.RemoteActionMessage(e));
         }
 
         if(ApexPages.hasMessages()){
@@ -75,31 +74,27 @@ global with sharing class HandleInvitationsMembersController implements FieloCMS
         uow.commitWork();
     }
 
-    private static void cancelInvitations(Id orgAccountId, Set<Id> memberIds){
-        List<Member__c> orgAccount = new MembersSelector( new Set<String>{'RecordType.DeveloperName', OrganizationUtil.getPrefixUnderScore()+'Blocked__c'} ).selectById( new Set<Id>{orgAccountId} );
-        if( orgAccount.get(0).RecordType.DeveloperName == 'OrganizationAccount' ){
-            if( !orgAccount.get(0).Blocked__c ){
-                Boolean doCommit = false;
-                SObjectUnitOfWork uow = new SObjectUnitOfWork(new List<Schema.SobjectType>{Member__c.SObjectType});
-                for(Member__c member : new MembersSelector( new Set<String>{'RecordType.DeveloperName'} ).selectById(memberIds)){
-                    if(member.RecordType.DeveloperName != 'OrganizationContributor'){
-                        throw new FieloCustomException(Label.ErrorOrganizationAccountAction);
+    public static void cancelInvitations(Set<Id> memberIds){
+        List<Member__c> members = new MembersSelector( new Set<String>{'RecordType.DeveloperName', OrganizationUtil.getPrefixUnderScore()+'OrganizationAccount__r.Blocked__c'} ).selectById(new Set<Id>(memberIds));                
+        Boolean doCommit = false;
+        SObjectUnitOfWork uow = new SObjectUnitOfWork(new List<Schema.SobjectType>{Member__c.SObjectType});                
+        for(Member__c member : new MembersSelector( new Set<String>{'RecordType.DeveloperName'} ).selectById(memberIds)){
+            if(!member.OrganizationAccount__r.Blocked__c){
+                if(member.RecordType.DeveloperName != 'OrganizationContributor'){
+                    throw new FieloCustomException(Label.ErrorOrganizationAccountAction);
+                } else {
+                    if(member.FieloAccountStatus__c == 'New'){
+                        uow.registerDeleted(member);
+                        doCommit = true;
                     } else {
-                        if(member.FieloAccountStatus__c == 'New'){
-                            uow.registerDeleted(member);
-                            doCommit = true;
-                        } else {
-                            throw new FieloCustomException(Label.ErrorDeleteFieloAccount);
-                        }
+                        throw new FieloCustomException(Label.ErrorDeleteFieloAccount);
                     }
                 }
-                if(doCommit)
-                    uow.commitWork();
-            } else {
+            }else{
                 throw new FieloCustomException(Label.ErrorFieloAccountBlocked);
             }
-        } else {
-            throw new FieloCustomException(Label.ErrorOrganizationAccountAction);
         }
+        if(doCommit)
+            uow.commitWork();            
     }
 }

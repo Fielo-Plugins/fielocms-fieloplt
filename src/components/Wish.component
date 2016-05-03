@@ -2,7 +2,6 @@
     <apex:attribute name="record" type="SObject" description="" />
     <apex:attribute name="field" type="Field" description="" />
     <apex:attribute name="relatedListName" type="String" description="" />
-    <apex:attribute name="config" type="SObject" description="" />
      
     <!-- Chequea mediante la related list esta en estado WiSHED o no -->
     <apex:variable var="isWished" value="false" /> 

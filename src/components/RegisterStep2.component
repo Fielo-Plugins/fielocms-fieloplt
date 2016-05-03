@@ -1,8 +1,8 @@
 <apex:component layout="none" controller="RegisterStep2Controller" >
 	<apex:attribute name="compSettings" type="ComponentsEnabled__c" description="" />
     <apex:attribute name="config" type="SObject" description="" />
-    <apex:attribute name="record" type="SObject" description="" assignTo="{!member}" />
-    <apex:attribute name="fieldSet" type="Field[]" description="" />
+    <apex:attribute name="fieldSet" type="Field[]" description="" assignTo="{!fieldset}" />
+    <apex:attribute name="showPassword" type="Boolean" description="" assignTo="{!showPassword}" />
 
     <apex:panelGroup layout="none" rendered="{!fieldSet.size == 0}">
         <div class="fielo-message fielo-message--is-success">
@@ -10,9 +10,42 @@
         </div>
     </apex:panelGroup>                 
 
-    <apex:panelGroup layout="none" rendered="{!status == 'Ok'}"> 
-        <!--<c:Form compSettings="{!compSettings}" config="{!config}" record="{!record}" fieldSet="{!fieldSet}" />-->
-        <apex:componentBody />
+    <apex:panelGroup layout="none" rendered="{!status == 'Ok'}">         
+        <div class="fielo-record fielo-form fielo-form--is-component-{!compSettings.Name} js-has-message {!config['CSSClasses__c']}" data-componentid="{! config['Id'] }">
+            <div data-componentid="{! config['Id'] }" class="fielo-messages" ></div>        
+            <form class="js-to-be-initialized" data-remoteaction="{!prefix}PageController.remoteComponentAction" data-remotearguments="componentId,SObject,Pre,Post" data-remoteobject="{!compSettings.sobject__c}" >
+                <fieldset>
+                    <apex:panelGroup layout="none" rendered="{!config['OptionalName__c']!=''}">
+                        <legend class="fielo-title" >{!config['OptionalName__c']}</legend>
+                    </apex:panelGroup>
+                    <input type="hidden" name="componentId" value="{! config['Id'] }" />
+                    <input type="hidden" name="{! IF( record['Id'] <> '', 'SObject.id', 'SObject.sObjectType' ) }" value="{! IF( record['Id'] <> '', record['Id'], compSettings.sobject__c) }" />
+                    <apex:repeat value="{!fieldset}" var="field" >
+                        <div class="mdl-grid fielo-field fielo-field--is-{!field.apiName}">
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__label" >
+                            <label for="{! config['Id'] }-{!field.apiName}" >{!field.label}</label>
+                            <apex:panelGroup layout="none" rendered="{!field.inlineHelpText <> '' }" >
+                                <div id="{! config['Id'] }_hlp{!field.apiName}">help</div><div class="mdl-tooltip" for="{! config['Id'] }_hlp{!field.apiName}">{!field.inlineHelpText}</div>
+                            </apex:panelGroup>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__value">
+                            <input class="fielo-input js-to-be-initialized" data-required="{!field.required}"  autocomplete="{!field.autocomplete}" placeholder="{!field.placeholder}" data-type="{!field.type}"  id="{! config['Id'] }-{!field.apiName}" name="SObject.{!field.apiName}"  value="{!record[field.apiName]}" />
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col fielo-messages" data-componentid="{!field.label}" />
+                    </div>
+
+                    <apex:panelGroup layout="none" rendered="{!showPassword}" >
+                        <input class="fielo-input" type="password" required="required"  autocomplete="current-password" id="{! config['Id'] }-{!field.apiName}" name="{!field.subType}.{!field.apiName}.{!field.apiName}"  />
+                        <input class="fielo-input" type="password" required="required"  autocomplete="current-password" id="{! config['Id'] }-{!field.apiName}" name="{!field.subType}.{!field.apiName}.{!field.apiName}"  />
+                    </apex:panelGroup>
+                </fieldset>
+                <div class="fielo-controls" >
+                    <button type="button" class="fielo-button__cancel hidden" >{!$Label.cancel}</button>
+                    <button type="submit" class="fielo-button fielo-button__submit" >{!$Label.submit}</button>
+                </div>
+            </form>
+        </div>
+
     </apex:panelGroup>                
 
     <apex:panelGroup layout="none" rendered="{!status == 'Member Completed'}">

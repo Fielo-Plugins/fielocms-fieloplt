@@ -1,7 +1,6 @@
-public with sharing class TagData {
+public with sharing class TagAPI implements FieloCMS.ViewSubComponentInterface,FieloCMS.DataInterface{
 	
-
-    public Map<Id, Object> getBulkData(List<Component__c> components){
+	public Map<Id, Object> getBulkData(List<Component__c> components){
         Map<String,ComponentLibrary__c> compSettingsMap = DataUtil.getComponentsEnabledMap(components);
         Map<Id,Object> newMapData = new Map<Id,Object>();
         //Prepare all the queries
@@ -22,5 +21,21 @@ public with sharing class TagData {
 
     public List<sObject> getData(Component__c component, Integer pageNumber, String orderBy, String filters){
         return null;
+    }
+    
+    public ApexPages.Component getSubComponent(Field field, SObject record){        
+        Component.Tag tag = new Component.Tag();
+        if(record != null){
+            tag.record = record;
+        }else{
+            tag.expressions.record = '{!record}';
+        }
+        tag.field = field;        
+        if(config.ComponentReference__c == 'Catalog'){
+            tag.relatedListName = 'RewardTag__r';
+        }else{
+            tag.relatedListName = 'TagItems__r';
+        }
+        return tag;        
     }
 }

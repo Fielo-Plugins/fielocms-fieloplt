@@ -1,8 +1,7 @@
 global with sharing class SelectMemberController implements FieloCMS.SubComponentInterface {
 
-    public ApexPages.Component getSubComponent(Component__c config, Field field, SObject record){
-        Component.SelectMember selectMember = new Component.SelectMember();
-        selectMember.config = config;
+    public ApexPages.Component getSubComponent(Field field, SObject record){
+        Component.SelectMember selectMember = new Component.SelectMember();        
         selectMember.field = field;
         selectMember.type = field.apiName == 'LoginAsMember' ? 'Member' : 'Organization';
         if(record != null){
@@ -14,7 +13,7 @@ global with sharing class SelectMemberController implements FieloCMS.SubComponen
     }
 
     @RemoteAction
-    global static RemoteActionResult selectMember(Id componentId, Id memberId, String type){        
+    global static RemoteActionResult selectMember(Id memberId, String type){        
         RemoteActionResult result = new RemoteActionResult();
         try{
         	if(type == 'Member'){

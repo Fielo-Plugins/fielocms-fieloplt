@@ -1,43 +1,28 @@
-global with sharing class ShoppingCartController implements FieloCMS.SubComponentInterface {
+global with sharing class ShoppingCartController {
 
-    public ApexPages.Component getSubComponent(Component__c config, Field field, SObject record){    
-        if(field.apiName == 'ShoppingQuantity'){
-            Component.ShoppingQuantity quant = new Component.ShoppingQuantity();
-            quant.config = config;
-            quant.field = field;
-            quant.relatedListName = 'RedemptionItems__r';
-            if(record != null){
-                quant.record = record;
+    public List<Field> fields {get; set;}
+    public List<Reward__c> rewards {get{
+        if(rewards == null){
+            Redemption__c redemption = RedemptionService.getOpenRedemption(MemberService.getCurrentMemberId(), 'FrontEnd');
+            if(redemption.Id != null){
+                rewards = Database.query('SELECT ' + getFieldSet() + ' FROM Reward__c WHERE Id in (SELECT Reward__c FROM RedemptionItem__c WHERE Redemption__c = redemption.Id)');
             }else{
-                quant.expressions.record = '{!record}';
+                rewards = new List<Reward__c>();
             }
-            return quant;
-        }else if(field.apiName == 'ShoppingTotal'){
-            Component.ShoppingTotal total = new Component.ShoppingTotal();
-            total.config = config;
-            total.field = field;
-            total.relatedListName = 'RedemptionItems__r';
-            if(record != null){
-                total.record = record;
-            }else{
-                total.expressions.record = '{!record}';
-            }
-            return total;
-        }else if(field.apiName == 'ShoppingDelete'){
-            Component.Delete del = new Component.Delete();
-            del.config = config;
-            del.field = field;
-            if(record != null){
-                del.record = record;
-            }else{
-                del.expressions.record = '{!record}';
-            }
-            return del;
         }
+        return rewards;
+    }
+
+    private String getFieldset(){
+        List<String> fields = new List<String>();
+        for(Field field : fields){
+            fields.add(field.apiName);
+        }
+        return String.join(fields,',');        
     }
 
     @RemoteAction
-    global static RemoteActionResult save(Id componentId, String newQuantJSON){//Map<Id,Integer> newQuantitiesMap                        
+    global static RemoteActionResult save(String newQuantJSON){//Map<Id,Integer> newQuantitiesMap                        
         Redemption__c redemption = RedemptionService.getOpenRedemption(MemberService.getCurrentMemberId(), 'FrontEnd');
         RemoteActionResult result = new RemoteActionResult();
         Savepoint sp = Database.setSavepoint();
@@ -118,7 +103,7 @@ global with sharing class ShoppingCartController implements FieloCMS.SubComponen
     }
 
     @RemoteAction
-    global static RemoteActionResult emptyCart(Id componentId, String newQuantJSON){                
+    global static RemoteActionResult emptyCart(){                
         RemoteActionResult result = new RemoteActionResult();        
         Savepoint sp = Database.setSavepoint();
         try{

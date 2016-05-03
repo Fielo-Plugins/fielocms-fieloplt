@@ -1,7 +1,6 @@
 <apex:component layout="none">
     <apex:attribute name="record" type="SObject" description="" />
     <apex:attribute name="field" type="Field" description="" />
-    <apex:attribute name="config" type="SObject" description="" />
     <apex:attribute name="relatedListName" type="String" description="" />
 
     <!-- Chequea mediante la related list saca si esta en el Cart o no -->

@@ -1,6 +1,6 @@
 global class WishController implements FieloCMS.SubComponentInterface {
     
-    public ApexPages.Component getSubComponent(Component__c config, Field field, SObject record){
+    public ApexPages.Component getSubComponent(Field field, SObject record){
         Component.Wish wishComponent = new Component.Wish();
         if(record != null){
             wishComponent.record = record;
@@ -8,13 +8,12 @@ global class WishController implements FieloCMS.SubComponentInterface {
             wishComponent.expressions.record = '{!record}';
         }
         wishComponent.field = field;
-        wishComponent.config = config;
         wishComponent.relatedListName = 'Members_Reward__r';
         return wishComponent;
     }
 
     @RemoteAction
-    global static RemoteActionResult wish(Id rewardId, String WishController){
+    global static RemoteActionResult wish(Id rewardId){
         RemoteActionResult result = new RemoteActionResult();
         try {
             Member__c member = MemberUtil.getLoggedMember(null);
