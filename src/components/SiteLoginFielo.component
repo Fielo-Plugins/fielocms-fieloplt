@@ -1,5 +1,5 @@
 <apex:component controller="SiteLoginFieloController" allowDML="true" access="global" layout="none" >
-    <apex:attribute name="config" type="FieloCMS__Component__c" description="" />
+    <apex:attribute name="config" type="CMSComponent__c" description="" />
     <apex:variable var="fieldValue" value="{!$ObjectType.Member__c.Name}" />
     <apex:variable var="prefix" value="{!SUBSTITUTE(SUBSTITUTE(fieldValue,'Member__c',''),'__','.')}" />
 

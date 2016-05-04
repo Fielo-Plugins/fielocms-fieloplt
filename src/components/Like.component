@@ -1,21 +1,22 @@
 <apex:component layout="none" controller="LikeController" >
     <apex:attribute name="record" type="SObject" description="" />
-    <apex:attribute name="field" type="Field" description="" />
-    <apex:attribute name="relatedListName" type="String" description="" />    
+    <apex:attribute name="field" type="CMSField" description="" />
 
     <!-- Chequea mediante la related list esta en estado LIKED o no -->
     <apex:variable var="isLiked" value="false" /> 
-    <apex:repeat value="{!record[relatedListName]}" >
+    <apex:repeat value="{!record['Likes__r']}" >
         <apex:variable var="isLiked" value="true" />
     </apex:repeat>    
 
     <apex:variable var="fieldValue" value="{!$ObjectType.Member__c.Name}" />
     <apex:variable var="prefix" value="{!SUBSTITUTE(SUBSTITUTE(fieldValue,'Member__c',''),'__','.')}" />
     <div class="fielo-form">
-        <form class="fielo-form__like js-to-be-initialized" data-remoteaction="{!prefix}LikeController.likeRec" data-remotearguments="recordId,likeValue" data-componentid="{! config['Id'] }">
+        <form class="fielo-form__like js-to-be-initialized" data-remoteaction="{!prefix}LikeController.likeRec" data-remotearguments="recordId,action">
             <input type="hidden" name="recordId" value="{!record.Id}" data-object-property="Id" data-attribute-replace="value"
     />
             <input type="hidden" class="fielo-like" name="likeValue" value="{!isLiked}" data-object-property="{!relatedListName}"  data-attribute-replace="value"/>
+            <input type="hidden" name="action" value="{!!isLiked}"   data-attribute-replace="value"
+    />
             <button type="submit" class="fielo-button fielo-button__submit" >{!$Label.Like}</button>
         </form>
     </div>

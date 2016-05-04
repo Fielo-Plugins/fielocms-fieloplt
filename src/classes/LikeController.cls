@@ -8,20 +8,16 @@ global with sharing class LikeController implements FieloCMS.SubComponentInterfa
             likeComponent.expressions.record = '{!record}';
         }
         likeComponent.field = field;        
-        likeComponent.relatedListName = 'Likes__r';
         return likeComponent;
     }
 
     @RemoteAction
-    global static RemoteActionResult likeRec(Id parentId, String likeValue){
+    global static RemoteActionResult likeRec(Id parentId, String action){
         RemoteActionResult result = new RemoteActionResult();
-        try {            
-            Member__c member = MemberUtil.getLoggedMember(null);
-            if ( doLikeIt(member.Id, parentId) ) {
-                result.refresh.add( new RemoteActionResult.RemoteActionRefresh('likeValue', 'true') );        
-            } else {
-                result.refresh.add( new RemoteActionResult.RemoteActionRefresh('likeValue', 'false' ) );
-            }
+        try {
+            doLikeIt(MemberService.getCurrentMemberId(), parentId, Boolean.valueOf(action));
+            result.refresh.add( new RemoteActionResult.RemoteActionRefresh('likeValue', action) );
+            result.refresh.add( new RemoteActionResult.RemoteActionRefresh( 'action', String.valueOf(!Boolean.valueOf(action)) );
         } catch(FieloCustomException e){
             result.addMessage(new RemoteActionResult.RemoteActionMessage(e));
         }
@@ -36,29 +32,20 @@ global with sharing class LikeController implements FieloCMS.SubComponentInterfa
         return result;
     }
 
-    private static Boolean doLikeIt(Id memberId, String parentId){        
-        String objectName = Describe_de(parentId.subString(0,3));
-        if(objectName == 'Reward__c'){
-            List<Like__c> likes = [SELECT Id, Member__c, ParentId__c FROM Like__c WHERE Member__c =: memberId AND Reward__c =: parentId];
-            if(likes.isEmpty()){
+    private static void doLikeIt(Id memberId, Id parentId, Boolean like){        
+        if(parentId.getSObjectType() == Schema.Reward__c.SObjectType)
+            if(like){
                 insert new Like__c(Member__c = memberId , Reward__c = parentId);
-                return true;
             }else{
-                delete likes;
-                return false;
+                delete [SELECT Id FROM Like__c WHERE Member__c =: memberId AND Reward__c =: parentId];
             }
-        }else if(objectName == 'News__c'){
-            List<Like__c> likes = [SELECT Id, Member__c, ParentId__c FROM Like__c WHERE Member__c =: memberId AND News__c =: parentId];
-            if(likes.isEmpty()){
+        }else{
+            if(like){
                 insert new Like__c(Member__c = memberId , News__c = parentId);
-                return true;
             }else{
-                delete likes;
-                return false;
-            }
+                delete [SELECT Id FROM Like__c WHERE Member__c =: memberId AND News__c =: parentId];
+            }            
         }
-
-        return null;
     }
 
 }

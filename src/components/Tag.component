@@ -4,6 +4,6 @@
     <apex:attribute name="relatedListName" type="String" description="" />    
 
     <apex:repeat value="{!record[relatedListName]}" var="tagItem" >
-        <c:Image url="{!tagItem.Tag__r.AttachmentId__c}" />    
+        <img src="{!tagItem.Tag__r.AttachmentId__c}" class="fielo-image" data-object-property="{!field.multimediaField}"  data-attribute-replace="src" />    
     </apex:repeat>
 </apex:component>

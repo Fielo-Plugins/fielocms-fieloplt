@@ -30,8 +30,9 @@ public with sharing class TagAPI implements FieloCMS.ViewSubComponentInterface,F
         }else{
             tag.expressions.record = '{!record}';
         }
-        tag.field = field;        
-        if(config.ComponentReference__c == 'Catalog'){
+        tag.field = field;
+        String objectName = Describe_de(parentId.subString(0,3));
+        if(objectName == 'Reward__c'){
             tag.relatedListName = 'RewardTag__r';
         }else{
             tag.relatedListName = 'TagItems__r';

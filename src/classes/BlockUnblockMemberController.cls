@@ -1,6 +1,6 @@
-global with sharing class BlockUnblockMemberController implements FieloCMS.SubComponentInterface {
+global with sharing class BlockUnblockMemberController implements CMSViewSubComponentInterface {
 
-    public ApexPages.Component getSubComponent(Field field, SObject record){   
+    public ApexPages.Component getSubComponent(CMSField field, SObject record){   
         Component.BlockUnblockMember blockUnblockMember = new Component.BlockUnblockMember();        
         blockUnblockMember.field = field;
         if(record != null){
@@ -12,23 +12,24 @@ global with sharing class BlockUnblockMemberController implements FieloCMS.SubCo
     }
 
     @RemoteAction
-    global static RemoteActionResult blockUnblockMember(Id memberId, String action){
-    	RemoteActionResult result = new RemoteActionResult();
+    global static CMSRemoteActionResult blockUnblockMember(Id memberId, String action){
+    	CMSRemoteActionResult result = new CMSRemoteActionResult();
 
     	try {
     		FieloAlpha.MemberService.blockUnblock(new List<Id>{memberId}, action);
-            result.addMessage(new RemoteActionResult.RemoteActionMessage(ApexPages.Severity.CONFIRM, Label.SuccessfulRemoteActionRefresh));
+            result.addMessage(new CMSRemoteActionResult.RemoteActionMessage(ApexPages.Severity.CONFIRM, Label.SuccessfulRemoteActionRefresh));
+            result.refresh.add(new RemoteActionRefresh('action',action));
             result.redirectURL = '#';
     	} catch(DMLException e) {
-            result.addMessage(new RemoteActionResult.RemoteActionMessage(ApexPages.Severity.Error, e.getDMLMessage(0)));
+            result.addMessage(new CMSRemoteActionResult.RemoteActionMessage(ApexPages.Severity.Error, e.getDMLMessage(0)));
         } catch (Exception e){
-            result.addMessage(new RemoteActionResult.RemoteActionMessage(e));
+            result.addMessage(new CMSRemoteActionResult.RemoteActionMessage(e));
         }
 
     	if(ApexPages.hasMessages()){
             result.redirectURL = '';
             for(ApexPages.Message m : ApexPages.getMessages()){
-                result.addMessage(new RemoteActionResult.RemoteActionMessage(m));
+                result.addMessage(new CMSRemoteActionResult.RemoteActionMessage(m));
             }
         }
 

@@ -3,7 +3,6 @@ global with sharing class SelectMemberController implements FieloCMS.SubComponen
     public ApexPages.Component getSubComponent(Field field, SObject record){
         Component.SelectMember selectMember = new Component.SelectMember();        
         selectMember.field = field;
-        selectMember.type = field.apiName == 'LoginAsMember' ? 'Member' : 'Organization';
         if(record != null){
             selectMember.record = record;
         }else{
@@ -20,7 +19,7 @@ global with sharing class SelectMemberController implements FieloCMS.SubComponen
             	MemberUtil.setMemberId(memberId);
         	}else{
         		Member__c member = new MembersSelector(new Set<String>{'OrganizationAccount__c'}).selectById(new Set<Id>{memberId})[0];
-        		MemberUtil.setMemberId(member.OrganizationAccount__c);
+        		MemberService.setMemberId(member.OrganizationAccount__c);
         	}
 
             result.redirectURL = '/Page';                                   

@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
     <labels>
+        <fullName>Delete</fullName>
+        <categories>ShoppingDelete.component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delete</shortDescription>
+        <value>Delete</value>
+    </labels>    
+    <labels>
+        <fullName>FacebookLogin</fullName>
+        <categories>RegisterFacebook.component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Facebook Login</shortDescription>
+        <value>Facebook Login</value>
+    </labels>
+    <labels>
         <fullName>security_error_field_not_insertable</fullName>
         <categories>security,error</categories>
         <language>en_US</language>

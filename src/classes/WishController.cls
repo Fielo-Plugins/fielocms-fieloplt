@@ -1,4 +1,4 @@
-global class WishController implements FieloCMS.SubComponentInterface {
+global class WishController implements FieloCMS.ViewSubComponentInterface {
     
     public ApexPages.Component getSubComponent(Field field, SObject record){
         Component.Wish wishComponent = new Component.Wish();
@@ -7,21 +7,17 @@ global class WishController implements FieloCMS.SubComponentInterface {
         }else{
             wishComponent.expressions.record = '{!record}';
         }
-        wishComponent.field = field;
-        wishComponent.relatedListName = 'Members_Reward__r';
+        wishComponent.field = field;        
         return wishComponent;
     }
 
     @RemoteAction
-    global static RemoteActionResult wish(Id rewardId){
+    global static RemoteActionResult wish(Id rewardId, String action){
         RemoteActionResult result = new RemoteActionResult();
         try {
-            Member__c member = MemberUtil.getLoggedMember(null);
-            if ( doWish(MemberService.getCurrentMemberId(),rewardId) ) {
-                result.refresh.add( new RemoteActionResult.RemoteActionRefresh( 'wish', 'true') );        
-            } else {
-                result.refresh.add( new RemoteActionResult.RemoteActionRefresh( 'wish', 'false') );
-            }
+            doWish(MemberService.getCurrentMemberId(),rewardId, action);
+            result.refresh.add( new RemoteActionResult.RemoteActionRefresh( 'wish', action) );
+            result.refresh.add( new RemoteActionResult.RemoteActionRefresh( 'action', String.valueOf(!Boolean.valueOf(action)) );
         } catch(FieloCustomException e){
             result.addMessage(new RemoteActionResult.RemoteActionMessage(e));
         }
@@ -36,16 +32,11 @@ global class WishController implements FieloCMS.SubComponentInterface {
         return result;
     }
 
-    private static Boolean doWish(Id memberId, Id rewardId){
-        List<RewardWish__c> wishRewards = [SELECT Id FROM RewardWish__c WHERE Member__c =: memberId AND Reward__c =: rewardId];
-        if(wishRewards.isEmpty()){
+    private static void doWish(Id memberId, Id rewardId, Boolean wish){
+        if(wish){
             insert new RewardWish__c(Member__c = memberId, Reward__c = rewardId);
-            return true;
         }else{
-            delete wishRewards;
-            return false;
-        }
-
-        return null;
+            delete [SELECT Id FROM RewardWish__c WHERE Member__c =: memberId AND Reward__c =: rewardId];
+        }        
     }
 }

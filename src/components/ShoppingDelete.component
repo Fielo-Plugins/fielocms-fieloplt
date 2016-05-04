@@ -1,5 +1,5 @@
 <apex:component layout="none">
     <apex:attribute name="record" type="SObject" description="" />
-    <apex:attribute name="field" type="Field" description="" />
+    <apex:attribute name="field" type="CMSField" description="" />
     <div class="fielo-button__delete js-to-be-initialized">{!$Label.Delete}</div>
 </apex:component>

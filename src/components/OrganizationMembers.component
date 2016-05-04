@@ -1,9 +1,0 @@
-<apex:component layout="none" >
-	<apex:attribute name="compSettings" type="ComponentsEnabled__c" description="" />
-  <apex:attribute name="config" type="SObject" description="" />
-  <apex:attribute name="record" type="SObject" description="" />
-  <apex:attribute name="fieldSet" type="Field[]" description="" />
-  <div class="fielo-detail--is-component-{!compSettings.Name} {!config['CSSClasses__c']}">
-    <apex:componentBody />
-  </div>
-</apex:component>

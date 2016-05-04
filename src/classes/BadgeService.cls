@@ -1,14 +1,14 @@
 public with sharing class BadgeService {
 	
-	public static List<Badge__c> getBadges(Set<String> fields, Id programId, Id memberId, Integer quantity, Integer offset, String orderBy){
+	public static List<FieloAlpha__Badge__c> getBadges(Set<String> fields, Id programId, Id memberId, Integer quantity, Integer offset, String orderBy){
         String query = 'SELECT ' + String.join(new List<String>(fields),',');
         
         Set<Id> badgeIds = new Set<Id>();
-        for(BadgeMember__c bm : [Select Badge__c FROM BadgeMember__c WHERE Member__c =: memberId]){
+        for(BadgeMember__c bm : [Select FieloAlpha__Badge__c FROM FieloAlpha__BadgeMember__c WHERE Member__c =: memberId]){
             badgeIds.add(bm.Badge__c);
         }
 
-        query += ' FROM Badge__c WHERE Id In : badgeIds AND Program__c =: programId';
+        query += ' FROM FieloAlpha__Badge__c WHERE Id In : badgeIds AND FieloAlpha__Program__c =: programId';
 
         //LIMIT
         if(quantity != null){
