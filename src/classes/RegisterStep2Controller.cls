@@ -1,21 +1,20 @@
 global without sharing class RegisterStep2Controller {
-
-    public Boolean showPassword {get; set;}
-    public List<Field> fieldset {get; set;}    
-    public Member__c member {get{
+    
+    public List<FieloCMS.Field> fields {get; set;}    
+    public FieloAlpha__Member__c member {get{
         if(member == null){     
             Id memberId = ApexPages.currentPage().getParameters().get('memberId');
-            member = Database.query('SELECT ' + getFieldSet() + ' FROM FieloEE__Member__c WHERE Id =: memberId LIMIT 1');                
+            member = Database.query('SELECT ' + getFieldSet() + ' FROM FieloAlpha__Member__c WHERE Id =: memberId LIMIT 1');                
         }
         return member;
     } set;}
 
     private String getFieldset(){
-        List<String> fields = new List<String>();
-        for(Field field : fieldset){
-            fields.add(field.apiName);
+        List<String> fieldset = new List<String>();
+        for(FieloCMS.Field field : fields){
+            fieldset.add(field.apiName);
         }
-        return String.join(fields,',');        
+        return String.join(fieldset,',');        
     }
 
     public Boolean showForm {get{if(!initLoaded) init(); return showForm;} private set;}
@@ -33,25 +32,27 @@ global without sharing class RegisterStep2Controller {
     private void init(){
         initLoaded = true;        
         Id memberId = member != null ? member.Id : null;        
-        status = MemberService.validateStatus(memberId);
+        status = FieloAlpha.MemberService.validateStatus(memberId);
     }
     
     @RemoteAction
-    global static RemoteActionResult continueRegistration(Id memberId){
-        RemoteActionResult result = new RemoteActionResult();
+    global static FieloCMS.RemoteActionResult continueRegistration(Id memberId){
+        SavePoint sp = Database.setSavepoint();
+        FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
         try{
-            Member__c member = new MembersSelector().selectById(new Set<Id>{memberId})[0];
-            MemberService.finishRegistration(member);
+            FieloAlpha__Member__c member = new MembersSelector().selectById(new Set<Id>{memberId})[0];
+            FieloAlpha.MemberService.finishRegistration(member);
             //MemberUtil.sendToApprove(new List<Member__c>{member});
-            result.addMessage(new RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.SucessAwardingApprovalRegistration)));
+            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.SucessAwardingApprovalRegistration)));
         }catch(FieloCustomException e){
-            result.addMessage(new RemoteActionResult.RemoteActionMessage(e));
+            Database.rollback(sp);
+            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
         }
 
         if(ApexPages.hasMessages()){
             result.redirectURL = '';
             for(ApexPages.Message m : ApexPages.getMessages()){
-                result.addMessage(new RemoteActionResult.RemoteActionMessage(m));
+                result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(m));
             }
         }
 
@@ -59,12 +60,14 @@ global without sharing class RegisterStep2Controller {
     }
 
     @RemoteAction
-    global static RemoteActionResult finishRegistration(SObject record, String password){    
+    global static FieloCMS.RemoteActionResult finishRegistration(SObject record, String password){    
+        SavePoint sp = Database.setSavepoint();
+        FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
         try{
-            Member__c member = (Member__c)record;                
-            MemberService.finishRegistration(member);
-            if(showPassword){
-                PageReference passResult = MemberService.setPasswordAndLogin(record.Id, (String)passwordJson.get('Password'));
+            FieloAlpha__Member__c member = (FieloAlpha__Member__c)record;                
+            FieloAlpha.MemberService.finishRegistration(member);
+            if(String.isBlank(password)){
+                PageReference passResult = MemberService.setPasswordAndLogin(record.Id, password);
                 result.redirectURL = passResult.getUrl();
             }
         }catch(DmlException e){            
@@ -72,16 +75,15 @@ global without sharing class RegisterStep2Controller {
             if(ApexPages.hasMessages()){
                 result.redirectURL = '';
                 for(ApexPages.Message m : ApexPages.getMessages()){
-                    result.addMessage(new RemoteActionResult.RemoteActionMessage(m));
+                    result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(m));
                 }
             }
-            return result;
         }catch(Exception e){
             if(sp != null){
                 Database.rollback(sp);
             }
-            result.addMessage(new RemoteActionResult.RemoteActionMessage(e));
-            return result;
-        }                
+            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
+        }
+        return result;                
     }  
 }

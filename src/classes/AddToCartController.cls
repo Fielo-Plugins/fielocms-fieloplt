@@ -1,6 +1,6 @@
-global with sharing class AddToCartController implements CMSViewSubComponentInterface {
+global with sharing class AddToCartController implements FieloCMS.ViewSubComponentInterface {
 
-    public ApexPages.Component getSubComponent(CMSField field, SObject record){   
+    public ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){   
         Component.AddToCart addToCart = new Component.AddToCart();
         if(record != null){
             addToCart.record = record;
@@ -12,30 +12,30 @@ global with sharing class AddToCartController implements CMSViewSubComponentInte
     }
 
     @RemoteAction
-    global static CMSRemoteActionResult addToCart(Id rewardId, Integer quantity, Integer quantInCart, Boolean closeOrder, String detailUrl){
-        CMSRemoteActionResult result = new CMSRemoteActionResult();
+    global static FieloCMS.RemoteActionResult addToCart(Id rewardId, Integer quantity, Integer quantInCart, Boolean closeOrder, String detailUrl){
+        FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
         try{
             FieloAlpha__Redemption__c redemption = FieloAlpha.RewardService.addToCart(MemberService.getCurrentMemberId(), rewardId, quantity, closeOrder);
             if(redemption != null){
-                if(redemption.Status__c == 'Open' || redemption.Status__c == null){
-                    result.addMessage(new CMSRemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.SuccessRewardAddToChart)));
-                    result.refresh.add( new CMSRemoteActionResult.RemoteActionRefresh('quantInCart', String.valueOf(quantity)));
-                }else if(redemption.Status__c == 'Pending'){
-                    result.addMessage(new CMSRemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.InfoRedemptionApproval)));
-                    result.refresh.add( new CMSRemoteActionResult.RemoteActionRefresh('quantInCart', '0'));
-                    result.refresh.add( new CMSRemoteActionResult.RemoteActionRefresh('quantity', '1'));
-                }else if(redemption.Status__c == 'Close'){
+                if(redemption.FieloAlpha__Status__c == 'Open' || redemption.FieloAlpha__Status__c == null){
+                    result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.SuccessRewardAddToChart)));
+                    result.refresh.add( new FieloCMS.RemoteActionResult.RemoteActionRefresh('quantInCart', String.valueOf(quantity)));
+                }else if(redemption.FieloAlpha__Status__c == 'Pending'){
+                    result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.InfoRedemptionApproval)));
+                    result.refresh.add( new FieloCMS.RemoteActionResult.RemoteActionRefresh('quantInCart', '0'));
+                    result.refresh.add( new FieloCMS.RemoteActionResult.RemoteActionRefresh('quantity', '1'));
+                }else if(redemption.FieloAlpha__Status__c == 'Close'){
                     result.redirectURL = detailUrl + redemption.Id;
                 }
             }            
         }catch(FieloCustomException e){
-            result.addMessage(new CMSRemoteActionResult.RemoteActionMessage(e));
+            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
         }
 
         if(ApexPages.hasMessages()){
             result.redirectURL = '';
             for(ApexPages.Message m : ApexPages.getMessages()){
-                result.addMessage(new CMSRemoteActionResult.RemoteActionMessage(m));
+                result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(m));
             }
         }
 

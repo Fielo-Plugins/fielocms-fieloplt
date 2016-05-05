@@ -1,27 +1,56 @@
-public with sharing class BadgeAPI implements CMSDataInterface{
+public with sharing class BadgeAPI implements FieloCMS.DataInterface{
 	
 	//BADGES
-    public Map<Id, Object> getBulkData(List<CMSComponent__c> components){
-        FieloAlpha__Program__c program = FieloAlpha.ProgramUtil.getProgramByDomain();
+    public Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){
+        FieloAlpha__Program__c program = ProgramService.getCurrentProgram();
         Map<Id,Object> newMapData = new Map<Id,Object>();
         //Prepare all the queries
-        for(Component__c c : components){
-            if(c.Limit__c == null)
-                c.Limit__c = 5;
+        for(FieloCMS__Component__c c : components){
+            if(c.FieloCMS__Limit__c == null)
+                c.FieloCMS__Limit__c = 5;
             
-            newMapData.put(c.Id, getBadges(OrganizationUtil.getFieldSet(c.FieldSet__c), program.Id, c.Limit__c.intValue(), 0, c.OrderBy__c));
+            newMapData.put(c.Id, getBadges(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), c.FieloCMS__Limit__c.intValue(), 0, c.FieloCMS__OrderBy__c));
         }
+        return newMapData;
     }
 
-    public List<sObject> getData(Component__c component, Integer pageNumber, String orderBy, String filters){        
-        FieloAlpha__Program__c program = FieloAlpha.ProgramUtil.getProgramByDomain();
+    public List<sObject> getData(FieloCMS__Component__c component, Integer pageNumber, String orderBy, String filters){        
+        FieloAlpha__Program__c program = ProgramService.getCurrentProgram();
         //Prepare all the queries        
-        if(component.Limit__c == null)
-            component.Limit__c = 5;
+        if(component.FieloCMS__Limit__c == null)
+            component.FieloCMS__Limit__c = 5;
 
         //Calculate the offset from the Page Number
-        Integer offset = Integer.valueOf(component.Limit__c * (pageNumber - 1));
-        return getBadges(OrganizationUtil.getFieldSet(component.FieldSet__c), program.Id, Integer.valueOf(component.Limit__c), offset, orderBy);        
+        Integer offset = Integer.valueOf(component.FieloCMS__Limit__c * (pageNumber - 1));
+        return getBadges(OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), Integer.valueOf(component.FieloCMS__Limit__c), offset, orderBy);        
+    }
+
+    public static List<FieloAlpha__Badge__c> getBadges(Set<String> fields, Id programId, Id memberId, Integer quantity, Integer offset, String orderBy){
+        String query = 'SELECT ' + String.join(new List<String>(fields),',');
+        
+        Set<Id> badgeIds = new Set<Id>();
+        for(FieloAlpha__BadgeMember__c bm : [Select FieloAlpha__Badge2__c FROM FieloAlpha__BadgeMember__c WHERE FieloAlpha__Member2__c =: memberId]){
+            badgeIds.add(bm.FieloAlpha__Badge2__c);
+        }
+
+        query += ' FROM FieloAlpha__Badge__c WHERE Id In : badgeIds AND FieloAlpha__Program__c =: programId';
+
+        //LIMIT
+        if(quantity != null){
+            query += ' LIMIT ' + quantity;
+        }
+
+        //OFFSET
+        if(offset != null){
+            query += ' OFFSET ' + offset;
+        }
+
+        //ORDER by
+        if(String.isNotBlank(orderBy)){
+            query += ' ORDER BY ' + orderBy;
+        }
+
+        return Database.query(query);        
     }
 
 }

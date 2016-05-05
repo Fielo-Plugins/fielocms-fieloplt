@@ -1,26 +1,21 @@
-public with sharing class BannerAPI implements CMSDataInterface{
+public with sharing class BannerAPI implements FieloCMS.DataInterface{
 	
 	//BANNERS
-    public Map<Id, Object> getBulkData(List<CMSComponent__c> components){
-        FieloEE__Program__c program = FieloEE.ProgramUtil.getProgramByDomain();
+    public Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){
+        FieloAlpha__Program__c program = ProgramService.getCurrentProgram();
         Map<Id,Object> newMapData = new Map<Id,Object>();
         //Prepare all the queries
-        for(Component__c c : components){                            
-            if(c.Limit__c == null)
-                c.Limit__c = 5;
-
-            if(c.Name == 'Banner'){
-            //if(c.ComponentLibrary__r.Name == 'Banner'){                
-                newMapData.put(c.Id, FieloAlpha.BannerService.getBanners(OrganizationUtil.getFieldSet(c.FieldSet__c), program.Id, c.Id, null, null, c.Limit__c.intValue(), 0, c.OrderBy__c));
-            }else if(c.Name == 'BannerWidget'){
-            //}else if(c.ComponentLibrary__r.Name == 'BannerWidget'){                
-                newMapData.put(c.Id, FieloAlpha.BannerService..getBanners(OrganizationUtil.getFieldSet(c.FieldSet__c), program.Id, c.Id, c.Tag__c, c.Category__c, c.Limit__c.intValue(), 0, c.OrderBy__c));
-            }            
+        for(FieloCMS__Component__c c : components){                            
+            if(c.FieloCMS__Limit__c == null)
+                c.FieloCMS__Limit__c = 5;                               
+            
+            newMapData.put(c.Id, FieloAlpha.BannerService.getBanners(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), c.Id, c.Tag__c, c.Category__c, c.FieloCMS__Limit__c.intValue(), 0, c.FieloCMS__OrderBy__c));                        
         }
+        return newMapData;
     }
 
 
-    public List<sObject> getData(Component__c component, Integer pageNumber, String orderBy, String filters){
+    public List<sObject> getData(FieloCMS__Component__c component, Integer pageNumber, String orderBy, String filters){
         //Set Category or Tag from FilterBy
         String categoryId;
         String tagId;
@@ -35,28 +30,22 @@ public with sharing class BannerAPI implements CMSDataInterface{
             }
         }
 
-        FieloEE__Program__c program = FieloEE.ProgramUtil.getProgramByDomain();
+        FieloAlpha__Program__c program = ProgramService.getCurrentProgram();
 
         //Prepare all the queries        
-        if(component.Limit__c == null)
-            component.Limit__c = 5;
+        if(component.FieloCMS__Limit__c == null)
+            component.FieloCMS__Limit__c = 5;
 
         //Calculate the offset from the Page Number
-        Integer offset = Integer.valueOf(component.Limit__c * (pageNumber - 1));
+        Integer offset = Integer.valueOf(component.FieloCMS__Limit__c * (pageNumber - 1));
 
-        if(c.Name == 'Banner'){
-        //if(c.ComponentLibrary__r.Name == 'Banner'){    
-            return FieloAlpha.BannerService.getBanners(OrganizationUtil.getFieldSet(component.FieldSet__c), program.Id, component.Id, component.Tag__c, component.Category__c, Integer.valueOf(component.Limit__c), offset, orderBy);            
-        }else if(c.Name == 'BannerWidget'){
-        //}else if(c.ComponentLibrary__r.Name == 'BannerWidget'){                                
-            if(categoryId == null && component.Category__c != null){
-                categoryId = component.Category__c;
-            }
-            if(tagId == null && component.Tag__c != null){
-                tagId = component.Tag__c;
-            }
-            return FieloAlpha.BannerService.getBanners(OrganizationUtil.getFieldSet(component.FieldSet__c), program.Id, component.Id, tagId, categoryId, Integer.valueOf(component.Limit__c), offset, orderBy);                
+        if(categoryId == null && component.Category__c != null){
+            categoryId = component.Category__c;
         }
+        if(tagId == null && component.Tag__c != null){
+            tagId = component.Tag__c;
+        }
+        return FieloAlpha.BannerService.getBanners(OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), component.Id, tagId, categoryId, component.FieloCMS__Limit__c.intValue(), offset, orderBy);            
     }
 
 }

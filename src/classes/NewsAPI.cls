@@ -1,36 +1,26 @@
-public with sharing class NewsAPI {
+public with sharing class NewsAPI implements FieloCMS.DataInterface {
 	
-
-    public Map<Id, Object> getBulkData(List<Component__c> components){
-        Site__c program = SiteUtil.getSiteProgram(new List<String>{'RewardView__c','NewsView__c','CustomPage__c', 'ShoppingCart__c'});
-        Map<String,ComponentLibrary__c> compSettingsMap = DataUtil.getComponentsEnabledMap(components);
+    public Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){
+        FieloAlpha__Program__c program = ProgramService.getCurrentProgram();
         Map<Id,Object> newMapData = new Map<Id,Object>();
         //Prepare all the queries
-        for(Component__c c : components){
-            if(c.ComponentLibrary__c != null){
-                if(OrganizationUtil.showComponent(compSettingsMap.get(c.ComponentLibrary__c).Visibility__c)){
-                    if(c.Limit__c == null)
-                        c.Limit__c = 5;
+        for(FieloCMS__Component__c c : components){                        
+            if(c.FieloCMS__Limit__c == null)
+                c.FieloCMS__Limit__c = 5;
 
-                    if(c.ComponentLibrary__r.Name == 'ContentFeed'){
-                        newMapData.put(c.Id, ContentFeedData.getNews(OrganizationUtil.getFieldSet(c.FieldSet__c), c.Id, null, null, null, c.Limit__c.intValue(), 0, c.OrderBy__c));
-                    }else if(c.ComponentLibrary__r.Name == 'ContentFeedWidget'){
-                        newMapData.put(c.Id, ContentFeedData.getNews(OrganizationUtil.getFieldSet(c.FieldSet__c), c.Id, null, c.Tag__c, c.Category__c, c.Limit__c.intValue(), 0, c.OrderBy__c));
-                    }else if(c.ComponentLibrary__r.Name == 'ContentFeedDetail'){
-                        Id newsId = c.RecordId__c;
-                        List<News__c> news = ContentFeedData.getNews(OrganizationUtil.getFieldSet(c.FieldSet__c), null, ' Id = \'' + newsId + '\'', null, null, 1, 0, null);
-                        newMapData.put(c.Id, (!news.isEmpty() ? news[0] : null));
-                    }if(c.ComponentLibrary__r.Name == 'ContentFeedDetail'){
-                        Id newsId = c.RecordId__c;
-                        List<News__c> news = ContentFeedData.getNews(OrganizationUtil.getFieldSet(c.FieldSet__c), null, ' Id = \'' + newsId + '\'', null, null, 1, 0, null);
-                        newMapData.put(c.Id, (!news.isEmpty() ? news[0] : null));
-                    }
-                }
-            }
+            if(c.Name == 'ContentFeed'){
+            //if(c.ComponentLibrary__r.Name == 'ContentFeed'){
+                newMapData.put(c.Id, FieloAlpha.NewsService.getNews(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), c.Id, c.Tag__c, c.Category__c, c.FieloCMS__Limit__c.intValue(), 0, c.FieloCMS__OrderBy__c));
+            }else if(c.Name == 'ContentFeedDetail'){
+            //}else if(c.ComponentLibrary__r.Name == 'ContentFeedDetail'){
+                Id newsId = c.FieloCMS__RecordId__c;
+                newMapData.put(c.Id, Database.query('SELECT ' + String.join(new List<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c)), ',') + ' FROM FieloAlpha__News__c WHERE Id =: newsId'));
+            }                
         }
+        return newMapData;
     }
 
-    public List<sObject> getData(Component__c component, Integer pageNumber, String orderBy, String filters){
+    public List<sObject> getData(FieloCMS__Component__c component, Integer pageNumber, String orderBy, String filters){
         //Set Category or Tag from FilterBy
         String categoryId;
         String tagId;
@@ -45,33 +35,21 @@ public with sharing class NewsAPI {
             }
         }
 
-        String locale = 'EN';//OrganizationUtil.getLanguage();
-        Site__c program = SiteUtil.getSiteProgram(new List<String>{'RewardView__c','NewsView__c','CustomPage__c', 'ShoppingCart__c'});
-        List<SObject> newData = new List<SObject>();
+        FieloAlpha__Program__c program = ProgramService.getCurrentProgram();
+        
+        //Prepare all the queries        
+        if(component.FieloCMS__Limit__c == null)
+            component.FieloCMS__Limit__c = 5;
 
-        //Prepare all the queries
-        if(component.ComponentLibrary__c != null){
-            if(component.Limit__c == null)
-                component.Limit__c = 5;
-
-            //Calculate the offset from the Page Number
-            Integer offset = Integer.valueOf(component.Limit__c * (pageNumber - 1));
-
-            if(component.ComponentLibrary__r.Name == 'Catalog'){
-
-                List<String> categoriesIds = new List<String>();
-                system.debug(categoryId);
-                if(categoryId != null && categoryId != ''){
-                    categoryId = categoryId.replace('(', '');
-                    categoryId = categoryId.replace(')', '');
-                    categoriesIds.add(categoryId);
-                }
-                system.debug(tagId);
-                system.debug(categoryId);
-                system.debug(categoriesIds);
-                List<sObject> aux = RewardData.getRewards(OrganizationUtil.getFieldSet(component.FieldSet__c), program.Id, null, categoriesIds, tagId, Integer.valueOf(component.Limit__c), offset, orderBy, component.FilterBySegment__c);
-                newData.addAll(aux);            
-            }
+        if(categoryId == null && component.Category__c != null){
+            categoryId = component.Category__c;
         }
+        if(tagId == null && component.Tag__c != null){
+            tagId = component.Tag__c;
+        }
+
+        //Calculate the offset from the Page Number
+        Integer offset = Integer.valueOf(component.FieloCMS__Limit__c * (pageNumber - 1));         
+        return FieloAlpha.NewsService.getNews(OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), component.Id, tagId, categoryId, component.FieloCMS__Limit__c.intValue(), offset, orderBy);
     }
 }

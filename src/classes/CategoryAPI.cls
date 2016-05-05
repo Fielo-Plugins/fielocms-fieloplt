@@ -1,25 +1,19 @@
-public with sharing class CategoryAPI {
+public with sharing class CategoryAPI implements FieloCMS.DataInterface {
 	
-	public Map<Id, Object> getBulkData(List<Component__c> components){
-        Map<String,ComponentLibrary__c> compSettingsMap = DataUtil.getComponentsEnabledMap(components);
+	public Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){        
+        FieloAlpha__Program__c program = ProgramService.getCurrentProgram();
         Map<Id,Object> newMapData = new Map<Id,Object>();
         //Prepare all the queries
-        for(Component__c c : components){
-            if(c.ComponentReference__c != null){
-                if(OrganizationUtil.showComponent(compSettingsMap.get(c.ComponentReference__c).Visibility__c)){
-                    if(c.Qant__c == null)
-                        c.Qant__c = 5;
-
-                    if(c.ComponentLibrary__r.Name == 'FilterByCategories'){
-                        newMapData.put(c.Id, CategoryData.getCategories(OrganizationUtil.getFieldSet(c.FieldSet__c), c.Category__c, program.Id, c.Limit__c.intValue(), 0));
-                    }
-                }
-            }
+        for(FieloCMS__Component__c c : components){                        
+            if(c.FieloCMS__Limit__c == null)
+                c.FieloCMS__Limit__c = 5;
+                                                                        
+            newMapData.put(c.Id, FieloAlpha.CategoryService.getCategories(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c), c.Category__c, program.Id, MemberService.getCurrentMemberId(), c.FieloCMS__Limit__c.intValue(), 0, c.FieloCMS__OrderBy__c));
         }
         return newMapData;
     }
 
-    public List<sObject> getData(Component__c component, Integer pageNumber, String orderBy, String filters){
+    public List<sObject> getData(FieloCMS__Component__c component, Integer pageNumber, String orderBy, String filters){
         return null;
     }
 

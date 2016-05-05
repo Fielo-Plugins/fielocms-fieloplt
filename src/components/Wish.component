@@ -1,6 +1,6 @@
 <apex:component layout="none" controller="WishController" >
     <apex:attribute name="record" type="SObject" description="" />
-    <apex:attribute name="field" type="CMSField" description="" />
+    <apex:attribute name="field" type="FieloCMS.Field" description="" />
      
     <!-- Chequea mediante la related list esta en estado WiSHED o no -->
     <apex:variable var="isWished" value="false" /> 
@@ -8,15 +8,13 @@
         <apex:variable var="isWished" value="true" />
     </apex:repeat>    
 
-    <apex:variable var="fieldValue" value="{!$ObjectType.Member__c.Name}" />
-    <apex:variable var="prefix" value="{!SUBSTITUTE(SUBSTITUTE(fieldValue,'Member__c',''),'__','.')}" />
     <div class="fielo-form">
-        <form class="fielo-form__wish js-to-be-initialized" data-remoteaction="{!prefix}WishController.wish" data-remotearguments="recordId,action" >
+        <form class="fielo-form__wish js-to-be-initialized" data-remoteaction="WishController.wish" data-remotearguments="recordId,action" >
             <input type="hidden" name="recordId" value="{!record['Id']}" data-object-property="Id"  data-attribute-replace="value"
     />
             <input type="hidden" class="fielo-wish" name="wish" value="{!isWished}" data-object-property="Members_Reward__r"  data-attribute-replace="value"
     />
-            <input type="hidden" name="action" value="{!!isWished}"   data-attribute-replace="value"
+            <input type="hidden" name="action" value="{!IF(isWished == 'true', 'false', 'true')}"   data-attribute-replace="value"
     />
             <button type="submit" class="fielo-button fielo-button__submit" >{!$Label.Wish}</button>
         </form>

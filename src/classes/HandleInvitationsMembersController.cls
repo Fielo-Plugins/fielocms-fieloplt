@@ -1,6 +1,6 @@
-global with sharing class HandleInvitationsMembersController implements FieloCMS.SubComponentInterface {
+global with sharing class HandleInvitationsMembersController implements FieloCMS.ViewSubComponentInterface {
 
-    public ApexPages.Component getSubComponent(Field field, SObject record){   
+    public ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){   
         Component.HandleInvitationsMembers handleInvitationsMembers = new Component.HandleInvitationsMembers();        
         handleInvitationsMembers.field = field;
         if(record != null){
@@ -12,23 +12,23 @@ global with sharing class HandleInvitationsMembersController implements FieloCMS
     }
 
     @RemoteAction
-    global static RemoteActionResult resendInvitation(Id memberId){
-        RemoteActionResult result = new RemoteActionResult();
+    global static FieloCMS.RemoteActionResult resendInvitation(Id memberId){
+        FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
 
         try {
             resendInvitations(new Set<Id>{memberId});
-            result.addMessage(new RemoteActionResult.RemoteActionMessage(ApexPages.Severity.CONFIRM, Label.SuccessfulRemoteActionRefresh));
+            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(ApexPages.Severity.CONFIRM, Label.SuccessfulRemoteActionRefresh));
             result.redirectURL = '#';
         } catch(DMLException e) {
-            result.addMessage(new RemoteActionResult.RemoteActionMessage(ApexPages.Severity.Error, e.getDMLMessage(0)));
+            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(ApexPages.Severity.Error, e.getDMLMessage(0)));
         } catch (Exception e){
-            result.addMessage(new RemoteActionResult.RemoteActionMessage(e));
+            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
         }
 
         if(ApexPages.hasMessages()){
             result.redirectURL = '';
             for(ApexPages.Message m : ApexPages.getMessages()){
-                result.addMessage(new RemoteActionResult.RemoteActionMessage(m));
+                result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(m));
             }
         }
 
@@ -36,21 +36,21 @@ global with sharing class HandleInvitationsMembersController implements FieloCMS
     }
 
     @RemoteAction
-    global static RemoteActionResult cancelInvitation(Id memberId){
-        RemoteActionResult result = new RemoteActionResult();
+    global static FieloCMS.RemoteActionResult cancelInvitation(Id memberId){
+        FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
 
         try {
             cancelInvitations(new Set<Id>{memberId});
         } catch(DMLException e) {
-            result.addMessage(new RemoteActionResult.RemoteActionMessage(ApexPages.Severity.Error, e.getDMLMessage(0)));
+            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(ApexPages.Severity.Error, e.getDMLMessage(0)));
         } catch (Exception e){
-            result.addMessage(new RemoteActionResult.RemoteActionMessage(e));
+            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
         }
 
         if(ApexPages.hasMessages()){
             result.redirectURL = '';
             for(ApexPages.Message m : ApexPages.getMessages()){
-                result.addMessage(new RemoteActionResult.RemoteActionMessage(m));
+                result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(m));
             }
         }
 
@@ -59,31 +59,31 @@ global with sharing class HandleInvitationsMembersController implements FieloCMS
 
     private static void resendInvitations(Set<Id> memberIds){
         Set<Id> programIds = new Set<Id>();
-        List<Member__c> members = new MembersSelector().selectById(memberIds);
-        for(Member__c member : members){
-            programIds.add(member.Program__c);
+        List<FieloAlpha__Member__c> members = new MembersSelector().selectById(memberIds);
+        for(FieloAlpha__Member__c member : members){
+            programIds.add(member.FieloAlpha__Program__c);
         }
-        Map<Id, Program__c> programsMap = new Map<Id, Program__c>( new ProgramsSelector().selectbyId(programIds) );
-        SObjectUnitOfWork uow = new SObjectUnitOfWork(new List<Schema.SobjectType>{Email__c.SObjectType});
-        for(Member__c member : members){
-            String recipientName = member.FirstName__c + ' ' + member.LastName__c;
-            String url = programsMap.get(member.Program__c).SiteUrl__c + OrganizationUtil.getPrefixUnderScore() + 'Page?memberId=' + member.Id + '&pageId=' + programsMap.get(member.Program__c).RegisterPage__c;
-            uow.registerNew( new Email__c(Email__c = member.Email__c, Type__c = 'Register', Member__c = member.Id, Program__c = member.Program__c, Link__c = url, RecipientName__c = recipientName) );
+        Map<Id, FieloAlpha__Program__c> programsMap = new Map<Id, FieloAlpha__Program__c>([SELECT FieloAlpha__SiteUrl__c, FieloAlpha__RegisterPage__c FROM FieloAlpha__Program__c WHERE Id in : programIds]);
+        SObjectUnitOfWork uow = new SObjectUnitOfWork(new List<Schema.SobjectType>{FieloAlpha__Email__c.SObjectType});
+        for(FieloAlpha__Member__c member : members){
+            String recipientName = member.FieloAlpha__FirstName__c + ' ' + member.FieloAlpha__LastName__c;
+            String url = programsMap.get(member.FieloAlpha__Program__c).FieloAlpha__SiteUrl__c + 'FieloAlpha__Page?memberId=' + member.Id + '&pageId=' + programsMap.get(member.FieloAlpha__Program__c).FieloAlpha__RegisterPage__c;
+            uow.registerNew( new FieloAlpha__Email__c(FieloAlpha__Email__c = member.FieloAlpha__Email__c, FieloAlpha__Type__c = 'Register', FieloAlpha__Member__c = member.Id, FieloAlpha__Program__c = member.FieloAlpha__Program__c, FieloAlpha__Link__c = url, FieloAlpha__RecipientName__c = recipientName) );
         }
 
         uow.commitWork();
     }
 
     public static void cancelInvitations(Set<Id> memberIds){
-        List<Member__c> members = new MembersSelector( new Set<String>{'RecordType.DeveloperName', OrganizationUtil.getPrefixUnderScore()+'OrganizationAccount__r.Blocked__c'} ).selectById(new Set<Id>(memberIds));                
+        List<FieloAlpha__Member__c> members = new MembersSelector( new Set<String>{'RecordType.DeveloperName', 'FieloAlpha__OrganizationAccount__r.FieloAlpha__Blocked__c'} ).selectById(new Set<Id>(memberIds));                
         Boolean doCommit = false;
-        SObjectUnitOfWork uow = new SObjectUnitOfWork(new List<Schema.SobjectType>{Member__c.SObjectType});                
-        for(Member__c member : new MembersSelector( new Set<String>{'RecordType.DeveloperName'} ).selectById(memberIds)){
-            if(!member.OrganizationAccount__r.Blocked__c){
+        SObjectUnitOfWork uow = new SObjectUnitOfWork(new List<Schema.SobjectType>{FieloAlpha__Member__c.SObjectType});                
+        for(FieloAlpha__Member__c member : new MembersSelector( new Set<String>{'RecordType.DeveloperName'} ).selectById(memberIds)){
+            if(!member.FieloAlpha__OrganizationAccount__r.FieloAlpha__Blocked__c){
                 if(member.RecordType.DeveloperName != 'OrganizationContributor'){
                     throw new FieloCustomException(Label.ErrorOrganizationAccountAction);
                 } else {
-                    if(member.FieloAccountStatus__c == 'New'){
+                    if(member.FieloAlpha__FieloAccountStatus__c == 'New'){
                         uow.registerDeleted(member);
                         doCommit = true;
                     } else {

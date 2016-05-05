@@ -14,7 +14,7 @@ public class LoginService {
         }
         
         //look for the member related to the username
-        List<Member__c> member = [SELECT Site__c, Blocked__c FROM Member__c WHERE Email__c =: username AND Site__c =: SiteUtil.getProgramByDomain().Id];
+        List<FieloAlpha__Member__c> member = [SELECT FieloAlpha__Blocked__c FROM FieloAlpha__Member__c WHERE FieloAlpha__Email__c =: username AND FieloAlpha__Program__c =: ProgramService.getCurrentProgram().Id];
         
         //if the member was not found throws an error
         if(member.isEmpty()){
@@ -22,7 +22,7 @@ public class LoginService {
         }
         
         //if the member was found but is blocked thtrows an error
-        if(member.get(0).Blocked__C){
+        if(member.get(0).FieloAlpha__Blocked__C){
             throw new FieloCustomException(Label.ErrorLoginMemberBlocked);                        
         }
 
@@ -32,7 +32,7 @@ public class LoginService {
 
     public static PageReference forgotPassword(String userName){        
         //Validates if the userName is not empty
-        if(UtilsString.isEmpty(username)){
+        if(String.isBlank(username)){
             throw new FieloCustomException(Label.UsernameIsRequired);
             return null;
         }

@@ -1,6 +1,6 @@
-global with sharing class LikeController implements FieloCMS.SubComponentInterface{
+global with sharing class LikeController implements FieloCMS.ViewSubComponentInterface{
     
-    public ApexPages.Component getSubComponent(Field field, SObject record){
+    public ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){
         Component.Like likeComponent = new Component.Like();
         if(record != null){
             likeComponent.record = record;
@@ -12,38 +12,38 @@ global with sharing class LikeController implements FieloCMS.SubComponentInterfa
     }
 
     @RemoteAction
-    global static RemoteActionResult likeRec(Id parentId, String action){
-        RemoteActionResult result = new RemoteActionResult();
+    global static FieloCMS.RemoteActionResult likeRec(Id parentId, String action){
+        FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
         try {
             doLikeIt(MemberService.getCurrentMemberId(), parentId, Boolean.valueOf(action));
-            result.refresh.add( new RemoteActionResult.RemoteActionRefresh('likeValue', action) );
-            result.refresh.add( new RemoteActionResult.RemoteActionRefresh( 'action', String.valueOf(!Boolean.valueOf(action)) );
+            result.refresh.add( new FieloCMS.RemoteActionResult.RemoteActionRefresh('likeValue', action) );
+            result.refresh.add( new FieloCMS.RemoteActionResult.RemoteActionRefresh( 'action', String.valueOf(!Boolean.valueOf(action))));
         } catch(FieloCustomException e){
-            result.addMessage(new RemoteActionResult.RemoteActionMessage(e));
+            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
         }
 
         if(ApexPages.hasMessages()){
             result.redirectURL = '';
             for(ApexPages.Message m : ApexPages.getMessages()){
-                result.addMessage(new RemoteActionResult.RemoteActionMessage(m));
+                result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(m));
             }
         }
         
         return result;
     }
 
-    private static void doLikeIt(Id memberId, Id parentId, Boolean like){        
-        if(parentId.getSObjectType() == Schema.Reward__c.SObjectType)
-            if(like){
-                insert new Like__c(Member__c = memberId , Reward__c = parentId);
+    private static void doLikeIt(Id memberId, Id parentId, Boolean action){        
+        if(parentId.getSObjectType() == Schema.FieloAlpha__Reward__c.SObjectType){
+            if(action){
+                insert new FieloAlpha__Like__c(FieloAlpha__Member__c = memberId , FieloAlpha__Reward__c = parentId);
             }else{
-                delete [SELECT Id FROM Like__c WHERE Member__c =: memberId AND Reward__c =: parentId];
+                delete [SELECT Id FROM FieloAlpha__Like__c WHERE FieloAlpha__Member__c =: memberId AND FieloAlpha__Reward__c =: parentId];
             }
         }else{
-            if(like){
-                insert new Like__c(Member__c = memberId , News__c = parentId);
+            if(action){
+                insert new FieloAlpha__Like__c(FieloAlpha__Member__c = memberId , FieloAlpha__News__c = parentId);
             }else{
-                delete [SELECT Id FROM Like__c WHERE Member__c =: memberId AND News__c =: parentId];
+                delete [SELECT Id FROM FieloAlpha__Like__c WHERE FieloAlpha__Member__c =: memberId AND FieloAlpha__News__c =: parentId];
             }            
         }
     }

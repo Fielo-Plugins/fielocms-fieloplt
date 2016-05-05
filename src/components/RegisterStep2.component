@@ -1,8 +1,7 @@
 <apex:component layout="none" controller="RegisterStep2Controller" >
-	<apex:attribute name="compSettings" type="ComponentsEnabled__c" description="" />
     <apex:attribute name="config" type="SObject" description="" />
-    <apex:attribute name="fieldSet" type="Field[]" description="" assignTo="{!fieldset}" />
-    <apex:attribute name="showPassword" type="Boolean" description="" assignTo="{!showPassword}" />
+    <apex:attribute name="fieldSet" type="FieloCMS.Field[]" description="" assignTo="{!fields}" />
+    <apex:attribute name="showPassword" type="Boolean" description="" />
 
     <apex:panelGroup layout="none" rendered="{!fieldSet.size == 0}">
         <div class="fielo-message fielo-message--is-success">
@@ -11,33 +10,33 @@
     </apex:panelGroup>                 
 
     <apex:panelGroup layout="none" rendered="{!status == 'Ok'}">         
-        <div class="fielo-record fielo-form fielo-form--is-component-{!compSettings.Name} js-has-message {!config['CSSClasses__c']}" data-componentid="{! config['Id'] }">
+        <div class="fielo-record fielo-form fielo-form--is-component-RegisterStep2 js-has-message {!config['CSSClasses__c']}" data-componentid="{! config['Id'] }">
             <div data-componentid="{! config['Id'] }" class="fielo-messages" ></div>        
-            <form class="js-to-be-initialized" data-remoteaction="{!prefix}PageController.remoteComponentAction" data-remotearguments="componentId,SObject,Pre,Post" data-remoteobject="{!compSettings.sobject__c}" >
+            <form class="js-to-be-initialized" data-remoteaction="RegisterStep2Controller.finishRegistration" data-remotearguments="SObject,password" data-remoteobject="Member__c" >
                 <fieldset>
                     <apex:panelGroup layout="none" rendered="{!config['OptionalName__c']!=''}">
                         <legend class="fielo-title" >{!config['OptionalName__c']}</legend>
                     </apex:panelGroup>
                     <input type="hidden" name="componentId" value="{! config['Id'] }" />
-                    <input type="hidden" name="{! IF( record['Id'] <> '', 'SObject.id', 'SObject.sObjectType' ) }" value="{! IF( record['Id'] <> '', record['Id'], compSettings.sobject__c) }" />
+                    <!--<input type="hidden" name="{! IF( record['Id'] <> '', 'SObject.id', 'SObject.sObjectType' ) }" value="{! IF( record['Id'] <> '', record['Id'], compSettings.sobject__c) }" />-->
                     <apex:repeat value="{!fieldset}" var="field" >
                         <div class="mdl-grid fielo-field fielo-field--is-{!field.apiName}">
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__label" >
                                 <label for="{! config['Id'] }-{!field.apiName}" >{!field.label}</label>
-                                <apex:panelGroup layout="none" rendered="{!field.inlineHelpText <> '' }" >
+                                <!--<apex:panelGroup layout="none" rendered="{!field.inlineHelpText <> '' }" >
                                     <div id="{! config['Id'] }_hlp{!field.apiName}">help</div><div class="mdl-tooltip" for="{! config['Id'] }_hlp{!field.apiName}">{!field.inlineHelpText}</div>
-                                </apex:panelGroup>
+                                </apex:panelGroup>-->
                             </div>
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__value">
-                                <input class="fielo-input js-to-be-initialized" data-required="{!field.required}"  autocomplete="{!field.autocomplete}" placeholder="{!field.placeholder}" data-type="{!field.type}"  id="{! config['Id'] }-{!field.apiName}" name="SObject.{!field.apiName}"  value="{!record[field.apiName]}" />
+                                <input class="fielo-input js-to-be-initialized"   id="{! config['Id'] }-{!field.apiName}" name="SObject.{!field.apiName}"  value="{!member[field.apiName]}" /><!--data-required="{!field.required}"  autocomplete="{!field.autocomplete}" placeholder="{!field.placeholder}" data-type="{!field.type}"-->
                             </div>
                             <div class="mdl-cell mdl-cell--12-col fielo-messages" data-componentid="{!field.label}" />
                         </div>
                     </apex:repeat>
 
                     <apex:panelGroup layout="none" rendered="{!showPassword}" >
-                        <input class="fielo-input" type="password" required="required"  autocomplete="current-password" id="{! config['Id'] }-{!field.apiName}" name="{!field.subType}.{!field.apiName}.{!field.apiName}"  />
-                        <input class="fielo-input" type="password" required="required"  autocomplete="current-password" id="{! config['Id'] }-{!field.apiName}" name="{!field.subType}.{!field.apiName}.{!field.apiName}"  />
+                        <input class="fielo-input" type="password" required="required"  autocomplete="current-password" id="{! config['Id'] }-showPassword" name="showPassword"  />
+                        <input class="fielo-input" type="password" required="required"  autocomplete="current-password" id="{! config['Id'] }-showPasswordConfirm" name="showPasswordConfirm"  />
                     </apex:panelGroup>
                 </fieldset>
                 <div class="fielo-controls" >
@@ -84,7 +83,7 @@
     	<input type="button" styleClass="fielo-link" value="{!$Label.Continue}" onclick="continueRegistration();" />
 		<script>
 	    	function continueRegistration(){	    		
-	    		Visualforce.remoting.Manager.invokeAction('RegisterStep2Controller.continueRegistration', '{!record.Id}', function(result, event){		
+	    		Visualforce.remoting.Manager.invokeAction('RegisterStep2Controller.continueRegistration', '{!member.Id}', function(result, event){		
 					if(result.messages != undefined && result.messages.length > 0){
 		                for (var i = 0; i < result.messages.length; i++) {		                    
 		                    alert(result.messages[i].summary);

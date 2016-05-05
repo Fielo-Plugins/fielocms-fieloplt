@@ -1,43 +1,41 @@
 <apex:component controller="SiteLoginFieloController" allowDML="true" access="global" layout="none" >
-    <apex:attribute name="config" type="CMSComponent__c" description="" />
-    <apex:variable var="fieldValue" value="{!$ObjectType.Member__c.Name}" />
-    <apex:variable var="prefix" value="{!SUBSTITUTE(SUBSTITUTE(fieldValue,'Member__c',''),'__','.')}" />
+    <apex:attribute name="config" type="FieloCMS__Component__c" description="" />
 
-<div class="fielo-record fielo-form fielo-form--is-component-login js-has-message {!config['CSSClasses__c']}" data-componentid="{! config['Id'] }" >
-    <div data-componentid="{! config['Id'] }" class="fielo-messages" ></div>
-    <form class="js-to-be-initialized" data-remotearguments="username,password" data-remoteaction="{!prefix}SiteLoginFieloController.login"  >
-        <fieldset>
-            <apex:panelGroup layout="none" rendered="{!config['OptionalName__c']!=''}">
-                <legend class="fielo-title" >{!config['OptionalName__c']}</legend>
-            </apex:panelGroup>
+    <div class="fielo-record fielo-form fielo-form--is-component-login js-has-message {!config['CSSClasses__c']}" data-componentid="{! config['Id'] }" >
+        <div data-componentid="{! config['Id'] }" class="fielo-messages" ></div>
+        <form class="js-to-be-initialized" data-remotearguments="username,password" data-remoteaction="SiteLoginFieloController.login"  >
+            <fieldset>
+                <apex:panelGroup layout="none" rendered="{!config['OptionalName__c']!=''}">
+                    <legend class="fielo-title" >{!config['OptionalName__c']}</legend>
+                </apex:panelGroup>
 
-            <div class="mdl-grid fielo-field fielo-field--is-username fielo-field" >
-                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__label" >
-                    <label for="{!config['Id']}-username" id="{!config['Id']}-lblUsername" data-switchlabel="{!$Label.site.enter_password}" >{!$Label.site.email}</label>
-                </div>
-                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__value">
-                    <input id="{!config['Id']}-username" required="true" autofocus="true" name="username" type="email" autocomplete="username" />
-                </div>
-                <div class="mdl-cell mdl-cell--12-col fielo-messages" data-componentid="username" />
-            </div>   
-            <div class="mdl-grid fielo-field fielo-field--is-password fielo-field">
-                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__label" >
-                    <label for="{!config['Id']}-password" id="{!config['Id']}-lblPassword">{!$Label.site.password}</label>
-                </div>
-                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__value">
-                    <input id="{!config['Id']}-password" required="true" name="password" type="password" />
-                </div>
-                <div class="mdl-cell mdl-cell--12-col fielo-messages js-has-message" data-componentid="password" />
-            </div>   
+                <div class="mdl-grid fielo-field fielo-field--is-username fielo-field" >
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__label" >
+                        <label for="{!config['Id']}-username" id="{!config['Id']}-lblUsername" data-switchlabel="{!$Label.site.enter_password}" >{!$Label.site.email}</label>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__value">
+                        <input id="{!config['Id']}-username" required="true" autofocus="true" name="username" type="email" autocomplete="username" />
+                    </div>
+                    <div class="mdl-cell mdl-cell--12-col fielo-messages" data-componentid="username" />
+                </div>   
+                <div class="mdl-grid fielo-field fielo-field--is-password fielo-field">
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__label" >
+                        <label for="{!config['Id']}-password" id="{!config['Id']}-lblPassword">{!$Label.site.password}</label>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__value">
+                        <input id="{!config['Id']}-password" required="true" name="password" type="password" />
+                    </div>
+                    <div class="mdl-cell mdl-cell--12-col fielo-messages js-has-message" data-componentid="password" />
+                </div>   
 
-            <div class="mdl-grid">
-                <c:RegisterFacebook rendered="{!config.Facebook__c}" />
+                <div class="mdl-grid">
+                    <c:RegisterFacebook rendered="{!config.Facebook__c}" />
+                </div>
+            </fieldset>            
+            <div class="fielo-controls" >
+                <a href="#" class="fielo-login__link" data-switchlabel="{!$Label.back}" >{!$Label.site.forgot_password}</a>
+                <button class="fielo-button" >{!$Label.submit}</button>
             </div>
-        </fieldset>            
-        <div class="fielo-controls" >
-            <a href="#" class="fielo-login__link" data-switchlabel="{!$Label.back}" >{!$Label.site.forgot_password}</a>
-            <button class="fielo-button" >{!$Label.submit}</button>
-        </div>
-    </form>
-</div>
+        </form>
+    </div>
 </apex:component>

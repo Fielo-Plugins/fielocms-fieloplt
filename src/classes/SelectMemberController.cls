@@ -1,6 +1,6 @@
-global with sharing class SelectMemberController implements FieloCMS.SubComponentInterface {
+global with sharing class SelectMemberController implements FieloCMS.ViewSubComponentInterface {
 
-    public ApexPages.Component getSubComponent(Field field, SObject record){
+    public ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){
         Component.SelectMember selectMember = new Component.SelectMember();        
         selectMember.field = field;
         if(record != null){
@@ -12,25 +12,25 @@ global with sharing class SelectMemberController implements FieloCMS.SubComponen
     }
 
     @RemoteAction
-    global static RemoteActionResult selectMember(Id memberId, String type){        
-        RemoteActionResult result = new RemoteActionResult();
+    global static FieloCMS.RemoteActionResult selectMember(Id memberId, String type){        
+        FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
         try{
         	if(type == 'Member'){
-            	MemberUtil.setMemberId(memberId);
+            	MemberService.setCurrentMemberId(memberId);
         	}else{
-        		Member__c member = new MembersSelector(new Set<String>{'OrganizationAccount__c'}).selectById(new Set<Id>{memberId})[0];
-        		MemberService.setMemberId(member.OrganizationAccount__c);
+        		FieloAlpha__Member__c member = new MembersSelector(new Set<String>{'OrganizationAccount__c'}).selectById(new Set<Id>{memberId})[0];
+        		MemberService.setCurrentMemberId(member.FieloAlpha__OrganizationAccount__c);
         	}
 
             result.redirectURL = '/Page';                                   
         }catch(FieloCustomException e){
-            result.addMessage(new RemoteActionResult.RemoteActionMessage(e));
+            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
         }
 
         if(ApexPages.hasMessages()){
             result.redirectURL = '';
             for(ApexPages.Message m : ApexPages.getMessages()){
-                result.addMessage(new RemoteActionResult.RemoteActionMessage(m));
+                result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(m));
             }
         }
 

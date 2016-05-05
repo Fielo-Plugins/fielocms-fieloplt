@@ -1,17 +1,15 @@
 <apex:component layout="none">
-    <apex:attribute name="record" type="SObject" description="" />
-    <apex:attribute name="field" type="CMSField" description="" />
-    <apex:attribute name="relatedListName" type="String" description="" />
+    <apex:attribute name="record" type="SObject" description="" />        
 
     <!-- Chequea mediante la related list saca si esta en el Cart o no -->
     <apex:variable var="quantity" value="{!0}" /> 
-    <apex:repeat value="{!record[relatedListName]}"  var="cartItem">
+    <apex:repeat value="{!record['FieloAlpha__RedemptionItems__r']}"  var="cartItem">
         <apex:variable var="quantity" value="{! quantity + cartItem.quantity__c}" />
     </apex:repeat>
-    <apex:panelGroup rendered="{!field.ReadOnly}">
+    <!--<apex:panelGroup rendered="{!field.ReadOnly}">
         {!quantity}
-    </apex:panelGroup>    
-    <apex:panelGroup rendered="{! !field.ReadOnly}">
-        <input type="number" min="0" required="required" class="fielo-shopping__quantity js-to-be-initialized" name="quantities.{!record['id']}" value="{!quantity}" data-object-property="{!relatedListName}"  data-attribute-replace="value"/>
+    </apex:panelGroup>    -->
+    <apex:panelGroup ><!--rendered="{! !field.ReadOnly}"-->
+        <input type="number" min="0" required="required" class="fielo-shopping__quantity js-to-be-initialized" name="quantities.{!record['id']}" value="{!quantity}" data-object-property="FieloAlpha__RedemptionItems__r"  data-attribute-replace="value"/>
     </apex:panelGroup>    
 </apex:component>

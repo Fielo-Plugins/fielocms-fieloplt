@@ -1,38 +1,31 @@
 public with sharing class TagAPI implements FieloCMS.ViewSubComponentInterface,FieloCMS.DataInterface{
 	
-	public Map<Id, Object> getBulkData(List<Component__c> components){
-        Map<String,ComponentLibrary__c> compSettingsMap = DataUtil.getComponentsEnabledMap(components);
+	public Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){        
+        FieloAlpha__Program__c program = ProgramService.getCurrentProgram();
         Map<Id,Object> newMapData = new Map<Id,Object>();
         //Prepare all the queries
-        for(Component__c c : components){
-            if(c.ComponentReference__c != null){
-                if(OrganizationUtil.showComponent(compSettingsMap.get(c.ComponentReference__c).Visibility__c)){
-                    if(c.Qant__c == null)
-                        c.Qant__c = 5;
-
-                    if(c.ComponentLibrary__r.Name == 'FilterByTags'){
-                        newMapData.put(c.Id, TagData.getTags(OrganizationUtil.getFieldSet(c.FieldSet__c), c.Tag__c, program.Id, c.Limit__c.intValue(), 0, c.OrderBy__c));
-                    }
-                }
-            }
+        for(FieloCMS__Component__c c : components){            
+            if(c.FieloCMS__Limit__c == null)
+                c.FieloCMS__Limit__c = 5;
+                        
+            newMapData.put(c.Id, FieloAlpha.TagService.getTags(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c), c.Tag__c, program.Id, MemberService.getCurrentMemberId(), c.FieloCMS__Limit__c.intValue(), 0, c.FieloCMS__OrderBy__c));
         }
         return newMapData;
     }
 
-    public List<sObject> getData(Component__c component, Integer pageNumber, String orderBy, String filters){
+    public List<sObject> getData(FieloCMS__Component__c component, Integer pageNumber, String orderBy, String filters){
         return null;
     }
     
-    public ApexPages.Component getSubComponent(Field field, SObject record){        
+    public ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){        
         Component.Tag tag = new Component.Tag();
         if(record != null){
             tag.record = record;
         }else{
             tag.expressions.record = '{!record}';
         }
-        tag.field = field;
-        String objectName = Describe_de(parentId.subString(0,3));
-        if(objectName == 'Reward__c'){
+        tag.field = field;        
+        if(record.Id.getSObjectType() == Schema.FieloAlpha__Reward__c.SObjectType){
             tag.relatedListName = 'RewardTag__r';
         }else{
             tag.relatedListName = 'TagItems__r';

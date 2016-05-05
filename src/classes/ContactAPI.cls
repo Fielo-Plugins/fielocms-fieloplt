@@ -1,39 +1,47 @@
 public with sharing class ContactAPI implements FieloCMS.DataInterface{
 	
-	public Map<Id, Object> getBulkData(List<Component__c> components){
-        Map<String,ComponentLibrary__c> compSettingsMap = DataUtil.getComponentsEnabledMap(components);
+	public Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){        
         Map<Id,Object> newMapData = new Map<Id,Object>();
         //Prepare all the queries
-        for(Component__c c : components){
-            if(c.ComponentReference__c != null){
-                if(OrganizationUtil.showComponent(compSettingsMap.get(c.ComponentReference__c).Visibility__c)){
-                    if(c.Qant__c == null)
-                        c.Qant__c = 5;
-
-                    if(c.ComponentReference__c == 'InviteContacts'){
-                        Member__c loggedMember = MemberService.getCurrentMember(new Set<String>{'Account__c'});
-                        newMapData.put(c.Id, ContactService.getUnregisteredContacts(loggedMember.Account__c, null, c.Qant__c.intValue(), c.OrderBy__c));
-                    }
-                }
-            }
+        for(FieloCMS__Component__c c : components){                            
+            if(c.FieloCMS__Limit__c == null)
+                c.FieloCMS__Limit__c = 5;
+            
+            FieloAlpha__Member__c loggedMember = MemberService.getCurrentMember(new Set<String>{'FieloAlpha__Account__c'});
+            newMapData.put(c.Id, getUnregisteredContacts(loggedMember.FieloAlpha__Account__c, null, c.FieloCMS__Limit__c.intValue(), c.FieloCMS__OrderBy__c));
         }
         return newMapData;
     }
 
-    public List<sObject> getData(Component__c component, Integer pageNumber, String orderBy, String filters){
+    public List<sObject> getData(FieloCMS__Component__c component, Integer pageNumber, String orderBy, String filters){
         List<SObject> newData = new List<SObject>();
-
-        //Prepare all the queries
-        if(component.ComponentReference__c != null){
+            
             //Calculate the offset from the Page Number
-            Integer offset = Integer.valueOf(component.Qant__c * (pageNumber - 1));
-            if(component.ComponentReference__c == 'InviteContacts'){
-            	Member__c loggedMember = MemberService.getLoggedMember(new Set<String>{'Account__c'});
-                newMapData.put(c.Id, ContactService.getUnregisteredContacts(loggedMember.Account__c, offset, c.Qant__c.intValue(), c.OrderBy__c));                
-            }
+        Integer offset = Integer.valueOf(component.FieloCMS__Limit__c * (pageNumber - 1));            
+    	FieloAlpha__Member__c loggedMember = MemberService.getCurrentMember(new Set<String>{'FieloAlpha__Account__c'});
+        return getUnregisteredContacts(loggedMember.FieloAlpha__Account__c, offset, component.FieloCMS__Limit__c.intValue(), orderBy);
+    }
+
+    public List<Contact> getUnregisteredContacts(Id accountId, Integer offset, Integer quantity, String orderBy){       
+        String query = String.format(
+                'select {0} ' +
+                  'from Contact ' +
+                  'where AccountId =: accountId ',
+                new List<String> {'Id, Name'});
+
+        if(orderBy != null){
+            query += ' ORDER BY ' + orderBy;
         }
 
-        return newData;
+        if(quantity != null){
+            query += ' LIMIT ' + String.valueOf(quantity);
+        }
+
+        if(offset != null){
+            query += ' OFFSET ' + String.valueOf(offset);
+        }
+
+        return (List<Contact>) Database.query(query);
     }
 
 }

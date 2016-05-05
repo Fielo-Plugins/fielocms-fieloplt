@@ -1,6 +1,6 @@
 global class WishController implements FieloCMS.ViewSubComponentInterface {
     
-    public ApexPages.Component getSubComponent(Field field, SObject record){
+    public ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){
         Component.Wish wishComponent = new Component.Wish();
         if(record != null){
             wishComponent.record = record;
@@ -12,20 +12,20 @@ global class WishController implements FieloCMS.ViewSubComponentInterface {
     }
 
     @RemoteAction
-    global static RemoteActionResult wish(Id rewardId, String action){
-        RemoteActionResult result = new RemoteActionResult();
+    global static FieloCMS.RemoteActionResult wish(Id rewardId, String action){
+        FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
         try {
-            doWish(MemberService.getCurrentMemberId(),rewardId, action);
-            result.refresh.add( new RemoteActionResult.RemoteActionRefresh( 'wish', action) );
-            result.refresh.add( new RemoteActionResult.RemoteActionRefresh( 'action', String.valueOf(!Boolean.valueOf(action)) );
+            doWish(MemberService.getCurrentMemberId(),rewardId, Boolean.valueOf(action));
+            result.refresh.add( new FieloCMS.RemoteActionResult.RemoteActionRefresh( 'wish', action) );
+            result.refresh.add( new FieloCMS.RemoteActionResult.RemoteActionRefresh( 'action', String.valueOf(!Boolean.valueOf(action))));
         } catch(FieloCustomException e){
-            result.addMessage(new RemoteActionResult.RemoteActionMessage(e));
+            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
         }
 
         if(ApexPages.hasMessages()){
             result.redirectURL = '';
             for(ApexPages.Message m : ApexPages.getMessages()){
-                result.addMessage(new RemoteActionResult.RemoteActionMessage(m));
+                result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(m));
             }
         }
         
@@ -34,9 +34,9 @@ global class WishController implements FieloCMS.ViewSubComponentInterface {
 
     private static void doWish(Id memberId, Id rewardId, Boolean wish){
         if(wish){
-            insert new RewardWish__c(Member__c = memberId, Reward__c = rewardId);
+            insert new FieloAlpha__RewardWish__c(FieloAlpha__Member__c = memberId, FieloAlpha__Reward__c = rewardId);
         }else{
-            delete [SELECT Id FROM RewardWish__c WHERE Member__c =: memberId AND Reward__c =: rewardId];
+            delete [SELECT Id FROM FieloAlpha__RewardWish__c WHERE FieloAlpha__Member__c =: memberId AND FieloAlpha__Reward__c =: rewardId];
         }        
     }
 }
