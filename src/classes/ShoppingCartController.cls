@@ -1,6 +1,5 @@
 global with sharing class ShoppingCartController {
-
-    public List<FieloCMS.Field> fields {get; set;}
+    
     public List<FieloAlpha__Reward__c> rewards {get{
         if(rewards == null){
             FieloAlpha__Redemption__c redemption = FieloAlpha.RedemptionService.getOpenRedemption(MemberService.getCurrentMemberId(), 'FrontEnd');
@@ -13,12 +12,12 @@ global with sharing class ShoppingCartController {
         return rewards;
     } set;}
 
-    private String getFieldset(){
-        List<String> fieldSet = new List<String>();
-        for(FieloCMS.Field field : fields){
-            fieldSet.add(field.apiName);
-        }
-        return String.join(fieldSet,',');        
+    private String getFieldset(){        
+        List<String> fields = new List<String>{'Id'};
+        for(Schema.FieldSetMember fsm : Schema.SObjectType.FieloAlpha__Reward__c.fieldSets.ShoppingCart.getFields()){
+            fields.add(fsm.getFieldPath());
+        }    
+        return String.join(fields,',');      
     }
 
     @RemoteAction

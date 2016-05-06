@@ -1,12 +1,12 @@
 <apex:component controller="SiteLoginFieloController" allowDML="true" access="global" layout="none" >
     <apex:attribute name="config" type="FieloCMS__Component__c" description="" />
 
-    <div class="fielo-record fielo-form fielo-form--is-component-login js-has-message {!config['CSSClasses__c']}" data-componentid="{! config['Id'] }" >
+    <div class="fielo-record fielo-form fielo-form--is-component-login js-has-message {!config['FieloCMS__CSSClasses__c']}" data-componentid="{! config['Id'] }" >
         <div data-componentid="{! config['Id'] }" class="fielo-messages" ></div>
         <form class="js-to-be-initialized" data-remotearguments="username,password" data-remoteaction="SiteLoginFieloController.login"  >
             <fieldset>
-                <apex:panelGroup layout="none" rendered="{!config['OptionalName__c']!=''}">
-                    <legend class="fielo-title" >{!config['OptionalName__c']}</legend>
+                <apex:panelGroup layout="none" rendered="{!config['FieloCMS__Title__c']!=''}">
+                    <legend class="fielo-title" >{!config['FieloCMS__Title__c']}</legend>
                 </apex:panelGroup>
 
                 <div class="mdl-grid fielo-field fielo-field--is-username fielo-field" >
@@ -29,7 +29,7 @@
                 </div>   
 
                 <div class="mdl-grid">
-                    <c:RegisterFacebook rendered="{!config.Facebook__c}" />
+                    <!--<c:RegisterFacebook rendered="{!config.Facebook__c}" />-->
                 </div>
             </fieldset>            
             <div class="fielo-controls" >

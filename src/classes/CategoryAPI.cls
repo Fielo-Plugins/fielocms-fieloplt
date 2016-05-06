@@ -1,6 +1,6 @@
-public with sharing class CategoryAPI implements FieloCMS.DataInterface {
+global with sharing class CategoryAPI implements FieloCMS.DataInterface {
 	
-	public Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){        
+	public Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){                
         FieloAlpha__Program__c program = ProgramService.getCurrentProgram();
         Map<Id,Object> newMapData = new Map<Id,Object>();
         //Prepare all the queries

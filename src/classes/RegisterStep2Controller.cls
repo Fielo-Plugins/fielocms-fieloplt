@@ -1,6 +1,5 @@
 global without sharing class RegisterStep2Controller {
-    
-    public List<FieloCMS.Field> fields {get; set;}    
+        
     public FieloAlpha__Member__c member {get{
         if(member == null){     
             Id memberId = ApexPages.currentPage().getParameters().get('memberId');
@@ -10,11 +9,11 @@ global without sharing class RegisterStep2Controller {
     } set;}
 
     private String getFieldset(){
-        List<String> fieldset = new List<String>();
-        for(FieloCMS.Field field : fields){
-            fieldset.add(field.apiName);
-        }
-        return String.join(fieldset,',');        
+        List<String> fields = new List<String>{'Id'};
+        for(Schema.FieldSetMember fsm : Schema.SObjectType.FieloAlpha__Member__c.fieldSets.FieloAlpha__RegistrationStep2.getFields()){
+            fields.add(fsm.getFieldPath());
+        }    
+        return String.join(fields,',');
     }
 
     public Boolean showForm {get{if(!initLoaded) init(); return showForm;} private set;}

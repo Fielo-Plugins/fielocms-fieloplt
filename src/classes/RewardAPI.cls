@@ -1,6 +1,6 @@
-public with sharing class RewardAPI implements FieloCMS.DataInterface{
+global with sharing class RewardAPI implements FieloCMS.DataInterface{
 
-    public Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){
+    public Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){        
         FieloAlpha__Program__c program = ProgramService.getCurrentProgram();
         Map<Id,Object> newMapData = new Map<Id,Object>();
         //Prepare all the queries
@@ -8,10 +8,10 @@ public with sharing class RewardAPI implements FieloCMS.DataInterface{
             if(c.FieloCMS__Limit__c == null)
                 c.FieloCMS__Limit__c = 5;
 
-            if(c.Name == 'Catalog'){
+            if(c.FieloCMS__ComponentLibrary__r.Name == 'Catalog'){
             //if(c.ComponentLibrary__r.Name == 'Catalog'){
                 newMapData.put(c.Id, FieloAlpha.RewardService.getRewards(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), c.Tag__c, c.Category__c, c.FieloCMS__Limit__c.intValue(), 0, c.FieloCMS__OrderBy__c, c.FilterBySegment__c));
-            }else if(c.Name == 'RewardDetail'){
+            }else if(c.FieloCMS__ComponentLibrary__r.Name == 'RewardDetail'){
             //}else if(c.ComponentLibrary__r.Name == 'RewardDetail'){
                 Id rewardId = c.FieloCMS__RecordId__c;                
                 newMapData.put(c.Id, Database.query('SELECT ' + String.join(new List<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c)), ',') + ' FROM FieloAlpha__Reward__c WHERE Id =: rewardId'));

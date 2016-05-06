@@ -1,8 +1,7 @@
 public with sharing class RedemptionAPI implements FieloCMS.DataInterface, FieloCMS.ViewInterface{
 	
-    public ApexPages.Component getComponent(FieloCMS__Component__c c){        
-        List<FieloCMS.Field> fieldSet = OrganizationUtil.getFieldsStructure(c.FieloCMS__FieldSet__c);
-        Component.ShoppingCart shoppingCart = new Component.ShoppingCart(config = c, fieldSet = fieldSet);
+    public ApexPages.Component getComponent(FieloCMS__Component__c c){                
+        Component.ShoppingCart shoppingCart = new Component.ShoppingCart(config = c);
         return shoppingCart;        
     }
 

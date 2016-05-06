@@ -20,7 +20,7 @@ public with sharing class MemberService {
                     memId = members[0].Id;
                     setCurrentMemberId(memId);
                 }else{
-                    Id programId = ProgramService.getCurrentProgram().Id;
+                    Id programId = FieloAlpha.ProgramUtil.getProgramByDomain().Id;
                     for(FieloAlpha__Member__c m : members){
                         if(m.FieloAlpha__Program__c == programId){
                             memId = m.Id;

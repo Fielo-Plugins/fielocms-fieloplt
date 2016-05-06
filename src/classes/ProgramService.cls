@@ -4,8 +4,8 @@ public class ProgramService{
 		if(currentProgram == null){
 			Id currentMemberId = MemberService.getCurrentMemberId();
 			//si es guest tomo el pr
-			if(currentMemberId == null){
-				return FieloAlpha.ProgramUtil.getProgramByDomain();
+			if(currentMemberId == null){				
+				currentProgram = FieloAlpha.ProgramUtil.getProgramByDomain();
 			}else{
 				Id programId = [SELECT FieloAlpha__Program__c FROM FieloAlpha__Member__c WHERE Id =: currentMemberId].FieloAlpha__Program__c;
 				currentProgram = FieloAlpha.ProgramUtil.getProgram(programId);

@@ -15,12 +15,13 @@ public class OrganizationUtil {
                 lang = FieloAlpha.OrganizationUtil.getLanguage();
             }catch(Exception e){}*/
 
-            for(FieloCMS.Field field : getFieldsStructure(fieldSet)){
+            for(Object field : (List<Object>)JSON.deserializeUntyped(fieldSet)){
                 /*if(field.type != 'SubComponent' && field.type != 'Multimedia'){
                     if(field.multiLanguage){
                         fields.add(field.apiName + '_' + lang + '__c');
                     }else{*/
-                        fields.add(field.apiName);
+                        Map<String, Object> attributesMap = (Map<String, Object>)field;
+                        fields.add((String)attributesMap.get('apiName'));
                     /*}
                 }else if(field.type == 'Multimedia'){
                     fields.add(field.multimediaField);
@@ -29,16 +30,4 @@ public class OrganizationUtil {
         }
         return fields;
     }
-
-    public static List<FieloCMS.Field> getFieldsStructure(String fieldSet){
-        List<FieloCMS.Field> fieldsList = new List<FieloCMS.Field>();
-        if(fieldset != null){
-            for(Object field : (List<Object>)JSON.deserializeUntyped(fieldSet)){
-                FieloCMS.Field fieldn = new FieloCMS.Field();
-                //fieldsList.add(new FieloCMS.Field((Map<String, Object>)field));
-            }
-        }
-        return fieldsList;
-    }
-
 }

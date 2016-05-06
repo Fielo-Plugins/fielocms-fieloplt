@@ -1,4 +1,4 @@
-public with sharing class BannerAPI implements FieloCMS.DataInterface{
+global with sharing class BannerAPI implements FieloCMS.DataInterface{
 	
 	//BANNERS
     public Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){
@@ -8,8 +8,8 @@ public with sharing class BannerAPI implements FieloCMS.DataInterface{
         for(FieloCMS__Component__c c : components){                            
             if(c.FieloCMS__Limit__c == null)
                 c.FieloCMS__Limit__c = 5;                               
-            
-            newMapData.put(c.Id, FieloAlpha.BannerService.getBanners(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), c.Id, c.Tag__c, c.Category__c, c.FieloCMS__Limit__c.intValue(), 0, c.FieloCMS__OrderBy__c));                        
+            //c.Id SEPARAR COMO ANTES EN 2 COMP, WIDGET Y NO
+            newMapData.put(c.Id, FieloAlpha.BannerService.getBanners(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), null, c.Tag__c, c.Category__c, c.FieloCMS__Limit__c.intValue(), 0, c.FieloCMS__OrderBy__c));                        
         }
         return newMapData;
     }

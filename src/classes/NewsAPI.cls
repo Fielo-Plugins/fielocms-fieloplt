@@ -1,4 +1,4 @@
-public with sharing class NewsAPI implements FieloCMS.DataInterface {
+global with sharing class NewsAPI implements FieloCMS.DataInterface {
 	
     public Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){
         FieloAlpha__Program__c program = ProgramService.getCurrentProgram();
@@ -8,10 +8,11 @@ public with sharing class NewsAPI implements FieloCMS.DataInterface {
             if(c.FieloCMS__Limit__c == null)
                 c.FieloCMS__Limit__c = 5;
 
-            if(c.Name == 'ContentFeed'){
+            if(c.FieloCMS__ComponentLibrary__r.Name == 'ContentFeed'){
             //if(c.ComponentLibrary__r.Name == 'ContentFeed'){
-                newMapData.put(c.Id, FieloAlpha.NewsService.getNews(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), c.Id, c.Tag__c, c.Category__c, c.FieloCMS__Limit__c.intValue(), 0, c.FieloCMS__OrderBy__c));
-            }else if(c.Name == 'ContentFeedDetail'){
+                //SEPARAR EN DOS c.Id
+                newMapData.put(c.Id, FieloAlpha.NewsService.getNews(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), null, c.Tag__c, c.Category__c, c.FieloCMS__Limit__c.intValue(), 0, c.FieloCMS__OrderBy__c));
+            }else if(c.FieloCMS__ComponentLibrary__r.Name == 'ContentFeedDetail'){
             //}else if(c.ComponentLibrary__r.Name == 'ContentFeedDetail'){
                 Id newsId = c.FieloCMS__RecordId__c;
                 newMapData.put(c.Id, Database.query('SELECT ' + String.join(new List<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c)), ',') + ' FROM FieloAlpha__News__c WHERE Id =: newsId'));

@@ -1,6 +1,5 @@
 <apex:component controller="ShoppingCartController" allowDML="true" access="global" layout="none">
-    <apex:attribute name="config" type="SObject" description="" />    
-    <apex:attribute name="fieldSet" type="FieloCMS.Field[]" description="" assignTo="{!fields}" />
+    <apex:attribute name="config" type="SObject" description="" />        
 
     <apex:panelGroup rendered="{!rewards.size > 0 }" >
 
@@ -11,24 +10,24 @@
 	    	
 	        <div class="fielo-record-set js-has-message fielo-record-set--is-table fielo-record-set--is-component-ShoppingCart {!config['CSSClasses__c']}" data-layout="table"  data-componentid="{! config['Id'] }">
 		        <div data-componentid="{! config['Id'] }" class="fielo-messages" ></div>
-		        <apex:panelGroup layout="none" rendered="{!config['OptionalName__c']!=''}">
-		            <h3 class="fielo-title">{!config['OptionalName__c']}</h3>
+		        <apex:panelGroup layout="none" rendered="{!config['FieloCMS__Title__c']!=''}">
+		            <h3 class="fielo-title">{!config['FieloCMS__Title__c']}</h3>
 		        </apex:panelGroup>
 		        <table class="fielo-table mdl-data-table">
 		            <thead class="fielo-table__head">
 		                <tr class="fielo-record">
-		                   	<apex:repeat value="{!fieldSet}" var="field">
-		                        <th class="fielo-field fielo-field--is-{!field.apiName} mdl-data-table__cell--non-numeric"><apex:panelGroup layout="none" ><span class="{!IF(config['FieloCMS__OrderBy__c'] == '' , '', 'fielo-order-by__item')}" data-order-value="{!field.apiName}">{!field.label}</span></apex:panelGroup></th>
+		                   	<apex:repeat value="{!$ObjectType.FieloAlpha__Member__c.FieldSets.FieloAlpha__RegistrationStep2}" var="field">
+		                        <th class="fielo-field fielo-field--is-{!field} mdl-data-table__cell--non-numeric"><apex:panelGroup layout="none" ><span class="{!IF(config['FieloCMS__OrderBy__c'] == '' , '', 'fielo-order-by__item')}" data-order-value="{!field}">{!field}</span></apex:panelGroup></th>
 		                    </apex:repeat>
 		                </tr>
 		            </thead>
 		            <tbody class="fielo-record-set__data">
 		                <apex:repeat value="{!rewards}" var="record">
 		                    <tr class="fielo-record fielo-record-set__template">
-		                    	<apex:repeat value="{!fieldSet}" var="field">
-			                    	<td class="fielo-field fielo-field--is-{!field.apiName} mdl-data-table__cell--non-numeric" data-th="{!field.label}">
+		                    	<apex:repeat value="{!$ObjectType.FieloAlpha__Member__c.FieldSets.FieloAlpha__RegistrationStep2}" var="field">
+			                    	<td class="fielo-field fielo-field--is-{!field} mdl-data-table__cell--non-numeric" data-th="{!field}">
 	        							<span class="fielo-field__value">        							
-	        								<apex:outputField value="{!record[field.apiName]}" />
+	        								<apex:outputField value="{!record[field]}" />
 	        							</span>
 	    							</td>
 	    						</apex:repeat>
