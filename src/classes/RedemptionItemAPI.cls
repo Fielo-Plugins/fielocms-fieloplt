@@ -1,4 +1,4 @@
-public with sharing class RedemptionItemAPI implements FieloCMS.DataInterface{
+global with sharing class RedemptionItemAPI implements FieloCMS.DataInterface{
 	
 	public Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){                
         Map<Id,Object> newMapData = new Map<Id,Object>();

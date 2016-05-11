@@ -1,4 +1,4 @@
-public with sharing class RedemptionAPI implements FieloCMS.DataInterface{
+global with sharing class RedemptionAPI implements FieloCMS.DataInterface{
 	
     //, FieloCMS.ViewInterface
     /*public ApexPages.Component getComponent(FieloCMS__Component__c c){                

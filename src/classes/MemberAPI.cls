@@ -17,9 +17,9 @@ global with sharing class MemberAPI implements FieloCMS.DataInterface, FieloCMS.
             if(c.FieloCMS__Limit__c == null)
                 c.FieloCMS__Limit__c = 5;
             
-            if(c.FieloCMS__ComponentLibrary__r.Name == 'Account'){    
-                FieloAlpha__Member__c loggedMember = MemberService.getCurrentMember(new Set<String>{'OrganizationAccount__c','RecordType.DeveloperName'});
-                if(loggedMember.RecordType.DeveloperName != 'Organization Account' && loggedMember.FieloAlpha__OrganizationAccount__c != null){
+            if(c.FieloCMS__ComponentLibrary__r.Name == 'Organization Account'){
+                FieloAlpha__Member__c loggedMember = MemberService.getCurrentMember(new Set<String>{'FieloAlpha__OrganizationAccount__c','RecordType.DeveloperName'});
+                if(loggedMember.RecordType.DeveloperName != 'OrganizationAccount' && loggedMember.FieloAlpha__OrganizationAccount__c != null){
                 	newMapData.put(c.Id, new MembersSelector(new Set<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c))).selectById(new Set<Id>{loggedMember.FieloAlpha__OrganizationAccount__c})[0]);
                 }
             }else if(c.FieloCMS__ComponentLibrary__r.Name == 'Member Selection'){
@@ -27,13 +27,13 @@ global with sharing class MemberAPI implements FieloCMS.DataInterface, FieloCMS.
 	      		newMapData.put(c.Id, new MembersSelector(new Set<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c))).selectRelatedMembers(UserInfo.getUserId(), program.Id));
             }else if(c.FieloCMS__ComponentLibrary__r.Name == 'Organization Members'){
 	      		FieloAlpha__Member__c loggedMember = MemberService.getCurrentMember(new Set<String>{'RecordType.DeveloperName'});
-	      		if(loggedMember.RecordType.DeveloperName == 'Organization Profile'){
+	      		if(loggedMember.RecordType.DeveloperName == 'OrganizationProfile'){
 	      			newMapData.put(c.Id, new MembersSelector(new Set<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c))).selectByOrganizationAccount(loggedMember.Id));
 	      		}
             }else if(c.FieloCMS__ComponentLibrary__r.Name == 'Register'){
                 newMapData.put(c.Id, new FieloAlpha__Member__c());
-            } else if(c.FieloCMS__ComponentLibrary__r.Name == 'Member Detail' || c.FieloCMS__ComponentLibrary__r.Name == 'Account'){            
-                newMapData.put(c.Id, MemberService.getCurrentMember(new Set<String>{'Name', 'FirstName__c', 'LastName__c', 'Email__c', 'Points__c'}));
+            } else if(c.FieloCMS__ComponentLibrary__r.Name == 'Member Detail' || c.FieloCMS__ComponentLibrary__r.Name == 'Account'){
+                newMapData.put(c.Id, MemberService.getCurrentMember(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c)));
             }
         }
         return newMapData;

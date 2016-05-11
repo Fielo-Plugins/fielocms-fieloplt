@@ -51,6 +51,7 @@ global with sharing class TransactionAPI implements FieloCMS.DataInterface, Fiel
             
             FieloAlpha__Transaction__c trans = (FieloAlpha__Transaction__c)record;
             trans.FieloAlpha__Type__c = (comp.TransactionType__c != null && comp.TransactionType__c != '') ? comp.TransactionType__c : 'Code Insert';
+            trans.FieloAlpha__Member__c = MemberService.getCurrentMemberId();
             FieloAlpha.CodeUtil.sendCode(trans);
             successMessages.add(new FieloCMS.RemoteActionResult.RemoteActionMessage( ApexPages.Severity.Info, 'Success'));            
         }catch(DmlException e){            
