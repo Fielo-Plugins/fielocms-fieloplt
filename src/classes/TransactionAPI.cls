@@ -1,4 +1,4 @@
-public with sharing class TransactionAPI implements FieloCMS.DataInterface, FieloCMS.ControlInterface{
+global with sharing class TransactionAPI implements FieloCMS.DataInterface, FieloCMS.ControlInterface{
 	
 	public Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){                
         Map<Id,Object> newMapData = new Map<Id,Object>();
@@ -7,11 +7,9 @@ public with sharing class TransactionAPI implements FieloCMS.DataInterface, Fiel
             if(c.FieloCMS__Limit__c == null)
                 c.FieloCMS__Limit__c = 5;
 
-            if(c.Name == 'GetPoints'){
-            //if(c.ComponentLibrary__r.Name == 'GetPoints'){
+            if(c.FieloCMS__ComponentLibrary__r.Name == 'Get Points'){
                 newMapData.put(c.Id, new FieloAlpha__Transaction__c());
-            }else if(c.Name == 'Transactions'){
-            //}else if(c.ComponentLibrary__r.Name == 'Transactions'){
+            }else if(c.FieloCMS__ComponentLibrary__r.Name == 'Transactions'){
                 Id memberId = MemberService.getCurrentMemberId();
                 newMapData.put(c.Id, Database.query('SELECT ' + String.join(new List<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c)), ',') + ' FROM FieloAlpha__Transaction__c WHERE FieloAlpha__Member__c =: memberId'));
             }                
@@ -39,11 +37,20 @@ public with sharing class TransactionAPI implements FieloCMS.DataInterface, Fiel
         FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
         List<FieloCMS.RemoteActionResult.RemoteActionMessage> successMessages = new List<FieloCMS.RemoteActionResult.RemoteActionMessage>();
 
+
+
+        //TODO: QUITAR POST UPGRADE
+        FieloCMS__Component__c comp = [SELECT TransactionType__c FROM FieloCMS__Component__c WHERE Id =: component.Id];
+        
+
+
+
+
         try{                    
             sp = Database.setSavepoint();
             
             FieloAlpha__Transaction__c trans = (FieloAlpha__Transaction__c)record;
-            trans.FieloAlpha__Type__c = (component.TransactionType__c != null && component.TransactionType__c != '') ? component.TransactionType__c : 'Code Insert';
+            trans.FieloAlpha__Type__c = (comp.TransactionType__c != null && comp.TransactionType__c != '') ? comp.TransactionType__c : 'Code Insert';
             FieloAlpha.CodeUtil.sendCode(trans);
             successMessages.add(new FieloCMS.RemoteActionResult.RemoteActionMessage( ApexPages.Severity.Info, 'Success'));            
         }catch(DmlException e){            

@@ -70,9 +70,9 @@ global with sharing class ShoppingCartController {
     }
 
     @RemoteAction
-    global static FieloCMS.RemoteActionResult checkout(Id componentId, String newQuantJSON){                
+    global static FieloCMS.RemoteActionResult checkout(String newQuantJSON){/*Id componentId, */
         FieloAlpha__Redemption__c redemption = FieloAlpha.RedemptionService.getOpenRedemption(MemberService.getCurrentMemberId(), 'FrontEnd');
-        FieloCMS__Component__c component = [SELECT Id FROM FieloCMS__Component__c WHERE Id =: componentId];
+        //FieloCMS__Component__c component = [SELECT Id FROM FieloCMS__Component__c WHERE Id =: componentId];
         //, DetailParameter__c, DetailPage__c
         FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
         Savepoint sp = Database.setSavepoint();

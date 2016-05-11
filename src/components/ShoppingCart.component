@@ -1,71 +1,71 @@
 <apex:component controller="ShoppingCartController" allowDML="true" access="global" layout="none">
-    <apex:attribute name="config" type="SObject" description="" />        
+    <!--<apex:attribute name="config" type="SObject" description="" />        -->
 
     <apex:panelGroup rendered="{!rewards.size > 0 }" >
 
-	<div class="fielo-form js-has-message {!config['CSSClasses__c']}" data-componentid="{! config['Id'] }">
-	    <div data-componentid="{! config['Id'] }" class="fielo-message" ></div>
-	    <form class="fielo-form__shopping-cart js-to-be-initialized" data-remoteaction="" data-remotearguments="componentId,quantities" data-remoteobject="Redemption__c" >
-	        <input type="hidden" name="componentId" value="{! config['Id'] }" />    
-	    	
-	        <div class="fielo-record-set js-has-message fielo-record-set--is-table fielo-record-set--is-component-ShoppingCart {!config['CSSClasses__c']}" data-layout="table"  data-componentid="{! config['Id'] }">
-		        <div data-componentid="{! config['Id'] }" class="fielo-messages" ></div>
-		        <apex:panelGroup layout="none" rendered="{!config['FieloCMS__Title__c']!=''}">
-		            <h3 class="fielo-title">{!config['FieloCMS__Title__c']}</h3>
-		        </apex:panelGroup>
-		        <table class="fielo-table mdl-data-table">
-		            <thead class="fielo-table__head">
-		                <tr class="fielo-record">
-		                   	<apex:repeat value="{!$ObjectType.FieloAlpha__Member__c.FieldSets.FieloAlpha__RegistrationStep2}" var="field">
-		                        <th class="fielo-field fielo-field--is-{!field} mdl-data-table__cell--non-numeric"><apex:panelGroup layout="none" ><span class="{!IF(config['FieloCMS__OrderBy__c'] == '' , '', 'fielo-order-by__item')}" data-order-value="{!field}">{!field}</span></apex:panelGroup></th>
-		                    </apex:repeat>
-		                </tr>
-		            </thead>
-		            <tbody class="fielo-record-set__data">
-		                <apex:repeat value="{!rewards}" var="record">
-		                    <tr class="fielo-record fielo-record-set__template">
-		                    	<apex:repeat value="{!$ObjectType.FieloAlpha__Member__c.FieldSets.FieloAlpha__RegistrationStep2}" var="field">
-			                    	<td class="fielo-field fielo-field--is-{!field} mdl-data-table__cell--non-numeric" data-th="{!field}">
+		<div class="fielo-form js-has-message" ><!--{!config['CSSClasses__c']}" data-componentid="{! config['Id'] }" -->
+		    <div  class="fielo-message" ></div><!-- data-componentid="{! config['Id'] }" -->
+		    <form class="fielo-form__shopping-cart js-to-be-initialized" data-remoteaction="" data-remotearguments="quantities" data-remoteobject="Redemption__c" ><!-- componentId, -->
+		        <!--<input type="hidden" name="componentId" value="{! config['Id'] }" />    -->
+		    	
+		        <div class="fielo-record-set js-has-message fielo-record-set--is-table fielo-record-set--is-component-ShoppingCart " data-layout="table"  ><!-- {!config['CSSClasses__c']} data-componentid="{! config['Id'] }" -->
+			        <div class="fielo-messages" ></div><!-- data-componentid="{! config['Id'] }"  -->
+			        <!--<apex:panelGroup layout="none" rendered="{!config['FieloCMS__Title__c']!=''}">
+			            <h3 class="fielo-title">{!config['FieloCMS__Title__c']}</h3>
+			        </apex:panelGroup>-->
+			        <table class="fielo-table mdl-data-table">
+			            <thead class="fielo-table__head">
+			                <tr class="fielo-record">
+			                   	<apex:repeat value="{!$ObjectType.FieloAlpha__Member__c.FieldSets.FieloAlpha__RegistrationStep2}" var="field">
+			                        <th class="fielo-field fielo-field--is-{!field} mdl-data-table__cell--non-numeric"><apex:panelGroup layout="none" ><span data-order-value="{!field}">{!field}</span></apex:panelGroup></th>
+			                    </apex:repeat>
+			                </tr>
+			            </thead>
+			            <tbody class="fielo-record-set__data">
+			                <apex:repeat value="{!rewards}" var="record">
+			                    <tr class="fielo-record fielo-record-set__template">
+			                    	<apex:repeat value="{!$ObjectType.FieloAlpha__Member__c.FieldSets.FieloAlpha__RegistrationStep2}" var="field">
+				                    	<td class="fielo-field fielo-field--is-{!field} mdl-data-table__cell--non-numeric" data-th="{!field}">
+		        							<span class="fielo-field__value">        							
+		        								<apex:outputField value="{!record[field]}" />
+		        							</span>
+		    							</td>
+		    						</apex:repeat>
+		    						<td class="fielo-field fielo-field--is-ShoppingQuantity mdl-data-table__cell--non-numeric" data-th="Shopping Quantity">
 	        							<span class="fielo-field__value">        							
-	        								<apex:outputField value="{!record[field]}" />
+	        								<c:shoppingQuantity record="{!record}" />
 	        							</span>
 	    							</td>
-	    						</apex:repeat>
-	    						<td class="fielo-field fielo-field--is-ShoppingQuantity mdl-data-table__cell--non-numeric" data-th="Shopping Quantity">
-        							<span class="fielo-field__value">        							
-        								<c:shoppingQuantity record="{!record}" />
-        							</span>
-    							</td>
-	    						<td class="fielo-field fielo-field--is-ShoppingTotal mdl-data-table__cell--non-numeric" data-th="Shopping Total">
-        							<span class="fielo-field__value">        							
-        								<c:ShoppingTotal record="{!record}" />
-        							</span>
-    							</td>
-	    						<td class="fielo-field fielo-field--is-ShoppingDelete mdl-data-table__cell--non-numeric" data-th="Shopping Total">
-        							<span class="fielo-field__value">        							
-        								<c:ShoppingDelete record="{!record}" />
-        							</span>
-    							</td>
-    						</tr>
-		                </apex:repeat>
-		            </tbody>
-		        </table>
-		        <nav class="fielo-controls {!IF(config['Paging__c'],'','hidden')}" data-quantity-per-page="{!config['FieloCMS__Limit__c']}" data-page="1" data-component-id="{!config['Id']}" data-binding="{!config['ParameterName__c']}" data-filters="{}" data-order-by="">
-		            <a href="#previousPage" class="fielo-link fielo-link__previous disabled">{!$Label.Previous}</a>
-		            <a href="#nextPage" class="fielo-link fielo-link__next">{!$Label.Next}</a>
-		        </nav>
-		    </div>
-	        <div class="fielo-controls" >
-		        <button data-remoteaction="ShoppingCartController.save" class="fielo-button js-to-be-initialized fielo-button__save" >{!$Label.Save}</button>
-		        <button data-remoteaction="ShoppingCartController.emptyCart" class="fielo-button js-to-be-initialized fielo-button__empty-cart" >{!$Label.EmptyCart}</button>
-		        <button data-remoteaction="ShoppingCartController.checkout" class="fielo-button js-to-be-initialized fielo-button__checkout" >{!$Label.CreateVoucher}</button>
-		    </div>
-	    </form>
-	 </div>
+		    						<td class="fielo-field fielo-field--is-ShoppingTotal mdl-data-table__cell--non-numeric" data-th="Shopping Total">
+	        							<span class="fielo-field__value">        							
+	        								<c:ShoppingTotal record="{!record}" />
+	        							</span>
+	    							</td>
+		    						<td class="fielo-field fielo-field--is-ShoppingDelete mdl-data-table__cell--non-numeric" data-th="Shopping Total">
+	        							<span class="fielo-field__value">        							
+	        								<c:ShoppingDelete record="{!record}" />
+	        							</span>
+	    							</td>
+	    						</tr>
+			                </apex:repeat>
+			            </tbody>
+			        </table>
+			        <!--<nav class="fielo-controls {!IF(config['Paging__c'],'','hidden')}" data-quantity-per-page="{!config['FieloCMS__Limit__c']}" data-page="1" data-component-id="{!config['Id']}" data-binding="{!config['ParameterName__c']}" data-filters="{}" data-order-by="">
+			            <a href="#previousPage" class="fielo-link fielo-link__previous disabled">{!$Label.Previous}</a>
+			            <a href="#nextPage" class="fielo-link fielo-link__next">{!$Label.Next}</a>
+			        </nav>-->
+			    </div>
+		        <div class="fielo-controls" >
+			        <button data-remoteaction="ShoppingCartController.save" class="fielo-button js-to-be-initialized fielo-button__save" >{!$Label.Save}</button>
+			        <button data-remoteaction="ShoppingCartController.emptyCart" class="fielo-button js-to-be-initialized fielo-button__empty-cart" >{!$Label.EmptyCart}</button>
+			        <button data-remoteaction="ShoppingCartController.checkout" class="fielo-button js-to-be-initialized fielo-button__checkout" >{!$Label.CreateVoucher}</button>
+			    </div>
+		    </form>
+		</div>
 	</apex:panelGroup>
 	<apex:panelGroup rendered="{!rewards.size == 0 }" >
-	<span>
-		{! $Label.ErrorNoItemShoppingCart}
-	</span>
+		<span>
+			{! $Label.ErrorNoItemShoppingCart}
+		</span>
 	</apex:panelGroup>
 </apex:component>

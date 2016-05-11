@@ -4,7 +4,7 @@
 
 	<apex:panelGroup layout="none" rendered="true" >
 	<div class="fielo-form">
-		<form class="js-to-be-initialized fielo-form--is-component-{!field.apiName} {!field.attributes['CSSClasses__c']}" data-remoteaction="BlockUnblockMemberController.blockUnblockMember" data-remotearguments="memberId,action" >			
+		<form class="js-to-be-initialized fielo-form--is-component-{!field.apiName} {!field.attributes['CSSClasses']}" data-remoteaction="BlockUnblockMemberController.blockUnblockMember" data-remotearguments="memberId,action" >			
 			<input type="hidden" name="memberId" value="{!record['Id']}" data-object-property="Id"  data-attribute-replace="value"/>
 			<input type="hidden" name="action" value="{!!record['Blocked__c']}" data-attribute-replace="value" />
 			<button type="submit" class="fielo-button fielo-button__submit" >{!$Label.BlockUnblock}</button>

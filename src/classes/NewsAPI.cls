@@ -8,15 +8,12 @@ global with sharing class NewsAPI implements FieloCMS.DataInterface {
             if(c.FieloCMS__Limit__c == null)
                 c.FieloCMS__Limit__c = 5;
 
-            if(c.FieloCMS__ComponentLibrary__r.Name == 'ContentFeed'){
-            //if(c.ComponentLibrary__r.Name == 'ContentFeed'){
-                //SEPARAR EN DOS c.Id
+            if(c.FieloCMS__ComponentLibrary__r.Name == 'Content Feed'){            
                 newMapData.put(c.Id, FieloAlpha.NewsService.getNews(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), null, c.Tag__c, c.Category__c, c.FieloCMS__Limit__c.intValue(), 0, c.FieloCMS__OrderBy__c));
-            }else if(c.FieloCMS__ComponentLibrary__r.Name == 'ContentFeedDetail'){
-            //}else if(c.ComponentLibrary__r.Name == 'ContentFeedDetail'){
+            }else if(c.FieloCMS__ComponentLibrary__r.Name == 'Content Feed Detail'){            
                 Id newsId = c.FieloCMS__RecordId__c;
                 newMapData.put(c.Id, Database.query('SELECT ' + String.join(new List<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c)), ',') + ' FROM FieloAlpha__News__c WHERE Id =: newsId'));
-            }                
+            }
         }
         return newMapData;
     }
@@ -51,6 +48,6 @@ global with sharing class NewsAPI implements FieloCMS.DataInterface {
 
         //Calculate the offset from the Page Number
         Integer offset = Integer.valueOf(component.FieloCMS__Limit__c * (pageNumber - 1));         
-        return FieloAlpha.NewsService.getNews(OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), component.Id, tagId, categoryId, component.FieloCMS__Limit__c.intValue(), offset, orderBy);
+        return FieloAlpha.NewsService.getNews(OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), null, tagId, categoryId, component.FieloCMS__Limit__c.intValue(), offset, orderBy);
     }
 }

@@ -1,0 +1,5 @@
+<apex:page applyHtmlTag="false" applyBodyTag="false" sidebar="false" showHeader="false" standardStylesheets="false"  cache="true" >        
+    <apex:composition template="{!$Site.Template}"><!--FieloCMS__SiteTemplate-->
+        <c:ShoppingCart />
+    </apex:composition>
+</apex:page>

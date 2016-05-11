@@ -1,9 +1,10 @@
-public with sharing class RedemptionAPI implements FieloCMS.DataInterface, FieloCMS.ViewInterface{
+public with sharing class RedemptionAPI implements FieloCMS.DataInterface{
 	
-    public ApexPages.Component getComponent(FieloCMS__Component__c c){                
+    //, FieloCMS.ViewInterface
+    /*public ApexPages.Component getComponent(FieloCMS__Component__c c){                
         Component.ShoppingCart shoppingCart = new Component.ShoppingCart(config = c);
         return shoppingCart;        
-    }
+    }*/
 
 	public Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){        
         Map<Id,Object> newMapData = new Map<Id,Object>();

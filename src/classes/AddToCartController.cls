@@ -12,7 +12,7 @@ global with sharing class AddToCartController implements FieloCMS.ViewSubCompone
     }
 
     @RemoteAction
-    global static FieloCMS.RemoteActionResult addToCart(Id rewardId, Integer quantity, Integer quantInCart, Boolean closeOrder, String detailUrl){
+    global static FieloCMS.RemoteActionResult addToCart(Id rewardId, Integer quantity, Boolean closeOrder, String detailUrl){
         FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
         try{
             FieloAlpha__Redemption__c redemption = FieloAlpha.RewardService.addToCart(MemberService.getCurrentMemberId(), rewardId, quantity, closeOrder);
@@ -27,7 +27,7 @@ global with sharing class AddToCartController implements FieloCMS.ViewSubCompone
                 }else if(redemption.FieloAlpha__Status__c == 'Close'){
                     result.redirectURL = detailUrl + redemption.Id;
                 }
-            }            
+            }
         }catch(FieloCustomException e){
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
         }

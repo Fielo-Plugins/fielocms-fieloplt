@@ -4,7 +4,7 @@
 
     <apex:panelGroup layout="none" rendered="{!record['FieloAlpha__FieloAccountStatus__c'] = 'New'}" >
         <div class="fielo-form">
-            <form class="js-to-be-initialized fielo-form--is-component-{!field.apiName} {!field.attributes['CSSClasses__c']}" data-remoteaction="HandleInvitationsMembersController.resendInvitation" data-remotearguments="memberId" >
+            <form class="js-to-be-initialized fielo-form--is-component-{!field.apiName} {!field.attributes['CSSClasses']}" data-remoteaction="HandleInvitationsMembersController.resendInvitation" data-remotearguments="memberId" >
                 <input type="hidden" name="memberId" value="{!record['Id']}" data-object-property="Id"  data-attribute-replace="value"/>
                 <button type="submit" class="fielo-button fielo-button__submit" >{!$Label.Reinvite}</button>
             </form>
