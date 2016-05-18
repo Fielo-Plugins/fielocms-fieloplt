@@ -12,23 +12,23 @@ global with sharing class AddToCartController implements FieloCMS.ViewSubCompone
     }
 
     @RemoteAction
-    global static FieloCMS.RemoteActionResult addToCart(Id rewardId, Integer quantity, Boolean closeOrder, String detailUrl){
+    global static FieloCMS.RemoteActionResult addToCart(Id rewardId, Integer quantity, Boolean closeOrder, String detailUrl){/*, Integer quantInCart*/
         FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
         try{
             FieloAlpha__Redemption__c redemption = FieloAlpha.RewardService.addToCart(MemberService.getCurrentMemberId(), rewardId, quantity, closeOrder);
             if(redemption != null){
                 if(redemption.FieloAlpha__Status__c == 'Open' || redemption.FieloAlpha__Status__c == null){
                     result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.SuccessRewardAddToChart)));
-                    result.refresh.add( new FieloCMS.RemoteActionResult.RemoteActionRefresh('quantInCart', String.valueOf(quantity)));
+                    //result.refresh.add( new FieloCMS.RemoteActionResult.RemoteActionRefresh('quantInCart', String.valueOf(quantity)));
                 }else if(redemption.FieloAlpha__Status__c == 'Pending'){
                     result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.InfoRedemptionApproval)));
-                    result.refresh.add( new FieloCMS.RemoteActionResult.RemoteActionRefresh('quantInCart', '0'));
+                    //result.refresh.add( new FieloCMS.RemoteActionResult.RemoteActionRefresh('quantInCart', '0'));
                     result.refresh.add( new FieloCMS.RemoteActionResult.RemoteActionRefresh('quantity', '1'));
                 }else if(redemption.FieloAlpha__Status__c == 'Close'){
                     result.redirectURL = detailUrl + redemption.Id;
                 }
             }
-        }catch(FieloCustomException e){
+        }catch(Exception e){
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
         }
 

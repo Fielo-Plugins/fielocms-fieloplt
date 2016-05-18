@@ -1,94 +1,80 @@
 <apex:component layout="none" controller="RegisterStep2Controller" allowDML="true" access="global">
-    <!--<apex:attribute name="config" type="FieloCMS__Component__c" description="" />    -->
-    <!--<apex:attribute name="showPassword" type="Boolean" description="" />-->
+    <apex:attribute name="config" type="FieloCMS__Component__c" description="" />
 
-    <apex:panelGroup layout="none" rendered="{!$ObjectType.FieloAlpha__Member__c.FieldSets.FieloAlpha__RegistrationStep2.size == 0}">
-        <div class="fielo-message fielo-message--is-success">
-            <apex:outputText value="{!$Label.InfoRegisterApprovalInstructions}"/>
-        </div>
-    </apex:panelGroup>                 
-
-    <apex:panelGroup layout="none" rendered="{!status == 'Ok'}">         
-        <div class="fielo-record fielo-form fielo-form--is-component-RegisterStep2 js-has-message " ><!--{!config['FieloCMS__CSSClasses__c']}  data-componentid="{! config['Id'] }" -->
-            <div  class="fielo-messages" ></div>        <!--data-componentid="{! config['Id'] }"-->
-            <form class="js-to-be-initialized" data-remoteaction="RegisterStep2Controller.finishRegistration" data-remotearguments="SObject,password" data-remoteobject="Member__c" >
+    <div class="fielo-record fielo-form fielo-register-step-2 fielo-widget fielo-js-component" data-componentid="{!config.Id}" >
+        <div class="fielo-title">{!$Label.Welcome}</div>
+        <apex:panelGroup layout="none" rendered="{!$ObjectType.FieloAlpha__Member__c.FieldSets.FieloAlpha__RegistrationStep2.size == 0}">
+            <div class="fielo-toast fielo-toast--is-success">
+                <p>{!$Label.InfoRegisterApprovalInstructions}"</p>
+            </div>
+        </apex:panelGroup>
+        <apex:panelGroup layout="none" rendered="{!status != 'Ok'}">
+            <apex:panelGroup layout="none" rendered="{!status != 'Send for Approval'}">
+                <div class="fielo-toast fielo-toast--is-error">
+                    <apex:panelGroup layout="none" rendered="{!status == 'Member Completed'}">
+                        <p>{!$Label.ErrorRegistrationUserExists}</p>
+                    </apex:panelGroup>
+                    <apex:panelGroup layout="none" rendered="{!status == 'Invalid Member'}">
+                        <p>{!$Label.MemberInvalid}</p>
+                    </apex:panelGroup>
+                    <apex:panelGroup layout="none" rendered="{!status == 'Member in Approval'}">
+                        <p>{!$Label.InfoMemberInApproval}</p>
+                    </apex:panelGroup>
+                    <apex:panelGroup layout="none" rendered="{!status == 'Member Rejected'}">
+                        <p>{!$Label.MemberRejected}</p>
+                    </apex:panelGroup>
+                    <apex:panelGroup layout="none" rendered="{!status == 'Organization Account'}">
+                        <p>{!$Label.OrganizationNotAllowed}</p>
+                    </apex:panelGroup>
+                </div>
+            </apex:panelGroup>
+            <apex:panelGroup layout="none" rendered="{!status == 'Send for Approval'}">
+                <form class="fielo-js-upgrade" data-remoteaction="FieloCMS_EE.RegisterStep2Controller.continueRegistration" data-remotearguments="id" data-remoteobject="Member__c" >
+                    <input type="hidden" name="id" value="{!member.Id}" />
+                    <button type="submit" class="fielo-button fielo-button__submit" >{!$Label.Continue}</button>
+                </form>
+                <!--
+                <script>
+                    function continueRegistration(){                
+                        Visualforce.remoting.Manager.invokeAction('RegisterStep2Controller.continueRegistration', '{!member.Id}', function(result, event){      
+                            if(result.messages != undefined && result.messages.length > 0){
+                                for (var i = 0; i < result.messages.length; i++) {                          
+                                    alert(result.messages[i].summary);
+                                }
+                            }                   
+                        }, {escape:true});
+                    }
+                </script> 
+                -->
+            </apex:panelGroup>
+        </apex:panelGroup>
+        <apex:panelGroup layout="none" rendered="{!status == 'Ok'}">         
+            <form class="fielo-js-upgrade" data-remoteaction="FieloCMS_EE.RegisterStep2Controller.finishRegistration" data-remotearguments="SObject,password" data-remoteobject="Member__c" >
                 <fieldset>
-                    <!--<apex:panelGroup layout="none" rendered="{!config['FieloCMS__Title__c']!=''}">
-                        <legend class="fielo-title" >{!config['FieloCMS__Title__c']}</legend>
-                    </apex:panelGroup>-->                    
-                    <!--<input type="hidden" name="{! IF( record['Id'] <> '', 'SObject.id', 'SObject.sObjectType' ) }" value="{! IF( record['Id'] <> '', record['Id'], compSettings.sobject__c) }" />-->
+                    
+                    <input type="hidden" name="SObject.id" value="{!member.Id}" />
                     <apex:repeat value="{!$ObjectType.FieloAlpha__Member__c.FieldSets.FieloAlpha__RegistrationStep2}" var="field" >
                         <div class="mdl-grid fielo-field fielo-field--is-{!field}">
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__label" >
-                                <label for="{!field}" >{!field}</label><!--{! config['Id'] }--->
-                                <!--<apex:panelGroup layout="none" rendered="{!field.inlineHelpText <> '' }" >
-                                    <div id="{! config['Id'] }_hlp{!field.apiName}">help</div><div class="mdl-tooltip" for="{! config['Id'] }_hlp{!field.apiName}">{!field.inlineHelpText}</div>
-                                </apex:panelGroup>-->
+                                <label for="{!field}" >{!field}</label>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__value">
-                                <input class="fielo-input js-to-be-initialized"   id="{!field}" name="SObject.{!field}"  value="{!member[field]}" /><!-- {! config['Id'] }-  data-required="{!field.required}"  autocomplete="{!field.autocomplete}" placeholder="{!field.placeholder}" data-type="{!field.type}"-->
+                                <input class="fielo-input fielo-js-upgrade"   id="{!field}" name="SObject.{!field}"  value="{!member[field]}" /><!-- data-required="{!field.required}" --> <!--data-type="{!field.type}"-->
                             </div>
-                            <div class="mdl-cell mdl-cell--12-col fielo-messages" data-componentid="{!field}" />
                         </div>
                     </apex:repeat>
 
-                    <!--<apex:panelGroup layout="none" rendered="{!showPassword}" >-->
-                        <input class="fielo-input" type="password" required="required"  autocomplete="current-password" id="showPassword" name="showPassword"  /><!--  {! config['Id'] }- -->
-                        <input class="fielo-input" type="password" required="required"  autocomplete="current-password" id="showPasswordConfirm" name="showPasswordConfirm"  /><!--  {! config['Id'] }- -->
+                    <!--<apex:panelGroup layout="none" rendered="{!config.ShowPassword__c}" >-->
+                        <input class="fielo-input" type="password" required="required"  autocomplete="current-password" id="showPassword" name="password"  /><!--  {! config['Id'] }- -->
+                        <input class="fielo-input" type="password" required="required"  autocomplete="current-password" /><!--  {! config['Id'] }- -->
                     <!--</apex:panelGroup>-->
                 </fieldset>
                 <div class="fielo-controls" >
-                    <button type="button" class="fielo-button__cancel hidden" >{!$Label.cancel}</button>
+                    <button type="button" class="fielo-button fielo-button__cancel hidden" >{!$Label.cancel}</button>
                     <button type="submit" class="fielo-button fielo-button__submit" >{!$Label.submit}</button>
                 </div>
             </form>
-        </div>
-
-    </apex:panelGroup>                
-
-    <apex:panelGroup layout="none" rendered="{!status == 'Member Completed'}">
-        <div>
-            <div class="fielo-message--is-error">{!$Label.ErrorRegistrationUserExists}</div>
-        </div>
-    </apex:panelGroup>
-
-    <apex:panelGroup layout="none" rendered="{!status == 'Invalid Member'}">
-        <div>
-            <div class="fielo-message--is-error">{!$Label.MemberInvalid}</div>
-        </div>
-    </apex:panelGroup>
-
-    <apex:panelGroup layout="none" rendered="{!status == 'Member in Approval'}">
-        <div class="fielo-message fielo-message--is-confirm">
-            <apex:outputText value="{!$Label.InfoMemberInApproval}"/>
-        </div>
-    </apex:panelGroup>
-
-    <apex:panelGroup layout="none" rendered="{!status == 'Member Rejected'}">
-        <div class="fielo-message fielo-message--is-confirm">
-            <apex:outputText value="{!$Label.MemberRejected}"/>
-        </div>
-    </apex:panelGroup>
-
-    <apex:panelGroup layout="none" rendered="{!status == 'Organization Account'}">
-        <div class="fielo-message fielo-message--is-confirm">
-            <apex:outputText value="{!$Label.OrganizationNotAllowed}"/>
-        </div>
-    </apex:panelGroup>
-    
-    <apex:panelGroup layout="none" rendered="{!status == 'Send for Approval'}">
-        <div class="fielo-title">{!$Label.Welcome}</div>
-    	<input type="button" styleClass="fielo-link" value="{!$Label.Continue}" onclick="continueRegistration();" />
-		<script>
-	    	function continueRegistration(){	    		
-	    		Visualforce.remoting.Manager.invokeAction('RegisterStep2Controller.continueRegistration', '{!member.Id}', function(result, event){		
-					if(result.messages != undefined && result.messages.length > 0){
-		                for (var i = 0; i < result.messages.length; i++) {		                    
-		                    alert(result.messages[i].summary);
-		                }
-		            }	                
-	    		}, {escape:true});
-	    	}
-	    </script>
-    </apex:panelGroup>
+        </apex:panelGroup>                
+        
+    </div>
 </apex:component>

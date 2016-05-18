@@ -59,14 +59,13 @@ global without sharing class RegisterStep2Controller {
     }
 
     @RemoteAction
-    global static FieloCMS.RemoteActionResult finishRegistration(SObject record, String password){    
+    global static FieloCMS.RemoteActionResult finishRegistration(FieloAlpha__Member__c member, String password){    
         SavePoint sp = Database.setSavepoint();
         FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
-        try{
-            FieloAlpha__Member__c member = (FieloAlpha__Member__c)record;                
+        try{            
             FieloAlpha.MemberService.finishRegistration(member);
-            if(String.isBlank(password)){
-                PageReference passResult = MemberService.setPasswordAndLogin(record.Id, password);
+            if(!String.isBlank(password)){
+                PageReference passResult = MemberService.setPasswordAndLogin(member.Id, password);
                 result.redirectURL = passResult.getUrl();
             }
         }catch(DmlException e){            

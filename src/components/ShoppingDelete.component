@@ -1,4 +1,0 @@
-<apex:component layout="none">
-    <apex:attribute name="record" type="SObject" description="" />    
-    <div class="fielo-button__delete js-to-be-initialized">{!$Label.Delete}</div>
-</apex:component>

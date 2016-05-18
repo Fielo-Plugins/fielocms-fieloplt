@@ -3,18 +3,18 @@
     <apex:attribute name="field" type="FieloCMS.Field" description="" />        
 
     <!-- Chequea mediante la related list saca si esta en el Cart o no -->
-    <apex:variable var="isInCart" value="{!0}" /> 
-    <apex:repeat value="{!record['FieloAlpha__RedemptionItems__r']}"  var="cartItem">
+    <!--<apex:variable var="isInCart" value="{!0}" />-->
+    <!--<apex:repeat value="{!record['FieloAlpha__RedemptionItems__r']}"  var="cartItem">
         <apex:variable var="isInCart" value="{! isInCart + cartItem.FieloAlpha__quantity__c}" />
-    </apex:repeat>
+    </apex:repeat>-->
 
-    <div class="fielo-form">
-        <form class="fielo-form__add-to-cart js-to-be-initialized" data-remoteaction="AddToCartController.addToCart" data-remotearguments="recordId,quant,closeOrder,detailUrl" data-remoteobject="Redemption__c" data-alreadyincart="{!$Label.ShoppingExistingReward}">            
-            <input type="hidden" name="closeOrder" value="{!field.attributes['closeOrder']}" />
-            <input type="hidden" name="detailUrl" value="{!field.attributes['detailUrl']}" />
+    <div class="fielo-form fielo-add-to-cart fielo-widget fielo-js-component">
+        <form class="fielo-form__add-to-cart fielo-js-upgrade" data-remoteaction="FieloCMS_EE.AddToCartController.addToCart" data-remotearguments="recordId,quant,closeOrder,detailUrl" data-remoteobject="Redemption__c" data-alreadyincart="{!$Label.ShoppingExistingReward}">            <!-- ,quantInCart -->
             <input type="hidden" name="recordId" value="{!record['Id']}" data-object-property="Id"  data-attribute-replace="value"/>
             <input type="number" name="quant" required="required" value="1" min="1" class="fielo-form__quantity"/>
-            <input type="hidden" class="fielo-form__quantity-in-cart js-to-be-initialized" name="quantInCart" value="{!isInCart}" data-object-property="'FieloAlpha__RedemptionItems__r'"  data-attribute-replace="value"/>
+            <input type="hidden" name="closeOrder" value="{!field.attributes['closeOrder']}" />
+            <input type="hidden" name="detailUrl" value="{!field.attributes['detailUrl']}" />
+            <!--<input type="hidden" class="fielo-form__quantity-in-cart fielo-js-upgrade" name="quantInCart" value="{!isInCart}" data-object-property="'FieloAlpha__RedemptionItems__r'"  data-attribute-replace="value"/>-->
             <button type="submit" class="fielo-button fielo-button__submit" >{!$Label.Add} </button>
         </form>
     </div>
