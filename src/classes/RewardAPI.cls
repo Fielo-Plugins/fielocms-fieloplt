@@ -7,7 +7,7 @@ global with sharing class RewardAPI implements FieloCMS.DataInterface{
         for(FieloCMS__Component__c c : components){            
             if(c.FieloCMS__Limit__c == null)
                 c.FieloCMS__Limit__c = 5;
-            
+
             newMapData.put(c.Id, FieloAlpha.RewardService.getRewards(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), c.Tag__c, c.Category__c, c.FieloCMS__Limit__c.intValue(), 0, c.FieloCMS__OrderBy__c, c.FilterBySegment__c));                       
         }
         return newMapData;

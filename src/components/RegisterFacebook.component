@@ -1,5 +1,0 @@
-<apex:component selfClosing="true" layout="none">
-    <div class="fielo-facebook js-to-be-initialized" data-organizationid="{!$Organization.Id}" data-siteurl="{!$Site.CurrentSiteUrl}" >
-    	<a href="https://login.salesforce.com/services/auth/sso/{!$Organization.Id}/FacebookLogin?site={!$Site.CurrentSiteUrl}" ><i></i>&nbsp; {!$Label.FacebookLogin}</a>
-    </div>
-</apex:component>
