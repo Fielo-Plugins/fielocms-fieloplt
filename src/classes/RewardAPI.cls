@@ -8,15 +8,7 @@ global with sharing class RewardAPI implements FieloCMS.DataInterface{
             if(c.FieloCMS__Limit__c == null)
                 c.FieloCMS__Limit__c = 5;
 
-            if(c.FieloCMS__ComponentLibrary__r.Name == 'Catalog'){            
-                newMapData.put(c.Id, FieloAlpha.RewardService.getRewards(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), c.Tag__c, c.Category__c, c.FieloCMS__Limit__c.intValue(), 0, c.FieloCMS__OrderBy__c, c.FilterBySegment__c));
-            }else if(c.FieloCMS__ComponentLibrary__r.Name == 'Reward Detail'){            
-                Id rewardId = c.FieloCMS__RecordId__c;    
-
-                System.debug(rewardId);
-
-                newMapData.put(c.Id, Database.query('SELECT ' + String.join(new List<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c)), ',') + ' FROM FieloAlpha__Reward__c WHERE Id =: rewardId')[0]);
-            }            
+            newMapData.put(c.Id, FieloAlpha.RewardService.getRewards(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), c.Tag__c, c.Category__c, c.FieloCMS__Limit__c.intValue(), 0, c.FieloCMS__OrderBy__c, c.FilterBySegment__c));                       
         }
         return newMapData;
     }
@@ -49,7 +41,7 @@ global with sharing class RewardAPI implements FieloCMS.DataInterface{
 
         //Calculate the offset from the Page Number
         Integer offset = Integer.valueOf(component.FieloCMS__Limit__c * (pageNumber - 1));
-        return FieloAlpha.RewardService.getRewards(OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), component.Tag__c, component.Category__c, component.FieloCMS__Limit__c.intValue(), offset, orderBy, component.FilterBySegment__c);
+        return FieloAlpha.RewardService.getRewards(OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), tagId, categoryId, component.FieloCMS__Limit__c.intValue(), offset, orderBy, component.FilterBySegment__c);
     }
 
 }
