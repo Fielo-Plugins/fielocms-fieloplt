@@ -1,38 +1,36 @@
 public with sharing class MemberService {
-    
-    public static FieloAlpha__Member__c getCurrentMember(Set<String> fields){
+	
+	public static FieloAlpha__Member__c getCurrentMember(Set<String> fields){
         return new MembersSelector(fields).selectById(new Set<Id>{getCurrentMemberId()})[0];
     }
 
-    /*private static Id memId;
+    private static Id memId;
     public static Id getCurrentMemberId(){        
         if(UserInfo.getUserType() == 'Guest')
             return null;
 
-        if(memId == null){
-            Cookie memberCookie = ApexPages.currentPage().getCookies().get('memberId');
-            Cookie sessionIdCookie = ApexPages.currentPage().getCookies().get('sessionMemberId');
-            if(memberCookie != null && sessionIdCookie != null && (sessionIdCookie.getValue() == UserInfo.getSessionId())){        
-                memId = (Id)memberCookie.getValue();
-            }else if(memId == null){
-                try{
-                    List<FieloAlpha__Member__c> members = [SELECT Id, FieloAlpha__Program__c FROM FieloAlpha__Member__c WHERE FieloAlpha__User__c =: UserInfo.getUserId()];
-                    if(members.size() == 1){
-                        memId = members[0].Id;
-                        setCurrentMemberId(memId);
-                    }else{
-                        Id programId = FieloAlpha.ProgramUtil.getProgramByDomain().Id;
-                        for(FieloAlpha__Member__c m : members){
-                            if(m.FieloAlpha__Program__c == programId){
-                                memId = m.Id;
-                                setCurrentMemberId(memId);
-                                break;
-                            }
+        Cookie memberCookie = ApexPages.currentPage().getCookies().get('memberId');
+        Cookie sessionIdCookie = ApexPages.currentPage().getCookies().get('sessionMemberId');
+        if(memberCookie != null && sessionIdCookie != null && (sessionIdCookie.getValue() == UserInfo.getSessionId())){        
+            return (Id)memberCookie.getValue();
+        }else if(memId == null){
+            try{
+                List<FieloAlpha__Member__c> members = [SELECT Id, FieloAlpha__Program__c FROM FieloAlpha__Member__c WHERE FieloAlpha__User__c =: UserInfo.getUserId()];
+                if(members.size() == 1){
+                    memId = members[0].Id;
+                    setCurrentMemberId(memId);
+                }else{
+                    Id programId = FieloAlpha.ProgramUtil.getProgramByDomain().Id;
+                    for(FieloAlpha__Member__c m : members){
+                        if(m.FieloAlpha__Program__c == programId){
+                            memId = m.Id;
+                            setCurrentMemberId(memId);
+                            break;
                         }
                     }
-                }catch(Exception e){
-                    return null;
                 }
+            }catch(Exception e){
+                return null;
             }
         }
         return memId;
@@ -40,50 +38,6 @@ public with sharing class MemberService {
 
     public static void setCurrentMemberId(Id memberId){
         ApexPages.currentPage().setCookies(new Cookie[]{new Cookie('memberId', memberId, null, -1,true),new Cookie('sessionMemberId', UserInfo.getSessionId(), null, -1,false)});
-    }*/
-
-    private static Id memId;
-    public static Id getCurrentMemberId(){
-        if(UserInfo.getUserType() == 'Guest')
-            return null;
-
-        if(memId == null){
-            SessionCache__c sessionCache = SessionCache__c.getInstance(UserInfo.getUserId());
-            if((sessionCache.SessionId__c == UserInfo.getSessionId() && sessionCache.MemberId__c != null) || UserInfo.getUserType() == 'Standard'){
-                memId = sessionCache.MemberId__c;
-            }else if(memId == null){
-                try{
-                    List<FieloAlpha__Member__c> members = [SELECT Id, FieloAlpha__Program__c FROM FieloAlpha__Member__c WHERE FieloAlpha__User__c =: UserInfo.getUserId()];
-                    if(members.size() == 1){
-                        memId = members[0].Id;
-                        /*try{
-                            setCurrentMemberId(memId);
-                        }catch(Exception e){}*/
-                    }else{
-                        Id programId = FieloAlpha.ProgramUtil.getProgramByDomain().Id;
-                        for(FieloAlpha__Member__c m : members){
-                            if(m.FieloAlpha__Program__c == programId){
-                                memId = m.Id;
-                                /*try{
-                                    setCurrentMemberId(memId);                                    
-                                }catch(Exception e){}*/
-                                break;
-                            }
-                        }
-                    }
-                }catch(Exception e){
-                    return null;
-                }
-            }
-        }
-        return memId;
-    }
-
-    public static void setCurrentMemberId(Id memberId){
-        SessionCache__c sessionCache = SessionCache__c.getInstance(UserInfo.getUserId());
-        sessionCache.SessionId__c = UserInfo.getSessionId();
-        sessionCache.MemberId__c = memberId;
-        upsert sessionCache;
     }
 
     public static PageReference setPasswordAndLogin(Id memberId, String password){

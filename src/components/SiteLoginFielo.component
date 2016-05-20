@@ -1,33 +1,36 @@
 <apex:component controller="SiteLoginFieloController" allowDML="true" access="global" layout="none" >
-    <apex:attribute name="config" type="FieloCMS__Component__c" description="" />
+    <!--<apex:attribute name="config" type="FieloCMS__Component__c" description="" />-->
 
-    <div class="fielo-form fielo-login fielo-widget fielo-js-component" data-componentid="{!config.Id}" >
-        <form class="fielo-js-upgrade" data-remotearguments="username,password" data-remoteaction="FieloCMS_EE.SiteLoginFieloController.login"  >
-            <fieldset>                
-                <legend class="fielo-title" >Login</legend><!--{!$Label.FieloAlpha__Login}-->
+    <div class="fielo-record fielo-form fielo-form--is-component-login js-has-message " ><!--{!config['FieloCMS__CSSClasses__c']}" data-componentid="{! config['Id'] }-->
+        <div  class="fielo-messages" ></div><!--data-componentid="{! config['Id'] }"-->
+        <form class="js-to-be-initialized" data-remotearguments="username,password" data-remoteaction="SiteLoginFieloController.login"  >
+            <fieldset>
+                <!--<apex:panelGroup layout="none" rendered="{!config['FieloCMS__Title__c']!=''}">
+                    <legend class="fielo-title" >{!config['FieloCMS__Title__c']}</legend>
+                </apex:panelGroup>-->
+
                 <div class="mdl-grid fielo-field fielo-field--is-username fielo-field" >
                     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__label" >
-                        <label for="username" id="lblUsername" data-switchlabel="{!$Label.site.enter_password}" >{!$Label.site.email}</label>
+                        <label for="username" id="lblUsername" data-switchlabel="{!$Label.site.enter_password}" >{!$Label.site.email}</label><!--{!config['Id']}-  {!config['Id']}-  -->
                     </div>
                     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__value">
-                        <input id="username" required="true" autofocus="true" name="username" type="email" autocomplete="username" />
+                        <input id="username" required="true" autofocus="true" name="username" type="email" autocomplete="username" /><!--{!config['Id']}-  -->
                     </div>
+                    <div class="mdl-cell mdl-cell--12-col fielo-messages" data-componentid="username" />
                 </div>   
                 <div class="mdl-grid fielo-field fielo-field--is-password fielo-field">
                     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__label" >
                         <label for="password" id="lblPassword">{!$Label.site.password}</label>
-                    </div>
+                    </div><!--{!config['Id']}-  {!config['Id']}-  -->
                     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__value">
                         <input id="password" required="true" name="password" type="password" />
-                    </div>
+                    </div><!-- {!config['Id']}- -->
+                    <div class="mdl-cell mdl-cell--12-col fielo-messages js-has-message" data-componentid="password" />
                 </div>   
-                <div class="mdl-grid">                    
-                    <apex:panelGroup layout="none" rendered="{!config.Facebook__c}" >
-                        <div class="fielo-facebook js-to-be-initialized" data-organizationid="{!$Organization.Id}" data-siteurl="{!$Site.CurrentSiteUrl}" >
-                            <a href="https://login.salesforce.com/services/auth/sso/{!$Organization.Id}/FacebookLogin?site={!$Site.CurrentSiteUrl}" ><i></i>&nbsp; {!$Label.FacebookLogin}</a>
-                        </div>
-                    </apex:panelGroup>
-                </div>
+
+                <!--<div class="mdl-grid">
+                    <c:RegisterFacebook rendered="{!config.Facebook__c}" />
+                </div>-->
             </fieldset>            
             <div class="fielo-controls" >
                 <a href="#" class="fielo-login__link" data-switchlabel="{!$Label.back}" >{!$Label.site.forgot_password}</a>

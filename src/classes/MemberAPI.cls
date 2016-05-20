@@ -1,14 +1,14 @@
-global with sharing class MemberAPI implements FieloCMS.DataInterface, FieloCMS.ControlInterface, FieloCMS.ViewInterface{
+global with sharing class MemberAPI implements FieloCMS.DataInterface, FieloCMS.ControlInterface{
 	//, FieloCMS.ViewInterface
-    global ApexPages.Component getComponent(FieloCMS__Component__c component){                                
+    /*global ApexPages.Component getComponent(FieloCMS__Component__c component){                                
         if(component.FieloCMS__ComponentLibrary__r.Name == 'Login'){                    
             return new Component.SiteLoginFielo(config = component);            
-        }else if(component.FieloCMS__ComponentLibrary__r.Name == 'Register Step 2'){                    
-            return new Component.RegisterStep2(config = component);                            
+        }else if(component.FieloCMS__ComponentLibrary__r.Name == 'RegisterStep2'){                    
+            return new Component.RegisterStep2(config = component, showPassword = true);                            
         }
         
         return null;
-    }
+    }*/
     
 	global Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){        
         Map<Id,Object> newMapData = new Map<Id,Object>();
@@ -27,12 +27,12 @@ global with sharing class MemberAPI implements FieloCMS.DataInterface, FieloCMS.
 	      		newMapData.put(c.Id, new MembersSelector(new Set<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c))).selectRelatedMembers(UserInfo.getUserId(), program.Id));
             }else if(c.FieloCMS__ComponentLibrary__r.Name == 'Organization Members'){
 	      		FieloAlpha__Member__c loggedMember = MemberService.getCurrentMember(new Set<String>{'RecordType.DeveloperName'});
-	      		if(loggedMember.RecordType.DeveloperName == 'OrganizationAccount'){
+	      		if(loggedMember.RecordType.DeveloperName == 'OrganizationProfile'){
 	      			newMapData.put(c.Id, new MembersSelector(new Set<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c))).selectByOrganizationAccount(loggedMember.Id));
 	      		}
             }else if(c.FieloCMS__ComponentLibrary__r.Name == 'Register'){
                 newMapData.put(c.Id, new FieloAlpha__Member__c());
-            }else if(c.FieloCMS__ComponentLibrary__r.Name == 'Member Detail' || c.FieloCMS__ComponentLibrary__r.Name == 'Account'){
+            } else if(c.FieloCMS__ComponentLibrary__r.Name == 'Member Detail' || c.FieloCMS__ComponentLibrary__r.Name == 'Account'){
                 newMapData.put(c.Id, MemberService.getCurrentMember(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c)));
             }
         }

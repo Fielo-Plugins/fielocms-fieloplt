@@ -41,7 +41,7 @@ global with sharing class RewardAPI implements FieloCMS.DataInterface{
 
         //Calculate the offset from the Page Number
         Integer offset = Integer.valueOf(component.FieloCMS__Limit__c * (pageNumber - 1));
-        return FieloAlpha.RewardService.getRewards(OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), component.Tag__c, component.Category__c, component.FieloCMS__Limit__c.intValue(), offset, orderBy, component.FilterBySegment__c);
+        return FieloAlpha.RewardService.getRewards(OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), tagId, categoryId, component.FieloCMS__Limit__c.intValue(), offset, orderBy, component.FilterBySegment__c);
     }
 
 }

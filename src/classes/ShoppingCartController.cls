@@ -1,34 +1,15 @@
 global with sharing class ShoppingCartController {
     
-    private Boolean redemptionQueried = false;
-    private FieloAlpha__Redemption__c redemption {get{
-        if(!redemptionQueried){
-            redemption = FieloAlpha.RedemptionService.getOpenRedemption(MemberService.getCurrentMemberId(), 'FrontEnd');
-            redemptionQueried = true;
-        }
-        return redemption;
-    } set;}
-    
     public List<FieloAlpha__Reward__c> rewards {get{
-        if(rewards == null){            
-            if(redemption != null){
-                Id redemptionId = redemption.Id;
-                rewards = Database.query('SELECT ' + getFieldSet() + ' FROM FieloAlpha__Reward__c WHERE Id in (SELECT FieloAlpha__Reward__c FROM FieloAlpha__RedemptionItem__c WHERE FieloAlpha__Redemption__c =: redemptionId)');
+        if(rewards == null){
+            FieloAlpha__Redemption__c redemption = FieloAlpha.RedemptionService.getOpenRedemption(MemberService.getCurrentMemberId(), 'FrontEnd');
+            if(redemption.Id != null){
+                rewards = Database.query('SELECT ' + getFieldSet() + ' FROM FieloAlpha__Reward__c WHERE Id in (SELECT FieloAlpha__Reward__c FROM FieloAlpha__RedemptionItem__c WHERE FieloAlpha__Redemption__c = redemption.Id)');
             }else{
                 rewards = new List<FieloAlpha__Reward__c>();
             }
         }
         return rewards;
-    } set;}
-
-    public Map<Id,Integer> quantitiesMap {get{
-        if(quantitiesMap == null){
-            quantitiesMap = new Map<Id,Integer>();
-            for(AggregateResult ar : [SELECT sum(FieloAlpha__Quantity__c) quantities, FieloAlpha__Reward__c FROM FieloAlpha__RedemptionItem__c WHERE FieloAlpha__Redemption__c =: redemption.Id GROUP BY FieloAlpha__Reward__c]){
-                quantitiesMap.put((Id)ar.get('FieloAlpha__Reward__c'), Integer.valueOf(ar.get('quantities')));
-            }
-        }
-        return quantitiesMap;
     } set;}
 
     private String getFieldset(){        
@@ -40,21 +21,18 @@ global with sharing class ShoppingCartController {
     }
 
     @RemoteAction
-    global static FieloCMS.RemoteActionResult save(Id componentId, String newQuantJSON){//Map<Id,Integer> newQuantitiesMap                        
+    global static FieloCMS.RemoteActionResult save(String newQuantJSON){//Map<Id,Integer> newQuantitiesMap                        
         FieloAlpha__Redemption__c redemption = FieloAlpha.RedemptionService.getOpenRedemption(MemberService.getCurrentMemberId(), 'FrontEnd');
         FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
         Savepoint sp = Database.setSavepoint();
         try{
             if(String.isNotBlank(newQuantJSON)){
                 Map<String,Object> newQuantitiesMap = (Map<String,Object>)JSON.deserializeUntyped(newQuantJSON);
-                if(redemption == null){
-                    redemption = FieloAlpha.RedemptionService.createRedemption(MemberService.getCurrentMemberId(), 'FrontEnd');
-                }
                 saveCart(redemption, newQuantitiesMap);
             }
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, 'success')));
             result.redirectURL = '#';
-        }catch(FieloAlpha.FieloCustomException e){
+        }catch(FieloCustomException e){
             Database.rollBack(sp);
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
         }
@@ -92,25 +70,23 @@ global with sharing class ShoppingCartController {
     }
 
     @RemoteAction
-    global static FieloCMS.RemoteActionResult checkout(Id componentId, String newQuantJSON){
+    global static FieloCMS.RemoteActionResult checkout(String newQuantJSON){/*Id componentId, */
         FieloAlpha__Redemption__c redemption = FieloAlpha.RedemptionService.getOpenRedemption(MemberService.getCurrentMemberId(), 'FrontEnd');
-        
-        FieloCMS__Component__c component = [SELECT FieloCMS__DetailParameter__c, FieloCMS__DetailPage__c FROM FieloCMS__Component__c WHERE Id =: componentId];        
+        //FieloCMS__Component__c component = [SELECT Id FROM FieloCMS__Component__c WHERE Id =: componentId];
+        //, DetailParameter__c, DetailPage__c
         FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
         Savepoint sp = Database.setSavepoint();
         try{
             if(String.isNotBlank(newQuantJSON)){
                 Map<String,Object> newQuantitiesMap = (Map<String,Object>)JSON.deserializeUntyped(newQuantJSON);
-                if(redemption == null){
-                    redemption = FieloAlpha.RedemptionService.createRedemption(MemberService.getCurrentMemberId(), 'FrontEnd');
-                }
                 saveCart(redemption, newQuantitiesMap);
             }
             FieloAlpha.RedemptionService.closeRedemption(redemption.Id);
-            PageReference retPage = new PageReference('/FieloCMS__Page');
-            retPage.getParameters().put('pageId',component.FieloCMS__DetailPage__c);
-            retPage.getParameters().put(component.FieloCMS__DetailParameter__c,redemption.Id);
-            result.redirectURL = retPage.getUrl();            
+            PageReference retPage = new PageReference('/Page');
+            //retPage.getParameters().put('pageId',component.DetailPage__c);
+            //retPage.getParameters().put(component.DetailParameter__c,redemption.Id);
+            result.redirectURL = retPage.getUrl();
+            //result.redirectURL = '/Page?pageId=' + component.DetailPage__c + '&' + component.DetailParameter__c + '=' + redemption.Id;
         }catch(Exception e){
             Database.rollBack(sp);
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
@@ -127,7 +103,7 @@ global with sharing class ShoppingCartController {
     }
 
     @RemoteAction
-    global static FieloCMS.RemoteActionResult emptyCart(Id componentId, String newQuantJSON){                
+    global static FieloCMS.RemoteActionResult emptyCart(){                
         FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();        
         Savepoint sp = Database.setSavepoint();
         try{

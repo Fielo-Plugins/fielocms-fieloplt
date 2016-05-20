@@ -20,10 +20,8 @@ public class OrganizationUtil {
                     if(field.multiLanguage){
                         fields.add(field.apiName + '_' + lang + '__c');
                     }else{*/
-                    Map<String, Object> attributesMap = (Map<String, Object>)field;
-                    if(attributesMap.get('type') != 'Subcomponent'){
+                        Map<String, Object> attributesMap = (Map<String, Object>)field;
                         fields.add((String)attributesMap.get('apiName'));
-                    }
                     /*}
                 }else if(field.type == 'Multimedia'){
                     fields.add(field.multimediaField);

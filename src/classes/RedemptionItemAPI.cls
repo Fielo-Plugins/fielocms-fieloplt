@@ -12,9 +12,6 @@ global with sharing class RedemptionItemAPI implements FieloCMS.DataInterface{
             if(redemptionId != null){
                 whereCondition += ' AND FieloAlpha__Redemption__c = \'' + redemptionId + '\'';
             }
-            if(c.FieloCMS__Limit__c != null){
-                whereCondition += ' LIMIT ' + String.valueOf(c.FieloCMS__Limit__c);
-            }
             newMapData.put(c.Id, Database.query('SELECT ' + String.join(new List<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c)), ',') + ' FROM FieloAlpha__RedemptionItem__c WHERE ' + whereCondition));            
         }
         return newMapData;
@@ -33,8 +30,8 @@ global with sharing class RedemptionItemAPI implements FieloCMS.DataInterface{
         if(redemptionId != null){
             whereCondition += ' AND FieloAlpha__Redemption__c = \'' + redemptionId + '\'';
         }
-        whereCondition += ' LIMIT ' + String.valueOf(component.FieloCMS__Limit__c);
-        whereCondition += ' OFFSET ' + String.valueOf(offset);
+        whereCondition += ' LIMIT ' + String.valueOf(offset);
+        whereCondition += ' OFFSET ' + String.valueOf(component.FieloCMS__Limit__c);
         return Database.query('SELECT ' + String.join(new List<String>(OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c)), ',') + ' FROM FieloAlpha__RedemptionItem__c WHERE ' + whereCondition);
     }
 }

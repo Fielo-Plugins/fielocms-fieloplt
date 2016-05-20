@@ -1,12 +1,12 @@
 <apex:component controller="ShoppingCartController" allowDML="true" access="global" layout="none">
-    <apex:attribute name="config" type="FieloCMS__Component__c" description="" />
+    <!--<apex:attribute name="config" type="SObject" description="" />        -->
 
     <apex:panelGroup rendered="{!rewards.size > 0 }" >
 
-		<div class="fielo-form js-has-message" data-componentid="{!config.Id}" ><!--{!config['CSSClasses__c']}" data-componentid="{! config['Id'] }" -->
+		<div class="fielo-form js-has-message" ><!--{!config['CSSClasses__c']}" data-componentid="{! config['Id'] }" -->
 		    <div  class="fielo-message" ></div><!-- data-componentid="{! config['Id'] }" -->
-		    <form class="fielo-form__shopping-cart fielo-js-upgrade" data-remoteaction="" data-remotearguments="componentId,quantities" data-remoteobject="Redemption__c" ><!-- componentId, -->
-		        <input type="hidden" name="componentId" value="{!config.Id}" />
+		    <form class="fielo-form__shopping-cart js-to-be-initialized" data-remoteaction="" data-remotearguments="quantities" data-remoteobject="Redemption__c" ><!-- componentId, -->
+		        <!--<input type="hidden" name="componentId" value="{! config['Id'] }" />    -->
 		    	
 		        <div class="fielo-record-set js-has-message fielo-record-set--is-table fielo-record-set--is-component-ShoppingCart " data-layout="table"  ><!-- {!config['CSSClasses__c']} data-componentid="{! config['Id'] }" -->
 			        <div class="fielo-messages" ></div><!-- data-componentid="{! config['Id'] }"  -->
@@ -16,7 +16,7 @@
 			        <table class="fielo-table mdl-data-table">
 			            <thead class="fielo-table__head">
 			                <tr class="fielo-record">
-			                   	<apex:repeat value="{!$ObjectType.FieloAlpha__Reward__c.FieldSets.ShoppingCart}" var="field">
+			                   	<apex:repeat value="{!$ObjectType.FieloAlpha__Member__c.FieldSets.FieloAlpha__RegistrationStep2}" var="field">
 			                        <th class="fielo-field fielo-field--is-{!field} mdl-data-table__cell--non-numeric"><apex:panelGroup layout="none" ><span data-order-value="{!field}">{!field}</span></apex:panelGroup></th>
 			                    </apex:repeat>
 			                </tr>
@@ -24,7 +24,7 @@
 			            <tbody class="fielo-record-set__data">
 			                <apex:repeat value="{!rewards}" var="record">
 			                    <tr class="fielo-record fielo-record-set__template">
-			                    	<apex:repeat value="{!$ObjectType.FieloAlpha__Reward__c.FieldSets.ShoppingCart}" var="field">
+			                    	<apex:repeat value="{!$ObjectType.FieloAlpha__Member__c.FieldSets.FieloAlpha__RegistrationStep2}" var="field">
 				                    	<td class="fielo-field fielo-field--is-{!field} mdl-data-table__cell--non-numeric" data-th="{!field}">
 		        							<span class="fielo-field__value">        							
 		        								<apex:outputField value="{!record[field]}" />
@@ -33,32 +33,17 @@
 		    						</apex:repeat>
 		    						<td class="fielo-field fielo-field--is-ShoppingQuantity mdl-data-table__cell--non-numeric" data-th="Shopping Quantity">
 	        							<span class="fielo-field__value">        							
-	        								<!--<apex:variable var="quantity" value="{!0}" /> 
-										    <apex:repeat value="{!record['FieloAlpha__RedemptionItems__r']}"  var="cartItem">
-										        <apex:variable var="quantity" value="{! quantity + cartItem.quantity__c}" />
-										    </apex:repeat>-->
-										    <!--<apex:panelGroup rendered="{!field.ReadOnly}">
-										        {!quantity}
-										    </apex:panelGroup>    -->
-										    <apex:panelGroup ><!--rendered="{! !field.ReadOnly}"-->
-										        <input type="number" min="0" required="required" class="fielo-shopping__quantity js-to-be-initialized" name="quantities.{!record.Id}" value="{!quantitiesMap[record.Id]}"  data-attribute-replace="value"/><!--data-object-property="FieloAlpha__RedemptionItems__r"-->
-										    </apex:panelGroup>
+	        								<c:shoppingQuantity record="{!record}" />
 	        							</span>
 	    							</td>
 		    						<td class="fielo-field fielo-field--is-ShoppingTotal mdl-data-table__cell--non-numeric" data-th="Shopping Total">
 	        							<span class="fielo-field__value">        							
-	        								JS?
-
-	        								<!--<apex:variable var="total" value="{!0}" /> 
-										    <apex:repeat value="{!record['FieloAlpha__RedemptionItems__r']}"  var="cartItem">
-										        <apex:variable var="total" value="{! total + (cartItem.quantity__c * record['PointsCant__c']) }" />
-										    </apex:repeat>
-										    <span class="fielo-shopping__total">{!total}</span>-->
+	        								<c:ShoppingTotal record="{!record}" />
 	        							</span>
 	    							</td>
 		    						<td class="fielo-field fielo-field--is-ShoppingDelete mdl-data-table__cell--non-numeric" data-th="Shopping Total">
 	        							<span class="fielo-field__value">        							
-	        								<div class="fielo-button__delete fielo-js-upgrade">{!$Label.Delete}</div>
+	        								<c:ShoppingDelete record="{!record}" />
 	        							</span>
 	    							</td>
 	    						</tr>
@@ -71,9 +56,9 @@
 			        </nav>-->
 			    </div>
 		        <div class="fielo-controls" >
-			        <button data-remoteaction="FieloCMS_EE.ShoppingCartController.save" class="fielo-button fielo-js-upgrade fielo-button__save" >{!$Label.Save}</button>
-			        <button data-remoteaction="FieloCMS_EE.ShoppingCartController.emptyCart" class="fielo-button fielo-js-upgrade fielo-button__empty-cart" >{!$Label.EmptyCart}</button>
-			        <button data-remoteaction="FieloCMS_EE.ShoppingCartController.checkout" class="fielo-button fielo-js-upgrade fielo-button__checkout" >{!$Label.CreateVoucher}</button>
+			        <button data-remoteaction="ShoppingCartController.save" class="fielo-button js-to-be-initialized fielo-button__save" >{!$Label.Save}</button>
+			        <button data-remoteaction="ShoppingCartController.emptyCart" class="fielo-button js-to-be-initialized fielo-button__empty-cart" >{!$Label.EmptyCart}</button>
+			        <button data-remoteaction="ShoppingCartController.checkout" class="fielo-button js-to-be-initialized fielo-button__checkout" >{!$Label.CreateVoucher}</button>
 			    </div>
 		    </form>
 		</div>
@@ -82,5 +67,5 @@
 		<span>
 			{! $Label.ErrorNoItemShoppingCart}
 		</span>
-	</apex:panelGroup>	
+	</apex:panelGroup>
 </apex:component>
