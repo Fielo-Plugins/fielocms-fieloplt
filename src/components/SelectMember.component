@@ -1,14 +1,13 @@
 <apex:component layout="none" controller="SelectMemberController" >
-    <apex:attribute name="record" type="SObject" description="" />
+    <apex:attribute name="record" type="FieloAlpha__Member__c" description="" />
     <apex:attribute name="field" type="FieloCMS.Field" description="" />
-    <apex:attribute name="type" type="String" description="" />
 
-    <apex:panelGroup layout="none" rendered="{!(field.attributes['type'] == 'Member' || (record['OrganizationAccount__c'] != null && record['IsManager__c'] == true))}" >
+    <apex:panelGroup layout="none" rendered="{!(field.attributes['type'] == 'Member' || (record.FieloAlpha__OrganizationAccount__c != null && record.FieloAlpha__IsManager__c == true))}" >
         <div class="fielo-form">
-            <form class="js-to-be-initialized fielo-form--is-component-{!field.apiName} {!field.attributes['CSSClasses__c']}" data-remoteaction="SelectMemberController.selectMember" data-remotearguments="memberId,type" >
-                <input type="hidden" name="memberId" value="{!record['Id']}" data-object-property="Id"  data-attribute-replace="value"/>
+            <form class="fielo-js-upgrade fielo-form--is-component-{!field.apiName} {!field.attributes['CSSClasses__c']}" data-remoteaction="FieloCMS_EE.SelectMemberController.selectMember" data-remotearguments="memberId,type" >
+                <input type="hidden" name="memberId" value="{!record.Id}" data-object-property="Id" data-attribute-replace="value"/>
                 <input type="hidden" name="type" value="{!field.attributes['type']}" />
-                <apex:panelGroup layout="none" rendered="{!!record['FieloAlpha__Blocked__c']}">
+                <apex:panelGroup layout="none" rendered="{!!record.FieloAlpha__Blocked__c}">
                     <button type="submit" class="fielo-button fielo-button__submit" >{!IF(field.attributes['type'] == 'Member', $Label.LoginAsMember,$Label.LoginAsOrganization)}</button>
                 </apex:panelGroup>
             </form>

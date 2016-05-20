@@ -1,14 +1,12 @@
 <apex:component layout="none" controller="BlockUnblockMemberController">
-	<apex:attribute name="record" type="SObject" description="" />
-	<apex:attribute name="field" type="FieloCMS.Field" description="" />	
-
-	<apex:panelGroup layout="none" rendered="true" >
+	<apex:attribute name="record" type="FieloAlpha__Member__c" description="" />
+	<apex:attribute name="field" type="FieloCMS.Field" description="" />
+	
 	<div class="fielo-form">
-		<form class="js-to-be-initialized fielo-form--is-component-{!field.apiName} {!field.attributes['CSSClasses']}" data-remoteaction="BlockUnblockMemberController.blockUnblockMember" data-remotearguments="memberId,action" >			
+		<form class="fielo-js-upgrade fielo-form--is-component-{!field.apiName} {!field.attributes['CSSClasses']}" data-remoteaction="FieloCMS_EE.BlockUnblockMemberController.blockUnblockMember" data-remotearguments="memberId,action" >			
 			<input type="hidden" name="memberId" value="{!record['Id']}" data-object-property="Id"  data-attribute-replace="value"/>
-			<input type="hidden" name="action" value="{!!record['Blocked__c']}" data-attribute-replace="value" />
+			<input type="hidden" name="action" value="{!!record.FieloAlpha__Blocked__c}" data-attribute-replace="value" />
 			<button type="submit" class="fielo-button fielo-button__submit" >{!$Label.BlockUnblock}</button>
 		</form>
 	</div>
-	</apex:panelGroup>
 </apex:component>

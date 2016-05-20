@@ -1,7 +1,0 @@
-<apex:page applyHtmlTag="false" applyBodyTag="false" sidebar="false" showHeader="false" standardStylesheets="false" docType="html-5.0" cache="true" >        
-    <apex:composition template="FieloCMS__Template">
-        <apex:define name="body" >
-        	<c:RegisterStep2 />
-        </apex:define>
-    </apex:composition>
-</apex:page>

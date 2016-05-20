@@ -4,15 +4,15 @@
      
     <!-- Chequea mediante la related list esta en estado WiSHED o no -->
     <apex:variable var="isWished" value="false" /> 
-    <apex:repeat value="{!record['Members_Reward__r']}">
+    <apex:repeat value="{!record['FieloAlpha__Members_Reward__r']}">
         <apex:variable var="isWished" value="true" />
     </apex:repeat>    
 
     <div class="fielo-form">
-        <form class="fielo-form__wish js-to-be-initialized" data-remoteaction="WishController.wish" data-remotearguments="recordId,action" >
-            <input type="hidden" name="recordId" value="{!record['Id']}" data-object-property="Id"  data-attribute-replace="value"
+        <form class="fielo-form__wish js-to-be-initialized" data-remoteaction="FieloCMS_EE.WishController.wish" data-remotearguments="recordId,action" >
+            <input type="hidden" name="recordId" value="{!record.Id}" data-object-property="Id"  data-attribute-replace="value"
     />
-            <input type="hidden" class="fielo-wish" name="wish" value="{!isWished}" data-object-property="Members_Reward__r"  data-attribute-replace="value"
+            <input type="hidden" class="fielo-wish" name="wish" value="{!isWished}" data-object-property="FieloAlpha__Members_Reward__r"  data-attribute-replace="value"
     />
             <input type="hidden" name="action" value="{!IF(isWished == 'true', 'false', 'true')}"   data-attribute-replace="value"
     />

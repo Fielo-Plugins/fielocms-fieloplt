@@ -2,12 +2,7 @@
     <apex:attribute name="config" type="FieloCMS__Component__c" description="" />
 
     <div class="fielo-record fielo-form fielo-register-step-2 fielo-widget fielo-js-component" data-componentid="{!config.Id}" >
-        <div class="fielo-title">{!$Label.Welcome}</div>
-        <apex:panelGroup layout="none" rendered="{!$ObjectType.FieloAlpha__Member__c.FieldSets.FieloAlpha__RegistrationStep2.size == 0}">
-            <div class="fielo-toast fielo-toast--is-success">
-                <p>{!$Label.InfoRegisterApprovalInstructions}"</p>
-            </div>
-        </apex:panelGroup>
+        <div class="fielo-title">{!$Label.Welcome}</div>        
         <apex:panelGroup layout="none" rendered="{!status != 'Ok'}">
             <apex:panelGroup layout="none" rendered="{!status != 'Send for Approval'}">
                 <div class="fielo-toast fielo-toast--is-error">
