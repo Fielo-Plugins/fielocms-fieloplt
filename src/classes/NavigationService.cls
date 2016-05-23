@@ -28,6 +28,13 @@ public class NavigationService{
 		Set<Id> navIds;
 		if(filterBySegments){
 			appliedSegments = FieloAlpha.SegmentService.getMemberSegments(memberId, null);
+
+			if(UserInfo.getUserType() == 'Guest'){
+				appliedSegments.add([SELECT Id FROM FieloAlpha__RedemptionRule__c WHERE RecordType.DeveloperName = 'Public' LIMIT 1].Id);
+			}else{
+				appliedSegments.add([SELECT Id FROM FieloAlpha__RedemptionRule__c WHERE RecordType.DeveloperName = 'Private' LIMIT 1].Id);
+			}
+
 			navIds = new Set<Id>();
 			for(FieloAlpha__SegmentDomain__c segDom : [SELECT FieloCMS_EE__Navigation__c FROM FieloAlpha__SegmentDomain__c WHERE FieloAlpha__Segment__c in : FieloAlpha.SegmentService.getMemberSegments(memberId, null) AND FieloCMS_EE__Navigation__c != NULL]){
                 navIds.add(segDom.FieloCMS_EE__Navigation__c);
