@@ -4,7 +4,7 @@ global with sharing class BlockUnblockMemberController implements FieloCMS.ViewS
         Component.BlockUnblockMember blockUnblockMember = new Component.BlockUnblockMember();        
         blockUnblockMember.field = field;
         if(record != null){
-            BlockUnblockMember.record = record;
+            BlockUnblockMember.record = (FieloAlpha__Member__c)record;
         }else{
             BlockUnblockMember.expressions.record = '{!record}';
         }
