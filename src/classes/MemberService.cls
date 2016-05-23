@@ -9,7 +9,7 @@ public with sharing class MemberService {
         if(UserInfo.getUserType() == 'Guest')
             return null;
 
-        Cookie memberCookie = ApexPages.currentPage().getCookies().get('memberId');
+        /*Cookie memberCookie = ApexPages.currentPage().getCookies().get('memberId');
         Cookie sessionIdCookie = ApexPages.currentPage().getCookies().get('sessionMemberId');
         if(memberCookie != null && sessionIdCookie != null && (sessionIdCookie.getValue() == UserInfo.getSessionId())){        
             return (Id)memberCookie.getValue();
@@ -32,12 +32,44 @@ public with sharing class MemberService {
             }catch(Exception e){
                 return null;
             }
+        }*/
+
+
+        if(memId == null){
+            SessionCache__c sessionCache = SessionCache__c.getInstance(UserInfo.getUserId());
+            if((sessionCache.SessionId__c == UserInfo.getSessionId() || UserInfo.getUserType() == 'Standard') && sessionCache.MemberId__c != null){
+                memId = sessionCache.MemberId__c;
+            }else{
+                try{
+                    List<FieloAlpha__Member__c> members = [SELECT Id, FieloAlpha__Program__c FROM FieloAlpha__Member__c WHERE FieloAlpha__User__c =: UserInfo.getUserId()];
+                    if(members.size() == 1){
+                        memId = members[0].Id;
+                    }else{
+                        Id programId = FieloAlpha.ProgramUtil.getProgramByDomain().Id;
+                        for(FieloAlpha__Member__c m : members){
+                            if(m.FieloAlpha__Program__c == programId){
+                                memId = m.Id;
+                                break;
+                            }
+                        }
+
+                    }
+                }catch(Exception e){
+                    return null;
+                }
+            }
         }
+
         return memId;
     }
 
     public static void setCurrentMemberId(Id memberId){
-        ApexPages.currentPage().setCookies(new Cookie[]{new Cookie('memberId', memberId, null, -1,true),new Cookie('sessionMemberId', UserInfo.getSessionId(), null, -1,false)});
+        //ApexPages.currentPage().setCookies(new Cookie[]{new Cookie('memberId', memberId, null, -1,true),new Cookie('sessionMemberId', UserInfo.getSessionId(), null, -1,false)});
+
+        SessionCache__c sessionCache = SessionCache__c.getInstance(UserInfo.getUserId());
+        sessionCache.SessionId__c = UserInfo.getSessionId();
+        sessionCache.MemberId__c = memberId;        
+        upsert sessionCache;
     }
 
     public static PageReference setPasswordAndLogin(Id memberId, String password){
@@ -54,6 +86,19 @@ public with sharing class MemberService {
             Database.rollback(sp);
             throw e;
         }
+    }
+
+    public static PageReference getAgreementPage(Id memberId){
+        PageReference agreementPage;
+        /*Cookie memberCookie = ApexPages.currentPage().getCookies().get('agreementAccepted');
+        if(memberCookie == null || String.isBlank(memberCookie.getValue()) || memberCookie.getValue() != 'true'){*/
+            FieloAlpha__Member__c member = [SELECT Id, FieloAlpha__Agreement__r.FieloAlpha__Status__c, FieloAlpha__Program__r.FieloAlpha__UseAgreement__c, FieloAlpha__Program__r.FieloAlpha__AgreementView__c FROM FieloAlpha__Member__c WHERE Id =: memberId limit 1];            
+            if(member.FieloAlpha__Program__r.FieloAlpha__UseAgreement__c && member.FieloAlpha__Agreement__r.FieloAlpha__Status__c != 'Current' && String.isNotBlank(member.FieloAlpha__Program__r.FieloAlpha__AgreementView__c)){
+                agreementPage = new PageReference('/' + member.FieloAlpha__Program__r.FieloAlpha__AgreementView__c);
+                agreementPage.getParameters().put('retUrl','');
+            }
+        //}
+        return agreementPage;
     }
 
     public static PageReference login(Id memberId, String password){

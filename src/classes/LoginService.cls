@@ -13,18 +13,34 @@ public class LoginService {
             throw new FieloCustomException(e.getMessage());            
         }
         
+        FieloAlpha__Program__c program = ProgramService.getCurrentProgram();
         //look for the member related to the username
-        List<FieloAlpha__Member__c> member = [SELECT FieloAlpha__Blocked__c FROM FieloAlpha__Member__c WHERE FieloAlpha__Email__c =: username AND FieloAlpha__Program__c =: ProgramService.getCurrentProgram().Id];
+        List<FieloAlpha__Member__c> membersByEmail = [SELECT FieloAlpha__Blocked__c, FieloAlpha__User__c FROM FieloAlpha__Member__c WHERE FieloAlpha__Email__c =: username AND FieloAlpha__Program__c =: program.Id];
         
         //if the member was not found throws an error
-        if(member.isEmpty()){
+        if(membersByEmail.isEmpty()){
             throw new FieloCustomException(Label.ErrorLoginProgramValidation);            
         }
         
         //if the member was found but is blocked thtrows an error
-        if(member.get(0).FieloAlpha__Blocked__C){
+        if(membersByEmail.get(0).FieloAlpha__Blocked__c){
             throw new FieloCustomException(Label.ErrorLoginMemberBlocked);                        
         }
+
+        //check selection member page
+        if(membersByEmail.get(0).FieloAlpha__User__c != null){
+            List<FieloAlpha__Member__c> relatedMembers = new MembersSelector().selectRelatedMembers(UserInfo.getUserId(), program.Id);
+            if(relatedMembers.size() > 1 && String.isNotBlank(program.FieloAlpha__MemberSelectionPage__c)){
+                PageReference selectionPage = new PageReference('/FieloCMS__Page');
+                selectionPage.getParameters().put('pageId',program.FieloAlpha__MemberSelectionPage__c);
+                startUrl = selectionPage.getUrl();
+            }
+        }
+
+        //check agreement
+        PageReference agreementPage = MemberService.getAgreementPage(membersByEmail.get(0).Id);
+        if(agreementPage != null)
+            startUrl = agreementPage.getUrl();
 
         //login
         return Site.login(username, password, startUrl);
