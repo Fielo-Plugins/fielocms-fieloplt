@@ -28,14 +28,14 @@ public class LoginService {
         }
 
         //check selection member page
-        if(membersByEmail.get(0).FieloAlpha__User__c != null){
+        /*if(membersByEmail.get(0).FieloAlpha__User__c != null){
             List<FieloAlpha__Member__c> relatedMembers = new MembersSelector().selectRelatedMembers(UserInfo.getUserId(), program.Id);
             if(relatedMembers.size() > 1 && String.isNotBlank(program.FieloAlpha__MemberSelectionPage__c)){
                 PageReference selectionPage = new PageReference('/FieloCMS__Page');
                 selectionPage.getParameters().put('pageId',program.FieloAlpha__MemberSelectionPage__c);
                 startUrl = selectionPage.getUrl();
             }
-        }
+        }*/
 
         //check agreement
         PageReference agreementPage = MemberService.getAgreementPage(membersByEmail.get(0).Id);

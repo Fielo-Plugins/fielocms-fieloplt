@@ -1,12 +1,5 @@
-/**
-* @brief Class is used get attributes particulars to the org
-*/
 public class OrganizationUtil {
 
-  /**
-    * @brief returns a list with the API names of the fields in a custom fieldset (comma separated)
-    * @param String fieldSet
-    */
     public static Set<String> getFieldSet(String fieldSet){
         Set<String> fields = new Set<String>();
         if(String.isNotBlank(fieldSet)){

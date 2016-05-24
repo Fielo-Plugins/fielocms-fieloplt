@@ -1,6 +1,6 @@
 global with sharing class ToggleManagerController implements FieloCMS.ViewSubComponentInterface {
 
-    global ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){
+    public ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){
         Component.ToggleManager toggleManager = new Component.ToggleManager();        
         toggleManager.field = field;
         if(record != null){

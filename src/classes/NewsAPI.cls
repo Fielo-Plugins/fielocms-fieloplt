@@ -7,13 +7,9 @@ global with sharing class NewsAPI implements FieloCMS.DataInterface {
         for(FieloCMS__Component__c c : components){                        
             if(c.FieloCMS__Limit__c == null)
                 c.FieloCMS__Limit__c = 5;
-
-            if(c.FieloCMS__ComponentLibrary__r.Name == 'Content Feed'){            
-                newMapData.put(c.Id, FieloAlpha.NewsService.getNews(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), null, c.Tag__c, c.Category__c, c.FieloCMS__Limit__c.intValue(), 0, c.FieloCMS__OrderBy__c));
-            }else if(c.FieloCMS__ComponentLibrary__r.Name == 'Content Feed Detail'){            
-                Id newsId = c.FieloCMS__RecordId__c;
-                newMapData.put(c.Id, Database.query('SELECT ' + String.join(new List<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c)), ',') + ' FROM FieloAlpha__News__c WHERE Id =: newsId'));
-            }
+            
+            newMapData.put(c.Id, FieloAlpha.NewsService.getNews(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), null, c.Tag__c, c.Category__c, c.FieloCMS__Limit__c.intValue(), 0, c.FieloCMS__OrderBy__c));
+            
         }
         return newMapData;
     }

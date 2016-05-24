@@ -1,6 +1,6 @@
 global with sharing class MemberAPI implements FieloCMS.DataInterface, FieloCMS.ControlInterface, FieloCMS.ViewInterface{
 	
-    global ApexPages.Component getComponent(FieloCMS__Component__c component){                                
+    public ApexPages.Component getComponent(FieloCMS__Component__c component){                                
         if(component.FieloCMS__ComponentLibrary__r.Name == 'Login'){                    
             return new Component.SiteLoginFielo(config = component);            
         }else if(component.FieloCMS__ComponentLibrary__r.Name == 'RegisterStep2'){                    
@@ -10,7 +10,7 @@ global with sharing class MemberAPI implements FieloCMS.DataInterface, FieloCMS.
         return null;
     }
     
-	global Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){        
+	public Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){        
         Map<Id,Object> newMapData = new Map<Id,Object>();
         //Prepare all the queries
         for(FieloCMS__Component__c c : components){            
@@ -43,11 +43,11 @@ global with sharing class MemberAPI implements FieloCMS.DataInterface, FieloCMS.
         return newMapData;
     }
 
-    global List<sObject> getData(FieloCMS__Component__c component2, Integer pageNumber, String orderBy, String filters){
+    public List<sObject> getData(FieloCMS__Component__c component2, Integer pageNumber, String orderBy, String filters){
         return null;
     }
     
-    global FieloCMS.RemoteActionResult remoteComponentAction(FieloCMS__Component__c component, sObject record, String json){        
+    public FieloCMS.RemoteActionResult remoteComponentAction(FieloCMS__Component__c component, sObject record, String json){        
         Savepoint sp;
         FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
         List<FieloCMS.RemoteActionResult.RemoteActionMessage> successMessages = new List<FieloCMS.RemoteActionResult.RemoteActionMessage>();
