@@ -4,7 +4,15 @@ private class TestCreateUser
 	@isTest
 	static void itShould()
 	{
-		OrganizationUtil.dummyTest1();
+                FieloAlpha__Program__c defaultProgram = new FieloAlpha__Program__c(FieloAlpha__Default__c = true);
+                insert defaultProgram;
+
+                FieloAlpha__RedemptionRule__c segment = new FieloAlpha__RedemptionRule__c();
+                insert segment;
+
+                insert new FieloAlpha__SegmentDomain__c(FieloAlpha__Segment__c = segment.Id);
+		
+                OrganizationUtil.dummyTest1();
                 OrganizationUtil.dummyTest2();
                 OrganizationUtil.dummyTest3();
                 OrganizationUtil.dummyTest4();
