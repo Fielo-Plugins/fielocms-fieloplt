@@ -4,7 +4,7 @@ global with sharing class SelectMemberController implements FieloCMS.ViewSubComp
         Component.SelectMember selectMember = new Component.SelectMember();        
         selectMember.field = field;
         if(record != null){
-            selectMember.record = record;
+            selectMember.record = (FieloAlpha__Member__c)record;
         }else{
             selectMember.expressions.record = '{!record}';
         }
@@ -18,11 +18,12 @@ global with sharing class SelectMemberController implements FieloCMS.ViewSubComp
         	if(type == 'Member'){
             	MemberService.setCurrentMemberId(memberId);
         	}else{
-        		FieloAlpha__Member__c member = new MembersSelector(new Set<String>{'OrganizationAccount__c'}).selectById(new Set<Id>{memberId})[0];
+        		FieloAlpha__Member__c member = new MembersSelector(new Set<String>{'FieloAlpha__OrganizationAccount__c'}).selectById(new Set<Id>{memberId})[0];
         		MemberService.setCurrentMemberId(member.FieloAlpha__OrganizationAccount__c);
         	}
 
-            result.redirectURL = '/Page';                                   
+            
+            result.redirectURL = '/';                                   
         }catch(FieloCustomException e){
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
         }

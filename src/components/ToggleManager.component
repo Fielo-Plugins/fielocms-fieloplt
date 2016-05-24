@@ -1,11 +1,11 @@
 <apex:component layout="none" controller="ToggleManagerController">
-	<apex:attribute name="record" type="FieloAlpha__Member__c" description="" />
+	<apex:attribute name="record" type="SObject" description="" />
 	<apex:attribute name="field" type="FieloCMS.Field" description="" />
 
 	<div class="fielo-form">
-		<form class="fielo-js-upgrade fielo-form--is-component-{!field.apiName} {!field.attributes['CSSClasses']}" data-remoteaction="FieloCMS_EE.ToggleManagerController.toggleManager" data-remotearguments="memberId,action"  >
+		<form class="fielo-js-upgrade fielo-form--is-component-{!field.apiName}" data-remoteaction="FieloCMS_EE.ToggleManagerController.toggleManager" data-remotearguments="memberId,action"  ><!-- {!field.attributes['CSSClasses']}-->
 			<input type="hidden" name="memberId" value="{!record.Id}" data-object-property="Id"  data-attribute-replace="value"/>
-			<input type="hidden" name="action" value="{!!record.FieloAlpha__IsManager__c}" data-attribute-replace="value" />
+			<input type="hidden" name="action" value="{!!record['FieloAlpha__IsManager__c']}" data-attribute-replace="value" />
 			<button type="submit" class="fielo-button fielo-button__submit" >{!$Label.ToggleManager}</button>
 		</form>
 	</div>

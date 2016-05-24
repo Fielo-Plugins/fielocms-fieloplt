@@ -1,6 +1,6 @@
 <apex:page cache="false" showHeader="false" standardStylesheets="false" docType="" controller="AgreementAcceptController">
-    <apex:composition template="FieloCMS__Template" >        
-        <apex:define name="body" >
+    <!--<apex:composition template="FieloCMS__Template" >        
+        <apex:define name="body" >-->
             <main class="fielo-outline fielo-main" >
                 <legend>
                    <apex:outputText value="{!$Label.FieloAlpha__Agreement}" /> 
@@ -34,6 +34,6 @@
                         </fieldset>
                 </apex:form>
             </main>
-        </apex:define>        
-    </apex:composition> 
+        <!--</apex:define>        
+    </apex:composition> -->
 </apex:page>

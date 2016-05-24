@@ -1,15 +1,15 @@
 <apex:component layout="none" controller="HandleInvitationsMembersController">
-    <apex:attribute name="record" type="FieloAlpha__Member__c" description="" />
+    <apex:attribute name="record" type="SObject" description="" />
     <apex:attribute name="field" type="FieloCMS.Field" description="" />    
 
     <apex:panelGroup layout="none" rendered="{!record['FieloAlpha__FieloAccountStatus__c'] = 'New'}" >
         <div class="fielo-form">
-            <form class="fielo-js-upgrade fielo-form--is-component-{!field.apiName} {!field.attributes['CSSClasses']}" data-remoteaction="FieloCMS_EE.HandleInvitationsMembersController.resendInvitation" data-remotearguments="memberId" >
+            <form class="fielo-js-upgrade fielo-form--is-component-{!field.apiName}" data-remoteaction="FieloCMS_EE.HandleInvitationsMembersController.resendInvitation" data-remotearguments="memberId" ><!-- {!field.attributes['CSSClasses']}-->
                 <input type="hidden" name="memberId" value="{!record.Id}" data-object-property="Id"  data-attribute-replace="value"/>
                 <button type="submit" class="fielo-button fielo-button__submit" >{!$Label.Reinvite}</button>
             </form>
 
-            <form class="fielo-form fielo-form--is-component-{!field.apiName} {!field.attributes['CSSClasses__c']}" data-remoteaction="FieloCMS_EE.HandleInvitationsMembersController.cancelInvitation" data-remotearguments="memberId" >
+            <form class="fielo-js-upgrade fielo-form fielo-form--is-component-{!field.apiName}" data-remoteaction="FieloCMS_EE.HandleInvitationsMembersController.cancelInvitation" data-remotearguments="memberId" ><!--{!field.attributes['CSSClasses__c']}-->
                 <input type="hidden" name="memberId" value="{!record.Id}" data-object-property="Id"  data-attribute-replace="value"/>
                 <button type="submit" class="fielo-button fielo-button__submit" >{!$Label.CancelInvitation}</button>
             </form>

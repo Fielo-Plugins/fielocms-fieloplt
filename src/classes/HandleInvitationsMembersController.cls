@@ -74,11 +74,10 @@ global with sharing class HandleInvitationsMembersController implements FieloCMS
         uow.commitWork();
     }
 
-    public static void cancelInvitations(Set<Id> memberIds){
-        List<FieloAlpha__Member__c> members = new MembersSelector( new Set<String>{'RecordType.DeveloperName', 'FieloAlpha__OrganizationAccount__r.FieloAlpha__Blocked__c'} ).selectById(new Set<Id>(memberIds));                
+    public static void cancelInvitations(Set<Id> memberIds){        
         Boolean doCommit = false;
         SObjectUnitOfWork uow = new SObjectUnitOfWork(new List<Schema.SobjectType>{FieloAlpha__Member__c.SObjectType});                
-        for(FieloAlpha__Member__c member : new MembersSelector( new Set<String>{'RecordType.DeveloperName'} ).selectById(memberIds)){
+        for(FieloAlpha__Member__c member : new MembersSelector( new Set<String>{'RecordType.DeveloperName', 'FieloAlpha__OrganizationAccount__r.FieloAlpha__Blocked__c'} ).selectById(memberIds)){
             if(!member.FieloAlpha__OrganizationAccount__r.FieloAlpha__Blocked__c){
                 if(member.RecordType.DeveloperName != 'OrganizationContributor'){
                     throw new FieloCustomException(Label.ErrorOrganizationAccountAction);

@@ -1,10 +1,10 @@
 global with sharing class BlockUnblockMemberController implements FieloCMS.ViewSubComponentInterface {
 
-    public ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){   
+    global ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){   
         Component.BlockUnblockMember blockUnblockMember = new Component.BlockUnblockMember();        
         blockUnblockMember.field = field;
         if(record != null){
-            BlockUnblockMember.record = (FieloAlpha__Member__c)record;
+            BlockUnblockMember.record = record;
         }else{
             BlockUnblockMember.expressions.record = '{!record}';
         }
