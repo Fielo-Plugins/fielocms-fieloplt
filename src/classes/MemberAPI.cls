@@ -3,7 +3,7 @@ global with sharing class MemberAPI implements FieloCMS.DataInterface, FieloCMS.
     public ApexPages.Component getComponent(FieloCMS__Component__c component){                                
         if(component.FieloCMS__ComponentLibrary__r.Name == 'Login'){                    
             return new Component.SiteLoginFielo(config = component);            
-        }else if(component.FieloCMS__ComponentLibrary__r.Name == 'RegisterStep2'){                    
+        }else if(component.FieloCMS__ComponentLibrary__r.Name == 'Register Step 2'){                    
             return new Component.RegisterStep2(config = component);                            
         }
         

@@ -93,8 +93,12 @@ public with sharing class MemberService {
         /*Cookie memberCookie = ApexPages.currentPage().getCookies().get('agreementAccepted');
         if(memberCookie == null || String.isBlank(memberCookie.getValue()) || memberCookie.getValue() != 'true'){*/
             FieloAlpha__Member__c member = [SELECT Id, FieloAlpha__Agreement__r.FieloAlpha__Status__c, FieloAlpha__Program__r.FieloAlpha__UseAgreement__c, FieloAlpha__Program__r.FieloAlpha__AgreementView__c FROM FieloAlpha__Member__c WHERE Id =: memberId limit 1];            
-            if(member.FieloAlpha__Program__r.FieloAlpha__UseAgreement__c && member.FieloAlpha__Agreement__r.FieloAlpha__Status__c != 'Current' && String.isNotBlank(member.FieloAlpha__Program__r.FieloAlpha__AgreementView__c)){
-                agreementPage = new PageReference('/' + member.FieloAlpha__Program__r.FieloAlpha__AgreementView__c);
+            if(member.FieloAlpha__Program__r.FieloAlpha__UseAgreement__c && member.FieloAlpha__Agreement__r.FieloAlpha__Status__c != 'Current'){
+                if(String.isNotBlank(member.FieloAlpha__Program__r.FieloAlpha__AgreementView__c)){
+                    agreementPage = new PageReference('/' + member.FieloAlpha__Program__r.FieloAlpha__AgreementView__c);
+                }else{
+                    agreementPage = Page.AgreementAccept;
+                }
                 agreementPage.getParameters().put('retUrl','');
             }
         //}

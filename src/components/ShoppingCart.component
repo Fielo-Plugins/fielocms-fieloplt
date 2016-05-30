@@ -16,7 +16,7 @@
 			            <thead class="fielo-table__head">
 			                <tr class="fielo-record">
 			                   	<apex:repeat value="{!$ObjectType.FieloAlpha__Reward__c.FieldSets.ShoppingCart}" var="field">
-			                        <th class="fielo-field fielo-field--is-{!field} mdl-data-table__cell--non-numeric"><apex:panelGroup layout="none" ><span data-order-value="{!field}">{!field}</span></apex:panelGroup></th>
+			                        <th class="fielo-field fielo-field--is-{!field} mdl-data-table__cell--non-numeric"><apex:panelGroup layout="none" ><span data-order-value="{!field}">{!$ObjectType.FieloAlpha__Reward__c.fields[field].label}</span></apex:panelGroup></th>
 			                    </apex:repeat>
 			                </tr>
 			            </thead>
