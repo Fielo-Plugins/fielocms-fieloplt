@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>[Points] Your business’ branches or points of sale where members can generate points.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>FieloAlpha__AddressInformation</fullName>
+        <description>FieloBranchNew visualforce page</description>
+        <label>AddressInformation</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>FieloAlpha__PrincipalFields</fullName>
+        <description>FieloBranchNew visualforce page</description>
+        <label>PrincipalFields</label>
+    </fieldSets>
+    <fields>
+        <fullName>FieloAlpha__Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Branches</relationshipLabel>
+        <relationshipName>Branches</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FieloAlpha__City__c</fullName>
+        <deprecated>false</deprecated>
+        <description>City correspondent to the branch</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the city where your branch is located.</inlineHelpText>
+        <label>City</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieloAlpha__Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Code related to the branch, it can be filled with branch number or just give them a desired name for each</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Enter a code that will uniquely identify this branch.</inlineHelpText>
+        <label>Code</label>
+        <length>4</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieloAlpha__Country__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Country where the branch has operations</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the country where your branch is located.</inlineHelpText>
+        <label>Country</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieloAlpha__Latitude__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Coordinate of the branch</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field will autocomplete after you enter your branch address.</inlineHelpText>
+        <label>Latitude</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>10</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieloAlpha__Longitude__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Coordinate of the branch</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field will autocomplete after you enter your branch address.</inlineHelpText>
+        <label>Longitude</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>10</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieloAlpha__Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Branches</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FieloAlpha__State__c</fullName>
+        <deprecated>false</deprecated>
+        <description>State where the branch is located</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the state or province where your branch is located.</inlineHelpText>
+        <label>State</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieloAlpha__Street__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Street where the branch is located</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the street where your branch is located.</inlineHelpText>
+        <label>Street</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieloAlpha__ZipCode__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Location of the branch</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the ZIP code for your branch.</inlineHelpText>
+        <label>Zip Code</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Branch</label>
+    <listViews>
+        <fullName>FieloAlpha__All</fullName>
+        <columns>FieloAlpha__Code__c</columns>
+        <columns>NAME</columns>
+        <columns>FieloAlpha__Street__c</columns>
+        <columns>FieloAlpha__City__c</columns>
+        <columns>FieloAlpha__State__c</columns>
+        <columns>FieloAlpha__Country__c</columns>
+        <columns>FieloAlpha__Owner__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>FieloAlpha__All_Branches</fullName>
+        <columns>NAME</columns>
+        <columns>FieloAlpha__Country__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Branches</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>Branch Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Branches</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>FieloAlpha__Street__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloAlpha__City__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloAlpha__State__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloAlpha__Country__c</customTabListAdditionalFields>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>FieloAlpha__SetGeoLocation</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Set Geo Location</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/29.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;https://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false&quot;)}
+
+var branchs = sforce.connection.query(&quot;SELECT Id, {!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Street__c, {!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}City__c, {!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}State__c, {!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}ZipCode__c, {!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Country__c, {!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Latitude__c, {!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Longitude__c FROM {!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Branch__c WHERE Id = \&apos;{!FieloAlpha__Branch__c.Id}\&apos; &quot;);
+var branch = branchs.getArray(&quot;records&quot;)[0];
+
+var geocoder = new google.maps.Geocoder();
+var address =&apos;&apos;;
+address += (branch.{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Street__c != null)?&apos;,&apos;+branch.{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Street__c:&apos;&apos;;
+address += (branch.{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}City__c != null)?&apos;,&apos;+branch.{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}City__c:&apos;&apos;;
+address += (branch.{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}State__c != null)?&apos;,&apos;+branch.{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}State__c:&apos;&apos;;
+address += (branch.{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}ZipCode__c != null)?&apos;,&apos;+branch.{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}ZipCode__c:&apos;&apos;;
+address += (branch.{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Country__c != null)?&apos;,&apos;+branch.{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Country__c:&apos;&apos;;
+
+if(address.length &gt; 0){
+address = address.substring(1);
+
+geocoder.geocode( { &apos;address&apos;: address}, function(results, status) {
+if (status == google.maps.GeocoderStatus.OK) {
+branch.{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Latitude__c = results[0].geometry.location.lat();
+branch.{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Longitude__c = results[0].geometry.location.lng();
+}else{
+alert(&apos;{!$Label.FieloAlpha__ServiceUnavailable}&apos;);
+}
+var branchUpdate = [];
+branchUpdate.push(branch);
+result = sforce.connection.update(branchUpdate);
+parent.location.href = &quot;{!FieloAlpha__Branch__c.Id}&quot;;
+});
+}else{
+alert(&apos;{!$Label.FieloAlpha__PleaseFillAddressInformation}&apos;);
+}</url>
+    </webLinks>
+</CustomObject>
