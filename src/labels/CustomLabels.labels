@@ -9,12 +9,36 @@
         <value>Continue</value>
     </labels>
     <labels>
+        <fullName>Password</fullName>
+        <categories></categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Password</shortDescription>
+        <value>Password</value>
+    </labels>
+    <labels>
+        <fullName>PasswordConfirm</fullName>
+        <categories></categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PasswordConfirm</shortDescription>
+        <value>Confirm Password</value>
+    </labels>
+    <labels>
         <fullName>Welcome</fullName>
         <categories></categories>
         <language>en_US</language>
         <protected>false</protected>
-        <shortDescription>Second step for registration with Approval Processes</shortDescription>
-        <value>To continue your registration, press the continue button</value>
+        <shortDescription>Welcome</shortDescription>
+        <value>Registration Step 2</value>
+    </labels>    
+    <labels>
+        <fullName>RegistrationSuccessExistingUser</fullName>
+        <categories>RegisterStep2.component</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Registration Success Existing User</shortDescription>
+        <value>Your registration was succesful, please go to the home page and login with your user and password.</value>
     </labels>
     <labels>
         <fullName>OrganizationNotAllowed</fullName>
