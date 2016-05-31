@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>The members’ portal&apos;s pages and templates</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>FieloCMS__CSSClasses__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>CSS Classes</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>An explanation about the menu</description>
+        <externalId>false</externalId>
+        <inlineHelpText>An explanation about the menu</inlineHelpText>
+        <label>Description</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__Icon__c</fullName>
+        <defaultValue>&apos;fielo-icon-content&apos;</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Icon</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__SEODescription__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>SEO Description</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__SEOKeywords__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>SEO Keywords</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__SEOTitle__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>SEO Title</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__Site__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Site</label>
+        <referenceTo>FieloCMS__Site__c</referenceTo>
+        <relationshipLabel>Pages</relationshipLabel>
+        <relationshipName>Menu</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__Template__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to the template</description>
+        <externalId>false</externalId>
+        <label>Template</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>The Record Type of the record must be &quot;Template&quot;</errorMessage>
+            <filterItems>
+                <field>FieloCMS__Page__c.RecordType.DeveloperName</field>
+                <operation>equals</operation>
+                <value>Template</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>FieloCMS__Page__c</referenceTo>
+        <relationshipLabel>Pages</relationshipLabel>
+        <relationshipName>Menus</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__Title__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Title</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Page</label>
+    <listViews>
+        <fullName>FieloCMS__All_Menu</fullName>
+        <columns>NAME</columns>
+        <columns>FieloCMS__Site__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Menu</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>FieloCMS__Pages</fullName>
+        <columns>NAME</columns>
+        <columns>FieloCMS__Description__c</columns>
+        <columns>FieloCMS__Template__c</columns>
+        <columns>FieloCMS__Site__c</columns>
+        <columns>RECORDTYPE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>FieloCMS__Page__c.FieloCMS__Page</value>
+        </filters>
+        <label>Pages</label>
+    </listViews>
+    <listViews>
+        <fullName>FieloCMS__Templates</fullName>
+        <columns>NAME</columns>
+        <columns>FieloCMS__Description__c</columns>
+        <columns>FieloCMS__Site__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>FieloCMS__Page__c.FieloCMS__Template</value>
+        </filters>
+        <label>Templates</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Pages</pluralLabel>
+    <recordTypes>
+        <fullName>FieloCMS__Page</fullName>
+        <active>true</active>
+        <description>This record type is for menu records that are meant to be Pages</description>
+        <label>Page</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>FieloCMS__Template</fullName>
+        <active>true</active>
+        <label>Template</label>
+    </recordTypes>
+    <searchLayouts>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>FieloCMS__Site__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>FieloCMS__Site__c</lookupPhoneDialogsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>FieloCMS__AvoidAssigningTemplate</fullName>
+        <active>true</active>
+        <description>This validation rule avoids assigning a record with Record Type = Template a Template</description>
+        <errorConditionFormula>RecordType.DeveloperName = &apos;Template&apos;  &amp;&amp; NOT(ISNULL(FieloCMS__Template__c) || ISBLANK(FieloCMS__Template__c))</errorConditionFormula>
+        <errorMessage>You cannot assign a template to a record that is already a template</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FieloCMS__ModifySite</fullName>
+        <active>true</active>
+        <description>Is not possible to modify the associated Site</description>
+        <errorConditionFormula>ISCHANGED(FieloCMS__Site__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloCMS__Site__c)))</errorConditionFormula>
+        <errorDisplayField>FieloCMS__Site__c</errorDisplayField>
+        <errorMessage>Is not possible to modify the associated Program</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>FieloCMS__BackToSites</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Back to Sites</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/{!IF(!ISBLANK($Setup.FieloCMS__OrganizationSettings__c.FieloCMS__PackagePrefix__c), $Setup.FieloCMS__OrganizationSettings__c.FieloCMS__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}SitesLanding</url>
+    </webLinks>
+    <webLinks>
+        <fullName>FieloCMS__DeepClone</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Clone</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)}
+
+
+var menu = &apos;{!FieloCMS__Page__c.Id}&apos;;
+
+var saveURL = &quot;/apex/&quot; + &quot;{!IF(!ISBLANK($Setup.FieloCMS__OrganizationSettings__c.FieloCMS__PackagePrefix__c), $Setup.FieloCMS__OrganizationSettings__c.FieloCMS__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}&quot; + &quot;PageClone&quot; + &quot;%3F&quot; + &quot;menuId=&quot; + menu;
+
+var cancelURL = &quot;/apex/&quot; + &quot;{!IF(!ISBLANK($Setup.FieloCMS__OrganizationSettings__c.FieloCMS__PackagePrefix__c), $Setup.FieloCMS__OrganizationSettings__c.FieloCMS__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}&quot; + &quot;SiteLanding&quot;;
+
+window.location = &quot;/{!FieloCMS__Page__c.Id}/e?clone=1&amp;saveURL=&quot;+saveURL+&quot;&amp;cancelURL=&quot;+cancelURL;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>FieloCMS__Export</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Export</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/{!IF(!ISBLANK($Setup.FieloCMS__OrganizationSettings__c.FieloCMS__PackagePrefix__c), $Setup.FieloCMS__OrganizationSettings__c.FieloCMS__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}XMLExport?type=Menu&amp;id={!FieloCMS__Page__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>FieloCMS__Preview</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Preview</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>window.open(&apos;/apex/Page?{!FieloCMS__Page__c.RecordType}Id={!FieloCMS__Page__c.Id}&apos;, &apos;_blank&apos;)</url>
+    </webLinks>
+</CustomObject>

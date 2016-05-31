@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>FieloCMS__CSSClasses__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>CSS Classes</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__ElementType__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Element type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Header</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Main</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Footer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Div</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Article</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Aside</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__IsBody__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is checked when the section is the one that contains the body por the page/template</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is checked when the section is the one that contains the body por the page/template</inlineHelpText>
+        <label>Is Body</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__Order__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Order</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__Page__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Page</label>
+        <referenceTo>FieloCMS__Page__c</referenceTo>
+        <relationshipLabel>Sections</relationshipLabel>
+        <relationshipName>Sections</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__Parent__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Parent</label>
+        <referenceTo>FieloCMS__Section__c</referenceTo>
+        <relationshipLabel>Sections</relationshipLabel>
+        <relationshipName>Sections</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__Width__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Width</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Section</label>
+    <nameField>
+        <displayFormat>S-{0000}</displayFormat>
+        <label>Section Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Sections</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>FieloCMS__ErrorInvalidElementTypeForChild</fullName>
+        <active>true</active>
+        <errorConditionFormula>FieloCMS__Parent__r.FieloCMS__Page__r.RecordType.DeveloperName = &apos;Template&apos; &amp;&amp; 
+NOT(ISNULL(FieloCMS__Parent__c)) &amp;&amp; 
+((ISPICKVAL(FieloCMS__ElementType__c, &apos;Header&apos;)) || 
+(ISPICKVAL(FieloCMS__ElementType__c, &apos;Footer&apos;)) || 
+(ISPICKVAL(FieloCMS__ElementType__c, &apos;Main&apos;)))</errorConditionFormula>
+        <errorDisplayField>FieloCMS__ElementType__c</errorDisplayField>
+        <errorMessage>The Element Type for a child Section can not be Header, Main or Footer.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FieloCMS__ErrorInvalidElementTypeForPage</fullName>
+        <active>true</active>
+        <description>A Page can not have sections with Header, Main or Footer as Element Type</description>
+        <errorConditionFormula>(FieloCMS__Page__r.RecordType.DeveloperName = &apos;Page&apos; ||
+FieloCMS__Parent__r.FieloCMS__Page__r.RecordType.DeveloperName = &apos;Page&apos;)
+&amp;&amp; 
+(ISPICKVAL(FieloCMS__ElementType__c, &apos;Header&apos;) ||
+ISPICKVAL(FieloCMS__ElementType__c, &apos;Main&apos;) ||
+ISPICKVAL(FieloCMS__ElementType__c, &apos;Footer&apos;))</errorConditionFormula>
+        <errorDisplayField>FieloCMS__ElementType__c</errorDisplayField>
+        <errorMessage>This Element Type is not valid for a Page</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FieloCMS__ErrorInvalidElementTypeForParent</fullName>
+        <active>true</active>
+        <errorConditionFormula>FieloCMS__Page__r.RecordType.DeveloperName = &apos;Template&apos; &amp;&amp; 
+ISNULL(FieloCMS__Parent__c) &amp;&amp;  
+NOT(ISPICKVAL(FieloCMS__ElementType__c, &apos;Header&apos;)) &amp;&amp; 
+NOT(ISPICKVAL(FieloCMS__ElementType__c, &apos;Footer&apos;)) &amp;&amp; 
+NOT(ISPICKVAL(FieloCMS__ElementType__c, &apos;Main&apos;))</errorConditionFormula>
+        <errorDisplayField>FieloCMS__ElementType__c</errorDisplayField>
+        <errorMessage>The Element Type for a parent Section can only be Head, Footer or Main.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FieloCMS__ErrorThirdLevelSection</fullName>
+        <active>true</active>
+        <description>A Section can not be child of another child Section</description>
+        <errorConditionFormula>IF(NOT(ISBLANK(FieloCMS__Parent__c)), NOT(ISBLANK(FieloCMS__Parent__r.FieloCMS__Parent__c)), false)</errorConditionFormula>
+        <errorDisplayField>FieloCMS__Parent__c</errorDisplayField>
+        <errorMessage>A Section can not be child of another child Section</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FieloCMS__OrphanSections</fullName>
+        <active>true</active>
+        <description>A section must be child of Page or another Section (in case is subsection)</description>
+        <errorConditionFormula>ISBLANK(FieloCMS__Parent__c) &amp;&amp; ISBLANK( FieloCMS__Page__c )</errorConditionFormula>
+        <errorMessage>The sections must be child of a Page or in case their are subsections must be  childs of another section.</errorMessage>
+    </validationRules>
+</CustomObject>
