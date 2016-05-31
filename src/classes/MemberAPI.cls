@@ -63,7 +63,7 @@ global with sharing class MemberAPI implements FieloCMS.DataInterface, FieloCMS.
                     member.FieloAlpha__Account__c = component.Account__c;
                 }               
             }else{
-                FieloAlpha__Member__c loggedMember = MemberService.getCurrentMember(new Set<String>{'RecordType.DeveloperName','OrganizationAccount__c'});
+                FieloAlpha__Member__c loggedMember = MemberService.getCurrentMember(new Set<String>{'RecordType.DeveloperName','FieloAlpha__OrganizationAccount__c'});
                 if(loggedMember.RecordType.DeveloperName == 'OrganizationAccount'){
                     registerType = 'Organization';
                     member.FieloAlpha__OrganizationAccount__c = loggedMember.Id;
@@ -92,7 +92,10 @@ global with sharing class MemberAPI implements FieloCMS.DataInterface, FieloCMS.
         }
 
         if(!successMessages.isEmpty()){            
-            result.addMessages(successMessages);            
+            result.addMessages(successMessages);
+            /*if(String.isBlank(result.redirectUrl)){
+                result.redirectUrl = '#';                
+            } */           
         }
 
         return result;

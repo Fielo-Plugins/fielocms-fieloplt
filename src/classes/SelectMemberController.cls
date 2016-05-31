@@ -17,11 +17,14 @@ global with sharing class SelectMemberController implements FieloCMS.ViewSubComp
         try{
         	if(type == 'Member'){
             	MemberService.setCurrentMemberId(memberId);
-        	}else{
-        		FieloAlpha__Member__c member = new MembersSelector(new Set<String>{'FieloAlpha__OrganizationAccount__c'}).selectById(new Set<Id>{memberId})[0];
-        		MemberService.setCurrentMemberId(member.FieloAlpha__OrganizationAccount__c);
-        	}
-
+                //recalculate segments for the new member
+                FieloAlpha.SegmentService.getMemberSegments(memberId, null);
+            }else{
+                FieloAlpha__Member__c member = new MembersSelector(new Set<String>{'FieloAlpha__OrganizationAccount__c'}).selectById(new Set<Id>{memberId})[0];
+                MemberService.setCurrentMemberId(member.FieloAlpha__OrganizationAccount__c);
+                //recalculate segments for the new member
+                FieloAlpha.SegmentService.getMemberSegments(member.FieloAlpha__OrganizationAccount__c, null);
+            }
             
             result.redirectURL = '/';                                   
         }catch(FieloCustomException e){

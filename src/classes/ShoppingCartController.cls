@@ -106,11 +106,15 @@ global with sharing class ShoppingCartController {
                 }
                 saveCart(redemption, newQuantitiesMap);
             }
-            FieloAlpha.RedemptionService.closeRedemption(redemption.Id);
-            PageReference retPage = Page.FieloCMS__Page;
-            retPage.getParameters().put('pageId',component.FieloCMS__DetailPage__c);
-            retPage.getParameters().put(component.FieloCMS__DetailParameter__c,redemption.Id);
-            result.redirectURL = retPage.getUrl();            
+            redemption = FieloAlpha.RedemptionService.closeRedemption(redemption.Id);
+            if(redemption.FieloAlpha__Status__c == 'Close'){
+                PageReference retPage = Page.FieloCMS__Page;
+                retPage.getParameters().put('pageId',component.FieloCMS__DetailPage__c);
+                retPage.getParameters().put(component.FieloCMS__DetailParameter__c,redemption.Id);
+                result.redirectURL = retPage.getUrl();
+            }else{
+                result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.InfoRedemptionApproval)));
+            }
         }catch(Exception e){
             Database.rollBack(sp);
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));

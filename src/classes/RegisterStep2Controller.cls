@@ -3,7 +3,9 @@ global without sharing class RegisterStep2Controller {
     public FieloAlpha__Member__c member {get{
         if(member == null){     
             Id memberId = ApexPages.currentPage().getParameters().get('memberId');
-            member = Database.query('SELECT ' + getFieldSet() + ' FROM FieloAlpha__Member__c WHERE Id =: memberId LIMIT 1');                
+            try{
+                member = Database.query('SELECT ' + getFieldSet() + ' FROM FieloAlpha__Member__c WHERE Id =: memberId LIMIT 1');
+            }catch(Exception e){}
         }
         return member;
     } set;}
@@ -65,9 +67,11 @@ global without sharing class RegisterStep2Controller {
         try{
             FieloAlpha__Member__c member = (FieloAlpha__Member__c)record;                
             FieloAlpha.MemberService.finishRegistration(member);
-            if(String.isBlank(password)){
+            if(!String.isBlank(password)){
                 PageReference passResult = MemberService.setPasswordAndLogin(record.Id, password);
                 result.redirectURL = passResult.getUrl();
+            }else{
+                result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.RegistrationSuccessExistingUser)));
             }
         }catch(DmlException e){            
             Database.rollback(sp);
