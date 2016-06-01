@@ -39,19 +39,26 @@ global with sharing class HandleInvitationsMembersController implements FieloCMS
     global static FieloCMS.RemoteActionResult cancelInvitation(Id memberId){
         FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
 
-        try {
-            cancelInvitations(new Set<Id>{memberId});
-        } catch(DMLException e) {
-            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(ApexPages.Severity.Error, e.getDMLMessage(0)));
-        } catch (Exception e){
-            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
-        }
+        //first I check if the User has access to delete the Member
+        UserRecordAccess ura = [SELECT RecordId, HasDeleteAccess FROM UserRecordAccess WHERE UserId =: UserInfo.getUserId() AND RecordId =: memberId];
 
-        if(ApexPages.hasMessages()){
-            result.redirectURL = '';
-            for(ApexPages.Message m : ApexPages.getMessages()){
-                result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(m));
+        if(ura.HasDeleteAccess){
+            try {
+                cancelInvitations(new Set<Id>{memberId});
+            } catch(DMLException e) {
+                result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(ApexPages.Severity.Error, e.getDMLMessage(0)));
+            } catch (Exception e){
+                result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
             }
+
+            if(ApexPages.hasMessages()){
+                result.redirectURL = '';
+                for(ApexPages.Message m : ApexPages.getMessages()){
+                    result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(m));
+                }
+            }
+        }else{
+            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(ApexPages.Severity.Error, Label.InsufficientAccessToCancelInvitation));
         }
 
         return result;

@@ -1,192 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
     <labels>
-        <fullName>Continue</fullName>
-        <categories></categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Continue button</shortDescription>
-        <value>Continue</value>
-    </labels>
-    <labels>
-        <fullName>Password</fullName>
-        <categories></categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Password</shortDescription>
-        <value>Password</value>
-    </labels>
-    <labels>
-        <fullName>PasswordConfirm</fullName>
-        <categories></categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>PasswordConfirm</shortDescription>
-        <value>Confirm Password</value>
-    </labels>
-    <labels>
-        <fullName>Welcome</fullName>
-        <categories></categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Welcome</shortDescription>
-        <value>Registration Step 2</value>
-    </labels>    
-    <labels>
-        <fullName>RegistrationSuccessExistingUser</fullName>
-        <categories>RegisterStep2.component</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Registration Success Existing User</shortDescription>
-        <value>Your registration was succesful, please go to the home page and login with your user and password.</value>
-    </labels>
-    <labels>
-        <fullName>OrganizationNotAllowed</fullName>
-        <categories>RegisterStep2.component</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Organization Not Allowed</shortDescription>
-        <value>The type of member is not allowed to continue the registration</value>
-    </labels>
-    <labels>
-        <fullName>MemberRejected</fullName>
-        <categories></categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Member Rejected</shortDescription>
-        <value>The member was rejected</value>
-    </labels>
-    <labels>
-        <fullName>ErrorNoItemShoppingCart</fullName>
-        <categories>ShoppingCartItemsController.cls</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>No Item in Shopping Cart</shortDescription>
-        <value>You don´t have items in your shopping cart</value>
-    </labels>
-    <labels>
-        <fullName>InfoMemberInApproval</fullName>
-        <categories>RegisterStep2.component</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Info Member In Approval</shortDescription>
-        <value>Member in approval process</value>
-    </labels>
-    <labels>
-        <fullName>MemberInvalid</fullName>
-        <categories>RegisterStep2.component</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Member Invalid</shortDescription>
-        <value>Invalid Member</value>
-    </labels>
-    <labels>
-        <fullName>CreateVoucher</fullName>
-        <categories>ShoppingCart.page</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Checkout</shortDescription>
-        <value>Checkout</value>
-    </labels>
-    <labels>
-        <fullName>EmptyCart</fullName>
-        <categories>ShoppingCart.component</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>EmptyCart</shortDescription>
-        <value>Empty Cart</value>
-    </labels>
-    <labels>
-        <fullName>ErrorRegistrationUserExists</fullName>
-        <categories>RegisterStep2.page</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Error Registration User Exists</shortDescription>
-        <value>You have been already registered.</value>
-    </labels>
-    <labels>
-        <fullName>Save</fullName>
-        <categories>AgreementAccept.page</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Save</shortDescription>
-        <value>Save</value>
-    </labels>
-    <labels>
-        <fullName>Cancel</fullName>
-        <categories>AgreementEditBackEnd.page</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Cancel</shortDescription>
-        <value>Cancel</value>
-    </labels>
-    <labels>
-        <fullName>Next</fullName>
-        <categories>EmailCampaignStep1BackEnd.page</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Next</shortDescription>
-        <value>Next</value>
-    </labels>
-    <labels>
-        <fullName>Previous</fullName>
-        <categories></categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Previous</shortDescription>
-        <value>Previous</value>
-    </labels>
-    <labels>
-        <fullName>Wish</fullName>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>zz_deprecated_Fielo_WishOff</shortDescription>
-        <value>Wish</value>
-    </labels>
-    <labels>
-        <fullName>LoginAsOrganization</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Login as Organization</shortDescription>
-        <value>Work as Organization</value>
-    </labels>
-    <labels>
-        <fullName>InfoRegisterApprovalInstructions</fullName>
-        <categories>RegisterStep2.component</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Second step for registration without Approval and fieldset empty</shortDescription>
-        <value>Click submit to finish the registration.</value>
-    </labels>
-    <labels>
-        <fullName>Like</fullName>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>zz_deprecated_Fielo_LikeOff</shortDescription>
-        <value>Like</value>
-    </labels>
-    <labels>
-        <fullName>LoginAsMember</fullName>
-        <categories></categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Login as Member</shortDescription>
-        <value>Work as Member</value>
-    </labels>
-    <labels>
         <fullName>Add</fullName>
         <categories>LevelEditBackEnd.page</categories>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Add</shortDescription>
         <value>Add</value>
-    </labels>
-    <labels>
-        <fullName>Submit</fullName>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>zz_deprecated_Submit</shortDescription>
-        <value>Submit</value>
     </labels>
     <labels>
         <fullName>Back</fullName>
@@ -197,12 +17,20 @@
         <value>Back</value>
     </labels>
     <labels>
-        <fullName>SucessRegistrationStep1</fullName>
-        <categories>RegisterStep1.page</categories>
+        <fullName>BlockUnblock</fullName>
+        <categories>BlockUnblockMember.component</categories>
         <language>en_US</language>
         <protected>false</protected>
-        <shortDescription>SiteRegistrationStart</shortDescription>
-        <value>Check your email to continue the registration process.</value>
+        <shortDescription>Block Unblock</shortDescription>
+        <value>Block/Unblock</value>
+    </labels>
+    <labels>
+        <fullName>Cancel</fullName>
+        <categories>AgreementEditBackEnd.page</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cancel</shortDescription>
+        <value>Cancel</value>
     </labels>
     <labels>
         <fullName>CancelInvitation</fullName>
@@ -213,59 +41,35 @@
         <value>Cancel Invite</value>
     </labels>
     <labels>
-        <fullName>Reinvite</fullName>
-        <categories></categories>
+        <fullName>Continue</fullName>
         <language>en_US</language>
         <protected>false</protected>
-        <shortDescription>Reinvite</shortDescription>
-        <value>Reinvite</value>
+        <shortDescription>Continue button</shortDescription>
+        <value>Continue</value>
     </labels>
     <labels>
-        <fullName>ShoppingExistingReward</fullName>
-        <categories>RewardDetailController.cls</categories>
+        <fullName>CreateVoucher</fullName>
+        <categories>ShoppingCart.page</categories>
         <language>en_US</language>
         <protected>false</protected>
-        <shortDescription>Shopping Existing Reward</shortDescription>
-        <value>This reward is already in your shopping cart, please modify the quantity in the shopping cart.</value>
+        <shortDescription>Checkout</shortDescription>
+        <value>Checkout</value>
     </labels>
     <labels>
-        <fullName>SucessAwardingApprovalRegistration</fullName>
-        <categories>RegisterStep2.page</categories>
+        <fullName>Delete</fullName>
+        <categories>ShoppingDelete.component</categories>
         <language>en_US</language>
         <protected>false</protected>
-        <shortDescription>SiteApprovalUser</shortDescription>
-        <value>You have finished the registration process. You will receive an email confirmation when the participant is active. Thank you.</value>
+        <shortDescription>Delete</shortDescription>
+        <value>Delete</value>
     </labels>
     <labels>
-        <fullName>PasswordIsRequired</fullName>
-        <categories>RegisterStep2Controller.cls</categories>
+        <fullName>EmptyCart</fullName>
+        <categories>ShoppingCart.component</categories>
         <language>en_US</language>
         <protected>false</protected>
-        <shortDescription>RequiredPassword</shortDescription>
-        <value>Password is required</value>
-    </labels>
-    <labels>
-        <fullName>GoToHome</fullName>
-        <categories>ForgotPasswordConfirm.page</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Go To Home</shortDescription>
-        <value>Go to Home</value>
-    </labels>
-    <labels>
-        <fullName>ErrorFieloAccountBlocked</fullName>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Error Fielo Account Blocked</shortDescription>
-        <value>The Fielo Account that is trying to perform the action is blocked.</value>
-    </labels>
-    <labels>
-        <fullName>MemberIdRequired</fullName>
-        <categories>MemberService.cls</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Member Id Required</shortDescription>
-        <value>Member Id Required</value>
+        <shortDescription>EmptyCart</shortDescription>
+        <value>Empty Cart</value>
     </labels>
     <labels>
         <fullName>ErrorDeleteFieloAccount</fullName>
@@ -275,26 +79,11 @@
         <value>You cannot delete a Fielo Account with status &quot;New&quot;.</value>
     </labels>
     <labels>
-        <fullName>UsernameIsRequired</fullName>
-        <categories>ForgotPasswordFieloController.cls</categories>
+        <fullName>ErrorFieloAccountBlocked</fullName>
         <language>en_US</language>
         <protected>false</protected>
-        <shortDescription>Required Username</shortDescription>
-        <value>E-mail is required</value>
-    </labels>
-    <labels>
-        <fullName>ErrorOrganizationAccountAction</fullName>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Error Organization Account action</shortDescription>
-        <value>Must be an Organization Account to perform this action.</value>
-    </labels>
-    <labels>
-        <fullName>InfoRedemptionApproval</fullName>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>zz_deprecated_InfoRedemptionApproval</shortDescription>
-        <value>Your order was sent to approve, once your redemption has been approved you will see it in your profile page.</value>
+        <shortDescription>Error Fielo Account Blocked</shortDescription>
+        <value>The Fielo Account that is trying to perform the action is blocked.</value>
     </labels>
     <labels>
         <fullName>ErrorLoginMemberBlocked</fullName>
@@ -305,44 +94,12 @@
         <value>Login is blocked. Please contact your administrator.</value>
     </labels>
     <labels>
-        <fullName>SuccessRewardAddToChart</fullName>
-        <categories>CatalogController.cls</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Success Reward Add To Chart</shortDescription>
-        <value>Reward added successfully</value>
-    </labels>
-    <labels>
-        <fullName>BlockUnblock</fullName>
-        <categories>BlockUnblockMember.component</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Block Unblock</shortDescription>
-        <value>Block/Unblock</value>
-    </labels>
-    <labels>
         <fullName>ErrorLoginProgramValidation</fullName>
         <categories>SiteLoginFieloController</categories>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>ErrorLoginProgramValidation</shortDescription>
         <value>Incorrect username</value>
-    </labels>
-    <labels>
-        <fullName>ToggleManager</fullName>
-        <categories>ToggleManager.component</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Toggle Manager</shortDescription>
-        <value>Set / Unset Manager</value>
-    </labels>
-    <labels>
-        <fullName>SuccessfulRemoteActionRefresh</fullName>
-        <categories>ToggleManagerController.cls, HandleInvitationsMembersController.cls, BlockUnblockMemberController.cls</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Successful Remote Action Refresh</shortDescription>
-        <value>Your action has been successful</value>
     </labels>
     <labels>
         <fullName>ErrorMemberForgotPasswordInexist</fullName>
@@ -353,13 +110,28 @@
         <value>Member does not exist</value>
     </labels>
     <labels>
-        <fullName>Delete</fullName>
-        <categories>ShoppingDelete.component</categories>
+        <fullName>ErrorNoItemShoppingCart</fullName>
+        <categories>ShoppingCartItemsController.cls</categories>
         <language>en_US</language>
         <protected>false</protected>
-        <shortDescription>Delete</shortDescription>
-        <value>Delete</value>
-    </labels>    
+        <shortDescription>No Item in Shopping Cart</shortDescription>
+        <value>You don´t have items in your shopping cart</value>
+    </labels>
+    <labels>
+        <fullName>ErrorOrganizationAccountAction</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Organization Account action</shortDescription>
+        <value>Must be an Organization Account to perform this action.</value>
+    </labels>
+    <labels>
+        <fullName>ErrorRegistrationUserExists</fullName>
+        <categories>RegisterStep2.page</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Registration User Exists</shortDescription>
+        <value>You have been already registered.</value>
+    </labels>
     <labels>
         <fullName>FacebookLogin</fullName>
         <categories>RegisterFacebook.component</categories>
@@ -367,6 +139,234 @@
         <protected>false</protected>
         <shortDescription>Facebook Login</shortDescription>
         <value>Facebook Login</value>
+    </labels>
+    <labels>
+        <fullName>GoToHome</fullName>
+        <categories>ForgotPasswordConfirm.page</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Go To Home</shortDescription>
+        <value>Go to Home</value>
+    </labels>
+    <labels>
+        <fullName>InfoMemberInApproval</fullName>
+        <categories>RegisterStep2.component</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Info Member In Approval</shortDescription>
+        <value>Member in approval process</value>
+    </labels>
+    <labels>
+        <fullName>InfoRedemptionApproval</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>zz_deprecated_InfoRedemptionApproval</shortDescription>
+        <value>Your order was sent to approve, once your redemption has been approved you will see it in your profile page.</value>
+    </labels>
+    <labels>
+        <fullName>InfoRegisterApprovalInstructions</fullName>
+        <categories>RegisterStep2.component</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Second step for registration without Approval and fieldset empty</shortDescription>
+        <value>Click submit to finish the registration.</value>
+    </labels>
+    <labels>
+        <fullName>InsufficientAccessToCancelInvitation</fullName>
+        <categories>HandleInvitationsMembersController.cls</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Insufficient Access to Cancel Invitation</shortDescription>
+        <value>You can not cancel the invitation because you do not have access to delete this Member.</value>
+    </labels>
+    <labels>
+        <fullName>Like</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>zz_deprecated_Fielo_LikeOff</shortDescription>
+        <value>Like</value>
+    </labels>
+    <labels>
+        <fullName>LoginAsMember</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Login as Member</shortDescription>
+        <value>Work as Member</value>
+    </labels>
+    <labels>
+        <fullName>LoginAsOrganization</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Login as Organization</shortDescription>
+        <value>Work as Organization</value>
+    </labels>
+    <labels>
+        <fullName>MemberIdRequired</fullName>
+        <categories>MemberService.cls</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Member Id Required</shortDescription>
+        <value>Member Id Required</value>
+    </labels>
+    <labels>
+        <fullName>MemberInvalid</fullName>
+        <categories>RegisterStep2.component</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Member Invalid</shortDescription>
+        <value>Invalid Member</value>
+    </labels>
+    <labels>
+        <fullName>MemberRejected</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Member Rejected</shortDescription>
+        <value>The member was rejected</value>
+    </labels>
+    <labels>
+        <fullName>Next</fullName>
+        <categories>EmailCampaignStep1BackEnd.page</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Next</shortDescription>
+        <value>Next</value>
+    </labels>
+    <labels>
+        <fullName>OrganizationNotAllowed</fullName>
+        <categories>RegisterStep2.component</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Organization Not Allowed</shortDescription>
+        <value>The type of member is not allowed to continue the registration</value>
+    </labels>
+    <labels>
+        <fullName>Password</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Password</shortDescription>
+        <value>Password</value>
+    </labels>
+    <labels>
+        <fullName>PasswordConfirm</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PasswordConfirm</shortDescription>
+        <value>Confirm Password</value>
+    </labels>
+    <labels>
+        <fullName>PasswordIsRequired</fullName>
+        <categories>RegisterStep2Controller.cls</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RequiredPassword</shortDescription>
+        <value>Password is required</value>
+    </labels>
+    <labels>
+        <fullName>Previous</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Previous</shortDescription>
+        <value>Previous</value>
+    </labels>
+    <labels>
+        <fullName>RegistrationSuccessExistingUser</fullName>
+        <categories>RegisterStep2.component</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Registration Success Existing User</shortDescription>
+        <value>Your registration was succesful, please go to the home page and login with your user and password.</value>
+    </labels>
+    <labels>
+        <fullName>Reinvite</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Reinvite</shortDescription>
+        <value>Reinvite</value>
+    </labels>
+    <labels>
+        <fullName>Save</fullName>
+        <categories>AgreementAccept.page</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>ShoppingExistingReward</fullName>
+        <categories>RewardDetailController.cls</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Shopping Existing Reward</shortDescription>
+        <value>This reward is already in your shopping cart, please modify the quantity in the shopping cart.</value>
+    </labels>
+    <labels>
+        <fullName>Submit</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>zz_deprecated_Submit</shortDescription>
+        <value>Submit</value>
+    </labels>
+    <labels>
+        <fullName>SuccessRewardAddToChart</fullName>
+        <categories>CatalogController.cls</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Success Reward Add To Chart</shortDescription>
+        <value>Reward added successfully</value>
+    </labels>
+    <labels>
+        <fullName>SuccessfulRemoteActionRefresh</fullName>
+        <categories>ToggleManagerController.cls, HandleInvitationsMembersController.cls, BlockUnblockMemberController.cls</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Successful Remote Action Refresh</shortDescription>
+        <value>Your action has been successful</value>
+    </labels>
+    <labels>
+        <fullName>SucessAwardingApprovalRegistration</fullName>
+        <categories>RegisterStep2.page</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SiteApprovalUser</shortDescription>
+        <value>You have finished the registration process. You will receive an email confirmation when the participant is active. Thank you.</value>
+    </labels>
+    <labels>
+        <fullName>SucessRegistrationStep1</fullName>
+        <categories>RegisterStep1.page</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SiteRegistrationStart</shortDescription>
+        <value>Check your email to continue the registration process.</value>
+    </labels>
+    <labels>
+        <fullName>ToggleManager</fullName>
+        <categories>ToggleManager.component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Toggle Manager</shortDescription>
+        <value>Set / Unset Manager</value>
+    </labels>
+    <labels>
+        <fullName>UsernameIsRequired</fullName>
+        <categories>ForgotPasswordFieloController.cls</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Required Username</shortDescription>
+        <value>E-mail is required</value>
+    </labels>
+    <labels>
+        <fullName>Welcome</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Welcome</shortDescription>
+        <value>Registration Step 2</value>
+    </labels>
+    <labels>
+        <fullName>Wish</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>zz_deprecated_Fielo_WishOff</shortDescription>
+        <value>Wish</value>
     </labels>
     <labels>
         <fullName>security_error_field_not_insertable</fullName>

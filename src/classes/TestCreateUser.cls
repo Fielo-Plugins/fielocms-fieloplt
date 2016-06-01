@@ -82,20 +82,16 @@ private class TestCreateUser
         insert contributors;
 
         FieloCMS.RemoteActionResult resultFinishRegistration = RegisterStep2Controller.finishRegistration(contributor1, null);
-        System.debug(resultFinishRegistration);
 
         contributor1 = [SELECT FieloAlpha__User__c FROM FieloAlpha__Member__c WHERE Id =: contributor1.Id];
         contributor2 = [SELECT FieloAlpha__User__c, OwnerId FROM FieloAlpha__Member__c WHERE Id =: contributor2.Id];
 
-        System.debug(contributor2.OwnerId);
 
         User managerUser = [SELECT Id, ProfileId FROM User WHERE Id =: contributor1.FieloAlpha__User__c];
 
-        System.debug(managerUser.ProfileId);
 
         System.runAs(managerUser){
             FieloCMS.RemoteActionResult resultCancelInvitation = HandleInvitationsMembersController.cancelInvitation(contributor2.Id);
-            System.debug(resultCancelInvitation);
         }
     }
 
