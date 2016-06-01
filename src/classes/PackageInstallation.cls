@@ -6,7 +6,11 @@ public without sharing class PackageInstallation implements InstallHandler {
 	}
 
 	public void install(Id userId){
-		createPublicAndPrivateSegments();
+		try{
+			createPublicAndPrivateSegments();
+		}catch(Exception e){
+			FieloAlpha.ErrorUtil.insertError(e);
+		}
 	}
 
 	public static void createPublicAndPrivateSegments(){
