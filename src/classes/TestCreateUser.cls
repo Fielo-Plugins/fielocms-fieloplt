@@ -121,7 +121,6 @@ private class TestCreateUser
         insert contributors;
 
         FieloCMS.RemoteActionResult resultFinishRegistration = RegisterStep2Controller.finishRegistration(contributor1, null);
-        System.debug(resultFinishRegistration);
 
         contributor1 = [SELECT FieloAlpha__User__c FROM FieloAlpha__Member__c WHERE Id =: contributor1.Id];
     

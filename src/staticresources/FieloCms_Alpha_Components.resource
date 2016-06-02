@@ -35,7 +35,7 @@
       "FieloCMS__ExcludeFields__c" : "Id,OwnerId,IsDeleted,RecordTypeId,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp,FieloAlpha__AttachmentId__c,FieloAlpha__Image__c,FieloAlpha__Event__c",
       "FieloCMS__Icon__c" : "FieloCms_Salesforce-vendor/images/sections/one_column.jpg",
       "FieloCMS__RecordType__c" : "List",
-      "FieloCMS__Subcomponents__c" : "[{\"apiName\": \"AddtoCart\",\"label\": \"Add to Cart\", \"reflectionClass\": \"FieloCMS_EE.AddToCartController\", \"type\": \"Subcomponent\",\"closeOrder\":\"False\",\"detailurl\":\"\"},{\"apiName\": \"ViewImage\",\"label\": \"ViewImage\", \"reflectionClass\": \"FieloCMS.Subcomponents.ImageView\", \"type\": \"subComponent\", \"fieldName\":\"FieloAlpha__AttachmentId__c\"}]",
+      "FieloCMS__Subcomponents__c" : "[     {         \"apiName\": \"AddtoCart\",         \"closeOrder\": \"False\",         \"detailurl\": \"\",         \"label\": \"Add to Cart\",         \"reflectionClass\": \"FieloCMS_EE.AddToCartController\",         \"type\": \"Subcomponent\"     },     {         \"apiName\": \"ViewImage\",         \"label\": \"ViewImage\",         \"fieldName\": \"FieloAlpha__AttachmentId__c\",         \"reflectionClass\": \"FieloCMS.Subcomponents.ImageView\",         \"type\": \"Subcomponent\"     } ]",
       "FieloCMS__Visibility__c" : "Both",
       "FieloCMS__sObject__c" : "FieloAlpha__Banner__c"
     }, {
@@ -48,7 +48,7 @@
       "FieloCMS__ExcludeFields__c" : "Id,OwnerId,IsDeleted,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp,FieloAlpha__AttachmentId__c,FieloAlpha__Intangible__c,FieloAlpha__RedemptionRule__c",
       "FieloCMS__Icon__c" : "FieloCms_Salesforce-vendor/images/sections/one_column.jpg",
       "FieloCMS__RecordType__c" : "Record",
-      "FieloCMS__Subcomponents__c" : "[{\"apiName\": \"ViewImage\",\"label\": \"ViewImage\", \"reflectionClass\": \"FieloCMS.Subcomponents.ImageView\", \"type\": \"subComponent\", \"fieldName\":\"FieloAlpha__AttachmentId__c\",\"showLabel\":false  } ]",
+      "FieloCMS__Subcomponents__c" : "[     {         \"apiName\": \"ViewImage\",         \"label\": \"ViewImage\",         \"fieldName\": \"FieloAlpha__AttachmentId__c\",         \"reflectionClass\": \"FieloCMS.Subcomponents.ImageView\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     } ]",
       "FieloCMS__Visibility__c" : "Both",
       "FieloCMS__sObject__c" : "FieloAlpha__Reward__c"
     }, {
@@ -60,7 +60,7 @@
       "FieloCMS__ExcludeFields__c" : "Id,OwnerId,IsDeleted,RecordTypeId,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp,FieloAlpha__LoyaltyAge__c,FieloAlpha__MemberCode__c,FieloAlpha__Preference__c,FieloAlpha__TotalValue__c,FieloAlpha__Type__c",
       "FieloCMS__Icon__c" : "FieloCms_Salesforce-vendor/images/sections/one_column.jpg",
       "FieloCMS__RecordType__c" : "Record",
-      "FieloCMS__Subcomponents__c" : "[     {         \"apiName\": \"UploadImage\",         \"label\": \"UploadImage\",         \"reflectionClass\": \"FieloCMS.Subcomponents.ImageUpload\",         \"type\": \"subComponent\"     } ]",
+      "FieloCMS__Subcomponents__c" : "[     {         \"apiName\": \"UploadImage\",         \"label\": \"UploadImage\",         \"reflectionClass\": \"FieloCMS.Subcomponents.ImageUpload\",         \"type\": \"Subcomponent\"     } ]",
       "FieloCMS__Visibility__c" : "Private",
       "FieloCMS__sObject__c" : "FieloAlpha__Member__c"
     }, {
@@ -72,7 +72,7 @@
       "FieloCMS__ExcludeFields__c" : "Id,OwnerId,IsDeleted,CreatedById,SystemModstamp,FieloAlpha__LoyaltyAge__c,FieloAlpha__MemberCode__c,FieloAlpha__Preference__c,FieloAlpha__TotalValue__c,FieloAlpha__Type__c,LastActivityDate,LastViewedDate,LastReferencedDate,FieloAlpha__imageId__c",
       "FieloCMS__Icon__c" : "FieloCms_Salesforce-vendor/images/sections/one_column.jpg",
       "FieloCMS__RecordType__c" : "List",
-      "FieloCMS__Subcomponents__c" : "[{\"reflectionClass\":\"FieloCMS_EE.BlockUnblockMemberController\",\"type\":\"subComponent\",\"label\":\"Block/Unblock\",\"apiName\":\"BlockUnblock\"},{\"reflectionClass\":\"FieloCMS_EE.ToggleManagerController\",\"type\":\"subComponent\",\"label\":\"Toggle Manager\",\"apiName\":\"ToggleManager\"},{\"reflectionClass\":\"FieloCMS_EE.HandleInvitationsMembersController\",\"type\":\"subComponent\",\"label\":\"Handle Invitations\",\"apiName\":\"HandleInvitations\"}]",
+      "FieloCMS__Subcomponents__c" : "[{\"reflectionClass\":\"FieloCMS_EE.BlockUnblockMemberController\",\"type\":\"Subcomponent\",\"label\":\"Block/Unblock\",\"apiName\":\"BlockUnblock\"},{\"reflectionClass\":\"FieloCMS_EE.ToggleManagerController\",\"type\":\"Subcomponent\",\"label\":\"Toggle Manager\",\"apiName\":\"ToggleManager\"},{\"reflectionClass\":\"FieloCMS_EE.HandleInvitationsMembersController\",\"type\":\"Subcomponent\",\"label\":\"Handle Invitations\",\"apiName\":\"HandleInvitations\"}]",
       "FieloCMS__Visibility__c" : "Private",
       "FieloCMS__sObject__c" : "FieloAlpha__Member__c"
     }, {
@@ -110,7 +110,7 @@
       "FieloCMS__ExcludeFields__c" : "Id,OwnerId,IsDeleted,RecordTypeId,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp,FieloAlpha__LoyaltyAge__c,FieloAlpha__Preference__c,FieloAlpha__TotalValue__c,FieloAlpha__Type__c",
       "FieloCMS__Icon__c" : "FieloCms_Salesforce-vendor/images/sections/one_column.jpg",
       "FieloCMS__RecordType__c" : "List",
-      "FieloCMS__Subcomponents__c" : "[{\"reflectionClass\":\"FieloCMS_EE.SelectMemberController\",\"type\":\"subComponent\",\"label\":\"Login as Member\",\"apiName\":\"LoginAsMember\",\"memberType\":\"Member\"},{\"reflectionClass\":\"FieloCMS_EE.SelectMemberController\",\"type\":\"subComponent\",\"label\":\"Login as Organization\",\"apiName\":\"LoginAsOrganization\",\"memberType\":\"Organization\"}]",
+      "FieloCMS__Subcomponents__c" : "[{\"reflectionClass\":\"FieloCMS_EE.SelectMemberController\",\"type\":\"Subcomponent\",\"label\":\"Login as Member\",\"apiName\":\"LoginAsMember\",\"memberType\":\"Member\"},{\"reflectionClass\":\"FieloCMS_EE.SelectMemberController\",\"type\":\"Subcomponent\",\"label\":\"Login as Organization\",\"apiName\":\"LoginAsOrganization\",\"memberType\":\"Organization\"}]",
       "FieloCMS__Visibility__c" : "Private",
       "FieloCMS__sObject__c" : "FieloAlpha__Member__c"
     }, {
@@ -156,12 +156,13 @@
       "recordTypeName" : "Record",
       "Name" : "Account",
       "FieloCMS__ControlClass__c" : "FieloCMS.StandardAPI",
+      "FieloCMS__CssClasses__c" : "fielo-account",
       "FieloCMS__DataClass__c" : "FieloCMS_EE.MemberAPI",
       "FieloCMS__DefaultFields__c" : "FieloAlpha__Email__c,FieloAlpha__FirstName__c,FieloAlpha__LastName__c,FieloAlpha__LevelReadOnly__c",
       "FieloCMS__ExcludeFields__c" : "Id,OwnerId,IsDeleted,RecordTypeId,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp,FieloAlpha__LoyaltyAge__c,FieloAlpha__MemberCode__c,FieloAlpha__Preference__c,FieloAlpha__TotalValue__c,FieloAlpha__Type__c",
       "FieloCMS__Icon__c" : "FieloCms_Salesforce-vendor/images/sections/one_column.jpg",
       "FieloCMS__RecordType__c" : "Record",
-      "FieloCMS__Subcomponents__c" : "[     {         \"apiName\": \"UploadImage\",         \"label\": \"UploadImage\",         \"reflectionClass\": \"FieloCMS.Subcomponents.ImageUpload\",         \"type\": \"subComponent\"     },     {         \"apiName\": \"ViewImage\",         \"label\": \"View Image\",         \"fieldName\": \"FieloAlpha__imageId__c\",         \"reflectionClass\": \"FieloCMS.Subcomponents.ImageView\",         \"showLabel\": false,         \"type\": \"subComponent\"     } ]",
+      "FieloCMS__Subcomponents__c" : "[     {         \"apiName\": \"UploadImage\",         \"label\": \"UploadImage\",         \"reflectionClass\": \"FieloCMS.Subcomponents.ImageUpload\",         \"type\": \"Subcomponent\"     },     {         \"apiName\": \"ViewImage\",         \"label\": \"View Image\",         \"fieldName\": \"FieloAlpha__imageId__c\",         \"reflectionClass\": \"FieloCMS.Subcomponents.ImageView\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     } ]",
       "FieloCMS__Visibility__c" : "Private",
       "FieloCMS__sObject__c" : "FieloAlpha__Member__c"
     }, {
@@ -203,7 +204,7 @@
       "FieloCMS__ExcludeFields__c" : "Id,OwnerId,IsDeleted,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp,LastActivityDate,LastViewedDate,LastReferencedDate,FieloAlpha__AttachmentId__c,FieloAlpha__Image__c,FieloAlpha__Intangible__c,FieloAlpha__RedemptionRule__c",
       "FieloCMS__Icon__c" : "fielo-icon-content",
       "FieloCMS__RecordType__c" : "List",
-      "FieloCMS__Subcomponents__c" : "[{\"apiName\": \"AddtoCart\",\"label\": \"Add to Cart\", \"reflectionClass\": \"FieloCMS_EE.AddToCartController\", \"type\": \"Subcomponent\",\"closeOrder\":\"false\",\"detailUrl\":\"\"},{\"apiName\": \"ViewImage\",\"label\": \"ViewImage\", \"reflectionClass\": \"FieloCMS.Subcomponents.ImageView\", \"type\": \"subComponent\", \"fieldName\":\"FieloAlpha__AttachmentId__c\",\"showLabel\":false}]",
+      "FieloCMS__Subcomponents__c" : "[{\"apiName\": \"AddtoCart\",\"label\": \"Add to Cart\", \"reflectionClass\": \"FieloCMS_EE.AddToCartController\", \"type\": \"Subcomponent\",\"closeOrder\":\"false\",\"detailUrl\":\"\"},{\"apiName\": \"ViewImage\",\"label\": \"ViewImage\", \"reflectionClass\": \"FieloCMS.Subcomponents.ImageView\", \"type\": \"Subcomponent\", \"fieldName\":\"FieloAlpha__AttachmentId__c\",\"showLabel\":false}]",
       "FieloCMS__Visibility__c" : "Both",
       "FieloCMS__sObject__c" : "FieloAlpha__Reward__c"
     }, {
@@ -222,7 +223,7 @@
     }, {
       "recordTypeName" : "List",
       "Name" : "Redemption Items",
-      "FieloCMS__AdditionalFields__c" : "FieloCMS__DetailParameter__c",
+      "FieloCMS__AdditionalFields__c" : "FieloCMS_EE__ParemeterName__c",
       "FieloCMS__ControlClass__c" : "FieloCMS.StandardAPI",
       "FieloCMS__DataClass__c" : "FieloCMS_EE.RedemptionItemAPI",
       "FieloCMS__DefaultFields__c" : "FieloAlpha__Code__c,FieloAlpha__DeliveredDate__c,FieloAlpha__Status__c,FieloAlpha__VoucherLink__c",
@@ -256,7 +257,7 @@
       "Name" : "Blank Template",
       "FieloCMS__Icon__c" : "fielo-icon-content",
       "FieloCMS__Type__c" : "Template",
-      "FieloCMS__XMLReference__c" : "{  \r\n   \"pages\":[  \r\n      {  \r\n         \"recordTypeName\":\"Template\",\r\n         \"sections\":[  \r\n            {  \r\n               \"FieloCMS__ElementType__c\":\"Header\",\r\n               \"FieloCMS__Width__c\":\"12\"\r\n            },\r\n            {  \r\n               \"FieloCMS__ElementType__c\":\"Main\",\r\n               \"FieloCMS__IsBody__c\": true,\r\n               \"FieloCMS__Width__c\":\"12\"\r\n            },\r\n            {  \r\n               \"FieloCMS__ElementType__c\":\"Footer\",\r\n               \"FieloCMS__Width__c\":\"12\"\r\n            }                        \r\n         ]\r\n      }\r\n   ]\r\n}"
+      "FieloCMS__XMLReference__c" : "{     \"pages\": [         {             \"FieloCMS__Icon__c\": \"fielo-icon-content\",             \"recordTypeName\": \"Template\",             \"sections\": [                 {                     \"FieloCMS__ElementType__c\": \"Header\",                     \"FieloCMS__Width__c\": \"12\",                     \"subsections\": [                         {                             \"FieloCMS__ElementType__c\": \"Div\",                             \"FieloCMS__IsBody__c\": false,                             \"FieloCMS__Order__c\": 0,                             \"FieloCMS__Width__c\": \"12\"                         }                     ]                 },                 {                     \"FieloCMS__ElementType__c\": \"Main\",                     \"FieloCMS__IsBody__c\": true,                     \"FieloCMS__Width__c\": \"12\"                 },                 {                     \"FieloCMS__ElementType__c\": \"Footer\",                     \"FieloCMS__Width__c\": \"12\",                     \"subsections\": [                         {                             \"FieloCMS__ElementType__c\": \"Div\",                             \"FieloCMS__IsBody__c\": false,                             \"FieloCMS__Order__c\": 0,                             \"FieloCMS__Width__c\": \"12\"                         }                     ]                 }             ]         }     ] }"
     }, {
       "Name" : "Blank Page",
       "FieloCMS__Icon__c" : "fielo-icon-content",
