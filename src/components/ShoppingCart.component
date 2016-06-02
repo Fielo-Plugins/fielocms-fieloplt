@@ -2,12 +2,12 @@
     <apex:attribute name="config" type="FieloCMS__Component__c" description="" />
 
     <apex:panelGroup rendered="{!rewards.size > 0}" >
-		<div class="fielo-form js-has-message {!config.FieloCMS__CSSClasses__c}" data-componentid="{!config.Id}" >
-		    <div  class="fielo-message" data-componentid="{!config.Id}" ></div>
+		<div class="fielo-form fielo-js-component {!config.FieloCMS__ComponentLibrary__r.FieloCMS__CSSClasses__c} {!config.FieloCMS__CSSClasses__c}" data-componentid="{!config.Id}" >
+		    <!--<div  class="fielo-message" data-componentid="{!config.Id}" ></div>-->
 		    <form class="fielo-form__shopping-cart fielo-js-upgrade" data-remoteaction="" data-remotearguments="componentId,quantities" data-remoteobject="Redemption__c" >
 		        <input type="hidden" name="componentId" value="{!config.Id}" />
 		    	
-		        <div class="fielo-record-set js-has-message fielo-record-set--is-table fielo-record-set--is-component-ShoppingCart {!config.FieloCMS__CSSClasses__c}" data-layout="table" data-componentid="{! config.Id}" >
+		        <div class="fielo-record-set fielo-record-set--is-table fielo-record-set--is-component-ShoppingCart {!config.FieloCMS__CSSClasses__c}" data-layout="table" data-componentid="{! config.Id}" >
 			        <!--<div class="fielo-messages" data-componentid="{! config.Id}" ></div>-->
 			        <apex:panelGroup layout="none" rendered="{!config.FieloCMS__Title__c != ''}" >
 			            <h3 class="fielo-title">{!config.FieloCMS__Title__c}</h3>
@@ -28,30 +28,29 @@
 			                    <tr class="fielo-record fielo-record-set__template">
 			                    	<apex:repeat value="{!$ObjectType.FieloAlpha__Reward__c.FieldSets.ShoppingCart}" var="field">
 				                    	<td class="fielo-field fielo-field--is-{!field} mdl-data-table__cell--non-numeric" data-th="{!field}">
-		        							<span class="fielo-field__value">        							
+		        							<span id="{!record.Id}{!field}" class="fielo-field__value">				
 		        								<apex:outputField value="{!record[field]}" />
 		        							</span>
 		    							</td>
 		    						</apex:repeat>
 		    						<td class="fielo-field fielo-field--is-ShoppingQuantity mdl-data-table__cell--non-numeric" data-th="Shopping Quantity">
 	        							<span class="fielo-field__value">										    
-									        <input type="number" min="0" required="required" class="fielo-shopping__quantity js-to-be-initialized" name="quantities.{!record.Id}" value="{!quantitiesMap[record.Id]}"  data-attribute-replace="value"/>
+									        <input type="number" min="0" required="required" class="fielo-shopping__quantity js-to-be-initialized" name="quantities.{!record.Id}" value="{!quantitiesMap[record.Id]}" onchange="document.getElementById('shoppingTotal{!record.Id}').innerHTML = this.value * document.getElementById('{!record.Id}FieloAlpha__PointsCant__c').children[0].innerHTML;" data-attribute-replace="value"/>
 	        							</span>
 	    							</td>
 		    						<td class="fielo-field fielo-field--is-ShoppingTotal mdl-data-table__cell--non-numeric" data-th="Shopping Total">
 	        							<span class="fielo-field__value">        							
-	        								JS?
-
+	        								
 	        								<!--<apex:variable var="total" value="{!0}" /> 
 										    <apex:repeat value="{!record['FieloAlpha__RedemptionItems__r']}"  var="cartItem">
 										        <apex:variable var="total" value="{! total + (cartItem.quantity__c * record['PointsCant__c']) }" />
-										    </apex:repeat>
-										    <span class="fielo-shopping__total">{!total}</span>-->
+										    </apex:repeat>-->
+										    <span id="shoppingTotal{!record.Id}" class="fielo-shopping__total">{!record['FieloAlpha__PointsCant__c'] * quantitiesMap[record.Id]}</span>
 	        							</span>
 	    							</td>
 		    						<td class="fielo-field fielo-field--is-ShoppingDelete mdl-data-table__cell--non-numeric" data-th="Shopping Total">
 	        							<span class="fielo-field__value">        							
-	        								<div class="fielo-button__delete fielo-js-upgrade">{!$Label.Delete}</div>
+	        								<div class="fielo-button__delete fielo-js-confirm fielo-js-upgrade">{!$Label.Delete}</div>
 	        							</span>
 	    							</td>
 	    						</tr>
@@ -65,7 +64,7 @@
 			    </div>
 		        <div class="fielo-controls" >
 			        <button data-remoteaction="FieloCMS_EE.ShoppingCartController.save" class="fielo-button fielo-js-upgrade fielo-button__save" >{!$Label.Save}</button>
-			        <button data-remoteaction="FieloCMS_EE.ShoppingCartController.emptyCart" class="fielo-button fielo-js-upgrade fielo-button__empty-cart" >{!$Label.EmptyCart}</button>
+			        <button data-remoteaction="FieloCMS_EE.ShoppingCartController.emptyCart" class="fielo-button fielo-js-confirm fielo-js-upgrade fielo-button__empty-cart" >{!$Label.EmptyCart}</button>
 			        <button data-remoteaction="FieloCMS_EE.ShoppingCartController.checkout" class="fielo-button fielo-js-upgrade fielo-button__checkout" >{!$Label.CreateVoucher}</button>
 			    </div>
 		    </form>

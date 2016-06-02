@@ -54,6 +54,7 @@ global with sharing class ShoppingCartController {
             }
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, 'success')));
             result.redirectURL = '#';
+            //result.refresh.add(new FieloCMS.RemoteActionResult.RemoteActionRefresh('refresh',componentId));
         }catch(FieloAlpha.FieloCustomException e){
             Database.rollBack(sp);
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
@@ -136,7 +137,8 @@ global with sharing class ShoppingCartController {
         Savepoint sp = Database.setSavepoint();
         try{
             FieloAlpha.RedemptionService.deleteRedemptions(MemberService.getCurrentMemberId(), 'Open', 'FrontEnd');
-            result.redirectURL = '#';
+            //result.redirectURL = '#';
+            result.refresh.add(new FieloCMS.RemoteActionResult.RemoteActionRefresh('refresh',componentId));
         }catch(Exception e){            
             Database.rollBack(sp);
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));

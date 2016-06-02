@@ -7,12 +7,14 @@ global with sharing class RedemptionItemAPI implements FieloCMS.DataInterface{
             if(c.FieloCMS__Limit__c == null)
                 c.FieloCMS__Limit__c = 5;
             
-            String whereCondition = 'FieloAlpha__Redemption__r.FieloAlpha__Status__c != \'Open\' AND FieloAlpha__Redemption__r.FieloAlpha__Member__c = \'' + MemberService.getCurrentMemberId() + '\'';
-            Id redemptionId = c.FieloCMS__RecordId__c;
-            if(redemptionId != null){
-                whereCondition += ' AND FieloAlpha__Redemption__c = \'' + redemptionId + '\'';
+            String whereCondition;
+            if(String.isNotBlank(c.ParemeterName__c) && ApexPages.CurrentPage().getParameters().containsKey(c.ParemeterName__c) != null){
+                Id redemptionId = ApexPages.CurrentPage().getParameters().get(c.ParemeterName__c);
+                whereCondition = ' FieloAlpha__Redemption__c = \'' + redemptionId + '\'';
+            }else{
+                whereCondition = 'FieloAlpha__Redemption__r.FieloAlpha__Status__c != \'Open\' AND FieloAlpha__Redemption__r.FieloAlpha__Member__c = \'' + MemberService.getCurrentMemberId() + '\'';
             }
-            newMapData.put(c.Id, Database.query('SELECT ' + String.join(new List<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c)), ',') + ' FROM FieloAlpha__RedemptionItem__c WHERE ' + whereCondition));            
+            newMapData.put(c.Id, Database.query('SELECT ' + String.join(new List<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c)), ',') + ' FROM FieloAlpha__RedemptionItem__c WHERE ' + whereCondition));
         }
         return newMapData;
     }
