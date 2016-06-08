@@ -160,7 +160,6 @@
     <pluralLabel>Segment Domains</pluralLabel>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
-    <startsWith>Vowel</startsWith>
     <validationRules>
         <fullName>FieloAlpha__ProgramConsistencyBanner</fullName>
         <active>true</active>

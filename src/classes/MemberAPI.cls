@@ -1,7 +1,7 @@
 global with sharing class MemberAPI implements FieloCMS.DataInterface, FieloCMS.ControlInterface, FieloCMS.ViewInterface{
-	
+    
     public ApexPages.Component getComponent(FieloCMS__Component__c component){                                
-        if(component.FieloCMS__ComponentLibrary__r.Name == 'Login'){                    
+        if(component.FieloCMS__ComponentLibrary__r.Name == 'Platform Login'){                    
             return new Component.SiteLoginFielo(config = component);            
         }else if(component.FieloCMS__ComponentLibrary__r.Name == 'Register Step 2'){                    
             return new Component.RegisterStep2(config = component);                            
@@ -10,7 +10,7 @@ global with sharing class MemberAPI implements FieloCMS.DataInterface, FieloCMS.
         return null;
     }
     
-	public Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){        
+    public Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){        
         Map<Id,Object> newMapData = new Map<Id,Object>();
         //Prepare all the queries
         for(FieloCMS__Component__c c : components){            
@@ -20,18 +20,18 @@ global with sharing class MemberAPI implements FieloCMS.DataInterface, FieloCMS.
             if(c.FieloCMS__ComponentLibrary__r.Name == 'Organization Account'){
                 FieloAlpha__Member__c loggedMember = MemberService.getCurrentMember(new Set<String>{'FieloAlpha__OrganizationAccount__c','RecordType.DeveloperName'});
                 if(loggedMember.RecordType.DeveloperName != 'OrganizationAccount' && loggedMember.FieloAlpha__OrganizationAccount__c != null){
-                	newMapData.put(c.Id, new MembersSelector(new Set<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c))).selectById(new Set<Id>{loggedMember.FieloAlpha__OrganizationAccount__c})[0]);
+                    newMapData.put(c.Id, new MembersSelector(new Set<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c))).selectById(new Set<Id>{loggedMember.FieloAlpha__OrganizationAccount__c})[0]);
                 }else{
                     newMapData.put(c.Id, new FieloAlpha__Member__c());
                 }
             }else if(c.FieloCMS__ComponentLibrary__r.Name == 'Member Selection'){
-            	FieloAlpha__Program__c program = ProgramService.getCurrentProgram();
-	      		newMapData.put(c.Id, new MembersSelector(new Set<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c))).selectRelatedMembers(UserInfo.getUserId(), program.Id));
+                FieloAlpha__Program__c program = ProgramService.getCurrentProgram();
+                newMapData.put(c.Id, new MembersSelector(new Set<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c))).selectRelatedMembers(UserInfo.getUserId(), program.Id));
             }else if(c.FieloCMS__ComponentLibrary__r.Name == 'Organization Members'){
-	      		FieloAlpha__Member__c loggedMember = MemberService.getCurrentMember(new Set<String>{'RecordType.DeveloperName'});
-	      		if(loggedMember.RecordType.DeveloperName == 'OrganizationAccount'){
-	      			newMapData.put(c.Id, new MembersSelector(new Set<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c))).selectByOrganizationAccount(loggedMember.Id));
-	      		}else{
+                FieloAlpha__Member__c loggedMember = MemberService.getCurrentMember(new Set<String>{'RecordType.DeveloperName'});
+                if(loggedMember.RecordType.DeveloperName == 'OrganizationAccount'){
+                    newMapData.put(c.Id, new MembersSelector(new Set<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c))).selectByOrganizationAccount(loggedMember.Id));
+                }else{
                     newMapData.put(c.Id, new List<FieloAlpha__Member__c>());
                 }
             }else if(c.FieloCMS__ComponentLibrary__r.Name == 'Register'){
