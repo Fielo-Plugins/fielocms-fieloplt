@@ -653,6 +653,17 @@ Default Account: The member will be related to an specific default CRM account</
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>ParemeterName__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Paremeter Name</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Program__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
@@ -887,7 +898,7 @@ Default Account: The member will be related to an specific default CRM account</
         <fullName>AccountRequiredWithDefinedAccount</fullName>
         <active>true</active>
         <description>Validates if person account functionality is avaiable in the org</description>
-        <errorConditionFormula>(ISPICKVAL(AccountCRMMode__c, &apos;Defined Account&apos;) &amp;&amp; ISBLANK(Account__c) &amp;&amp; ( RecordType.DeveloperName = &apos;Register&apos;))</errorConditionFormula>
+        <errorConditionFormula>(ISPICKVAL(AccountCRMMode__c, &apos;Defined Account&apos;) &amp;&amp; ISBLANK(Account__c) &amp;&amp; ( FieloCMS__ComponentLibrary__r.Name = &apos;Register&apos;))</errorConditionFormula>
         <errorDisplayField>Account__c</errorDisplayField>
         <errorMessage>You have to select the Account</errorMessage>
     </validationRules>
@@ -902,7 +913,7 @@ Default Account: The member will be related to an specific default CRM account</
         <fullName>OwnerRequiredWithPersonOrStandardAccount</fullName>
         <active>true</active>
         <description>Validates if owner is completed if CRM Mode = Person Account or Standard Account</description>
-        <errorConditionFormula>(ISPICKVAL(AccountCRMMode__c, &apos;Person Account&apos;) || ISPICKVAL(AccountCRMMode__c, &apos;Standard Account&apos;)) &amp;&amp; ISBLANK( AccountOwner__c) &amp;&amp; ( RecordType.DeveloperName = &apos;Register&apos;)</errorConditionFormula>
+        <errorConditionFormula>(ISPICKVAL(AccountCRMMode__c, &apos;Person Account&apos;) || ISPICKVAL(AccountCRMMode__c, &apos;Standard Account&apos;)) &amp;&amp; ISBLANK( AccountOwner__c) &amp;&amp; ( FieloCMS__ComponentLibrary__r.Name = &apos;Register&apos;)</errorConditionFormula>
         <errorDisplayField>AccountOwner__c</errorDisplayField>
         <errorMessage>You have to select the owner</errorMessage>
     </validationRules>
@@ -912,7 +923,7 @@ Default Account: The member will be related to an specific default CRM account</
         <description>Validates if the owner has a defined role</description>
         <errorConditionFormula>((ISPICKVAL(AccountCRMMode__c, &apos;Person Account&apos;) 
 || 
-ISPICKVAL(AccountCRMMode__c, &apos;Standard Account&apos;)) &amp;&amp; NOT(ISBLANK (AccountOwner__c)) &amp;&amp; ISBLANK(AccountOwner__r.UserRoleId) &amp;&amp; ( RecordType.DeveloperName = &apos;Register&apos;))</errorConditionFormula>
+ISPICKVAL(AccountCRMMode__c, &apos;Standard Account&apos;)) &amp;&amp; NOT(ISBLANK (AccountOwner__c)) &amp;&amp; ISBLANK(AccountOwner__r.UserRoleId) &amp;&amp; ( FieloCMS__ComponentLibrary__r.Name = &apos;Register&apos;))</errorConditionFormula>
         <errorDisplayField>AccountOwner__c</errorDisplayField>
         <errorMessage>The owner selected has no role</errorMessage>
     </validationRules>
