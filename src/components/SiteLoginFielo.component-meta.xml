@@ -4,12 +4,12 @@
     <label>Site Login Fielo</label>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>8</minorNumber>
+        <minorNumber>18</minorNumber>
         <namespace>FieloAlpha</namespace>
     </packageVersions>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>8</minorNumber>
+        <minorNumber>41</minorNumber>
         <namespace>FieloCMS</namespace>
     </packageVersions>
     <packageVersions>
