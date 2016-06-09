@@ -194,7 +194,6 @@ Remember that if &quot;Use Agreement&quot; is unchecked for the corresponding pr
         <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
-    <startsWith>Vowel</startsWith>
     <validationRules>
         <fullName>FieloAlpha__ModifyProgram</fullName>
         <active>true</active>

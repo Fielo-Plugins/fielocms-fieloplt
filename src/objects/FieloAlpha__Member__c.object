@@ -2071,7 +2071,7 @@ if( confirm(&apos;{!$Label.FieloAlpha__ConfirmBlockUnblock}&apos;) ){
         <masterLabel>Login As</masterLabel>
         <openType>replace</openType>
         <protected>false</protected>
-        <url>{!URLFOR(&apos;/apex/&apos; + $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;LoginAsBackend&apos;, null, [memberId =  FieloAlpha__Member__c.Id])}</url>
+        <url>{!URLFOR(&apos;/apex/&apos; + IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;) + &apos;LoginAsBackend&apos;, null, [memberId =  FieloAlpha__Member__c.Id])}</url>
     </webLinks>
     <webLinks>
         <fullName>FieloAlpha__RedeemPoints</fullName>

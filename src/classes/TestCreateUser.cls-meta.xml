@@ -3,7 +3,7 @@
     <apiVersion>36.0</apiVersion>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>13</minorNumber>
+        <minorNumber>18</minorNumber>
         <namespace>FieloAlpha</namespace>
     </packageVersions>
     <status>Active</status>

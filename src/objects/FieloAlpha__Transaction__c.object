@@ -905,9 +905,9 @@
     <validationRules>
         <fullName>FieloAlpha__ValidateTransactionValue</fullName>
         <active>false</active>
-        <errorConditionFormula>FieloAlpha__Value__c = 0 &amp;&amp; ISPICKVAL(FieloAlpha__Type__c, &apos;Purchase&apos; )</errorConditionFormula>
+        <errorConditionFormula>FieloAlpha__Value__c &lt;= 0 &amp;&amp; ISPICKVAL(FieloAlpha__Type__c, &apos;Purchase&apos; )</errorConditionFormula>
         <errorDisplayField>FieloAlpha__Value__c</errorDisplayField>
-        <errorMessage>Value cannot be 0</errorMessage>
+        <errorMessage>Value cannot be equal or less than 0</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>FieloAlpha__Validate_Member</fullName>
