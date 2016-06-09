@@ -118,7 +118,7 @@
         <inlineHelpText>API name of the field in the object that is a look up for a Member record. This field is used in order to know to which Member the points will be given to if a Transaction is created.</inlineHelpText>
         <label>Target Member</label>
         <length>255</length>
-        <required>false</required>
+        <required>true</required>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>

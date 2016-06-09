@@ -17,8 +17,8 @@ public class NavigationService{
 			}
 
 			navIds = new Set<Id>();
-			for(FieloAlpha__SegmentDomain__c segDom : [SELECT FieloCMS_EE__Navigation__c FROM FieloAlpha__SegmentDomain__c WHERE FieloAlpha__Segment__c in : appliedSegments AND FieloCMS_EE__Navigation__c != NULL]){
-                navIds.add(segDom.FieloCMS_EE__Navigation__c);
+			for(FieloAlpha__SegmentDomain__c segDom : [SELECT Navigation__c FROM FieloAlpha__SegmentDomain__c WHERE FieloAlpha__Segment__c in : appliedSegments AND Navigation__c != NULL]){
+                navIds.add(segDom.Navigation__c);
             }
             query += ' AND (Id IN : navIds OR HasSegments__c = false)';
 		}

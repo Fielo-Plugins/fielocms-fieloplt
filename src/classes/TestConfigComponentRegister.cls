@@ -29,13 +29,13 @@ private class TestConfigComponentRegister{
 		FieloCMS__Component__c registerComponent = new FieloCMS__Component__c(FieloCMS__ComponentLibrary__c = registerCL.Id, FieloCMS__Section__c = subSection.Id);
 		insert registerComponent;
 
-		registerComponent.FieloCMS_EE__AccountCRMMode__c = 'Person Account';
-		registerComponent.FieloCMS_EE__AccountOwner__c = adminUser.Id;
+		registerComponent.AccountCRMMode__c = 'Person Account';
+		registerComponent.AccountOwner__c = adminUser.Id;
 		update registerComponent;
 
-		FieloCMS__Component__c registerComponentQuery = [SELECT FieloCMS_EE__AccountCRMMode__c, FieloCMS_EE__AccountOwner__c FROM FieloCMS__Component__c WHERE Id =: registerComponent.Id];
-		system.assertEquals('Person Account', registerComponentQuery.FieloCMS_EE__AccountCRMMode__c);
-		system.assertEquals(adminUser.Id, registerComponentQuery.FieloCMS_EE__AccountOwner__c);
+		FieloCMS__Component__c registerComponentQuery = [SELECT AccountCRMMode__c, AccountOwner__c FROM FieloCMS__Component__c WHERE Id =: registerComponent.Id];
+		system.assertEquals('Person Account', registerComponentQuery.AccountCRMMode__c);
+		system.assertEquals(adminUser.Id, registerComponentQuery.AccountOwner__c);
 	}
 	
 	@isTest
@@ -65,13 +65,13 @@ private class TestConfigComponentRegister{
 		FieloCMS__Component__c registerComponent = new FieloCMS__Component__c(FieloCMS__ComponentLibrary__c = registerCL.Id, FieloCMS__Section__c = subSection.Id);
 		insert registerComponent;
 
-		registerComponent.FieloCMS_EE__AccountCRMMode__c = 'Standard Account';
-		registerComponent.FieloCMS_EE__AccountOwner__c = adminUser.Id;
+		registerComponent.AccountCRMMode__c = 'Standard Account';
+		registerComponent.AccountOwner__c = adminUser.Id;
 		update registerComponent;
 
-		FieloCMS__Component__c registerComponentQuery = [SELECT FieloCMS_EE__AccountCRMMode__c, FieloCMS_EE__AccountOwner__c FROM FieloCMS__Component__c WHERE Id =: registerComponent.Id];
-		system.assertEquals('Standard Account', registerComponentQuery.FieloCMS_EE__AccountCRMMode__c);
-		system.assertEquals(adminUser.Id, registerComponentQuery.FieloCMS_EE__AccountOwner__c);
+		FieloCMS__Component__c registerComponentQuery = [SELECT AccountCRMMode__c, AccountOwner__c FROM FieloCMS__Component__c WHERE Id =: registerComponent.Id];
+		system.assertEquals('Standard Account', registerComponentQuery.AccountCRMMode__c);
+		system.assertEquals(adminUser.Id, registerComponentQuery.AccountOwner__c);
 	}
 
 	@isTest
@@ -103,12 +103,12 @@ private class TestConfigComponentRegister{
 		FieloCMS__Component__c registerComponent = new FieloCMS__Component__c(FieloCMS__ComponentLibrary__c = registerCL.Id, FieloCMS__Section__c = subSection.Id);
 		insert registerComponent;
 
-		registerComponent.FieloCMS_EE__AccountCRMMode__c = 'Defined Account';
+		registerComponent.AccountCRMMode__c = 'Defined Account';
 		registerComponent.Account__c = defaultAccount.Id;
 		update registerComponent;
 
-		FieloCMS__Component__c registerComponentQuery = [SELECT FieloCMS_EE__AccountCRMMode__c, Account__c FROM FieloCMS__Component__c WHERE Id =: registerComponent.Id];
-		system.assertEquals('Defined Account', registerComponentQuery.FieloCMS_EE__AccountCRMMode__c);
+		FieloCMS__Component__c registerComponentQuery = [SELECT AccountCRMMode__c, Account__c FROM FieloCMS__Component__c WHERE Id =: registerComponent.Id];
+		system.assertEquals('Defined Account', registerComponentQuery.AccountCRMMode__c);
 		system.assertEquals(defaultAccount.Id, registerComponentQuery.Account__c);
 	}
 	
@@ -139,7 +139,7 @@ private class TestConfigComponentRegister{
 		FieloCMS__Component__c registerComponent = new FieloCMS__Component__c(FieloCMS__ComponentLibrary__c = registerCL.Id, FieloCMS__Section__c = subSection.Id);
 		insert registerComponent;
 
-		registerComponent.FieloCMS_EE__AccountCRMMode__c = 'Defined Account';
+		registerComponent.AccountCRMMode__c = 'Defined Account';
 		try{
 			update registerComponent;
 		}catch(DMLException e){
@@ -175,8 +175,8 @@ private class TestConfigComponentRegister{
 		FieloCMS__Component__c registerComponent = new FieloCMS__Component__c(FieloCMS__ComponentLibrary__c = registerCL.Id, FieloCMS__Section__c = subSection.Id);
 		insert registerComponent;
 
-		registerComponent.FieloCMS_EE__AccountCRMMode__c = 'Person Account';
-		registerComponent.FieloCMS_EE__AccountOwner__c = adminUser.Id;
+		registerComponent.AccountCRMMode__c = 'Person Account';
+		registerComponent.AccountOwner__c = adminUser.Id;
 		try{
 			update registerComponent;
 		}catch(DMLException e){
@@ -207,7 +207,7 @@ private class TestConfigComponentRegister{
 		FieloCMS__Component__c registerComponent = new FieloCMS__Component__c(FieloCMS__ComponentLibrary__c = registerCL.Id, FieloCMS__Section__c = subSection.Id);
 		insert registerComponent;
 
-		registerComponent.FieloCMS_EE__AccountCRMMode__c = 'Standard Account';
+		registerComponent.AccountCRMMode__c = 'Standard Account';
 		registerComponent.Account__c = defaultAccount.Id;
 		try{
 			update registerComponent;
@@ -238,8 +238,8 @@ private class TestConfigComponentRegister{
 		FieloCMS__Component__c registerComponent = new FieloCMS__Component__c(FieloCMS__ComponentLibrary__c = registerCL.Id, FieloCMS__Section__c = subSection.Id);
 		insert registerComponent;
 
-		registerComponent.FieloCMS_EE__AccountCRMMode__c = 'Standard Account';
-		registerComponent.FieloCMS_EE__AccountOwner__c = adminUser.Id;		
+		registerComponent.AccountCRMMode__c = 'Standard Account';
+		registerComponent.AccountOwner__c = adminUser.Id;		
 		try{
 			update registerComponent;
 		}catch(DMLException e){
