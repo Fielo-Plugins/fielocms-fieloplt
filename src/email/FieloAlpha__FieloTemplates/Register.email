@@ -1,0 +1,5 @@
+Hello {!FieloAlpha__Email__c.FieloAlpha__RecipientName__c}: 
+
+Your request to be a participant of our Loyalty Program begin. Please complete the registration proccess going to this link: 
+
+{!FieloAlpha__Email__c.Link__c}
