@@ -144,6 +144,15 @@
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Navigation</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>FieloCMS__Navigation__c.RecordType.DeveloperName</field>
+                <operation>equals</operation>
+                <value>NavigationItem</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
         <referenceTo>FieloCMS__Navigation__c</referenceTo>
         <relationshipLabel>Segment Domains</relationshipLabel>
         <relationshipName>SegmentDomains</relationshipName>
