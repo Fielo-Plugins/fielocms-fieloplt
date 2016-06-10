@@ -17,7 +17,7 @@ global with sharing class TagAPI implements FieloCMS.ViewSubComponentInterface,F
         return null;
     }
     
-    public ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){        
+    global ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){        
         Component.Tag tag = new Component.Tag();
         if(record != null){
             tag.record = record;
@@ -25,11 +25,12 @@ global with sharing class TagAPI implements FieloCMS.ViewSubComponentInterface,F
             tag.expressions.record = '{!record}';
         }
         tag.field = field;        
-        if(record.Id.getSObjectType() == Schema.FieloAlpha__Reward__c.SObjectType){
+        //if(record.Id.getSObjectType() == Schema.FieloAlpha__Reward__c.SObjectType){
             tag.relatedListName = 'FieloAlpha__RewardTag__r';
-        }else{
+        /*}else{
             tag.relatedListName = 'FieloAlpha__TagItems__r';
-        }
+        }*/
         return tag;        
+        //return new Component.Apex.OutputText(value='test');
     }
 }

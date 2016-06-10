@@ -3,8 +3,8 @@
     <apex:attribute name="field" type="FieloCMS.Field" description="" />
 
     <apex:panelGroup layout="none" rendered="{!(field.attributes['memberType'] == 'Member' || (record.FieloAlpha__OrganizationAccount__c != null && record.FieloAlpha__IsManager__c == true))}" >
-        <div class="fielo-form">
-            <form class="fielo-js-upgrade fielo-form--is-component-{!field.apiName}" data-remoteaction="FieloCMS_EE.SelectMemberController.selectMember" data-remotearguments="memberId,type" ><!--{!field.attributes['CSSClasses__c']} -->
+        <div class="fielo-form fielo-select-member">
+            <form class="fielo-js-upgrade" data-remoteaction="FieloCMS_EE.SelectMemberController.selectMember" data-remotearguments="memberId,type" ><!--{!field.attributes['CSSClasses__c']} -->
                 <input type="hidden" name="memberId" value="{!record.Id}" data-object-property="Id" data-attribute-replace="value"/>
                 <input type="hidden" name="type" value="{!field.attributes['memberType']}" />
                 <apex:panelGroup layout="none" rendered="{!!record.FieloAlpha__Blocked__c}">

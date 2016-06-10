@@ -1,7 +1,7 @@
 <apex:component layout="none" controller="RegisterStep2Controller" allowDML="true" access="global">
-    <apex:attribute name="config" type="FieloCMS__Component__c" description="" />    
-    <div class="fielo-record fielo-form fielo-register-step-2 fielo-widget fielo-js-component" data-componentid="{!config.Id}" >
-        <div class="fielo-title">{!$Label.Welcome}</div>        
+    <apex:attribute name="config" type="FieloCMS__Component__c" description="" />
+    <div class="fielo-form fielo-register-step-2 fielo-widget fielo-js-component" data-componentid="{!config.Id}" >
+        <div class="fielo-title">{!$Label.Welcome}</div>
         <apex:panelGroup layout="none" rendered="{!(status != 'Ok' && status != 'User exist')}">
             <apex:panelGroup layout="none" rendered="{!status != 'Send for Approval'}">
                 <div class="fielo-toast fielo-toast--is-error">
@@ -26,13 +26,13 @@
                 <form class="fielo-js-upgrade" data-remoteaction="FieloCMS_EE.RegisterStep2Controller.continueRegistration" data-remotearguments="id" data-remoteobject="Member__c" >
                     <input type="hidden" name="id" value="{!member.Id}" />
                     <button type="submit" class="fielo-button fielo-button__submit" >{!$Label.Continue}</button>
-                </form>                
+                </form>
             </apex:panelGroup>
         </apex:panelGroup>
-        <apex:panelGroup layout="none" rendered="{!(status == 'Ok' || status == 'User exist')}">         
+        <apex:panelGroup layout="none" rendered="{!(status == 'Ok' || status == 'User exist')}">
             <form class="fielo-js-upgrade" data-remoteaction="FieloCMS_EE.RegisterStep2Controller.finishRegistration" data-remotearguments="SObject,password" data-remoteobject="Member__c" >
                 <fieldset>
-                    
+
                     <input type="hidden" name="SObject.id" value="{!member.Id}" />
                     <apex:repeat value="{!$ObjectType.FieloAlpha__Member__c.FieldSets.FieloAlpha__RegistrationStep2}" var="field" >
                         <div class="mdl-grid fielo-field fielo-field--is-{!field}">
@@ -43,7 +43,7 @@
                                 <input class="fielo-input fielo-js-upgrade"   id="{!field}" name="SObject.{!field}"  value="{!member[field]}" /><!-- data-required="{!field.required}" --> <!--data-type="{!field.type}"-->
                             </div>
                         </div>
-                    </apex:repeat>                    
+                    </apex:repeat>
                     <apex:panelGroup layout="none" rendered="{!status != 'User exist'}" >
                         <div class="mdl-grid fielo-field fielo-field--is-password">
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__label" >
@@ -60,7 +60,7 @@
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__value">
                                 <input class="fielo-input" type="password" required="required"  autocomplete="current-password" />
                             </div>
-                        </div>                        
+                        </div>
                     </apex:panelGroup>
                 </fieldset>
                 <div class="fielo-controls" >
@@ -68,7 +68,7 @@
                     <button type="submit" class="fielo-button fielo-button__submit" >{!$Label.submit}</button>
                 </div>
             </form>
-        </apex:panelGroup>                
-        
+        </apex:panelGroup>
+
     </div>
 </apex:component>
