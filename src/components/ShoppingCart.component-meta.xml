@@ -4,12 +4,12 @@
     <label>Shopping Cart</label>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>18</minorNumber>
+        <minorNumber>16</minorNumber>
         <namespace>FieloAlpha</namespace>
     </packageVersions>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>40</minorNumber>
+        <minorNumber>36</minorNumber>
         <namespace>FieloCMS</namespace>
     </packageVersions>
     <packageVersions>

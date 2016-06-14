@@ -1,4 +1,8 @@
 <apex:component layout="none" controller="WishController" >
+    
+    <apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.AccountCRMMode__c.Name}" />
+    <apex:variable var="namespace" value="{!SUBSTITUTE(SUBSTITUTE(fieldName,'AccountCRMMode__c',''),'__','.')}" />
+
     <apex:attribute name="record" type="SObject" description="" />
     <apex:attribute name="field" type="FieloCMS.Field" description="" />
      
@@ -9,7 +13,7 @@
     </apex:repeat>    
 
     <div class="fielo-form">
-        <form class="fielo-form__wish js-to-be-initialized" data-remoteaction="FieloCMS_EE.WishController.wish" data-remotearguments="recordId,action" >
+        <form class="fielo-form__wish js-to-be-initialized" data-remoteaction="{!namespace}WishController.wish" data-remotearguments="recordId,action" >
             <input type="hidden" name="recordId" value="{!record.Id}" data-object-property="Id"  data-attribute-replace="value"
     />
             <input type="hidden" class="fielo-wish" name="wish" value="{!isWished}" data-object-property="FieloAlpha__Members_Reward__r"  data-attribute-replace="value"

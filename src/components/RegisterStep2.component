@@ -1,4 +1,8 @@
 <apex:component layout="none" controller="RegisterStep2Controller" allowDML="true" access="global">
+
+    <apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.AccountCRMMode__c.Name}" />
+    <apex:variable var="namespace" value="{!SUBSTITUTE(SUBSTITUTE(fieldName,'AccountCRMMode__c',''),'__','.')}" />
+
     <apex:attribute name="config" type="FieloCMS__Component__c" description="" />
     <div class="fielo-form fielo-register-step-2 fielo-widget fielo-js-component" data-componentid="{!config.Id}" >
         <div class="fielo-title">{!$Label.Welcome}</div>
@@ -23,14 +27,14 @@
                 </div>
             </apex:panelGroup>
             <apex:panelGroup layout="none" rendered="{!status == 'Send for Approval'}">
-                <form class="fielo-js-upgrade" data-remoteaction="FieloCMS_EE.RegisterStep2Controller.continueRegistration" data-remotearguments="id" data-remoteobject="Member__c" >
+                <form class="fielo-js-upgrade" data-remoteaction="{!namespace}RegisterStep2Controller.continueRegistration" data-remotearguments="id" data-remoteobject="Member__c" >
                     <input type="hidden" name="id" value="{!member.Id}" />
                     <button type="submit" class="fielo-button fielo-button__submit" >{!$Label.Continue}</button>
                 </form>
             </apex:panelGroup>
         </apex:panelGroup>
         <apex:panelGroup layout="none" rendered="{!(status == 'Ok' || status == 'User exist')}">
-            <form class="fielo-js-upgrade" data-remoteaction="FieloCMS_EE.RegisterStep2Controller.finishRegistration" data-remotearguments="SObject,password" data-remoteobject="Member__c" >
+            <form class="fielo-js-upgrade" data-remoteaction="{!namespace}RegisterStep2Controller.finishRegistration" data-remotearguments="SObject,password" data-remoteobject="Member__c" >
                 <fieldset>
 
                     <input type="hidden" name="SObject.id" value="{!member.Id}" />
