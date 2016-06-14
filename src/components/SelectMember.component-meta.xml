@@ -4,12 +4,12 @@
     <label>SelectMember</label>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>9</minorNumber>
+        <minorNumber>19</minorNumber>
         <namespace>FieloAlpha</namespace>
     </packageVersions>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>18</minorNumber>
+        <minorNumber>44</minorNumber>
         <namespace>FieloCMS</namespace>
     </packageVersions>
     <packageVersions>

@@ -7,7 +7,7 @@
 
     <div class="fielo-form fielo-login fielo-widget fielo-js-component" data-componentid="{!config.Id}" >
         <form class="fielo-js-upgrade" data-remotearguments="username,password" data-remoteaction="{!namespace}SiteLoginFieloController.login"  >
-            <fieldset>                
+            <fieldset>
                 <legend class="fielo-title" >Login</legend><!--{!$Label.FieloAlpha__Login}-->
                 <div class="mdl-grid fielo-field fielo-field--is-username fielo-field" >
                     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__label" >
@@ -16,7 +16,7 @@
                     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__value">
                         <input id="username" required="true" autofocus="true" name="username" type="email" autocomplete="username" />
                     </div>
-                </div>   
+                </div>
                 <div class="mdl-grid fielo-field fielo-field--is-password fielo-field">
                     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__label" >
                         <label for="password" id="lblPassword">{!$Label.site.password}</label>
@@ -24,18 +24,18 @@
                     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__value">
                         <input id="password" required="true" name="password" type="password" />
                     </div>
-                </div>   
-                <div class="mdl-grid">                    
+                </div>
+                <div class="mdl-grid">
                     <apex:panelGroup layout="none" rendered="{!config.Facebook__c}" >
                         <div class="fielo-facebook js-to-be-initialized" data-organizationid="{!$Organization.Id}" data-siteurl="{!$Site.CurrentSiteUrl}" >
                             <a href="https://login.salesforce.com/services/auth/sso/{!$Organization.Id}/FacebookLogin?site={!$Site.CurrentSiteUrl}" ><i></i>&nbsp; {!$Label.FacebookLogin}</a>
                         </div>
                     </apex:panelGroup>
                 </div>
-            </fieldset>            
+            </fieldset>
             <div class="fielo-controls" >
                 <a href="#" class="fielo-login__link" data-switchlabel="{!$Label.back}" >{!$Label.site.forgot_password}</a>
-                <button class="fielo-button" >{!$Label.submit}</button>
+                <button class="fielo-button fielo-button--safe" >{!$Label.submit}</button>
             </div>
         </form>
     </div>
