@@ -132,7 +132,6 @@
         <type>LongTextArea</type>
         <visibleLines>20</visibleLines>
     </fields>
-    <gender>Feminine</gender>
     <label>Model</label>
     <listViews>
         <fullName>All</fullName>

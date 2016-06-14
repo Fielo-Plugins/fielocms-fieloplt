@@ -176,7 +176,6 @@
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
-    <gender>Masculine</gender>
     <label>Navigation</label>
     <nameField>
         <label>Navigation Name</label>

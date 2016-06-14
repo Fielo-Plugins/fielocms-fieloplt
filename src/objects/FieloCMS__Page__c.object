@@ -170,7 +170,6 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <gender>Feminine</gender>
     <label>Page</label>
     <listViews>
         <fullName>FieloCMS__All_Menu</fullName>

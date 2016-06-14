@@ -102,7 +102,6 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <gender>Feminine</gender>
     <label>Site</label>
     <nameField>
         <label>Site Name</label>
