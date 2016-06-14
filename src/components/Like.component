@@ -1,4 +1,8 @@
 <apex:component layout="none" controller="LikeController" >
+
+    <apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.AccountCRMMode__c.Name}" />
+    <apex:variable var="namespace" value="{!SUBSTITUTE(SUBSTITUTE(fieldName,'AccountCRMMode__c',''),'__','.')}" />
+
     <apex:attribute name="record" type="SObject" description="" />
     <apex:attribute name="field" type="FieloCMS.Field" description="" />
 
@@ -9,7 +13,7 @@
     </apex:repeat>
 
     <div class="fielo-form fielo-like">
-        <form class="fielo-js-upgrade" data-remoteaction="FieloCMS_EE.LikeController.likeRec" data-remotearguments="recordId,action">
+        <form class="fielo-js-upgrade" data-remoteaction="{!namespace}LikeController.likeRec" data-remotearguments="recordId,action">
             <input type="hidden" name="recordId" value="{!record.Id}" data-object-property="Id" data-attribute-replace="value"
     />
             <input type="hidden" class="fielo-like" name="likeValue" value="{!isLiked}" data-object-property="FieloAlpha__Likes__r"  data-attribute-replace="value"/>
