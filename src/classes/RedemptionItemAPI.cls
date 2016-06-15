@@ -14,6 +14,7 @@ global with sharing class RedemptionItemAPI implements FieloCMS.DataInterface{
             }else{
                 whereCondition = 'FieloAlpha__Redemption__r.FieloAlpha__Status__c != \'Open\' AND FieloAlpha__Redemption__r.FieloAlpha__Member__c = \'' + MemberService.getCurrentMemberId() + '\'';
             }
+            whereCondition += ' LIMIT ' + String.valueOf(c.FieloCMS__Limit__c);
             newMapData.put(c.Id, Database.query('SELECT ' + String.join(new List<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c)), ',') + ' FROM FieloAlpha__RedemptionItem__c WHERE ' + whereCondition));
         }
         return newMapData;
