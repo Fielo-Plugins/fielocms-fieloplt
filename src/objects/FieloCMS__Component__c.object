@@ -176,6 +176,39 @@ Default Account: The member will be related to an specific default CRM account</
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>DetailPage__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Detail page</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>FieloCMS__Page__c.RecordType.DeveloperName</field>
+                <operation>equals</operation>
+                <value>Page</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>FieloCMS__Page__c</referenceTo>
+        <relationshipLabel>Components (Detail page)</relationshipLabel>
+        <relationshipName>ListComponentsDetailPage</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>DetailParameter__c</fullName>
+        <defaultValue>&apos;id&apos;</defaultValue>
+        <description>The name of the parameter that a list will use to send to a detail component (for components of the Plugin)</description>
+        <externalId>false</externalId>
+        <label>Detail parameter</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Facebook__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
@@ -322,29 +355,29 @@ Default Account: The member will be related to an specific default CRM account</
             <controllingField>FieloCMS__Layout__c</controllingField>
             <picklistValues>
                 <fullName>Internal page</fullName>
+                <default>false</default>
                 <controllingFieldValues>Grid</controllingFieldValues>
                 <controllingFieldValues>Slider</controllingFieldValues>
                 <controllingFieldValues>Table</controllingFieldValues>
-                <default>false</default>
             </picklistValues>
             <picklistValues>
                 <fullName>Modal</fullName>
+                <default>false</default>
                 <controllingFieldValues>Grid</controllingFieldValues>
                 <controllingFieldValues>Slider</controllingFieldValues>
                 <controllingFieldValues>Table</controllingFieldValues>
-                <default>false</default>
             </picklistValues>
             <picklistValues>
                 <fullName>Accordion</fullName>
-                <controllingFieldValues>Table</controllingFieldValues>
                 <default>false</default>
+                <controllingFieldValues>Table</controllingFieldValues>
             </picklistValues>
             <picklistValues>
                 <fullName>External</fullName>
+                <default>false</default>
                 <controllingFieldValues>Grid</controllingFieldValues>
                 <controllingFieldValues>Slider</controllingFieldValues>
                 <controllingFieldValues>Table</controllingFieldValues>
-                <default>false</default>
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
@@ -380,24 +413,24 @@ Default Account: The member will be related to an specific default CRM account</
             <controllingField>FieloCMS__Layout__c</controllingField>
             <picklistValues>
                 <fullName>Vertical</fullName>
-                <controllingFieldValues>Menu</controllingFieldValues>
                 <default>false</default>
+                <controllingFieldValues>Menu</controllingFieldValues>
             </picklistValues>
             <picklistValues>
                 <fullName>Horizontal</fullName>
-                <controllingFieldValues>Menu</controllingFieldValues>
                 <default>false</default>
+                <controllingFieldValues>Menu</controllingFieldValues>
             </picklistValues>
             <picklistValues>
                 <fullName>Post</fullName>
-                <controllingFieldValues>View</controllingFieldValues>
                 <default>false</default>
+                <controllingFieldValues>View</controllingFieldValues>
             </picklistValues>
             <picklistValues>
                 <fullName>Form</fullName>
+                <default>false</default>
                 <controllingFieldValues>Edit</controllingFieldValues>
                 <controllingFieldValues>View</controllingFieldValues>
-                <default>false</default>
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
@@ -787,7 +820,7 @@ Default Account: The member will be related to an specific default CRM account</
             </values>
             <values>
                 <fullName>Standard Account</fullName>
-                <default>false</default>
+                <default>true</default>
             </values>
         </picklistValues>
         <picklistValues>
