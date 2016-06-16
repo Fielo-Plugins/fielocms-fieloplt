@@ -1,16 +1,16 @@
-global with sharing class BlockUnblockMemberController implements FieloCMS.ViewSubComponentInterface {
+global class BlockUnblockMemberController implements FieloCMS.ViewSubComponentInterface {
 
-    public ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){   
+    global ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){   
         Component.BlockUnblockMember blockUnblockMember = new Component.BlockUnblockMember();        
         blockUnblockMember.field = field;
         if(record != null){
-            BlockUnblockMember.record = record;
+            blockUnblockMember.record = record;
         }else{
-            BlockUnblockMember.expressions.record = '{!record}';
+            blockUnblockMember.expressions.record = '{!record}';
         }
-        return BlockUnblockMember;
+        return blockUnblockMember;
     }
-
+    
     @RemoteAction
     global static FieloCMS.RemoteActionResult blockUnblockMember(Id memberId, String action){
     	FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();

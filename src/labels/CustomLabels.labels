@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
     <labels>
+        <fullName>Block</fullName>
+        <categories>BlockUnblockMember.component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Block</shortDescription>
+        <value>Block</value>
+    </labels>
+    <labels>
+        <fullName>Unblock</fullName>
+        <categories>BlockUnblockMember.component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Unblock</shortDescription>
+        <value>Unblock</value>
+    </labels>
+    <labels>
+        <fullName>Set</fullName>
+        <categories>ToggleManager.component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Set</shortDescription>
+        <value>Set</value>
+    </labels>
+    <labels>
+        <fullName>Unset</fullName>
+        <categories>ToggleManager.component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Unset</shortDescription>
+        <value>Unset</value>
+    </labels>
+    <labels>
         <fullName>Add</fullName>
         <categories>LevelEditBackEnd.page</categories>
         <language>en_US</language>
@@ -191,14 +223,14 @@
         <language>en_US</language>
         <protected>true</protected>
         <shortDescription>Login as Member</shortDescription>
-        <value>Work as Member</value>
+        <value>Member</value>
     </labels>
     <labels>
         <fullName>LoginAsOrganization</fullName>
         <language>en_US</language>
         <protected>true</protected>
         <shortDescription>Login as Organization</shortDescription>
-        <value>Work as Organization</value>
+        <value>Organization</value>
     </labels>
     <labels>
         <fullName>MemberIdRequired</fullName>
