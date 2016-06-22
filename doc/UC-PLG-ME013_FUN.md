@@ -1,0 +1,44 @@
+## Change Password
+### Precondiciones
+
+El member tiene que estar logueado en el site
+Tiene que estar configurada un navigation de tipo Link que redireccione a la pagina ChangePasswordFielo
+
+### Postcondiciones
+
+El member cambio su password.
+
+### Flujo de Eventos
+
+### Flujo Basico
+
+1. El member se loguea en el site del program al que pertenece
+2. El member accede al navigation que contiene el componente Change Password
+3. El sistema despliega el boton Change Password
+4. El member presiona el boton Change Password
+5. El sistema muestra la pagina de Change Password con los campos Old Password, New Password,Verify New Password y el boton Change Password.
+6. El member completa los campos y presiona el boton Change Password.
+7. El sistema valida que los datos esten completos.
+8. El sistema valida que el campo Old Password sea correcto.
+9. El sistema valida que los campos New Password y Verify New Password sean iguales
+10. El sistema cambia la password del member.
+
+### Flujos Alternativos
+
+#### 1. El member no completa todos los campos (paso 6 del flujo basico)
+
+1. El sistema verifica que faltan completar campos
+2. El sistema muestra un mensaje de error correspondiente
+3. Continua en el paso 5 del flujo basico.
+
+#### 2. El member no completa correctamente el campo Old Password (paso 8 del flujo basico)
+
+1. El sistema verifica que el member no ingreso correctamente su password.
+2. El sistema muestra un mensaje de error.
+3. Continua en el paso 5 del flujo basico
+
+#### 3. El member no completa los campos password y verify new password con la misma informacion (paso 9 del flujo basico)
+
+1. El sistema verifica que los campos password y verify new password no son iguales
+2. El sistema muestra un mensaje de error.
+3. Continua en el paso 5 del flujo basico
