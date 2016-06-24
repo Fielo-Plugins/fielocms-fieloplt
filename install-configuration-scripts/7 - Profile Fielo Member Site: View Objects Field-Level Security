@@ -1,0 +1,21 @@
+En la pagina del view del Profile Fielo Member Site ejecutar el siguiente Script para abrir todos los objetos de esta lista:
+
+/************* SCRIPT *************/
+for (i = 0; i < document.getElementsByTagName('a').length; i++) {
+if(
+document.getElementsByTagName('a')[i].innerHTML == 'View' &&
+(
+
+document.getElementsByTagName('a')[i].parentNode.previousSibling.innerHTML == 'Component' ||
+document.getElementsByTagName('a')[i].parentNode.previousSibling.innerHTML == 'Component Library' ||
+document.getElementsByTagName('a')[i].parentNode.previousSibling.innerHTML == 'Layout' ||
+document.getElementsByTagName('a')[i].parentNode.previousSibling.innerHTML == 'Navigation' ||
+document.getElementsByTagName('a')[i].parentNode.previousSibling.innerHTML == 'Page' ||
+document.getElementsByTagName('a')[i].parentNode.previousSibling.innerHTML == 'Program' ||
+document.getElementsByTagName('a')[i].parentNode.previousSibling.innerHTML == 'Section' ||
+document.getElementsByTagName('a')[i].parentNode.previousSibling.innerHTML == 'Segment Domain' ||
+document.getElementsByTagName('a')[i].parentNode.previousSibling.innerHTML == 'Site' ||
+)){
+window.open(String(document.getElementsByTagName('a')[i].href).replace('flsdetail', 'flsedit'));
+}
+}
