@@ -1,0 +1,29 @@
+En la edicion del Profile Fielo Member Site (Con la interfaz antigua) ejecutar el siguiente script en la consola del browser (F12)
+para seleccionar todos los permisos y hacer click en Save automaticamente:
+
+/***************** SCRIPT *****************/
+//Standard Objects
+document.getElementById('crudRead___Contact').click();
+document.getElementById('crudRead___Document').click();
+
+//Custom Objects
+for (i = 0; i < document.getElementsByTagName('input').length; i++) {
+var inputCheck = document.getElementsByTagName('input')[i];
+if(
+inputCheck.title == 'Read Components' ||
+inputCheck.title == 'Read Components Library' ||
+inputCheck.title == 'Read Layouts' ||
+inputCheck.title == 'Read Navigations' ||
+inputCheck.title == 'Read Pages' ||
+inputCheck.title == 'Read Sections' ||
+inputCheck.title == 'Read Sites' ||
+){
+inputCheck.click();
+}
+}
+for (i = 0; i < document.getElementsByTagName('input').length; i++) {
+if(document.getElementsByTagName('input')[i].name == 'save'){
+document.getElementsByTagName('input')[i].click();
+}
+}
+/***************** SCRIPT *****************/
