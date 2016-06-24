@@ -1,4 +1,4 @@
-En la pagina del listado de los objeto ejecutar el siguiente Script en la consola del browser (F12) para abrir todos los objetos de esta lista sin presionar el link Edit:
+The following script can be executed on the object list page from the browser console (F12). Open all list objects without clicking **Edit**:
 
 /******************* SCRIPT *******************/
 var tagsA = document.getElementsByTagName('a');
