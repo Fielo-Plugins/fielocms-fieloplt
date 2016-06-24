@@ -1,0 +1,41 @@
+En la edicion del Profile Guest (Con la interfaz antigua) ejecutar el siguiente script en la consola del browser (F12) para seleccionar todos los permisos y hacer click en Save automaticamente:
+
+/***************** SCRIPT *****************/
+//Standard Objects
+document.getElementById('crudRead___Contact').click();
+document.getElementById('crudRead___Document').click();
+
+//Custom Objects
+for (i = 0; i < document.getElementsByTagName('input').length; i++) {
+var inputCheck = document.getElementsByTagName('input')[i];
+if(
+inputCheck.title == 'Read Banners' ||
+inputCheck.title == 'Read Categories' ||
+inputCheck.title == 'Read Components' ||
+inputCheck.title == 'Read Components Library' ||
+inputCheck.title == 'Read Content feeds' ||
+inputCheck.title == 'Read Layouts' ||
+inputCheck.title == 'Read Members' ||
+inputCheck.title == 'Create Members' ||
+inputCheck.title == 'Edit Members' ||
+inputCheck.title == 'Read Navigations' ||
+inputCheck.title == 'Read Pages' ||
+inputCheck.title == 'Read Programs' ||
+inputCheck.title == 'Read Rewards' ||
+inputCheck.title == 'Read Reward Items' ||
+inputCheck.title == 'Read Reward Tags' ||
+inputCheck.title == 'Read Sections' ||
+inputCheck.title == 'Read Segments' ||
+inputCheck.title == 'Read Segment Domains' ||
+inputCheck.title == 'Read Sites' ||
+inputCheck.title == 'Read Tags' 
+){
+inputCheck.click();
+}
+}
+for (i = 0; i < document.getElementsByTagName('input').length; i++) {
+if(document.getElementsByTagName('input')[i].name == 'save'){
+document.getElementsByTagName('input')[i].click();
+}
+}
+/***************** SCRIPT *****************/
