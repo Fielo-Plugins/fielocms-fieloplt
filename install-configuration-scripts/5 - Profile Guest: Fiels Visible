@@ -1,0 +1,16 @@
+En el edit de "Field-Level Security" (despues de presionar el link View para cada objeto) ejecutar 
+el siguiente Script en la consola del browser (F12) para marcar todos los checkbox de la columna Visible y hacer click 
+en Save automaticamente
+
+/*************** SCRIPT ***************/
+checkboxes=document.getElementsByTagName('input');
+for(i=0;i<checkboxes.length;i++){
+if (checkboxes[i].parentElement.className=="dataCell displayedCol")
+checkboxes[i].checked='checked';
+}
+for (i = 0; i < document.getElementsByTagName('input').length; i++) {
+if(document.getElementsByTagName('input')[i].name == 'save'){
+document.getElementsByTagName('input')[i].click();
+}
+}
+/*************** SCRIPT ***************/
