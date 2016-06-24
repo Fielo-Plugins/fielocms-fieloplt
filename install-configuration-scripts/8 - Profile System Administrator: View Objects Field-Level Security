@@ -1,5 +1,5 @@
-En la pagina del Profile System Administrator ejecutar el siguiente Script en la consola del browser (F12) para presionar el link 
-View en la seccion Field-Level Security de todos los objetos de la lista
+The following script can be executed on the Profile System Administrator page from the browser console (F12). It clicks View link in 
+Field-Level Security section of every object from the list.
 
 /************* SCRIPT *************/
 for (i = 0; i < document.getElementsByTagName('a').length; i++) {
