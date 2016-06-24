@@ -1,4 +1,4 @@
-The following script can be executed on the object list page from the browser console (F12). Open all list objects without clicking Edit:
+The following script can be executed on the object list page from the browser console (F12). It opens all list objects without clicking Edit.
 
 /******************* SCRIPT *******************/
 var tagsA = document.getElementsByTagName('a');
