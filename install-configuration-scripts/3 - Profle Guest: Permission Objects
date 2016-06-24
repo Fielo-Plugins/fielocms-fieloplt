@@ -1,4 +1,5 @@
-En la edicion del Profile Guest (Con la interfaz antigua) ejecutar el siguiente script en la consola del browser (F12) para seleccionar todos los permisos y hacer click en Save automaticamente:
+The following script can be executed on the Profile Guest edit page (old interface) from the browser console (F12). Select all 
+permissions and click Save. 
 
 /***************** SCRIPT *****************/
 //Standard Objects
