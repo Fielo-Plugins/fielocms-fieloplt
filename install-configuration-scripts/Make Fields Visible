@@ -1,6 +1,5 @@
-En el edit de "Field-Level Security" (despues de presionar el link View para cada objeto) ejecutar 
-el siguiente Script en la consola del browser (F12) para marcar todos los checkbox de la columna Visible y hacer click 
-en Save automaticamente
+The following script can be executed on the Field-level Security edit page (after clicking the View link on each object) from the browser 
+console (F12). It ticks every checkbox of Visible column and clicks Save automatically.
 
 /*************** SCRIPT ***************/
 checkboxes=document.getElementsByTagName('input');
