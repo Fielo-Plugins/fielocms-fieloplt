@@ -1,0 +1,14 @@
+En la pagina de edicion de cada objeto ejecutar el siguiente Script en la consola del browser (F12) para seleccionar "Available for Customer Portal" y hacer click en Save automaticamente:
+
+/***************** SCRIPT *****************/
+for (i = 0; i < document.getElementsByTagName('label').length; i++) {
+if(document.getElementsByTagName('label')[i].innerHTML == 'Available for Customer Portal'){
+document.getElementsByTagName('label')[i].parentNode.children[0].click();
+}
+}
+for (i = 0; i < document.getElementsByTagName('input').length; i++) {
+if(document.getElementsByTagName('input')[i].name == 'save'){
+document.getElementsByTagName('input')[i].click();
+}
+}
+/***************** SCRIPT *****************/
