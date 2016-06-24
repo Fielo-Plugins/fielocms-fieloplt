@@ -1,0 +1,37 @@
+En la pagina del listado de los objeto ejecutar el siguiente Script en la consola del browser (F12) para abrir todos los objetos de esta lista sin presionar el link Edit:
+
+/******************* SCRIPT *******************/
+var tagsA = document.getElementsByTagName('a');
+for (i = 0; i < tagsA.length; i++) {
+var tagA = tagsA[i];
+if(
+String(tagA.innerHTML) == 'Agreement' ||
+String(tagA.innerHTML) == 'Banner' ||
+String(tagA.innerHTML) == 'Category' ||
+String(tagA.innerHTML) == 'Comment' ||
+String(tagA.innerHTML) == 'Component' ||
+String(tagA.innerHTML) == 'Component Library' ||
+String(tagA.innerHTML) == 'Content Feed' ||
+String(tagA.innerHTML) == 'Layout' ||
+String(tagA.innerHTML) == 'Member' ||
+String(tagA.innerHTML) == 'Member Segment' ||
+String(tagA.innerHTML) == 'Navigation' ||
+String(tagA.innerHTML) == 'Page' ||
+String(tagA.innerHTML) == 'Point' ||
+String(tagA.innerHTML) == 'Program' ||
+String(tagA.innerHTML) == 'Redemption' ||
+String(tagA.innerHTML) == 'Redemption Item' ||
+String(tagA.innerHTML) == 'Reward' ||
+String(tagA.innerHTML) == 'Reward Item' ||
+String(tagA.innerHTML) == 'Reward Tag' ||
+String(tagA.innerHTML) == 'Section' ||
+String(tagA.innerHTML) == 'Segment' ||
+String(tagA.innerHTML) == 'Segment Domain' ||
+String(tagA.innerHTML) == 'Tag' ||
+String(tagA.innerHTML) == 'Transaction'||
+String(tagA.innerHTML) == 'Site' 
+){
+window.open(String(tagA.href).replace('?','/e?'));
+}
+}
+/******************* SCRIPT *******************/
