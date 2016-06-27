@@ -1,4 +1,4 @@
-The following script can be executed on the Profile Guest page from the browser console (F12). It clicks View link in Field-Level 
+The following script can be executed on the Profile Guest page from the browser console (F12). It clicks the View link in the Field-Level 
 Security section of every object from the list.
 
 /************* SCRIPT *************/
