@@ -176,39 +176,6 @@ Default Account: The member will be related to an specific default CRM account</
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>DetailPage__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <externalId>false</externalId>
-        <label>Detail page</label>
-        <lookupFilter>
-            <active>true</active>
-            <filterItems>
-                <field>FieloCMS__Page__c.RecordType.DeveloperName</field>
-                <operation>equals</operation>
-                <value>Page</value>
-            </filterItems>
-            <isOptional>true</isOptional>
-        </lookupFilter>
-        <referenceTo>FieloCMS__Page__c</referenceTo>
-        <relationshipLabel>Components (Detail page)</relationshipLabel>
-        <relationshipName>ListComponentsDetailPage</relationshipName>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>DetailParameter__c</fullName>
-        <defaultValue>&apos;id&apos;</defaultValue>
-        <description>The name of the parameter that a list will use to send to a detail component (for components of the Plugin)</description>
-        <externalId>false</externalId>
-        <label>Detail parameter</label>
-        <length>30</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>Facebook__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
@@ -705,6 +672,27 @@ Default Account: The member will be related to an specific default CRM account</
         <referenceTo>FieloAlpha__Program__c</referenceTo>
         <relationshipLabel>Components</relationshipLabel>
         <relationshipName>Components</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>RedirectPage__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Redirect Page</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>FieloCMS__Page__c.RecordType.DeveloperName</field>
+                <operation>equals</operation>
+                <value>Page</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>FieloCMS__Page__c</referenceTo>
+        <relationshipLabel>Components (Detail page)</relationshipLabel>
+        <relationshipName>ListComponentsDetailPage</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
