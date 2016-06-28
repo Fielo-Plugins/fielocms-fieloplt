@@ -5326,10 +5326,6 @@
         <apexPage>UnderConstruction</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
-    <pageAccesses>
-        <apexPage>test</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
     <recordTypeVisibilities>
         <default>true</default>
         <recordType>FieloAlpha__Agreement__c.FieloAlpha__Default</recordType>
