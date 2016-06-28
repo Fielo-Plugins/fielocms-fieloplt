@@ -10,13 +10,33 @@ document.getElementById('crudRead___Document').click();
 for (i = 0; i < document.getElementsByTagName('input').length; i++) {
 var inputCheck = document.getElementsByTagName('input')[i];
 if(
+inputCheck.title == 'Read Agreements' ||
+inputCheck.title == 'Read Banners' ||
+inputCheck.title == 'Read Categories' ||
 inputCheck.title == 'Read Components' ||
 inputCheck.title == 'Read Components Library' ||
+inputCheck.title == 'Read Content Feeds' ||
 inputCheck.title == 'Read Layouts' ||
+inputCheck.title == 'Read Members' ||
+inputCheck.title == 'Create Members' ||
+inputCheck.title == 'Edit Members' ||
+inputCheck.title == 'Delete Members' ||
 inputCheck.title == 'Read Navigations' ||
 inputCheck.title == 'Read Pages' ||
-inputCheck.title == 'Read Sections' ||
+inputCheck.title == 'Read Programs' ||
+inputCheck.title == 'Read Redemptions' ||
+inputCheck.title == 'Create Redemptions' ||
+inputCheck.title == 'Read Redemption Items' ||
+inputCheck.title == 'Create Redemption Items' ||
+inputCheck.title == 'Read Rewards' ||
+inputCheck.title == 'Read Reward Item' ||
+inputCheck.title == 'Read Reward Tags' ||
+inputCheck.title == 'Read Sections' |
+inputCheck.title == 'Read Segments' |
+inputCheck.title == 'Read Segment Domains' |
 inputCheck.title == 'Read Sites' ||
+inputCheck.title == 'Read Tags' ||
+inputCheck.title == 'Read Transactions' ||
 ){
 inputCheck.click();
 }
