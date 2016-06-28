@@ -1,0 +1,15 @@
+The following script can be executed on the Field-level Security edit page (after clicking the View link on each object) from the browser 
+console (F12). It ticks every checkbox of the Visible column and clicks Save automatically.
+
+/*************** SCRIPT ***************/
+checkboxes=document.getElementsByTagName('input');
+for(i=0;i<checkboxes.length;i++){
+if (checkboxes[i].parentElement.className=="dataCell displayedCol")
+checkboxes[i].checked='checked';
+}
+for (i = 0; i < document.getElementsByTagName('input').length; i++) {
+if(document.getElementsByTagName('input')[i].name == 'save'){
+document.getElementsByTagName('input')[i].click();
+}
+}
+/*************** SCRIPT ***************/

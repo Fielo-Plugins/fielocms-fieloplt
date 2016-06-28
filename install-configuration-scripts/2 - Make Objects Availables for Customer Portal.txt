@@ -1,0 +1,14 @@
+The following script can be executed on each object edit page from the browser console (F12). It selects Available for Customer Portal and clicks Save.
+
+/***************** SCRIPT *****************/
+for (i = 0; i < document.getElementsByTagName('label').length; i++) {
+if(document.getElementsByTagName('label')[i].innerHTML == 'Available for Customer Portal'){
+document.getElementsByTagName('label')[i].parentNode.children[0].click();
+}
+}
+for (i = 0; i < document.getElementsByTagName('input').length; i++) {
+if(document.getElementsByTagName('input')[i].name == 'save'){
+document.getElementsByTagName('input')[i].click();
+}
+}
+/***************** SCRIPT *****************/

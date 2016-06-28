@@ -1,0 +1,16 @@
+The following script can be executed on the Profile System Administrator page from the browser console (F12). It clicks the View link in 
+the Field-Level Security section of every object from the list.
+
+/************* SCRIPT *************/
+for (i = 0; i < document.getElementsByTagName('a').length; i++) {
+if(
+document.getElementsByTagName('a')[i].innerHTML == 'View' &&
+(
+
+document.getElementsByTagName('a')[i].parentNode.previousSibling.innerHTML == 'Component' ||
+document.getElementsByTagName('a')[i].parentNode.previousSibling.innerHTML == 'Program' ||
+document.getElementsByTagName('a')[i].parentNode.previousSibling.innerHTML == 'Segment Domain' ||
+)){
+window.open(String(document.getElementsByTagName('a')[i].href).replace('flsdetail', 'flsedit'));
+}
+}

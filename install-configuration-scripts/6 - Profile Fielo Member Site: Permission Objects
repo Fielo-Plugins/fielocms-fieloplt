@@ -1,0 +1,29 @@
+The following script can be executed on the Profile Fielo Member Site (old interface) from the browser console (F12). It selects all 
+permissions and automatically clicks Save. 
+
+/***************** SCRIPT *****************/
+//Standard Objects
+document.getElementById('crudRead___Contact').click();
+document.getElementById('crudRead___Document').click();
+
+//Custom Objects
+for (i = 0; i < document.getElementsByTagName('input').length; i++) {
+var inputCheck = document.getElementsByTagName('input')[i];
+if(
+inputCheck.title == 'Read Components' ||
+inputCheck.title == 'Read Components Library' ||
+inputCheck.title == 'Read Layouts' ||
+inputCheck.title == 'Read Navigations' ||
+inputCheck.title == 'Read Pages' ||
+inputCheck.title == 'Read Sections' ||
+inputCheck.title == 'Read Sites' ||
+){
+inputCheck.click();
+}
+}
+for (i = 0; i < document.getElementsByTagName('input').length; i++) {
+if(document.getElementsByTagName('input')[i].name == 'save'){
+document.getElementsByTagName('input')[i].click();
+}
+}
+/***************** SCRIPT *****************/
