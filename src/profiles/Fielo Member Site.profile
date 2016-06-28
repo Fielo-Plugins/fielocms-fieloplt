@@ -97,10 +97,6 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>LikeController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>LoginService</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -226,10 +222,6 @@
     </classAccesses>
     <classAccesses>
         <apexClass>TransactionAPI</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>WishController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -1940,11 +1932,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>FieloAlpha__Member__c.FieloAlpha__imageId__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>FieloAlpha__Member__c.MemberType__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -5449,9 +5436,5 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>SelectFilesFromSalesforce</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>WorkDotComUserPerm</name>
     </userPermissions>
 </Profile>

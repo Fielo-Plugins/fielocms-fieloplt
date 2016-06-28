@@ -1943,11 +1943,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>FieloAlpha__Member__c.MemberType__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>FieloAlpha__Menu__c.FieloAlpha__AttachmentId__c</field>
         <readable>true</readable>
