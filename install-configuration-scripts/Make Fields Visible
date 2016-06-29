@@ -4,7 +4,7 @@ console (F12). It ticks every checkbox of the Visible column and clicks Save aut
 /*************** SCRIPT ***************/
 checkboxes=document.getElementsByTagName('input');
 for(i=0;i<checkboxes.length;i++){
-if (checkboxes[i].parentElement.className=="dataCell displayedCol")
+if (checkboxes[i].parentElement.className=="dataCell readonlyCol")
 checkboxes[i].checked='checked';
 }
 for (i = 0; i < document.getElementsByTagName('input').length; i++) {
