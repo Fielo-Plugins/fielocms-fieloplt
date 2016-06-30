@@ -37,10 +37,6 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>LikeController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>LoginService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -166,10 +162,6 @@
     </classAccesses>
     <classAccesses>
         <apexClass>TransactionAPI</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>WishController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <custom>false</custom>
