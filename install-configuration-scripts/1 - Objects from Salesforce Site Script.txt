@@ -8,7 +8,6 @@ if(
 String(tagA.innerHTML) == 'Agreement' ||
 String(tagA.innerHTML) == 'Banner' ||
 String(tagA.innerHTML) == 'Category' ||
-String(tagA.innerHTML) == 'Comment' ||
 String(tagA.innerHTML) == 'Component' ||
 String(tagA.innerHTML) == 'Component Library' ||
 String(tagA.innerHTML) == 'Content Feed' ||
