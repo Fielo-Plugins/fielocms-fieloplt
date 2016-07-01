@@ -8,7 +8,7 @@
         <apexClass>AgreementAcceptController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
-    <classAccesses>
+    <classAccesses>SiteLoginController
         <apexClass>BadgeAPI</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -130,10 +130,6 @@
     </classAccesses>
     <classAccesses>
         <apexClass>ShoppingCartController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>SiteLoginController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
