@@ -133,10 +133,6 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>SiteLoginController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>SiteLoginFieloController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
