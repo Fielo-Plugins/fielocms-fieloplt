@@ -4,12 +4,12 @@
     <label>RegisterStep2</label>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>19</minorNumber>
+        <minorNumber>20</minorNumber>
         <namespace>FieloAlpha</namespace>
     </packageVersions>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>47</minorNumber>
+        <minorNumber>50</minorNumber>
         <namespace>FieloCMS</namespace>
     </packageVersions>
     <packageVersions>
