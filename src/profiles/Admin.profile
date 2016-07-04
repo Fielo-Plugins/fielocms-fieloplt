@@ -4296,7 +4296,7 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>FieloAlpha__RedemptionRule__c.FieloAlpha__Private</recordType>
-        <visible>false</visible>
+        <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
