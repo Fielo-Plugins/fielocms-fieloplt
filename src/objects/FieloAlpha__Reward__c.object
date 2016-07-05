@@ -135,21 +135,21 @@
     </fieldSets>
     <fieldSets>
         <fullName>ShoppingCart</fullName>
-        <availableFields>
+        <displayedFields>
             <field>FieloAlpha__Category__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
+        </displayedFields>
+        <displayedFields>
             <field>FieloAlpha__InstructionsRichText__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
+        </displayedFields>
+        <displayedFields>
             <field>FieloAlpha__Instructions__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
-        </availableFields>
+        </displayedFields>
         <description>ShoppingCart.component</description>
         <displayedFields>
             <field>Name</field>
