@@ -4454,22 +4454,6 @@
     <userLicense>Salesforce</userLicense>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ActivateContract</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ActivateOrder</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>AllowUniversalSearch</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>AllowViewKnowledge</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>ApiEnabled</name>
     </userPermissions>
     <userPermissions>
@@ -4478,51 +4462,7 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>AssignTopics</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>AuthorApex</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>BulkMacrosAllowed</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>CanInsertFeedSystemFields</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>CanUseNewDashboardBuilder</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ChatterEditOwnPost</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ChatterEditOwnRecordPost</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ChatterFileLink</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ChatterInternalUser</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ChatterInviteExternalUsers</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ChatterOwnGroups</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ConnectOrgToEnvironmentHub</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
