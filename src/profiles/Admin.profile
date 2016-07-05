@@ -4562,14 +4562,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>TransferAnyLead</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>UseTeamReassignWizards</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>ViewAllData</name>
     </userPermissions>
     <userPermissions>
@@ -4603,9 +4595,5 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ViewSetup</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>WorkCalibrationUser</name>
     </userPermissions>
 </Profile>
