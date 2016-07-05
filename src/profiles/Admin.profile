@@ -4626,34 +4626,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ManageKnowledge</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageKnowledgeImportExport</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageLeads</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageLoginAccessPolicies</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageMobile</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageNetworks</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManagePackageLicenses</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>ManagePasswordPolicies</name>
     </userPermissions>
     <userPermissions>
@@ -4662,15 +4634,7 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ManagePvtRptsAndDashbds</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>ManageRemoteAccess</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageReportsInPubFolders</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
