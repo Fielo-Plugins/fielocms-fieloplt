@@ -48,6 +48,8 @@ global without sharing class RegisterStep2Controller {
         }catch(FieloCustomException e){
             Database.rollback(sp);
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
+        }catch(FieloAlpha.FieloCustomException e){
+            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
         }
 
         if(ApexPages.hasMessages()){
