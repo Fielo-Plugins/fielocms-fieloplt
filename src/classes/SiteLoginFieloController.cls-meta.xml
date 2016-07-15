@@ -3,7 +3,7 @@
     <apiVersion>29.0</apiVersion>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>3</minorNumber>
+        <minorNumber>51</minorNumber>
         <namespace>FieloCMS</namespace>
     </packageVersions>
     <status>Active</status>
