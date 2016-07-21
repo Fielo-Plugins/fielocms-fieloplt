@@ -136,7 +136,12 @@ global with sharing class ShoppingCartController {
         FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();        
         Savepoint sp = Database.setSavepoint();
         try{
-            FieloAlpha.RedemptionService.deleteRedemptions(MemberService.getCurrentMemberId(), 'Open', 'FrontEnd');
+            List<Redemption__c> redemptions = new RedemptionsSelector().selectByStatusOriginAndMember('Open', 'FrontEnd', MemberService.getCurrentMemberId());
+            if(!redemptions.isEmpty()){
+                SObjectUnitOfWork uow = new SObjectUnitOfWork(new List<Schema.SobjectType>{Redemption__c.SObjectType});
+                uow.registerDeleted(redemptions);
+                uow.commitWork();
+            }
             //result.redirectURL = '#';
             result.refresh.add(new FieloCMS.RemoteActionResult.RemoteActionRefresh('refresh',componentId));
         }catch(Exception e){            
