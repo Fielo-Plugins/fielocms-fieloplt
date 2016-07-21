@@ -12,7 +12,7 @@ global with sharing class RedemptionAPI implements FieloCMS.DataInterface, Fielo
             if(c.FieloCMS__Limit__c == null)
                 c.FieloCMS__Limit__c = 5;
 
-            newMapData.put(c.Id, FieloAlpha.RedemptionService.getOpenRedemption(MemberService.getCurrentMemberId(), 'FrontEnd'));            
+            newMapData.put(c.Id, RedemptionService.getOpenRedemption(MemberService.getCurrentMemberId(), 'FrontEnd'));            
         }
         return newMapData;
     }
