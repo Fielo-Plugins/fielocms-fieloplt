@@ -1,0 +1,56 @@
+public class RedemptionsSelector extends SObjectSelector{
+	public List<Schema.SObjectField> getSObjectFieldList(){
+		return new List<Schema.SObjectField> {
+				Redemption__c.Id
+			};
+	}
+
+	public RedemptionsSelector(Set<String> fields){
+		super(fields);
+	}
+
+	public RedemptionsSelector(){
+		super();
+	}
+
+	public Schema.SObjectType getSObjectType(){
+		return Redemption__c.sObjectType;
+	}
+
+	public List<Redemption__c> selectById(Set<ID> idSet){
+		return (List<Redemption__c>) selectSObjectsById(idSet);
+	}
+
+	public List<Redemption__c> selectByStatusOriginAndMember(String status, String origin, Id memberId){
+		assertIsAccessible();
+		return (List<Redemption__c>) Database.query(
+				String.format(
+				'select {0} ' +
+				  'from {1} ' +
+				  'where Status__c =: status AND Member__c =: memberId AND Origin__c =: origin ' + 
+				  'order by {2}',
+				new List<String> {
+					getFieldListString(),
+					getSObjectName(),
+					getOrderBy() } ) );
+	}
+
+	/*
+	 * For more examples see https://github.com/financialforcedev/fflib-apex-common-samplecode
+	 * 
+	public List<Redemption__c> selectBySomethingElse(List<String> somethings)
+	{
+		assertIsAccessible();
+		return (List<Redemption__c>) Database.query(
+				String.format(
+				'select {0} ' +
+				  'from {1} ' +
+				  'where Something__c in :somethings ' + 
+				  'order by {2}',
+				new List<String> {
+					getFieldListString(),
+					getSObjectName(),
+					getOrderBy() } ) );
+	}
+	 */
+}

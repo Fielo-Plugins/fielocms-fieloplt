@@ -3,7 +3,7 @@ global with sharing class ShoppingCartController {
     private Boolean redemptionQueried = false;
     private FieloAlpha__Redemption__c redemption {get{
         if(!redemptionQueried){
-            redemption = FieloAlpha.RedemptionService.getOpenRedemption(MemberService.getCurrentMemberId(), 'FrontEnd');
+            redemption = RedemptionService.getOpenRedemption(MemberService.getCurrentMemberId(), 'FrontEnd');
             redemptionQueried = true;
         }
         return redemption;
@@ -41,14 +41,14 @@ global with sharing class ShoppingCartController {
 
     @RemoteAction
     global static FieloCMS.RemoteActionResult save(Id componentId, String newQuantJSON){
-        FieloAlpha__Redemption__c redemption = FieloAlpha.RedemptionService.getOpenRedemption(MemberService.getCurrentMemberId(), 'FrontEnd');
+        FieloAlpha__Redemption__c redemption = RedemptionService.getOpenRedemption(MemberService.getCurrentMemberId(), 'FrontEnd');
         FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
         Savepoint sp = Database.setSavepoint();
         try{
             if(String.isNotBlank(newQuantJSON)){
                 Map<String,Object> newQuantitiesMap = (Map<String,Object>)JSON.deserializeUntyped(newQuantJSON);
                 if(redemption == null){
-                    redemption = FieloAlpha.RedemptionService.createRedemption(MemberService.getCurrentMemberId(), 'FrontEnd');
+                    redemption = RedemptionService.createRedemption(MemberService.getCurrentMemberId(), 'FrontEnd');
                 }
                 saveCart(redemption, newQuantitiesMap);
             }
@@ -94,7 +94,7 @@ global with sharing class ShoppingCartController {
 
     @RemoteAction
     global static FieloCMS.RemoteActionResult checkout(Id componentId, String newQuantJSON){
-        FieloAlpha__Redemption__c redemption = FieloAlpha.RedemptionService.getOpenRedemption(MemberService.getCurrentMemberId(), 'FrontEnd');
+        FieloAlpha__Redemption__c redemption = RedemptionService.getOpenRedemption(MemberService.getCurrentMemberId(), 'FrontEnd');
         
         FieloCMS__Component__c component = [SELECT ParemeterName__c, RedirectPage__c FROM FieloCMS__Component__c WHERE Id =: componentId];        
         FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
@@ -136,12 +136,7 @@ global with sharing class ShoppingCartController {
         FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();        
         Savepoint sp = Database.setSavepoint();
         try{
-            List<Redemption__c> redemptions = new RedemptionsSelector().selectByStatusOriginAndMember('Open', 'FrontEnd', MemberService.getCurrentMemberId());
-            if(!redemptions.isEmpty()){
-                SObjectUnitOfWork uow = new SObjectUnitOfWork(new List<Schema.SobjectType>{Redemption__c.SObjectType});
-                uow.registerDeleted(redemptions);
-                uow.commitWork();
-            }
+            RedemptionService.deleteRedemptions(MemberService.getCurrentMemberId(), 'Open', 'FrontEnd');
             //result.redirectURL = '#';
             result.refresh.add(new FieloCMS.RemoteActionResult.RemoteActionRefresh('refresh',componentId));
         }catch(Exception e){            
