@@ -134,35 +134,35 @@
         <label>Reward Details</label>
     </fieldSets>
     <fieldSets>
-        <fullName>ShoppingCart</fullName>
-        <availableFields>
-            <field>FieloAlpha__Category__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>FieloAlpha__InstructionsRichText__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>FieloAlpha__Instructions__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <description>ShoppingCart.component</description>
-        <displayedFields>
-            <field>Name</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </displayedFields>
-        <displayedFields>
-            <field>FieloAlpha__PointsCant__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </displayedFields>
-        <label>Shopping Cart</label>
-    </fieldSets>
+    <fullName>ShoppingCart</fullName>
+    <description>ShoppingCart.component</description>
+    <displayedFields>
+        <field>FieloAlpha__Category__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>FieloAlpha__InstructionsRichText__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>FieloAlpha__Instructions__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>Name</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>FieloAlpha__PointsCant__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>Shopping Cart</label>
+</fieldSets>
     <fields>
         <fullName>FieloAlpha__AttachmentId__c</fullName>
         <deprecated>false</deprecated>

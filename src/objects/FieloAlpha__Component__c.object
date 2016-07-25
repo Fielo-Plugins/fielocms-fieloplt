@@ -214,22 +214,22 @@
             </picklistValues>
             <picklistValues>
                 <fullName>Internal Page</fullName>
+                <default>false</default>
                 <controllingFieldValues>Grid</controllingFieldValues>
                 <controllingFieldValues>List</controllingFieldValues>
                 <controllingFieldValues>Slider</controllingFieldValues>
-                <default>false</default>
             </picklistValues>
             <picklistValues>
                 <fullName>Modal</fullName>
+                <default>false</default>
                 <controllingFieldValues>Grid</controllingFieldValues>
                 <controllingFieldValues>List</controllingFieldValues>
                 <controllingFieldValues>Slider</controllingFieldValues>
-                <default>false</default>
             </picklistValues>
             <picklistValues>
                 <fullName>Accordion</fullName>
-                <controllingFieldValues>List</controllingFieldValues>
                 <default>false</default>
+                <controllingFieldValues>List</controllingFieldValues>
             </picklistValues>
             <picklistValues>
                 <fullName>Scrollbars</fullName>
@@ -241,23 +241,23 @@
             </picklistValues>
             <picklistValues>
                 <fullName>Top</fullName>
-                <controllingFieldValues>Tabs</controllingFieldValues>
                 <default>false</default>
+                <controllingFieldValues>Tabs</controllingFieldValues>
             </picklistValues>
             <picklistValues>
                 <fullName>Bottom</fullName>
-                <controllingFieldValues>Tabs</controllingFieldValues>
                 <default>false</default>
+                <controllingFieldValues>Tabs</controllingFieldValues>
             </picklistValues>
             <picklistValues>
                 <fullName>Left</fullName>
-                <controllingFieldValues>Tabs</controllingFieldValues>
                 <default>false</default>
+                <controllingFieldValues>Tabs</controllingFieldValues>
             </picklistValues>
             <picklistValues>
                 <fullName>Right</fullName>
-                <controllingFieldValues>Tabs</controllingFieldValues>
                 <default>false</default>
+                <controllingFieldValues>Tabs</controllingFieldValues>
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
