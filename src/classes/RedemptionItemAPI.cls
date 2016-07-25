@@ -37,4 +37,4 @@ global with sharing class RedemptionItemAPI implements FieloCMS.DataInterface{
         whereCondition += ' OFFSET ' + String.valueOf(component.FieloCMS__Limit__c);
         return Database.query('SELECT ' + String.join(new List<String>(OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c)), ',') + ' FROM FieloAlpha__RedemptionItem__c WHERE ' + whereCondition);
     }
-}
+}   
