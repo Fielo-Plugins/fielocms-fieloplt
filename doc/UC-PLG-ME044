@@ -1,0 +1,51 @@
+## Login as
+
+### Objetivo
+
+La funcionalidad permite que un administrador pueda operar en el site en nombre de un member en particular.
+
+### Precondiciones
+
+- Debe existir la cuenta CRM Fielo
+
+### Postcondiciones
+
+El usuario administrador inicia sesion en el site en nombre del member seleccionado
+
+### Flujo Basico
+
+### 
+
+1. El administrador selecciona un member
+2. El sistema muestra la pantalla de detalle del member
+3. El administrador presiona el boton Login As
+4. El sistema evalua que existe la account CRM relacionada
+5. El sistema evalua que no existe un usuario con prefijo site_username del administrador
+6. El sistema crea un nuevo contacto llamado site_username del administrador y le habilita el user
+7. El sistema permite al administrador navegar por el site en nombre del member seleccionado de acuerdo a la segmentacion correspondiente al mismo utilizando el contacto y user recien creados.
+8. Fin de flujo
+
+### Flujos Alternativos
+
+##### 1. No existe la cuenta CRM Fielo
+
+1. El sistema evalua que el member no tiene cuenta CRM Relacionada
+2. El sistema muestra un mensaje de error informando el problema
+3. Fin de flujo.
+
+##### 2. Existe un usuario con prefijo site_username del administrador y esta activo (paso 5 del flujo basico)
+
+1. El sistema evalua que existe un usuario con prefijo site_username del administrador
+2. El sistema no crea un nuevo contacto y utiliza el contacto y user existente para que el administrador navegue por el site en nombre del member seleccionado de acuerdo a la segmentacion correspondiente al mismo.
+
+##### 3. Existe un usuario con prefijo site_username del administrador y esta inactivo (paso 5 del flujo basico)
+
+1. El sistema evalua que existe un usuario con prefijo site_username del administrador
+2. El sistema muestra el siguiente mensaje de error: 
+- Error Message: Login is Required to access this URL.
+- Error Description: Login is Required to access this salesforce.com URL. 
+- Original URL
+- User (usuario que esta intentando utilizar y esta inactivo)
+
+
+
