@@ -33,9 +33,8 @@ El member completa la registracion en el site y el sistema genera el user para e
 9. El sistema verifica que la fielo account no tiene user
 10. El sistema crea un nuevo usuario relacionado a la Fielo Account y a su contact relacionado con la password configurada por el member en la segunda pagina de Registracion y con el language, time zone y locale seteado en el program. 
 10. El sistema actualiza el status de la Fielo Account a Complete y cambia el owner al user recien creado.
-11. El sistema calcula el Level del Member invocando el caso de uso [LevelAssignmentBatchSchedule](?name=UC-PTF-IN000)
-12. El sistema loguea al member invocando el caso de uso [Validar Login](?name=UC-PLG-ME009)
-13. Fin de flujo.
+11. El sistema loguea al member invocando el caso de uso [Validar Login](?name=UC-PLG-ME009)
+12. Fin de flujo.
 
 ### Flow Alternativo
 
