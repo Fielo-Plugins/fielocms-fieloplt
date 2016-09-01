@@ -6,7 +6,7 @@ El presente caso de uso describe como comenzar la registracion desde el site par
 
 #### Precondiciones
 
-La configuracion de Fielo tiene que estar completa siguiendo el documento [Fielo Package Installation & Setup](?http://documentation.fielo.com/docs/fielo-platform-cms-packages)
+La configuracion de Fielo tiene que estar completa siguiendo el documento [Fielo Package Installation & Setup](?name=http://documentation.fielo.com/docs/fielo-platform-cms-packages)
 
 El componente Register esta configurado en una page accesible desde el site relacionado al program.
 
