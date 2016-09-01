@@ -36,7 +36,7 @@ Individual Account creada
 12. El sistema envia el email template especificado en el workflow Register para continuar con la registracion y muestra el mensaje "Check your email to continue the registration process."
 13. El member presiona el link recibido en el email 
 14. El sistema valida que no existe aprobacion de usuarios en el program
-15. El sistema invoca el caso de uso [Create User](?name=UC-PTF-ME024)
+15. El sistema invoca el caso de uso [Create User](?name=UC-PLG-ME024)
 16. Fin de flujo.
 
 ### Flujos Alternativos
