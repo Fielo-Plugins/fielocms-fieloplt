@@ -6,7 +6,7 @@ El presente caso de uso describe como un usuario de site selecciona con que fiel
 
 #### Precondiciones
 
-La configuracion de Fielo tiene que estar completa siguiendo el documento [Fielo Package Installation & Setup](?name=UC-PTF-MN000)
+La configuracion de Fielo tiene que estar completa siguiendo el documento [Fielo Package Installation & Setup](http://documentation.fielo.com/docs/fielo-platform-cms-packages)
 
 El componente MemberSelection esta configurado en una page de CMS con los subcomponentes LoginAsMember y LoginAsManager
 
