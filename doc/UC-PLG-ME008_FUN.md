@@ -24,7 +24,7 @@ El member se logueo correctamente al sitio.
 5. El sistema valida usuario y contraseña.
 6. El sistema valida que el member no tiene password temporal
 7. El sistema valida el program del member
-8. El sistema invoca al caso de uso [Validar Login](?name=UC-PTF-ME009)
+8. El sistema invoca al caso de uso [Validar Login](?name=UC-PLG-ME009)
 
 ### Flujos Alternativos
 
@@ -54,7 +54,7 @@ El member se logueo correctamente al sitio.
 4. Continua en el paso 7 del flujo basico
 
 #### 6. El member presiona el link "Forgot Password" (paso 4 del flujo basico)
-1. El sistema invoca el caso de uso [Recover Password](?name=UC-PTF-ME012)
+1. El sistema invoca el caso de uso [Recover Password](?name=UC-PLG-ME012)
 2. Fin de flujo.
 
 
