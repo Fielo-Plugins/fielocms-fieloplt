@@ -11,7 +11,7 @@ Existen rewards creados para el program.
 
 Existe una page con un componente catalog asociado a una navigation visible para el member. 
 
-En el [fieldset del componente](?name=UC-PTF-FE006) esta configurado de la siguiente forma,
+En el [fieldset del componente](?name=UC-CMS-ST005) esta configurado de la siguiente forma,
 
 - Subcomponente Add to cart
 
@@ -35,7 +35,7 @@ Rewards agregados al shopping cart.
 5. El sistema valida que el member tenga un saldo de puntos mayor a los puntos del reward
 6. El sistema valida que existe una redemption con estado open y origin frontend para el member
 7. El sistema valida que en el program al que esta relacionado el member tiene marcada la opcion Shopping Cart 
-8. El sistema crea un redemption item relacionado a la redemption invocando el caso de uso [Add Redemption Item](?name=UC-PTF-RW012)
+8. El sistema crea un redemption item relacionado a la redemption invocando el caso de uso [Add Redemption Item](?name=UC-PLT-RW012)
 9. El sistema muestra el mensaje "Reward Added Succesfully"
 10. El sistema oculta en el componente Catalog para el reward agregado el input de cantidad de items y el boton Add reward y muestra el mensaje "This reward is already in your shopping cart, please modify the quantity in the shopping cart."
 11. Fin de flujo.
@@ -68,7 +68,7 @@ Rewards agregados al shopping cart.
 
 ##### 6. El program no usa Shopping cart (paso 7 del flujo basico)
 1. El sistema verifica que el campo Shopping Cart en el program del member esta desmarcado
-2. El sistema invoca el caso de uso [Checkout](?name=UC-PTF-RW013)
+2. El sistema invoca el caso de uso [Checkout](?name=UC-PLT-RW013)
 3. Fin de flujo
 
 ##### 7. El reward ya esta en el Shopping Cart (paso 5 del flujo basico)
