@@ -58,7 +58,7 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>FieloAlpha__Active__c</fullName>
+        <fullName>FieloPLT__Active__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <description>Status of the action</description>
@@ -68,7 +68,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__CriteriaFields__c</fullName>
+        <fullName>FieloPLT__CriteriaFields__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Criteria Fields</label>
@@ -78,7 +78,7 @@
         <visibleLines>2</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__CrossField__c</fullName>
+        <fullName>FieloPLT__CrossField__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -87,7 +87,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RelatedList__c</fullName>
+        <fullName>FieloPLT__RelatedList__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Related List</label>
@@ -98,12 +98,12 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RuleTrigger__c</fullName>
+        <fullName>FieloPLT__RuleTrigger__c</fullName>
         <deleteConstraint>Restrict</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Rule Trigger</label>
-        <referenceTo>FieloAlpha__RuleTrigger__c</referenceTo>
+        <referenceTo>FieloPLT__RuleTrigger__c</referenceTo>
         <relationshipLabel>Actions</relationshipLabel>
         <relationshipName>Actions</relationshipName>
         <required>false</required>
@@ -111,7 +111,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__TargetMember__c</fullName>
+        <fullName>FieloPLT__TargetMember__c</fullName>
         <deprecated>false</deprecated>
         <description>API name of the field in the object that is a look up for a Member record. This field is used in order to know to which Member the points will be given to if a Transaction is created.</description>
         <externalId>false</externalId>
@@ -124,7 +124,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__TargetObject__c</fullName>
+        <fullName>FieloPLT__TargetObject__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Target Object</label>

@@ -3,11 +3,11 @@
         <apex:define name="body" >-->
             <main class="fielo-outline fielo-main" >
                 <legend>
-                   <apex:outputText value="{!$Label.FieloAlpha__Agreement}" /> 
+                   <apex:outputText value="{!$Label.FieloPLT__Agreement}" /> 
                </legend>
                 <div class="fielo-agreement">
                     <!--Agreement text--> 
-                    <p><apex:outputField value="{!agreement.FieloAlpha__Agreement__c}"/></p>
+                    <p><apex:outputField value="{!agreement.FieloPLT__Agreement__c}"/></p>
 
                     <!--<div class="fielo-agreement__item fielo-agreement__item--is-pdf">
                         <apex:outputLink value="/{!IF(!ISBLANK($Setup.PublicSettings__c.PackagePrefix__c), $Setup.PublicSettings__c.PackagePrefix__c + '__','')}AgreementViewPDF?id={!agreement.Id}" target="_blank" styleClass="fielo-link" ><apex:outputText value="{!$Label.AgreementPDF}" escape="false"/></apex:outputLink>
@@ -24,10 +24,10 @@
                                         <apex:inputCheckbox value="{!acceptAgreement}"> 
                                             <apex:actionSupport event="onclick" rerender="botonId"/>
                                         </apex:inputCheckbox> 
-                                        <apex:outputText value="{!$Label.FieloAlpha__IAgree}" /> 
+                                        <apex:outputText value="{!$Label.FieloPLT__IAgree}" /> 
                                     </label>
                                     <!--Button -->
-                                    <apex:commandButton value="{!$Label.FieloAlpha__Save}" action="{!doSave}" styleClass="fielo-button" id="botonId"/>
+                                    <apex:commandButton value="{!$Label.FieloPLT__Save}" action="{!doSave}" styleClass="fielo-button" id="botonId"/>
                                     
                                 </div>
                             </div>

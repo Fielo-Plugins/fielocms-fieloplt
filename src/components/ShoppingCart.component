@@ -19,18 +19,18 @@
                     <table class="fielo-table mdl-data-table">
                         <thead class="fielo-table__head">
                             <tr class="fielo-record">
-                                <apex:repeat value="{!$ObjectType.FieloAlpha__Reward__c.FieldSets.ShoppingCart}" var="field">
-                                    <th class="fielo-field fielo-field--is-{!field} mdl-data-table__cell--non-numeric"><span data-order-value="{!field}">{!$ObjectType.FieloAlpha__Reward__c.fields[field].label}</span></th>
+                                <apex:repeat value="{!$ObjectType.FieloPLT__Reward__c.FieldSets.ShoppingCart}" var="field">
+                                    <th class="fielo-field fielo-field--is-{!field} mdl-data-table__cell--non-numeric"><span data-order-value="{!field}">{!$ObjectType.FieloPLT__Reward__c.fields[field].label}</span></th>
                                 </apex:repeat>
-                                <th class="fielo-field fielo-field--is-quantity mdl-data-table__cell--non-numeric"><span data-order-value="quantity">{!$Label.FieloAlpha__Quantity}</span></th>
-                                <th class="fielo-field fielo-field--is-total mdl-data-table__cell--non-numeric"><span data-order-value="total">{!$Label.FieloAlpha__TotalPoints}</span></th>
-                                <th class="fielo-field fielo-field--is-delete mdl-data-table__cell--non-numeric"><span data-order-value="delete">{!$Label.FieloAlpha__Delete}</span></th>
+                                <th class="fielo-field fielo-field--is-quantity mdl-data-table__cell--non-numeric"><span data-order-value="quantity">{!$Label.FieloPLT__Quantity}</span></th>
+                                <th class="fielo-field fielo-field--is-total mdl-data-table__cell--non-numeric"><span data-order-value="total">{!$Label.FieloPLT__TotalPoints}</span></th>
+                                <th class="fielo-field fielo-field--is-delete mdl-data-table__cell--non-numeric"><span data-order-value="delete">{!$Label.FieloPLT__Delete}</span></th>
                             </tr>
                         </thead>
                         <tbody class="fielo-record-set__data">
                             <apex:repeat value="{!rewards}" var="record">
                                 <tr class="fielo-record fielo-record-set__template">
-                                    <apex:repeat value="{!$ObjectType.FieloAlpha__Reward__c.FieldSets.ShoppingCart}" var="field">
+                                    <apex:repeat value="{!$ObjectType.FieloPLT__Reward__c.FieldSets.ShoppingCart}" var="field">
                                         <td class="fielo-field fielo-field--is-{!field} mdl-data-table__cell--non-numeric" data-th="{!field}">
                                             <span id="{!record.Id}{!field}" class="fielo-field__value">
                                                 <apex:outputField value="{!record[field]}" />
@@ -39,17 +39,17 @@
                                     </apex:repeat>
                                     <td class="fielo-field fielo-field--is-ShoppingQuantity mdl-data-table__cell--non-numeric" data-th="Shopping Quantity">
                                         <span class="fielo-field__value">
-                                            <input type="number" min="0" required="required" class="fielo-shopping__quantity js-to-be-initialized" name="quantities.{!record.Id}" value="{!quantitiesMap[record.Id]}" onchange="document.getElementById('shoppingTotal{!record.Id}').innerHTML = this.value * document.getElementById('{!record.Id}FieloAlpha__PointsCant__c').children[0].innerHTML;" data-attribute-replace="value"/>
+                                            <input type="number" min="0" required="required" class="fielo-shopping__quantity js-to-be-initialized" name="quantities.{!record.Id}" value="{!quantitiesMap[record.Id]}" onchange="document.getElementById('shoppingTotal{!record.Id}').innerHTML = this.value * document.getElementById('{!record.Id}FieloPLT__PointsCant__c').children[0].innerHTML;" data-attribute-replace="value"/>
                                         </span>
                                     </td>
                                     <td class="fielo-field fielo-field--is-ShoppingTotal mdl-data-table__cell--non-numeric" data-th="Shopping Total">
                                         <span class="fielo-field__value">
 
                                             <!--<apex:variable var="total" value="{!0}" />
-                                            <apex:repeat value="{!record['FieloAlpha__RedemptionItems__r']}"  var="cartItem">
+                                            <apex:repeat value="{!record['FieloPLT__RedemptionItems__r']}"  var="cartItem">
                                                 <apex:variable var="total" value="{! total + (cartItem.quantity__c * record['PointsCant__c']) }" />
                                             </apex:repeat>-->
-                                            <span id="shoppingTotal{!record.Id}" class="fielo-shopping__total">{!record['FieloAlpha__PointsCant__c'] * quantitiesMap[record.Id]}</span>
+                                            <span id="shoppingTotal{!record.Id}" class="fielo-shopping__total">{!record['FieloPLT__PointsCant__c'] * quantitiesMap[record.Id]}</span>
                                         </span>
                                     </td>
                                     <td class="fielo-field fielo-field--is-ShoppingDelete mdl-data-table__cell--non-numeric" data-th="Shopping Total">

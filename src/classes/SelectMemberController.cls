@@ -4,7 +4,7 @@ global with sharing class SelectMemberController implements FieloCMS.ViewSubComp
         Component.SelectMember selectMember = new Component.SelectMember();        
         selectMember.field = field;
         if(record != null){
-            selectMember.record = (FieloAlpha__Member__c)record;
+            selectMember.record = (FieloPLT__Member__c)record;
         }else{
             selectMember.expressions.record = '{!record}';
         }
@@ -18,18 +18,18 @@ global with sharing class SelectMemberController implements FieloCMS.ViewSubComp
         	if(type == 'Member'){
             	MemberService.setCurrentMemberId(memberId);
                 //recalculate segments for the new member
-                FieloAlpha.SegmentService.getMemberSegments(memberId, null);
+                FieloPLT.SegmentService.getMemberSegments(memberId, null);
             }else{
-                FieloAlpha__Member__c member = new MembersSelector(new Set<String>{'FieloAlpha__OrganizationAccount__c'}).selectById(new Set<Id>{memberId})[0];
-                MemberService.setCurrentMemberId(member.FieloAlpha__OrganizationAccount__c);
+                FieloPLT__Member__c member = new MembersSelector(new Set<String>{'FieloPLT__OrganizationAccount__c'}).selectById(new Set<Id>{memberId})[0];
+                MemberService.setCurrentMemberId(member.FieloPLT__OrganizationAccount__c);
                 //recalculate segments for the new member
-                FieloAlpha.SegmentService.getMemberSegments(member.FieloAlpha__OrganizationAccount__c, null);
+                FieloPLT.SegmentService.getMemberSegments(member.FieloPLT__OrganizationAccount__c, null);
             }
             
             result.redirectURL = '/';                                   
         }catch(FieloCustomException e){
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
-        }catch(FieloAlpha.FieloCustomException e){
+        }catch(FieloPLT.FieloCustomException e){
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
         }
 

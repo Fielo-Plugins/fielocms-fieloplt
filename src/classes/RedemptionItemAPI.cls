@@ -10,12 +10,12 @@ global with sharing class RedemptionItemAPI implements FieloCMS.DataInterface{
             String whereCondition;
             if(String.isNotBlank(c.ParemeterName__c) && ApexPages.CurrentPage().getParameters().containsKey(c.ParemeterName__c) != null){
                 Id redemptionId = ApexPages.CurrentPage().getParameters().get(c.ParemeterName__c);
-                whereCondition = ' FieloAlpha__Redemption__c = \'' + redemptionId + '\'';
+                whereCondition = ' FieloPLT__Redemption__c = \'' + redemptionId + '\'';
             }else{
-                whereCondition = 'FieloAlpha__Redemption__r.FieloAlpha__Status__c != \'Open\' AND FieloAlpha__Redemption__r.FieloAlpha__Member__c = \'' + MemberService.getCurrentMemberId() + '\'';
+                whereCondition = 'FieloPLT__Redemption__r.FieloPLT__Status__c != \'Open\' AND FieloPLT__Redemption__r.FieloPLT__Member__c = \'' + MemberService.getCurrentMemberId() + '\'';
             }
             whereCondition += ' LIMIT ' + String.valueOf(c.FieloCMS__Limit__c);
-            newMapData.put(c.Id, Database.query('SELECT ' + String.join(new List<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c)), ',') + ' FROM FieloAlpha__RedemptionItem__c WHERE ' + whereCondition));
+            newMapData.put(c.Id, Database.query('SELECT ' + String.join(new List<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c)), ',') + ' FROM FieloPLT__RedemptionItem__c WHERE ' + whereCondition));
         }
         return newMapData;
     }
@@ -28,13 +28,13 @@ global with sharing class RedemptionItemAPI implements FieloCMS.DataInterface{
         //Calculate the offset from the Page Number
         Integer offset = Integer.valueOf(component.FieloCMS__Limit__c * (pageNumber - 1));
 
-        String whereCondition = 'FieloAlpha__Redemption__r.FieloAlpha__Status__c != \'Open\' AND FieloAlpha__Redemption__r.FieloAlpha__Member__c = \'' + MemberService.getCurrentMemberId() + '\'';
+        String whereCondition = 'FieloPLT__Redemption__r.FieloPLT__Status__c != \'Open\' AND FieloPLT__Redemption__r.FieloPLT__Member__c = \'' + MemberService.getCurrentMemberId() + '\'';
         Id redemptionId = component.FieloCMS__RecordId__c;
         if(redemptionId != null){
-            whereCondition += ' AND FieloAlpha__Redemption__c = \'' + redemptionId + '\'';
+            whereCondition += ' AND FieloPLT__Redemption__c = \'' + redemptionId + '\'';
         }
         whereCondition += ' LIMIT ' + String.valueOf(offset);
         whereCondition += ' OFFSET ' + String.valueOf(component.FieloCMS__Limit__c);
-        return Database.query('SELECT ' + String.join(new List<String>(OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c)), ',') + ' FROM FieloAlpha__RedemptionItem__c WHERE ' + whereCondition);
+        return Database.query('SELECT ' + String.join(new List<String>(OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c)), ',') + ' FROM FieloPLT__RedemptionItem__c WHERE ' + whereCondition);
     }
 }   

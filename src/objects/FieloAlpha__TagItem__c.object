@@ -58,12 +58,12 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>FieloAlpha__Banner__c</fullName>
+        <fullName>FieloPLT__Banner__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Banner</label>
-        <referenceTo>FieloAlpha__Banner__c</referenceTo>
+        <referenceTo>FieloPLT__Banner__c</referenceTo>
         <relationshipLabel>Tags</relationshipLabel>
         <relationshipName>TagItems</relationshipName>
         <required>false</required>
@@ -71,12 +71,12 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__News__c</fullName>
+        <fullName>FieloPLT__News__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Content Feed</label>
-        <referenceTo>FieloAlpha__News__c</referenceTo>
+        <referenceTo>FieloPLT__News__c</referenceTo>
         <relationshipLabel>Tag Items</relationshipLabel>
         <relationshipName>TagItems</relationshipName>
         <required>false</required>
@@ -84,11 +84,11 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Tag__c</fullName>
+        <fullName>FieloPLT__Tag__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Tag</label>
-        <referenceTo>FieloAlpha__Tag__c</referenceTo>
+        <referenceTo>FieloPLT__Tag__c</referenceTo>
         <relationshipLabel>Tag Items</relationshipLabel>
         <relationshipName>TagItems</relationshipName>
         <relationshipOrder>0</relationshipOrder>
@@ -107,19 +107,19 @@
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
     <validationRules>
-        <fullName>FieloAlpha__ProgramConsistency</fullName>
+        <fullName>FieloPLT__ProgramConsistency</fullName>
         <active>true</active>
-        <errorConditionFormula>IF(NOT(ISBLANK(FieloAlpha__Banner__c) &amp;&amp; NOT(ISBLANK(FieloAlpha__Tag__r.FieloAlpha__Program__c))),
-FieloAlpha__Banner__r.FieloAlpha__Program__c &lt;&gt; FieloAlpha__Tag__r.FieloAlpha__Program__c , 
-IF(NOT(ISBLANK(FieloAlpha__News__c) &amp;&amp; NOT(ISBLANK(FieloAlpha__Tag__r.FieloAlpha__Program__c))), 
-FieloAlpha__News__r.FieloAlpha__Program__c &lt;&gt; FieloAlpha__Tag__r.FieloAlpha__Program__c , 
-IF(NOT(ISBLANK(FieloAlpha__News__c)) &amp;&amp; NOT(ISBLANK(FieloAlpha__Banner__c) &amp;&amp; NOT(ISBLANK(FieloAlpha__Tag__r.FieloAlpha__Program__c))), 
-FieloAlpha__News__r.FieloAlpha__Program__c &lt;&gt; FieloAlpha__Tag__r.FieloAlpha__Program__c &amp;&amp; FieloAlpha__Banner__r.FieloAlpha__Program__c &lt;&gt; FieloAlpha__Tag__r.FieloAlpha__Program__c, 
+        <errorConditionFormula>IF(NOT(ISBLANK(FieloPLT__Banner__c) &amp;&amp; NOT(ISBLANK(FieloPLT__Tag__r.FieloPLT__Program__c))),
+FieloPLT__Banner__r.FieloPLT__Program__c &lt;&gt; FieloPLT__Tag__r.FieloPLT__Program__c , 
+IF(NOT(ISBLANK(FieloPLT__News__c) &amp;&amp; NOT(ISBLANK(FieloPLT__Tag__r.FieloPLT__Program__c))), 
+FieloPLT__News__r.FieloPLT__Program__c &lt;&gt; FieloPLT__Tag__r.FieloPLT__Program__c , 
+IF(NOT(ISBLANK(FieloPLT__News__c)) &amp;&amp; NOT(ISBLANK(FieloPLT__Banner__c) &amp;&amp; NOT(ISBLANK(FieloPLT__Tag__r.FieloPLT__Program__c))), 
+FieloPLT__News__r.FieloPLT__Program__c &lt;&gt; FieloPLT__Tag__r.FieloPLT__Program__c &amp;&amp; FieloPLT__Banner__r.FieloPLT__Program__c &lt;&gt; FieloPLT__Tag__r.FieloPLT__Program__c, 
 false)))</errorConditionFormula>
         <errorMessage>This tag belongs to another program. You must create the tag in this program before trying to use it.</errorMessage>
     </validationRules>
     <webLinks>
-        <fullName>FieloAlpha__ManageTags</fullName>
+        <fullName>FieloPLT__ManageTags</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -128,6 +128,6 @@ false)))</errorConditionFormula>
         <openType>replace</openType>
         <protected>false</protected>
         <requireRowSelection>false</requireRowSelection>
-        <url>/apex/{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}ChooseTagBackEnd?Id={!IF( OR( ISNULL(FieloAlpha__News__c.Id) , ISBLANK(FieloAlpha__News__c.Id)) , FieloAlpha__Banner__c.Id, FieloAlpha__News__c.Id)}</url>
+        <url>/apex/{!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}ChooseTagBackEnd?Id={!IF( OR( ISNULL(FieloPLT__News__c.Id) , ISBLANK(FieloPLT__News__c.Id)) , FieloPLT__Banner__c.Id, FieloPLT__News__c.Id)}</url>
     </webLinks>
 </CustomObject>

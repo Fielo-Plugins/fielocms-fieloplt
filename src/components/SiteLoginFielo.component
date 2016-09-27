@@ -8,7 +8,7 @@
     <div class="fielo-form fielo-login fielo-widget fielo-js-component" data-componentid="{!config.Id}" >
         <form class="fielo-js-upgrade" data-remotearguments="username,password" data-remoteaction="{!namespace}SiteLoginFieloController.login"  >
             <fieldset>
-                <legend class="fielo-title" >Login</legend><!--{!$Label.FieloAlpha__Login}-->
+                <legend class="fielo-title" >Login</legend><!--{!$Label.FieloPLT__Login}-->
                 <div class="mdl-grid fielo-field fielo-field--is-username fielo-field" >
                     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__label" >
                         <label for="username" id="lblUsername" data-switchlabel="{!$Label.site.enter_password}" >{!$Label.site.email}</label>

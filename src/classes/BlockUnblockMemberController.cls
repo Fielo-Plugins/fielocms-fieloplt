@@ -16,7 +16,7 @@ global class BlockUnblockMemberController implements FieloCMS.ViewSubComponentIn
     	FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
 
     	try {
-    		FieloAlpha.MemberService.blockUnblock(new List<Id>{memberId}, action);
+    		FieloPLT.MemberService.blockUnblock(new List<Id>{memberId}, action);
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(ApexPages.Severity.CONFIRM, Label.SuccessfulRemoteActionRefresh));
             result.refresh.add(new FieloCMS.RemoteActionResult.RemoteActionRefresh('action',action));
             result.redirectURL = '#';

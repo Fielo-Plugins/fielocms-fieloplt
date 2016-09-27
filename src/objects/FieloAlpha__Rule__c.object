@@ -46,7 +46,7 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
-    <customHelpPage>FieloAlpha__RuleHelpBackEnd</customHelpPage>
+    <customHelpPage>FieloPLT__RuleHelpBackEnd</customHelpPage>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <description>Rules that determine the points a member earns with a transaction.</description>
@@ -59,9 +59,9 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
-        <fullName>FieloAlpha__Edit</fullName>
+        <fullName>FieloPLT__Edit</fullName>
         <availableFields>
-            <field>FieloAlpha__Description__c</field>
+            <field>FieloPLT__Description__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -69,7 +69,7 @@
         <label>Edit</label>
     </fieldSets>
     <fields>
-        <fullName>FieloAlpha__ActionDescription__c</fullName>
+        <fullName>FieloPLT__ActionDescription__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Action Description</label>
@@ -81,13 +81,13 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Action__c</fullName>
+        <fullName>FieloPLT__Action__c</fullName>
         <deleteConstraint>Restrict</deleteConstraint>
         <deprecated>false</deprecated>
         <description>Related Action</description>
         <externalId>false</externalId>
         <label>Action</label>
-        <referenceTo>FieloAlpha__Action__c</referenceTo>
+        <referenceTo>FieloPLT__Action__c</referenceTo>
         <relationshipLabel>Rules</relationshipLabel>
         <relationshipName>Rules</relationshipName>
         <required>false</required>
@@ -96,7 +96,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__BadgeMode__c</fullName>
+        <fullName>FieloPLT__BadgeMode__c</fullName>
         <deprecated>false</deprecated>
         <description>This field will indicate if the badge rewarded by the rule will be a fixed one or one depending on a field in the object being processed.</description>
         <externalId>false</externalId>
@@ -117,7 +117,7 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ConvertionTypeReward__c</fullName>
+        <fullName>FieloPLT__ConvertionTypeReward__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Convertion Type Reward</label>
@@ -137,7 +137,7 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ConvertionTypeTransaction__c</fullName>
+        <fullName>FieloPLT__ConvertionTypeTransaction__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Convertion Type Transaction</label>
@@ -161,7 +161,7 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ConvertionValue__c</fullName>
+        <fullName>FieloPLT__ConvertionValue__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Convertion Value</label>
@@ -174,7 +174,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Description__c</fullName>
+        <fullName>FieloPLT__Description__c</fullName>
         <deprecated>false</deprecated>
         <description>Detail about the content filtered by the rule.</description>
         <externalId>false</externalId>
@@ -187,7 +187,7 @@
         <visibleLines>10</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ExpirationMonth__c</fullName>
+        <fullName>FieloPLT__ExpirationMonth__c</fullName>
         <deprecated>false</deprecated>
         <description>The number of months during which the points created by this rule will be valid.</description>
         <externalId>false</externalId>
@@ -202,7 +202,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__FieldNameBadge__c</fullName>
+        <fullName>FieloPLT__FieldNameBadge__c</fullName>
         <deprecated>false</deprecated>
         <description>This field will contain the API name of the field that is a lookup for a Badge in the processed object if the mode is &quot;Badge Field&quot;</description>
         <externalId>false</externalId>
@@ -215,7 +215,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__FieldNameReward__c</fullName>
+        <fullName>FieloPLT__FieldNameReward__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Field Name Reward</label>
@@ -227,7 +227,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__FieldNameTransaction__c</fullName>
+        <fullName>FieloPLT__FieldNameTransaction__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Field Name Transaction</label>
@@ -239,13 +239,13 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__InstantBadge__c</fullName>
+        <fullName>FieloPLT__InstantBadge__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>This field will contain the Badge that will be rewarded by the rule if it&apos;s a fixed value for the instant badge.</description>
         <externalId>false</externalId>
         <label>Instant Badge</label>
-        <referenceTo>FieloAlpha__Badge__c</referenceTo>
+        <referenceTo>FieloPLT__Badge__c</referenceTo>
         <relationshipLabel>Rules</relationshipLabel>
         <relationshipName>Rules</relationshipName>
         <required>false</required>
@@ -254,7 +254,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__InstantReward__c</fullName>
+        <fullName>FieloPLT__InstantReward__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -262,13 +262,13 @@
         <lookupFilter>
             <active>true</active>
             <filterItems>
-                <field>FieloAlpha__Reward__c.FieloAlpha__isInstantReward__c</field>
+                <field>FieloPLT__Reward__c.FieloPLT__isInstantReward__c</field>
                 <operation>equals</operation>
                 <value>True</value>
             </filterItems>
             <isOptional>false</isOptional>
         </lookupFilter>
-        <referenceTo>FieloAlpha__Reward__c</referenceTo>
+        <referenceTo>FieloPLT__Reward__c</referenceTo>
         <relationshipLabel>Rules</relationshipLabel>
         <relationshipName>Rules</relationshipName>
         <required>false</required>
@@ -277,7 +277,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__IsActive__c</fullName>
+        <fullName>FieloPLT__IsActive__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <description>If rule is active, it can be selected for its use</description>
@@ -289,7 +289,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__LogicalExpression__c</fullName>
+        <fullName>FieloPLT__LogicalExpression__c</fullName>
         <deprecated>false</deprecated>
         <description>Field where a a boolean expression will be stored (with numbers representing each rule criteria)</description>
         <externalId>false</externalId>
@@ -301,14 +301,14 @@
         <visibleLines>2</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Program__c</fullName>
+        <fullName>FieloPLT__Program__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>The program to which this rule belongs.</description>
         <externalId>false</externalId>
         <inlineHelpText>Select the program to which this rule belongs.</inlineHelpText>
         <label>Program</label>
-        <referenceTo>FieloAlpha__Program__c</referenceTo>
+        <referenceTo>FieloPLT__Program__c</referenceTo>
         <relationshipLabel>Rules</relationshipLabel>
         <relationshipName>Rules</relationshipName>
         <required>false</required>
@@ -317,7 +317,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RelatedList__c</fullName>
+        <fullName>FieloPLT__RelatedList__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>If you select &quot;--None--&quot;, the record that will be processed will be the master. If not, all the children of the selected related list will be processed.</inlineHelpText>
@@ -330,7 +330,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__StockControl__c</fullName>
+        <fullName>FieloPLT__StockControl__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <description>Checking this option will make that a transaction is not processed if its reward is out of stock. If left unchecked, the transaction will be processed although the reward can not be delivered.</description>
@@ -342,7 +342,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__TargetMember__c</fullName>
+        <fullName>FieloPLT__TargetMember__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Target Member</label>
@@ -354,7 +354,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Type__c</fullName>
+        <fullName>FieloPLT__Type__c</fullName>
         <deprecated>false</deprecated>
         <description>The type of this rule, which decides when the rule is applied.</description>
         <externalId>false</externalId>
@@ -377,10 +377,10 @@
     </fields>
     <label>Rule</label>
     <listViews>
-        <fullName>FieloAlpha__All_Rules</fullName>
+        <fullName>FieloPLT__All_Rules</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Description__c</columns>
-        <columns>FieloAlpha__IsActive__c</columns>
+        <columns>FieloPLT__Description__c</columns>
+        <columns>FieloPLT__IsActive__c</columns>
         <columns>CREATED_DATE</columns>
         <filterScope>Everything</filterScope>
         <label>All Rules</label>
@@ -394,11 +394,11 @@
     <pluralLabel>Rules</pluralLabel>
     <recordTypeTrackHistory>false</recordTypeTrackHistory>
     <recordTypes>
-        <fullName>FieloAlpha__Standard_Rule</fullName>
+        <fullName>FieloPLT__Standard_Rule</fullName>
         <active>true</active>
         <label>Standard Rule</label>
         <picklistValues>
-            <picklist>FieloAlpha__BadgeMode__c</picklist>
+            <picklist>FieloPLT__BadgeMode__c</picklist>
             <values>
                 <fullName>Dynamic Badge</fullName>
                 <default>false</default>
@@ -409,7 +409,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>FieloAlpha__ConvertionTypeReward__c</picklist>
+            <picklist>FieloPLT__ConvertionTypeReward__c</picklist>
             <values>
                 <fullName>Fix Value</fullName>
                 <default>false</default>
@@ -420,7 +420,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>FieloAlpha__ConvertionTypeTransaction__c</picklist>
+            <picklist>FieloPLT__ConvertionTypeTransaction__c</picklist>
             <values>
                 <fullName>Factor</fullName>
                 <default>false</default>
@@ -435,7 +435,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>FieloAlpha__Type__c</picklist>
+            <picklist>FieloPLT__Type__c</picklist>
             <values>
                 <fullName>Best Option</fullName>
                 <default>false</default>
@@ -447,34 +447,34 @@
         </picklistValues>
     </recordTypes>
     <searchLayouts>
-        <customTabListAdditionalFields>FieloAlpha__IsActive__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__IsActive__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
         <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
-        <fullName>FieloAlpha__ModifyProgram</fullName>
+        <fullName>FieloPLT__ModifyProgram</fullName>
         <active>true</active>
         <description>Is not possible to modify the associated Program</description>
-        <errorConditionFormula>ISCHANGED(FieloAlpha__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloAlpha__Program__c)))</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__Program__c</errorDisplayField>
+        <errorConditionFormula>ISCHANGED(FieloPLT__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloPLT__Program__c)))</errorConditionFormula>
+        <errorDisplayField>FieloPLT__Program__c</errorDisplayField>
         <errorMessage>Is not possible to modify the associated Program</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__Rule_Name_Empty</fullName>
+        <fullName>FieloPLT__Rule_Name_Empty</fullName>
         <active>true</active>
         <errorConditionFormula>ISBLANK( Name )</errorConditionFormula>
         <errorDisplayField>Name</errorDisplayField>
         <errorMessage>Name must be completed</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__Validate_points_value</fullName>
+        <fullName>FieloPLT__Validate_points_value</fullName>
         <active>true</active>
-        <errorConditionFormula>AND( OR( ISPICKVAL(FieloAlpha__ConvertionTypeTransaction__c,&apos;Fix Value&apos;), ISPICKVAL(FieloAlpha__ConvertionTypeTransaction__c,&apos;Factor&apos;), ISPICKVAL(FieloAlpha__ConvertionTypeTransaction__c,&apos;Multiplier&apos;) ), OR(FieloAlpha__ConvertionValue__c == 0, ISNULL(FieloAlpha__ConvertionValue__c), ISBLANK(FieloAlpha__ConvertionValue__c)) )</errorConditionFormula>
+        <errorConditionFormula>AND( OR( ISPICKVAL(FieloPLT__ConvertionTypeTransaction__c,&apos;Fix Value&apos;), ISPICKVAL(FieloPLT__ConvertionTypeTransaction__c,&apos;Factor&apos;), ISPICKVAL(FieloPLT__ConvertionTypeTransaction__c,&apos;Multiplier&apos;) ), OR(FieloPLT__ConvertionValue__c == 0, ISNULL(FieloPLT__ConvertionValue__c), ISBLANK(FieloPLT__ConvertionValue__c)) )</errorConditionFormula>
         <errorMessage>The quantity of points cannot be empty or be 0</errorMessage>
     </validationRules>
     <webLinks>
-        <fullName>FieloAlpha__RuleChangeStatus</fullName>
+        <fullName>FieloPLT__RuleChangeStatus</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <linkType>javascript</linkType>
@@ -482,11 +482,11 @@
         <openType>onClickJavaScript</openType>
         <protected>false</protected>
         <url>{!REQUIRESCRIPT (&quot;/soap/ajax/23.0/connection.js&quot;)}
-if(confirm(&apos;{!$Label.FieloAlpha__Fielo_ChangeStatus}?&apos;)){
-     var c = new sforce.SObject(&quot;{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Rule__c&quot;);
+if(confirm(&apos;{!$Label.FieloPLT__Fielo_ChangeStatus}?&apos;)){
+     var c = new sforce.SObject(&quot;{!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Rule__c&quot;);
      var toUpdate = [];
-     c.id = &apos;{!FieloAlpha__Rule__c.Id}&apos;;
-     c.{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}IsActive__c = {!IF(FieloAlpha__Rule__c.FieloAlpha__IsActive__c, &apos;false&apos;, &apos;true&apos;)};
+     c.id = &apos;{!FieloPLT__Rule__c.Id}&apos;;
+     c.{!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}IsActive__c = {!IF(FieloPLT__Rule__c.FieloPLT__IsActive__c, &apos;false&apos;, &apos;true&apos;)};
     toUpdate.push(c);
     sforce.connection.update(toUpdate);
 

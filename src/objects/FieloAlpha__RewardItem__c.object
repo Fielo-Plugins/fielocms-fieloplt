@@ -58,7 +58,7 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>FieloAlpha__Code__c</fullName>
+        <fullName>FieloPLT__Code__c</fullName>
         <caseSensitive>false</caseSensitive>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -71,7 +71,7 @@
         <unique>true</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__IsCondenser__c</fullName>
+        <fullName>FieloPLT__IsCondenser__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -81,7 +81,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Quantity__c</fullName>
+        <fullName>FieloPLT__Quantity__c</fullName>
         <defaultValue>1</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -95,12 +95,12 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RedemptionItem__c</fullName>
+        <fullName>FieloPLT__RedemptionItem__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Redemption Item</label>
-        <referenceTo>FieloAlpha__RedemptionItem__c</referenceTo>
+        <referenceTo>FieloPLT__RedemptionItem__c</referenceTo>
         <relationshipName>Items</relationshipName>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -108,20 +108,20 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Reward__c</fullName>
+        <fullName>FieloPLT__Reward__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Reward</label>
         <lookupFilter>
             <active>true</active>
             <filterItems>
-                <field>FieloAlpha__Reward__c.FieloAlpha__VoucherCreationMode__c</field>
+                <field>FieloPLT__Reward__c.FieloPLT__VoucherCreationMode__c</field>
                 <operation>notEqual</operation>
                 <value>Unlimited</value>
             </filterItems>
             <isOptional>true</isOptional>
         </lookupFilter>
-        <referenceTo>FieloAlpha__Reward__c</referenceTo>
+        <referenceTo>FieloPLT__Reward__c</referenceTo>
         <relationshipLabel>Reward Items</relationshipLabel>
         <relationshipName>Items</relationshipName>
         <relationshipOrder>0</relationshipOrder>
@@ -132,7 +132,7 @@
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Status__c</fullName>
+        <fullName>FieloPLT__Status__c</fullName>
         <deprecated>false</deprecated>
         <description>&quot;Available&quot; means the reward can be redeemed.
 &quot;Unavailable&quot; means the voucher is already used.

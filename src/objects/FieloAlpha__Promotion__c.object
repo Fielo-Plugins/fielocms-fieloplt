@@ -59,15 +59,15 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
-        <fullName>FieloAlpha__PromotionTab</fullName>
+        <fullName>FieloPLT__PromotionTab</fullName>
         <description>Promotion Tab</description>
         <displayedFields>
-            <field>FieloAlpha__InitialDate__c</field>
+            <field>FieloPLT__InitialDate__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__FinalDate__c</field>
+            <field>FieloPLT__FinalDate__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
@@ -84,10 +84,10 @@
         <label>Promotion Tab</label>
     </fieldSets>
     <fields>
-        <fullName>FieloAlpha__CountDays__c</fullName>
+        <fullName>FieloPLT__CountDays__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>FieloAlpha__FinalDate__c  - FieloAlpha__InitialDate__c</formula>
+        <formula>FieloPLT__FinalDate__c  - FieloPLT__InitialDate__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Count Days</label>
         <precision>18</precision>
@@ -99,7 +99,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Description__c</fullName>
+        <fullName>FieloPLT__Description__c</fullName>
         <deprecated>false</deprecated>
         <description>A description for this promotion.</description>
         <externalId>false</externalId>
@@ -112,7 +112,7 @@
         <visibleLines>2</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__FinalDate__c</fullName>
+        <fullName>FieloPLT__FinalDate__c</fullName>
         <deprecated>false</deprecated>
         <description>The end date for this promotion.</description>
         <externalId>false</externalId>
@@ -124,7 +124,7 @@
         <type>Date</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__InitialDate__c</fullName>
+        <fullName>FieloPLT__InitialDate__c</fullName>
         <deprecated>false</deprecated>
         <description>The starting date for this promotion.</description>
         <externalId>false</externalId>
@@ -136,14 +136,14 @@
         <type>Date</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Program__c</fullName>
+        <fullName>FieloPLT__Program__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>The program to wich this promotion belongs.</description>
         <externalId>false</externalId>
         <inlineHelpText>Enter the program to which this promotion belongs.</inlineHelpText>
         <label>Program</label>
-        <referenceTo>FieloAlpha__Program__c</referenceTo>
+        <referenceTo>FieloPLT__Program__c</referenceTo>
         <relationshipName>Promotions</relationshipName>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -152,11 +152,11 @@
     </fields>
     <label>Incentive</label>
     <listViews>
-        <fullName>FieloAlpha__All_Promotions</fullName>
+        <fullName>FieloPLT__All_Promotions</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Program__c</columns>
-        <columns>FieloAlpha__InitialDate__c</columns>
-        <columns>FieloAlpha__FinalDate__c</columns>
+        <columns>FieloPLT__Program__c</columns>
+        <columns>FieloPLT__InitialDate__c</columns>
+        <columns>FieloPLT__FinalDate__c</columns>
         <filterScope>Everything</filterScope>
         <label>All Promotions</label>
         <language>en_US</language>
@@ -169,47 +169,47 @@
     <pluralLabel>Incentives</pluralLabel>
     <recordTypeTrackHistory>false</recordTypeTrackHistory>
     <recordTypes>
-        <fullName>FieloAlpha__Standard_Promotion</fullName>
+        <fullName>FieloPLT__Standard_Promotion</fullName>
         <active>true</active>
         <label>Standard Promotion</label>
     </recordTypes>
     <searchLayouts>
-        <customTabListAdditionalFields>FieloAlpha__InitialDate__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>FieloAlpha__FinalDate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__InitialDate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__FinalDate__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
         <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
-        <fullName>FieloAlpha__ModifyProgram</fullName>
+        <fullName>FieloPLT__ModifyProgram</fullName>
         <active>true</active>
         <description>Is not possible to modify the associated Program</description>
-        <errorConditionFormula>ISCHANGED(FieloAlpha__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloAlpha__Program__c)))</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__Program__c</errorDisplayField>
+        <errorConditionFormula>ISCHANGED(FieloPLT__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloPLT__Program__c)))</errorConditionFormula>
+        <errorDisplayField>FieloPLT__Program__c</errorDisplayField>
         <errorMessage>Is not possible to modify the associated Program</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__Modify_RecordType</fullName>
+        <fullName>FieloPLT__Modify_RecordType</fullName>
         <active>true</active>
         <description>Validate that the user wont change the recordType</description>
         <errorConditionFormula>ISCHANGED(RecordTypeId)</errorConditionFormula>
         <errorMessage>The Record Type cannot be modified.</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__Undelete_Default</fullName>
+        <fullName>FieloPLT__Undelete_Default</fullName>
         <active>false</active>
-        <errorConditionFormula>ISNULL(FieloAlpha__InitialDate__c )  &amp;&amp;
-ISNULL( FieloAlpha__FinalDate__c )</errorConditionFormula>
+        <errorConditionFormula>ISNULL(FieloPLT__InitialDate__c )  &amp;&amp;
+ISNULL( FieloPLT__FinalDate__c )</errorConditionFormula>
         <errorMessage>Can not delete the Default Promotion</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__Validate_Dates</fullName>
+        <fullName>FieloPLT__Validate_Dates</fullName>
         <active>true</active>
-        <errorConditionFormula>FieloAlpha__InitialDate__c   &gt; FieloAlpha__FinalDate__c</errorConditionFormula>
+        <errorConditionFormula>FieloPLT__InitialDate__c   &gt; FieloPLT__FinalDate__c</errorConditionFormula>
         <errorMessage>Final Date must be great or equal to Initial Date</errorMessage>
     </validationRules>
     <webLinks>
-        <fullName>FieloAlpha__Edit_Default_Rule</fullName>
+        <fullName>FieloPLT__Edit_Default_Rule</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <linkType>javascript</linkType>
@@ -218,13 +218,13 @@ ISNULL( FieloAlpha__FinalDate__c )</errorConditionFormula>
         <protected>false</protected>
         <url>{!REQUIRESCRIPT(&quot;/soap/ajax/22.0/connection.js&quot;)}
 
-var defaultRules = sforce.connection.query(&quot;SELECT Id FROM {!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Rule__c WHERE {!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Program__c = \&apos;{!FieloAlpha__Promotion__c.FieloAlpha__ProgramId__c}\&apos; AND RecordType.DeveloperName = \&apos;Default_Rule\&apos; &quot;);
+var defaultRules = sforce.connection.query(&quot;SELECT Id FROM {!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Rule__c WHERE {!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Program__c = \&apos;{!FieloPLT__Promotion__c.FieloPLT__ProgramId__c}\&apos; AND RecordType.DeveloperName = \&apos;Default_Rule\&apos; &quot;);
 var defaultRule = defaultRules.getArray(&quot;records&quot;)[0];
 
-window.open(&apos;/apex/{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}RuleDefaultEditBackEnd?id=&apos; + defaultRule.Id);</url>
+window.open(&apos;/apex/{!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}RuleDefaultEditBackEnd?id=&apos; + defaultRule.Id);</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__Fielo_PromotionDefault</fullName>
+        <fullName>FieloPLT__Fielo_PromotionDefault</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -234,6 +234,6 @@ window.open(&apos;/apex/{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.Fielo
         <openType>sidebar</openType>
         <protected>false</protected>
         <requireRowSelection>false</requireRowSelection>
-        <url>{!URLFOR( $Action.FieloAlpha__Promotion__c.New,  null)}</url>
+        <url>{!URLFOR( $Action.FieloPLT__Promotion__c.New,  null)}</url>
     </webLinks>
 </CustomObject>

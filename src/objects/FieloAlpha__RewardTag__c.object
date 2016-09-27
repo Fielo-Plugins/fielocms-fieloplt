@@ -58,7 +58,7 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>FieloAlpha__ExpirationDate__c</fullName>
+        <fullName>FieloPLT__ExpirationDate__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Expiration Date</label>
@@ -68,11 +68,11 @@
         <type>Date</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Reward__c</fullName>
+        <fullName>FieloPLT__Reward__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Reward</label>
-        <referenceTo>FieloAlpha__Reward__c</referenceTo>
+        <referenceTo>FieloPLT__Reward__c</referenceTo>
         <relationshipLabel>Rewards Tags</relationshipLabel>
         <relationshipName>RewardTag</relationshipName>
         <relationshipOrder>0</relationshipOrder>
@@ -83,11 +83,11 @@
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Tag__c</fullName>
+        <fullName>FieloPLT__Tag__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Tag</label>
-        <referenceTo>FieloAlpha__Tag__c</referenceTo>
+        <referenceTo>FieloPLT__Tag__c</referenceTo>
         <relationshipLabel>Rewards Tags</relationshipLabel>
         <relationshipName>RewardTag</relationshipName>
         <relationshipOrder>1</relationshipOrder>
@@ -107,13 +107,13 @@
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
     <validationRules>
-        <fullName>FieloAlpha__ProgramConsistency</fullName>
+        <fullName>FieloPLT__ProgramConsistency</fullName>
         <active>true</active>
-        <errorConditionFormula>FieloAlpha__Reward__r.FieloAlpha__Program__c  &lt;&gt;  FieloAlpha__Tag__r.FieloAlpha__Program__c</errorConditionFormula>
+        <errorConditionFormula>FieloPLT__Reward__r.FieloPLT__Program__c  &lt;&gt;  FieloPLT__Tag__r.FieloPLT__Program__c</errorConditionFormula>
         <errorMessage>This tag belongs to another program. You must create the tag in this program before trying to use it.</errorMessage>
     </validationRules>
     <webLinks>
-        <fullName>FieloAlpha__NewRedwardTag</fullName>
+        <fullName>FieloPLT__NewRedwardTag</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -123,6 +123,6 @@
         <openType>sidebar</openType>
         <protected>false</protected>
         <requireRowSelection>false</requireRowSelection>
-        <url>/apex/{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}RewardChooseTagBackEnd?Id={!FieloAlpha__Reward__c.Id}</url>
+        <url>/apex/{!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}RewardChooseTagBackEnd?Id={!FieloPLT__Reward__c.Id}</url>
     </webLinks>
 </CustomObject>

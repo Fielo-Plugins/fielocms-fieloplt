@@ -59,12 +59,12 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>FieloAlpha__Member__c</fullName>
+        <fullName>FieloPLT__Member__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Member</label>
-        <referenceTo>FieloAlpha__Member__c</referenceTo>
+        <referenceTo>FieloPLT__Member__c</referenceTo>
         <relationshipLabel>Likes</relationshipLabel>
         <relationshipName>Likes</relationshipName>
         <required>false</required>
@@ -72,12 +72,12 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__News__c</fullName>
+        <fullName>FieloPLT__News__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Content Feed</label>
-        <referenceTo>FieloAlpha__News__c</referenceTo>
+        <referenceTo>FieloPLT__News__c</referenceTo>
         <relationshipLabel>Likes</relationshipLabel>
         <relationshipName>Likes</relationshipName>
         <required>false</required>
@@ -85,7 +85,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ParentId__c</fullName>
+        <fullName>FieloPLT__ParentId__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Parent Id</label>
@@ -96,12 +96,12 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Reward__c</fullName>
+        <fullName>FieloPLT__Reward__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Reward</label>
-        <referenceTo>FieloAlpha__Reward__c</referenceTo>
+        <referenceTo>FieloPLT__Reward__c</referenceTo>
         <relationshipLabel>Likes</relationshipLabel>
         <relationshipName>Likes</relationshipName>
         <required>false</required>

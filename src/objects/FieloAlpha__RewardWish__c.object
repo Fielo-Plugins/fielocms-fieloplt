@@ -58,12 +58,12 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>FieloAlpha__Member__c</fullName>
+        <fullName>FieloPLT__Member__c</fullName>
         <deprecated>false</deprecated>
         <description>Member that have selected a reward as &quot;wished&quot; on his wishlist</description>
         <externalId>false</externalId>
         <label>Member</label>
-        <referenceTo>FieloAlpha__Member__c</referenceTo>
+        <referenceTo>FieloPLT__Member__c</referenceTo>
         <relationshipName>Member_Reward</relationshipName>
         <relationshipOrder>0</relationshipOrder>
         <reparentableMasterDetail>false</reparentableMasterDetail>
@@ -73,12 +73,12 @@
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Reward__c</fullName>
+        <fullName>FieloPLT__Reward__c</fullName>
         <deprecated>false</deprecated>
         <description>Reward selected for the member</description>
         <externalId>false</externalId>
         <label>Reward</label>
-        <referenceTo>FieloAlpha__Reward__c</referenceTo>
+        <referenceTo>FieloPLT__Reward__c</referenceTo>
         <relationshipName>Members_Reward</relationshipName>
         <relationshipOrder>1</relationshipOrder>
         <reparentableMasterDetail>false</reparentableMasterDetail>

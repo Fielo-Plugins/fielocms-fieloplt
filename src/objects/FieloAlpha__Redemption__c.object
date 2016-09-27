@@ -59,40 +59,40 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
-        <fullName>FieloAlpha__RedemptionBackEnd</fullName>
+        <fullName>FieloPLT__RedemptionBackEnd</fullName>
         <description>RedemptionBackEnd</description>
         <label>Redemption Back End</label>
     </fieldSets>
     <fieldSets>
-        <fullName>FieloAlpha__RedemptionFrontEnd</fullName>
+        <fullName>FieloPLT__RedemptionFrontEnd</fullName>
         <description>Shopping cart page</description>
         <label>Redemption Front End</label>
     </fieldSets>
     <fieldSets>
-        <fullName>FieloAlpha__RedemptionTab</fullName>
+        <fullName>FieloPLT__RedemptionTab</fullName>
         <description>Redemption Tab</description>
         <displayedFields>
-            <field>FieloAlpha__Price__c</field>
+            <field>FieloPLT__Price__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Points__c</field>
+            <field>FieloPLT__Points__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Status__c</field>
+            <field>FieloPLT__Status__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__TotalItems__c</field>
+            <field>FieloPLT__TotalItems__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Origin__c</field>
+            <field>FieloPLT__Origin__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
@@ -104,24 +104,24 @@
         <label>Redemption Tab</label>
     </fieldSets>
     <fieldSets>
-        <fullName>FieloAlpha__ViewDetailFrontend</fullName>
+        <fullName>FieloPLT__ViewDetailFrontend</fullName>
         <availableFields>
             <field>Name</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Origin__c</field>
+            <field>FieloPLT__Origin__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Price__c</field>
+            <field>FieloPLT__Price__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__TotalItems__c</field>
+            <field>FieloPLT__TotalItems__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -132,19 +132,19 @@
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Points__c</field>
+            <field>FieloPLT__Points__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Status__c</field>
+            <field>FieloPLT__Status__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <label>View Detail Frontend</label>
     </fieldSets>
     <fields>
-        <fullName>FieloAlpha__Description__c</fullName>
+        <fullName>FieloPLT__Description__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Description</label>
@@ -154,12 +154,12 @@
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Member__c</fullName>
+        <fullName>FieloPLT__Member__c</fullName>
         <deprecated>false</deprecated>
         <description>Member who redeemed the reward</description>
         <externalId>false</externalId>
         <label>Member</label>
-        <referenceTo>FieloAlpha__Member__c</referenceTo>
+        <referenceTo>FieloPLT__Member__c</referenceTo>
         <relationshipLabel>Redemptions</relationshipLabel>
         <relationshipName>Redemptions</relationshipName>
         <relationshipOrder>0</relationshipOrder>
@@ -169,7 +169,7 @@
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Origin__c</fullName>
+        <fullName>FieloPLT__Origin__c</fullName>
         <deprecated>false</deprecated>
         <description>Where the redemption was made: in the back end, in the front end or via a mobile device.</description>
         <externalId>false</externalId>
@@ -194,7 +194,7 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__PointsDiscount__c</fullName>
+        <fullName>FieloPLT__PointsDiscount__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Points Discount</label>
@@ -206,36 +206,36 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Points__c</fullName>
+        <fullName>FieloPLT__Points__c</fullName>
         <deprecated>false</deprecated>
         <description>Points involved on the redemption</description>
         <externalId>false</externalId>
         <label>Points</label>
-        <summarizedField>FieloAlpha__RedemptionItem__c.FieloAlpha__ItemPoints__c</summarizedField>
+        <summarizedField>FieloPLT__RedemptionItem__c.FieloPLT__ItemPoints__c</summarizedField>
         <summaryFilterItems>
-            <field>FieloAlpha__RedemptionItem__c.FieloAlpha__Status__c</field>
+            <field>FieloPLT__RedemptionItem__c.FieloPLT__Status__c</field>
             <operation>notEqual</operation>
             <value>Reverted</value>
         </summaryFilterItems>
-        <summaryForeignKey>FieloAlpha__RedemptionItem__c.FieloAlpha__Redemption__c</summaryForeignKey>
+        <summaryForeignKey>FieloPLT__RedemptionItem__c.FieloPLT__Redemption__c</summaryForeignKey>
         <summaryOperation>sum</summaryOperation>
         <trackTrending>false</trackTrending>
         <type>Summary</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Price__c</fullName>
+        <fullName>FieloPLT__Price__c</fullName>
         <deprecated>false</deprecated>
         <description>Price of the reward in the moment that the reward was redeemed.</description>
         <externalId>false</externalId>
         <label>Price</label>
-        <summarizedField>FieloAlpha__RedemptionItem__c.FieloAlpha__RewardItemPrice__c</summarizedField>
-        <summaryForeignKey>FieloAlpha__RedemptionItem__c.FieloAlpha__Redemption__c</summaryForeignKey>
+        <summarizedField>FieloPLT__RedemptionItem__c.FieloPLT__RewardItemPrice__c</summarizedField>
+        <summaryForeignKey>FieloPLT__RedemptionItem__c.FieloPLT__Redemption__c</summaryForeignKey>
         <summaryOperation>sum</summaryOperation>
         <trackTrending>false</trackTrending>
         <type>Summary</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Processed__c</fullName>
+        <fullName>FieloPLT__Processed__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -244,7 +244,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Status__c</fullName>
+        <fullName>FieloPLT__Status__c</fullName>
         <deprecated>false</deprecated>
         <description>The status of this redemption. Possible status values are: Open, Closed, Pending or Rejected.</description>
         <externalId>false</externalId>
@@ -273,24 +273,24 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__TotalItems__c</fullName>
+        <fullName>FieloPLT__TotalItems__c</fullName>
         <deprecated>false</deprecated>
         <description>Quantity of items of the redemption (Order).</description>
         <externalId>false</externalId>
         <label>Total Items</label>
-        <summarizedField>FieloAlpha__RedemptionItem__c.FieloAlpha__Quantity__c</summarizedField>
-        <summaryForeignKey>FieloAlpha__RedemptionItem__c.FieloAlpha__Redemption__c</summaryForeignKey>
+        <summarizedField>FieloPLT__RedemptionItem__c.FieloPLT__Quantity__c</summarizedField>
+        <summaryForeignKey>FieloPLT__RedemptionItem__c.FieloPLT__Redemption__c</summaryForeignKey>
         <summaryOperation>sum</summaryOperation>
         <trackTrending>false</trackTrending>
         <type>Summary</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Transaction__c</fullName>
+        <fullName>FieloPLT__Transaction__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Transaction</label>
-        <referenceTo>FieloAlpha__Transaction__c</referenceTo>
+        <referenceTo>FieloPLT__Transaction__c</referenceTo>
         <relationshipLabel>Redemptions</relationshipLabel>
         <relationshipName>Redemptions</relationshipName>
         <required>false</required>
@@ -299,29 +299,29 @@
     </fields>
     <label>Redemption</label>
     <listViews>
-        <fullName>FieloAlpha__All_Redemptions</fullName>
+        <fullName>FieloPLT__All_Redemptions</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Member__c</columns>
-        <columns>FieloAlpha__TotalItems__c</columns>
-        <columns>FieloAlpha__Origin__c</columns>
-        <columns>FieloAlpha__Points__c</columns>
-        <columns>FieloAlpha__Status__c</columns>
+        <columns>FieloPLT__Member__c</columns>
+        <columns>FieloPLT__TotalItems__c</columns>
+        <columns>FieloPLT__Origin__c</columns>
+        <columns>FieloPLT__Points__c</columns>
+        <columns>FieloPLT__Status__c</columns>
         <filterScope>Everything</filterScope>
         <label>All Redemptions</label>
         <language>en_US</language>
     </listViews>
     <listViews>
-        <fullName>FieloAlpha__Closed</fullName>
+        <fullName>FieloPLT__Closed</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Member__c</columns>
-        <columns>FieloAlpha__Origin__c</columns>
-        <columns>FieloAlpha__Points__c</columns>
-        <columns>FieloAlpha__Price__c</columns>
-        <columns>FieloAlpha__Status__c</columns>
-        <columns>FieloAlpha__TotalItems__c</columns>
+        <columns>FieloPLT__Member__c</columns>
+        <columns>FieloPLT__Origin__c</columns>
+        <columns>FieloPLT__Points__c</columns>
+        <columns>FieloPLT__Price__c</columns>
+        <columns>FieloPLT__Status__c</columns>
+        <columns>FieloPLT__TotalItems__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
-            <field>FieloAlpha__Status__c</field>
+            <field>FieloPLT__Status__c</field>
             <operation>equals</operation>
             <value>Close</value>
         </filters>
@@ -329,17 +329,17 @@
         <language>en_US</language>
     </listViews>
     <listViews>
-        <fullName>FieloAlpha__Open</fullName>
+        <fullName>FieloPLT__Open</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Member__c</columns>
-        <columns>FieloAlpha__Origin__c</columns>
-        <columns>FieloAlpha__Points__c</columns>
-        <columns>FieloAlpha__Price__c</columns>
-        <columns>FieloAlpha__Status__c</columns>
-        <columns>FieloAlpha__TotalItems__c</columns>
+        <columns>FieloPLT__Member__c</columns>
+        <columns>FieloPLT__Origin__c</columns>
+        <columns>FieloPLT__Points__c</columns>
+        <columns>FieloPLT__Price__c</columns>
+        <columns>FieloPLT__Status__c</columns>
+        <columns>FieloPLT__TotalItems__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
-            <field>FieloAlpha__Status__c</field>
+            <field>FieloPLT__Status__c</field>
             <operation>equals</operation>
             <value>Open</value>
         </filters>
@@ -347,17 +347,17 @@
         <language>en_US</language>
     </listViews>
     <listViews>
-        <fullName>FieloAlpha__Pending</fullName>
+        <fullName>FieloPLT__Pending</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Member__c</columns>
-        <columns>FieloAlpha__Origin__c</columns>
-        <columns>FieloAlpha__Points__c</columns>
-        <columns>FieloAlpha__Price__c</columns>
-        <columns>FieloAlpha__Status__c</columns>
-        <columns>FieloAlpha__TotalItems__c</columns>
+        <columns>FieloPLT__Member__c</columns>
+        <columns>FieloPLT__Origin__c</columns>
+        <columns>FieloPLT__Points__c</columns>
+        <columns>FieloPLT__Price__c</columns>
+        <columns>FieloPLT__Status__c</columns>
+        <columns>FieloPLT__TotalItems__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
-            <field>FieloAlpha__Status__c</field>
+            <field>FieloPLT__Status__c</field>
             <operation>equals</operation>
             <value>Pending</value>
         </filters>
@@ -365,17 +365,17 @@
         <language>en_US</language>
     </listViews>
     <listViews>
-        <fullName>FieloAlpha__Rejected</fullName>
+        <fullName>FieloPLT__Rejected</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Member__c</columns>
-        <columns>FieloAlpha__Origin__c</columns>
-        <columns>FieloAlpha__Points__c</columns>
-        <columns>FieloAlpha__Price__c</columns>
-        <columns>FieloAlpha__Status__c</columns>
-        <columns>FieloAlpha__TotalItems__c</columns>
+        <columns>FieloPLT__Member__c</columns>
+        <columns>FieloPLT__Origin__c</columns>
+        <columns>FieloPLT__Points__c</columns>
+        <columns>FieloPLT__Price__c</columns>
+        <columns>FieloPLT__Status__c</columns>
+        <columns>FieloPLT__TotalItems__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
-            <field>FieloAlpha__Status__c</field>
+            <field>FieloPLT__Status__c</field>
             <operation>equals</operation>
             <value>Rejected</value>
         </filters>
@@ -383,14 +383,14 @@
         <language>en_US</language>
     </listViews>
     <listViews>
-        <fullName>FieloAlpha__This_Week</fullName>
+        <fullName>FieloPLT__This_Week</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Member__c</columns>
-        <columns>FieloAlpha__Origin__c</columns>
-        <columns>FieloAlpha__Points__c</columns>
-        <columns>FieloAlpha__Price__c</columns>
-        <columns>FieloAlpha__Status__c</columns>
-        <columns>FieloAlpha__TotalItems__c</columns>
+        <columns>FieloPLT__Member__c</columns>
+        <columns>FieloPLT__Origin__c</columns>
+        <columns>FieloPLT__Points__c</columns>
+        <columns>FieloPLT__Price__c</columns>
+        <columns>FieloPLT__Status__c</columns>
+        <columns>FieloPLT__TotalItems__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>CREATED_DATE</field>
@@ -412,13 +412,13 @@
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
     <validationRules>
-        <fullName>FieloAlpha__Closed_Order</fullName>
+        <fullName>FieloPLT__Closed_Order</fullName>
         <active>false</active>
-        <errorConditionFormula>AND(   ISPICKVAL(FieloAlpha__Status__c, &apos;Close&apos;) ,ISCHANGED(FieloAlpha__Points__c) )</errorConditionFormula>
+        <errorConditionFormula>AND(   ISPICKVAL(FieloPLT__Status__c, &apos;Close&apos;) ,ISCHANGED(FieloPLT__Points__c) )</errorConditionFormula>
         <errorMessage>The order is closed.</errorMessage>
     </validationRules>
     <webLinks>
-        <fullName>FieloAlpha__DeliverItems</fullName>
+        <fullName>FieloPLT__DeliverItems</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <linkType>javascript</linkType>
@@ -428,16 +428,16 @@
         <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)}
 {!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)}
 
-var prefix = &apos;{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}&apos;.replace(&apos;__&apos;, &apos;.&apos;);
+var prefix = &apos;{!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}&apos;.replace(&apos;__&apos;, &apos;.&apos;);
 
-var status = sforce.apex.execute(prefix+&apos;RedemptionUtil&apos;, &apos;deliverItems&apos;, {id: &apos;{!FieloAlpha__RedemptionItem__c.Id}&apos;});
+var status = sforce.apex.execute(prefix+&apos;RedemptionUtil&apos;, &apos;deliverItems&apos;, {id: &apos;{!FieloPLT__RedemptionItem__c.Id}&apos;});
 
 alert(status);
 
 location.reload()</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__New</fullName>
+        <fullName>FieloPLT__New</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -446,10 +446,10 @@ location.reload()</url>
         <openType>replace</openType>
         <protected>false</protected>
         <requireRowSelection>true</requireRowSelection>
-        <url>/apex/{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}RedemptionCreateBackEnd?memberId={!FieloAlpha__Member__c.Id}</url>
+        <url>/apex/{!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}RedemptionCreateBackEnd?memberId={!FieloPLT__Member__c.Id}</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__NewRedemption</fullName>
+        <fullName>FieloPLT__NewRedemption</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -459,6 +459,6 @@ location.reload()</url>
         <openType>sidebar</openType>
         <protected>false</protected>
         <requireRowSelection>true</requireRowSelection>
-        <url>/apex/{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}RedemptionCreateBackEnd?memberId={!FieloAlpha__Member__c.Id}</url>
+        <url>/apex/{!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}RedemptionCreateBackEnd?memberId={!FieloPLT__Member__c.Id}</url>
     </webLinks>
 </CustomObject>

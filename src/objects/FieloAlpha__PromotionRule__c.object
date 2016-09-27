@@ -59,7 +59,7 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>FieloAlpha__Order__c</fullName>
+        <fullName>FieloPLT__Order__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Order</label>
@@ -72,12 +72,12 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Promotion__c</fullName>
+        <fullName>FieloPLT__Promotion__c</fullName>
         <deprecated>false</deprecated>
         <description>Promotion - Master object in this relation</description>
         <externalId>false</externalId>
         <label>Promotion</label>
-        <referenceTo>FieloAlpha__Promotion__c</referenceTo>
+        <referenceTo>FieloPLT__Promotion__c</referenceTo>
         <relationshipLabel>Rules</relationshipLabel>
         <relationshipName>PromotionRules</relationshipName>
         <relationshipOrder>0</relationshipOrder>
@@ -88,12 +88,12 @@
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Rule__c</fullName>
+        <fullName>FieloPLT__Rule__c</fullName>
         <deprecated>false</deprecated>
         <description>Rule that belongs to the promotion</description>
         <externalId>false</externalId>
         <label>Rule</label>
-        <referenceTo>FieloAlpha__Rule__c</referenceTo>
+        <referenceTo>FieloPLT__Rule__c</referenceTo>
         <relationshipLabel>Rules</relationshipLabel>
         <relationshipName>PromotionsRules</relationshipName>
         <relationshipOrder>1</relationshipOrder>
@@ -114,19 +114,19 @@
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
     <webLinks>
-        <fullName>FieloAlpha__Add_Existing_Rule</fullName>
+        <fullName>FieloPLT__Add_Existing_Rule</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
         <height>600</height>
         <linkType>page</linkType>
         <masterLabel>Add Existing Rule</masterLabel>
         <openType>sidebar</openType>
-        <page>FieloAlpha__RuleAddExistingBackEnd</page>
+        <page>FieloPLT__RuleAddExistingBackEnd</page>
         <protected>false</protected>
         <requireRowSelection>false</requireRowSelection>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__Add_New_Rule</fullName>
+        <fullName>FieloPLT__Add_New_Rule</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -135,6 +135,6 @@
         <openType>replace</openType>
         <protected>false</protected>
         <requireRowSelection>false</requireRowSelection>
-        <url>{!URLFOR( $Action.FieloAlpha__Rule__c.New , null, [retURL=FieloAlpha__Promotion__c.Id , idPromotion=FieloAlpha__Promotion__c.Id ])}</url>
+        <url>{!URLFOR( $Action.FieloPLT__Rule__c.New , null, [retURL=FieloPLT__Promotion__c.Id , idPromotion=FieloPLT__Promotion__c.Id ])}</url>
     </webLinks>
 </CustomObject>

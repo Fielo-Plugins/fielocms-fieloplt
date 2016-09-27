@@ -46,7 +46,7 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
-    <customHelpPage>FieloAlpha__PointHelpBackEnd</customHelpPage>
+    <customHelpPage>FieloPLT__PointHelpBackEnd</customHelpPage>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <description>Points of each member. Points can increase after a transaction or decrease after a redemption.</description>
@@ -60,37 +60,37 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
-        <fullName>FieloAlpha__Transaction_View_RelatedList</fullName>
+        <fullName>FieloPLT__Transaction_View_RelatedList</fullName>
         <description>Transaction view page</description>
         <displayedFields>
-            <field>FieloAlpha__Points__c</field>
+            <field>FieloPLT__Points__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__ActionDescription__c</field>
+            <field>FieloPLT__ActionDescription__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Promotion__c</field>
+            <field>FieloPLT__Promotion__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Rule__c</field>
+            <field>FieloPLT__Rule__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__ExpirationDate__c</field>
+            <field>FieloPLT__ExpirationDate__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <label>Transaction View RelatedList</label>
     </fieldSets>
     <fields>
-        <fullName>FieloAlpha__ActionDescription__c</fullName>
+        <fullName>FieloPLT__ActionDescription__c</fullName>
         <deprecated>false</deprecated>
         <description>Detail of the action activated by the transaction</description>
         <externalId>false</externalId>
@@ -102,10 +102,10 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Balance__c</fullName>
+        <fullName>FieloPLT__Balance__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>IF ( FieloAlpha__Points__c &gt; 0 , FieloAlpha__Points__c - FieloAlpha__PointsUsed__c - 	FieloAlpha__PointsExpired__c, 0 )</formula>
+        <formula>IF ( FieloPLT__Points__c &gt; 0 , FieloPLT__Points__c - FieloPLT__PointsUsed__c - 	FieloPLT__PointsExpired__c, 0 )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Available</label>
         <precision>18</precision>
@@ -116,7 +116,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ExpirationDate__c</fullName>
+        <fullName>FieloPLT__ExpirationDate__c</fullName>
         <deprecated>false</deprecated>
         <description>Valid finish date for points</description>
         <externalId>false</externalId>
@@ -126,7 +126,7 @@
         <type>Date</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__MemberBalance__c</fullName>
+        <fullName>FieloPLT__MemberBalance__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Member Balance</label>
@@ -138,12 +138,12 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Member__c</fullName>
+        <fullName>FieloPLT__Member__c</fullName>
         <deprecated>false</deprecated>
         <description>Member who made the transaction</description>
         <externalId>false</externalId>
         <label>Member</label>
-        <referenceTo>FieloAlpha__Member__c</referenceTo>
+        <referenceTo>FieloPLT__Member__c</referenceTo>
         <relationshipLabel>Points</relationshipLabel>
         <relationshipName>Points</relationshipName>
         <relationshipOrder>0</relationshipOrder>
@@ -153,7 +153,7 @@
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
-        <fullName>FieloAlpha__PointsExpired__c</fullName>
+        <fullName>FieloPLT__PointsExpired__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -166,7 +166,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__PointsUsed__c</fullName>
+        <fullName>FieloPLT__PointsUsed__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -179,7 +179,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Points__c</fullName>
+        <fullName>FieloPLT__Points__c</fullName>
         <deprecated>false</deprecated>
         <description>Quantity of points earned with the transaction</description>
         <externalId>false</externalId>
@@ -192,14 +192,14 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Promotion__c</fullName>
+        <fullName>FieloPLT__Promotion__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>Promotion activated by the transaction</description>
         <externalId>false</externalId>
         <inlineHelpText>Here you can see the promotion that created the point.</inlineHelpText>
         <label>Promotion</label>
-        <referenceTo>FieloAlpha__Promotion__c</referenceTo>
+        <referenceTo>FieloPLT__Promotion__c</referenceTo>
         <relationshipLabel>Points</relationshipLabel>
         <relationshipName>Points</relationshipName>
         <required>false</required>
@@ -207,12 +207,12 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Redemption__c</fullName>
+        <fullName>FieloPLT__Redemption__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Redemption</label>
-        <referenceTo>FieloAlpha__Redemption__c</referenceTo>
+        <referenceTo>FieloPLT__Redemption__c</referenceTo>
         <relationshipLabel>Points</relationshipLabel>
         <relationshipName>Points</relationshipName>
         <required>false</required>
@@ -220,7 +220,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RuleDescription__c</fullName>
+        <fullName>FieloPLT__RuleDescription__c</fullName>
         <deprecated>false</deprecated>
         <description>Description of rule activated by the transaction</description>
         <externalId>false</externalId>
@@ -231,14 +231,14 @@
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Rule__c</fullName>
+        <fullName>FieloPLT__Rule__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>Rule activated by the transaction</description>
         <externalId>false</externalId>
         <inlineHelpText>Here you can see the rule that created the point.</inlineHelpText>
         <label>Rule</label>
-        <referenceTo>FieloAlpha__Rule__c</referenceTo>
+        <referenceTo>FieloPLT__Rule__c</referenceTo>
         <relationshipLabel>Points</relationshipLabel>
         <relationshipName>Points</relationshipName>
         <required>false</required>
@@ -246,12 +246,12 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Transaction__c</fullName>
+        <fullName>FieloPLT__Transaction__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Transaction</label>
-        <referenceTo>FieloAlpha__Transaction__c</referenceTo>
+        <referenceTo>FieloPLT__Transaction__c</referenceTo>
         <relationshipLabel>Points</relationshipLabel>
         <relationshipName>Points</relationshipName>
         <required>false</required>
@@ -266,7 +266,7 @@
     </nameField>
     <pluralLabel>Points</pluralLabel>
     <searchLayouts>
-        <customTabListAdditionalFields>FieloAlpha__Points__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__Points__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>CREATED_DATE</customTabListAdditionalFields>
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>

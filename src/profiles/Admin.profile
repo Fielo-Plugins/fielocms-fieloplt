@@ -163,2772 +163,2772 @@
     <custom>false</custom>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Action__c.FieloAlpha__Active__c</field>
+        <field>FieloPLT__Action__c.FieloPLT__Active__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Action__c.FieloAlpha__CriteriaFields__c</field>
+        <field>FieloPLT__Action__c.FieloPLT__CriteriaFields__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Action__c.FieloAlpha__CrossField__c</field>
+        <field>FieloPLT__Action__c.FieloPLT__CrossField__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Action__c.FieloAlpha__RelatedList__c</field>
+        <field>FieloPLT__Action__c.FieloPLT__RelatedList__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Action__c.FieloAlpha__RuleTrigger__c</field>
+        <field>FieloPLT__Action__c.FieloPLT__RuleTrigger__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Action__c.FieloAlpha__TargetObject__c</field>
+        <field>FieloPLT__Action__c.FieloPLT__TargetObject__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Agreement__c.FieloAlpha__Agreement__c</field>
+        <field>FieloPLT__Agreement__c.FieloPLT__Agreement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Agreement__c.FieloAlpha__Program__c</field>
+        <field>FieloPLT__Agreement__c.FieloPLT__Program__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Agreement__c.FieloAlpha__Status__c</field>
+        <field>FieloPLT__Agreement__c.FieloPLT__Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__BadgeMember__c.FieloAlpha__Quantity__c</field>
+        <field>FieloPLT__BadgeMember__c.FieloPLT__Quantity__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__BadgeMember__c.FieloAlpha__Transaction__c</field>
+        <field>FieloPLT__BadgeMember__c.FieloPLT__Transaction__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Badge__c.FieloAlpha__AttachmentId__c</field>
+        <field>FieloPLT__Badge__c.FieloPLT__AttachmentId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Badge__c.FieloAlpha__Program__c</field>
+        <field>FieloPLT__Badge__c.FieloPLT__Program__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Banner__c.FieloAlpha__AttachmentId__c</field>
+        <field>FieloPLT__Banner__c.FieloPLT__AttachmentId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Banner__c.FieloAlpha__Category__c</field>
+        <field>FieloPLT__Banner__c.FieloPLT__Category__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Banner__c.FieloAlpha__Component__c</field>
+        <field>FieloPLT__Banner__c.FieloPLT__Component__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Banner__c.FieloAlpha__Description__c</field>
+        <field>FieloPLT__Banner__c.FieloPLT__Description__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Banner__c.FieloAlpha__Event__c</field>
+        <field>FieloPLT__Banner__c.FieloPLT__Event__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Banner__c.FieloAlpha__From__c</field>
+        <field>FieloPLT__Banner__c.FieloPLT__From__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Banner__c.FieloAlpha__HasSegments__c</field>
+        <field>FieloPLT__Banner__c.FieloPLT__HasSegments__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Banner__c.FieloAlpha__Image__c</field>
+        <field>FieloPLT__Banner__c.FieloPLT__Image__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Banner__c.FieloAlpha__Link__c</field>
+        <field>FieloPLT__Banner__c.FieloPLT__Link__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Banner__c.FieloAlpha__Order__c</field>
+        <field>FieloPLT__Banner__c.FieloPLT__Order__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Banner__c.FieloAlpha__OverlayHtml__c</field>
+        <field>FieloPLT__Banner__c.FieloPLT__OverlayHtml__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Banner__c.FieloAlpha__OverlayText__c</field>
+        <field>FieloPLT__Banner__c.FieloPLT__OverlayText__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Banner__c.FieloAlpha__Placement__c</field>
+        <field>FieloPLT__Banner__c.FieloPLT__Placement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Banner__c.FieloAlpha__Program__c</field>
+        <field>FieloPLT__Banner__c.FieloPLT__Program__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Banner__c.FieloAlpha__RedemptionRule__c</field>
+        <field>FieloPLT__Banner__c.FieloPLT__RedemptionRule__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Banner__c.FieloAlpha__To__c</field>
+        <field>FieloPLT__Banner__c.FieloPLT__To__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Banner__c.FieloAlpha__isActive__c</field>
+        <field>FieloPLT__Banner__c.FieloPLT__isActive__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Branch__c.FieloAlpha__Account__c</field>
+        <field>FieloPLT__Branch__c.FieloPLT__Account__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Branch__c.FieloAlpha__City__c</field>
+        <field>FieloPLT__Branch__c.FieloPLT__City__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Branch__c.FieloAlpha__Code__c</field>
+        <field>FieloPLT__Branch__c.FieloPLT__Code__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Branch__c.FieloAlpha__Country__c</field>
+        <field>FieloPLT__Branch__c.FieloPLT__Country__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Branch__c.FieloAlpha__Latitude__c</field>
+        <field>FieloPLT__Branch__c.FieloPLT__Latitude__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Branch__c.FieloAlpha__Longitude__c</field>
+        <field>FieloPLT__Branch__c.FieloPLT__Longitude__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Branch__c.FieloAlpha__Owner__c</field>
+        <field>FieloPLT__Branch__c.FieloPLT__Owner__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Branch__c.FieloAlpha__State__c</field>
+        <field>FieloPLT__Branch__c.FieloPLT__State__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Branch__c.FieloAlpha__Street__c</field>
+        <field>FieloPLT__Branch__c.FieloPLT__Street__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Branch__c.FieloAlpha__ZipCode__c</field>
+        <field>FieloPLT__Branch__c.FieloPLT__ZipCode__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Category__c.FieloAlpha__AttachmentId__c</field>
+        <field>FieloPLT__Category__c.FieloPLT__AttachmentId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Category__c.FieloAlpha__Category_Group_Name__c</field>
+        <field>FieloPLT__Category__c.FieloPLT__Category_Group_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Category__c.FieloAlpha__Category__c</field>
+        <field>FieloPLT__Category__c.FieloPLT__Category__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Category__c.FieloAlpha__Order__c</field>
+        <field>FieloPLT__Category__c.FieloPLT__Order__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Category__c.FieloAlpha__Program__c</field>
+        <field>FieloPLT__Category__c.FieloPLT__Program__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Code__c.FieloAlpha__Transaction__c</field>
+        <field>FieloPLT__Code__c.FieloPLT__Transaction__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Code__c.FieloAlpha__Used__c</field>
+        <field>FieloPLT__Code__c.FieloPLT__Used__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Comment__c.FieloAlpha__AbuseDescription__c</field>
+        <field>FieloPLT__Comment__c.FieloPLT__AbuseDescription__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Comment__c.FieloAlpha__AbuseReporter__c</field>
+        <field>FieloPLT__Comment__c.FieloPLT__AbuseReporter__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Comment__c.FieloAlpha__Body__c</field>
+        <field>FieloPLT__Comment__c.FieloPLT__Body__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Comment__c.FieloAlpha__Member__c</field>
+        <field>FieloPLT__Comment__c.FieloPLT__Member__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Comment__c.FieloAlpha__ParentId__c</field>
+        <field>FieloPLT__Comment__c.FieloPLT__ParentId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Comment__c.FieloAlpha__Status__c</field>
+        <field>FieloPLT__Comment__c.FieloPLT__Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__Account__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__Account__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__BannerPlacement__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__BannerPlacement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__CCS__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__CCS__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__CSSClasses__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__CSSClasses__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__Category__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__Category__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__ContentHTML__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__ContentHTML__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__Content__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__Content__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__Delay__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__Delay__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__Desktop__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__Desktop__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__Display__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__Display__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__FieldSet2__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__FieldSet2__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__FieldSet__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__FieldSet__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__Filter2__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__Filter2__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__FilterBySegment__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__FilterBySegment__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__FilterFormula__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__FilterFormula__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__Filter__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__Filter__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__Height__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__Height__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__Layout__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__Layout__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__MenuRedirect__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__MenuRedirect__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__Mobile__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__Mobile__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__Modal__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__Modal__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__NewsCategory__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__NewsCategory__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__NewsType__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__NewsType__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__OptionalName__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__OptionalName__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__OrderBy__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__OrderBy__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__Order__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__Order__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__PageName__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__PageName__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__Paging__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__Paging__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__Qant__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__Qant__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__Qcolumns__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__Qcolumns__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__Qrows__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__Qrows__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__Section__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__Section__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__Tablet__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__Tablet__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__Tag__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__Tag__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__Text__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__Text__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__TransactionType__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__TransactionType__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__Type__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Component__c.FieloAlpha__Width__c</field>
+        <field>FieloPLT__Component__c.FieloPLT__Width__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Email__c.FieloAlpha__Deleted__c</field>
+        <field>FieloPLT__Email__c.FieloPLT__Deleted__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Email__c.FieloAlpha__Email__c</field>
+        <field>FieloPLT__Email__c.FieloPLT__Email__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Email__c.FieloAlpha__Link__c</field>
+        <field>FieloPLT__Email__c.FieloPLT__Link__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Email__c.FieloAlpha__Member__c</field>
+        <field>FieloPLT__Email__c.FieloPLT__Member__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Email__c.FieloAlpha__Program__c</field>
+        <field>FieloPLT__Email__c.FieloPLT__Program__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Email__c.FieloAlpha__RecipientName__c</field>
+        <field>FieloPLT__Email__c.FieloPLT__RecipientName__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Email__c.FieloAlpha__Type__c</field>
+        <field>FieloPLT__Email__c.FieloPLT__Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloAlpha__Email__c.Link__c</field>
+        <field>FieloPLT__Email__c.Link__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ErrorLog__c.FieloAlpha__LineNumber__c</field>
+        <field>FieloPLT__ErrorLog__c.FieloPLT__LineNumber__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ErrorLog__c.FieloAlpha__Message__c</field>
+        <field>FieloPLT__ErrorLog__c.FieloPLT__Message__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ErrorLog__c.FieloAlpha__StackTrace__c</field>
+        <field>FieloPLT__ErrorLog__c.FieloPLT__StackTrace__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ErrorLog__c.FieloAlpha__Type__c</field>
+        <field>FieloPLT__ErrorLog__c.FieloPLT__Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ErrorLog__c.FieloAlpha__UserId__c</field>
+        <field>FieloPLT__ErrorLog__c.FieloPLT__UserId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Event__c.FieloAlpha__EventType__c</field>
+        <field>FieloPLT__Event__c.FieloPLT__EventType__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Event__c.FieloAlpha__Member__c</field>
+        <field>FieloPLT__Event__c.FieloPLT__Member__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Event__c.FieloAlpha__Type__c</field>
+        <field>FieloPLT__Event__c.FieloPLT__Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Event__c.FieloAlpha__Value__c</field>
+        <field>FieloPLT__Event__c.FieloPLT__Value__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__LevelCriteria__c.FieloAlpha__BooleanValue__c</field>
+        <field>FieloPLT__LevelCriteria__c.FieloPLT__BooleanValue__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__LevelCriteria__c.FieloAlpha__DateValue__c</field>
+        <field>FieloPLT__LevelCriteria__c.FieloPLT__DateValue__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__LevelCriteria__c.FieloAlpha__FieldName__c</field>
+        <field>FieloPLT__LevelCriteria__c.FieloPLT__FieldName__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__LevelCriteria__c.FieloAlpha__FieldType__c</field>
+        <field>FieloPLT__LevelCriteria__c.FieloPLT__FieldType__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__LevelCriteria__c.FieloAlpha__Name__c</field>
+        <field>FieloPLT__LevelCriteria__c.FieloPLT__Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__LevelCriteria__c.FieloAlpha__NumberValue__c</field>
+        <field>FieloPLT__LevelCriteria__c.FieloPLT__NumberValue__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__LevelCriteria__c.FieloAlpha__Operator__c</field>
+        <field>FieloPLT__LevelCriteria__c.FieloPLT__Operator__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__LevelCriteria__c.FieloAlpha__Values__c</field>
+        <field>FieloPLT__LevelCriteria__c.FieloPLT__Values__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Level__c.FieloAlpha__AttachmentId__c</field>
+        <field>FieloPLT__Level__c.FieloPLT__AttachmentId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Level__c.FieloAlpha__Description__c</field>
+        <field>FieloPLT__Level__c.FieloPLT__Description__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Level__c.FieloAlpha__Image__c</field>
+        <field>FieloPLT__Level__c.FieloPLT__Image__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Level__c.FieloAlpha__IsActive__c</field>
+        <field>FieloPLT__Level__c.FieloPLT__IsActive__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Level__c.FieloAlpha__Order__c</field>
+        <field>FieloPLT__Level__c.FieloPLT__Order__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Level__c.FieloAlpha__Program__c</field>
+        <field>FieloPLT__Level__c.FieloPLT__Program__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Like__c.FieloAlpha__Member__c</field>
+        <field>FieloPLT__Like__c.FieloPLT__Member__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Like__c.FieloAlpha__News__c</field>
+        <field>FieloPLT__Like__c.FieloPLT__News__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Like__c.FieloAlpha__ParentId__c</field>
+        <field>FieloPLT__Like__c.FieloPLT__ParentId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Like__c.FieloAlpha__Reward__c</field>
+        <field>FieloPLT__Like__c.FieloPLT__Reward__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__MemberSegment__c.FieloAlpha__MemberSegmentCombination__c</field>
+        <field>FieloPLT__MemberSegment__c.FieloPLT__MemberSegmentCombination__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__Account__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__Account__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__Age__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__Age__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__AgreementReadOnly__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__AgreementReadOnly__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__Agreement__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__Agreement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__ApprovedReadOnly__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__ApprovedReadOnly__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__Approved__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__Approved__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__Birthdate__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__Birthdate__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__Blocked__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__Blocked__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__City__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__City__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__Contact__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__Contact__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__Country__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__Country__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__DaysLastTransaction__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__DaysLastTransaction__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__Email__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__Email__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__EnabledStatusReadOnly__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__EnabledStatusReadOnly__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__Enabled__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__Enabled__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__FieloAccountStatus__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__FieloAccountStatus__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__FirstName__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__FirstName__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__Gender__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__Gender__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__IdentificationCode__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__IdentificationCode__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__IdentificationType__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__IdentificationType__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__Identification__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__Identification__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__IsActive__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__IsActive__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__IsManager__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__IsManager__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__LastName__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__LastName__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__LastTransactionDateReadOnly__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__LastTransactionDateReadOnly__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__LastTransactionDate__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__LastTransactionDate__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__LevelReadOnly__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__LevelReadOnly__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__Level__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__Level__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__LoyaltyAge__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__LoyaltyAge__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__MediaPoints__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__MediaPoints__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__MemberCodeReadOnly__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__MemberCodeReadOnly__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__MemberCode__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__MemberCode__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__MobilePhone__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__MobilePhone__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__Name__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__Neighborhood__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__Neighborhood__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__OrganizationAccountName__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__OrganizationAccountName__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__OrganizationAccount__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__OrganizationAccount__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__OrganizationName__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__OrganizationName__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__Origin__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__Origin__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__Phone__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__Phone__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__PointsReadOnly__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__PointsReadOnly__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__Points__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__Points__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__Preference__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__Preference__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__ProfileCompletenessReadOnly__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__ProfileCompletenessReadOnly__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__ProfileCompleteness__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__ProfileCompleteness__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__Program__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__Program__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__RedeemPointsPercent__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__RedeemPointsPercent__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__ReferalMemberReadOnly__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__ReferalMemberReadOnly__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__ReferalMember__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__ReferalMember__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__RegisteredReadOnly__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__RegisteredReadOnly__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__Registered__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__Registered__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__StartDateReadOnly__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__StartDateReadOnly__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__StartDate__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__StartDate__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__State__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__State__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__Status__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__Street__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__Street__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__Synchronized__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__Synchronized__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__TotalRedeemPoints__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__TotalRedeemPoints__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__TotalRedeemValue__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__TotalRedeemValue__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__TotalRedeem__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__TotalRedeem__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__TotalTransactions__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__TotalTransactions__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__TotalValue__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__TotalValue__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__Type__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__UserReadOnly__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__UserReadOnly__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__User__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__User__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__ZipCode__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__ZipCode__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Member__c.FieloAlpha__imageId__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__imageId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Menu__c.FieloAlpha__AttachmentId__c</field>
+        <field>FieloPLT__Menu__c.FieloPLT__AttachmentId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Menu__c.FieloAlpha__CSSClasses__c</field>
+        <field>FieloPLT__Menu__c.FieloPLT__CSSClasses__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Menu__c.FieloAlpha__CSS__c</field>
+        <field>FieloPLT__Menu__c.FieloPLT__CSS__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Menu__c.FieloAlpha__CustomURL__c</field>
+        <field>FieloPLT__Menu__c.FieloPLT__CustomURL__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Menu__c.FieloAlpha__Description__c</field>
+        <field>FieloPLT__Menu__c.FieloPLT__Description__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Menu__c.FieloAlpha__Desktop__c</field>
+        <field>FieloPLT__Menu__c.FieloPLT__Desktop__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Menu__c.FieloAlpha__ExternalName__c</field>
+        <field>FieloPLT__Menu__c.FieloPLT__ExternalName__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Menu__c.FieloAlpha__Home__c</field>
+        <field>FieloPLT__Menu__c.FieloPLT__Home__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Menu__c.FieloAlpha__ImagePosition__c</field>
+        <field>FieloPLT__Menu__c.FieloPLT__ImagePosition__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Menu__c.FieloAlpha__Image__c</field>
+        <field>FieloPLT__Menu__c.FieloPLT__Image__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Menu__c.FieloAlpha__Layout__c</field>
+        <field>FieloPLT__Menu__c.FieloPLT__Layout__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Menu__c.FieloAlpha__Link__c</field>
+        <field>FieloPLT__Menu__c.FieloPLT__Link__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Menu__c.FieloAlpha__Menu__c</field>
+        <field>FieloPLT__Menu__c.FieloPLT__Menu__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Menu__c.FieloAlpha__Mobile__c</field>
+        <field>FieloPLT__Menu__c.FieloPLT__Mobile__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Menu__c.FieloAlpha__Order__c</field>
+        <field>FieloPLT__Menu__c.FieloPLT__Order__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Menu__c.FieloAlpha__Placement__c</field>
+        <field>FieloPLT__Menu__c.FieloPLT__Placement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Menu__c.FieloAlpha__Program__c</field>
+        <field>FieloPLT__Menu__c.FieloPLT__Program__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Menu__c.FieloAlpha__RedemptionRule__c</field>
+        <field>FieloPLT__Menu__c.FieloPLT__RedemptionRule__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Menu__c.FieloAlpha__SEODescription__c</field>
+        <field>FieloPLT__Menu__c.FieloPLT__SEODescription__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Menu__c.FieloAlpha__SEOKeywords__c</field>
+        <field>FieloPLT__Menu__c.FieloPLT__SEOKeywords__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Menu__c.FieloAlpha__SEOTitle__c</field>
+        <field>FieloPLT__Menu__c.FieloPLT__SEOTitle__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Menu__c.FieloAlpha__Tablet__c</field>
+        <field>FieloPLT__Menu__c.FieloPLT__Tablet__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Menu__c.FieloAlpha__Title__c</field>
+        <field>FieloPLT__Menu__c.FieloPLT__Title__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Menu__c.FieloAlpha__visibility__c</field>
+        <field>FieloPLT__Menu__c.FieloPLT__visibility__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__News__c.FieloAlpha__AttachmentId__c</field>
+        <field>FieloPLT__News__c.FieloPLT__AttachmentId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__News__c.FieloAlpha__Body__c</field>
+        <field>FieloPLT__News__c.FieloPLT__Body__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__News__c.FieloAlpha__CategoryItem__c</field>
+        <field>FieloPLT__News__c.FieloPLT__CategoryItem__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__News__c.FieloAlpha__Component__c</field>
+        <field>FieloPLT__News__c.FieloPLT__Component__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__News__c.FieloAlpha__ExternalLink__c</field>
+        <field>FieloPLT__News__c.FieloPLT__ExternalLink__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__News__c.FieloAlpha__ExternalName__c</field>
+        <field>FieloPLT__News__c.FieloPLT__ExternalName__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__News__c.FieloAlpha__ExtractText__c</field>
+        <field>FieloPLT__News__c.FieloPLT__ExtractText__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__News__c.FieloAlpha__HasSegments__c</field>
+        <field>FieloPLT__News__c.FieloPLT__HasSegments__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__News__c.FieloAlpha__Image__c</field>
+        <field>FieloPLT__News__c.FieloPLT__Image__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__News__c.FieloAlpha__IsActive__c</field>
+        <field>FieloPLT__News__c.FieloPLT__IsActive__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__News__c.FieloAlpha__Order__c</field>
+        <field>FieloPLT__News__c.FieloPLT__Order__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__News__c.FieloAlpha__Program__c</field>
+        <field>FieloPLT__News__c.FieloPLT__Program__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__News__c.FieloAlpha__PublishDate__c</field>
+        <field>FieloPLT__News__c.FieloPLT__PublishDate__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__News__c.FieloAlpha__QuantityComments__c</field>
+        <field>FieloPLT__News__c.FieloPLT__QuantityComments__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__News__c.FieloAlpha__QuantityLikes__c</field>
+        <field>FieloPLT__News__c.FieloPLT__QuantityLikes__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__News__c.FieloAlpha__RedemptionRule__c</field>
+        <field>FieloPLT__News__c.FieloPLT__RedemptionRule__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__News__c.FieloAlpha__Title__c</field>
+        <field>FieloPLT__News__c.FieloPLT__Title__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__News__c.FieloAlpha__Type__c</field>
+        <field>FieloPLT__News__c.FieloPLT__Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__PointAudit__c.FieloAlpha__PointAge__c</field>
+        <field>FieloPLT__PointAudit__c.FieloPLT__PointAge__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__PointAudit__c.FieloAlpha__Quantity__c</field>
+        <field>FieloPLT__PointAudit__c.FieloPLT__Quantity__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__PointAudit__c.FieloAlpha__RedemptionPoints__c</field>
+        <field>FieloPLT__PointAudit__c.FieloPLT__RedemptionPoints__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__PointAudit__c.FieloAlpha__TransactionPoints__c</field>
+        <field>FieloPLT__PointAudit__c.FieloPLT__TransactionPoints__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Point__c.FieloAlpha__ActionDescription__c</field>
+        <field>FieloPLT__Point__c.FieloPLT__ActionDescription__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Point__c.FieloAlpha__Balance__c</field>
+        <field>FieloPLT__Point__c.FieloPLT__Balance__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Point__c.FieloAlpha__ExpirationDate__c</field>
+        <field>FieloPLT__Point__c.FieloPLT__ExpirationDate__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Point__c.FieloAlpha__MemberBalance__c</field>
+        <field>FieloPLT__Point__c.FieloPLT__MemberBalance__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Point__c.FieloAlpha__PointsExpired__c</field>
+        <field>FieloPLT__Point__c.FieloPLT__PointsExpired__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Point__c.FieloAlpha__PointsUsed__c</field>
+        <field>FieloPLT__Point__c.FieloPLT__PointsUsed__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Point__c.FieloAlpha__Points__c</field>
+        <field>FieloPLT__Point__c.FieloPLT__Points__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Point__c.FieloAlpha__Promotion__c</field>
+        <field>FieloPLT__Point__c.FieloPLT__Promotion__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Point__c.FieloAlpha__Redemption__c</field>
+        <field>FieloPLT__Point__c.FieloPLT__Redemption__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Point__c.FieloAlpha__RuleDescription__c</field>
+        <field>FieloPLT__Point__c.FieloPLT__RuleDescription__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Point__c.FieloAlpha__Rule__c</field>
+        <field>FieloPLT__Point__c.FieloPLT__Rule__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Point__c.FieloAlpha__Transaction__c</field>
+        <field>FieloPLT__Point__c.FieloPLT__Transaction__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__BackgroundAttribute__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__BackgroundAttribute__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__BackgroundId__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__BackgroundId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__BodyBackgroundAttribute__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__BodyBackgroundAttribute__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__BodyBackgroundId__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__BodyBackgroundId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__CSS__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__CSS__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__Color01__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__Color01__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__Color02__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__Color02__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__Color03__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__Color03__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__Color04__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__Color04__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__Color05__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__Color05__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__Color06__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__Color06__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__Color07__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__Color07__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__Color08__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__Color08__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__Color09__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__Color09__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__Color10__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__Color10__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__Color11__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__Color11__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__ColorFont01__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__ColorFont01__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__ColorFont02__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__ColorFont02__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__ColorFont03__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__ColorFont03__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__ColorFont04__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__ColorFont04__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__ColorFont05__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__ColorFont05__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__ColorFont06__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__ColorFont06__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__ColorFont07__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__ColorFont07__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__ColorFont08__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__ColorFont08__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__ColorFont09__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__ColorFont09__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__ColorFont10__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__ColorFont10__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__ColorFont11__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__ColorFont11__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__Default__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__Default__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__Font__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__Font__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__FooterBackgroundAttribute__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__FooterBackgroundAttribute__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__FooterBackgroundId__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__FooterBackgroundId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__Footer__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__Footer__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__HTMLHeadLayout__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__HTMLHeadLayout__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__HeaderBackgroundAttribute__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__HeaderBackgroundAttribute__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__Header__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__Header__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__Home__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__Home__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__Logo__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__Logo__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__Menu__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__Menu__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__Program__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__Program__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__SearchRewardMenu__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__SearchRewardMenu__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__Segment__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__Segment__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__Target__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__Target__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__Title__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__Title__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__ProgramLayout__c.FieloAlpha__headerBackgroundId__c</field>
+        <field>FieloPLT__ProgramLayout__c.FieloPLT__headerBackgroundId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__ActiveContactsCalculation__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__ActiveContactsCalculation__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__AgreementFieldSet__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__AgreementFieldSet__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__AgreementView__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__AgreementView__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__AttachmentId__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__AttachmentId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__AuditPoints__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__AuditPoints__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__AutomaticCode__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__AutomaticCode__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__AutonumericMemberCode__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__AutonumericMemberCode__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__BannerInjectQuery__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__BannerInjectQuery__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__CaptchaPublicKey__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__CaptchaPublicKey__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__CaptchaSecretKey__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__CaptchaSecretKey__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__CaptchaURL__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__CaptchaURL__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__Captcha__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__Captcha__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__CategoryInjectQuery__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__CategoryInjectQuery__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__ChangePasswordPage__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__ChangePasswordPage__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__ComponentFieldsQuery__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__ComponentFieldsQuery__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__CustomPage__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__CustomPage__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__CustomVoucherCss__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__CustomVoucherCss__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__Default__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__Default__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__EmailTemplateRegister__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__EmailTemplateRegister__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__ExpirationMode__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__ExpirationMode__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__ExpirationPeriod__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__ExpirationPeriod__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__ExpirationTypeDetail__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__ExpirationTypeDetail__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__FacebookAplicationId__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__FacebookAplicationId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__FacebookAplicationSecret__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__FacebookAplicationSecret__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__FacebookRecomendationDescription__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__FacebookRecomendationDescription__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__FacebookRecomendationName__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__FacebookRecomendationName__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__FacebookRecomendationSubtitle__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__FacebookRecomendationSubtitle__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__Facebook__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__Facebook__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__FieldSet__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__FieldSet__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__FirstBuyIntencive__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__FirstBuyIntencive__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__Google__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__Google__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__HTMLHeadGeneral__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__HTMLHeadGeneral__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__IdentificationCodeType__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__IdentificationCodeType__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__InactiveDays__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__InactiveDays__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__InstructionsReward__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__InstructionsReward__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__InstructionsVoucher__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__InstructionsVoucher__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__Language__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__Language__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__Linkedin__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__Linkedin__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__Locale__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__Locale__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__MemberCodeClass__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__MemberCodeClass__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__MemberCodeClasse__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__MemberCodeClasse__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__MemberCode__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__MemberCode__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__MemberSelectionPage__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__MemberSelectionPage__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__MenuFieldSet__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__MenuFieldSet__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__MetricPeriod__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__MetricPeriod__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__NewsInjectQuery__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__NewsInjectQuery__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__NewsView__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__NewsView__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__NumberOfVoucherDigits__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__NumberOfVoucherDigits__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__OneStepRegistration__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__OneStepRegistration__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__OpenRedemptionDays__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__OpenRedemptionDays__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__PackagePrefix__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__PackagePrefix__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__PointCost__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__PointCost__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__RecentRewardsDays__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__RecentRewardsDays__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__RecommendPage__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__RecommendPage__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__RedemptionApproval__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__RedemptionApproval__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__RedemptionView__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__RedemptionView__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__ReferalTransactionStep1__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__ReferalTransactionStep1__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__ReferalTransactionStep2__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__ReferalTransactionStep2__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__RegisterPage__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__RegisterPage__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__RegistrationTransaction__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__RegistrationTransaction__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__RequestAutorization__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__RequestAutorization__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__RequestTransactionAuthorization__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__RequestTransactionAuthorization__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__RewardInjectQuery__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__RewardInjectQuery__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__RewardView__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__RewardView__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__SearchRewardMenu__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__SearchRewardMenu__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__SegmentCriteriaFields__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__SegmentCriteriaFields__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__SegmentInjectQuery__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__SegmentInjectQuery__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__SenderDisplayName__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__SenderDisplayName__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__ShoppingCartPage__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__ShoppingCartPage__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__ShoppingCart__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__ShoppingCart__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__ShowVoucherCode__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__ShowVoucherCode__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__SiteDomain__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__SiteDomain__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__SiteResourcesMode__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__SiteResourcesMode__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__SiteURL__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__SiteURL__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__Step1RegistrationMessage__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__Step1RegistrationMessage__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__Step2RegistrationMessage__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__Step2RegistrationMessage__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__StockControl__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__StockControl__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__TagInjectQuery__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__TagInjectQuery__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__TimeOutOrphanTransactions__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__TimeOutOrphanTransactions__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__TimeZone__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__TimeZone__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__TransactionProcessOnline__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__TransactionProcessOnline__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__Twitter__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__Twitter__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__UseAgreement__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__UseAgreement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__UserCreationClass__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__UserCreationClass__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.FieloAlpha__ValidatePointsByItem__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__ValidatePointsByItem__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Program__c.RegisterPage__c</field>
+        <field>FieloPLT__Program__c.RegisterPage__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__PromotionRule__c.FieloAlpha__Order__c</field>
+        <field>FieloPLT__PromotionRule__c.FieloPLT__Order__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Promotion__c.FieloAlpha__CountDays__c</field>
+        <field>FieloPLT__Promotion__c.FieloPLT__CountDays__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Promotion__c.FieloAlpha__Description__c</field>
+        <field>FieloPLT__Promotion__c.FieloPLT__Description__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Promotion__c.FieloAlpha__FinalDate__c</field>
+        <field>FieloPLT__Promotion__c.FieloPLT__FinalDate__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Promotion__c.FieloAlpha__InitialDate__c</field>
+        <field>FieloPLT__Promotion__c.FieloPLT__InitialDate__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Promotion__c.FieloAlpha__Program__c</field>
+        <field>FieloPLT__Promotion__c.FieloPLT__Program__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionItem__c.FieloAlpha__CodeRange__c</field>
+        <field>FieloPLT__RedemptionItem__c.FieloPLT__CodeRange__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionItem__c.FieloAlpha__Code__c</field>
+        <field>FieloPLT__RedemptionItem__c.FieloPLT__Code__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionItem__c.FieloAlpha__DeliveredDate__c</field>
+        <field>FieloPLT__RedemptionItem__c.FieloPLT__DeliveredDate__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionItem__c.FieloAlpha__Description__c</field>
+        <field>FieloPLT__RedemptionItem__c.FieloPLT__Description__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionItem__c.FieloAlpha__ExpirationDate__c</field>
+        <field>FieloPLT__RedemptionItem__c.FieloPLT__ExpirationDate__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionItem__c.FieloAlpha__ItemPoints__c</field>
+        <field>FieloPLT__RedemptionItem__c.FieloPLT__ItemPoints__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionItem__c.FieloAlpha__MemberName__c</field>
+        <field>FieloPLT__RedemptionItem__c.FieloPLT__MemberName__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionItem__c.FieloAlpha__NetPoints__c</field>
+        <field>FieloPLT__RedemptionItem__c.FieloPLT__NetPoints__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionItem__c.FieloAlpha__OriginalPoints__c</field>
+        <field>FieloPLT__RedemptionItem__c.FieloPLT__OriginalPoints__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionItem__c.FieloAlpha__Quantity__c</field>
+        <field>FieloPLT__RedemptionItem__c.FieloPLT__Quantity__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionItem__c.FieloAlpha__RewardItemPrice__c</field>
+        <field>FieloPLT__RedemptionItem__c.FieloPLT__RewardItemPrice__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionItem__c.FieloAlpha__RewardName__c</field>
+        <field>FieloPLT__RedemptionItem__c.FieloPLT__RewardName__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionItem__c.FieloAlpha__Reward__c</field>
+        <field>FieloPLT__RedemptionItem__c.FieloPLT__Reward__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionItem__c.FieloAlpha__Status__c</field>
+        <field>FieloPLT__RedemptionItem__c.FieloPLT__Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionItem__c.FieloAlpha__StockMode__c</field>
+        <field>FieloPLT__RedemptionItem__c.FieloPLT__StockMode__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionItem__c.FieloAlpha__UniqueCode__c</field>
+        <field>FieloPLT__RedemptionItem__c.FieloPLT__UniqueCode__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionItem__c.FieloAlpha__VoucherLink__c</field>
+        <field>FieloPLT__RedemptionItem__c.FieloPLT__VoucherLink__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionItem__c.FieloAlpha__isInstantRedemption__c</field>
+        <field>FieloPLT__RedemptionItem__c.FieloPLT__isInstantRedemption__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionRuleCriteria__c.FieloAlpha__BooleanValue__c</field>
+        <field>FieloPLT__RedemptionRuleCriteria__c.FieloPLT__BooleanValue__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionRuleCriteria__c.FieloAlpha__DateValue__c</field>
+        <field>FieloPLT__RedemptionRuleCriteria__c.FieloPLT__DateValue__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionRuleCriteria__c.FieloAlpha__FieldName__c</field>
+        <field>FieloPLT__RedemptionRuleCriteria__c.FieloPLT__FieldName__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionRuleCriteria__c.FieloAlpha__FieldType__c</field>
+        <field>FieloPLT__RedemptionRuleCriteria__c.FieloPLT__FieldType__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionRuleCriteria__c.FieloAlpha__Name__c</field>
+        <field>FieloPLT__RedemptionRuleCriteria__c.FieloPLT__Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionRuleCriteria__c.FieloAlpha__NumberValue__c</field>
+        <field>FieloPLT__RedemptionRuleCriteria__c.FieloPLT__NumberValue__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionRuleCriteria__c.FieloAlpha__Operator__c</field>
+        <field>FieloPLT__RedemptionRuleCriteria__c.FieloPLT__Operator__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionRuleCriteria__c.FieloAlpha__Values__c</field>
+        <field>FieloPLT__RedemptionRuleCriteria__c.FieloPLT__Values__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionRule__c.FieloAlpha__Description__c</field>
+        <field>FieloPLT__RedemptionRule__c.FieloPLT__Description__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionRule__c.FieloAlpha__Order__c</field>
+        <field>FieloPLT__RedemptionRule__c.FieloPLT__Order__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionRule__c.FieloAlpha__Program__c</field>
+        <field>FieloPLT__RedemptionRule__c.FieloPLT__Program__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RedemptionRule__c.FieloAlpha__isActive__c</field>
+        <field>FieloPLT__RedemptionRule__c.FieloPLT__isActive__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Redemption__c.FieloAlpha__Description__c</field>
+        <field>FieloPLT__Redemption__c.FieloPLT__Description__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Redemption__c.FieloAlpha__Origin__c</field>
+        <field>FieloPLT__Redemption__c.FieloPLT__Origin__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Redemption__c.FieloAlpha__PointsDiscount__c</field>
+        <field>FieloPLT__Redemption__c.FieloPLT__PointsDiscount__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Redemption__c.FieloAlpha__Points__c</field>
+        <field>FieloPLT__Redemption__c.FieloPLT__Points__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Redemption__c.FieloAlpha__Price__c</field>
+        <field>FieloPLT__Redemption__c.FieloPLT__Price__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Redemption__c.FieloAlpha__Processed__c</field>
+        <field>FieloPLT__Redemption__c.FieloPLT__Processed__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Redemption__c.FieloAlpha__Status__c</field>
+        <field>FieloPLT__Redemption__c.FieloPLT__Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Redemption__c.FieloAlpha__TotalItems__c</field>
+        <field>FieloPLT__Redemption__c.FieloPLT__TotalItems__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Redemption__c.FieloAlpha__Transaction__c</field>
+        <field>FieloPLT__Redemption__c.FieloPLT__Transaction__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RewardItem__c.FieloAlpha__Code__c</field>
+        <field>FieloPLT__RewardItem__c.FieloPLT__Code__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RewardItem__c.FieloAlpha__IsCondenser__c</field>
+        <field>FieloPLT__RewardItem__c.FieloPLT__IsCondenser__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RewardItem__c.FieloAlpha__Quantity__c</field>
+        <field>FieloPLT__RewardItem__c.FieloPLT__Quantity__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RewardItem__c.FieloAlpha__RedemptionItem__c</field>
+        <field>FieloPLT__RewardItem__c.FieloPLT__RedemptionItem__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RewardItem__c.FieloAlpha__Status__c</field>
+        <field>FieloPLT__RewardItem__c.FieloPLT__Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RewardTag__c.FieloAlpha__ExpirationDate__c</field>
+        <field>FieloPLT__RewardTag__c.FieloPLT__ExpirationDate__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__AttachmentId__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__AttachmentId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__AvailableDays__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__AvailableDays__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__Category__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__Category__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__CondenserId__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__CondenserId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__Description__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__Description__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__ExpirationDate__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__ExpirationDate__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__ExternalName__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__ExternalName__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__HasSegments__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__HasSegments__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__Image__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__Image__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__InstructionsRichText__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__InstructionsRichText__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__Instructions__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__Instructions__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__Intangible__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__Intangible__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__ItemsAvailableReadOnly__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__ItemsAvailableReadOnly__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__PointsCant__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__PointsCant__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__Price__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__Price__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__Program__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__Program__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__QuantityAvailable__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__QuantityAvailable__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__QuantityComments__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__QuantityComments__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__QuantityLikes__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__QuantityLikes__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__QuantityRedeem__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__QuantityRedeem__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__RedemptionRule__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__RedemptionRule__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__RewardFacilitator__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__RewardFacilitator__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__StockWarning__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__StockWarning__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__Stock__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__Stock__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__UniqueVoucher__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__UniqueVoucher__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__VoucherCreationMode__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__VoucherCreationMode__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Reward__c.FieloAlpha__isInstantReward__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__isInstantReward__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RuleCriteria__c.FieloAlpha__BooleanValue__c</field>
+        <field>FieloPLT__RuleCriteria__c.FieloPLT__BooleanValue__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RuleCriteria__c.FieloAlpha__DateValue__c</field>
+        <field>FieloPLT__RuleCriteria__c.FieloPLT__DateValue__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RuleCriteria__c.FieloAlpha__Description__c</field>
+        <field>FieloPLT__RuleCriteria__c.FieloPLT__Description__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RuleCriteria__c.FieloAlpha__FieldType__c</field>
+        <field>FieloPLT__RuleCriteria__c.FieloPLT__FieldType__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RuleCriteria__c.FieloAlpha__Field__c</field>
+        <field>FieloPLT__RuleCriteria__c.FieloPLT__Field__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RuleCriteria__c.FieloAlpha__Name__c</field>
+        <field>FieloPLT__RuleCriteria__c.FieloPLT__Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RuleCriteria__c.FieloAlpha__NumberValue__c</field>
+        <field>FieloPLT__RuleCriteria__c.FieloPLT__NumberValue__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RuleCriteria__c.FieloAlpha__Operator__c</field>
+        <field>FieloPLT__RuleCriteria__c.FieloPLT__Operator__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RuleCriteria__c.FieloAlpha__Order__c</field>
+        <field>FieloPLT__RuleCriteria__c.FieloPLT__Order__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RuleCriteria__c.FieloAlpha__Values__c</field>
+        <field>FieloPLT__RuleCriteria__c.FieloPLT__Values__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RuleTrigger__c.FieloAlpha__ConditionField__c</field>
+        <field>FieloPLT__RuleTrigger__c.FieloPLT__ConditionField__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RuleTrigger__c.FieloAlpha__ConditionValue__c</field>
+        <field>FieloPLT__RuleTrigger__c.FieloPLT__ConditionValue__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RuleTrigger__c.FieloAlpha__Description__c</field>
+        <field>FieloPLT__RuleTrigger__c.FieloPLT__Description__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RuleTrigger__c.FieloAlpha__DynamicTargetMember__c</field>
+        <field>FieloPLT__RuleTrigger__c.FieloPLT__DynamicTargetMember__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RuleTrigger__c.FieloAlpha__Object__c</field>
+        <field>FieloPLT__RuleTrigger__c.FieloPLT__Object__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__RuleTrigger__c.FieloAlpha__Prefix__c</field>
+        <field>FieloPLT__RuleTrigger__c.FieloPLT__Prefix__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Rule__c.FieloAlpha__ActionDescription__c</field>
+        <field>FieloPLT__Rule__c.FieloPLT__ActionDescription__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Rule__c.FieloAlpha__Action__c</field>
+        <field>FieloPLT__Rule__c.FieloPLT__Action__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Rule__c.FieloAlpha__BadgeMode__c</field>
+        <field>FieloPLT__Rule__c.FieloPLT__BadgeMode__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Rule__c.FieloAlpha__ConvertionTypeReward__c</field>
+        <field>FieloPLT__Rule__c.FieloPLT__ConvertionTypeReward__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Rule__c.FieloAlpha__ConvertionTypeTransaction__c</field>
+        <field>FieloPLT__Rule__c.FieloPLT__ConvertionTypeTransaction__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Rule__c.FieloAlpha__ConvertionValue__c</field>
+        <field>FieloPLT__Rule__c.FieloPLT__ConvertionValue__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Rule__c.FieloAlpha__Description__c</field>
+        <field>FieloPLT__Rule__c.FieloPLT__Description__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Rule__c.FieloAlpha__ExpirationMonth__c</field>
+        <field>FieloPLT__Rule__c.FieloPLT__ExpirationMonth__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Rule__c.FieloAlpha__FieldNameBadge__c</field>
+        <field>FieloPLT__Rule__c.FieloPLT__FieldNameBadge__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Rule__c.FieloAlpha__FieldNameReward__c</field>
+        <field>FieloPLT__Rule__c.FieloPLT__FieldNameReward__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Rule__c.FieloAlpha__FieldNameTransaction__c</field>
+        <field>FieloPLT__Rule__c.FieloPLT__FieldNameTransaction__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Rule__c.FieloAlpha__InstantBadge__c</field>
+        <field>FieloPLT__Rule__c.FieloPLT__InstantBadge__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Rule__c.FieloAlpha__InstantReward__c</field>
+        <field>FieloPLT__Rule__c.FieloPLT__InstantReward__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Rule__c.FieloAlpha__IsActive__c</field>
+        <field>FieloPLT__Rule__c.FieloPLT__IsActive__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Rule__c.FieloAlpha__LogicalExpression__c</field>
+        <field>FieloPLT__Rule__c.FieloPLT__LogicalExpression__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Rule__c.FieloAlpha__Program__c</field>
+        <field>FieloPLT__Rule__c.FieloPLT__Program__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Rule__c.FieloAlpha__RelatedList__c</field>
+        <field>FieloPLT__Rule__c.FieloPLT__RelatedList__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Rule__c.FieloAlpha__StockControl__c</field>
+        <field>FieloPLT__Rule__c.FieloPLT__StockControl__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Rule__c.FieloAlpha__TargetMember__c</field>
+        <field>FieloPLT__Rule__c.FieloPLT__TargetMember__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Rule__c.FieloAlpha__Type__c</field>
+        <field>FieloPLT__Rule__c.FieloPLT__Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Section__c.FieloAlpha__CSSClasses__c</field>
+        <field>FieloPLT__Section__c.FieloPLT__CSSClasses__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Section__c.FieloAlpha__ElementType__c</field>
+        <field>FieloPLT__Section__c.FieloPLT__ElementType__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Section__c.FieloAlpha__IsBody__c</field>
+        <field>FieloPLT__Section__c.FieloPLT__IsBody__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Section__c.FieloAlpha__Menu__c</field>
+        <field>FieloPLT__Section__c.FieloPLT__Menu__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Section__c.FieloAlpha__Order__c</field>
+        <field>FieloPLT__Section__c.FieloPLT__Order__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Section__c.FieloAlpha__Orientation__c</field>
+        <field>FieloPLT__Section__c.FieloPLT__Orientation__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Section__c.FieloAlpha__Parent__c</field>
+        <field>FieloPLT__Section__c.FieloPLT__Parent__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Section__c.FieloAlpha__Type__c</field>
+        <field>FieloPLT__Section__c.FieloPLT__Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Section__c.FieloAlpha__Width__c</field>
+        <field>FieloPLT__Section__c.FieloPLT__Width__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__SegmentDomain__c.FieloAlpha__Banner__c</field>
+        <field>FieloPLT__SegmentDomain__c.FieloPLT__Banner__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__SegmentDomain__c.FieloAlpha__Menu__c</field>
+        <field>FieloPLT__SegmentDomain__c.FieloPLT__Menu__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__SegmentDomain__c.FieloAlpha__News__c</field>
+        <field>FieloPLT__SegmentDomain__c.FieloPLT__News__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__SegmentDomain__c.FieloAlpha__Promotion__c</field>
+        <field>FieloPLT__SegmentDomain__c.FieloPLT__Promotion__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__SegmentDomain__c.FieloAlpha__Reward__c</field>
+        <field>FieloPLT__SegmentDomain__c.FieloPLT__Reward__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__SegmentDomain__c.Navigation__c</field>
+        <field>FieloPLT__SegmentDomain__c.Navigation__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__TagItem__c.FieloAlpha__Banner__c</field>
+        <field>FieloPLT__TagItem__c.FieloPLT__Banner__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__TagItem__c.FieloAlpha__News__c</field>
+        <field>FieloPLT__TagItem__c.FieloPLT__News__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Tag__c.FieloAlpha__AttachmentId__c</field>
+        <field>FieloPLT__Tag__c.FieloPLT__AttachmentId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Tag__c.FieloAlpha__Filter__c</field>
+        <field>FieloPLT__Tag__c.FieloPLT__Filter__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Tag__c.FieloAlpha__Image__c</field>
+        <field>FieloPLT__Tag__c.FieloPLT__Image__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Tag__c.FieloAlpha__Order__c</field>
+        <field>FieloPLT__Tag__c.FieloPLT__Order__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Tag__c.FieloAlpha__Program__c</field>
+        <field>FieloPLT__Tag__c.FieloPLT__Program__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Tag__c.FieloAlpha__Tag__c</field>
+        <field>FieloPLT__Tag__c.FieloPLT__Tag__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Tag__c.FieloAlpha__TotalRewards__c</field>
+        <field>FieloPLT__Tag__c.FieloPLT__TotalRewards__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__Action__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__Action__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__Adjust__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__Adjust__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__ApprovedReadOnly__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__ApprovedReadOnly__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__Approved__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__Approved__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__AttachmentId__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__AttachmentId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__BranchCode__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__BranchCode__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__Branch__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__Branch__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__CodeItem__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__CodeItem__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__Code__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__Code__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__Cost__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__Cost__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__DateReadOnly__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__DateReadOnly__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__Date__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__Event__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__Event__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__IdentificationType__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__IdentificationType__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__Location__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__Location__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__MemberCode__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__MemberCode__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__MemberReadOnly__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__MemberReadOnly__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__Member__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__Member__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__Offline__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__Offline__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__PointCost__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__PointCost__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__PointsReadOnly__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__PointsReadOnly__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__Points__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__Points__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__ProcessedStatusReadOnly__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__ProcessedStatusReadOnly__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__Processed__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__Processed__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__Referral__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__Referral__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__Revenue__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__Revenue__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__Reverted__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__Reverted__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__Reward__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__Reward__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__SkipEngine__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__SkipEngine__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__StatusReadOnly__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__StatusReadOnly__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__Status__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__TransactionId__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__TransactionId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__Type__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloAlpha__Transaction__c.FieloAlpha__Value__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__Value__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3539,7 +3539,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__Action__c</object>
+        <object>FieloPLT__Action__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3548,7 +3548,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__Agreement__c</object>
+        <object>FieloPLT__Agreement__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3557,7 +3557,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__BadgeMember__c</object>
+        <object>FieloPLT__BadgeMember__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3566,7 +3566,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__Badge__c</object>
+        <object>FieloPLT__Badge__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3575,7 +3575,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__Banner__c</object>
+        <object>FieloPLT__Banner__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3584,7 +3584,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__Branch__c</object>
+        <object>FieloPLT__Branch__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3593,7 +3593,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__Category__c</object>
+        <object>FieloPLT__Category__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3602,7 +3602,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__Code__c</object>
+        <object>FieloPLT__Code__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3611,7 +3611,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__Comment__c</object>
+        <object>FieloPLT__Comment__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3620,7 +3620,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__Component__c</object>
+        <object>FieloPLT__Component__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3629,7 +3629,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__Email__c</object>
+        <object>FieloPLT__Email__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3638,7 +3638,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__ErrorLog__c</object>
+        <object>FieloPLT__ErrorLog__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3647,7 +3647,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__Event__c</object>
+        <object>FieloPLT__Event__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3656,7 +3656,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__LevelCriteria__c</object>
+        <object>FieloPLT__LevelCriteria__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3665,7 +3665,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__Level__c</object>
+        <object>FieloPLT__Level__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3674,7 +3674,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__Like__c</object>
+        <object>FieloPLT__Like__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3683,7 +3683,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__MemberSegment__c</object>
+        <object>FieloPLT__MemberSegment__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3692,7 +3692,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__Member__c</object>
+        <object>FieloPLT__Member__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3701,7 +3701,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__Menu__c</object>
+        <object>FieloPLT__Menu__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3710,7 +3710,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__News__c</object>
+        <object>FieloPLT__News__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3719,7 +3719,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__PointAudit__c</object>
+        <object>FieloPLT__PointAudit__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3728,7 +3728,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__Point__c</object>
+        <object>FieloPLT__Point__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3737,7 +3737,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__ProgramLayout__c</object>
+        <object>FieloPLT__ProgramLayout__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3746,7 +3746,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__Program__c</object>
+        <object>FieloPLT__Program__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3755,7 +3755,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__PromotionRule__c</object>
+        <object>FieloPLT__PromotionRule__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3764,7 +3764,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__Promotion__c</object>
+        <object>FieloPLT__Promotion__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3773,7 +3773,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__RedemptionItem__c</object>
+        <object>FieloPLT__RedemptionItem__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3782,7 +3782,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__RedemptionRuleCriteria__c</object>
+        <object>FieloPLT__RedemptionRuleCriteria__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3791,7 +3791,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__RedemptionRule__c</object>
+        <object>FieloPLT__RedemptionRule__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3800,7 +3800,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__Redemption__c</object>
+        <object>FieloPLT__Redemption__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3809,7 +3809,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__RewardItem__c</object>
+        <object>FieloPLT__RewardItem__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3818,7 +3818,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__RewardTag__c</object>
+        <object>FieloPLT__RewardTag__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3827,7 +3827,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__RewardWish__c</object>
+        <object>FieloPLT__RewardWish__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3836,7 +3836,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__Reward__c</object>
+        <object>FieloPLT__Reward__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3845,7 +3845,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__RuleCriteria__c</object>
+        <object>FieloPLT__RuleCriteria__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3854,7 +3854,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__RuleTrigger__c</object>
+        <object>FieloPLT__RuleTrigger__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3863,7 +3863,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__Rule__c</object>
+        <object>FieloPLT__Rule__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3872,7 +3872,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__Section__c</object>
+        <object>FieloPLT__Section__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3881,7 +3881,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__SegmentDomain__c</object>
+        <object>FieloPLT__SegmentDomain__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3890,7 +3890,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__TagItem__c</object>
+        <object>FieloPLT__TagItem__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3899,7 +3899,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__Tag__c</object>
+        <object>FieloPLT__Tag__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3908,7 +3908,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloAlpha__Transaction__c</object>
+        <object>FieloPLT__Transaction__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -4124,189 +4124,189 @@
     </pageAccesses>
     <recordTypeVisibilities>
         <default>true</default>
-        <recordType>FieloAlpha__Agreement__c.FieloAlpha__Default</recordType>
+        <recordType>FieloPLT__Agreement__c.FieloPLT__Default</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>FieloAlpha__Agreement__c.FieloAlpha__Draft</recordType>
+        <recordType>FieloPLT__Agreement__c.FieloPLT__Draft</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <recordType>FieloAlpha__Banner__c.FieloAlpha__Component</recordType>
+        <recordType>FieloPLT__Banner__c.FieloPLT__Component</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <recordType>FieloAlpha__Category__c.FieloAlpha__CategoryItem</recordType>
+        <recordType>FieloPLT__Category__c.FieloPLT__CategoryItem</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>FieloAlpha__Category__c.FieloAlpha__Category_Group</recordType>
+        <recordType>FieloPLT__Category__c.FieloPLT__Category_Group</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <recordType>FieloAlpha__Component__c.FieloAlpha__Badges</recordType>
+        <recordType>FieloPLT__Component__c.FieloPLT__Badges</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>FieloAlpha__Component__c.FieloAlpha__Banner</recordType>
+        <recordType>FieloPLT__Component__c.FieloPLT__Banner</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>FieloAlpha__Component__c.FieloAlpha__BannerWidget</recordType>
+        <recordType>FieloPLT__Component__c.FieloPLT__BannerWidget</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>FieloAlpha__Component__c.FieloAlpha__Branchs</recordType>
+        <recordType>FieloPLT__Component__c.FieloPLT__Branchs</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>FieloAlpha__Component__c.FieloAlpha__Catalog</recordType>
+        <recordType>FieloPLT__Component__c.FieloPLT__Catalog</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>FieloAlpha__Component__c.FieloAlpha__Categories</recordType>
+        <recordType>FieloPLT__Component__c.FieloPLT__Categories</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>FieloAlpha__Component__c.FieloAlpha__Content</recordType>
+        <recordType>FieloPLT__Component__c.FieloPLT__Content</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>FieloAlpha__Component__c.FieloAlpha__ContentWidget</recordType>
+        <recordType>FieloPLT__Component__c.FieloPLT__ContentWidget</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>FieloAlpha__Component__c.FieloAlpha__GetPoints</recordType>
+        <recordType>FieloPLT__Component__c.FieloPLT__GetPoints</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>FieloAlpha__Component__c.FieloAlpha__IncludePage</recordType>
+        <recordType>FieloPLT__Component__c.FieloPLT__IncludePage</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>FieloAlpha__Component__c.FieloAlpha__Login</recordType>
+        <recordType>FieloPLT__Component__c.FieloPLT__Login</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>FieloAlpha__Component__c.FieloAlpha__Menu</recordType>
+        <recordType>FieloPLT__Component__c.FieloPLT__Menu</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>FieloAlpha__Component__c.FieloAlpha__News</recordType>
+        <recordType>FieloPLT__Component__c.FieloPLT__News</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>FieloAlpha__Component__c.FieloAlpha__Profile</recordType>
+        <recordType>FieloPLT__Component__c.FieloPLT__Profile</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>FieloAlpha__Component__c.FieloAlpha__Redemptions</recordType>
+        <recordType>FieloPLT__Component__c.FieloPLT__Redemptions</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>FieloAlpha__Component__c.FieloAlpha__Register</recordType>
+        <recordType>FieloPLT__Component__c.FieloPLT__Register</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>FieloAlpha__Component__c.FieloAlpha__Transactions</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
-        <recordType>FieloAlpha__Level__c.FieloAlpha__Active</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>FieloAlpha__Level__c.FieloAlpha__Inactive</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>true</default>
-        <recordType>FieloAlpha__Member__c.FieloAlpha__IndividualAccount</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>FieloAlpha__Member__c.FieloAlpha__OrganizationAccount</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>FieloAlpha__Member__c.FieloAlpha__OrganizationContributor</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>true</default>
-        <recordType>FieloAlpha__Menu__c.FieloAlpha__Menu</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>FieloAlpha__Menu__c.FieloAlpha__SubMenu</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>true</default>
-        <recordType>FieloAlpha__Promotion__c.FieloAlpha__Standard_Promotion</recordType>
+        <recordType>FieloPLT__Component__c.FieloPLT__Transactions</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
         <personAccountDefault>true</personAccountDefault>
-        <recordType>FieloAlpha__RedemptionRule__c.FieloAlpha__Dynamic</recordType>
+        <recordType>FieloPLT__Level__c.FieloPLT__Active</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>FieloAlpha__RedemptionRule__c.FieloAlpha__Manual</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>FieloAlpha__RedemptionRule__c.FieloAlpha__Private</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>FieloAlpha__RedemptionRule__c.FieloAlpha__Public</recordType>
+        <recordType>FieloPLT__Level__c.FieloPLT__Inactive</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <recordType>FieloAlpha__Rule__c.FieloAlpha__Standard_Rule</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>true</default>
-        <recordType>FieloAlpha__Tag__c.FieloAlpha__Dynamic</recordType>
+        <recordType>FieloPLT__Member__c.FieloPLT__IndividualAccount</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>FieloAlpha__Tag__c.FieloAlpha__Standard</recordType>
+        <recordType>FieloPLT__Member__c.FieloPLT__OrganizationAccount</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>FieloPLT__Member__c.FieloPLT__OrganizationContributor</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>FieloPLT__Menu__c.FieloPLT__Menu</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>FieloPLT__Menu__c.FieloPLT__SubMenu</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>FieloPLT__Promotion__c.FieloPLT__Standard_Promotion</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <personAccountDefault>true</personAccountDefault>
+        <recordType>FieloPLT__RedemptionRule__c.FieloPLT__Dynamic</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>FieloPLT__RedemptionRule__c.FieloPLT__Manual</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>FieloPLT__RedemptionRule__c.FieloPLT__Private</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>FieloPLT__RedemptionRule__c.FieloPLT__Public</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>FieloPLT__Rule__c.FieloPLT__Standard_Rule</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>FieloPLT__Tag__c.FieloPLT__Dynamic</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>FieloPLT__Tag__c.FieloPLT__Standard</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>

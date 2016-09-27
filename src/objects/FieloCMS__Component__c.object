@@ -168,7 +168,7 @@ Default Account: The member will be related to an specific default CRM account</
         <externalId>false</externalId>
         <inlineHelpText>If a specific category is selected, the component will only show records with the category.</inlineHelpText>
         <label>Category</label>
-        <referenceTo>FieloAlpha__Category__c</referenceTo>
+        <referenceTo>FieloPLT__Category__c</referenceTo>
         <relationshipLabel>Components</relationshipLabel>
         <relationshipName>Components2</relationshipName>
         <required>false</required>
@@ -669,7 +669,7 @@ Default Account: The member will be related to an specific default CRM account</
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Program</label>
-        <referenceTo>FieloAlpha__Program__c</referenceTo>
+        <referenceTo>FieloPLT__Program__c</referenceTo>
         <relationshipLabel>Components</relationshipLabel>
         <relationshipName>Components</relationshipName>
         <required>false</required>
@@ -705,7 +705,7 @@ Default Account: The member will be related to an specific default CRM account</
         <externalId>false</externalId>
         <inlineHelpText>If a specific tag is selected, the component will only show records with the tag.</inlineHelpText>
         <label>Tag</label>
-        <referenceTo>FieloAlpha__Tag__c</referenceTo>
+        <referenceTo>FieloPLT__Tag__c</referenceTo>
         <relationshipLabel>Components</relationshipLabel>
         <relationshipName>Components2</relationshipName>
         <required>false</required>

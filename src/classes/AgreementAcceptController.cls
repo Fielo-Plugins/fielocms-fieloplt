@@ -1,22 +1,22 @@
 public with sharing class AgreementAcceptController {
 
-    public FieloAlpha__Agreement__c agreement {get;set;}
+    public FieloPLT__Agreement__c agreement {get;set;}
     public Boolean acceptAgreement {get;set;}
 
-    private FieloAlpha__Member__c member;
+    private FieloPLT__Member__c member;
 
     public AgreementAcceptController() {
         acceptAgreement = false;
         //looks for the current agreement and the logged in user
-        member = [SELECT Id, FieloAlpha__Program__c FROM FieloAlpha__Member__c WHERE Id =: MemberService.getCurrentMemberId()];        
-        agreement = [SELECT Id, FieloAlpha__Agreement__c FROM FieloAlpha__Agreement__c WHERE FieloAlpha__Status__c = 'Current' AND FieloAlpha__Program__c =: member.FieloAlpha__Program__c LIMIT 1];
+        member = [SELECT Id, FieloPLT__Program__c FROM FieloPLT__Member__c WHERE Id =: MemberService.getCurrentMemberId()];        
+        agreement = [SELECT Id, FieloPLT__Agreement__c FROM FieloPLT__Agreement__c WHERE FieloPLT__Status__c = 'Current' AND FieloPLT__Program__c =: member.FieloPLT__Program__c LIMIT 1];
     }
 
     public PageReference doSave(){
         //if the member exists and have accepted the agreement then updates the agreement for the member
         if(acceptAgreement){
-            member.FieloAlpha__Agreement__c = agreement.Id;
-            FieloAlpha.OrganizationUtil.validateReadOnlyFieldsMember(false);
+            member.FieloPLT__Agreement__c = agreement.Id;
+            FieloPLT.OrganizationUtil.validateReadOnlyFieldsMember(false);
             try{
                 upsert member;
             }catch(DMLException e){

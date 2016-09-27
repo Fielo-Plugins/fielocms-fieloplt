@@ -1,14 +1,14 @@
 public class ProgramService{
-	private static FieloAlpha__Program__c currentProgram;
-	public static FieloAlpha__Program__c getCurrentProgram(){
+	private static FieloPLT__Program__c currentProgram;
+	public static FieloPLT__Program__c getCurrentProgram(){
 		if(currentProgram == null){
 			Id currentMemberId = MemberService.getCurrentMemberId();
 			//si es guest tomo el pr
 			if(currentMemberId == null){				
-				currentProgram = FieloAlpha.ProgramUtil.getProgramByDomain();
+				currentProgram = FieloPLT.ProgramUtil.getProgramByDomain();
 			}else{
-				Id programId = [SELECT FieloAlpha__Program__c FROM FieloAlpha__Member__c WHERE Id =: currentMemberId].FieloAlpha__Program__c;
-				currentProgram = FieloAlpha.ProgramUtil.getProgram(programId);
+				Id programId = [SELECT FieloPLT__Program__c FROM FieloPLT__Member__c WHERE Id =: currentMemberId].FieloPLT__Program__c;
+				currentProgram = FieloPLT.ProgramUtil.getProgram(programId);
 			}
 		}
 		return currentProgram;

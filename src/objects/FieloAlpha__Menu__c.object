@@ -59,7 +59,7 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>FieloAlpha__AttachmentId__c</fullName>
+        <fullName>FieloPLT__AttachmentId__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Attachment Id</label>
@@ -70,7 +70,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__CSSClasses__c</fullName>
+        <fullName>FieloPLT__CSSClasses__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>CSS Classes</label>
@@ -81,7 +81,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__CSS__c</fullName>
+        <fullName>FieloPLT__CSS__c</fullName>
         <deprecated>false</deprecated>
         <description>CSS code to modify the look and formatting of this menu.</description>
         <externalId>false</externalId>
@@ -93,7 +93,7 @@
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__CustomURL__c</fullName>
+        <fullName>FieloPLT__CustomURL__c</fullName>
         <deprecated>false</deprecated>
         <description>An external or internal link to a customized page.</description>
         <externalId>false</externalId>
@@ -104,7 +104,7 @@
         <type>Url</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Description__c</fullName>
+        <fullName>FieloPLT__Description__c</fullName>
         <deprecated>false</deprecated>
         <description>A description of this menu, for your use only.</description>
         <externalId>false</externalId>
@@ -115,7 +115,7 @@
         <type>TextArea</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Desktop__c</fullName>
+        <fullName>FieloPLT__Desktop__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <description>Checking this option will make this menu show in a desktop computer.</description>
@@ -126,7 +126,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ExternalName__c</fullName>
+        <fullName>FieloPLT__ExternalName__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>External Name</label>
@@ -137,7 +137,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Home__c</fullName>
+        <fullName>FieloPLT__Home__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>Checking this option will make this the home page of the members&apos; portal.</description>
@@ -148,7 +148,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ImagePosition__c</fullName>
+        <fullName>FieloPLT__ImagePosition__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Image Position</label>
@@ -175,10 +175,10 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Image__c</fullName>
+        <fullName>FieloPLT__Image__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>IMAGE(&quot;/servlet/servlet.FileDownload?file=&quot;+FieloAlpha__AttachmentId__c, &quot;photo&quot;,50, 50)</formula>
+        <formula>IMAGE(&quot;/servlet/servlet.FileDownload?file=&quot;+FieloPLT__AttachmentId__c, &quot;photo&quot;,50, 50)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Image</label>
         <required>false</required>
@@ -187,7 +187,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Layout__c</fullName>
+        <fullName>FieloPLT__Layout__c</fullName>
         <deprecated>false</deprecated>
         <description>This field will be populated by the trigger and it will contain the CSS classes depending on the visibility of the Menu by device.</description>
         <externalId>false</externalId>
@@ -215,7 +215,7 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Link__c</fullName>
+        <fullName>FieloPLT__Link__c</fullName>
         <deprecated>false</deprecated>
         <description>Field to indicate if the menu has components</description>
         <externalId>false</externalId>
@@ -235,13 +235,13 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Menu__c</fullName>
+        <fullName>FieloPLT__Menu__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>Lookup to the father menu</description>
         <externalId>false</externalId>
         <label>Menu</label>
-        <referenceTo>FieloAlpha__Menu__c</referenceTo>
+        <referenceTo>FieloPLT__Menu__c</referenceTo>
         <relationshipLabel>Sub Menus</relationshipLabel>
         <relationshipName>Menu</relationshipName>
         <required>false</required>
@@ -249,7 +249,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Mobile__c</fullName>
+        <fullName>FieloPLT__Mobile__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <description>Checking this option will make this menu show in a cell phone.</description>
@@ -260,7 +260,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Order__c</fullName>
+        <fullName>FieloPLT__Order__c</fullName>
         <deprecated>false</deprecated>
         <description>The order in which this menu will show in the members&apos; portal.</description>
         <externalId>false</externalId>
@@ -274,7 +274,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Placement__c</fullName>
+        <fullName>FieloPLT__Placement__c</fullName>
         <deprecated>false</deprecated>
         <description>The placement of this menu. It can be Top, Main or Footer.</description>
         <externalId>false</externalId>
@@ -299,14 +299,14 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Program__c</fullName>
+        <fullName>FieloPLT__Program__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>The program to which this menu belongs.</description>
         <externalId>false</externalId>
         <inlineHelpText>Select the program to which this menu belongs.</inlineHelpText>
         <label>Program</label>
-        <referenceTo>FieloAlpha__Program__c</referenceTo>
+        <referenceTo>FieloPLT__Program__c</referenceTo>
         <relationshipLabel>Menu</relationshipLabel>
         <relationshipName>Menu</relationshipName>
         <required>false</required>
@@ -314,14 +314,14 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RedemptionRule__c</fullName>
+        <fullName>FieloPLT__RedemptionRule__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>This field is being used to determine if a Menu has segments. When this lookup is null, it doesn&apos;t have any Segment Domain.</description>
         <externalId>false</externalId>
         <inlineHelpText>Check this box in order to activate this content feed.</inlineHelpText>
         <label>Has segments</label>
-        <referenceTo>FieloAlpha__RedemptionRule__c</referenceTo>
+        <referenceTo>FieloPLT__RedemptionRule__c</referenceTo>
         <relationshipLabel>Menu</relationshipLabel>
         <relationshipName>Menu</relationshipName>
         <required>false</required>
@@ -329,7 +329,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__SEODescription__c</fullName>
+        <fullName>FieloPLT__SEODescription__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>SEO Description</label>
@@ -339,7 +339,7 @@
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__SEOKeywords__c</fullName>
+        <fullName>FieloPLT__SEOKeywords__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>SEO Keywords</label>
@@ -348,7 +348,7 @@
         <type>TextArea</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__SEOTitle__c</fullName>
+        <fullName>FieloPLT__SEOTitle__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>SEO Title</label>
@@ -359,7 +359,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Tablet__c</fullName>
+        <fullName>FieloPLT__Tablet__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <description>Checking this option will make this menu show in a tablet computer.</description>
@@ -370,7 +370,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Title__c</fullName>
+        <fullName>FieloPLT__Title__c</fullName>
         <deprecated>false</deprecated>
         <description>A title that will show on top of the page.</description>
         <externalId>false</externalId>
@@ -383,7 +383,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__visibility__c</fullName>
+        <fullName>FieloPLT__visibility__c</fullName>
         <deprecated>false</deprecated>
         <description>Who will be able to see this menu: nobody, everybody or only logged in users.</description>
         <externalId>false</externalId>
@@ -413,16 +413,16 @@
     </fields>
     <label>Menu</label>
     <listViews>
-        <fullName>FieloAlpha__All_Menu</fullName>
+        <fullName>FieloPLT__All_Menu</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Program__c</columns>
-        <columns>FieloAlpha__Home__c</columns>
-        <columns>FieloAlpha__Placement__c</columns>
-        <columns>FieloAlpha__visibility__c</columns>
-        <columns>FieloAlpha__Menu__c</columns>
-        <columns>FieloAlpha__Desktop__c</columns>
-        <columns>FieloAlpha__Tablet__c</columns>
-        <columns>FieloAlpha__Mobile__c</columns>
+        <columns>FieloPLT__Program__c</columns>
+        <columns>FieloPLT__Home__c</columns>
+        <columns>FieloPLT__Placement__c</columns>
+        <columns>FieloPLT__visibility__c</columns>
+        <columns>FieloPLT__Menu__c</columns>
+        <columns>FieloPLT__Desktop__c</columns>
+        <columns>FieloPLT__Tablet__c</columns>
+        <columns>FieloPLT__Mobile__c</columns>
         <columns>CREATED_DATE</columns>
         <filterScope>Everything</filterScope>
         <label>All Menu</label>
@@ -434,11 +434,11 @@
     </nameField>
     <pluralLabel>Menu</pluralLabel>
     <recordTypes>
-        <fullName>FieloAlpha__Menu</fullName>
+        <fullName>FieloPLT__Menu</fullName>
         <active>true</active>
         <label>Menu</label>
         <picklistValues>
-            <picklist>FieloAlpha__ImagePosition__c</picklist>
+            <picklist>FieloPLT__ImagePosition__c</picklist>
             <values>
                 <fullName>Left</fullName>
                 <default>false</default>
@@ -457,7 +457,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>FieloAlpha__Layout__c</picklist>
+            <picklist>FieloPLT__Layout__c</picklist>
             <values>
                 <fullName>Advanced</fullName>
                 <default>false</default>
@@ -476,7 +476,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>FieloAlpha__Link__c</picklist>
+            <picklist>FieloPLT__Link__c</picklist>
             <values>
                 <fullName>External</fullName>
                 <default>false</default>
@@ -487,7 +487,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>FieloAlpha__Placement__c</picklist>
+            <picklist>FieloPLT__Placement__c</picklist>
             <values>
                 <fullName>Footer</fullName>
                 <default>false</default>
@@ -502,7 +502,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>FieloAlpha__visibility__c</picklist>
+            <picklist>FieloPLT__visibility__c</picklist>
             <values>
                 <fullName>Both</fullName>
                 <default>true</default>
@@ -522,11 +522,11 @@
         </picklistValues>
     </recordTypes>
     <recordTypes>
-        <fullName>FieloAlpha__SubMenu</fullName>
+        <fullName>FieloPLT__SubMenu</fullName>
         <active>true</active>
         <label>Sub Menu</label>
         <picklistValues>
-            <picklist>FieloAlpha__ImagePosition__c</picklist>
+            <picklist>FieloPLT__ImagePosition__c</picklist>
             <values>
                 <fullName>Left</fullName>
                 <default>false</default>
@@ -545,7 +545,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>FieloAlpha__Layout__c</picklist>
+            <picklist>FieloPLT__Layout__c</picklist>
             <values>
                 <fullName>Advanced</fullName>
                 <default>false</default>
@@ -564,7 +564,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>FieloAlpha__Link__c</picklist>
+            <picklist>FieloPLT__Link__c</picklist>
             <values>
                 <fullName>External</fullName>
                 <default>false</default>
@@ -575,7 +575,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>FieloAlpha__Placement__c</picklist>
+            <picklist>FieloPLT__Placement__c</picklist>
             <values>
                 <fullName>Footer</fullName>
                 <default>false</default>
@@ -590,7 +590,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>FieloAlpha__visibility__c</picklist>
+            <picklist>FieloPLT__visibility__c</picklist>
             <values>
                 <fullName>Both</fullName>
                 <default>true</default>
@@ -608,22 +608,22 @@
     <searchLayouts>
         <excludedStandardButtons>Accept</excludedStandardButtons>
         <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
-        <listViewButtons>FieloAlpha__OrderMenuTop</listViewButtons>
-        <listViewButtons>FieloAlpha__OrderMenuFooter</listViewButtons>
-        <lookupDialogsAdditionalFields>FieloAlpha__Program__c</lookupDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>FieloAlpha__Program__c</lookupPhoneDialogsAdditionalFields>
+        <listViewButtons>FieloPLT__OrderMenuTop</listViewButtons>
+        <listViewButtons>FieloPLT__OrderMenuFooter</listViewButtons>
+        <lookupDialogsAdditionalFields>FieloPLT__Program__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>FieloPLT__Program__c</lookupPhoneDialogsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
-        <fullName>FieloAlpha__ModifyProgram</fullName>
+        <fullName>FieloPLT__ModifyProgram</fullName>
         <active>true</active>
         <description>Is not possible to modify the associated Program</description>
-        <errorConditionFormula>ISCHANGED(FieloAlpha__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloAlpha__Program__c)))</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__Program__c</errorDisplayField>
+        <errorConditionFormula>ISCHANGED(FieloPLT__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloPLT__Program__c)))</errorConditionFormula>
+        <errorDisplayField>FieloPLT__Program__c</errorDisplayField>
         <errorMessage>Is not possible to modify the associated Program</errorMessage>
     </validationRules>
     <webLinks>
-        <fullName>FieloAlpha__Back</fullName>
+        <fullName>FieloPLT__Back</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -632,10 +632,10 @@
         <masterLabel>Back</masterLabel>
         <openType>sidebar</openType>
         <protected>false</protected>
-        <url>/apex/{!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}FrontEndLandingPageBackEnd</url>
+        <url>/apex/{!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}FrontEndLandingPageBackEnd</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__BackToFrontEnd</fullName>
+        <fullName>FieloPLT__BackToFrontEnd</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -643,10 +643,10 @@
         <masterLabel>Back to Front End</masterLabel>
         <openType>replace</openType>
         <protected>false</protected>
-        <url>/apex/{!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}FrontEndLandingPageBackEnd</url>
+        <url>/apex/{!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}FrontEndLandingPageBackEnd</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__DeepClone</fullName>
+        <fullName>FieloPLT__DeepClone</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <linkType>javascript</linkType>
@@ -657,26 +657,26 @@
 {!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)}
 
 
-var menu = &apos;{!FieloAlpha__Menu__c.Id}&apos;;
+var menu = &apos;{!FieloPLT__Menu__c.Id}&apos;;
 
-var saveURL = &quot;/apex/&quot; + &quot;{!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}&quot; + &quot;MenuCloneBackEnd&quot; + &quot;%3F&quot; + &quot;menuId=&quot; + menu;
+var saveURL = &quot;/apex/&quot; + &quot;{!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}&quot; + &quot;MenuCloneBackEnd&quot; + &quot;%3F&quot; + &quot;menuId=&quot; + menu;
 
-var cancelURL = &quot;/apex/&quot; + &quot;{!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}&quot; + &quot;FrontEndLandingPageBackEnd&quot;;
+var cancelURL = &quot;/apex/&quot; + &quot;{!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}&quot; + &quot;FrontEndLandingPageBackEnd&quot;;
 
-window.location = &quot;/{!FieloAlpha__Menu__c.Id}/e?clone=1&amp;saveURL=&quot;+saveURL+&quot;&amp;cancelURL=&quot;+cancelURL;</url>
+window.location = &quot;/{!FieloPLT__Menu__c.Id}/e?clone=1&amp;saveURL=&quot;+saveURL+&quot;&amp;cancelURL=&quot;+cancelURL;</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__ExportMenu</fullName>
+        <fullName>FieloPLT__ExportMenu</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <linkType>javascript</linkType>
         <masterLabel>Export Menu</masterLabel>
         <openType>onClickJavaScript</openType>
         <protected>false</protected>
-        <url>window.location = &apos;/apex/{!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}XMLExport?type=Menu&amp;id={!FieloAlpha__Menu__c.Id}&apos;;</url>
+        <url>window.location = &apos;/apex/{!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}XMLExport?type=Menu&amp;id={!FieloPLT__Menu__c.Id}&apos;;</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__NewSubMenu</fullName>
+        <fullName>FieloPLT__NewSubMenu</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -685,10 +685,10 @@ window.location = &quot;/{!FieloAlpha__Menu__c.Id}/e?clone=1&amp;saveURL=&quot;+
         <openType>replace</openType>
         <protected>false</protected>
         <requireRowSelection>false</requireRowSelection>
-        <url>{!URLFOR($Action.FieloAlpha__Menu__c.New, null, [parentId=FieloAlpha__Menu__c.Id])}</url>
+        <url>{!URLFOR($Action.FieloPLT__Menu__c.New, null, [parentId=FieloPLT__Menu__c.Id])}</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__OrderMenuFooter</fullName>
+        <fullName>FieloPLT__OrderMenuFooter</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -698,10 +698,10 @@ window.location = &quot;/{!FieloAlpha__Menu__c.Id}/e?clone=1&amp;saveURL=&quot;+
         <openType>sidebar</openType>
         <protected>false</protected>
         <requireRowSelection>true</requireRowSelection>
-        <url>/apex/{!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}MenuOrderBackEnd?placement=Footer</url>
+        <url>/apex/{!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}MenuOrderBackEnd?placement=Footer</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__OrderMenuTop</fullName>
+        <fullName>FieloPLT__OrderMenuTop</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -711,10 +711,10 @@ window.location = &quot;/{!FieloAlpha__Menu__c.Id}/e?clone=1&amp;saveURL=&quot;+
         <openType>sidebar</openType>
         <protected>false</protected>
         <requireRowSelection>true</requireRowSelection>
-        <url>/apex/{!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}MenuOrderBackEnd?placement=Main</url>
+        <url>/apex/{!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}MenuOrderBackEnd?placement=Main</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__OrderSubMenu</fullName>
+        <fullName>FieloPLT__OrderSubMenu</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -724,10 +724,10 @@ window.location = &quot;/{!FieloAlpha__Menu__c.Id}/e?clone=1&amp;saveURL=&quot;+
         <openType>sidebar</openType>
         <protected>false</protected>
         <requireRowSelection>true</requireRowSelection>
-        <url>/apex/{!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}MenuOrderBackEnd?Id={!FieloAlpha__Menu__c.Id}</url>
+        <url>/apex/{!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}MenuOrderBackEnd?Id={!FieloPLT__Menu__c.Id}</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__Preview</fullName>
+        <fullName>FieloPLT__Preview</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <linkType>javascript</linkType>
@@ -736,17 +736,17 @@ window.location = &quot;/{!FieloAlpha__Menu__c.Id}/e?clone=1&amp;saveURL=&quot;+
         <protected>false</protected>
         <url>{!REQUIRESCRIPT(&quot;/soap/ajax/22.0/connection.js&quot;)}
 
-var menus= sforce.connection.query(&quot;SELECT {!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}Program__r.{!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}SiteURL__c, {!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}Program__r.{!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}CustomPage__c FROM {!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}Menu__c WHERE Id = \&apos;{!FieloAlpha__Menu__c.Id}\&apos; &quot;);
+var menus= sforce.connection.query(&quot;SELECT {!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}Program__r.{!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}SiteURL__c, {!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}Program__r.{!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}CustomPage__c FROM {!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}Menu__c WHERE Id = \&apos;{!FieloPLT__Menu__c.Id}\&apos; &quot;);
 var menu = menus.getArray(&quot;records&quot;)[0];
 
-if(null==menu.{!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}Program__r.{!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}CustomPage__c || &apos;&apos;==menu.{!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}Program__r.{!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}CustomPage__c){
-     window.open(menu.{!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}Program__r.{!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}SiteURL__c+&apos;{!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}Page?idMenu=&apos;+&apos;{!FieloAlpha__Menu__c.Id}&apos;+&apos;&amp;isPreview=1&apos;);
+if(null==menu.{!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}Program__r.{!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}CustomPage__c || &apos;&apos;==menu.{!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}Program__r.{!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}CustomPage__c){
+     window.open(menu.{!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}Program__r.{!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}SiteURL__c+&apos;{!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}Page?idMenu=&apos;+&apos;{!FieloPLT__Menu__c.Id}&apos;+&apos;&amp;isPreview=1&apos;);
 }else{
-     window.open(menu.{!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}Program__r.{!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}SiteURL__c+&apos;apex/&apos;+menu.{!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}Program__r.{!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}CustomPage__c+&apos;?idMenu=&apos;+&apos;{!FieloAlpha__Menu__c.Id}&apos;+&apos;&amp;isPreview=1&apos;);
+     window.open(menu.{!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}Program__r.{!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}SiteURL__c+&apos;apex/&apos;+menu.{!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}Program__r.{!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}CustomPage__c+&apos;?idMenu=&apos;+&apos;{!FieloPLT__Menu__c.Id}&apos;+&apos;&amp;isPreview=1&apos;);
 }</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__SetHome</fullName>
+        <fullName>FieloPLT__SetHome</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <linkType>javascript</linkType>
@@ -756,9 +756,9 @@ if(null==menu.{!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__
         <url>{!REQUIRESCRIPT(&quot;/soap/ajax/22.0/connection.js&quot;)}
 
 var menuUpdate = [];
-var homeResult = sforce.connection.query(&quot;SELECT Id, {!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}Home__c  from {!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}Menu__c WHERE Id = &apos;{!FieloAlpha__Menu__c.Id}&apos; &quot;);
+var homeResult = sforce.connection.query(&quot;SELECT Id, {!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}Home__c  from {!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}Menu__c WHERE Id = &apos;{!FieloPLT__Menu__c.Id}&apos; &quot;);
 var homeMenu = homeResult.getArray(&quot;records&quot;);
-homeMenu[0][&apos;{!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}Home__c&apos;] = &apos;true&apos;;
+homeMenu[0][&apos;{!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}Home__c&apos;] = &apos;true&apos;;
 menuUpdate.push(homeMenu[0]);
 
 var result = sforce.connection.update(menuUpdate);

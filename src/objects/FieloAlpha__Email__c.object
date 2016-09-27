@@ -58,7 +58,7 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>FieloAlpha__Deleted__c</fullName>
+        <fullName>FieloPLT__Deleted__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -67,7 +67,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Email__c</fullName>
+        <fullName>FieloPLT__Email__c</fullName>
         <deprecated>false</deprecated>
         <description>The email account used for sending emails to the members in the first step of registration.</description>
         <externalId>false</externalId>
@@ -79,7 +79,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Link__c</fullName>
+        <fullName>FieloPLT__Link__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Link</label>
@@ -88,12 +88,12 @@
         <type>Url</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Member__c</fullName>
+        <fullName>FieloPLT__Member__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Member</label>
-        <referenceTo>FieloAlpha__Member__c</referenceTo>
+        <referenceTo>FieloPLT__Member__c</referenceTo>
         <relationshipLabel>Emails</relationshipLabel>
         <relationshipName>Emails</relationshipName>
         <required>false</required>
@@ -101,12 +101,12 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Program__c</fullName>
+        <fullName>FieloPLT__Program__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Program</label>
-        <referenceTo>FieloAlpha__Program__c</referenceTo>
+        <referenceTo>FieloPLT__Program__c</referenceTo>
         <relationshipLabel>Emails</relationshipLabel>
         <relationshipName>Emails</relationshipName>
         <required>false</required>
@@ -114,7 +114,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RecipientName__c</fullName>
+        <fullName>FieloPLT__RecipientName__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Recipient Name</label>
@@ -125,7 +125,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Type__c</fullName>
+        <fullName>FieloPLT__Type__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Type</label>
@@ -155,7 +155,7 @@
         <fullName>Link__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>FieloAlpha__Program__r.FieloAlpha__SiteURL__c + $Setup.FieloCMS__OrganizationSettings__c.FieloCMS__PackagePrefix__c + &apos;__Page?memberId=&apos; +  FieloAlpha__Member__c + &apos;&amp;pageId=&apos; +  FieloAlpha__Program__r.RegisterPage__c</formula>
+        <formula>FieloPLT__Program__r.FieloPLT__SiteURL__c + $Setup.FieloCMS__OrganizationSettings__c.FieloCMS__PackagePrefix__c + &apos;__Page?memberId=&apos; +  FieloPLT__Member__c + &apos;&amp;pageId=&apos; +  FieloPLT__Program__r.RegisterPage__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Link</label>
         <required>false</required>
@@ -165,7 +165,7 @@
     </fields>
     <label>Email</label>
     <listViews>
-        <fullName>FieloAlpha__All</fullName>
+        <fullName>FieloPLT__All</fullName>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>

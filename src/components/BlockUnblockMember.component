@@ -2,7 +2,7 @@
 
 	<apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.AccountCRMMode__c.Name}" />
     <apex:variable var="namespace" value="{!SUBSTITUTE(SUBSTITUTE(fieldName,'AccountCRMMode__c',''),'__','.')}" />
-    <apex:variable var="blockClass" value="{!IF(record['FieloAlpha__Blocked__c'] == true, 'fielo-button--safe', 'fielo-button--danger')}" />
+    <apex:variable var="blockClass" value="{!IF(record['FieloPLT__Blocked__c'] == true, 'fielo-button--safe', 'fielo-button--danger')}" />
 
     <apex:attribute name="record" type="SObject" description="" />
     <apex:attribute name="field" type="FieloCMS.Field" description="" />
@@ -10,8 +10,8 @@
     <div class="fielo-form fielo-block-member">
         <form class="fielo-js-upgrade" data-remoteaction="{!namespace}BlockUnblockMemberController.blockUnblockMember" data-remotearguments="memberId,action" ><!-- {!field.attributes['CSSClasses']}-->
             <input type="hidden" name="memberId" value="{!record['Id']}" data-object-property="Id"  data-attribute-replace="value"/>
-            <input type="hidden" name="action" value="{!!record['FieloAlpha__Blocked__c']}" data-attribute-replace="value" />
-            <button type="submit" class="fielo-button fielo-button__submit {!blockClass}" >{!IF(record['FieloAlpha__Blocked__c'] == true, $Label.Unblock, $Label.Block)}</button>
+            <input type="hidden" name="action" value="{!!record['FieloPLT__Blocked__c']}" data-attribute-replace="value" />
+            <button type="submit" class="fielo-button fielo-button__submit {!blockClass}" >{!IF(record['FieloPLT__Blocked__c'] == true, $Label.Unblock, $Label.Block)}</button>
         </form>
     </div>
 </apex:component>

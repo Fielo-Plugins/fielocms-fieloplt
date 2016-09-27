@@ -2,7 +2,7 @@ public with sharing class BadgeAPI implements FieloCMS.DataInterface{
 	
 	//BADGES
     public Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){
-        FieloAlpha__Program__c program = ProgramService.getCurrentProgram();
+        FieloPLT__Program__c program = ProgramService.getCurrentProgram();
         Map<Id,Object> newMapData = new Map<Id,Object>();
         //Prepare all the queries
         for(FieloCMS__Component__c c : components){
@@ -15,7 +15,7 @@ public with sharing class BadgeAPI implements FieloCMS.DataInterface{
     }
 
     public List<sObject> getData(FieloCMS__Component__c component, Integer pageNumber, String orderBy, String filters){        
-        FieloAlpha__Program__c program = ProgramService.getCurrentProgram();
+        FieloPLT__Program__c program = ProgramService.getCurrentProgram();
         //Prepare all the queries        
         if(component.FieloCMS__Limit__c == null)
             component.FieloCMS__Limit__c = 5;
@@ -25,15 +25,15 @@ public with sharing class BadgeAPI implements FieloCMS.DataInterface{
         return getBadges(OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), Integer.valueOf(component.FieloCMS__Limit__c), offset, orderBy);        
     }
 
-    public static List<FieloAlpha__Badge__c> getBadges(Set<String> fields, Id programId, Id memberId, Integer quantity, Integer offset, String orderBy){
+    public static List<FieloPLT__Badge__c> getBadges(Set<String> fields, Id programId, Id memberId, Integer quantity, Integer offset, String orderBy){
         String query = 'SELECT ' + String.join(new List<String>(fields),',');
         
         Set<Id> badgeIds = new Set<Id>();
-        for(FieloAlpha__BadgeMember__c bm : [Select FieloAlpha__Badge2__c FROM FieloAlpha__BadgeMember__c WHERE FieloAlpha__Member2__c =: memberId]){
-            badgeIds.add(bm.FieloAlpha__Badge2__c);
+        for(FieloPLT__BadgeMember__c bm : [Select FieloPLT__Badge2__c FROM FieloPLT__BadgeMember__c WHERE FieloPLT__Member2__c =: memberId]){
+            badgeIds.add(bm.FieloPLT__Badge2__c);
         }
 
-        query += ' FROM FieloAlpha__Badge__c WHERE Id In : badgeIds AND FieloAlpha__Program__c =: programId';
+        query += ' FROM FieloPLT__Badge__c WHERE Id In : badgeIds AND FieloPLT__Program__c =: programId';
 
         //LIMIT
         if(quantity != null){

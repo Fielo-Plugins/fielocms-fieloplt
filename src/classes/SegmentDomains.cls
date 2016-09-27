@@ -1,12 +1,12 @@
 public class SegmentDomains extends SObjectDomain {
 	
-	public SegmentDomains(List<FieloAlpha__SegmentDomain__c> records){
+	public SegmentDomains(List<FieloPLT__SegmentDomain__c> records){
 		super(records);	
 	}
 
 	public override void onBeforeInsert(){
 		Set<Id> navIds = new Set<Id>();
-		for(FieloAlpha__SegmentDomain__c record : (List<FieloAlpha__SegmentDomain__c>) records){
+		for(FieloPLT__SegmentDomain__c record : (List<FieloPLT__SegmentDomain__c>) records){
 			if(record.Navigation__c != null) navIds.add(record.Navigation__c);
 		}
 
@@ -23,7 +23,7 @@ public class SegmentDomains extends SObjectDomain {
 
 	public override void onBeforeDelete(){
 		Set<Id> navIds = new Set<Id>();
-		for(FieloAlpha__SegmentDomain__c record : (List<FieloAlpha__SegmentDomain__c>) records){
+		for(FieloPLT__SegmentDomain__c record : (List<FieloPLT__SegmentDomain__c>) records){
 			if(record.Navigation__c != null) navIds.add(record.Navigation__c);
 		}
 

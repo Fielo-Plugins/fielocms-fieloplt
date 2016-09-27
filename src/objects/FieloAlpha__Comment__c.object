@@ -59,7 +59,7 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>FieloAlpha__AbuseDescription__c</fullName>
+        <fullName>FieloPLT__AbuseDescription__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Abuse Description</label>
@@ -69,19 +69,19 @@
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__AbuseReporter__c</fullName>
+        <fullName>FieloPLT__AbuseReporter__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Abuse Reporter</label>
-        <referenceTo>FieloAlpha__Member__c</referenceTo>
+        <referenceTo>FieloPLT__Member__c</referenceTo>
         <relationshipName>Comments1</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Body__c</fullName>
+        <fullName>FieloPLT__Body__c</fullName>
         <deprecated>false</deprecated>
         <description>The body text of this comment.</description>
         <externalId>false</externalId>
@@ -93,21 +93,21 @@
         <visibleLines>25</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Member__c</fullName>
+        <fullName>FieloPLT__Member__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>The member who made this comment.</description>
         <externalId>false</externalId>
         <inlineHelpText>Enter the name of the member who made this commment.</inlineHelpText>
         <label>Member</label>
-        <referenceTo>FieloAlpha__Member__c</referenceTo>
+        <referenceTo>FieloPLT__Member__c</referenceTo>
         <relationshipName>Comments</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ParentId__c</fullName>
+        <fullName>FieloPLT__ParentId__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Parent Id</label>
@@ -118,7 +118,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Status__c</fullName>
+        <fullName>FieloPLT__Status__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Status</label>

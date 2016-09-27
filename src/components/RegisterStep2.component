@@ -38,10 +38,10 @@
                 <fieldset>
 
                     <input type="hidden" name="SObject.id" value="{!member.Id}" />
-                    <apex:repeat value="{!$ObjectType.FieloAlpha__Member__c.FieldSets.FieloAlpha__RegistrationStep2}" var="field" >
+                    <apex:repeat value="{!$ObjectType.FieloPLT__Member__c.FieldSets.FieloPLT__RegistrationStep2}" var="field" >
                         <div class="mdl-grid fielo-field fielo-field--is-{!field}">
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__label" >
-                                <label for="{!field}" >{!$ObjectType.FieloAlpha__Member__c.fields[field].label}</label>
+                                <label for="{!field}" >{!$ObjectType.FieloPLT__Member__c.fields[field].label}</label>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__value">
                                 <input class="fielo-input fielo-js-upgrade"   id="{!field}" name="SObject.{!field}"  value="{!member[field]}" /><!-- data-required="{!field.required}" --> <!--data-type="{!field.type}"-->

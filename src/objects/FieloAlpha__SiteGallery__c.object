@@ -3,7 +3,7 @@
     <customSettingsType>List</customSettingsType>
     <enableFeeds>false</enableFeeds>
     <fields>
-        <fullName>FieloAlpha__BackgroundAttribute__c</fullName>
+        <fullName>FieloPLT__BackgroundAttribute__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Background attribute</label>
@@ -14,7 +14,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__BackgroundId__c</fullName>
+        <fullName>FieloPLT__BackgroundId__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>BackgroundId</label>
@@ -25,7 +25,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__BodyBackgroundAttribute__c</fullName>
+        <fullName>FieloPLT__BodyBackgroundAttribute__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Body Background attribute</label>
@@ -36,7 +36,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__BodyBackgroundId__c</fullName>
+        <fullName>FieloPLT__BodyBackgroundId__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Body Background Id</label>
@@ -47,7 +47,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__CSS__c</fullName>
+        <fullName>FieloPLT__CSS__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>CSS File</label>
@@ -58,7 +58,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Catalog__c</fullName>
+        <fullName>FieloPLT__Catalog__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Catalog</label>
@@ -69,7 +69,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Color01__c</fullName>
+        <fullName>FieloPLT__Color01__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Color01</label>
@@ -80,7 +80,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Color02__c</fullName>
+        <fullName>FieloPLT__Color02__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Color02</label>
@@ -91,7 +91,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Color03__c</fullName>
+        <fullName>FieloPLT__Color03__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Color03</label>
@@ -102,7 +102,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Color04__c</fullName>
+        <fullName>FieloPLT__Color04__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Color04</label>
@@ -113,7 +113,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Color05__c</fullName>
+        <fullName>FieloPLT__Color05__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Color05</label>
@@ -124,7 +124,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Color06__c</fullName>
+        <fullName>FieloPLT__Color06__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Color06</label>
@@ -135,7 +135,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Color07__c</fullName>
+        <fullName>FieloPLT__Color07__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Color07</label>
@@ -146,7 +146,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Color08__c</fullName>
+        <fullName>FieloPLT__Color08__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Color08</label>
@@ -157,7 +157,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Color09__c</fullName>
+        <fullName>FieloPLT__Color09__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Color09</label>
@@ -168,7 +168,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Color10__c</fullName>
+        <fullName>FieloPLT__Color10__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Color10</label>
@@ -179,7 +179,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Color11__c</fullName>
+        <fullName>FieloPLT__Color11__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Color11</label>
@@ -190,7 +190,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ColorFont01__c</fullName>
+        <fullName>FieloPLT__ColorFont01__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>ColorFont01</label>
@@ -201,7 +201,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ColorFont02__c</fullName>
+        <fullName>FieloPLT__ColorFont02__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>ColorFont02</label>
@@ -212,7 +212,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ColorFont03__c</fullName>
+        <fullName>FieloPLT__ColorFont03__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>ColorFont03</label>
@@ -223,7 +223,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ColorFont04__c</fullName>
+        <fullName>FieloPLT__ColorFont04__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>ColorFont04</label>
@@ -234,7 +234,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ColorFont05__c</fullName>
+        <fullName>FieloPLT__ColorFont05__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>ColorFont05</label>
@@ -245,7 +245,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ColorFont06__c</fullName>
+        <fullName>FieloPLT__ColorFont06__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>ColorFont06</label>
@@ -256,7 +256,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ColorFont07__c</fullName>
+        <fullName>FieloPLT__ColorFont07__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>ColorFont07</label>
@@ -267,7 +267,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ColorFont08__c</fullName>
+        <fullName>FieloPLT__ColorFont08__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>ColorFont08</label>
@@ -278,7 +278,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ColorFont09__c</fullName>
+        <fullName>FieloPLT__ColorFont09__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>ColorFont09</label>
@@ -289,7 +289,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ColorFont10__c</fullName>
+        <fullName>FieloPLT__ColorFont10__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>ColorFont10</label>
@@ -300,7 +300,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ColorFont11__c</fullName>
+        <fullName>FieloPLT__ColorFont11__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>ColorFont11</label>
@@ -311,7 +311,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Font__c</fullName>
+        <fullName>FieloPLT__Font__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Font</label>
@@ -322,7 +322,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__FooterBackgroundAttribute__c</fullName>
+        <fullName>FieloPLT__FooterBackgroundAttribute__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Footer Background attribute</label>
@@ -333,7 +333,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__FooterBackgroundId__c</fullName>
+        <fullName>FieloPLT__FooterBackgroundId__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Footer Background Id</label>
@@ -344,7 +344,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Footer__c</fullName>
+        <fullName>FieloPLT__Footer__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Footer</label>
@@ -355,7 +355,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__HeaderBackgroundAttribute__c</fullName>
+        <fullName>FieloPLT__HeaderBackgroundAttribute__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Header Background attribute</label>
@@ -366,7 +366,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Header__c</fullName>
+        <fullName>FieloPLT__Header__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Header</label>
@@ -377,7 +377,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Menu__c</fullName>
+        <fullName>FieloPLT__Menu__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Menu</label>
@@ -388,7 +388,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__headerBackgroundId__c</fullName>
+        <fullName>FieloPLT__headerBackgroundId__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>headerBackgroundId</label>

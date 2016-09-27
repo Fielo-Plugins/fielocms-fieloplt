@@ -46,7 +46,7 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
-    <customHelpPage>FieloAlpha__RewardHelpBackEnd</customHelpPage>
+    <customHelpPage>FieloPLT__RewardHelpBackEnd</customHelpPage>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
@@ -59,30 +59,30 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
-        <fullName>FieloAlpha__RewardTab</fullName>
+        <fullName>FieloPLT__RewardTab</fullName>
         <description>RewardTab</description>
         <displayedFields>
-            <field>FieloAlpha__Stock__c</field>
+            <field>FieloPLT__Stock__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Price__c</field>
+            <field>FieloPLT__Price__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__PointsCant__c</field>
+            <field>FieloPLT__PointsCant__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__QuantityRedeem__c</field>
+            <field>FieloPLT__QuantityRedeem__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__ExpirationDate__c</field>
+            <field>FieloPLT__ExpirationDate__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
@@ -94,7 +94,7 @@
         <label>Reward Tab</label>
     </fieldSets>
     <fieldSets>
-        <fullName>FieloAlpha__Reward_Details</fullName>
+        <fullName>FieloPLT__Reward_Details</fullName>
         <description>Fielo Prize Details</description>
         <displayedFields>
             <field>Name</field>
@@ -102,32 +102,32 @@
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__AvailableDays__c</field>
+            <field>FieloPLT__AvailableDays__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Category__c</field>
+            <field>FieloPLT__Category__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Price__c</field>
+            <field>FieloPLT__Price__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__PointsCant__c</field>
+            <field>FieloPLT__PointsCant__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__ExpirationDate__c</field>
+            <field>FieloPLT__ExpirationDate__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__VoucherCreationMode__c</field>
+            <field>FieloPLT__VoucherCreationMode__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
@@ -137,17 +137,17 @@
     <fullName>ShoppingCart</fullName>
     <description>ShoppingCart.component</description>
     <displayedFields>
-        <field>FieloAlpha__Category__c</field>
+        <field>FieloPLT__Category__c</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>
     </displayedFields>
     <displayedFields>
-        <field>FieloAlpha__InstructionsRichText__c</field>
+        <field>FieloPLT__InstructionsRichText__c</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>
     </displayedFields>
     <displayedFields>
-        <field>FieloAlpha__Instructions__c</field>
+        <field>FieloPLT__Instructions__c</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>
     </displayedFields>
@@ -157,14 +157,14 @@
         <isRequired>false</isRequired>
     </displayedFields>
     <displayedFields>
-        <field>FieloAlpha__PointsCant__c</field>
+        <field>FieloPLT__PointsCant__c</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>
     </displayedFields>
     <label>Shopping Cart</label>
 </fieldSets>
     <fields>
-        <fullName>FieloAlpha__AttachmentId__c</fullName>
+        <fullName>FieloPLT__AttachmentId__c</fullName>
         <deprecated>false</deprecated>
         <description>Image of this reward.</description>
         <externalId>false</externalId>
@@ -177,7 +177,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__AvailableDays__c</fullName>
+        <fullName>FieloPLT__AvailableDays__c</fullName>
         <deprecated>false</deprecated>
         <description>Number of days that a voucher is enabled for use.</description>
         <externalId>false</externalId>
@@ -192,7 +192,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Category__c</fullName>
+        <fullName>FieloPLT__Category__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>Kind of reward, divided by the owner in categories</description>
@@ -203,13 +203,13 @@
             <active>false</active>
             <errorMessage>That category belongs to another program. You must create the category in this program before trying to use it.</errorMessage>
             <filterItems>
-                <field>$Source.FieloAlpha__Program__c</field>
+                <field>$Source.FieloPLT__Program__c</field>
                 <operation>equals</operation>
-                <valueField>FieloAlpha__Category__c.FieloAlpha__Program__c</valueField>
+                <valueField>FieloPLT__Category__c.FieloPLT__Program__c</valueField>
             </filterItems>
             <isOptional>false</isOptional>
         </lookupFilter>
-        <referenceTo>FieloAlpha__Category__c</referenceTo>
+        <referenceTo>FieloPLT__Category__c</referenceTo>
         <relationshipLabel>Rewards</relationshipLabel>
         <relationshipName>Prizes</relationshipName>
         <required>false</required>
@@ -218,7 +218,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__CondenserId__c</fullName>
+        <fullName>FieloPLT__CondenserId__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Condenser Id</label>
@@ -230,7 +230,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Description__c</fullName>
+        <fullName>FieloPLT__Description__c</fullName>
         <deprecated>false</deprecated>
         <description>Detail of the reward</description>
         <externalId>false</externalId>
@@ -243,7 +243,7 @@
         <visibleLines>5</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ExpirationDate__c</fullName>
+        <fullName>FieloPLT__ExpirationDate__c</fullName>
         <deprecated>false</deprecated>
         <description>Valid finish date for the reward</description>
         <externalId>false</externalId>
@@ -255,7 +255,7 @@
         <type>Date</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ExternalName__c</fullName>
+        <fullName>FieloPLT__ExternalName__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>External Name</label>
@@ -267,7 +267,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__HasSegments__c</fullName>
+        <fullName>FieloPLT__HasSegments__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -277,10 +277,10 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Image__c</fullName>
+        <fullName>FieloPLT__Image__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>&quot;&lt;img src=\&quot; servlet/servlet.FileDownload?file=&quot; &amp; FieloAlpha__AttachmentId__c &amp; &quot;\&quot;/&gt;&quot;</formula>
+        <formula>&quot;&lt;img src=\&quot; servlet/servlet.FileDownload?file=&quot; &amp; FieloPLT__AttachmentId__c &amp; &quot;\&quot;/&gt;&quot;</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Image</label>
         <required>false</required>
@@ -290,7 +290,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__InstructionsRichText__c</fullName>
+        <fullName>FieloPLT__InstructionsRichText__c</fullName>
         <deprecated>false</deprecated>
         <description>Allows to show more details on instructions</description>
         <externalId>false</externalId>
@@ -302,7 +302,7 @@
         <visibleLines>15</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Instructions__c</fullName>
+        <fullName>FieloPLT__Instructions__c</fullName>
         <deprecated>false</deprecated>
         <description>Steps to get the reward detailed in vouchers, these instructions overwrite the instructions written in settings</description>
         <externalId>false</externalId>
@@ -315,7 +315,7 @@
         <visibleLines>5</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Intangible__c</fullName>
+        <fullName>FieloPLT__Intangible__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>Deprecated Field</description>
@@ -327,10 +327,10 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ItemsAvailableReadOnly__c</fullName>
+        <fullName>FieloPLT__ItemsAvailableReadOnly__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>IF( ISPICKVAL(FieloAlpha__VoucherCreationMode__c  , &apos;Unlimited&apos;) , $Label.FieloAlpha__InfoRewardGenerateItemsWhenStockUnlimited ,  TEXT( FieloAlpha__Stock__c ) )</formula>
+        <formula>IF( ISPICKVAL(FieloPLT__VoucherCreationMode__c  , &apos;Unlimited&apos;) , $Label.FieloPLT__InfoRewardGenerateItemsWhenStockUnlimited ,  TEXT( FieloPLT__Stock__c ) )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Items Available (Read Only)</label>
         <required>false</required>
@@ -340,7 +340,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__PointsCant__c</fullName>
+        <fullName>FieloPLT__PointsCant__c</fullName>
         <deprecated>false</deprecated>
         <description>Value in points for the product</description>
         <externalId>false</externalId>
@@ -355,7 +355,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Price__c</fullName>
+        <fullName>FieloPLT__Price__c</fullName>
         <deprecated>false</deprecated>
         <description>Value of the product</description>
         <externalId>false</externalId>
@@ -369,14 +369,14 @@
         <type>Currency</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Program__c</fullName>
+        <fullName>FieloPLT__Program__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>The program to which this reward belongs.</description>
         <externalId>false</externalId>
         <inlineHelpText>Select the program to which this reward belongs.</inlineHelpText>
         <label>Program</label>
-        <referenceTo>FieloAlpha__Program__c</referenceTo>
+        <referenceTo>FieloPLT__Program__c</referenceTo>
         <relationshipLabel>Rewards</relationshipLabel>
         <relationshipName>Rewards</relationshipName>
         <required>false</required>
@@ -385,30 +385,30 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__QuantityAvailable__c</fullName>
+        <fullName>FieloPLT__QuantityAvailable__c</fullName>
         <deprecated>false</deprecated>
         <description>Total stock</description>
         <externalId>false</externalId>
         <inlineHelpText>The available quantity of the reward.</inlineHelpText>
         <label>Quantity Available</label>
         <summaryFilterItems>
-            <field>FieloAlpha__RewardItem__c.FieloAlpha__Status__c</field>
+            <field>FieloPLT__RewardItem__c.FieloPLT__Status__c</field>
             <operation>equals</operation>
             <value>Available</value>
         </summaryFilterItems>
         <summaryFilterItems>
-            <field>FieloAlpha__RewardItem__c.FieloAlpha__IsCondenser__c</field>
+            <field>FieloPLT__RewardItem__c.FieloPLT__IsCondenser__c</field>
             <operation>equals</operation>
             <value>False</value>
         </summaryFilterItems>
-        <summaryForeignKey>FieloAlpha__RewardItem__c.FieloAlpha__Reward__c</summaryForeignKey>
+        <summaryForeignKey>FieloPLT__RewardItem__c.FieloPLT__Reward__c</summaryForeignKey>
         <summaryOperation>count</summaryOperation>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Summary</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__QuantityComments__c</fullName>
+        <fullName>FieloPLT__QuantityComments__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Quantity Comments</label>
@@ -421,7 +421,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__QuantityLikes__c</fullName>
+        <fullName>FieloPLT__QuantityLikes__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Quantity Likes</label>
@@ -434,32 +434,32 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__QuantityRedeem__c</fullName>
+        <fullName>FieloPLT__QuantityRedeem__c</fullName>
         <deprecated>false</deprecated>
         <description>Total redeemed of the product</description>
         <externalId>false</externalId>
         <inlineHelpText>The quantity of the reward that has been redeemed.</inlineHelpText>
         <label>Quantity Redeem</label>
         <summaryFilterItems>
-            <field>FieloAlpha__RewardItem__c.FieloAlpha__Status__c</field>
+            <field>FieloPLT__RewardItem__c.FieloPLT__Status__c</field>
             <operation>equals</operation>
             <value>Unavailable</value>
         </summaryFilterItems>
-        <summaryForeignKey>FieloAlpha__RewardItem__c.FieloAlpha__Reward__c</summaryForeignKey>
+        <summaryForeignKey>FieloPLT__RewardItem__c.FieloPLT__Reward__c</summaryForeignKey>
         <summaryOperation>count</summaryOperation>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Summary</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RedemptionRule__c</fullName>
+        <fullName>FieloPLT__RedemptionRule__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>Deprecated Field</description>
         <externalId>false</externalId>
         <inlineHelpText>Specify the rule that will apply toward the redemption of the prize.</inlineHelpText>
         <label>zz_deprecated_Segment</label>
-        <referenceTo>FieloAlpha__RedemptionRule__c</referenceTo>
+        <referenceTo>FieloPLT__RedemptionRule__c</referenceTo>
         <relationshipLabel>Rewards</relationshipLabel>
         <relationshipName>Prizes</relationshipName>
         <required>false</required>
@@ -468,7 +468,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RewardFacilitator__c</fullName>
+        <fullName>FieloPLT__RewardFacilitator__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>Account</description>
@@ -484,7 +484,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__StockWarning__c</fullName>
+        <fullName>FieloPLT__StockWarning__c</fullName>
         <deprecated>false</deprecated>
         <description>Stock quantity of this reward that will trigger an email warning you that the stock is low.</description>
         <externalId>false</externalId>
@@ -499,7 +499,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Stock__c</fullName>
+        <fullName>FieloPLT__Stock__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
         <description>Number of units of this reward.</description>
@@ -514,7 +514,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__UniqueVoucher__c</fullName>
+        <fullName>FieloPLT__UniqueVoucher__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>Checking this option will create a voucher with two or more items of this reward.</description>
@@ -526,7 +526,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__VoucherCreationMode__c</fullName>
+        <fullName>FieloPLT__VoucherCreationMode__c</fullName>
         <deprecated>false</deprecated>
         <description>If voucher numbers are provided from a provider, vouchers are Preload, if system create them, are Random</description>
         <externalId>false</externalId>
@@ -552,7 +552,7 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__isInstantReward__c</fullName>
+        <fullName>FieloPLT__isInstantReward__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>Check this option if you want to give this reward for free (for no points) when the member does a special action.</description>
@@ -565,31 +565,31 @@
     </fields>
     <label>Reward</label>
     <listViews>
-        <fullName>FieloAlpha__All_Rewards</fullName>
+        <fullName>FieloPLT__All_Rewards</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Description__c</columns>
-        <columns>FieloAlpha__PointsCant__c</columns>
-        <columns>FieloAlpha__VoucherCreationMode__c</columns>
-        <columns>FieloAlpha__Stock__c</columns>
-        <columns>FieloAlpha__ExpirationDate__c</columns>
-        <columns>FieloAlpha__isInstantReward__c</columns>
-        <columns>FieloAlpha__UniqueVoucher__c</columns>
-        <columns>FieloAlpha__Program__c</columns>
-        <columns>FieloAlpha__StockWarning__c</columns>
-        <columns>FieloAlpha__Instructions__c</columns>
+        <columns>FieloPLT__Description__c</columns>
+        <columns>FieloPLT__PointsCant__c</columns>
+        <columns>FieloPLT__VoucherCreationMode__c</columns>
+        <columns>FieloPLT__Stock__c</columns>
+        <columns>FieloPLT__ExpirationDate__c</columns>
+        <columns>FieloPLT__isInstantReward__c</columns>
+        <columns>FieloPLT__UniqueVoucher__c</columns>
+        <columns>FieloPLT__Program__c</columns>
+        <columns>FieloPLT__StockWarning__c</columns>
+        <columns>FieloPLT__Instructions__c</columns>
         <filterScope>Everything</filterScope>
         <label>All Rewards</label>
         <language>en_US</language>
     </listViews>
     <listViews>
-        <fullName>FieloAlpha__AvailableRewards</fullName>
+        <fullName>FieloPLT__AvailableRewards</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Description__c</columns>
-        <columns>FieloAlpha__PointsCant__c</columns>
-        <columns>FieloAlpha__ExpirationDate__c</columns>
+        <columns>FieloPLT__Description__c</columns>
+        <columns>FieloPLT__PointsCant__c</columns>
+        <columns>FieloPLT__ExpirationDate__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
-            <field>FieloAlpha__Stock__c</field>
+            <field>FieloPLT__Stock__c</field>
             <operation>greaterThan</operation>
             <value>0</value>
         </filters>
@@ -603,105 +603,105 @@
     </nameField>
     <pluralLabel>Rewards</pluralLabel>
     <searchLayouts>
-        <customTabListAdditionalFields>FieloAlpha__Price__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>FieloAlpha__Stock__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>FieloAlpha__PointsCant__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>FieloAlpha__QuantityRedeem__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>FieloAlpha__ExpirationDate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__Price__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__Stock__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__PointsCant__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__QuantityRedeem__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__ExpirationDate__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
         <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
-        <lookupDialogsAdditionalFields>FieloAlpha__Program__c</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>FieloAlpha__Stock__c</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>FieloAlpha__PointsCant__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>FieloPLT__Program__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>FieloPLT__Stock__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>FieloPLT__PointsCant__c</lookupDialogsAdditionalFields>
         <searchFilterFields>NAME</searchFilterFields>
-        <searchFilterFields>FieloAlpha__Program__c</searchFilterFields>
-        <searchFilterFields>FieloAlpha__Stock__c</searchFilterFields>
-        <searchFilterFields>FieloAlpha__PointsCant__c</searchFilterFields>
-        <searchResultsAdditionalFields>FieloAlpha__Program__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>FieloAlpha__Stock__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>FieloAlpha__PointsCant__c</searchResultsAdditionalFields>
+        <searchFilterFields>FieloPLT__Program__c</searchFilterFields>
+        <searchFilterFields>FieloPLT__Stock__c</searchFilterFields>
+        <searchFilterFields>FieloPLT__PointsCant__c</searchFilterFields>
+        <searchResultsAdditionalFields>FieloPLT__Program__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>FieloPLT__Stock__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>FieloPLT__PointsCant__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
-        <fullName>FieloAlpha__Available_Days</fullName>
+        <fullName>FieloPLT__Available_Days</fullName>
         <active>true</active>
-        <errorConditionFormula>FieloAlpha__AvailableDays__c &lt; 0</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__AvailableDays__c</errorDisplayField>
+        <errorConditionFormula>FieloPLT__AvailableDays__c &lt; 0</errorConditionFormula>
+        <errorDisplayField>FieloPLT__AvailableDays__c</errorDisplayField>
         <errorMessage>value must be positive</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__ChangeStockMode</fullName>
+        <fullName>FieloPLT__ChangeStockMode</fullName>
         <active>true</active>
-        <errorConditionFormula>((ISPICKVAL(PRIORVALUE(FieloAlpha__VoucherCreationMode__c), &apos;Controlled By Quantity&apos;) &amp;&amp; (ISPICKVAL(FieloAlpha__VoucherCreationMode__c, &apos;Unlimited&apos;) || ISPICKVAL(FieloAlpha__VoucherCreationMode__c, &apos;Controlled By Item&apos;))) ||
-(ISPICKVAL(PRIORVALUE(FieloAlpha__VoucherCreationMode__c), &apos;Controlled By Item&apos;) &amp;&amp; (ISPICKVAL(FieloAlpha__VoucherCreationMode__c, &apos;Unlimited&apos;) ||
-ISPICKVAL(FieloAlpha__VoucherCreationMode__c, &apos;Controlled By Quantity&apos;)))) &amp;&amp;
-FieloAlpha__Stock__c &gt; 0</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__VoucherCreationMode__c</errorDisplayField>
+        <errorConditionFormula>((ISPICKVAL(PRIORVALUE(FieloPLT__VoucherCreationMode__c), &apos;Controlled By Quantity&apos;) &amp;&amp; (ISPICKVAL(FieloPLT__VoucherCreationMode__c, &apos;Unlimited&apos;) || ISPICKVAL(FieloPLT__VoucherCreationMode__c, &apos;Controlled By Item&apos;))) ||
+(ISPICKVAL(PRIORVALUE(FieloPLT__VoucherCreationMode__c), &apos;Controlled By Item&apos;) &amp;&amp; (ISPICKVAL(FieloPLT__VoucherCreationMode__c, &apos;Unlimited&apos;) ||
+ISPICKVAL(FieloPLT__VoucherCreationMode__c, &apos;Controlled By Quantity&apos;)))) &amp;&amp;
+FieloPLT__Stock__c &gt; 0</errorConditionFormula>
+        <errorDisplayField>FieloPLT__VoucherCreationMode__c</errorDisplayField>
         <errorMessage>This operation is allowed when stock is equal to zero</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__CheckCategoryProgram</fullName>
+        <fullName>FieloPLT__CheckCategoryProgram</fullName>
         <active>true</active>
         <description>Check if the Program from the Category chosen</description>
-        <errorConditionFormula>AND( NOT(ISBLANK(FieloAlpha__Category__c)), FieloAlpha__Category__r.FieloAlpha__Program__c &lt;&gt; FieloAlpha__Program__c)</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__Category__c</errorDisplayField>
+        <errorConditionFormula>AND( NOT(ISBLANK(FieloPLT__Category__c)), FieloPLT__Category__r.FieloPLT__Program__c &lt;&gt; FieloPLT__Program__c)</errorConditionFormula>
+        <errorDisplayField>FieloPLT__Category__c</errorDisplayField>
         <errorMessage>The Program of the Category must be the same as the Reward.</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__ModifyProgram</fullName>
+        <fullName>FieloPLT__ModifyProgram</fullName>
         <active>true</active>
         <description>Is not possible to modify the associated Program</description>
-        <errorConditionFormula>ISCHANGED(FieloAlpha__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloAlpha__Program__c)))</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__Program__c</errorDisplayField>
+        <errorConditionFormula>ISCHANGED(FieloPLT__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloPLT__Program__c)))</errorConditionFormula>
+        <errorDisplayField>FieloPLT__Program__c</errorDisplayField>
         <errorMessage>Is not possible to modify the associated Program</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__MultiVoucher</fullName>
+        <fullName>FieloPLT__MultiVoucher</fullName>
         <active>true</active>
-        <errorConditionFormula>FieloAlpha__UniqueVoucher__c &amp;&amp;  ISPICKVAL(FieloAlpha__VoucherCreationMode__c, &apos;Controlled By Item&apos;)</errorConditionFormula>
+        <errorConditionFormula>FieloPLT__UniqueVoucher__c &amp;&amp;  ISPICKVAL(FieloPLT__VoucherCreationMode__c, &apos;Controlled By Item&apos;)</errorConditionFormula>
         <errorMessage>Rewards controlled By Item with preloaded vouchers can&apos;t be unique voucher</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__Points_Required</fullName>
+        <fullName>FieloPLT__Points_Required</fullName>
         <active>true</active>
         <description>Validation to set allways a point value to the reward</description>
-        <errorConditionFormula>ISNULL( FieloAlpha__PointsCant__c )</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__PointsCant__c</errorDisplayField>
+        <errorConditionFormula>ISNULL( FieloPLT__PointsCant__c )</errorConditionFormula>
+        <errorDisplayField>FieloPLT__PointsCant__c</errorDisplayField>
         <errorMessage>The points of the reward are mandatory</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__Price_Possitive</fullName>
+        <fullName>FieloPLT__Price_Possitive</fullName>
         <active>true</active>
-        <errorConditionFormula>FieloAlpha__Price__c &lt; 0</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__Price__c</errorDisplayField>
+        <errorConditionFormula>FieloPLT__Price__c &lt; 0</errorConditionFormula>
+        <errorDisplayField>FieloPLT__Price__c</errorDisplayField>
         <errorMessage>value must be positive</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__Quantity_Points_Positive</fullName>
+        <fullName>FieloPLT__Quantity_Points_Positive</fullName>
         <active>true</active>
-        <errorConditionFormula>FieloAlpha__PointsCant__c &lt; 0</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__PointsCant__c</errorDisplayField>
+        <errorConditionFormula>FieloPLT__PointsCant__c &lt; 0</errorConditionFormula>
+        <errorDisplayField>FieloPLT__PointsCant__c</errorDisplayField>
         <errorMessage>value must be positive</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__Stock_Positive</fullName>
+        <fullName>FieloPLT__Stock_Positive</fullName>
         <active>true</active>
         <description>Stock Must be positive</description>
-        <errorConditionFormula>AND(IF(ISCHANGED(FieloAlpha__Stock__c) ,
-IF( OR(ISBLANK(FieloAlpha__Stock__c) , FieloAlpha__Stock__c &lt; 0) ,
+        <errorConditionFormula>AND(IF(ISCHANGED(FieloPLT__Stock__c) ,
+IF( OR(ISBLANK(FieloPLT__Stock__c) , FieloPLT__Stock__c &lt; 0) ,
 true,
 false),
-false), NOT( ISPICKVAL(FieloAlpha__VoucherCreationMode__c, &apos;Unlimited&apos;) ))</errorConditionFormula>
+false), NOT( ISPICKVAL(FieloPLT__VoucherCreationMode__c, &apos;Unlimited&apos;) ))</errorConditionFormula>
         <errorMessage>The stock should be positive</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__Unlimited</fullName>
+        <fullName>FieloPLT__Unlimited</fullName>
         <active>false</active>
-        <errorConditionFormula>FieloAlpha__Intangible__c = TRUE &amp;&amp;  ISPICKVAL( FieloAlpha__VoucherCreationMode__c , &apos;Preload&apos; )</errorConditionFormula>
+        <errorConditionFormula>FieloPLT__Intangible__c = TRUE &amp;&amp;  ISPICKVAL( FieloPLT__VoucherCreationMode__c , &apos;Preload&apos; )</errorConditionFormula>
         <errorMessage>A reward cannot be unlimited and preload at the same time</errorMessage>
     </validationRules>
     <webLinks>
-        <fullName>FieloAlpha__GenerateItems</fullName>
+        <fullName>FieloPLT__GenerateItems</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -710,10 +710,10 @@ false), NOT( ISPICKVAL(FieloAlpha__VoucherCreationMode__c, &apos;Unlimited&apos;
         <masterLabel>Generate Items</masterLabel>
         <openType>sidebar</openType>
         <protected>false</protected>
-        <url>/apex/PrizeItem?id={!FieloAlpha__Reward__c.Id}</url>
+        <url>/apex/PrizeItem?id={!FieloPLT__Reward__c.Id}</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__UploadPhoto</fullName>
+        <fullName>FieloPLT__UploadPhoto</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -722,6 +722,6 @@ false), NOT( ISPICKVAL(FieloAlpha__VoucherCreationMode__c, &apos;Unlimited&apos;
         <masterLabel>Upload Photo</masterLabel>
         <openType>sidebar</openType>
         <protected>false</protected>
-        <url>/apex/uploadPhoto?id={!FieloAlpha__Reward__c.Id}</url>
+        <url>/apex/uploadPhoto?id={!FieloPLT__Reward__c.Id}</url>
     </webLinks>
 </CustomObject>

@@ -3,7 +3,7 @@
     <customSettingsType>Hierarchy</customSettingsType>
     <enableFeeds>false</enableFeeds>
     <fields>
-        <fullName>FieloAlpha__ActiveContactsCalculation__c</fullName>
+        <fullName>FieloPLT__ActiveContactsCalculation__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -12,7 +12,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ChallengesPrefix__c</fullName>
+        <fullName>FieloPLT__ChallengesPrefix__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Challenges Prefix</label>
@@ -23,7 +23,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ContactRelationshipClass__c</fullName>
+        <fullName>FieloPLT__ContactRelationshipClass__c</fullName>
         <deprecated>false</deprecated>
         <description>Custom class to relate new members with existing contacts.</description>
         <externalId>false</externalId>
@@ -35,7 +35,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__CustomPage__c</fullName>
+        <fullName>FieloPLT__CustomPage__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Custom Page</label>
@@ -46,7 +46,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Facebook__c</fullName>
+        <fullName>FieloPLT__Facebook__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -55,7 +55,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__FieloVersion__c</fullName>
+        <fullName>FieloPLT__FieloVersion__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Fielo Version</label>
@@ -66,7 +66,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Google__c</fullName>
+        <fullName>FieloPLT__Google__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -75,7 +75,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ImageObject__c</fullName>
+        <fullName>FieloPLT__ImageObject__c</fullName>
         <deprecated>false</deprecated>
         <description>API name of the object to save Images using the &quot;Photo Upload&quot; component (for example &quot;Attachment&quot; or &quot;Document&quot;).</description>
         <externalId>false</externalId>
@@ -88,7 +88,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Instance__c</fullName>
+        <fullName>FieloPLT__Instance__c</fullName>
         <deprecated>false</deprecated>
         <description>Instance (server) used by the Org (Backend)</description>
         <externalId>false</externalId>
@@ -101,7 +101,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Linkedin__c</fullName>
+        <fullName>FieloPLT__Linkedin__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -110,7 +110,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__MemberCodeClass__c</fullName>
+        <fullName>FieloPLT__MemberCodeClass__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>zz_deprecated_Member Code Class</label>
@@ -121,7 +121,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__NewsView__c</fullName>
+        <fullName>FieloPLT__NewsView__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>This field contains the Id of the Organization-Wide Email Address from where you want to set the sender display name and sender email.</inlineHelpText>
@@ -133,7 +133,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__PackagePrefix__c</fullName>
+        <fullName>FieloPLT__PackagePrefix__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Package Prefix</label>
@@ -144,7 +144,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__PointCost__c</fullName>
+        <fullName>FieloPLT__PointCost__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>zz_deprecated_Actual Point Cost</label>
@@ -155,7 +155,7 @@
         <type>Currency</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RewardView__c</fullName>
+        <fullName>FieloPLT__RewardView__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Organization-Wide Email Address Id</label>
@@ -166,7 +166,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__SearchRewardMenu__c</fullName>
+        <fullName>FieloPLT__SearchRewardMenu__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>zz_deprecated_Search Reward Menu</label>
@@ -177,7 +177,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ShowVoucherCode__c</fullName>
+        <fullName>FieloPLT__ShowVoucherCode__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -186,7 +186,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__SiteURL__c</fullName>
+        <fullName>FieloPLT__SiteURL__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>URL of the site used to send the links to continue the registration process</inlineHelpText>
@@ -198,7 +198,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Twitter__c</fullName>
+        <fullName>FieloPLT__Twitter__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -207,7 +207,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__UserCreationClass__c</fullName>
+        <fullName>FieloPLT__UserCreationClass__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>zz_deprecated_User Creation Class</label>

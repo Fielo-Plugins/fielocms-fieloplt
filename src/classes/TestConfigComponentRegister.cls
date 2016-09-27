@@ -4,7 +4,7 @@ private class TestConfigComponentRegister{
 	@isTest
 	private static void PTF_FE013_FB(){
 		//preconditions
-		FieloAlpha.MockUpFactory.setCustomProperties(false);
+		FieloPLT.MockUpFactory.setCustomProperties(false);
 		//OrganizationUtil.testPersonAccountEnabled = true;
 		User adminUser = [SELECT Id, UserRoleId FROM User WHERE Id =: UserInfo.getUserId()];
 		if(adminUser.UserRoleId == null){
@@ -41,7 +41,7 @@ private class TestConfigComponentRegister{
 	@isTest
 	private static void PTF_FE013_FA1(){
 		//preconditions
-		FieloAlpha.MockUpFactory.setCustomProperties(false);		
+		FieloPLT.MockUpFactory.setCustomProperties(false);		
 		User adminUser = [SELECT Id, UserRoleId FROM User WHERE Id =: UserInfo.getUserId()];
 		if(adminUser.UserRoleId == null){
 			UserRole role = [SELECT Id FROM UserRole LIMIT 1];
@@ -77,7 +77,7 @@ private class TestConfigComponentRegister{
 	@isTest
 	private static void PTF_FE013_FA2(){
 		//preconditions
-		FieloAlpha.MockUpFactory.setCustomProperties(false);		
+		FieloPLT.MockUpFactory.setCustomProperties(false);		
 		User adminUser = [SELECT Id, UserRoleId FROM User WHERE Id =: UserInfo.getUserId()];
 		if(adminUser.UserRoleId == null){
 			UserRole role = [SELECT Id FROM UserRole LIMIT 1];
@@ -115,7 +115,7 @@ private class TestConfigComponentRegister{
 	@isTest
 	private static void PTF_FE013_FA3(){
 		//preconditions
-		FieloAlpha.MockUpFactory.setCustomProperties(false);		
+		FieloPLT.MockUpFactory.setCustomProperties(false);		
 		User adminUser = [SELECT Id, UserRoleId FROM User WHERE Id =: UserInfo.getUserId()];
 		if(adminUser.UserRoleId == null){
 			UserRole role = [SELECT Id FROM UserRole LIMIT 1];
@@ -150,7 +150,7 @@ private class TestConfigComponentRegister{
 	@isTest
 	private static void PTF_FE013_FA4(){
 		//preconditions
-		FieloAlpha.MockUpFactory.setCustomProperties(false);
+		FieloPLT.MockUpFactory.setCustomProperties(false);
 		//OrganizationUtil.testPersonAccountEnabled = false;
 		User adminUser = [SELECT Id, UserRoleId FROM User WHERE Id =: UserInfo.getUserId()];
 		if(adminUser.UserRoleId == null){
@@ -180,14 +180,14 @@ private class TestConfigComponentRegister{
 		try{
 			update registerComponent;
 		}catch(DMLException e){
-			system.assertEquals(Label.FieloAlpha.PersonAccountNotEnabled, e.getDMLMessage(0));
+			system.assertEquals(Label.FieloPLT.PersonAccountNotEnabled, e.getDMLMessage(0));
 		}
 	}
 
 	@isTest
 	private static void PTF_FE013_FA5(){
 		//preconditions
-		FieloAlpha.MockUpFactory.setCustomProperties(false);		
+		FieloPLT.MockUpFactory.setCustomProperties(false);		
 		User adminUser = [SELECT Id, UserRoleId FROM User WHERE Id =: UserInfo.getUserId()];
 		Account defaultAccount = new Account(Name = 'TestAccount');
 		insert defaultAccount;
@@ -219,7 +219,7 @@ private class TestConfigComponentRegister{
 	@isTest
 	private static void PTF_FE013_FA6(){
 		//preconditions
-		FieloAlpha.MockUpFactory.setCustomProperties(false);		
+		FieloPLT.MockUpFactory.setCustomProperties(false);		
 		User adminUser = [SELECT Id, UserRoleId FROM User WHERE UserRoleId = null LIMIT 1];
 		
 		FieloCMS__ComponentLibrary__c registerCL = new FieloCMS__ComponentLibrary__c(Name = 'Register');

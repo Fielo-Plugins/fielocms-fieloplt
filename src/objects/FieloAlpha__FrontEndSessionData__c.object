@@ -3,7 +3,7 @@
     <customSettingsType>Hierarchy</customSettingsType>
     <enableFeeds>false</enableFeeds>
     <fields>
-        <fullName>FieloAlpha__ExpirationDate__c</fullName>
+        <fullName>FieloPLT__ExpirationDate__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Expiration Date</label>
@@ -12,7 +12,7 @@
         <type>DateTime</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Hash__c</fullName>
+        <fullName>FieloPLT__Hash__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Hash</label>
@@ -23,7 +23,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__MemberId__c</fullName>
+        <fullName>FieloPLT__MemberId__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Member Id</label>
@@ -34,7 +34,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__NonStaticSessionId__c</fullName>
+        <fullName>FieloPLT__NonStaticSessionId__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Non Static Session Id</label>
@@ -45,7 +45,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__SessionId__c</fullName>
+        <fullName>FieloPLT__SessionId__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Session Id</label>

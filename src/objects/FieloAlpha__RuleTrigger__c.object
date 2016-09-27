@@ -58,38 +58,38 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>FieloAlpha__ConditionField__c</fullName>
+        <fullName>FieloPLT__ConditionField__c</fullName>
         <deprecated>false</deprecated>
         <description>The condition is based in picklist fields of the object to decide if a records enters to the rules engine.</description>
         <externalId>false</externalId>
         <inlineHelpText>Select the field to evaluate the condition to process a record</inlineHelpText>
         <label>Condition Field</label>
         <picklist>
-            <controllingField>FieloAlpha__Object__c</controllingField>
+            <controllingField>FieloPLT__Object__c</controllingField>
             <picklistValues>
                 <fullName>Status__c</fullName>
-                <controllingFieldValues>FieloAlpha__Transaction__c</controllingFieldValues>
+                <controllingFieldValues>FieloPLT__Transaction__c</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
                 <fullName>Type__c</fullName>
-                <controllingFieldValues>FieloAlpha__Transaction__c</controllingFieldValues>
+                <controllingFieldValues>FieloPLT__Transaction__c</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
                 <fullName>EventType__c</fullName>
-                <controllingFieldValues>FieloAlpha__Event__c</controllingFieldValues>
+                <controllingFieldValues>FieloPLT__Event__c</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
                 <fullName>Approved__c</fullName>
-                <controllingFieldValues>FieloAlpha__Event__c</controllingFieldValues>
-                <controllingFieldValues>FieloAlpha__Transaction__c</controllingFieldValues>
+                <controllingFieldValues>FieloPLT__Event__c</controllingFieldValues>
+                <controllingFieldValues>FieloPLT__Transaction__c</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
                 <fullName>FieloAccountStatus__c</fullName>
-                <controllingFieldValues>FieloAlpha__Member__c</controllingFieldValues>
+                <controllingFieldValues>FieloPLT__Member__c</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
             <sorted>false</sorted>
@@ -98,14 +98,14 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ConditionValue__c</fullName>
+        <fullName>FieloPLT__ConditionValue__c</fullName>
         <deprecated>false</deprecated>
         <description>value of the picklist selected in the field condition field</description>
         <externalId>false</externalId>
         <inlineHelpText>Select the value of the condition field to process the record</inlineHelpText>
         <label>Condition Value</label>
         <picklist>
-            <controllingField>FieloAlpha__ConditionField__c</controllingField>
+            <controllingField>FieloPLT__ConditionField__c</controllingField>
             <picklistValues>
                 <fullName>New</fullName>
                 <controllingFieldValues>FieloAccountStatus__c</controllingFieldValues>
@@ -206,7 +206,7 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Date__c</fullName>
+        <fullName>FieloPLT__Date__c</fullName>
         <defaultValue>&apos;CreatedDate&apos;</defaultValue>
         <deprecated>false</deprecated>
         <description>API name of the field in the object that will be used in order to know which date evaluate for active promotion</description>
@@ -220,7 +220,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Description__c</fullName>
+        <fullName>FieloPLT__Description__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Description</label>
@@ -229,7 +229,7 @@
         <type>TextArea</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__DynamicTargetMember__c</fullName>
+        <fullName>FieloPLT__DynamicTargetMember__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <description>If this field is checked, the field target member in the rule will show the related lookup&apos;s member of the object.
@@ -242,7 +242,7 @@ If this field is unchecked, the field target member in the rule will show the va
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__LookupFromTransaction__c</fullName>
+        <fullName>FieloPLT__LookupFromTransaction__c</fullName>
         <deprecated>false</deprecated>
         <description>Api name of the lookup field from the transaction to the record to process</description>
         <externalId>false</externalId>
@@ -255,7 +255,7 @@ If this field is unchecked, the field target member in the rule will show the va
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Object__c</fullName>
+        <fullName>FieloPLT__Object__c</fullName>
         <deprecated>false</deprecated>
         <description>Select the name of the object to enter to the rule engine.</description>
         <externalId>false</externalId>
@@ -263,15 +263,15 @@ If this field is unchecked, the field target member in the rule will show the va
         <label>Object</label>
         <picklist>
             <picklistValues>
-                <fullName>FieloAlpha__Transaction__c</fullName>
+                <fullName>FieloPLT__Transaction__c</fullName>
                 <default>true</default>
             </picklistValues>
             <picklistValues>
-                <fullName>FieloAlpha__Event__c</fullName>
+                <fullName>FieloPLT__Event__c</fullName>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
-                <fullName>FieloAlpha__Member__c</fullName>
+                <fullName>FieloPLT__Member__c</fullName>
                 <default>false</default>
             </picklistValues>
             <sorted>false</sorted>
@@ -280,7 +280,7 @@ If this field is unchecked, the field target member in the rule will show the va
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Prefix__c</fullName>
+        <fullName>FieloPLT__Prefix__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Prefix</label>
@@ -292,7 +292,7 @@ If this field is unchecked, the field target member in the rule will show the va
     </fields>
     <label>Rule Trigger</label>
     <listViews>
-        <fullName>FieloAlpha__All</fullName>
+        <fullName>FieloPLT__All</fullName>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>

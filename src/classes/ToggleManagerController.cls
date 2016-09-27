@@ -16,7 +16,7 @@ global with sharing class ToggleManagerController implements FieloCMS.ViewSubCom
         FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
 
         try {
-            FieloAlpha.MemberService.toggleManagers(new List<Id>{memberId}, action);
+            FieloPLT.MemberService.toggleManagers(new List<Id>{memberId}, action);
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(ApexPages.Severity.CONFIRM, Label.SuccessfulRemoteActionRefresh));
             result.refresh.add(new FieloCMS.RemoteActionResult.RemoteActionRefresh('action',action));
             result.redirectURL = '#';

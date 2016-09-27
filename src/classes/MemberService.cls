@@ -1,6 +1,6 @@
 public with sharing class MemberService {
 	
-	public static FieloAlpha__Member__c getCurrentMember(Set<String> fields){
+	public static FieloPLT__Member__c getCurrentMember(Set<String> fields){
         return new MembersSelector(fields).selectById(new Set<Id>{getCurrentMemberId()})[0];
     }
 
@@ -15,14 +15,14 @@ public with sharing class MemberService {
             return (Id)memberCookie.getValue();
         }else if(memId == null){
             try{
-                List<FieloAlpha__Member__c> members = [SELECT Id, FieloAlpha__Program__c FROM FieloAlpha__Member__c WHERE FieloAlpha__User__c =: UserInfo.getUserId()];
+                List<FieloPLT__Member__c> members = [SELECT Id, FieloPLT__Program__c FROM FieloPLT__Member__c WHERE FieloPLT__User__c =: UserInfo.getUserId()];
                 if(members.size() == 1){
                     memId = members[0].Id;
                     setCurrentMemberId(memId);
                 }else{
-                    Id programId = FieloAlpha.ProgramUtil.getProgramByDomain().Id;
-                    for(FieloAlpha__Member__c m : members){
-                        if(m.FieloAlpha__Program__c == programId){
+                    Id programId = FieloPLT.ProgramUtil.getProgramByDomain().Id;
+                    for(FieloPLT__Member__c m : members){
+                        if(m.FieloPLT__Program__c == programId){
                             memId = m.Id;
                             setCurrentMemberId(memId);
                             break;
@@ -41,13 +41,13 @@ public with sharing class MemberService {
                 memId = sessionCache.MemberId__c;
             }else{
                 try{
-                    List<FieloAlpha__Member__c> members = [SELECT Id, FieloAlpha__Program__c FROM FieloAlpha__Member__c WHERE FieloAlpha__User__c =: UserInfo.getUserId()];
+                    List<FieloPLT__Member__c> members = [SELECT Id, FieloPLT__Program__c FROM FieloPLT__Member__c WHERE FieloPLT__User__c =: UserInfo.getUserId()];
                     if(members.size() == 1){
                         memId = members[0].Id;
                     }else{
-                        Id programId = FieloAlpha.ProgramUtil.getProgramByDomain().Id;
-                        for(FieloAlpha__Member__c m : members){
-                            if(m.FieloAlpha__Program__c == programId){
+                        Id programId = FieloPLT.ProgramUtil.getProgramByDomain().Id;
+                        for(FieloPLT__Member__c m : members){
+                            if(m.FieloPLT__Program__c == programId){
                                 memId = m.Id;
                                 break;
                             }
@@ -92,10 +92,10 @@ public with sharing class MemberService {
         PageReference agreementPage;
         /*Cookie memberCookie = ApexPages.currentPage().getCookies().get('agreementAccepted');
         if(memberCookie == null || String.isBlank(memberCookie.getValue()) || memberCookie.getValue() != 'true'){*/
-            FieloAlpha__Member__c member = [SELECT Id, FieloAlpha__Agreement__r.FieloAlpha__Status__c, FieloAlpha__Program__r.FieloAlpha__UseAgreement__c, FieloAlpha__Program__r.FieloAlpha__AgreementView__c FROM FieloAlpha__Member__c WHERE Id =: memberId limit 1];            
-            if(member.FieloAlpha__Program__r.FieloAlpha__UseAgreement__c && member.FieloAlpha__Agreement__r.FieloAlpha__Status__c != 'Current'){
-                if(String.isNotBlank(member.FieloAlpha__Program__r.FieloAlpha__AgreementView__c)){
-                    agreementPage = new PageReference('/' + member.FieloAlpha__Program__r.FieloAlpha__AgreementView__c);
+            FieloPLT__Member__c member = [SELECT Id, FieloPLT__Agreement__r.FieloPLT__Status__c, FieloPLT__Program__r.FieloPLT__UseAgreement__c, FieloPLT__Program__r.FieloPLT__AgreementView__c FROM FieloPLT__Member__c WHERE Id =: memberId limit 1];            
+            if(member.FieloPLT__Program__r.FieloPLT__UseAgreement__c && member.FieloPLT__Agreement__r.FieloPLT__Status__c != 'Current'){
+                if(String.isNotBlank(member.FieloPLT__Program__r.FieloPLT__AgreementView__c)){
+                    agreementPage = new PageReference('/' + member.FieloPLT__Program__r.FieloPLT__AgreementView__c);
                 }else{
                     agreementPage = Page.AgreementAccept;
                 }
@@ -113,8 +113,8 @@ public with sharing class MemberService {
         }
         Savepoint sp = Database.setSavepoint();
         try{
-            FieloAlpha__Member__c member = new MembersSelector().selectById(new Set<Id>{memberId})[0];
-            User user = [SELECT UserName FROM User WHERE Id =: member.FieloAlpha__User__c LIMIT 1];
+            FieloPLT__Member__c member = new MembersSelector().selectById(new Set<Id>{memberId})[0];
+            User user = [SELECT UserName FROM User WHERE Id =: member.FieloPLT__User__c LIMIT 1];
             return Site.login(user.UserName, password, null);
         }catch(Exception e){
             Database.rollback(sp);
@@ -130,8 +130,8 @@ public with sharing class MemberService {
         }
         Savepoint sp = Database.setSavepoint();
         try{
-            FieloAlpha__Member__c member = new MembersSelector(new Set<String>{'FieloAlpha__User__c'}).selectById(new Set<Id>{memberId})[0];
-            system.setPassword(member.FieloAlpha__User__c, password);
+            FieloPLT__Member__c member = new MembersSelector(new Set<String>{'FieloPLT__User__c'}).selectById(new Set<Id>{memberId})[0];
+            system.setPassword(member.FieloPLT__User__c, password);
         }catch(Exception e){
             Database.rollback(sp);
             throw e;

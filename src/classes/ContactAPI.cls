@@ -7,8 +7,8 @@ public with sharing class ContactAPI implements FieloCMS.DataInterface{
             if(c.FieloCMS__Limit__c == null)
                 c.FieloCMS__Limit__c = 5;
             
-            FieloAlpha__Member__c loggedMember = MemberService.getCurrentMember(new Set<String>{'FieloAlpha__Account__c'});
-            newMapData.put(c.Id, getUnregisteredContacts(loggedMember.FieloAlpha__Account__c, null, c.FieloCMS__Limit__c.intValue(), c.FieloCMS__OrderBy__c));
+            FieloPLT__Member__c loggedMember = MemberService.getCurrentMember(new Set<String>{'FieloPLT__Account__c'});
+            newMapData.put(c.Id, getUnregisteredContacts(loggedMember.FieloPLT__Account__c, null, c.FieloCMS__Limit__c.intValue(), c.FieloCMS__OrderBy__c));
         }
         return newMapData;
     }
@@ -18,8 +18,8 @@ public with sharing class ContactAPI implements FieloCMS.DataInterface{
             
             //Calculate the offset from the Page Number
         Integer offset = Integer.valueOf(component.FieloCMS__Limit__c * (pageNumber - 1));            
-    	FieloAlpha__Member__c loggedMember = MemberService.getCurrentMember(new Set<String>{'FieloAlpha__Account__c'});
-        return getUnregisteredContacts(loggedMember.FieloAlpha__Account__c, offset, component.FieloCMS__Limit__c.intValue(), orderBy);
+    	FieloPLT__Member__c loggedMember = MemberService.getCurrentMember(new Set<String>{'FieloPLT__Account__c'});
+        return getUnregisteredContacts(loggedMember.FieloPLT__Account__c, offset, component.FieloCMS__Limit__c.intValue(), orderBy);
     }
 
     public List<Contact> getUnregisteredContacts(Id accountId, Integer offset, Integer quantity, String orderBy){       

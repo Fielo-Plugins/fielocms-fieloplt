@@ -59,7 +59,7 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>FieloAlpha__CSSClasses__c</fullName>
+        <fullName>FieloPLT__CSSClasses__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>CSS Classes</label>
@@ -68,7 +68,7 @@
         <type>TextArea</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ElementType__c</fullName>
+        <fullName>FieloPLT__ElementType__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Element type</label>
@@ -103,7 +103,7 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__IsBody__c</fullName>
+        <fullName>FieloPLT__IsBody__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>This field is checked when the section is the one that contains the body por the page/template</description>
@@ -114,12 +114,12 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Menu__c</fullName>
+        <fullName>FieloPLT__Menu__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Menu</label>
-        <referenceTo>FieloAlpha__Menu__c</referenceTo>
+        <referenceTo>FieloPLT__Menu__c</referenceTo>
         <relationshipLabel>Sections</relationshipLabel>
         <relationshipName>Sections</relationshipName>
         <required>false</required>
@@ -127,7 +127,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Order__c</fullName>
+        <fullName>FieloPLT__Order__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Order</label>
@@ -139,7 +139,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Orientation__c</fullName>
+        <fullName>FieloPLT__Orientation__c</fullName>
         <deprecated>false</deprecated>
         <description>This field will contain the disposition of the section (horizontal or vertical)</description>
         <externalId>false</externalId>
@@ -152,12 +152,12 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Parent__c</fullName>
+        <fullName>FieloPLT__Parent__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Parent</label>
-        <referenceTo>FieloAlpha__Section__c</referenceTo>
+        <referenceTo>FieloPLT__Section__c</referenceTo>
         <relationshipLabel>Sections</relationshipLabel>
         <relationshipName>Sections</relationshipName>
         <required>false</required>
@@ -165,7 +165,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Type__c</fullName>
+        <fullName>FieloPLT__Type__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Type</label>
@@ -176,7 +176,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Width__c</fullName>
+        <fullName>FieloPLT__Width__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Width</label>

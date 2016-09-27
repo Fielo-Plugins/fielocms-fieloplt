@@ -59,34 +59,34 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
-        <fullName>FieloAlpha__AdjustTransaction</fullName>
+        <fullName>FieloPLT__AdjustTransaction</fullName>
         <availableFields>
-            <field>FieloAlpha__BranchCode__c</field>
+            <field>FieloPLT__BranchCode__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Branch__c</field>
+            <field>FieloPLT__Branch__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Date__c</field>
+            <field>FieloPLT__Date__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Location__Latitude__s</field>
+            <field>FieloPLT__Location__Latitude__s</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Location__Longitude__s</field>
+            <field>FieloPLT__Location__Longitude__s</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Referral__c</field>
+            <field>FieloPLT__Referral__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -94,34 +94,34 @@
         <label>Adjust Transaction</label>
     </fieldSets>
     <fieldSets>
-        <fullName>FieloAlpha__GetCode</fullName>
+        <fullName>FieloPLT__GetCode</fullName>
         <availableFields>
-            <field>FieloAlpha__Type__c</field>
+            <field>FieloPLT__Type__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Value__c</field>
+            <field>FieloPLT__Value__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <description>It is used in Get Code page</description>
         <displayedFields>
-            <field>FieloAlpha__Code__c</field>
+            <field>FieloPLT__Code__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__BranchCode__c</field>
+            <field>FieloPLT__BranchCode__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <label>Get Code</label>
     </fieldSets>
     <fieldSets>
-        <fullName>FieloAlpha__ProfileView</fullName>
+        <fullName>FieloPLT__ProfileView</fullName>
         <availableFields>
-            <field>FieloAlpha__IdentificationType__c</field>
+            <field>FieloPLT__IdentificationType__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -136,12 +136,12 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__ProcessedStatusReadOnly__c</field>
+            <field>FieloPLT__ProcessedStatusReadOnly__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__TransactionId__c</field>
+            <field>FieloPLT__TransactionId__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -152,102 +152,102 @@
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Date__c</field>
+            <field>FieloPLT__Date__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Points__c</field>
+            <field>FieloPLT__Points__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Type__c</field>
+            <field>FieloPLT__Type__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Value__c</field>
+            <field>FieloPLT__Value__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <label>Profile View</label>
     </fieldSets>
     <fieldSets>
-        <fullName>FieloAlpha__TransactionNew</fullName>
+        <fullName>FieloPLT__TransactionNew</fullName>
         <availableFields>
-            <field>FieloAlpha__Type__c</field>
+            <field>FieloPLT__Type__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <description>Fielo Create Transaction</description>
         <displayedFields>
-            <field>FieloAlpha__IdentificationType__c</field>
+            <field>FieloPLT__IdentificationType__c</field>
             <isFieldManaged>true</isFieldManaged>
             <isRequired>true</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__MemberCode__c</field>
+            <field>FieloPLT__MemberCode__c</field>
             <isFieldManaged>true</isFieldManaged>
             <isRequired>true</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Value__c</field>
+            <field>FieloPLT__Value__c</field>
             <isFieldManaged>true</isFieldManaged>
             <isRequired>true</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Date__c</field>
+            <field>FieloPLT__Date__c</field>
             <isFieldManaged>true</isFieldManaged>
             <isRequired>true</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__TransactionId__c</field>
+            <field>FieloPLT__TransactionId__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <label>Transaction New</label>
     </fieldSets>
     <fieldSets>
-        <fullName>FieloAlpha__TransactionTab</fullName>
+        <fullName>FieloPLT__TransactionTab</fullName>
         <availableFields>
-            <field>FieloAlpha__Approved__c</field>
+            <field>FieloPLT__Approved__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Date__c</field>
+            <field>FieloPLT__Date__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__IdentificationType__c</field>
+            <field>FieloPLT__IdentificationType__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__MemberCode__c</field>
+            <field>FieloPLT__MemberCode__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Type__c</field>
+            <field>FieloPLT__Type__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <description>Transaction Tab</description>
         <displayedFields>
-            <field>FieloAlpha__Processed__c</field>
+            <field>FieloPLT__Processed__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Value__c</field>
+            <field>FieloPLT__Value__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Points__c</field>
+            <field>FieloPLT__Points__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
@@ -259,13 +259,13 @@
         <label>Transaction Tab</label>
     </fieldSets>
     <fields>
-        <fullName>FieloAlpha__Action__c</fullName>
+        <fullName>FieloPLT__Action__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>Related Action</description>
         <externalId>false</externalId>
         <label>Action</label>
-        <referenceTo>FieloAlpha__Action__c</referenceTo>
+        <referenceTo>FieloPLT__Action__c</referenceTo>
         <relationshipLabel>Transactions</relationshipLabel>
         <relationshipName>Transactions</relationshipName>
         <required>false</required>
@@ -273,13 +273,13 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Adjust__c</fullName>
+        <fullName>FieloPLT__Adjust__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>Read only field.</inlineHelpText>
         <label>Adjust Transaction</label>
-        <referenceTo>FieloAlpha__Transaction__c</referenceTo>
+        <referenceTo>FieloPLT__Transaction__c</referenceTo>
         <relationshipLabel>Transactions</relationshipLabel>
         <relationshipName>Transactions</relationshipName>
         <required>false</required>
@@ -287,10 +287,10 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ApprovedReadOnly__c</fullName>
+        <fullName>FieloPLT__ApprovedReadOnly__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>IF(  FieloAlpha__Approved__c , $Label.FieloAlpha__Approved , $Label.FieloAlpha__NotApproved )</formula>
+        <formula>IF(  FieloPLT__Approved__c , $Label.FieloPLT__Approved , $Label.FieloPLT__NotApproved )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Approved (Read Only)</label>
         <required>false</required>
@@ -299,7 +299,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Approved__c</fullName>
+        <fullName>FieloPLT__Approved__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>In case of approval process behind transactions, here is the approval</description>
@@ -309,7 +309,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__AttachmentId__c</fullName>
+        <fullName>FieloPLT__AttachmentId__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Image source</label>
@@ -320,7 +320,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__BranchCode__c</fullName>
+        <fullName>FieloPLT__BranchCode__c</fullName>
         <deprecated>false</deprecated>
         <description>Branch where transaction was done</description>
         <externalId>false</externalId>
@@ -332,14 +332,14 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Branch__c</fullName>
+        <fullName>FieloPLT__Branch__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>Branch where transaction was done</description>
         <externalId>false</externalId>
         <inlineHelpText>Look up the branch where the transaction took place.</inlineHelpText>
         <label>Branch</label>
-        <referenceTo>FieloAlpha__Branch__c</referenceTo>
+        <referenceTo>FieloPLT__Branch__c</referenceTo>
         <relationshipLabel>Transactions</relationshipLabel>
         <relationshipName>Transactions</relationshipName>
         <required>false</required>
@@ -347,12 +347,12 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__CodeItem__c</fullName>
+        <fullName>FieloPLT__CodeItem__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Code Item</label>
-        <referenceTo>FieloAlpha__Code__c</referenceTo>
+        <referenceTo>FieloPLT__Code__c</referenceTo>
         <relationshipLabel>Transactions</relationshipLabel>
         <relationshipName>Transactions</relationshipName>
         <required>false</required>
@@ -360,7 +360,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Code__c</fullName>
+        <fullName>FieloPLT__Code__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Code</label>
@@ -371,11 +371,11 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Cost__c</fullName>
+        <fullName>FieloPLT__Cost__c</fullName>
         <deprecated>false</deprecated>
         <description>Cost related to each point</description>
         <externalId>false</externalId>
-        <formula>IF(ISNULL(FieloAlpha__PointCost__c), FieloAlpha__Points__c * FieloAlpha__Member__r.FieloAlpha__Program__r.FieloAlpha__PointCost__c, FieloAlpha__Points__c * FieloAlpha__PointCost__c)</formula>
+        <formula>IF(ISNULL(FieloPLT__PointCost__c), FieloPLT__Points__c * FieloPLT__Member__r.FieloPLT__Program__r.FieloPLT__PointCost__c, FieloPLT__Points__c * FieloPLT__PointCost__c)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Cost</label>
         <precision>18</precision>
@@ -385,10 +385,10 @@
         <type>Currency</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__DateReadOnly__c</fullName>
+        <fullName>FieloPLT__DateReadOnly__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>FieloAlpha__Date__c</formula>
+        <formula>FieloPLT__Date__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Date &amp; Time (Read Only)</label>
         <required>false</required>
@@ -396,7 +396,7 @@
         <type>DateTime</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Date__c</fullName>
+        <fullName>FieloPLT__Date__c</fullName>
         <defaultValue>now()</defaultValue>
         <deprecated>false</deprecated>
         <description>Date and time when transaction was done</description>
@@ -408,12 +408,12 @@
         <type>DateTime</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Event__c</fullName>
+        <fullName>FieloPLT__Event__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Event</label>
-        <referenceTo>FieloAlpha__Event__c</referenceTo>
+        <referenceTo>FieloPLT__Event__c</referenceTo>
         <relationshipLabel>Transactions</relationshipLabel>
         <relationshipName>Transactions</relationshipName>
         <required>false</required>
@@ -421,7 +421,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__IdentificationType__c</fullName>
+        <fullName>FieloPLT__IdentificationType__c</fullName>
         <deprecated>false</deprecated>
         <description>Identification of the member entered in the transaction</description>
         <externalId>false</externalId>
@@ -441,7 +441,7 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Location__c</fullName>
+        <fullName>FieloPLT__Location__c</fullName>
         <deprecated>false</deprecated>
         <displayLocationInDecimal>false</displayLocationInDecimal>
         <externalId>false</externalId>
@@ -452,7 +452,7 @@
         <type>Location</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__MemberCode__c</fullName>
+        <fullName>FieloPLT__MemberCode__c</fullName>
         <deprecated>false</deprecated>
         <description>Id of the member that made the transaction</description>
         <externalId>false</externalId>
@@ -464,10 +464,10 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__MemberReadOnly__c</fullName>
+        <fullName>FieloPLT__MemberReadOnly__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>HYPERLINK(&apos;/&apos; + FieloAlpha__Member__c ,  FieloAlpha__Member__r.FieloAlpha__Name__c )</formula>
+        <formula>HYPERLINK(&apos;/&apos; + FieloPLT__Member__c ,  FieloPLT__Member__r.FieloPLT__Name__c )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Member (Read Only)</label>
         <required>false</required>
@@ -476,14 +476,14 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Member__c</fullName>
+        <fullName>FieloPLT__Member__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>Member related with the transaction</description>
         <externalId>false</externalId>
         <inlineHelpText>Enter the member who performed this transaction.</inlineHelpText>
         <label>Member</label>
-        <referenceTo>FieloAlpha__Member__c</referenceTo>
+        <referenceTo>FieloPLT__Member__c</referenceTo>
         <relationshipLabel>Transactions</relationshipLabel>
         <relationshipName>Transactions</relationshipName>
         <required>false</required>
@@ -491,7 +491,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Offline__c</fullName>
+        <fullName>FieloPLT__Offline__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -501,7 +501,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__PointCost__c</fullName>
+        <fullName>FieloPLT__PointCost__c</fullName>
         <deprecated>false</deprecated>
         <description>The value of a point in real life currency.</description>
         <externalId>false</externalId>
@@ -514,10 +514,10 @@
         <type>Currency</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__PointsReadOnly__c</fullName>
+        <fullName>FieloPLT__PointsReadOnly__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>FieloAlpha__Points__c</formula>
+        <formula>FieloPLT__Points__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Points (Read Only)</label>
         <precision>18</precision>
@@ -528,7 +528,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Points__c</fullName>
+        <fullName>FieloPLT__Points__c</fullName>
         <deprecated>false</deprecated>
         <description>It&apos;s a result to calculate rules for this transaction</description>
         <externalId>false</externalId>
@@ -542,10 +542,10 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ProcessedStatusReadOnly__c</fullName>
+        <fullName>FieloPLT__ProcessedStatusReadOnly__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>IF(  FieloAlpha__Processed__c ,  $Label.FieloAlpha__Processed ,  $Label.FieloAlpha__NotProcessed )</formula>
+        <formula>IF(  FieloPLT__Processed__c ,  $Label.FieloPLT__Processed ,  $Label.FieloPLT__NotProcessed )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Processed Status (Read Only)</label>
         <required>false</required>
@@ -554,7 +554,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Processed__c</fullName>
+        <fullName>FieloPLT__Processed__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>It indicates whether the transaction was or not processed (read only field).</description>
@@ -565,13 +565,13 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Referral__c</fullName>
+        <fullName>FieloPLT__Referral__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>On case of a referral transaction, here is the link to the referred.</description>
         <externalId>false</externalId>
         <label>Referral</label>
-        <referenceTo>FieloAlpha__Member__c</referenceTo>
+        <referenceTo>FieloPLT__Member__c</referenceTo>
         <relationshipLabel>Transactions (Referral)</relationshipLabel>
         <relationshipName>TransactionsFromReferrals</relationshipName>
         <required>false</required>
@@ -579,11 +579,11 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Revenue__c</fullName>
+        <fullName>FieloPLT__Revenue__c</fullName>
         <deprecated>false</deprecated>
         <description>Value earned for the transaction, is the value - Cost, and it has to be positive</description>
         <externalId>false</externalId>
-        <formula>FieloAlpha__Value__c - FieloAlpha__Cost__c</formula>
+        <formula>FieloPLT__Value__c - FieloPLT__Cost__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Revenue</label>
         <precision>18</precision>
@@ -593,7 +593,7 @@
         <type>Currency</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Reverted__c</fullName>
+        <fullName>FieloPLT__Reverted__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -602,12 +602,12 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Reward__c</fullName>
+        <fullName>FieloPLT__Reward__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Reward</label>
-        <referenceTo>FieloAlpha__Reward__c</referenceTo>
+        <referenceTo>FieloPLT__Reward__c</referenceTo>
         <relationshipLabel>Transactions</relationshipLabel>
         <relationshipName>Transactions</relationshipName>
         <required>false</required>
@@ -615,7 +615,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__SkipEngine__c</fullName>
+        <fullName>FieloPLT__SkipEngine__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -624,10 +624,10 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__StatusReadOnly__c</fullName>
+        <fullName>FieloPLT__StatusReadOnly__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>TEXT(FieloAlpha__Status__c)</formula>
+        <formula>TEXT(FieloPLT__Status__c)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Status (Read Only)</label>
         <required>false</required>
@@ -636,7 +636,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Status__c</fullName>
+        <fullName>FieloPLT__Status__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Status</label>
@@ -663,7 +663,7 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__TransactionId__c</fullName>
+        <fullName>FieloPLT__TransactionId__c</fullName>
         <deprecated>false</deprecated>
         <description>Link to transaction identificator</description>
         <externalId>false</externalId>
@@ -676,7 +676,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Type__c</fullName>
+        <fullName>FieloPLT__Type__c</fullName>
         <deprecated>false</deprecated>
         <description>These values represents different kind of transactions, each one have their own rules and gives quantity of points depending on their configuration</description>
         <externalId>false</externalId>
@@ -717,7 +717,7 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Value__c</fullName>
+        <fullName>FieloPLT__Value__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
         <description>The value of the purchase originating this transaction.</description>
@@ -732,33 +732,33 @@
     </fields>
     <label>Transaction</label>
     <listViews>
-        <fullName>FieloAlpha__All_Transactions</fullName>
+        <fullName>FieloPLT__All_Transactions</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Type__c</columns>
-        <columns>FieloAlpha__Value__c</columns>
-        <columns>FieloAlpha__MemberReadOnly__c</columns>
-        <columns>FieloAlpha__DateReadOnly__c</columns>
-        <columns>FieloAlpha__ApprovedReadOnly__c</columns>
-        <columns>FieloAlpha__ProcessedStatusReadOnly__c</columns>
-        <columns>FieloAlpha__StatusReadOnly__c</columns>
-        <columns>FieloAlpha__PointsReadOnly__c</columns>
+        <columns>FieloPLT__Type__c</columns>
+        <columns>FieloPLT__Value__c</columns>
+        <columns>FieloPLT__MemberReadOnly__c</columns>
+        <columns>FieloPLT__DateReadOnly__c</columns>
+        <columns>FieloPLT__ApprovedReadOnly__c</columns>
+        <columns>FieloPLT__ProcessedStatusReadOnly__c</columns>
+        <columns>FieloPLT__StatusReadOnly__c</columns>
+        <columns>FieloPLT__PointsReadOnly__c</columns>
         <filterScope>Everything</filterScope>
         <label>All Transactions</label>
         <language>en_US</language>
     </listViews>
     <listViews>
-        <fullName>FieloAlpha__ByTypeCodeInsert</fullName>
+        <fullName>FieloPLT__ByTypeCodeInsert</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Processed__c</columns>
-        <columns>FieloAlpha__Member__c</columns>
-        <columns>FieloAlpha__IdentificationType__c</columns>
-        <columns>FieloAlpha__MemberCode__c</columns>
-        <columns>FieloAlpha__Value__c</columns>
-        <columns>FieloAlpha__Points__c</columns>
-        <columns>FieloAlpha__Date__c</columns>
+        <columns>FieloPLT__Processed__c</columns>
+        <columns>FieloPLT__Member__c</columns>
+        <columns>FieloPLT__IdentificationType__c</columns>
+        <columns>FieloPLT__MemberCode__c</columns>
+        <columns>FieloPLT__Value__c</columns>
+        <columns>FieloPLT__Points__c</columns>
+        <columns>FieloPLT__Date__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
-            <field>FieloAlpha__Type__c</field>
+            <field>FieloPLT__Type__c</field>
             <operation>equals</operation>
             <value>Code Insert</value>
         </filters>
@@ -766,18 +766,18 @@
         <language>en_US</language>
     </listViews>
     <listViews>
-        <fullName>FieloAlpha__ByTypePurchase</fullName>
+        <fullName>FieloPLT__ByTypePurchase</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Processed__c</columns>
-        <columns>FieloAlpha__Member__c</columns>
-        <columns>FieloAlpha__IdentificationType__c</columns>
-        <columns>FieloAlpha__MemberCode__c</columns>
-        <columns>FieloAlpha__Value__c</columns>
-        <columns>FieloAlpha__Points__c</columns>
-        <columns>FieloAlpha__Date__c</columns>
+        <columns>FieloPLT__Processed__c</columns>
+        <columns>FieloPLT__Member__c</columns>
+        <columns>FieloPLT__IdentificationType__c</columns>
+        <columns>FieloPLT__MemberCode__c</columns>
+        <columns>FieloPLT__Value__c</columns>
+        <columns>FieloPLT__Points__c</columns>
+        <columns>FieloPLT__Date__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
-            <field>FieloAlpha__Type__c</field>
+            <field>FieloPLT__Type__c</field>
             <operation>equals</operation>
             <value>Purchase</value>
         </filters>
@@ -785,18 +785,18 @@
         <language>en_US</language>
     </listViews>
     <listViews>
-        <fullName>FieloAlpha__ByTypeReferralCompleteSignup</fullName>
+        <fullName>FieloPLT__ByTypeReferralCompleteSignup</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Processed__c</columns>
-        <columns>FieloAlpha__Member__c</columns>
-        <columns>FieloAlpha__IdentificationType__c</columns>
-        <columns>FieloAlpha__MemberCode__c</columns>
-        <columns>FieloAlpha__Value__c</columns>
-        <columns>FieloAlpha__Points__c</columns>
-        <columns>FieloAlpha__Date__c</columns>
+        <columns>FieloPLT__Processed__c</columns>
+        <columns>FieloPLT__Member__c</columns>
+        <columns>FieloPLT__IdentificationType__c</columns>
+        <columns>FieloPLT__MemberCode__c</columns>
+        <columns>FieloPLT__Value__c</columns>
+        <columns>FieloPLT__Points__c</columns>
+        <columns>FieloPLT__Date__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
-            <field>FieloAlpha__Type__c</field>
+            <field>FieloPLT__Type__c</field>
             <operation>equals</operation>
             <value>Referral - Step 2</value>
         </filters>
@@ -804,18 +804,18 @@
         <language>en_US</language>
     </listViews>
     <listViews>
-        <fullName>FieloAlpha__ByTypeReferralSimpleSignup</fullName>
+        <fullName>FieloPLT__ByTypeReferralSimpleSignup</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Processed__c</columns>
-        <columns>FieloAlpha__Member__c</columns>
-        <columns>FieloAlpha__IdentificationType__c</columns>
-        <columns>FieloAlpha__MemberCode__c</columns>
-        <columns>FieloAlpha__Value__c</columns>
-        <columns>FieloAlpha__Points__c</columns>
-        <columns>FieloAlpha__Date__c</columns>
+        <columns>FieloPLT__Processed__c</columns>
+        <columns>FieloPLT__Member__c</columns>
+        <columns>FieloPLT__IdentificationType__c</columns>
+        <columns>FieloPLT__MemberCode__c</columns>
+        <columns>FieloPLT__Value__c</columns>
+        <columns>FieloPLT__Points__c</columns>
+        <columns>FieloPLT__Date__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
-            <field>FieloAlpha__Type__c</field>
+            <field>FieloPLT__Type__c</field>
             <operation>equals</operation>
             <value>Referral - Step 1</value>
         </filters>
@@ -823,18 +823,18 @@
         <language>en_US</language>
     </listViews>
     <listViews>
-        <fullName>FieloAlpha__ByTypeRegistration</fullName>
+        <fullName>FieloPLT__ByTypeRegistration</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Processed__c</columns>
-        <columns>FieloAlpha__Member__c</columns>
-        <columns>FieloAlpha__IdentificationType__c</columns>
-        <columns>FieloAlpha__MemberCode__c</columns>
-        <columns>FieloAlpha__Value__c</columns>
-        <columns>FieloAlpha__Points__c</columns>
-        <columns>FieloAlpha__Date__c</columns>
+        <columns>FieloPLT__Processed__c</columns>
+        <columns>FieloPLT__Member__c</columns>
+        <columns>FieloPLT__IdentificationType__c</columns>
+        <columns>FieloPLT__MemberCode__c</columns>
+        <columns>FieloPLT__Value__c</columns>
+        <columns>FieloPLT__Points__c</columns>
+        <columns>FieloPLT__Date__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
-            <field>FieloAlpha__Type__c</field>
+            <field>FieloPLT__Type__c</field>
             <operation>equals</operation>
             <value>Registration</value>
         </filters>
@@ -842,15 +842,15 @@
         <language>en_US</language>
     </listViews>
     <listViews>
-        <fullName>FieloAlpha__ThisWeek</fullName>
+        <fullName>FieloPLT__ThisWeek</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Processed__c</columns>
-        <columns>FieloAlpha__Member__c</columns>
-        <columns>FieloAlpha__IdentificationType__c</columns>
-        <columns>FieloAlpha__MemberCode__c</columns>
-        <columns>FieloAlpha__Value__c</columns>
-        <columns>FieloAlpha__Points__c</columns>
-        <columns>FieloAlpha__Date__c</columns>
+        <columns>FieloPLT__Processed__c</columns>
+        <columns>FieloPLT__Member__c</columns>
+        <columns>FieloPLT__IdentificationType__c</columns>
+        <columns>FieloPLT__MemberCode__c</columns>
+        <columns>FieloPLT__Value__c</columns>
+        <columns>FieloPLT__Points__c</columns>
+        <columns>FieloPLT__Date__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>CREATED_DATE</field>
@@ -867,57 +867,57 @@
     </nameField>
     <pluralLabel>Transactions</pluralLabel>
     <searchLayouts>
-        <customTabListAdditionalFields>FieloAlpha__Processed__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>FieloAlpha__Value__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>FieloAlpha__Points__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>FieloAlpha__Member__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>FieloAlpha__Branch__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__Processed__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__Value__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__Points__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__Member__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__Branch__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>CREATED_DATE</customTabListAdditionalFields>
         <excludedStandardButtons>Accept</excludedStandardButtons>
         <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
-        <listViewButtons>FieloAlpha__FieloProcessOffline</listViewButtons>
-        <listViewButtons>FieloAlpha__Codes</listViewButtons>
+        <listViewButtons>FieloPLT__FieloProcessOffline</listViewButtons>
+        <listViewButtons>FieloPLT__Codes</listViewButtons>
         <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>Read</sharingModel>
     <validationRules>
-        <fullName>FieloAlpha__ValidateDateTime</fullName>
+        <fullName>FieloPLT__ValidateDateTime</fullName>
         <active>true</active>
         <description>The Date &amp; Time for the Transaction must have a value</description>
-        <errorConditionFormula>ISNULL(FieloAlpha__Date__c)</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__Date__c</errorDisplayField>
+        <errorConditionFormula>ISNULL(FieloPLT__Date__c)</errorConditionFormula>
+        <errorDisplayField>FieloPLT__Date__c</errorDisplayField>
         <errorMessage>The Date &amp; Time for the Transaction must have a value</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__ValidateProcessedPoints</fullName>
+        <fullName>FieloPLT__ValidateProcessedPoints</fullName>
         <active>true</active>
         <description>A processed Transaction can not have null points.</description>
-        <errorConditionFormula>FieloAlpha__Processed__c &amp;&amp; ISNULL(FieloAlpha__Points__c)</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__Points__c</errorDisplayField>
+        <errorConditionFormula>FieloPLT__Processed__c &amp;&amp; ISNULL(FieloPLT__Points__c)</errorConditionFormula>
+        <errorDisplayField>FieloPLT__Points__c</errorDisplayField>
         <errorMessage>A processed Transaction can not have null points</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__ValidateTransactionType</fullName>
+        <fullName>FieloPLT__ValidateTransactionType</fullName>
         <active>true</active>
-        <errorConditionFormula>FieloAlpha__Value__c != 0 &amp;&amp; ( ISPICKVAL(FieloAlpha__Type__c, &apos;Code Insert&apos; ) || ISPICKVAL(FieloAlpha__Type__c, &apos;Referral - Step 1&apos; ) || ISPICKVAL(FieloAlpha__Type__c, &apos;Referral - Step 2&apos; ) || ISPICKVAL(FieloAlpha__Type__c, &apos;Registration&apos; ) )</errorConditionFormula>
+        <errorConditionFormula>FieloPLT__Value__c != 0 &amp;&amp; ( ISPICKVAL(FieloPLT__Type__c, &apos;Code Insert&apos; ) || ISPICKVAL(FieloPLT__Type__c, &apos;Referral - Step 1&apos; ) || ISPICKVAL(FieloPLT__Type__c, &apos;Referral - Step 2&apos; ) || ISPICKVAL(FieloPLT__Type__c, &apos;Registration&apos; ) )</errorConditionFormula>
         <errorMessage>You must enter &quot;Purchase value = 0&quot; for transactions of types: Registration, Code insert, Referral - Simple signup, and Referral - Complete signup.</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__ValidateTransactionValue</fullName>
+        <fullName>FieloPLT__ValidateTransactionValue</fullName>
         <active>false</active>
-        <errorConditionFormula>FieloAlpha__Value__c &lt;= 0 &amp;&amp; ISPICKVAL(FieloAlpha__Type__c, &apos;Purchase&apos; )</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__Value__c</errorDisplayField>
+        <errorConditionFormula>FieloPLT__Value__c &lt;= 0 &amp;&amp; ISPICKVAL(FieloPLT__Type__c, &apos;Purchase&apos; )</errorConditionFormula>
+        <errorDisplayField>FieloPLT__Value__c</errorDisplayField>
         <errorMessage>Value cannot be equal or less than 0</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__Validate_Member</fullName>
+        <fullName>FieloPLT__Validate_Member</fullName>
         <active>true</active>
-        <errorConditionFormula>(FieloAlpha__Member__c == null)</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__Member__c</errorDisplayField>
+        <errorConditionFormula>(FieloPLT__Member__c == null)</errorConditionFormula>
+        <errorDisplayField>FieloPLT__Member__c</errorDisplayField>
         <errorMessage>You must choose a Member in the Member Field.</errorMessage>
     </validationRules>
     <webLinks>
-        <fullName>FieloAlpha__Codes</fullName>
+        <fullName>FieloPLT__Codes</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -927,22 +927,22 @@
         <openType>sidebar</openType>
         <protected>false</protected>
         <requireRowSelection>false</requireRowSelection>
-        <url>/apex/{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}CodeUploadBackEnd</url>
+        <url>/apex/{!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}CodeUploadBackEnd</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__FieloProcessOffline</fullName>
+        <fullName>FieloPLT__FieloProcessOffline</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
         <height>600</height>
         <linkType>page</linkType>
         <masterLabel>Process Offline</masterLabel>
         <openType>sidebar</openType>
-        <page>FieloAlpha__TransactionOfflineProcessBackEnd</page>
+        <page>FieloPLT__TransactionOfflineProcessBackEnd</page>
         <protected>false</protected>
         <requireRowSelection>true</requireRowSelection>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__NewAdjustTransaction</fullName>
+        <fullName>FieloPLT__NewAdjustTransaction</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -952,10 +952,10 @@
         <openType>sidebar</openType>
         <protected>false</protected>
         <requireRowSelection>true</requireRowSelection>
-        <url>/apex/{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}TransactionAdjust?memberId={!FieloAlpha__Member__c.Id}</url>
+        <url>/apex/{!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}TransactionAdjust?memberId={!FieloPLT__Member__c.Id}</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__Revert</fullName>
+        <fullName>FieloPLT__Revert</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <linkType>javascript</linkType>
@@ -965,9 +965,9 @@
         <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)} 
 {!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)} 
 
-var prefix = &apos;{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}&apos;.replace(&apos;__&apos;, &apos;.&apos;); 
+var prefix = &apos;{!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}&apos;.replace(&apos;__&apos;, &apos;.&apos;); 
 
-var status = sforce.apex.execute(prefix+&apos;TransactionService&apos;, &apos;revertTransaction&apos;, {tranId: &apos;{!FieloAlpha__Transaction__c.Id}&apos;}); 
+var status = sforce.apex.execute(prefix+&apos;TransactionService&apos;, &apos;revertTransaction&apos;, {tranId: &apos;{!FieloPLT__Transaction__c.Id}&apos;}); 
 
 alert(status);</url>
     </webLinks>

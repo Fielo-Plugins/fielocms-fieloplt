@@ -58,7 +58,7 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>FieloAlpha__AttachmentId__c</fullName>
+        <fullName>FieloPLT__AttachmentId__c</fullName>
         <deprecated>false</deprecated>
         <description>Allows to add an image to the Category</description>
         <externalId>false</externalId>
@@ -70,10 +70,10 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Category_Group_Name__c</fullName>
+        <fullName>FieloPLT__Category_Group_Name__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>FieloAlpha__Category__r.Name</formula>
+        <formula>FieloPLT__Category__r.Name</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Category Group Name</label>
         <required>false</required>
@@ -82,7 +82,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Category__c</fullName>
+        <fullName>FieloPLT__Category__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>Category name</description>
@@ -92,13 +92,13 @@
             <active>true</active>
             <errorMessage>That category belongs to another program. You must create the category in this program before trying to use it.</errorMessage>
             <filterItems>
-                <field>$Source.FieloAlpha__Program__c</field>
+                <field>$Source.FieloPLT__Program__c</field>
                 <operation>equals</operation>
-                <valueField>FieloAlpha__Category__c.FieloAlpha__Program__c</valueField>
+                <valueField>FieloPLT__Category__c.FieloPLT__Program__c</valueField>
             </filterItems>
             <isOptional>false</isOptional>
         </lookupFilter>
-        <referenceTo>FieloAlpha__Category__c</referenceTo>
+        <referenceTo>FieloPLT__Category__c</referenceTo>
         <relationshipLabel>Categories</relationshipLabel>
         <relationshipName>Categories</relationshipName>
         <required>false</required>
@@ -106,7 +106,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Order__c</fullName>
+        <fullName>FieloPLT__Order__c</fullName>
         <deprecated>false</deprecated>
         <description>Sort the categories</description>
         <externalId>false</externalId>
@@ -119,13 +119,13 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Program__c</fullName>
+        <fullName>FieloPLT__Program__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>Select the program to which the category belongs</inlineHelpText>
         <label>Program</label>
-        <referenceTo>FieloAlpha__Program__c</referenceTo>
+        <referenceTo>FieloPLT__Program__c</referenceTo>
         <relationshipLabel>Categories</relationshipLabel>
         <relationshipName>Categories</relationshipName>
         <required>false</required>
@@ -134,19 +134,19 @@
     </fields>
     <label>Category</label>
     <listViews>
-        <fullName>FieloAlpha__All</fullName>
+        <fullName>FieloPLT__All</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Category__c</columns>
-        <columns>FieloAlpha__Order__c</columns>
+        <columns>FieloPLT__Category__c</columns>
+        <columns>FieloPLT__Order__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
         <language>en_US</language>
     </listViews>
     <listViews>
-        <fullName>FieloAlpha__All_Categories</fullName>
+        <fullName>FieloPLT__All_Categories</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Order__c</columns>
-        <columns>FieloAlpha__Category_Group_Name__c</columns>
+        <columns>FieloPLT__Order__c</columns>
+        <columns>FieloPLT__Category_Group_Name__c</columns>
         <columns>RECORDTYPE</columns>
         <filterScope>Everything</filterScope>
         <label>All Categories</label>
@@ -158,36 +158,36 @@
     </nameField>
     <pluralLabel>Categories</pluralLabel>
     <recordTypes>
-        <fullName>FieloAlpha__CategoryItem</fullName>
+        <fullName>FieloPLT__CategoryItem</fullName>
         <active>true</active>
         <label>Category Item</label>
     </recordTypes>
     <recordTypes>
-        <fullName>FieloAlpha__Category_Group</fullName>
+        <fullName>FieloPLT__Category_Group</fullName>
         <active>true</active>
         <description>Element that represent a set of categories</description>
         <label>Category Group</label>
     </recordTypes>
     <searchLayouts>
-        <customTabListAdditionalFields>FieloAlpha__Category__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>FieloAlpha__Order__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__Category__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__Order__c</customTabListAdditionalFields>
         <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
-        <listViewButtons>FieloAlpha__Reorder_Categories</listViewButtons>
-        <lookupDialogsAdditionalFields>FieloAlpha__Category_Group_Name__c</lookupDialogsAdditionalFields>
-        <searchResultsAdditionalFields>FieloAlpha__Category__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>FieloAlpha__Order__c</searchResultsAdditionalFields>
+        <listViewButtons>FieloPLT__Reorder_Categories</listViewButtons>
+        <lookupDialogsAdditionalFields>FieloPLT__Category_Group_Name__c</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>FieloPLT__Category__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>FieloPLT__Order__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
-        <fullName>FieloAlpha__ModifyProgram</fullName>
+        <fullName>FieloPLT__ModifyProgram</fullName>
         <active>true</active>
         <description>Is not possible to modify the associated Program</description>
-        <errorConditionFormula>ISCHANGED(FieloAlpha__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloAlpha__Program__c)))</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__Program__c</errorDisplayField>
+        <errorConditionFormula>ISCHANGED(FieloPLT__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloPLT__Program__c)))</errorConditionFormula>
+        <errorDisplayField>FieloPLT__Program__c</errorDisplayField>
         <errorMessage>Is not possible to modify the associated Program</errorMessage>
     </validationRules>
     <webLinks>
-        <fullName>FieloAlpha__Back</fullName>
+        <fullName>FieloPLT__Back</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -195,27 +195,27 @@
         <masterLabel>Back</masterLabel>
         <openType>replace</openType>
         <protected>false</protected>
-        <url>{!URLFOR( $Action.FieloAlpha__Category__c.Tab ,  $ObjectType.FieloAlpha__Category__c )}</url>
+        <url>{!URLFOR( $Action.FieloPLT__Category__c.Tab ,  $ObjectType.FieloPLT__Category__c )}</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__ReorderChildCategories</fullName>
+        <fullName>FieloPLT__ReorderChildCategories</fullName>
         <availability>online</availability>
         <displayType>link</displayType>
         <linkType>page</linkType>
         <masterLabel>Reorder Categories</masterLabel>
         <openType>replace</openType>
-        <page>FieloAlpha__CategoryReorderBackEnd</page>
+        <page>FieloPLT__CategoryReorderBackEnd</page>
         <protected>false</protected>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__Reorder_Categories</fullName>
+        <fullName>FieloPLT__Reorder_Categories</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
         <height>600</height>
         <linkType>page</linkType>
         <masterLabel>Reorder Categories</masterLabel>
         <openType>sidebar</openType>
-        <page>FieloAlpha__CategoryReorderBackEnd</page>
+        <page>FieloPLT__CategoryReorderBackEnd</page>
         <protected>false</protected>
         <requireRowSelection>false</requireRowSelection>
     </webLinks>

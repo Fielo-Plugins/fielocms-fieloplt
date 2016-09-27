@@ -5,49 +5,49 @@
         <description>Approved Email</description>
         <protected>false</protected>
         <recipients>
-            <field>FieloAlpha__Email__c</field>
+            <field>FieloPLT__Email__c</field>
             <type>email</type>
         </recipients>
         <senderType>CurrentUser</senderType>
-        <template>FieloAlpha__FieloTemplates/RegistrationApproved</template>
+        <template>FieloPLT__FieloTemplates/RegistrationApproved</template>
     </alerts>
     <alerts>
-        <fullName>FieloAlpha__Recomend</fullName>
+        <fullName>FieloPLT__Recomend</fullName>
         <description>send recomend mail</description>
         <protected>false</protected>
         <recipients>
-            <field>FieloAlpha__Email__c</field>
+            <field>FieloPLT__Email__c</field>
             <type>email</type>
         </recipients>
         <senderType>CurrentUser</senderType>
-        <template>FieloAlpha__FieloTemplates/FieloAlpha__Recomend</template>
+        <template>FieloPLT__FieloTemplates/FieloPLT__Recomend</template>
     </alerts>
     <alerts>
-        <fullName>FieloAlpha__Welcome_Email</fullName>
+        <fullName>FieloPLT__Welcome_Email</fullName>
         <description>Welcome Email</description>
         <protected>false</protected>
         <recipients>
-            <field>FieloAlpha__Email__c</field>
+            <field>FieloPLT__Email__c</field>
             <type>email</type>
         </recipients>
         <senderType>CurrentUser</senderType>
-        <template>FieloAlpha__FieloTemplates/FieloAlpha__Welcome</template>
+        <template>FieloPLT__FieloTemplates/FieloPLT__Welcome</template>
     </alerts>
     <alerts>
         <fullName>Registration_Program_Default</fullName>
         <description>Registration Program Default</description>
         <protected>false</protected>
         <recipients>
-            <field>FieloAlpha__Email__c</field>
+            <field>FieloPLT__Email__c</field>
             <type>email</type>
         </recipients>
         <senderType>CurrentUser</senderType>
-        <template>FieloAlpha__FieloTemplates/Register</template>
+        <template>FieloPLT__FieloTemplates/Register</template>
     </alerts>
     <fieldUpdates>
         <fullName>DeleteApprovedEmail</fullName>
         <description>Delete the recent email record of Approved Type sended</description>
-        <field>FieloAlpha__Deleted__c</field>
+        <field>FieloPLT__Deleted__c</field>
         <literalValue>1</literalValue>
         <name>DeleteApprovedEmail</name>
         <notifyAssignee>false</notifyAssignee>
@@ -57,7 +57,7 @@
     <fieldUpdates>
         <fullName>DeleteRegisterEmail</fullName>
         <description>Delete the recent email record of Register Type sended</description>
-        <field>FieloAlpha__Deleted__c</field>
+        <field>FieloPLT__Deleted__c</field>
         <literalValue>1</literalValue>
         <name>DeleteRegisterEmail</name>
         <notifyAssignee>false</notifyAssignee>
@@ -65,8 +65,8 @@
         <protected>false</protected>
     </fieldUpdates>
     <fieldUpdates>
-        <fullName>FieloAlpha__DeleteEmail</fullName>
-        <field>FieloAlpha__Deleted__c</field>
+        <fullName>FieloPLT__DeleteEmail</fullName>
+        <field>FieloPLT__Deleted__c</field>
         <literalValue>1</literalValue>
         <name>Delete Email</name>
         <notifyAssignee>false</notifyAssignee>
@@ -74,9 +74,9 @@
         <protected>false</protected>
     </fieldUpdates>
     <fieldUpdates>
-        <fullName>FieloAlpha__DeleteWelcomeEmail</fullName>
+        <fullName>FieloPLT__DeleteWelcomeEmail</fullName>
         <description>Delete the recent email record of Welcome Type sended</description>
-        <field>FieloAlpha__Deleted__c</field>
+        <field>FieloPLT__Deleted__c</field>
         <literalValue>1</literalValue>
         <name>DeleteWelcomeEmail</name>
         <notifyAssignee>false</notifyAssignee>
@@ -84,36 +84,36 @@
         <protected>false</protected>
     </fieldUpdates>
     <rules>
-        <fullName>FieloAlpha__Recomend</fullName>
+        <fullName>FieloPLT__Recomend</fullName>
         <actions>
-            <name>FieloAlpha__Recomend</name>
+            <name>FieloPLT__Recomend</name>
             <type>Alert</type>
         </actions>
         <actions>
-            <name>FieloAlpha__DeleteEmail</name>
+            <name>FieloPLT__DeleteEmail</name>
             <type>FieldUpdate</type>
         </actions>
         <active>true</active>
         <criteriaItems>
-            <field>FieloAlpha__Email__c.FieloAlpha__Type__c</field>
+            <field>FieloPLT__Email__c.FieloPLT__Type__c</field>
             <operation>equals</operation>
             <value>Recommend</value>
         </criteriaItems>
         <triggerType>onCreateOnly</triggerType>
     </rules>
     <rules>
-        <fullName>FieloAlpha__Welcome Email</fullName>
+        <fullName>FieloPLT__Welcome Email</fullName>
         <actions>
-            <name>FieloAlpha__Welcome_Email</name>
+            <name>FieloPLT__Welcome_Email</name>
             <type>Alert</type>
         </actions>
         <actions>
-            <name>FieloAlpha__DeleteWelcomeEmail</name>
+            <name>FieloPLT__DeleteWelcomeEmail</name>
             <type>FieldUpdate</type>
         </actions>
         <active>true</active>
         <criteriaItems>
-            <field>FieloAlpha__Email__c.FieloAlpha__Type__c</field>
+            <field>FieloPLT__Email__c.FieloPLT__Type__c</field>
             <operation>equals</operation>
             <value>Welcome</value>
         </criteriaItems>
@@ -132,7 +132,7 @@
         </actions>
         <active>true</active>
         <criteriaItems>
-            <field>FieloAlpha__Email__c.FieloAlpha__Type__c</field>
+            <field>FieloPLT__Email__c.FieloPLT__Type__c</field>
             <operation>equals</operation>
             <value>Approved</value>
         </criteriaItems>
@@ -151,7 +151,7 @@
         </actions>
         <active>true</active>
         <criteriaItems>
-            <field>FieloAlpha__Email__c.FieloAlpha__Type__c</field>
+            <field>FieloPLT__Email__c.FieloPLT__Type__c</field>
             <operation>equals</operation>
             <value>Register</value>
         </criteriaItems>

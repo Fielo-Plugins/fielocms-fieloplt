@@ -46,7 +46,7 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
-    <customHelpPage>FieloAlpha__MemberHelpBackEnd</customHelpPage>
+    <customHelpPage>FieloPLT__MemberHelpBackEnd</customHelpPage>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
@@ -59,70 +59,70 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
-        <fullName>FieloAlpha__HighlightSection</fullName>
+        <fullName>FieloPLT__HighlightSection</fullName>
         <availableFields>
-            <field>FieloAlpha__Age__c</field>
+            <field>FieloPLT__Age__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__AgreementReadOnly__c</field>
+            <field>FieloPLT__AgreementReadOnly__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__ApprovedReadOnly__c</field>
+            <field>FieloPLT__ApprovedReadOnly__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Birthdate__c</field>
+            <field>FieloPLT__Birthdate__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Country__c</field>
+            <field>FieloPLT__Country__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__EnabledStatusReadOnly__c</field>
+            <field>FieloPLT__EnabledStatusReadOnly__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Gender__c</field>
+            <field>FieloPLT__Gender__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__LastTransactionDateReadOnly__c</field>
+            <field>FieloPLT__LastTransactionDateReadOnly__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__MediaPoints__c</field>
+            <field>FieloPLT__MediaPoints__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__MemberCode__c</field>
+            <field>FieloPLT__MemberCode__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__MobilePhone__c</field>
+            <field>FieloPLT__MobilePhone__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <description>Highlight information on the member page layout</description>
         <displayedFields>
-            <field>FieloAlpha__Program__c</field>
+            <field>FieloPLT__Program__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__FieloAccountStatus__c</field>
+            <field>FieloPLT__FieloAccountStatus__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
@@ -134,164 +134,164 @@
         <label>Highlight Section</label>
     </fieldSets>
     <fieldSets>
-        <fullName>FieloAlpha__Member</fullName>
+        <fullName>FieloPLT__Member</fullName>
         <availableFields>
-            <field>FieloAlpha__AgreementReadOnly__c</field>
+            <field>FieloPLT__AgreementReadOnly__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__ApprovedReadOnly__c</field>
+            <field>FieloPLT__ApprovedReadOnly__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Identification__c</field>
+            <field>FieloPLT__Identification__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__LevelReadOnly__c</field>
+            <field>FieloPLT__LevelReadOnly__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__MediaPoints__c</field>
+            <field>FieloPLT__MediaPoints__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Points__c</field>
+            <field>FieloPLT__Points__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__ProfileCompleteness__c</field>
+            <field>FieloPLT__ProfileCompleteness__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__RegisteredReadOnly__c</field>
+            <field>FieloPLT__RegisteredReadOnly__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__UserReadOnly__c</field>
+            <field>FieloPLT__UserReadOnly__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__imageId__c</field>
+            <field>FieloPLT__imageId__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <description>In Member&apos;s CRUD</description>
         <displayedFields>
-            <field>FieloAlpha__IdentificationType__c</field>
+            <field>FieloPLT__IdentificationType__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__IdentificationCode__c</field>
+            <field>FieloPLT__IdentificationCode__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__FirstName__c</field>
+            <field>FieloPLT__FirstName__c</field>
             <isFieldManaged>true</isFieldManaged>
             <isRequired>true</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__LastName__c</field>
+            <field>FieloPLT__LastName__c</field>
             <isFieldManaged>true</isFieldManaged>
             <isRequired>true</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Email__c</field>
+            <field>FieloPLT__Email__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Gender__c</field>
+            <field>FieloPLT__Gender__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Birthdate__c</field>
+            <field>FieloPLT__Birthdate__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Age__c</field>
+            <field>FieloPLT__Age__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Phone__c</field>
+            <field>FieloPLT__Phone__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__MobilePhone__c</field>
+            <field>FieloPLT__MobilePhone__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Street__c</field>
+            <field>FieloPLT__Street__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Neighborhood__c</field>
+            <field>FieloPLT__Neighborhood__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__City__c</field>
+            <field>FieloPLT__City__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__ZipCode__c</field>
+            <field>FieloPLT__ZipCode__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__State__c</field>
+            <field>FieloPLT__State__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Country__c</field>
+            <field>FieloPLT__Country__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <label>Member</label>
     </fieldSets>
     <fieldSets>
-        <fullName>FieloAlpha__MemberQuery</fullName>
+        <fullName>FieloPLT__MemberQuery</fullName>
         <description>Member API to optimize query</description>
         <label>Member Query</label>
     </fieldSets>
     <fieldSets>
-        <fullName>FieloAlpha__MemberTab</fullName>
+        <fullName>FieloPLT__MemberTab</fullName>
         <availableFields>
-            <field>FieloAlpha__AgreementReadOnly__c</field>
+            <field>FieloPLT__AgreementReadOnly__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Birthdate__c</field>
+            <field>FieloPLT__Birthdate__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__City__c</field>
+            <field>FieloPLT__City__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Country__c</field>
+            <field>FieloPLT__Country__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -301,380 +301,380 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__DaysLastTransaction__c</field>
+            <field>FieloPLT__DaysLastTransaction__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Email__c</field>
+            <field>FieloPLT__Email__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__EnabledStatusReadOnly__c</field>
+            <field>FieloPLT__EnabledStatusReadOnly__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__FirstName__c</field>
+            <field>FieloPLT__FirstName__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Gender__c</field>
+            <field>FieloPLT__Gender__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Identification__c</field>
+            <field>FieloPLT__Identification__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__IsActive__c</field>
+            <field>FieloPLT__IsActive__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__LastName__c</field>
+            <field>FieloPLT__LastName__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__LastTransactionDate__c</field>
+            <field>FieloPLT__LastTransactionDate__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__LevelReadOnly__c</field>
+            <field>FieloPLT__LevelReadOnly__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__MemberCode__c</field>
+            <field>FieloPLT__MemberCode__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Phone__c</field>
+            <field>FieloPLT__Phone__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__PointsReadOnly__c</field>
+            <field>FieloPLT__PointsReadOnly__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__ProfileCompleteness__c</field>
+            <field>FieloPLT__ProfileCompleteness__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__RegisteredReadOnly__c</field>
+            <field>FieloPLT__RegisteredReadOnly__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__State__c</field>
+            <field>FieloPLT__State__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Street__c</field>
+            <field>FieloPLT__Street__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__TotalRedeemPoints__c</field>
+            <field>FieloPLT__TotalRedeemPoints__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__TotalRedeemValue__c</field>
+            <field>FieloPLT__TotalRedeemValue__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__TotalRedeem__c</field>
+            <field>FieloPLT__TotalRedeem__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__TotalTransactions__c</field>
+            <field>FieloPLT__TotalTransactions__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__TotalValue__c</field>
+            <field>FieloPLT__TotalValue__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__UserReadOnly__c</field>
+            <field>FieloPLT__UserReadOnly__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <description>Member Tab</description>
         <displayedFields>
-            <field>FieloAlpha__Name__c</field>
+            <field>FieloPLT__Name__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__IdentificationType__c</field>
+            <field>FieloPLT__IdentificationType__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__IdentificationCode__c</field>
+            <field>FieloPLT__IdentificationCode__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Age__c</field>
+            <field>FieloPLT__Age__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Points__c</field>
+            <field>FieloPLT__Points__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__StartDate__c</field>
+            <field>FieloPLT__StartDate__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <label>Member Tab</label>
     </fieldSets>
     <fieldSets>
-        <fullName>FieloAlpha__RedemptionBackEnd</fullName>
+        <fullName>FieloPLT__RedemptionBackEnd</fullName>
         <availableFields>
-            <field>FieloAlpha__City__c</field>
+            <field>FieloPLT__City__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Country__c</field>
+            <field>FieloPLT__Country__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__FirstName__c</field>
+            <field>FieloPLT__FirstName__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__IdentificationCode__c</field>
+            <field>FieloPLT__IdentificationCode__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__IdentificationType__c</field>
+            <field>FieloPLT__IdentificationType__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Identification__c</field>
+            <field>FieloPLT__Identification__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__IsActive__c</field>
+            <field>FieloPLT__IsActive__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <description>RedemptionBackEnd</description>
         <displayedFields>
-            <field>FieloAlpha__Name__c</field>
+            <field>FieloPLT__Name__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Program__c</field>
+            <field>FieloPLT__Program__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__PointsReadOnly__c</field>
+            <field>FieloPLT__PointsReadOnly__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <label>Redemption Back End</label>
     </fieldSets>
     <fieldSets>
-        <fullName>FieloAlpha__RegistrationStep1</fullName>
+        <fullName>FieloPLT__RegistrationStep1</fullName>
         <availableFields>
-            <field>FieloAlpha__Birthdate__c</field>
+            <field>FieloPLT__Birthdate__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__City__c</field>
+            <field>FieloPLT__City__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Country__c</field>
+            <field>FieloPLT__Country__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Gender__c</field>
+            <field>FieloPLT__Gender__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__MemberCode__c</field>
+            <field>FieloPLT__MemberCode__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__MobilePhone__c</field>
+            <field>FieloPLT__MobilePhone__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Neighborhood__c</field>
+            <field>FieloPLT__Neighborhood__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__State__c</field>
+            <field>FieloPLT__State__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Street__c</field>
+            <field>FieloPLT__Street__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__ZipCode__c</field>
+            <field>FieloPLT__ZipCode__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <description>Registration Step 1</description>
         <displayedFields>
-            <field>FieloAlpha__LastName__c</field>
+            <field>FieloPLT__LastName__c</field>
             <isFieldManaged>true</isFieldManaged>
             <isRequired>true</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__FirstName__c</field>
+            <field>FieloPLT__FirstName__c</field>
             <isFieldManaged>true</isFieldManaged>
             <isRequired>true</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Email__c</field>
+            <field>FieloPLT__Email__c</field>
             <isFieldManaged>true</isFieldManaged>
             <isRequired>true</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Phone__c</field>
+            <field>FieloPLT__Phone__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__IdentificationType__c</field>
+            <field>FieloPLT__IdentificationType__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__IdentificationCode__c</field>
+            <field>FieloPLT__IdentificationCode__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <label>Registration Step 1</label>
     </fieldSets>
     <fieldSets>
-        <fullName>FieloAlpha__RegistrationStep2</fullName>
+        <fullName>FieloPLT__RegistrationStep2</fullName>
         <availableFields>
-            <field>FieloAlpha__Birthdate__c</field>
+            <field>FieloPLT__Birthdate__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__City__c</field>
+            <field>FieloPLT__City__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Country__c</field>
+            <field>FieloPLT__Country__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Email__c</field>
+            <field>FieloPLT__Email__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Gender__c</field>
+            <field>FieloPLT__Gender__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__IdentificationCode__c</field>
+            <field>FieloPLT__IdentificationCode__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__IdentificationType__c</field>
+            <field>FieloPLT__IdentificationType__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Identification__c</field>
+            <field>FieloPLT__Identification__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__MobilePhone__c</field>
+            <field>FieloPLT__MobilePhone__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Neighborhood__c</field>
+            <field>FieloPLT__Neighborhood__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Phone__c</field>
+            <field>FieloPLT__Phone__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__State__c</field>
+            <field>FieloPLT__State__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Street__c</field>
+            <field>FieloPLT__Street__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__ZipCode__c</field>
+            <field>FieloPLT__ZipCode__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <description>Registration Step 2</description>
         <displayedFields>
-            <field>FieloAlpha__FirstName__c</field>
+            <field>FieloPLT__FirstName__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__LastName__c</field>
+            <field>FieloPLT__LastName__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <label>Registration Step 2</label>
     </fieldSets>
     <fields>
-        <fullName>FieloAlpha__Account__c</fullName>
+        <fullName>FieloPLT__Account__c</fullName>
         <deleteConstraint>Restrict</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -687,11 +687,11 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Age__c</fullName>
+        <fullName>FieloPLT__Age__c</fullName>
         <deprecated>false</deprecated>
         <description>Age of the member</description>
         <externalId>false</externalId>
-        <formula>IF ( OR ( MONTH (  FieloAlpha__Birthdate__c  ) &gt; MONTH (TODAY()), AND( MONTH ( FieloAlpha__Birthdate__c ) = MONTH (TODAY()), DAY ( FieloAlpha__Birthdate__c ) &gt;= DAY (TODAY()+1))), YEAR (TODAY()) - YEAR ( FieloAlpha__Birthdate__c ) -1, YEAR (TODAY()) - YEAR ( FieloAlpha__Birthdate__c ))</formula>
+        <formula>IF ( OR ( MONTH (  FieloPLT__Birthdate__c  ) &gt; MONTH (TODAY()), AND( MONTH ( FieloPLT__Birthdate__c ) = MONTH (TODAY()), DAY ( FieloPLT__Birthdate__c ) &gt;= DAY (TODAY()+1))), YEAR (TODAY()) - YEAR ( FieloPLT__Birthdate__c ) -1, YEAR (TODAY()) - YEAR ( FieloPLT__Birthdate__c ))</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <inlineHelpText>Enter the age of the member.</inlineHelpText>
         <label>Age</label>
@@ -703,11 +703,11 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__AgreementReadOnly__c</fullName>
+        <fullName>FieloPLT__AgreementReadOnly__c</fullName>
         <deprecated>false</deprecated>
         <description>Shows and allows member to check the current Agreement</description>
         <externalId>false</externalId>
-        <formula>HYPERLINK(&apos;/&apos; +  FieloAlpha__Agreement__c , FieloAlpha__Agreement__r.Name)</formula>
+        <formula>HYPERLINK(&apos;/&apos; +  FieloPLT__Agreement__c , FieloPLT__Agreement__r.Name)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Agreement (Read Only)</label>
         <required>false</required>
@@ -716,13 +716,13 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Agreement__c</fullName>
+        <fullName>FieloPLT__Agreement__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>Link for the agreement checked by the member</description>
         <externalId>false</externalId>
         <label>Agreement</label>
-        <referenceTo>FieloAlpha__Agreement__c</referenceTo>
+        <referenceTo>FieloPLT__Agreement__c</referenceTo>
         <relationshipLabel>Members</relationshipLabel>
         <relationshipName>Members</relationshipName>
         <required>false</required>
@@ -730,10 +730,10 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ApprovedReadOnly__c</fullName>
+        <fullName>FieloPLT__ApprovedReadOnly__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>IF(  FieloAlpha__Approved__c , IMAGE(&apos;/resource/&apos;+IF(NOT(ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c)), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;, &apos;&apos;)+&apos;images/checked.png&apos;, $Label.FieloAlpha__Approved) , IMAGE(&apos;/resource/&apos;+IF(NOT(ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c)), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;, &apos;&apos;)+&apos;images/unchecked.png&apos;, $Label.FieloAlpha__NotApproved) )</formula>
+        <formula>IF(  FieloPLT__Approved__c , IMAGE(&apos;/resource/&apos;+IF(NOT(ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c)), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;, &apos;&apos;)+&apos;images/checked.png&apos;, $Label.FieloPLT__Approved) , IMAGE(&apos;/resource/&apos;+IF(NOT(ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c)), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;, &apos;&apos;)+&apos;images/unchecked.png&apos;, $Label.FieloPLT__NotApproved) )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Approved (Read Only)</label>
         <required>false</required>
@@ -742,7 +742,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Approved__c</fullName>
+        <fullName>FieloPLT__Approved__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>The approval status of this member. If you do not have an approval process, the status will be always &quot;Yes&quot;.</description>
@@ -753,7 +753,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Birthdate__c</fullName>
+        <fullName>FieloPLT__Birthdate__c</fullName>
         <deprecated>false</deprecated>
         <description>Birth date of the member</description>
         <externalId>false</externalId>
@@ -763,7 +763,7 @@
         <type>Date</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Blocked__c</fullName>
+        <fullName>FieloPLT__Blocked__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -772,7 +772,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__City__c</fullName>
+        <fullName>FieloPLT__City__c</fullName>
         <deprecated>false</deprecated>
         <description>Residence of the member</description>
         <externalId>false</externalId>
@@ -785,7 +785,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Contact__c</fullName>
+        <fullName>FieloPLT__Contact__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -798,7 +798,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Country__c</fullName>
+        <fullName>FieloPLT__Country__c</fullName>
         <deprecated>false</deprecated>
         <description>Residence of the member</description>
         <externalId>false</externalId>
@@ -811,11 +811,11 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__DaysLastTransaction__c</fullName>
+        <fullName>FieloPLT__DaysLastTransaction__c</fullName>
         <deprecated>false</deprecated>
         <description>Quantity of days from last transaction</description>
         <externalId>false</externalId>
-        <formula>TODAY()  -  FieloAlpha__LastTransactionDate__c</formula>
+        <formula>TODAY()  -  FieloPLT__LastTransactionDate__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Last Transaction (Days)</label>
         <precision>18</precision>
@@ -826,7 +826,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Email__c</fullName>
+        <fullName>FieloPLT__Email__c</fullName>
         <deprecated>false</deprecated>
         <description>Email of the member</description>
         <externalId>false</externalId>
@@ -838,10 +838,10 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__EnabledStatusReadOnly__c</fullName>
+        <fullName>FieloPLT__EnabledStatusReadOnly__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>IF( FieloAlpha__Enabled__c , IMAGE(&apos;/resource/&apos;+IF(NOT(ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c)), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;, &apos;&apos;)+&apos;images/checked.png&apos;, $Label.FieloAlpha__Enabled) , IMAGE(&apos;/resource/&apos;+IF(NOT(ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c)), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;, &apos;&apos;)+&apos;images/unchecked.png&apos;, $Label.FieloAlpha__NotEnabled) )</formula>
+        <formula>IF( FieloPLT__Enabled__c , IMAGE(&apos;/resource/&apos;+IF(NOT(ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c)), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;, &apos;&apos;)+&apos;images/checked.png&apos;, $Label.FieloPLT__Enabled) , IMAGE(&apos;/resource/&apos;+IF(NOT(ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c)), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;, &apos;&apos;)+&apos;images/unchecked.png&apos;, $Label.FieloPLT__NotEnabled) )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Enabled Status (Read Only)</label>
         <required>false</required>
@@ -850,7 +850,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Enabled__c</fullName>
+        <fullName>FieloPLT__Enabled__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <description>Whether this member participates of the program. &quot;Enabled&quot; members are members participating of the program; &quot;Not enabled&quot; members no longer participate of the program.</description>
@@ -861,7 +861,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__FieloAccountStatus__c</fullName>
+        <fullName>FieloPLT__FieloAccountStatus__c</fullName>
         <deprecated>false</deprecated>
         <description>Describe the status of the member</description>
         <externalId>false</externalId>
@@ -892,7 +892,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__FirstName__c</fullName>
+        <fullName>FieloPLT__FirstName__c</fullName>
         <deprecated>false</deprecated>
         <description>First Name of the member</description>
         <externalId>false</externalId>
@@ -905,7 +905,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Gender__c</fullName>
+        <fullName>FieloPLT__Gender__c</fullName>
         <deprecated>false</deprecated>
         <description>Gender of the member</description>
         <externalId>false</externalId>
@@ -926,7 +926,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__IdentificationCode__c</fullName>
+        <fullName>FieloPLT__IdentificationCode__c</fullName>
         <caseSensitive>false</caseSensitive>
         <deprecated>false</deprecated>
         <description>This field has to be filled depending on the information selected on Information Type (CPF o Passport)</description>
@@ -940,7 +940,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>true</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__IdentificationType__c</fullName>
+        <fullName>FieloPLT__IdentificationType__c</fullName>
         <deprecated>false</deprecated>
         <description>Once an Identification Type is selected, Identification Code has to be informed with the respective code</description>
         <externalId>false</externalId>
@@ -961,10 +961,10 @@ Completed: The registration process is completed. It there is a site, the user i
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Identification__c</fullName>
+        <fullName>FieloPLT__Identification__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>TEXT( FieloAlpha__IdentificationType__c )  +  FieloAlpha__IdentificationCode__c</formula>
+        <formula>TEXT( FieloPLT__IdentificationType__c )  +  FieloPLT__IdentificationCode__c</formula>
         <label>Identification</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -972,11 +972,11 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__IsActive__c</fullName>
+        <fullName>FieloPLT__IsActive__c</fullName>
         <deprecated>false</deprecated>
         <description>Status of the member</description>
         <externalId>false</externalId>
-        <formula>IF( FieloAlpha__User__r.IsActive == True, &apos;True&apos;, &apos;False&apos;)</formula>
+        <formula>IF( FieloPLT__User__r.IsActive == True, &apos;True&apos;, &apos;False&apos;)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Is Active</label>
         <required>false</required>
@@ -985,7 +985,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__IsManager__c</fullName>
+        <fullName>FieloPLT__IsManager__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>This field indicates if the Member is a Manager for the Organization Account that belongs to</description>
@@ -996,7 +996,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__LastName__c</fullName>
+        <fullName>FieloPLT__LastName__c</fullName>
         <deprecated>false</deprecated>
         <description>Last Name of the member</description>
         <externalId>false</externalId>
@@ -1009,11 +1009,11 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__LastTransactionDateReadOnly__c</fullName>
+        <fullName>FieloPLT__LastTransactionDateReadOnly__c</fullName>
         <deprecated>false</deprecated>
         <description>Formula field to get the last transaction date</description>
         <externalId>false</externalId>
-        <formula>FieloAlpha__LastTransactionDate__c</formula>
+        <formula>FieloPLT__LastTransactionDate__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Last Transaction Date (Read Only)</label>
         <required>false</required>
@@ -1021,7 +1021,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <type>Date</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__LastTransactionDate__c</fullName>
+        <fullName>FieloPLT__LastTransactionDate__c</fullName>
         <deprecated>false</deprecated>
         <description>Last date since member has done his last transaction</description>
         <externalId>false</externalId>
@@ -1032,10 +1032,10 @@ Completed: The registration process is completed. It there is a site, the user i
         <type>Date</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__LevelReadOnly__c</fullName>
+        <fullName>FieloPLT__LevelReadOnly__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>FieloAlpha__Level__r.Name</formula>
+        <formula>FieloPLT__Level__r.Name</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Level (Read Only)</label>
         <required>false</required>
@@ -1044,14 +1044,14 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Level__c</fullName>
+        <fullName>FieloPLT__Level__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>Taken from the Level object, describes the category of a member</description>
         <externalId>false</externalId>
         <inlineHelpText>Here you can see to what level the member belongs.</inlineHelpText>
         <label>Level</label>
-        <referenceTo>FieloAlpha__Level__c</referenceTo>
+        <referenceTo>FieloPLT__Level__c</referenceTo>
         <relationshipLabel>Members</relationshipLabel>
         <relationshipName>Participants</relationshipName>
         <required>false</required>
@@ -1059,11 +1059,11 @@ Completed: The registration process is completed. It there is a site, the user i
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__LoyaltyAge__c</fullName>
+        <fullName>FieloPLT__LoyaltyAge__c</fullName>
         <deprecated>false</deprecated>
         <description>Deprecated Field</description>
         <externalId>false</externalId>
-        <formula>(MONTH(TODAY()) + YEAR(TODAY()) * 12) - ( MONTH(FieloAlpha__StartDate__c) + YEAR(FieloAlpha__StartDate__c)* 12 ) +1</formula>
+        <formula>(MONTH(TODAY()) + YEAR(TODAY()) * 12) - ( MONTH(FieloPLT__StartDate__c) + YEAR(FieloPLT__StartDate__c)* 12 ) +1</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>zz_deprecated_Loyalty Age</label>
         <precision>18</precision>
@@ -1074,7 +1074,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__MediaPoints__c</fullName>
+        <fullName>FieloPLT__MediaPoints__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Points Average</label>
@@ -1086,10 +1086,10 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__MemberCodeReadOnly__c</fullName>
+        <fullName>FieloPLT__MemberCodeReadOnly__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>FieloAlpha__MemberCode__c</formula>
+        <formula>FieloPLT__MemberCode__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Member Code (Read Only)</label>
         <required>false</required>
@@ -1098,7 +1098,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__MemberCode__c</fullName>
+        <fullName>FieloPLT__MemberCode__c</fullName>
         <caseSensitive>false</caseSensitive>
         <deprecated>false</deprecated>
         <description>Deprecated Field</description>
@@ -1111,7 +1111,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>true</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__MobilePhone__c</fullName>
+        <fullName>FieloPLT__MobilePhone__c</fullName>
         <deprecated>false</deprecated>
         <description>Phone number</description>
         <externalId>false</externalId>
@@ -1122,11 +1122,11 @@ Completed: The registration process is completed. It there is a site, the user i
         <type>Phone</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Name__c</fullName>
+        <fullName>FieloPLT__Name__c</fullName>
         <deprecated>false</deprecated>
         <description>Name of the member</description>
         <externalId>false</externalId>
-        <formula>if (RecordType.DeveloperName == &apos;OrganizationAccount&apos;, FieloAlpha__OrganizationName__c  ,  FieloAlpha__FirstName__c  &amp;&apos; &apos; &amp; FieloAlpha__LastName__c)</formula>
+        <formula>if (RecordType.DeveloperName == &apos;OrganizationAccount&apos;, FieloPLT__OrganizationName__c  ,  FieloPLT__FirstName__c  &amp;&apos; &apos; &amp; FieloPLT__LastName__c)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Name</label>
         <required>false</required>
@@ -1135,7 +1135,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Neighborhood__c</fullName>
+        <fullName>FieloPLT__Neighborhood__c</fullName>
         <deprecated>false</deprecated>
         <description>Residence of the member</description>
         <externalId>false</externalId>
@@ -1148,11 +1148,11 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__OrganizationAccountName__c</fullName>
+        <fullName>FieloPLT__OrganizationAccountName__c</fullName>
         <deprecated>false</deprecated>
         <description>This field shows the name of the organization account related to the member</description>
         <externalId>false</externalId>
-        <formula>FieloAlpha__OrganizationAccount__r.FieloAlpha__OrganizationName__c</formula>
+        <formula>FieloPLT__OrganizationAccount__r.FieloPLT__OrganizationName__c</formula>
         <label>Organization Account Name</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -1160,7 +1160,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__OrganizationAccount__c</fullName>
+        <fullName>FieloPLT__OrganizationAccount__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -1169,13 +1169,13 @@ Completed: The registration process is completed. It there is a site, the user i
             <active>true</active>
             <errorMessage>The member must be of type &apos;Organization Account&apos; and must belong to the same program</errorMessage>
             <filterItems>
-                <field>FieloAlpha__Member__c.RecordTypeId</field>
+                <field>FieloPLT__Member__c.RecordTypeId</field>
                 <operation>equals</operation>
                 <value>Organization Account</value>
             </filterItems>
             <isOptional>false</isOptional>
         </lookupFilter>
-        <referenceTo>FieloAlpha__Member__c</referenceTo>
+        <referenceTo>FieloPLT__Member__c</referenceTo>
         <relationshipLabel>Members (Organization Account)</relationshipLabel>
         <relationshipName>FieloAccounts</relationshipName>
         <required>false</required>
@@ -1183,7 +1183,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__OrganizationName__c</fullName>
+        <fullName>FieloPLT__OrganizationName__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Organization Name</label>
@@ -1194,7 +1194,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Origin__c</fullName>
+        <fullName>FieloPLT__Origin__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Origin</label>
@@ -1213,7 +1213,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Phone__c</fullName>
+        <fullName>FieloPLT__Phone__c</fullName>
         <deprecated>false</deprecated>
         <description>Phone of the member</description>
         <externalId>false</externalId>
@@ -1224,11 +1224,11 @@ Completed: The registration process is completed. It there is a site, the user i
         <type>Phone</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__PointsReadOnly__c</fullName>
+        <fullName>FieloPLT__PointsReadOnly__c</fullName>
         <deprecated>false</deprecated>
         <description>Formula for grouping all available points</description>
         <externalId>false</externalId>
-        <formula>FieloAlpha__Points__c</formula>
+        <formula>FieloPLT__Points__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Points (Read Only)</label>
         <precision>18</precision>
@@ -1239,7 +1239,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Points__c</fullName>
+        <fullName>FieloPLT__Points__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
         <description>Points earned by the user</description>
@@ -1254,7 +1254,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Preference__c</fullName>
+        <fullName>FieloPLT__Preference__c</fullName>
         <deprecated>false</deprecated>
         <description>Deprecated Field</description>
         <externalId>false</externalId>
@@ -1266,11 +1266,11 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ProfileCompletenessReadOnly__c</fullName>
+        <fullName>FieloPLT__ProfileCompletenessReadOnly__c</fullName>
         <deprecated>false</deprecated>
         <description>Formula to get the profile completness</description>
         <externalId>false</externalId>
-        <formula>FieloAlpha__ProfileCompleteness__c</formula>
+        <formula>FieloPLT__ProfileCompleteness__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Profile Completeness (Read Only)</label>
         <precision>18</precision>
@@ -1280,7 +1280,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <type>Percent</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ProfileCompleteness__c</fullName>
+        <fullName>FieloPLT__ProfileCompleteness__c</fullName>
         <deprecated>false</deprecated>
         <description>Allows to have a percentage about completness of all profile fields.</description>
         <externalId>false</externalId>
@@ -1293,14 +1293,14 @@ Completed: The registration process is completed. It there is a site, the user i
         <type>Percent</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Program__c</fullName>
+        <fullName>FieloPLT__Program__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>The program to which this member belongs.</description>
         <externalId>false</externalId>
         <inlineHelpText>Select the program to which the member belongs</inlineHelpText>
         <label>Program</label>
-        <referenceTo>FieloAlpha__Program__c</referenceTo>
+        <referenceTo>FieloPLT__Program__c</referenceTo>
         <relationshipLabel>Members</relationshipLabel>
         <relationshipName>Members</relationshipName>
         <required>false</required>
@@ -1308,7 +1308,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RedeemPointsPercent__c</fullName>
+        <fullName>FieloPLT__RedeemPointsPercent__c</fullName>
         <deprecated>false</deprecated>
         <description>The percentage of points redeemed by this member.</description>
         <externalId>false</externalId>
@@ -1321,10 +1321,10 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ReferalMemberReadOnly__c</fullName>
+        <fullName>FieloPLT__ReferalMemberReadOnly__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>HYPERLINK(&apos;/&apos; +  FieloAlpha__ReferalMember__c ,  FieloAlpha__ReferalMember__r.FieloAlpha__Name__c )</formula>
+        <formula>HYPERLINK(&apos;/&apos; +  FieloPLT__ReferalMember__c ,  FieloPLT__ReferalMember__r.FieloPLT__Name__c )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Referal Member (Read Only)</label>
         <required>false</required>
@@ -1333,12 +1333,12 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ReferalMember__c</fullName>
+        <fullName>FieloPLT__ReferalMember__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Referal Member</label>
-        <referenceTo>FieloAlpha__Member__c</referenceTo>
+        <referenceTo>FieloPLT__Member__c</referenceTo>
         <relationshipLabel>Members Referrals</relationshipLabel>
         <relationshipName>Members</relationshipName>
         <required>false</required>
@@ -1346,10 +1346,10 @@ Completed: The registration process is completed. It there is a site, the user i
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RegisteredReadOnly__c</fullName>
+        <fullName>FieloPLT__RegisteredReadOnly__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>IF( FieloAlpha__Registered__c , IMAGE(&apos;/resource/&apos;+IF(NOT(ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c)), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;, &apos;&apos;)+&apos;images/checked.png&apos;, $Label.FieloAlpha__Registered) , IMAGE(&apos;/resource/&apos;+IF(NOT(ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c)), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;, &apos;&apos;)+&apos;images/unchecked.png&apos;, $Label.FieloAlpha__NotRegistered) )</formula>
+        <formula>IF( FieloPLT__Registered__c , IMAGE(&apos;/resource/&apos;+IF(NOT(ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c)), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;, &apos;&apos;)+&apos;images/checked.png&apos;, $Label.FieloPLT__Registered) , IMAGE(&apos;/resource/&apos;+IF(NOT(ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c)), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;, &apos;&apos;)+&apos;images/unchecked.png&apos;, $Label.FieloPLT__NotRegistered) )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <inlineHelpText>Members are “Registered” if they have created an user in the members&apos; portal.</inlineHelpText>
         <label>Registered (Read Only)</label>
@@ -1359,7 +1359,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Registered__c</fullName>
+        <fullName>FieloPLT__Registered__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>Whether the member has created an user for the members&apos; portal.</description>
@@ -1370,10 +1370,10 @@ Completed: The registration process is completed. It there is a site, the user i
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__StartDateReadOnly__c</fullName>
+        <fullName>FieloPLT__StartDateReadOnly__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>FieloAlpha__StartDate__c</formula>
+        <formula>FieloPLT__StartDate__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Start Date (Read Only)</label>
         <required>false</required>
@@ -1381,7 +1381,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <type>Date</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__StartDate__c</fullName>
+        <fullName>FieloPLT__StartDate__c</fullName>
         <defaultValue>Today()</defaultValue>
         <deprecated>false</deprecated>
         <description>The date when this member registered in the program.</description>
@@ -1393,7 +1393,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <type>Date</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__State__c</fullName>
+        <fullName>FieloPLT__State__c</fullName>
         <deprecated>false</deprecated>
         <description>Residence of the member</description>
         <externalId>false</externalId>
@@ -1406,10 +1406,10 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Status__c</fullName>
+        <fullName>FieloPLT__Status__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>IF(   $User.IsActive == false  ,  $Label.FieloAlpha__Inactive , $Label.FieloAlpha__Active )</formula>
+        <formula>IF(   $User.IsActive == false  ,  $Label.FieloPLT__Inactive , $Label.FieloPLT__Active )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Loyalty Program Status</label>
         <required>false</required>
@@ -1418,7 +1418,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Street__c</fullName>
+        <fullName>FieloPLT__Street__c</fullName>
         <deprecated>false</deprecated>
         <description>Residence of the member</description>
         <externalId>false</externalId>
@@ -1431,7 +1431,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Synchronized__c</fullName>
+        <fullName>FieloPLT__Synchronized__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <description>Describes the data syncro between Fielo Account and CRM Account or Contact.</description>
@@ -1441,7 +1441,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__TotalRedeemPoints__c</fullName>
+        <fullName>FieloPLT__TotalRedeemPoints__c</fullName>
         <deprecated>false</deprecated>
         <description>Number of points redeedmed by this member.</description>
         <externalId>false</externalId>
@@ -1454,7 +1454,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__TotalRedeemValue__c</fullName>
+        <fullName>FieloPLT__TotalRedeemValue__c</fullName>
         <deprecated>false</deprecated>
         <description>Total transactions (in currency) realized by the member</description>
         <externalId>false</externalId>
@@ -1466,7 +1466,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <type>Currency</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__TotalRedeem__c</fullName>
+        <fullName>FieloPLT__TotalRedeem__c</fullName>
         <deprecated>false</deprecated>
         <description>Number of orders redeemed by this member.</description>
         <externalId>false</externalId>
@@ -1479,7 +1479,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__TotalTransactions__c</fullName>
+        <fullName>FieloPLT__TotalTransactions__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
         <description>Total transactions realized by the member</description>
@@ -1494,7 +1494,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__TotalValue__c</fullName>
+        <fullName>FieloPLT__TotalValue__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
         <description>Deprecated Field</description>
@@ -1507,7 +1507,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <type>Currency</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Type__c</fullName>
+        <fullName>FieloPLT__Type__c</fullName>
         <deprecated>false</deprecated>
         <description>Deprecated Field</description>
         <externalId>false</externalId>
@@ -1523,11 +1523,11 @@ Completed: The registration process is completed. It there is a site, the user i
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__UserReadOnly__c</fullName>
+        <fullName>FieloPLT__UserReadOnly__c</fullName>
         <deprecated>false</deprecated>
         <description>Formula link to user</description>
         <externalId>false</externalId>
-        <formula>HYPERLINK(&apos;/&apos; +  FieloAlpha__User__c ,  FieloAlpha__User__r.LastName )</formula>
+        <formula>HYPERLINK(&apos;/&apos; +  FieloPLT__User__c ,  FieloPLT__User__r.LastName )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>User (Read Only)</label>
         <required>false</required>
@@ -1536,7 +1536,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__User__c</fullName>
+        <fullName>FieloPLT__User__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>User related to the member</description>
@@ -1550,7 +1550,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ZipCode__c</fullName>
+        <fullName>FieloPLT__ZipCode__c</fullName>
         <deprecated>false</deprecated>
         <description>Residence of the member</description>
         <externalId>false</externalId>
@@ -1563,7 +1563,7 @@ Completed: The registration process is completed. It there is a site, the user i
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__imageId__c</fullName>
+        <fullName>FieloPLT__imageId__c</fullName>
         <deprecated>false</deprecated>
         <description>The ID of the image uploaded by this member.</description>
         <externalId>false</externalId>
@@ -1577,53 +1577,53 @@ Completed: The registration process is completed. It there is a site, the user i
     </fields>
     <label>Member</label>
     <listViews>
-        <fullName>FieloAlpha__All</fullName>
+        <fullName>FieloPLT__All</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__User__c</columns>
-        <columns>FieloAlpha__LastTransactionDate__c</columns>
-        <columns>FieloAlpha__Name__c</columns>
-        <columns>FieloAlpha__Level__c</columns>
-        <columns>FieloAlpha__IdentificationType__c</columns>
-        <columns>FieloAlpha__IdentificationCode__c</columns>
-        <columns>FieloAlpha__Age__c</columns>
-        <columns>FieloAlpha__Points__c</columns>
-        <columns>FieloAlpha__StartDate__c</columns>
-        <columns>FieloAlpha__Email__c</columns>
+        <columns>FieloPLT__User__c</columns>
+        <columns>FieloPLT__LastTransactionDate__c</columns>
+        <columns>FieloPLT__Name__c</columns>
+        <columns>FieloPLT__Level__c</columns>
+        <columns>FieloPLT__IdentificationType__c</columns>
+        <columns>FieloPLT__IdentificationCode__c</columns>
+        <columns>FieloPLT__Age__c</columns>
+        <columns>FieloPLT__Points__c</columns>
+        <columns>FieloPLT__StartDate__c</columns>
+        <columns>FieloPLT__Email__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
         <language>en_US</language>
     </listViews>
     <listViews>
-        <fullName>FieloAlpha__All_Members</fullName>
+        <fullName>FieloPLT__All_Members</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Program__c</columns>
-        <columns>FieloAlpha__Name__c</columns>
-        <columns>FieloAlpha__Email__c</columns>
-        <columns>FieloAlpha__PointsReadOnly__c</columns>
-        <columns>FieloAlpha__Level__c</columns>
-        <columns>FieloAlpha__User__c</columns>
+        <columns>FieloPLT__Program__c</columns>
+        <columns>FieloPLT__Name__c</columns>
+        <columns>FieloPLT__Email__c</columns>
+        <columns>FieloPLT__PointsReadOnly__c</columns>
+        <columns>FieloPLT__Level__c</columns>
+        <columns>FieloPLT__User__c</columns>
         <filterScope>Everything</filterScope>
         <label>All Members</label>
         <language>en_US</language>
     </listViews>
     <listViews>
-        <fullName>FieloAlpha__Argentina</fullName>
+        <fullName>FieloPLT__Argentina</fullName>
         <columns>NAME</columns>
         <columns>OBJECT_ID</columns>
-        <columns>FieloAlpha__Age__c</columns>
-        <columns>FieloAlpha__Agreement__c</columns>
-        <columns>FieloAlpha__Birthdate__c</columns>
-        <columns>FieloAlpha__MobilePhone__c</columns>
-        <columns>FieloAlpha__City__c</columns>
-        <columns>FieloAlpha__Country__c</columns>
-        <columns>FieloAlpha__DaysLastTransaction__c</columns>
-        <columns>FieloAlpha__Email__c</columns>
-        <columns>FieloAlpha__Enabled__c</columns>
-        <columns>FieloAlpha__FirstName__c</columns>
-        <columns>FieloAlpha__Gender__c</columns>
+        <columns>FieloPLT__Age__c</columns>
+        <columns>FieloPLT__Agreement__c</columns>
+        <columns>FieloPLT__Birthdate__c</columns>
+        <columns>FieloPLT__MobilePhone__c</columns>
+        <columns>FieloPLT__City__c</columns>
+        <columns>FieloPLT__Country__c</columns>
+        <columns>FieloPLT__DaysLastTransaction__c</columns>
+        <columns>FieloPLT__Email__c</columns>
+        <columns>FieloPLT__Enabled__c</columns>
+        <columns>FieloPLT__FirstName__c</columns>
+        <columns>FieloPLT__Gender__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
-            <field>FieloAlpha__Country__c</field>
+            <field>FieloPLT__Country__c</field>
             <operation>equals</operation>
             <value>Argentina</value>
         </filters>
@@ -1631,18 +1631,18 @@ Completed: The registration process is completed. It there is a site, the user i
         <language>en_US</language>
     </listViews>
     <listViews>
-        <fullName>FieloAlpha__Birthdate</fullName>
+        <fullName>FieloPLT__Birthdate</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Name__c</columns>
-        <columns>FieloAlpha__Level__c</columns>
-        <columns>FieloAlpha__MemberCode__c</columns>
-        <columns>FieloAlpha__Age__c</columns>
-        <columns>FieloAlpha__Points__c</columns>
-        <columns>FieloAlpha__LoyaltyAge__c</columns>
-        <columns>FieloAlpha__StartDate__c</columns>
+        <columns>FieloPLT__Name__c</columns>
+        <columns>FieloPLT__Level__c</columns>
+        <columns>FieloPLT__MemberCode__c</columns>
+        <columns>FieloPLT__Age__c</columns>
+        <columns>FieloPLT__Points__c</columns>
+        <columns>FieloPLT__LoyaltyAge__c</columns>
+        <columns>FieloPLT__StartDate__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
-            <field>FieloAlpha__Birthdate__c</field>
+            <field>FieloPLT__Birthdate__c</field>
             <operation>equals</operation>
             <value>TODAY</value>
         </filters>
@@ -1650,20 +1650,20 @@ Completed: The registration process is completed. It there is a site, the user i
         <language>en_US</language>
     </listViews>
     <listViews>
-        <fullName>FieloAlpha__InactiveMembers</fullName>
+        <fullName>FieloPLT__InactiveMembers</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__UserReadOnly__c</columns>
-        <columns>FieloAlpha__LastTransactionDateReadOnly__c</columns>
-        <columns>FieloAlpha__Name__c</columns>
-        <columns>FieloAlpha__LevelReadOnly__c</columns>
-        <columns>FieloAlpha__IdentificationType__c</columns>
-        <columns>FieloAlpha__IdentificationCode__c</columns>
-        <columns>FieloAlpha__MemberCode__c</columns>
-        <columns>FieloAlpha__Points__c</columns>
-        <columns>FieloAlpha__LastTransactionDate__c</columns>
+        <columns>FieloPLT__UserReadOnly__c</columns>
+        <columns>FieloPLT__LastTransactionDateReadOnly__c</columns>
+        <columns>FieloPLT__Name__c</columns>
+        <columns>FieloPLT__LevelReadOnly__c</columns>
+        <columns>FieloPLT__IdentificationType__c</columns>
+        <columns>FieloPLT__IdentificationCode__c</columns>
+        <columns>FieloPLT__MemberCode__c</columns>
+        <columns>FieloPLT__Points__c</columns>
+        <columns>FieloPLT__LastTransactionDate__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
-            <field>FieloAlpha__IsActive__c</field>
+            <field>FieloPLT__IsActive__c</field>
             <operation>equals</operation>
             <value>False</value>
         </filters>
@@ -1671,50 +1671,50 @@ Completed: The registration process is completed. It there is a site, the user i
         <language>en_US</language>
     </listViews>
     <listViews>
-        <fullName>FieloAlpha__MembersWithoutUser</fullName>
+        <fullName>FieloPLT__MembersWithoutUser</fullName>
         <columns>NAME</columns>
         <columns>OBJECT_ID</columns>
-        <columns>FieloAlpha__Age__c</columns>
-        <columns>FieloAlpha__MobilePhone__c</columns>
-        <columns>FieloAlpha__City__c</columns>
-        <columns>FieloAlpha__Country__c</columns>
-        <columns>FieloAlpha__DaysLastTransaction__c</columns>
-        <columns>FieloAlpha__Email__c</columns>
-        <columns>FieloAlpha__Enabled__c</columns>
-        <columns>FieloAlpha__FirstName__c</columns>
-        <columns>FieloAlpha__Gender__c</columns>
-        <columns>FieloAlpha__LastName__c</columns>
-        <columns>FieloAlpha__Name__c</columns>
+        <columns>FieloPLT__Age__c</columns>
+        <columns>FieloPLT__MobilePhone__c</columns>
+        <columns>FieloPLT__City__c</columns>
+        <columns>FieloPLT__Country__c</columns>
+        <columns>FieloPLT__DaysLastTransaction__c</columns>
+        <columns>FieloPLT__Email__c</columns>
+        <columns>FieloPLT__Enabled__c</columns>
+        <columns>FieloPLT__FirstName__c</columns>
+        <columns>FieloPLT__Gender__c</columns>
+        <columns>FieloPLT__LastName__c</columns>
+        <columns>FieloPLT__Name__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
-            <field>FieloAlpha__User__c</field>
+            <field>FieloPLT__User__c</field>
             <operation>equals</operation>
         </filters>
         <label>Members Without User</label>
         <language>en_US</language>
     </listViews>
     <listViews>
-        <fullName>FieloAlpha__My_Participants</fullName>
+        <fullName>FieloPLT__My_Participants</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Name__c</columns>
-        <columns>FieloAlpha__Level__c</columns>
-        <columns>FieloAlpha__Age__c</columns>
-        <columns>FieloAlpha__Points__c</columns>
-        <columns>FieloAlpha__StartDate__c</columns>
+        <columns>FieloPLT__Name__c</columns>
+        <columns>FieloPLT__Level__c</columns>
+        <columns>FieloPLT__Age__c</columns>
+        <columns>FieloPLT__Points__c</columns>
+        <columns>FieloPLT__StartDate__c</columns>
         <filterScope>Mine</filterScope>
         <label>My Participants</label>
         <language>en_US</language>
     </listViews>
     <listViews>
-        <fullName>FieloAlpha__New_Last_Week</fullName>
+        <fullName>FieloPLT__New_Last_Week</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Name__c</columns>
-        <columns>FieloAlpha__Level__c</columns>
-        <columns>FieloAlpha__MemberCode__c</columns>
-        <columns>FieloAlpha__Age__c</columns>
-        <columns>FieloAlpha__Points__c</columns>
-        <columns>FieloAlpha__LoyaltyAge__c</columns>
-        <columns>FieloAlpha__StartDate__c</columns>
+        <columns>FieloPLT__Name__c</columns>
+        <columns>FieloPLT__Level__c</columns>
+        <columns>FieloPLT__MemberCode__c</columns>
+        <columns>FieloPLT__Age__c</columns>
+        <columns>FieloPLT__Points__c</columns>
+        <columns>FieloPLT__LoyaltyAge__c</columns>
+        <columns>FieloPLT__StartDate__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>CREATED_DATE</field>
@@ -1725,15 +1725,15 @@ Completed: The registration process is completed. It there is a site, the user i
         <language>en_US</language>
     </listViews>
     <listViews>
-        <fullName>FieloAlpha__New_This_Week</fullName>
+        <fullName>FieloPLT__New_This_Week</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Name__c</columns>
-        <columns>FieloAlpha__MemberCode__c</columns>
-        <columns>FieloAlpha__Age__c</columns>
-        <columns>FieloAlpha__Level__c</columns>
-        <columns>FieloAlpha__Points__c</columns>
-        <columns>FieloAlpha__LoyaltyAge__c</columns>
-        <columns>FieloAlpha__StartDate__c</columns>
+        <columns>FieloPLT__Name__c</columns>
+        <columns>FieloPLT__MemberCode__c</columns>
+        <columns>FieloPLT__Age__c</columns>
+        <columns>FieloPLT__Level__c</columns>
+        <columns>FieloPLT__Points__c</columns>
+        <columns>FieloPLT__LoyaltyAge__c</columns>
+        <columns>FieloPLT__StartDate__c</columns>
         <columns>CREATED_DATE</columns>
         <filterScope>Everything</filterScope>
         <filters>
@@ -1751,12 +1751,12 @@ Completed: The registration process is completed. It there is a site, the user i
     </nameField>
     <pluralLabel>Members</pluralLabel>
     <recordTypes>
-        <fullName>FieloAlpha__IndividualAccount</fullName>
+        <fullName>FieloPLT__IndividualAccount</fullName>
         <active>true</active>
         <description>Fielo Account that represents the participation of an individual person</description>
         <label>Individual Account</label>
         <picklistValues>
-            <picklist>FieloAlpha__FieloAccountStatus__c</picklist>
+            <picklist>FieloPLT__FieloAccountStatus__c</picklist>
             <values>
                 <fullName>Approved</fullName>
                 <default>false</default>
@@ -1775,7 +1775,7 @@ Completed: The registration process is completed. It there is a site, the user i
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>FieloAlpha__Gender__c</picklist>
+            <picklist>FieloPLT__Gender__c</picklist>
             <values>
                 <fullName>Female</fullName>
                 <default>false</default>
@@ -1786,7 +1786,7 @@ Completed: The registration process is completed. It there is a site, the user i
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>FieloAlpha__IdentificationType__c</picklist>
+            <picklist>FieloPLT__IdentificationType__c</picklist>
             <values>
                 <fullName>Mobile</fullName>
                 <default>false</default>
@@ -1797,7 +1797,7 @@ Completed: The registration process is completed. It there is a site, the user i
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>FieloAlpha__Origin__c</picklist>
+            <picklist>FieloPLT__Origin__c</picklist>
             <values>
                 <fullName>BackEnd</fullName>
                 <default>true</default>
@@ -1808,7 +1808,7 @@ Completed: The registration process is completed. It there is a site, the user i
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>FieloAlpha__Type__c</picklist>
+            <picklist>FieloPLT__Type__c</picklist>
             <values>
                 <fullName>Member</fullName>
                 <default>true</default>
@@ -1816,12 +1816,12 @@ Completed: The registration process is completed. It there is a site, the user i
         </picklistValues>
     </recordTypes>
     <recordTypes>
-        <fullName>FieloAlpha__OrganizationAccount</fullName>
+        <fullName>FieloPLT__OrganizationAccount</fullName>
         <active>true</active>
         <description>Fielo Account that represents a organization (for example, company, household)</description>
         <label>Organization Account</label>
         <picklistValues>
-            <picklist>FieloAlpha__FieloAccountStatus__c</picklist>
+            <picklist>FieloPLT__FieloAccountStatus__c</picklist>
             <values>
                 <fullName>Approved</fullName>
                 <default>false</default>
@@ -1840,7 +1840,7 @@ Completed: The registration process is completed. It there is a site, the user i
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>FieloAlpha__Gender__c</picklist>
+            <picklist>FieloPLT__Gender__c</picklist>
             <values>
                 <fullName>Female</fullName>
                 <default>false</default>
@@ -1851,7 +1851,7 @@ Completed: The registration process is completed. It there is a site, the user i
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>FieloAlpha__IdentificationType__c</picklist>
+            <picklist>FieloPLT__IdentificationType__c</picklist>
             <values>
                 <fullName>Mobile</fullName>
                 <default>false</default>
@@ -1862,7 +1862,7 @@ Completed: The registration process is completed. It there is a site, the user i
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>FieloAlpha__Origin__c</picklist>
+            <picklist>FieloPLT__Origin__c</picklist>
             <values>
                 <fullName>BackEnd</fullName>
                 <default>true</default>
@@ -1873,7 +1873,7 @@ Completed: The registration process is completed. It there is a site, the user i
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>FieloAlpha__Type__c</picklist>
+            <picklist>FieloPLT__Type__c</picklist>
             <values>
                 <fullName>Member</fullName>
                 <default>true</default>
@@ -1881,12 +1881,12 @@ Completed: The registration process is completed. It there is a site, the user i
         </picklistValues>
     </recordTypes>
     <recordTypes>
-        <fullName>FieloAlpha__OrganizationContributor</fullName>
+        <fullName>FieloPLT__OrganizationContributor</fullName>
         <active>true</active>
         <description>Represents a person assigned to an organization (for example, employees or household members)</description>
         <label>Organization Contributor</label>
         <picklistValues>
-            <picklist>FieloAlpha__FieloAccountStatus__c</picklist>
+            <picklist>FieloPLT__FieloAccountStatus__c</picklist>
             <values>
                 <fullName>Approved</fullName>
                 <default>false</default>
@@ -1901,7 +1901,7 @@ Completed: The registration process is completed. It there is a site, the user i
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>FieloAlpha__Gender__c</picklist>
+            <picklist>FieloPLT__Gender__c</picklist>
             <values>
                 <fullName>Female</fullName>
                 <default>false</default>
@@ -1912,7 +1912,7 @@ Completed: The registration process is completed. It there is a site, the user i
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>FieloAlpha__IdentificationType__c</picklist>
+            <picklist>FieloPLT__IdentificationType__c</picklist>
             <values>
                 <fullName>Mobile</fullName>
                 <default>false</default>
@@ -1923,7 +1923,7 @@ Completed: The registration process is completed. It there is a site, the user i
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>FieloAlpha__Origin__c</picklist>
+            <picklist>FieloPLT__Origin__c</picklist>
             <values>
                 <fullName>BackEnd</fullName>
                 <default>true</default>
@@ -1934,7 +1934,7 @@ Completed: The registration process is completed. It there is a site, the user i
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>FieloAlpha__Type__c</picklist>
+            <picklist>FieloPLT__Type__c</picklist>
             <values>
                 <fullName>Member</fullName>
                 <default>true</default>
@@ -1942,100 +1942,100 @@ Completed: The registration process is completed. It there is a site, the user i
         </picklistValues>
     </recordTypes>
     <searchLayouts>
-        <customTabListAdditionalFields>FieloAlpha__Name__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>FieloAlpha__Level__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>FieloAlpha__Age__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>FieloAlpha__Points__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>FieloAlpha__StartDate__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>FieloAlpha__Program__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__Level__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__Age__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__Points__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__StartDate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__Program__c</customTabListAdditionalFields>
         <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
-        <lookupDialogsAdditionalFields>FieloAlpha__Name__c</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>FieloAlpha__Program__c</lookupDialogsAdditionalFields>
-        <searchResultsAdditionalFields>FieloAlpha__Name__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>FieloAlpha__Program__c</searchResultsAdditionalFields>
+        <lookupDialogsAdditionalFields>FieloPLT__Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>FieloPLT__Program__c</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>FieloPLT__Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>FieloPLT__Program__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
-        <fullName>FieloAlpha__BirthDate</fullName>
+        <fullName>FieloPLT__BirthDate</fullName>
         <active>true</active>
-        <errorConditionFormula>FieloAlpha__Birthdate__c &gt;  TODAY()</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__Birthdate__c</errorDisplayField>
+        <errorConditionFormula>FieloPLT__Birthdate__c &gt;  TODAY()</errorConditionFormula>
+        <errorDisplayField>FieloPLT__Birthdate__c</errorDisplayField>
         <errorMessage>Birth date cannot be greater than today</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__CPF_Validation</fullName>
+        <fullName>FieloPLT__CPF_Validation</fullName>
         <active>true</active>
-        <errorConditionFormula>AND(  ISPICKVAL( FieloAlpha__IdentificationType__c , &apos;CPF&apos; ) , NOT(
+        <errorConditionFormula>AND(  ISPICKVAL( FieloPLT__IdentificationType__c , &apos;CPF&apos; ) , NOT(
 OR(
-  LEN( FieloAlpha__IdentificationCode__c ) = 0,
+  LEN( FieloPLT__IdentificationCode__c ) = 0,
   AND(
-   LEN(FieloAlpha__IdentificationCode__c) = 14,
-   CONTAINS(&quot;0123456789&quot;, LEFT(FieloAlpha__IdentificationCode__c, 1)),
-   CONTAINS(&quot;0123456789&quot;, MID(FieloAlpha__IdentificationCode__c, 2, 1)),
-   CONTAINS(&quot;0123456789&quot;, MID(FieloAlpha__IdentificationCode__c, 3, 1)),
-   MID(FieloAlpha__IdentificationCode__c, 4, 1) = &quot;.&quot;,
-   CONTAINS(&quot;0123456789&quot;, MID(FieloAlpha__IdentificationCode__c, 5, 1)),
-   CONTAINS(&quot;0123456789&quot;, MID(FieloAlpha__IdentificationCode__c, 6, 1)),
-   CONTAINS(&quot;0123456789&quot;, MID(FieloAlpha__IdentificationCode__c, 7, 1)),
-   MID(FieloAlpha__IdentificationCode__c, 8, 1) = &quot;.&quot;,
-   CONTAINS(&quot;0123456789&quot;, MID(FieloAlpha__IdentificationCode__c, 9, 1)),
-   CONTAINS(&quot;0123456789&quot;, MID(FieloAlpha__IdentificationCode__c, 10, 1)),
-   CONTAINS(&quot;0123456789&quot;, MID(FieloAlpha__IdentificationCode__c, 11, 1)),
-   MID(FieloAlpha__IdentificationCode__c, 12, 1) = &quot;-&quot;,
-   CONTAINS(&quot;0123456789&quot;, MID(FieloAlpha__IdentificationCode__c, 13, 1)),
-   CONTAINS(&quot;0123456789&quot;, MID(FieloAlpha__IdentificationCode__c, 14, 1))
+   LEN(FieloPLT__IdentificationCode__c) = 14,
+   CONTAINS(&quot;0123456789&quot;, LEFT(FieloPLT__IdentificationCode__c, 1)),
+   CONTAINS(&quot;0123456789&quot;, MID(FieloPLT__IdentificationCode__c, 2, 1)),
+   CONTAINS(&quot;0123456789&quot;, MID(FieloPLT__IdentificationCode__c, 3, 1)),
+   MID(FieloPLT__IdentificationCode__c, 4, 1) = &quot;.&quot;,
+   CONTAINS(&quot;0123456789&quot;, MID(FieloPLT__IdentificationCode__c, 5, 1)),
+   CONTAINS(&quot;0123456789&quot;, MID(FieloPLT__IdentificationCode__c, 6, 1)),
+   CONTAINS(&quot;0123456789&quot;, MID(FieloPLT__IdentificationCode__c, 7, 1)),
+   MID(FieloPLT__IdentificationCode__c, 8, 1) = &quot;.&quot;,
+   CONTAINS(&quot;0123456789&quot;, MID(FieloPLT__IdentificationCode__c, 9, 1)),
+   CONTAINS(&quot;0123456789&quot;, MID(FieloPLT__IdentificationCode__c, 10, 1)),
+   CONTAINS(&quot;0123456789&quot;, MID(FieloPLT__IdentificationCode__c, 11, 1)),
+   MID(FieloPLT__IdentificationCode__c, 12, 1) = &quot;-&quot;,
+   CONTAINS(&quot;0123456789&quot;, MID(FieloPLT__IdentificationCode__c, 13, 1)),
+   CONTAINS(&quot;0123456789&quot;, MID(FieloPLT__IdentificationCode__c, 14, 1))
 ))))</errorConditionFormula>
         <errorMessage>invalid CPF  999.999.999-99
 Ex.: 478.497.338-94</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__ContactMatchingField</fullName>
+        <fullName>FieloPLT__ContactMatchingField</fullName>
         <active>true</active>
         <description>This validation rule is useful when the non duplication contact process is triggered, in order to avoid duplicate contact due to have empty the common unique field (email)</description>
-        <errorConditionFormula>ISBLANK(FieloAlpha__Email__c) &amp;&amp; (RecordType.DeveloperName = &apos;OrganizationContributor&apos; || RecordType.DeveloperName = &apos;IndividualAccount&apos;)</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__Email__c</errorDisplayField>
+        <errorConditionFormula>ISBLANK(FieloPLT__Email__c) &amp;&amp; (RecordType.DeveloperName = &apos;OrganizationContributor&apos; || RecordType.DeveloperName = &apos;IndividualAccount&apos;)</errorConditionFormula>
+        <errorDisplayField>FieloPLT__Email__c</errorDisplayField>
         <errorMessage>The email is required in order to avoid duplicate contacts</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__ModifyProgram</fullName>
+        <fullName>FieloPLT__ModifyProgram</fullName>
         <active>true</active>
         <description>Is not possible to modify the associated Program</description>
-        <errorConditionFormula>ISCHANGED(FieloAlpha__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloAlpha__Program__c)))</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__Program__c</errorDisplayField>
+        <errorConditionFormula>ISCHANGED(FieloPLT__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloPLT__Program__c)))</errorConditionFormula>
+        <errorDisplayField>FieloPLT__Program__c</errorDisplayField>
         <errorMessage>Is not possible to modify the associated Program</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__NegativePoints</fullName>
+        <fullName>FieloPLT__NegativePoints</fullName>
         <active>true</active>
         <description>A Member can not have negative points.</description>
-        <errorConditionFormula>FieloAlpha__Points__c &lt; 0</errorConditionFormula>
+        <errorConditionFormula>FieloPLT__Points__c &lt; 0</errorConditionFormula>
         <errorMessage>A Member can not have negative points.</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__OrganizationAccountCanNotBeManager</fullName>
+        <fullName>FieloPLT__OrganizationAccountCanNotBeManager</fullName>
         <active>true</active>
-        <errorConditionFormula>RecordType.DeveloperName = &apos;OrganizationAccount&apos; &amp;&amp; FieloAlpha__IsManager__c</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__IsManager__c</errorDisplayField>
+        <errorConditionFormula>RecordType.DeveloperName = &apos;OrganizationAccount&apos; &amp;&amp; FieloPLT__IsManager__c</errorConditionFormula>
+        <errorDisplayField>FieloPLT__IsManager__c</errorDisplayField>
         <errorMessage>An Organization Account can not be a manager</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__OrganizationAccountRelation</fullName>
+        <fullName>FieloPLT__OrganizationAccountRelation</fullName>
         <active>true</active>
         <description>Check if an Organization Account is being related to an other Organization Account</description>
-        <errorConditionFormula>IF( AND(RecordType.DeveloperName == &apos;OrganizationAccount&apos;, NOT(ISBLANK(FieloAlpha__OrganizationAccount__c)) ),
+        <errorConditionFormula>IF( AND(RecordType.DeveloperName == &apos;OrganizationAccount&apos;, NOT(ISBLANK(FieloPLT__OrganizationAccount__c)) ),
 true,
 false)</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__OrganizationAccount__c</errorDisplayField>
+        <errorDisplayField>FieloPLT__OrganizationAccount__c</errorDisplayField>
         <errorMessage>An Organization Account can not related to an other Organization Account.</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__RequiredCode</fullName>
+        <fullName>FieloPLT__RequiredCode</fullName>
         <active>true</active>
-        <errorConditionFormula>( ISPICKVAL( FieloAlpha__IdentificationType__c, &apos;&apos; ) &amp;&amp; ( FieloAlpha__IdentificationCode__c != &apos;&apos; ) ) || ( ! ISPICKVAL( FieloAlpha__IdentificationType__c, &apos;&apos; ) &amp;&amp; ( FieloAlpha__IdentificationCode__c == &apos;&apos; ) )</errorConditionFormula>
+        <errorConditionFormula>( ISPICKVAL( FieloPLT__IdentificationType__c, &apos;&apos; ) &amp;&amp; ( FieloPLT__IdentificationCode__c != &apos;&apos; ) ) || ( ! ISPICKVAL( FieloPLT__IdentificationType__c, &apos;&apos; ) &amp;&amp; ( FieloPLT__IdentificationCode__c == &apos;&apos; ) )</errorConditionFormula>
         <errorMessage>You must complete Identification type and Identification Number or neither of both</errorMessage>
     </validationRules>
     <webLinks>
-        <fullName>FieloAlpha__BlockUnblock</fullName>
+        <fullName>FieloPLT__BlockUnblock</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <linkType>javascript</linkType>
@@ -2046,13 +2046,13 @@ false)</errorConditionFormula>
 {!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)}
 
 
-var prefix = &apos;{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}&apos;.replace(&apos;__&apos;, &apos;.&apos;);
+var prefix = &apos;{!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}&apos;.replace(&apos;__&apos;, &apos;.&apos;);
 
-if( confirm(&apos;{!$Label.FieloAlpha__ConfirmBlockUnblock}&apos;) ){
-    var ids = [&apos;{!FieloAlpha__Member__c.Id}&apos;];
+if( confirm(&apos;{!$Label.FieloPLT__ConfirmBlockUnblock}&apos;) ){
+    var ids = [&apos;{!FieloPLT__Member__c.Id}&apos;];
     var action = &apos;&apos;;
 
-    if( &apos;{!FieloAlpha__Member__c.FieloAlpha__Blocked__c}&apos; == 1 ){
+    if( &apos;{!FieloPLT__Member__c.FieloPLT__Blocked__c}&apos; == 1 ){
         action = &apos;false&apos;;
     } else {
         action = &apos;true&apos;;
@@ -2063,7 +2063,7 @@ if( confirm(&apos;{!$Label.FieloAlpha__ConfirmBlockUnblock}&apos;) ){
 }</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__LoginAs</fullName>
+        <fullName>FieloPLT__LoginAs</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -2071,10 +2071,10 @@ if( confirm(&apos;{!$Label.FieloAlpha__ConfirmBlockUnblock}&apos;) ){
         <masterLabel>Login As</masterLabel>
         <openType>replace</openType>
         <protected>false</protected>
-        <url>{!URLFOR(&apos;/apex/&apos; + IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;) + &apos;LoginAsBackend&apos;, null, [memberId =  FieloAlpha__Member__c.Id])}</url>
+        <url>{!URLFOR(&apos;/apex/&apos; + IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;) + &apos;LoginAsBackend&apos;, null, [memberId =  FieloPLT__Member__c.Id])}</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__RedeemPoints</fullName>
+        <fullName>FieloPLT__RedeemPoints</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -2082,21 +2082,21 @@ if( confirm(&apos;{!$Label.FieloAlpha__ConfirmBlockUnblock}&apos;) ){
         <masterLabel>Redeem Points</masterLabel>
         <openType>replace</openType>
         <protected>false</protected>
-        <url>{!URLFOR($Action.FieloAlpha__Redemption__c.New,null,[memberId=FieloAlpha__Member__c.Id])}</url>
+        <url>{!URLFOR($Action.FieloPLT__Redemption__c.New,null,[memberId=FieloPLT__Member__c.Id])}</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__Reset_Password</fullName>
+        <fullName>FieloPLT__Reset_Password</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <height>600</height>
         <linkType>page</linkType>
         <masterLabel>Reset Password</masterLabel>
         <openType>sidebar</openType>
-        <page>FieloAlpha__MemberResetPasswordBackEnd</page>
+        <page>FieloPLT__MemberResetPasswordBackEnd</page>
         <protected>false</protected>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__SearchVouchers</fullName>
+        <fullName>FieloPLT__SearchVouchers</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -2104,10 +2104,10 @@ if( confirm(&apos;{!$Label.FieloAlpha__ConfirmBlockUnblock}&apos;) ){
         <masterLabel>Search Vouchers</masterLabel>
         <openType>replace</openType>
         <protected>false</protected>
-        <url>/apex/{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}RedemptionPointsBackEnd?memberId={!FieloAlpha__Member__c.Id}</url>
+        <url>/apex/{!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}RedemptionPointsBackEnd?memberId={!FieloPLT__Member__c.Id}</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__SetUnsetManager</fullName>
+        <fullName>FieloPLT__SetUnsetManager</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <linkType>javascript</linkType>
@@ -2117,13 +2117,13 @@ if( confirm(&apos;{!$Label.FieloAlpha__ConfirmBlockUnblock}&apos;) ){
         <url>{!REQUIRESCRIPT(&quot;/soap/ajax/28.0/connection.js&quot;)}
 {!REQUIRESCRIPT(&quot;/soap/ajax/28.0/apex.js&quot;)} 
 
-var prefix = &apos;{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}&apos;.replace(&apos;__&apos;, &apos;.&apos;);
+var prefix = &apos;{!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}&apos;.replace(&apos;__&apos;, &apos;.&apos;);
 
-if( confirm(&apos;{!$Label.FieloAlpha__ConfirmSetManager}&apos;) ){
-    var ids = [&apos;{!FieloAlpha__Member__c.Id}&apos;];
+if( confirm(&apos;{!$Label.FieloPLT__ConfirmSetManager}&apos;) ){
+    var ids = [&apos;{!FieloPLT__Member__c.Id}&apos;];
     var action = &apos;&apos;;
 
-    if( &apos;{!FieloAlpha__Member__c.FieloAlpha__IsManager__c}&apos; == 1 ){
+    if( &apos;{!FieloPLT__Member__c.FieloPLT__IsManager__c}&apos; == 1 ){
         action = &apos;false&apos;;
     } else {
         action = &apos;true&apos;;

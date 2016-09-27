@@ -8,10 +8,10 @@ global with sharing class TransactionAPI implements FieloCMS.DataInterface, Fiel
                 c.FieloCMS__Limit__c = 5;
 
             if(c.FieloCMS__ComponentLibrary__r.Name == 'Get Points'){
-                newMapData.put(c.Id, new FieloAlpha__Transaction__c());
+                newMapData.put(c.Id, new FieloPLT__Transaction__c());
             }else if(c.FieloCMS__ComponentLibrary__r.Name == 'Transactions'){
                 Id memberId = MemberService.getCurrentMemberId();
-                String query = 'SELECT ' + String.join(new List<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c)), ',') + ' FROM FieloAlpha__Transaction__c WHERE FieloAlpha__Member__c =: memberId';
+                String query = 'SELECT ' + String.join(new List<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c)), ',') + ' FROM FieloPLT__Transaction__c WHERE FieloPLT__Member__c =: memberId';
                 query += ' LIMIT ' + String.valueOf(c.FieloCMS__Limit__c);
                 newMapData.put(c.Id, Database.query(query));
             }                
@@ -26,7 +26,7 @@ global with sharing class TransactionAPI implements FieloCMS.DataInterface, Fiel
         //Calculate the offset from the Page Number
         Integer offset = Integer.valueOf(component.FieloCMS__Limit__c * (pageNumber - 1));                
         Id memberId = MemberService.getCurrentMemberId();
-        String query = 'SELECT ' + String.join(new List<String>(OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c)), ',') + ' FROM FieloAlpha__Transaction__c WHERE FieloAlpha__Member__c =: memberId';
+        String query = 'SELECT ' + String.join(new List<String>(OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c)), ',') + ' FROM FieloPLT__Transaction__c WHERE FieloPLT__Member__c =: memberId';
         query += ' LIMIT ' + String.valueOf(component.FieloCMS__Limit__c);
         query += ' OFFSET ' + String.valueOf(offset);
         return Database.query(query);
@@ -42,10 +42,10 @@ global with sharing class TransactionAPI implements FieloCMS.DataInterface, Fiel
         try{                    
             sp = Database.setSavepoint();
             
-            FieloAlpha__Transaction__c trans = (FieloAlpha__Transaction__c)record;
-            trans.FieloAlpha__Type__c = (component.TransactionType__c != null && component.TransactionType__c != '') ? component.TransactionType__c : 'Code Insert';
-            trans.FieloAlpha__Member__c = MemberService.getCurrentMemberId();
-            FieloAlpha.CodeUtil.sendCode(trans);
+            FieloPLT__Transaction__c trans = (FieloPLT__Transaction__c)record;
+            trans.FieloPLT__Type__c = (component.TransactionType__c != null && component.TransactionType__c != '') ? component.TransactionType__c : 'Code Insert';
+            trans.FieloPLT__Member__c = MemberService.getCurrentMemberId();
+            FieloPLT.CodeUtil.sendCode(trans);
             successMessages.add(new FieloCMS.RemoteActionResult.RemoteActionMessage( ApexPages.Severity.Info, 'Success'));            
         }catch(DmlException e){            
             Database.rollback(sp);

@@ -46,7 +46,7 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
-    <customHelpPage>FieloAlpha__LevelHelpBackEnd</customHelpPage>
+    <customHelpPage>FieloPLT__LevelHelpBackEnd</customHelpPage>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <description>Fidelity Level</description>
@@ -59,9 +59,9 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
-        <fullName>FieloAlpha__Edit</fullName>
+        <fullName>FieloPLT__Edit</fullName>
         <availableFields>
-            <field>FieloAlpha__Order__c</field>
+            <field>FieloPLT__Order__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -69,7 +69,7 @@
         <label>Edit</label>
     </fieldSets>
     <fields>
-        <fullName>FieloAlpha__AttachmentId__c</fullName>
+        <fullName>FieloPLT__AttachmentId__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Image source</label>
@@ -81,7 +81,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Description__c</fullName>
+        <fullName>FieloPLT__Description__c</fullName>
         <deprecated>false</deprecated>
         <description>Detail of each level, for example, they could be called: Silver, Gold, Platinum</description>
         <externalId>false</externalId>
@@ -94,10 +94,10 @@
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Image__c</fullName>
+        <fullName>FieloPLT__Image__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>IMAGE(&quot;/servlet/servlet.FileDownload?file=&quot;+FieloAlpha__AttachmentId__c, &quot;photo&quot;,50, 50)</formula>
+        <formula>IMAGE(&quot;/servlet/servlet.FileDownload?file=&quot;+FieloPLT__AttachmentId__c, &quot;photo&quot;,50, 50)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Image</label>
         <required>false</required>
@@ -107,7 +107,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__IsActive__c</fullName>
+        <fullName>FieloPLT__IsActive__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <description>Allows to use the level and calculates it on the levels batch process</description>
@@ -118,7 +118,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Order__c</fullName>
+        <fullName>FieloPLT__Order__c</fullName>
         <deprecated>false</deprecated>
         <description>The hierarchy order of levels.</description>
         <externalId>false</externalId>
@@ -133,14 +133,14 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Program__c</fullName>
+        <fullName>FieloPLT__Program__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>The program to which this level belongs.</description>
         <externalId>false</externalId>
         <inlineHelpText>Select the program to which this level belongs.</inlineHelpText>
         <label>Program</label>
-        <referenceTo>FieloAlpha__Program__c</referenceTo>
+        <referenceTo>FieloPLT__Program__c</referenceTo>
         <relationshipLabel>Levels</relationshipLabel>
         <relationshipName>Levels</relationshipName>
         <required>false</required>
@@ -150,11 +150,11 @@
     </fields>
     <label>Level</label>
     <listViews>
-        <fullName>FieloAlpha__All_Levels</fullName>
+        <fullName>FieloPLT__All_Levels</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Program__c</columns>
-        <columns>FieloAlpha__Description__c</columns>
-        <columns>FieloAlpha__IsActive__c</columns>
+        <columns>FieloPLT__Program__c</columns>
+        <columns>FieloPLT__Description__c</columns>
+        <columns>FieloPLT__IsActive__c</columns>
         <columns>CREATED_DATE</columns>
         <filterScope>Everything</filterScope>
         <label>All Levels</label>
@@ -168,32 +168,32 @@
     <pluralLabel>Levels</pluralLabel>
     <recordTypeTrackHistory>false</recordTypeTrackHistory>
     <recordTypes>
-        <fullName>FieloAlpha__Active</fullName>
+        <fullName>FieloPLT__Active</fullName>
         <active>true</active>
         <label>Active</label>
     </recordTypes>
     <recordTypes>
-        <fullName>FieloAlpha__Inactive</fullName>
+        <fullName>FieloPLT__Inactive</fullName>
         <active>true</active>
         <label>Inactive</label>
     </recordTypes>
     <searchLayouts>
-        <customTabListAdditionalFields>FieloAlpha__IsActive__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__IsActive__c</customTabListAdditionalFields>
         <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
-        <listViewButtons>FieloAlpha__ReorderLevels</listViewButtons>
-        <listViewButtons>FieloAlpha__RunBatch</listViewButtons>
+        <listViewButtons>FieloPLT__ReorderLevels</listViewButtons>
+        <listViewButtons>FieloPLT__RunBatch</listViewButtons>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
-        <fullName>FieloAlpha__ModifyProgram</fullName>
+        <fullName>FieloPLT__ModifyProgram</fullName>
         <active>true</active>
         <description>Is not possible to modify the associated Program</description>
-        <errorConditionFormula>ISCHANGED(FieloAlpha__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloAlpha__Program__c)))</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__Program__c</errorDisplayField>
+        <errorConditionFormula>ISCHANGED(FieloPLT__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloPLT__Program__c)))</errorConditionFormula>
+        <errorDisplayField>FieloPLT__Program__c</errorDisplayField>
         <errorMessage>Is not possible to modify the associated Program</errorMessage>
     </validationRules>
     <webLinks>
-        <fullName>FieloAlpha__Active</fullName>
+        <fullName>FieloPLT__Active</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <linkType>javascript</linkType>
@@ -205,18 +205,18 @@
 var url = parent.location.href;
 var levelUpdate = [];
 
-var idLevel = &quot;{!FieloAlpha__Level__c.Id}&quot;;
-var resultLevel = sforce.connection.query(&quot;SELECT Id, {!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}IsActive__c, RecordTypeID FROM {!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Level__c WHERE Id = \&apos;{!FieloAlpha__Level__c.Id}\&apos; &quot;);
+var idLevel = &quot;{!FieloPLT__Level__c.Id}&quot;;
+var resultLevel = sforce.connection.query(&quot;SELECT Id, {!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}IsActive__c, RecordTypeID FROM {!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Level__c WHERE Id = \&apos;{!FieloPLT__Level__c.Id}\&apos; &quot;);
 
 var level = resultLevel.getArray(&quot;records&quot;)[0];
-level.{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}IsActive__c = true;
+level.{!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}IsActive__c = true;
 levelUpdate.push(level);
 
 result = sforce.connection.update(levelUpdate);
 parent.location.href = idLevel;</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__ExportLevel</fullName>
+        <fullName>FieloPLT__ExportLevel</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -224,10 +224,10 @@ parent.location.href = idLevel;</url>
         <masterLabel>Export Level</masterLabel>
         <openType>replace</openType>
         <protected>false</protected>
-        <url>/apex/{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}XMLExport?type=Level&amp;id={!FieloAlpha__Level__c.Id}</url>
+        <url>/apex/{!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}XMLExport?type=Level&amp;id={!FieloPLT__Level__c.Id}</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__Inactive</fullName>
+        <fullName>FieloPLT__Inactive</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <linkType>javascript</linkType>
@@ -239,42 +239,42 @@ parent.location.href = idLevel;</url>
 var url = parent.location.href;
 var levelUpdate = [];
 
-var idLevel = &quot;{!FieloAlpha__Level__c.Id}&quot;;
-var resultLevel = sforce.connection.query(&quot;SELECT Id, {!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}IsActive__c, RecordTypeID FROM {!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Level__c WHERE Id = \&apos;{!FieloAlpha__Level__c.Id}\&apos; &quot;);
+var idLevel = &quot;{!FieloPLT__Level__c.Id}&quot;;
+var resultLevel = sforce.connection.query(&quot;SELECT Id, {!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}IsActive__c, RecordTypeID FROM {!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Level__c WHERE Id = \&apos;{!FieloPLT__Level__c.Id}\&apos; &quot;);
 
 var level = resultLevel.getArray(&quot;records&quot;)[0];
-level.{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}IsActive__c = false;
+level.{!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}IsActive__c = false;
 levelUpdate.push(level);
 
 result = sforce.connection.update(levelUpdate);
 parent.location.href = idLevel;</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__ReorderLevels</fullName>
+        <fullName>FieloPLT__ReorderLevels</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
         <height>600</height>
         <linkType>page</linkType>
         <masterLabel>Reorder Levels</masterLabel>
         <openType>sidebar</openType>
-        <page>FieloAlpha__LevelReorderBackEnd</page>
+        <page>FieloPLT__LevelReorderBackEnd</page>
         <protected>false</protected>
         <requireRowSelection>true</requireRowSelection>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__RunBatch</fullName>
+        <fullName>FieloPLT__RunBatch</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
         <height>600</height>
         <linkType>page</linkType>
         <masterLabel>Recalculate Levels</masterLabel>
         <openType>sidebar</openType>
-        <page>FieloAlpha__LevelExecuteBatchBackEnd</page>
+        <page>FieloPLT__LevelExecuteBatchBackEnd</page>
         <protected>false</protected>
         <requireRowSelection>true</requireRowSelection>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__UploadPhoto</fullName>
+        <fullName>FieloPLT__UploadPhoto</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -283,6 +283,6 @@ parent.location.href = idLevel;</url>
         <masterLabel>Upload Photo</masterLabel>
         <openType>sidebar</openType>
         <protected>false</protected>
-        <url>/apex/{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}LevelPhotoUploadBackEnd?id={!FieloAlpha__Level__c.Id}</url>
+        <url>/apex/{!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}LevelPhotoUploadBackEnd?id={!FieloPLT__Level__c.Id}</url>
     </webLinks>
 </CustomObject>

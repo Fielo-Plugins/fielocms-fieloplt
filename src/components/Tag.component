@@ -6,7 +6,7 @@
     <apex:repeat value="{!record[relatedListName]}" var="tagItem" >
         <div class="fielo-tag">
           <span class="fielo-tag__name">{!tagItem.Tag__r.Name}</span>
-          <img src="{!tagItem['FieloAlpha__Tag__r'][field.attributes['fieldName']]}" class="fielo-image fielo-tag__image" data-attribute-replace="src" />
+          <img src="{!tagItem['FieloPLT__Tag__r'][field.attributes['fieldName']]}" class="fielo-image fielo-tag__image" data-attribute-replace="src" />
         </div>
     </apex:repeat>
 </apex:component>

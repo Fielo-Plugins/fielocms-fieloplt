@@ -59,14 +59,14 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
-        <fullName>FieloAlpha__ProfileView</fullName>
+        <fullName>FieloPLT__ProfileView</fullName>
         <availableFields>
-            <field>FieloAlpha__ExpirationDate__c</field>
+            <field>FieloPLT__ExpirationDate__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Quantity__c</field>
+            <field>FieloPLT__Quantity__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -77,92 +77,92 @@
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Code__c</field>
+            <field>FieloPLT__Code__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__RewardName__c</field>
+            <field>FieloPLT__RewardName__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__ItemPoints__c</field>
+            <field>FieloPLT__ItemPoints__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Status__c</field>
+            <field>FieloPLT__Status__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__VoucherLink__c</field>
+            <field>FieloPLT__VoucherLink__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <label>Profile View</label>
     </fieldSets>
     <fieldSets>
-        <fullName>FieloAlpha__Voucher</fullName>
+        <fullName>FieloPLT__Voucher</fullName>
         <availableFields>
             <field>Name</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__NetPoints__c</field>
+            <field>FieloPLT__NetPoints__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Redemption__c</field>
+            <field>FieloPLT__Redemption__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__RewardItemPrice__c</field>
+            <field>FieloPLT__RewardItemPrice__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__RewardItem__c</field>
+            <field>FieloPLT__RewardItem__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Reward__c</field>
+            <field>FieloPLT__Reward__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__StockMode__c</field>
+            <field>FieloPLT__StockMode__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__VoucherLink__c</field>
+            <field>FieloPLT__VoucherLink__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__isInstantRedemption__c</field>
+            <field>FieloPLT__isInstantRedemption__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <description>It use to show the Voucher Fields on the Voucher</description>
         <displayedFields>
-            <field>FieloAlpha__MemberName__c</field>
+            <field>FieloPLT__MemberName__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__RewardName__c</field>
+            <field>FieloPLT__RewardName__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__UniqueCode__c</field>
+            <field>FieloPLT__UniqueCode__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
@@ -172,24 +172,24 @@
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__ExpirationDate__c</field>
+            <field>FieloPLT__ExpirationDate__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__ItemPoints__c</field>
+            <field>FieloPLT__ItemPoints__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Status__c</field>
+            <field>FieloPLT__Status__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <label>Voucher</label>
     </fieldSets>
     <fields>
-        <fullName>FieloAlpha__CodeRange__c</fullName>
+        <fullName>FieloPLT__CodeRange__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Range of Code</label>
@@ -201,7 +201,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Code__c</fullName>
+        <fullName>FieloPLT__Code__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Code</label>
@@ -212,7 +212,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__DeliveredDate__c</fullName>
+        <fullName>FieloPLT__DeliveredDate__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Delivered Date</label>
@@ -221,7 +221,7 @@
         <type>Date</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Description__c</fullName>
+        <fullName>FieloPLT__Description__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Description</label>
@@ -231,7 +231,7 @@
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ExpirationDate__c</fullName>
+        <fullName>FieloPLT__ExpirationDate__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>ExpirationDate</label>
@@ -240,7 +240,7 @@
         <type>Date</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ItemPoints__c</fullName>
+        <fullName>FieloPLT__ItemPoints__c</fullName>
         <deprecated>false</deprecated>
         <description>Points involved on the item.</description>
         <externalId>false</externalId>
@@ -253,11 +253,11 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__MemberName__c</fullName>
+        <fullName>FieloPLT__MemberName__c</fullName>
         <deprecated>false</deprecated>
         <description>Formula to get the member name.</description>
         <externalId>false</externalId>
-        <formula>FieloAlpha__Redemption__r.FieloAlpha__Member__r.FieloAlpha__LastName__c +&quot;, &quot;+ FieloAlpha__Redemption__r.FieloAlpha__Member__r.FieloAlpha__FirstName__c</formula>
+        <formula>FieloPLT__Redemption__r.FieloPLT__Member__r.FieloPLT__LastName__c +&quot;, &quot;+ FieloPLT__Redemption__r.FieloPLT__Member__r.FieloPLT__FirstName__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Member Name</label>
         <required>false</required>
@@ -266,10 +266,10 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__NetPoints__c</fullName>
+        <fullName>FieloPLT__NetPoints__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>FieloAlpha__RewardItem__r.FieloAlpha__Reward__r.FieloAlpha__PointsCant__c</formula>
+        <formula>FieloPLT__RewardItem__r.FieloPLT__Reward__r.FieloPLT__PointsCant__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>NetPoints</label>
         <precision>18</precision>
@@ -280,7 +280,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__OriginalPoints__c</fullName>
+        <fullName>FieloPLT__OriginalPoints__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Original Points</label>
@@ -292,7 +292,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Quantity__c</fullName>
+        <fullName>FieloPLT__Quantity__c</fullName>
         <defaultValue>1</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -305,11 +305,11 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Redemption__c</fullName>
+        <fullName>FieloPLT__Redemption__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Redemption</label>
-        <referenceTo>FieloAlpha__Redemption__c</referenceTo>
+        <referenceTo>FieloPLT__Redemption__c</referenceTo>
         <relationshipLabel>Redemption Items</relationshipLabel>
         <relationshipName>Redemption_Items</relationshipName>
         <relationshipOrder>0</relationshipOrder>
@@ -319,7 +319,7 @@
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RewardItemPrice__c</fullName>
+        <fullName>FieloPLT__RewardItemPrice__c</fullName>
         <deprecated>false</deprecated>
         <description>Price of the item.</description>
         <externalId>false</externalId>
@@ -331,11 +331,11 @@
         <type>Currency</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RewardItem__c</fullName>
+        <fullName>FieloPLT__RewardItem__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Reward Item</label>
-        <referenceTo>FieloAlpha__RewardItem__c</referenceTo>
+        <referenceTo>FieloPLT__RewardItem__c</referenceTo>
         <relationshipLabel>Redemption Items</relationshipLabel>
         <relationshipName>Redemption_Items</relationshipName>
         <relationshipOrder>1</relationshipOrder>
@@ -345,11 +345,11 @@
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RewardName__c</fullName>
+        <fullName>FieloPLT__RewardName__c</fullName>
         <deprecated>false</deprecated>
         <description>Name of the reward.</description>
         <externalId>false</externalId>
-        <formula>FieloAlpha__RewardItem__r.FieloAlpha__Reward__r.Name</formula>
+        <formula>FieloPLT__RewardItem__r.FieloPLT__Reward__r.Name</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Reward Name</label>
         <required>false</required>
@@ -358,12 +358,12 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Reward__c</fullName>
+        <fullName>FieloPLT__Reward__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Reward</label>
-        <referenceTo>FieloAlpha__Reward__c</referenceTo>
+        <referenceTo>FieloPLT__Reward__c</referenceTo>
         <relationshipLabel>Redemption Items</relationshipLabel>
         <relationshipName>RedemptionItems</relationshipName>
         <required>false</required>
@@ -371,7 +371,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Status__c</fullName>
+        <fullName>FieloPLT__Status__c</fullName>
         <deprecated>false</deprecated>
         <description>Item status.</description>
         <externalId>false</externalId>
@@ -407,10 +407,10 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__StockMode__c</fullName>
+        <fullName>FieloPLT__StockMode__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>TEXT(FieloAlpha__Reward__r.FieloAlpha__VoucherCreationMode__c)</formula>
+        <formula>TEXT(FieloPLT__Reward__r.FieloPLT__VoucherCreationMode__c)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Stock Mode</label>
         <required>false</required>
@@ -419,13 +419,13 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__UniqueCode__c</fullName>
+        <fullName>FieloPLT__UniqueCode__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>IF( ISPICKVAL(FieloAlpha__Reward__r.FieloAlpha__VoucherCreationMode__c, &apos;Controlled By Item&apos;), FieloAlpha__Code__c,
-   IF ( FieloAlpha__CodeRange__c &lt; 10 ,
-      FieloAlpha__Code__c + &apos;0&apos; + TEXT( FieloAlpha__CodeRange__c ),
-      FieloAlpha__Code__c + RIGHT( TEXT( FieloAlpha__CodeRange__c ), 2 )
+        <formula>IF( ISPICKVAL(FieloPLT__Reward__r.FieloPLT__VoucherCreationMode__c, &apos;Controlled By Item&apos;), FieloPLT__Code__c,
+   IF ( FieloPLT__CodeRange__c &lt; 10 ,
+      FieloPLT__Code__c + &apos;0&apos; + TEXT( FieloPLT__CodeRange__c ),
+      FieloPLT__Code__c + RIGHT( TEXT( FieloPLT__CodeRange__c ), 2 )
    )
 )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
@@ -436,13 +436,13 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__VoucherLink__c</fullName>
+        <fullName>FieloPLT__VoucherLink__c</fullName>
         <deprecated>false</deprecated>
         <description>Formula to link the voucher.</description>
         <externalId>false</externalId>
         <formula>IF(
-   ISPICKVAL(  FieloAlpha__Status__c ,&apos;Ready&apos; ) ,
-   HYPERLINK( &apos;./apex/&apos; +  IF(NOT(ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c)), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;, &apos;&apos;) + &apos;RedemptionItemVoucher?voucherId=&apos; +  Id, $Label.FieloAlpha__Voucher ),
+   ISPICKVAL(  FieloPLT__Status__c ,&apos;Ready&apos; ) ,
+   HYPERLINK( &apos;./apex/&apos; +  IF(NOT(ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c)), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;, &apos;&apos;) + &apos;RedemptionItemVoucher?voucherId=&apos; +  Id, $Label.FieloPLT__Voucher ),
 &apos;&apos;
 )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
@@ -453,7 +453,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__isInstantRedemption__c</fullName>
+        <fullName>FieloPLT__isInstantRedemption__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -473,14 +473,14 @@
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
     <validationRules>
-        <fullName>FieloAlpha__QuantityGreaterThanZero</fullName>
+        <fullName>FieloPLT__QuantityGreaterThanZero</fullName>
         <active>true</active>
         <description>The quantity must be greater than zero</description>
-        <errorConditionFormula>FieloAlpha__Quantity__c &lt;= 0</errorConditionFormula>
+        <errorConditionFormula>FieloPLT__Quantity__c &lt;= 0</errorConditionFormula>
         <errorMessage>The quantity must be greater than 0</errorMessage>
     </validationRules>
     <webLinks>
-        <fullName>FieloAlpha__DeliverItems</fullName>
+        <fullName>FieloPLT__DeliverItems</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
         <linkType>javascript</linkType>
@@ -491,15 +491,15 @@
         <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)}
 {!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)}
 
-var itemsSelected = {!GETRECORDIDS( $ObjectType.FieloAlpha__RedemptionItem__c ) };
+var itemsSelected = {!GETRECORDIDS( $ObjectType.FieloPLT__RedemptionItem__c ) };
 
 if(itemsSelected.length == 0){
-    alert(&apos;{!$Label.FieloAlpha__ItemsRequired}&apos;);
+    alert(&apos;{!$Label.FieloPLT__ItemsRequired}&apos;);
 }else{
 
-var prefix = &apos;{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}&apos;.replace(&apos;__&apos;, &apos;.&apos;);
+var prefix = &apos;{!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}&apos;.replace(&apos;__&apos;, &apos;.&apos;);
 
-var status = sforce.apex.execute( prefix+&apos;RedemptionUtil&apos;, &apos;deliverItems&apos;, {id: &apos;{!FieloAlpha__Redemption__c.Id}&apos;, itemsIds: itemsSelected });
+var status = sforce.apex.execute( prefix+&apos;RedemptionUtil&apos;, &apos;deliverItems&apos;, {id: &apos;{!FieloPLT__Redemption__c.Id}&apos;, itemsIds: itemsSelected });
 
 alert(status);
 
@@ -507,18 +507,18 @@ location.reload();
 }</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__RevertItems</fullName>
+        <fullName>FieloPLT__RevertItems</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
         <linkType>page</linkType>
         <masterLabel>Revert Items</masterLabel>
         <openType>replace</openType>
-        <page>FieloAlpha__RedemptionItemRevertBackEnd</page>
+        <page>FieloPLT__RedemptionItemRevertBackEnd</page>
         <protected>false</protected>
         <requireRowSelection>true</requireRowSelection>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__RevertRedemptionItem</fullName>
+        <fullName>FieloPLT__RevertRedemptionItem</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <linkType>javascript</linkType>
@@ -528,9 +528,9 @@ location.reload();
         <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)}
 {!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)}
 
-var prefix = &apos;{!$Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c}&apos;.replace(&apos;__&apos;, &apos;.&apos;);
+var prefix = &apos;{!$Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c}&apos;.replace(&apos;__&apos;, &apos;.&apos;);
 
-var status = sforce.apex.execute(prefix+&apos;RedemptionUtil&apos;, &apos;cancelRedemtionItem&apos;, {id: &apos;{!FieloAlpha__RedemptionItem__c.Id}&apos;});
+var status = sforce.apex.execute(prefix+&apos;RedemptionUtil&apos;, &apos;cancelRedemtionItem&apos;, {id: &apos;{!FieloPLT__RedemptionItem__c.Id}&apos;});
 
 alert(status);
 

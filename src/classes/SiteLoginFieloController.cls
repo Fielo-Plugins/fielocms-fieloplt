@@ -12,7 +12,7 @@ global with sharing class SiteLoginFieloController {
         }catch(FieloCustomException e){
             result.redirectURL = '';
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
-        }catch(FieloAlpha.FieloCustomException e){
+        }catch(FieloPLT.FieloCustomException e){
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
         }
         
@@ -37,7 +37,7 @@ global with sharing class SiteLoginFieloController {
         }catch(FieloCustomException e){
             result.redirectURL = '';
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
-        }catch(FieloAlpha.FieloCustomException e){
+        }catch(FieloPLT.FieloCustomException e){
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
         }
         

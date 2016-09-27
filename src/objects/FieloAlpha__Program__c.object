@@ -59,12 +59,12 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
-        <fullName>FieloAlpha__ProgramQuery</fullName>
+        <fullName>FieloPLT__ProgramQuery</fullName>
         <description>Program API to optimize query</description>
         <label>Program Query</label>
     </fieldSets>
     <fields>
-        <fullName>FieloAlpha__ActiveContactsCalculation__c</fullName>
+        <fullName>FieloPLT__ActiveContactsCalculation__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -74,7 +74,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__AgreementFieldSet__c</fullName>
+        <fullName>FieloPLT__AgreementFieldSet__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Agreement Field Set</label>
@@ -84,7 +84,7 @@
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__AgreementView__c</fullName>
+        <fullName>FieloPLT__AgreementView__c</fullName>
         <deprecated>false</deprecated>
         <description>This page will be the one that overwrites the standar one to show the Agreement in the Front End.</description>
         <externalId>false</externalId>
@@ -97,7 +97,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__AttachmentId__c</fullName>
+        <fullName>FieloPLT__AttachmentId__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Image source</label>
@@ -108,7 +108,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__AuditPoints__c</fullName>
+        <fullName>FieloPLT__AuditPoints__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -118,7 +118,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__AutomaticCode__c</fullName>
+        <fullName>FieloPLT__AutomaticCode__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -128,7 +128,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__AutonumericMemberCode__c</fullName>
+        <fullName>FieloPLT__AutonumericMemberCode__c</fullName>
         <defaultValue>100000000000</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -141,7 +141,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__BannerInjectQuery__c</fullName>
+        <fullName>FieloPLT__BannerInjectQuery__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Banner Inject Query</label>
@@ -151,7 +151,7 @@
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__CaptchaPublicKey__c</fullName>
+        <fullName>FieloPLT__CaptchaPublicKey__c</fullName>
         <deprecated>false</deprecated>
         <description>A public key obtained at Google.</description>
         <externalId>false</externalId>
@@ -165,7 +165,7 @@ recaptcha/admin/create</inlineHelpText>
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__CaptchaSecretKey__c</fullName>
+        <fullName>FieloPLT__CaptchaSecretKey__c</fullName>
         <deprecated>false</deprecated>
         <description>A private key obtained at Google.</description>
         <externalId>false</externalId>
@@ -179,7 +179,7 @@ recaptcha/admin/create</inlineHelpText>
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__CaptchaURL__c</fullName>
+        <fullName>FieloPLT__CaptchaURL__c</fullName>
         <deprecated>false</deprecated>
         <description>The URL from where you get a Captcha system.</description>
         <externalId>false</externalId>
@@ -192,7 +192,7 @@ recaptcha/admin/create</inlineHelpText>
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Captcha__c</fullName>
+        <fullName>FieloPLT__Captcha__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>Checking this option will allow a Captcha system in the members&apos; portal.</description>
@@ -205,7 +205,7 @@ https://www.google.com
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__CategoryInjectQuery__c</fullName>
+        <fullName>FieloPLT__CategoryInjectQuery__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Category Inject Query</label>
@@ -215,7 +215,7 @@ https://www.google.com
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ChangePasswordPage__c</fullName>
+        <fullName>FieloPLT__ChangePasswordPage__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Change Password Page</label>
@@ -226,7 +226,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ComponentFieldsQuery__c</fullName>
+        <fullName>FieloPLT__ComponentFieldsQuery__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Component Fields Query</label>
@@ -236,7 +236,7 @@ https://www.google.com
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__CustomPage__c</fullName>
+        <fullName>FieloPLT__CustomPage__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>Indicate the page you want to use instead of Fielo’s CMS.</inlineHelpText>
@@ -248,7 +248,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__CustomVoucherCss__c</fullName>
+        <fullName>FieloPLT__CustomVoucherCss__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>Enter the CSS code to be applied to customized vouchers.</inlineHelpText>
@@ -260,7 +260,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Default__c</fullName>
+        <fullName>FieloPLT__Default__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>Checking this option makes this your default program.</description>
@@ -271,7 +271,7 @@ https://www.google.com
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__EmailTemplateRegister__c</fullName>
+        <fullName>FieloPLT__EmailTemplateRegister__c</fullName>
         <deprecated>false</deprecated>
         <description>The template for the email that will be sent when a new member finishes the first step of registration.</description>
         <externalId>false</externalId>
@@ -284,7 +284,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ExpirationMode__c</fullName>
+        <fullName>FieloPLT__ExpirationMode__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>&lt;EXPIRATION MODE DESCRIPTION&gt;</inlineHelpText>
@@ -296,7 +296,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ExpirationPeriod__c</fullName>
+        <fullName>FieloPLT__ExpirationPeriod__c</fullName>
         <deprecated>false</deprecated>
         <description>Number of months during which the member&apos;s points will be valid.</description>
         <externalId>false</externalId>
@@ -310,7 +310,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ExpirationTypeDetail__c</fullName>
+        <fullName>FieloPLT__ExpirationTypeDetail__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Expiration Type Detail</label>
@@ -321,7 +321,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__FacebookAplicationId__c</fullName>
+        <fullName>FieloPLT__FacebookAplicationId__c</fullName>
         <deprecated>false</deprecated>
         <description>Your Facebook Application ID number, for Facebook integration.</description>
         <externalId>false</externalId>
@@ -334,7 +334,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__FacebookAplicationSecret__c</fullName>
+        <fullName>FieloPLT__FacebookAplicationSecret__c</fullName>
         <deprecated>false</deprecated>
         <description>Your Facebook Secret Key, for Facebook integration.</description>
         <externalId>false</externalId>
@@ -347,7 +347,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__FacebookRecomendationDescription__c</fullName>
+        <fullName>FieloPLT__FacebookRecomendationDescription__c</fullName>
         <defaultValue>&apos;Join Our Loyalty Program&apos;</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -358,7 +358,7 @@ https://www.google.com
         <type>TextArea</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__FacebookRecomendationName__c</fullName>
+        <fullName>FieloPLT__FacebookRecomendationName__c</fullName>
         <defaultValue>&apos;Fielo Loyalty&apos;</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -371,7 +371,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__FacebookRecomendationSubtitle__c</fullName>
+        <fullName>FieloPLT__FacebookRecomendationSubtitle__c</fullName>
         <deprecated>false</deprecated>
         <description>The subtitle for this recomendation.</description>
         <externalId>false</externalId>
@@ -384,7 +384,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Facebook__c</fullName>
+        <fullName>FieloPLT__Facebook__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -393,7 +393,7 @@ https://www.google.com
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__FieldSet__c</fullName>
+        <fullName>FieloPLT__FieldSet__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>FieldSet</label>
@@ -403,7 +403,7 @@ https://www.google.com
         <visibleLines>2</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__FirstBuyIntencive__c</fullName>
+        <fullName>FieloPLT__FirstBuyIntencive__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>First Buy Intencive</label>
@@ -415,7 +415,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Google__c</fullName>
+        <fullName>FieloPLT__Google__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -425,7 +425,7 @@ https://www.google.com
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__HTMLHeadGeneral__c</fullName>
+        <fullName>FieloPLT__HTMLHeadGeneral__c</fullName>
         <deprecated>false</deprecated>
         <description>HTML Advanced for head element</description>
         <externalId>false</externalId>
@@ -436,7 +436,7 @@ https://www.google.com
         <visibleLines>6</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__IdentificationCodeType__c</fullName>
+        <fullName>FieloPLT__IdentificationCodeType__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>Choose here to validate the Member Code during signup.</inlineHelpText>
@@ -448,7 +448,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__InactiveDays__c</fullName>
+        <fullName>FieloPLT__InactiveDays__c</fullName>
         <deprecated>false</deprecated>
         <description>The number of days whitout generating transactions that will make a member to become inactive.</description>
         <externalId>false</externalId>
@@ -462,7 +462,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__InstructionsReward__c</fullName>
+        <fullName>FieloPLT__InstructionsReward__c</fullName>
         <deprecated>false</deprecated>
         <description>The instructions for redeeming a reward.</description>
         <externalId>false</externalId>
@@ -474,7 +474,7 @@ https://www.google.com
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__InstructionsVoucher__c</fullName>
+        <fullName>FieloPLT__InstructionsVoucher__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>Instructions for the vouchers, will be also shown in the vouchers</inlineHelpText>
@@ -485,7 +485,7 @@ https://www.google.com
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Language__c</fullName>
+        <fullName>FieloPLT__Language__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Language</label>
@@ -508,7 +508,7 @@ https://www.google.com
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Linkedin__c</fullName>
+        <fullName>FieloPLT__Linkedin__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -517,7 +517,7 @@ https://www.google.com
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Locale__c</fullName>
+        <fullName>FieloPLT__Locale__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Locale</label>
@@ -532,7 +532,7 @@ https://www.google.com
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__MemberCodeClass__c</fullName>
+        <fullName>FieloPLT__MemberCodeClass__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Member Code Class</label>
@@ -543,7 +543,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__MemberCodeClasse__c</fullName>
+        <fullName>FieloPLT__MemberCodeClasse__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Member Code Classe</label>
@@ -554,7 +554,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__MemberCode__c</fullName>
+        <fullName>FieloPLT__MemberCode__c</fullName>
         <defaultValue>1</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -567,12 +567,12 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__MemberSelectionPage__c</fullName>
+        <fullName>FieloPLT__MemberSelectionPage__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Member Selection Page</label>
-        <referenceTo>FieloAlpha__Menu__c</referenceTo>
+        <referenceTo>FieloPLT__Menu__c</referenceTo>
         <relationshipLabel>Programs (Member Selection Page)</relationshipLabel>
         <relationshipName>Programs1</relationshipName>
         <required>false</required>
@@ -580,7 +580,7 @@ https://www.google.com
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__MenuFieldSet__c</fullName>
+        <fullName>FieloPLT__MenuFieldSet__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Menu Field Set</label>
@@ -590,7 +590,7 @@ https://www.google.com
         <visibleLines>2</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__MetricPeriod__c</fullName>
+        <fullName>FieloPLT__MetricPeriod__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>Specify the frequency of metric calculations.</inlineHelpText>
@@ -602,7 +602,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__NewsInjectQuery__c</fullName>
+        <fullName>FieloPLT__NewsInjectQuery__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>News Inject Query</label>
@@ -612,7 +612,7 @@ https://www.google.com
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__NewsView__c</fullName>
+        <fullName>FieloPLT__NewsView__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>News View Page</label>
@@ -623,7 +623,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__NumberOfVoucherDigits__c</fullName>
+        <fullName>FieloPLT__NumberOfVoucherDigits__c</fullName>
         <deprecated>false</deprecated>
         <description>The number of digits in automatic vouchers.</description>
         <externalId>false</externalId>
@@ -637,7 +637,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__OneStepRegistration__c</fullName>
+        <fullName>FieloPLT__OneStepRegistration__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>Checking this option will enable registration in one step.</description>
@@ -648,7 +648,7 @@ https://www.google.com
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__OpenRedemptionDays__c</fullName>
+        <fullName>FieloPLT__OpenRedemptionDays__c</fullName>
         <deprecated>false</deprecated>
         <description>The number of days that a redemption will stay open.</description>
         <externalId>false</externalId>
@@ -662,7 +662,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__PackagePrefix__c</fullName>
+        <fullName>FieloPLT__PackagePrefix__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Package Prefix</label>
@@ -673,7 +673,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__PointCost__c</fullName>
+        <fullName>FieloPLT__PointCost__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Actual Point Cost</label>
@@ -684,7 +684,7 @@ https://www.google.com
         <type>Currency</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RecentRewardsDays__c</fullName>
+        <fullName>FieloPLT__RecentRewardsDays__c</fullName>
         <defaultValue>3</defaultValue>
         <deprecated>false</deprecated>
         <description>Days during which a reward will show in the Most Recent list in the members&apos; portal.</description>
@@ -699,7 +699,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RecommendPage__c</fullName>
+        <fullName>FieloPLT__RecommendPage__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Recommend Page</label>
@@ -710,7 +710,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RedemptionApproval__c</fullName>
+        <fullName>FieloPLT__RedemptionApproval__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>Checking this option will establish an approval process for reward redemptions.</description>
@@ -721,7 +721,7 @@ https://www.google.com
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RedemptionView__c</fullName>
+        <fullName>FieloPLT__RedemptionView__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Redemption View Page</label>
@@ -732,7 +732,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ReferalTransactionStep1__c</fullName>
+        <fullName>FieloPLT__ReferalTransactionStep1__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>Checking this option will give points to members who refer new members.</description>
@@ -743,7 +743,7 @@ https://www.google.com
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ReferalTransactionStep2__c</fullName>
+        <fullName>FieloPLT__ReferalTransactionStep2__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>Points given as incentive for members to complete the registration process.</description>
@@ -754,7 +754,7 @@ https://www.google.com
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RegisterPage__c</fullName>
+        <fullName>FieloPLT__RegisterPage__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -762,13 +762,13 @@ https://www.google.com
         <lookupFilter>
             <active>true</active>
             <filterItems>
-                <field>FieloAlpha__Menu__c.FieloAlpha__Program__r.Id</field>
+                <field>FieloPLT__Menu__c.FieloPLT__Program__r.Id</field>
                 <operation>equals</operation>
                 <valueField>$Source.Id</valueField>
             </filterItems>
             <isOptional>false</isOptional>
         </lookupFilter>
-        <referenceTo>FieloAlpha__Menu__c</referenceTo>
+        <referenceTo>FieloPLT__Menu__c</referenceTo>
         <relationshipLabel>Programs</relationshipLabel>
         <relationshipName>Programs</relationshipName>
         <required>false</required>
@@ -776,7 +776,7 @@ https://www.google.com
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RegistrationTransaction__c</fullName>
+        <fullName>FieloPLT__RegistrationTransaction__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>Checking this option will give points to new members for registering in the program.</description>
@@ -787,7 +787,7 @@ https://www.google.com
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RequestAutorization__c</fullName>
+        <fullName>FieloPLT__RequestAutorization__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>Checking this option will make members registration subject to an approval process.</description>
@@ -798,7 +798,7 @@ https://www.google.com
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RequestTransactionAuthorization__c</fullName>
+        <fullName>FieloPLT__RequestTransactionAuthorization__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -807,7 +807,7 @@ https://www.google.com
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RewardInjectQuery__c</fullName>
+        <fullName>FieloPLT__RewardInjectQuery__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Reward Inject Query</label>
@@ -817,7 +817,7 @@ https://www.google.com
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RewardView__c</fullName>
+        <fullName>FieloPLT__RewardView__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Reward View Page</label>
@@ -828,7 +828,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__SearchRewardMenu__c</fullName>
+        <fullName>FieloPLT__SearchRewardMenu__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Search Reward Menu</label>
@@ -839,7 +839,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__SegmentCriteriaFields__c</fullName>
+        <fullName>FieloPLT__SegmentCriteriaFields__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Segment Criteria Fields</label>
@@ -849,7 +849,7 @@ https://www.google.com
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__SegmentInjectQuery__c</fullName>
+        <fullName>FieloPLT__SegmentInjectQuery__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Segment Inject Query</label>
@@ -859,7 +859,7 @@ https://www.google.com
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__SenderDisplayName__c</fullName>
+        <fullName>FieloPLT__SenderDisplayName__c</fullName>
         <deprecated>false</deprecated>
         <description>The sender name for all emails sent from the application.</description>
         <externalId>false</externalId>
@@ -872,7 +872,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ShoppingCartPage__c</fullName>
+        <fullName>FieloPLT__ShoppingCartPage__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Shopping Cart Page</label>
@@ -883,7 +883,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ShoppingCart__c</fullName>
+        <fullName>FieloPLT__ShoppingCart__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -892,7 +892,7 @@ https://www.google.com
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ShowVoucherCode__c</fullName>
+        <fullName>FieloPLT__ShowVoucherCode__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -901,7 +901,7 @@ https://www.google.com
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__SiteDomain__c</fullName>
+        <fullName>FieloPLT__SiteDomain__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Site Domain</label>
@@ -912,7 +912,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__SiteProfile__c</fullName>
+        <fullName>FieloPLT__SiteProfile__c</fullName>
         <defaultValue>&apos;Fielo Member Site&apos;</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -925,7 +925,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__SiteResourcesMode__c</fullName>
+        <fullName>FieloPLT__SiteResourcesMode__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Site Resources Mode</label>
@@ -948,7 +948,7 @@ https://www.google.com
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__SiteURL__c</fullName>
+        <fullName>FieloPLT__SiteURL__c</fullName>
         <deprecated>false</deprecated>
         <description>The URL used to complete the registration process.</description>
         <externalId>false</externalId>
@@ -961,7 +961,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Step1RegistrationMessage__c</fullName>
+        <fullName>FieloPLT__Step1RegistrationMessage__c</fullName>
         <deprecated>false</deprecated>
         <description>A message to be showed to members in the first step of registration.</description>
         <externalId>false</externalId>
@@ -973,7 +973,7 @@ https://www.google.com
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Step2RegistrationMessage__c</fullName>
+        <fullName>FieloPLT__Step2RegistrationMessage__c</fullName>
         <deprecated>false</deprecated>
         <description>A message to be showed to members in the second step of registration.</description>
         <externalId>false</externalId>
@@ -985,7 +985,7 @@ https://www.google.com
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__StockControl__c</fullName>
+        <fullName>FieloPLT__StockControl__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -994,7 +994,7 @@ https://www.google.com
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__TagInjectQuery__c</fullName>
+        <fullName>FieloPLT__TagInjectQuery__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Tag Inject Query</label>
@@ -1004,7 +1004,7 @@ https://www.google.com
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__TimeOutOrphanTransactions__c</fullName>
+        <fullName>FieloPLT__TimeOutOrphanTransactions__c</fullName>
         <deprecated>false</deprecated>
         <description>The number of days after which a transaction will expire if the person who performed it does not register in your program.</description>
         <externalId>false</externalId>
@@ -1018,7 +1018,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__TimeZone__c</fullName>
+        <fullName>FieloPLT__TimeZone__c</fullName>
         <deprecated>false</deprecated>
         <description>International time zone you want to set for your program.</description>
         <externalId>false</externalId>
@@ -1035,7 +1035,7 @@ https://www.google.com
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__TransactionProcessOnline__c</fullName>
+        <fullName>FieloPLT__TransactionProcessOnline__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>Checkin this option will record all transactions online when they occur. If unchecked, you will have to register them offline.</description>
@@ -1046,7 +1046,7 @@ https://www.google.com
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Twitter__c</fullName>
+        <fullName>FieloPLT__Twitter__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -1055,7 +1055,7 @@ https://www.google.com
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__UseAgreement__c</fullName>
+        <fullName>FieloPLT__UseAgreement__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <description>When checked, the Program will have active the Agreement functionality.</description>
@@ -1066,7 +1066,7 @@ https://www.google.com
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__UserCreationClass__c</fullName>
+        <fullName>FieloPLT__UserCreationClass__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>Enter the class you want to use for reflection of the user creation process.</inlineHelpText>
@@ -1078,7 +1078,7 @@ https://www.google.com
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ValidatePointsByItem__c</fullName>
+        <fullName>FieloPLT__ValidatePointsByItem__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -1101,14 +1101,14 @@ https://www.google.com
     </fields>
     <label>Program</label>
     <listViews>
-        <fullName>FieloAlpha__All</fullName>
+        <fullName>FieloPLT__All</fullName>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
     <listViews>
-        <fullName>FieloAlpha__All_Programs</fullName>
+        <fullName>FieloPLT__All_Programs</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Default__c</columns>
+        <columns>FieloPLT__Default__c</columns>
         <filterScope>Everything</filterScope>
         <label>All Programs</label>
         <language>en_US</language>
@@ -1123,56 +1123,56 @@ https://www.google.com
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
-        <fullName>FieloAlpha__Complete_Site_URL</fullName>
+        <fullName>FieloPLT__Complete_Site_URL</fullName>
         <active>false</active>
-        <errorConditionFormula>FieloAlpha__Default__c  =  FALSE &amp;&amp; FieloAlpha__SiteURL__c  = NULL</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__SiteURL__c</errorDisplayField>
+        <errorConditionFormula>FieloPLT__Default__c  =  FALSE &amp;&amp; FieloPLT__SiteURL__c  = NULL</errorConditionFormula>
+        <errorDisplayField>FieloPLT__SiteURL__c</errorDisplayField>
         <errorMessage>Complete Site URL. You can find it going to Setup -&gt; Develop -&gt; Sites</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__Open_Redemption_Days</fullName>
+        <fullName>FieloPLT__Open_Redemption_Days</fullName>
         <active>true</active>
-        <errorConditionFormula>FieloAlpha__OpenRedemptionDays__c &lt; 0</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__OpenRedemptionDays__c</errorDisplayField>
+        <errorConditionFormula>FieloPLT__OpenRedemptionDays__c &lt; 0</errorConditionFormula>
+        <errorDisplayField>FieloPLT__OpenRedemptionDays__c</errorDisplayField>
         <errorMessage>Value cannot be negative</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__Validate_Expiration_Period</fullName>
+        <fullName>FieloPLT__Validate_Expiration_Period</fullName>
         <active>true</active>
-        <errorConditionFormula>FieloAlpha__ExpirationPeriod__c &lt; 0</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__ExpirationPeriod__c</errorDisplayField>
+        <errorConditionFormula>FieloPLT__ExpirationPeriod__c &lt; 0</errorConditionFormula>
+        <errorDisplayField>FieloPLT__ExpirationPeriod__c</errorDisplayField>
         <errorMessage>Value cannot be negative</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__Validate_Inactive_Days</fullName>
+        <fullName>FieloPLT__Validate_Inactive_Days</fullName>
         <active>true</active>
-        <errorConditionFormula>FieloAlpha__InactiveDays__c &lt; 1</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__InactiveDays__c</errorDisplayField>
+        <errorConditionFormula>FieloPLT__InactiveDays__c &lt; 1</errorConditionFormula>
+        <errorDisplayField>FieloPLT__InactiveDays__c</errorDisplayField>
         <errorMessage>Quantity should be positive</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__Validate_Numer_of_voucher_digits</fullName>
+        <fullName>FieloPLT__Validate_Numer_of_voucher_digits</fullName>
         <active>true</active>
-        <errorConditionFormula>FieloAlpha__NumberOfVoucherDigits__c &lt; 4</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__NumberOfVoucherDigits__c</errorDisplayField>
+        <errorConditionFormula>FieloPLT__NumberOfVoucherDigits__c &lt; 4</errorConditionFormula>
+        <errorDisplayField>FieloPLT__NumberOfVoucherDigits__c</errorDisplayField>
         <errorMessage>Must be greater than 4 digits</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__Validate_RecentRewardsDays</fullName>
+        <fullName>FieloPLT__Validate_RecentRewardsDays</fullName>
         <active>false</active>
-        <errorConditionFormula>FieloAlpha__RecentRewardsDays__c &lt; 1</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__RecentRewardsDays__c</errorDisplayField>
+        <errorConditionFormula>FieloPLT__RecentRewardsDays__c &lt; 1</errorConditionFormula>
+        <errorDisplayField>FieloPLT__RecentRewardsDays__c</errorDisplayField>
         <errorMessage>The quantity should be positive</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__Validate_TimeOut_Orphan_Transactions</fullName>
+        <fullName>FieloPLT__Validate_TimeOut_Orphan_Transactions</fullName>
         <active>true</active>
-        <errorConditionFormula>FieloAlpha__TimeOutOrphanTransactions__c &lt; 0 || FieloAlpha__TimeOutOrphanTransactions__c &gt; 30</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__TimeOutOrphanTransactions__c</errorDisplayField>
+        <errorConditionFormula>FieloPLT__TimeOutOrphanTransactions__c &lt; 0 || FieloPLT__TimeOutOrphanTransactions__c &gt; 30</errorConditionFormula>
+        <errorDisplayField>FieloPLT__TimeOutOrphanTransactions__c</errorDisplayField>
         <errorMessage>Value must be between 0 and 30</errorMessage>
     </validationRules>
     <webLinks>
-        <fullName>FieloAlpha__AdvanceSettings</fullName>
+        <fullName>FieloPLT__AdvanceSettings</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -1180,32 +1180,32 @@ https://www.google.com
         <masterLabel>Advance Settings</masterLabel>
         <openType>replace</openType>
         <protected>false</protected>
-        <url>/apex/{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}SettingsBackEnd?id={!FieloAlpha__Program__c.Id}&amp;isAdvanced=true</url>
+        <url>/apex/{!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}SettingsBackEnd?id={!FieloPLT__Program__c.Id}&amp;isAdvanced=true</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__AgreementFieldSet</fullName>
+        <fullName>FieloPLT__AgreementFieldSet</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <linkType>page</linkType>
         <masterLabel>Agreement Field Set</masterLabel>
         <openType>replace</openType>
-        <page>FieloAlpha__ProgramFieldSetAgreement</page>
+        <page>FieloPLT__ProgramFieldSetAgreement</page>
         <protected>false</protected>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__BatchManagement</fullName>
+        <fullName>FieloPLT__BatchManagement</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
         <height>600</height>
         <linkType>page</linkType>
         <masterLabel>Batch Management</masterLabel>
         <openType>sidebar</openType>
-        <page>FieloAlpha__BatchExecutionBackEnd</page>
+        <page>FieloPLT__BatchExecutionBackEnd</page>
         <protected>false</protected>
         <requireRowSelection>false</requireRowSelection>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__BatchManagementDetail</fullName>
+        <fullName>FieloPLT__BatchManagementDetail</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -1213,20 +1213,20 @@ https://www.google.com
         <masterLabel>Batch Management</masterLabel>
         <openType>replace</openType>
         <protected>false</protected>
-        <url>/apex/{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}BatchExecutionBackEnd</url>
+        <url>/apex/{!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}BatchExecutionBackEnd</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__MenuFieldSet</fullName>
+        <fullName>FieloPLT__MenuFieldSet</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <linkType>page</linkType>
         <masterLabel>Menu Field Set</masterLabel>
         <openType>replace</openType>
-        <page>FieloAlpha__ProgramFieldSetMenu</page>
+        <page>FieloPLT__ProgramFieldSetMenu</page>
         <protected>false</protected>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__SetDefault</fullName>
+        <fullName>FieloPLT__SetDefault</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <linkType>javascript</linkType>
@@ -1237,27 +1237,27 @@ https://www.google.com
 
 var programUpdate = [];
 
-var idProgram = &quot;{!FieloAlpha__Program__c.Id}&quot;;
-var resultProgram = sforce.connection.query(&quot;SELECT Id, {!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Default__c FROM {!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Program__c WHERE Id = \&apos;{!FieloAlpha__Program__c.Id}\&apos; &quot;);
+var idProgram = &quot;{!FieloPLT__Program__c.Id}&quot;;
+var resultProgram = sforce.connection.query(&quot;SELECT Id, {!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Default__c FROM {!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Program__c WHERE Id = \&apos;{!FieloPLT__Program__c.Id}\&apos; &quot;);
 
 var program = resultProgram.getArray(&quot;records&quot;)[0];
-program.{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Default__c = &apos;true&apos;;
+program.{!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Default__c = &apos;true&apos;;
 programUpdate.push(program);
 
-if(confirm(&apos;{!$Label.FieloAlpha__ProgramSetDefault}&apos;)){
+if(confirm(&apos;{!$Label.FieloPLT__ProgramSetDefault}&apos;)){
   result = sforce.connection.update(programUpdate);
   parent.location.href = idProgram;
 }</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__SetupExpirationMode</fullName>
+        <fullName>FieloPLT__SetupExpirationMode</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <height>600</height>
         <linkType>page</linkType>
         <masterLabel>Setup Expiration Mode</masterLabel>
         <openType>sidebar</openType>
-        <page>FieloAlpha__SettingsBackEnd</page>
+        <page>FieloPLT__SettingsBackEnd</page>
         <protected>false</protected>
     </webLinks>
 </CustomObject>

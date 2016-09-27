@@ -46,7 +46,7 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
-    <customHelpPage>FieloAlpha__BadgeHelpBackEnd</customHelpPage>
+    <customHelpPage>FieloPLT__BadgeHelpBackEnd</customHelpPage>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <description>Badges achieved by each member.</description>
@@ -60,12 +60,12 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>FieloAlpha__Badge2__c</fullName>
+        <fullName>FieloPLT__Badge2__c</fullName>
         <deleteConstraint>Restrict</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Badge</label>
-        <referenceTo>FieloAlpha__Badge__c</referenceTo>
+        <referenceTo>FieloPLT__Badge__c</referenceTo>
         <relationshipLabel>Badge Members</relationshipLabel>
         <relationshipName>BadgesMembers2</relationshipName>
         <required>true</required>
@@ -73,12 +73,12 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Member2__c</fullName>
+        <fullName>FieloPLT__Member2__c</fullName>
         <deleteConstraint>Restrict</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Member</label>
-        <referenceTo>FieloAlpha__Member__c</referenceTo>
+        <referenceTo>FieloPLT__Member__c</referenceTo>
         <relationshipLabel>Badge Members</relationshipLabel>
         <relationshipName>BadgesMembers2</relationshipName>
         <required>true</required>
@@ -86,7 +86,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Quantity__c</fullName>
+        <fullName>FieloPLT__Quantity__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Quantity</label>
@@ -98,12 +98,12 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Transaction__c</fullName>
+        <fullName>FieloPLT__Transaction__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Transaction</label>
-        <referenceTo>FieloAlpha__Transaction__c</referenceTo>
+        <referenceTo>FieloPLT__Transaction__c</referenceTo>
         <relationshipLabel>Badges Members</relationshipLabel>
         <relationshipName>Badges_Members</relationshipName>
         <required>false</required>
@@ -119,9 +119,9 @@
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
-        <fullName>FieloAlpha__ProgramConsistency</fullName>
+        <fullName>FieloPLT__ProgramConsistency</fullName>
         <active>true</active>
-        <errorConditionFormula>FieloAlpha__Member2__r.FieloAlpha__Program__c &lt;&gt; FieloAlpha__Badge2__r.FieloAlpha__Program__c</errorConditionFormula>
+        <errorConditionFormula>FieloPLT__Member2__r.FieloPLT__Program__c &lt;&gt; FieloPLT__Badge2__r.FieloPLT__Program__c</errorConditionFormula>
         <errorMessage>That segment belongs to another program. You must create the segment in this program before trying to use it.</errorMessage>
     </validationRules>
 </CustomObject>

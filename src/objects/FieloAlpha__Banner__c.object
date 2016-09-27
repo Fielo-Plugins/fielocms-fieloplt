@@ -58,7 +58,7 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
-        <fullName>FieloAlpha__BannerEdit</fullName>
+        <fullName>FieloPLT__BannerEdit</fullName>
         <description>Banner Edit</description>
         <displayedFields>
             <field>Name</field>
@@ -66,44 +66,44 @@
             <isRequired>true</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Link__c</field>
+            <field>FieloPLT__Link__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Description__c</field>
+            <field>FieloPLT__Description__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Order__c</field>
+            <field>FieloPLT__Order__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Placement__c</field>
+            <field>FieloPLT__Placement__c</field>
             <isFieldManaged>true</isFieldManaged>
             <isRequired>true</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__To__c</field>
+            <field>FieloPLT__To__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__From__c</field>
+            <field>FieloPLT__From__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__isActive__c</field>
+            <field>FieloPLT__isActive__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <label>Banner Edit</label>
     </fieldSets>
     <fields>
-        <fullName>FieloAlpha__AttachmentId__c</fullName>
+        <fullName>FieloPLT__AttachmentId__c</fullName>
         <deprecated>false</deprecated>
         <description>The ID of the attached image.</description>
         <externalId>false</externalId>
@@ -115,12 +115,12 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Category__c</fullName>
+        <fullName>FieloPLT__Category__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Category</label>
-        <referenceTo>FieloAlpha__Category__c</referenceTo>
+        <referenceTo>FieloPLT__Category__c</referenceTo>
         <relationshipLabel>Banners</relationshipLabel>
         <relationshipName>Banners</relationshipName>
         <required>false</required>
@@ -128,14 +128,14 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Component__c</fullName>
+        <fullName>FieloPLT__Component__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>The name of the component that shows the banner.</description>
         <externalId>false</externalId>
         <inlineHelpText>Choose a name for this component.</inlineHelpText>
         <label>Component</label>
-        <referenceTo>FieloAlpha__Component__c</referenceTo>
+        <referenceTo>FieloPLT__Component__c</referenceTo>
         <relationshipLabel>Banners</relationshipLabel>
         <relationshipName>Banners</relationshipName>
         <required>false</required>
@@ -143,7 +143,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Description__c</fullName>
+        <fullName>FieloPLT__Description__c</fullName>
         <deprecated>false</deprecated>
         <description>A description of the banner, for your use only.</description>
         <externalId>false</externalId>
@@ -154,12 +154,12 @@
         <type>TextArea</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Event__c</fullName>
+        <fullName>FieloPLT__Event__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Event</label>
-        <referenceTo>FieloAlpha__Event__c</referenceTo>
+        <referenceTo>FieloPLT__Event__c</referenceTo>
         <relationshipLabel>Banners</relationshipLabel>
         <relationshipName>Banners</relationshipName>
         <required>false</required>
@@ -167,7 +167,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__From__c</fullName>
+        <fullName>FieloPLT__From__c</fullName>
         <deprecated>false</deprecated>
         <description>Date from which a banner will show in the members&apos; portal.</description>
         <externalId>false</externalId>
@@ -178,7 +178,7 @@
         <type>Date</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__HasSegments__c</fullName>
+        <fullName>FieloPLT__HasSegments__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -187,11 +187,11 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Image__c</fullName>
+        <fullName>FieloPLT__Image__c</fullName>
         <deprecated>false</deprecated>
         <description>Content of the image correspondent to a banner</description>
         <externalId>false</externalId>
-        <formula>IMAGE(&quot;/servlet/servlet.FileDownload?file=&quot;+FieloAlpha__AttachmentId__c, &quot;photo&quot;,50, 50)</formula>
+        <formula>IMAGE(&quot;/servlet/servlet.FileDownload?file=&quot;+FieloPLT__AttachmentId__c, &quot;photo&quot;,50, 50)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Image</label>
         <required>false</required>
@@ -200,7 +200,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Link__c</fullName>
+        <fullName>FieloPLT__Link__c</fullName>
         <deprecated>false</deprecated>
         <description>External or internal link to which the banner will redirect.</description>
         <externalId>false</externalId>
@@ -211,7 +211,7 @@
         <type>Url</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Order__c</fullName>
+        <fullName>FieloPLT__Order__c</fullName>
         <deprecated>false</deprecated>
         <description>The order of the banners in the Slider type.</description>
         <externalId>false</externalId>
@@ -225,7 +225,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__OverlayHtml__c</fullName>
+        <fullName>FieloPLT__OverlayHtml__c</fullName>
         <deprecated>false</deprecated>
         <description>An HTML code to be rendered over the banner.</description>
         <externalId>false</externalId>
@@ -237,7 +237,7 @@
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__OverlayText__c</fullName>
+        <fullName>FieloPLT__OverlayText__c</fullName>
         <deprecated>false</deprecated>
         <description>A text to be shown over the banner.</description>
         <externalId>false</externalId>
@@ -249,7 +249,7 @@
         <visibleLines>25</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Placement__c</fullName>
+        <fullName>FieloPLT__Placement__c</fullName>
         <deprecated>false</deprecated>
         <description>Where will the banner be shown. You can select the banner to be shown among your different Fielo programs or in a mobile device.</description>
         <externalId>false</externalId>
@@ -274,12 +274,12 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Program__c</fullName>
+        <fullName>FieloPLT__Program__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Program</label>
-        <referenceTo>FieloAlpha__Program__c</referenceTo>
+        <referenceTo>FieloPLT__Program__c</referenceTo>
         <relationshipLabel>Banner</relationshipLabel>
         <relationshipName>Banner</relationshipName>
         <required>false</required>
@@ -287,13 +287,13 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RedemptionRule__c</fullName>
+        <fullName>FieloPLT__RedemptionRule__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>This field is being used to determine if a Banner has segments. When this lookup is null, it doesn&apos;t have any Segment Domain.</description>
         <externalId>false</externalId>
         <label>Segment</label>
-        <referenceTo>FieloAlpha__RedemptionRule__c</referenceTo>
+        <referenceTo>FieloPLT__RedemptionRule__c</referenceTo>
         <relationshipLabel>Banners</relationshipLabel>
         <relationshipName>Banners</relationshipName>
         <required>false</required>
@@ -301,7 +301,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__To__c</fullName>
+        <fullName>FieloPLT__To__c</fullName>
         <deprecated>false</deprecated>
         <description>Date until which the banner will show in the members&apos; portal.</description>
         <externalId>false</externalId>
@@ -312,7 +312,7 @@
         <type>Date</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__isActive__c</fullName>
+        <fullName>FieloPLT__isActive__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>Only banners marked as active will show in the members&apos; portal. You can only mark a banner as active after you have uploaded an image file.</description>
@@ -329,7 +329,7 @@
         <label>All</label>
     </listViews>
     <listViews>
-        <fullName>FieloAlpha__All_Banners</fullName>
+        <fullName>FieloPLT__All_Banners</fullName>
         <columns>NAME</columns>
         <filterScope>Everything</filterScope>
         <label>All Banners</label>
@@ -341,11 +341,11 @@
     </nameField>
     <pluralLabel>Banners</pluralLabel>
     <recordTypes>
-        <fullName>FieloAlpha__Component</fullName>
+        <fullName>FieloPLT__Component</fullName>
         <active>true</active>
         <label>Default</label>
         <picklistValues>
-            <picklist>FieloAlpha__Placement__c</picklist>
+            <picklist>FieloPLT__Placement__c</picklist>
             <values>
                 <fullName>Home Side</fullName>
                 <default>false</default>
@@ -361,11 +361,11 @@
         </picklistValues>
     </recordTypes>
     <recordTypes>
-        <fullName>FieloAlpha__Free</fullName>
+        <fullName>FieloPLT__Free</fullName>
         <active>false</active>
         <label>Free</label>
         <picklistValues>
-            <picklist>FieloAlpha__Placement__c</picklist>
+            <picklist>FieloPLT__Placement__c</picklist>
             <values>
                 <fullName>Home Side</fullName>
                 <default>false</default>
@@ -383,46 +383,46 @@
     <searchLayouts>
         <excludedStandardButtons>Accept</excludedStandardButtons>
         <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
-        <listViewButtons>FieloAlpha__OrderBanner</listViewButtons>
+        <listViewButtons>FieloPLT__OrderBanner</listViewButtons>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
-        <fullName>FieloAlpha__ActiveBanner</fullName>
+        <fullName>FieloPLT__ActiveBanner</fullName>
         <active>false</active>
-        <errorConditionFormula>( ISNULL( FieloAlpha__AttachmentId__c ) || ISBLANK( FieloAlpha__AttachmentId__c ) ) &amp;&amp; (FieloAlpha__isActive__c == true)</errorConditionFormula>
+        <errorConditionFormula>( ISNULL( FieloPLT__AttachmentId__c ) || ISBLANK( FieloPLT__AttachmentId__c ) ) &amp;&amp; (FieloPLT__isActive__c == true)</errorConditionFormula>
         <errorMessage>You must load an image to active a banner</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__EndDategreaterthanStartDate</fullName>
+        <fullName>FieloPLT__EndDategreaterthanStartDate</fullName>
         <active>true</active>
-        <errorConditionFormula>FieloAlpha__From__c &gt; FieloAlpha__To__c</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__From__c</errorDisplayField>
+        <errorConditionFormula>FieloPLT__From__c &gt; FieloPLT__To__c</errorConditionFormula>
+        <errorDisplayField>FieloPLT__From__c</errorDisplayField>
         <errorMessage>To Date must be greater than From Date</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__ModifyProgram</fullName>
+        <fullName>FieloPLT__ModifyProgram</fullName>
         <active>true</active>
         <description>Is not possible to modify the associated Program</description>
-        <errorConditionFormula>ISCHANGED(FieloAlpha__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloAlpha__Program__c)))</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__Program__c</errorDisplayField>
+        <errorConditionFormula>ISCHANGED(FieloPLT__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloPLT__Program__c)))</errorConditionFormula>
+        <errorDisplayField>FieloPLT__Program__c</errorDisplayField>
         <errorMessage>Is not possible to modify the associated Program</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__Name_Required</fullName>
+        <fullName>FieloPLT__Name_Required</fullName>
         <active>true</active>
         <errorConditionFormula>OR( ISNULL(Name) ,  ISBLANK(Name) )</errorConditionFormula>
         <errorDisplayField>Name</errorDisplayField>
         <errorMessage>Name Required</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__Order_can_not_be_negative</fullName>
+        <fullName>FieloPLT__Order_can_not_be_negative</fullName>
         <active>true</active>
-        <errorConditionFormula>FieloAlpha__Order__c &lt; 0</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__Order__c</errorDisplayField>
+        <errorConditionFormula>FieloPLT__Order__c &lt; 0</errorConditionFormula>
+        <errorDisplayField>FieloPLT__Order__c</errorDisplayField>
         <errorMessage>The order can not be negative</errorMessage>
     </validationRules>
     <webLinks>
-        <fullName>FieloAlpha__ActiveInactive</fullName>
+        <fullName>FieloPLT__ActiveInactive</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <linkType>javascript</linkType>
@@ -433,13 +433,13 @@
 
 var bannerUpdate = [];
 
-var resultBanner = sforce.connection.query(&quot;SELECT Id, {!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}isActive__c FROM {!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Banner__c WHERE Id = \&apos;{!FieloAlpha__Banner__c.Id}\&apos; &quot;);
+var resultBanner = sforce.connection.query(&quot;SELECT Id, {!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}isActive__c FROM {!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Banner__c WHERE Id = \&apos;{!FieloPLT__Banner__c.Id}\&apos; &quot;);
 
 var banner = resultBanner.getArray(&quot;records&quot;)[0];
-if(banner.{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}isActive__c == &apos;true&apos;){
-    banner.{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}isActive__c = &apos;false&apos;;
+if(banner.{!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}isActive__c == &apos;true&apos;){
+    banner.{!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}isActive__c = &apos;false&apos;;
 }else{
-    banner.{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}isActive__c = &apos;true&apos;;
+    banner.{!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}isActive__c = &apos;true&apos;;
 }
 bannerUpdate.push(banner);
 
@@ -448,10 +448,10 @@ result = sforce.connection.update(bannerUpdate);
 if(result.toString().indexOf(&quot;errors:&quot;) != -1){
     alert(result[0].errors.message);
 }
-parent.location.href = &apos;{!FieloAlpha__Banner__c.Id}&apos;;</url>
+parent.location.href = &apos;{!FieloPLT__Banner__c.Id}&apos;;</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__NewBanner</fullName>
+        <fullName>FieloPLT__NewBanner</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
         <linkType>javascript</linkType>
@@ -462,7 +462,7 @@ parent.location.href = &apos;{!FieloAlpha__Banner__c.Id}&apos;;</url>
         <url>true</url>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__OrderBanner</fullName>
+        <fullName>FieloPLT__OrderBanner</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -471,6 +471,6 @@ parent.location.href = &apos;{!FieloAlpha__Banner__c.Id}&apos;;</url>
         <openType>replace</openType>
         <protected>false</protected>
         <requireRowSelection>true</requireRowSelection>
-        <url>{!IF( ISNULL(FieloAlpha__Component__c.Id)||  ISBLANK(FieloAlpha__Component__c.Id)  , URLFOR(&quot;/apex/&quot; + $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &quot;BannerOrderBackEnd&quot;), URLFOR(&quot;/apex/&quot; +  $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &quot;BannerOrderBackEnd&quot;, null, [&apos;id&apos; = FieloAlpha__Component__c.Id]))}</url>
+        <url>{!IF( ISNULL(FieloPLT__Component__c.Id)||  ISBLANK(FieloPLT__Component__c.Id)  , URLFOR(&quot;/apex/&quot; + $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &quot;BannerOrderBackEnd&quot;), URLFOR(&quot;/apex/&quot; +  $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &quot;BannerOrderBackEnd&quot;, null, [&apos;id&apos; = FieloPLT__Component__c.Id]))}</url>
     </webLinks>
 </CustomObject>

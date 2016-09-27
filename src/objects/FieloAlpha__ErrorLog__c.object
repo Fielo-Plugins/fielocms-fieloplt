@@ -59,7 +59,7 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>FieloAlpha__LineNumber__c</fullName>
+        <fullName>FieloPLT__LineNumber__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Line Number</label>
@@ -71,7 +71,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Message__c</fullName>
+        <fullName>FieloPLT__Message__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Message</label>
@@ -81,7 +81,7 @@
         <visibleLines>5</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__StackTrace__c</fullName>
+        <fullName>FieloPLT__StackTrace__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Stack Trace</label>
@@ -91,7 +91,7 @@
         <visibleLines>5</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Type__c</fullName>
+        <fullName>FieloPLT__Type__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Type</label>
@@ -100,7 +100,7 @@
         <type>TextArea</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__UserId__c</fullName>
+        <fullName>FieloPLT__UserId__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>User Id</label>
@@ -112,9 +112,9 @@
     </fields>
     <label>Error Log</label>
     <listViews>
-        <fullName>FieloAlpha__All_Error_Logs</fullName>
+        <fullName>FieloPLT__All_Error_Logs</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Message__c</columns>
+        <columns>FieloPLT__Message__c</columns>
         <columns>CREATED_DATE</columns>
         <filterScope>Everything</filterScope>
         <label>All Error Logs</label>

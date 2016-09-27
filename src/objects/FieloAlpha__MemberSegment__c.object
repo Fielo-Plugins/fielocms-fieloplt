@@ -57,12 +57,12 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>FieloAlpha__Member2__c</fullName>
+        <fullName>FieloPLT__Member2__c</fullName>
         <deleteConstraint>Restrict</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Member</label>
-        <referenceTo>FieloAlpha__Member__c</referenceTo>
+        <referenceTo>FieloPLT__Member__c</referenceTo>
         <relationshipLabel>Segments</relationshipLabel>
         <relationshipName>MemberSegments2</relationshipName>
         <required>true</required>
@@ -70,7 +70,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__MemberSegmentCombination__c</fullName>
+        <fullName>FieloPLT__MemberSegmentCombination__c</fullName>
         <caseSensitive>false</caseSensitive>
         <deprecated>false</deprecated>
         <description>This field is for internal use. It will contain the Id of the Member and the Id of the Segment concatenated. This field is unique, so you can not relate the same Member manually twice with a Segment.</description>
@@ -83,7 +83,7 @@
         <unique>true</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Segment2__c</fullName>
+        <fullName>FieloPLT__Segment2__c</fullName>
         <deleteConstraint>Restrict</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -91,13 +91,13 @@
         <lookupFilter>
             <active>true</active>
             <filterItems>
-                <field>FieloAlpha__RedemptionRule__c.RecordType.DeveloperName</field>
+                <field>FieloPLT__RedemptionRule__c.RecordType.DeveloperName</field>
                 <operation>equals</operation>
                 <value>Manual</value>
             </filterItems>
             <isOptional>false</isOptional>
         </lookupFilter>
-        <referenceTo>FieloAlpha__RedemptionRule__c</referenceTo>
+        <referenceTo>FieloPLT__RedemptionRule__c</referenceTo>
         <relationshipLabel>Members</relationshipLabel>
         <relationshipName>MemberSegments2</relationshipName>
         <required>true</required>
@@ -114,9 +114,9 @@
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
-        <fullName>FieloAlpha__ProgramConsistency</fullName>
+        <fullName>FieloPLT__ProgramConsistency</fullName>
         <active>true</active>
-        <errorConditionFormula>FieloAlpha__Member2__r.FieloAlpha__Program__c  &lt;&gt;  FieloAlpha__Segment2__r.FieloAlpha__Program__c</errorConditionFormula>
+        <errorConditionFormula>FieloPLT__Member2__r.FieloPLT__Program__c  &lt;&gt;  FieloPLT__Segment2__r.FieloPLT__Program__c</errorConditionFormula>
         <errorMessage>That segment belongs to another program. You must create the segment in this program before trying to use it.</errorMessage>
     </validationRules>
 </CustomObject>

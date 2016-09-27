@@ -46,7 +46,7 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
-    <customHelpPage>FieloAlpha__NewsHelpBackEnd</customHelpPage>
+    <customHelpPage>FieloPLT__NewsHelpBackEnd</customHelpPage>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <description>Content that is shown in the members’ portal by using a “Content feed” component. Its main use is for publishing news.</description>
@@ -60,14 +60,14 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
-        <fullName>FieloAlpha__ListView</fullName>
+        <fullName>FieloPLT__ListView</fullName>
         <availableFields>
-            <field>FieloAlpha__AttachmentId__c</field>
+            <field>FieloPLT__AttachmentId__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Body__c</field>
+            <field>FieloPLT__Body__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -87,7 +87,7 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__IsActive__c</field>
+            <field>FieloPLT__IsActive__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -117,7 +117,7 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__PublishDate__c</field>
+            <field>FieloPLT__PublishDate__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -127,32 +127,32 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Type__c</field>
+            <field>FieloPLT__Type__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <description>news component</description>
         <displayedFields>
-            <field>FieloAlpha__Title__c</field>
+            <field>FieloPLT__Title__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <label>List View</label>
     </fieldSets>
     <fieldSets>
-        <fullName>FieloAlpha__ListViewDetail</fullName>
+        <fullName>FieloPLT__ListViewDetail</fullName>
         <availableFields>
-            <field>FieloAlpha__AttachmentId__c</field>
+            <field>FieloPLT__AttachmentId__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Body__c</field>
+            <field>FieloPLT__Body__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Component__c</field>
+            <field>FieloPLT__Component__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -167,7 +167,7 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__ExternalLink__c</field>
+            <field>FieloPLT__ExternalLink__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -177,7 +177,7 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__IsActive__c</field>
+            <field>FieloPLT__IsActive__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -202,7 +202,7 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Order__c</field>
+            <field>FieloPLT__Order__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -212,17 +212,17 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__PublishDate__c</field>
+            <field>FieloPLT__PublishDate__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__QuantityComments__c</field>
+            <field>FieloPLT__QuantityComments__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__QuantityLikes__c</field>
+            <field>FieloPLT__QuantityLikes__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -232,27 +232,27 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Type__c</field>
+            <field>FieloPLT__Type__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <description>It use in list of news on the frontend</description>
         <displayedFields>
-            <field>FieloAlpha__Title__c</field>
+            <field>FieloPLT__Title__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__ExtractText__c</field>
+            <field>FieloPLT__ExtractText__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <label>ListViewDetail</label>
     </fieldSets>
     <fieldSets>
-        <fullName>FieloAlpha__View</fullName>
+        <fullName>FieloPLT__View</fullName>
         <availableFields>
-            <field>FieloAlpha__AttachmentId__c</field>
+            <field>FieloPLT__AttachmentId__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -272,7 +272,7 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__IsActive__c</field>
+            <field>FieloPLT__IsActive__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -297,30 +297,30 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__PublishDate__c</field>
+            <field>FieloPLT__PublishDate__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>FieloAlpha__Type__c</field>
+            <field>FieloPLT__Type__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <description>Component</description>
         <displayedFields>
-            <field>FieloAlpha__Title__c</field>
+            <field>FieloPLT__Title__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Body__c</field>
+            <field>FieloPLT__Body__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <label>View</label>
     </fieldSets>
     <fields>
-        <fullName>FieloAlpha__AttachmentId__c</fullName>
+        <fullName>FieloPLT__AttachmentId__c</fullName>
         <deprecated>false</deprecated>
         <description>ID of an image file that can be added to this content feed.</description>
         <externalId>false</externalId>
@@ -332,7 +332,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Body__c</fullName>
+        <fullName>FieloPLT__Body__c</fullName>
         <deprecated>false</deprecated>
         <description>Content of the news</description>
         <externalId>false</externalId>
@@ -344,7 +344,7 @@
         <visibleLines>25</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__CategoryItem__c</fullName>
+        <fullName>FieloPLT__CategoryItem__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -353,13 +353,13 @@
             <active>true</active>
             <errorMessage>That category belongs to another program. You must create the category in this program before trying to use it.</errorMessage>
             <filterItems>
-                <field>$Source.FieloAlpha__Program__c</field>
+                <field>$Source.FieloPLT__Program__c</field>
                 <operation>equals</operation>
-                <valueField>FieloAlpha__Category__c.FieloAlpha__Program__c</valueField>
+                <valueField>FieloPLT__Category__c.FieloPLT__Program__c</valueField>
             </filterItems>
             <isOptional>false</isOptional>
         </lookupFilter>
-        <referenceTo>FieloAlpha__Category__c</referenceTo>
+        <referenceTo>FieloPLT__Category__c</referenceTo>
         <relationshipLabel>Content feeds</relationshipLabel>
         <relationshipName>Content_feeds</relationshipName>
         <required>false</required>
@@ -367,21 +367,21 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Component__c</fullName>
+        <fullName>FieloPLT__Component__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>The component through which this content feed will be showed.</description>
         <externalId>false</externalId>
         <inlineHelpText>Enter the component that will show this content feed.</inlineHelpText>
         <label>Component</label>
-        <referenceTo>FieloAlpha__Component__c</referenceTo>
+        <referenceTo>FieloPLT__Component__c</referenceTo>
         <relationshipName>News</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ExternalLink__c</fullName>
+        <fullName>FieloPLT__ExternalLink__c</fullName>
         <deprecated>false</deprecated>
         <description>The URL to which this content feed will redirect when clicked.</description>
         <externalId>false</externalId>
@@ -392,7 +392,7 @@
         <type>Url</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ExternalName__c</fullName>
+        <fullName>FieloPLT__ExternalName__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>External Name</label>
@@ -403,7 +403,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__ExtractText__c</fullName>
+        <fullName>FieloPLT__ExtractText__c</fullName>
         <deprecated>false</deprecated>
         <description>A short description of the content feed.</description>
         <externalId>false</externalId>
@@ -414,7 +414,7 @@
         <type>TextArea</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__HasSegments__c</fullName>
+        <fullName>FieloPLT__HasSegments__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -423,10 +423,10 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Image__c</fullName>
+        <fullName>FieloPLT__Image__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>&quot;&lt;img src=\&quot; servlet/servlet.FileDownload?file=&quot; &amp; FieloAlpha__AttachmentId__c &amp; &quot;\&quot;/&gt;&quot;</formula>
+        <formula>&quot;&lt;img src=\&quot; servlet/servlet.FileDownload?file=&quot; &amp; FieloPLT__AttachmentId__c &amp; &quot;\&quot;/&gt;&quot;</formula>
         <inlineHelpText>Enter the ID of the image file to be added to this content feed.</inlineHelpText>
         <label>Image</label>
         <required>false</required>
@@ -435,7 +435,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__IsActive__c</fullName>
+        <fullName>FieloPLT__IsActive__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>Checking this option will make this content feed active and it will show in the members&apos; portal.</description>
@@ -445,7 +445,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Order__c</fullName>
+        <fullName>FieloPLT__Order__c</fullName>
         <deprecated>false</deprecated>
         <description>The relative position of this content feed.</description>
         <externalId>false</externalId>
@@ -459,13 +459,13 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Program__c</fullName>
+        <fullName>FieloPLT__Program__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>Select the program to which the content feed belongs</inlineHelpText>
         <label>Program</label>
-        <referenceTo>FieloAlpha__Program__c</referenceTo>
+        <referenceTo>FieloPLT__Program__c</referenceTo>
         <relationshipLabel>Content feeds</relationshipLabel>
         <relationshipName>ContentFeeds</relationshipName>
         <required>false</required>
@@ -473,7 +473,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__PublishDate__c</fullName>
+        <fullName>FieloPLT__PublishDate__c</fullName>
         <deprecated>false</deprecated>
         <description>The date from which this content feed will show in the members&apos; portal.</description>
         <externalId>false</externalId>
@@ -484,7 +484,7 @@
         <type>Date</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__QuantityComments__c</fullName>
+        <fullName>FieloPLT__QuantityComments__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
         <description>The number cf comments for this content feed.</description>
@@ -499,7 +499,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__QuantityLikes__c</fullName>
+        <fullName>FieloPLT__QuantityLikes__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -513,20 +513,20 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__RedemptionRule__c</fullName>
+        <fullName>FieloPLT__RedemptionRule__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>Deprecated Field</description>
         <externalId>false</externalId>
         <label>zz_deprecated_Profiling</label>
-        <referenceTo>FieloAlpha__RedemptionRule__c</referenceTo>
+        <referenceTo>FieloPLT__RedemptionRule__c</referenceTo>
         <relationshipName>News</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Title__c</fullName>
+        <fullName>FieloPLT__Title__c</fullName>
         <deprecated>false</deprecated>
         <description>The title that will show on top of this content feed.</description>
         <externalId>false</externalId>
@@ -539,7 +539,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Type__c</fullName>
+        <fullName>FieloPLT__Type__c</fullName>
         <deprecated>false</deprecated>
         <description>The type to which this content feed belongs.</description>
         <externalId>false</externalId>
@@ -570,24 +570,24 @@
         <label>All</label>
     </listViews>
     <listViews>
-        <fullName>FieloAlpha__All</fullName>
+        <fullName>FieloPLT__All</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Title__c</columns>
-        <columns>FieloAlpha__Type__c</columns>
-        <columns>FieloAlpha__PublishDate__c</columns>
-        <columns>FieloAlpha__IsActive__c</columns>
+        <columns>FieloPLT__Title__c</columns>
+        <columns>FieloPLT__Type__c</columns>
+        <columns>FieloPLT__PublishDate__c</columns>
+        <columns>FieloPLT__IsActive__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
         <language>en_US</language>
     </listViews>
     <listViews>
-        <fullName>FieloAlpha__All_Content_feeds</fullName>
+        <fullName>FieloPLT__All_Content_feeds</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Title__c</columns>
-        <columns>FieloAlpha__Component__c</columns>
-        <columns>FieloAlpha__Type__c</columns>
-        <columns>FieloAlpha__PublishDate__c</columns>
-        <columns>FieloAlpha__IsActive__c</columns>
+        <columns>FieloPLT__Title__c</columns>
+        <columns>FieloPLT__Component__c</columns>
+        <columns>FieloPLT__Type__c</columns>
+        <columns>FieloPLT__PublishDate__c</columns>
+        <columns>FieloPLT__IsActive__c</columns>
         <columns>CREATED_DATE</columns>
         <filterScope>Everything</filterScope>
         <label>All Content feeds</label>
@@ -604,26 +604,26 @@
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
-        <fullName>FieloAlpha__ModifyProgram</fullName>
+        <fullName>FieloPLT__ModifyProgram</fullName>
         <active>true</active>
         <description>Is not possible to modify the associated Program</description>
-        <errorConditionFormula>ISCHANGED(FieloAlpha__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloAlpha__Program__c)))</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__Program__c</errorDisplayField>
+        <errorConditionFormula>ISCHANGED(FieloPLT__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloPLT__Program__c)))</errorConditionFormula>
+        <errorDisplayField>FieloPLT__Program__c</errorDisplayField>
         <errorMessage>Is not possible to modify the associated Program</errorMessage>
     </validationRules>
     <webLinks>
-        <fullName>FieloAlpha__EditContent</fullName>
+        <fullName>FieloPLT__EditContent</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <height>600</height>
         <linkType>page</linkType>
         <masterLabel>Edit Content</masterLabel>
         <openType>sidebar</openType>
-        <page>FieloAlpha__NewsEditContent</page>
+        <page>FieloPLT__NewsEditContent</page>
         <protected>false</protected>
     </webLinks>
     <webLinks>
-        <fullName>FieloAlpha__ReorderContentFeeds</fullName>
+        <fullName>FieloPLT__ReorderContentFeeds</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -633,6 +633,6 @@
         <openType>sidebar</openType>
         <protected>false</protected>
         <requireRowSelection>false</requireRowSelection>
-        <url>/apex/{!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}NewsReorderBackEnd?idComponent={!FieloAlpha__Component__c.Id}</url>
+        <url>/apex/{!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}NewsReorderBackEnd?idComponent={!FieloPLT__Component__c.Id}</url>
     </webLinks>
 </CustomObject>

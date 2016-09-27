@@ -66,16 +66,16 @@ global with sharing class HandleInvitationsMembersController implements FieloCMS
 
     private static void resendInvitations(Set<Id> memberIds){
         Set<Id> programIds = new Set<Id>();
-        List<FieloAlpha__Member__c> members = new MembersSelector().selectById(memberIds);
-        for(FieloAlpha__Member__c member : members){
-            programIds.add(member.FieloAlpha__Program__c);
+        List<FieloPLT__Member__c> members = new MembersSelector().selectById(memberIds);
+        for(FieloPLT__Member__c member : members){
+            programIds.add(member.FieloPLT__Program__c);
         }
-        Map<Id, FieloAlpha__Program__c> programsMap = new Map<Id, FieloAlpha__Program__c>([SELECT FieloAlpha__SiteUrl__c, FieloAlpha__RegisterPage__c FROM FieloAlpha__Program__c WHERE Id in : programIds]);
-        SObjectUnitOfWork uow = new SObjectUnitOfWork(new List<Schema.SobjectType>{FieloAlpha__Email__c.SObjectType});
-        for(FieloAlpha__Member__c member : members){
-            String recipientName = member.FieloAlpha__FirstName__c + ' ' + member.FieloAlpha__LastName__c;
-            String url = programsMap.get(member.FieloAlpha__Program__c).FieloAlpha__SiteUrl__c + 'FieloAlpha__Page?memberId=' + member.Id + '&pageId=' + programsMap.get(member.FieloAlpha__Program__c).FieloAlpha__RegisterPage__c;
-            uow.registerNew( new FieloAlpha__Email__c(FieloAlpha__Email__c = member.FieloAlpha__Email__c, FieloAlpha__Type__c = 'Register', FieloAlpha__Member__c = member.Id, FieloAlpha__Program__c = member.FieloAlpha__Program__c, FieloAlpha__Link__c = url, FieloAlpha__RecipientName__c = recipientName) );
+        Map<Id, FieloPLT__Program__c> programsMap = new Map<Id, FieloPLT__Program__c>([SELECT FieloPLT__SiteUrl__c, FieloPLT__RegisterPage__c FROM FieloPLT__Program__c WHERE Id in : programIds]);
+        SObjectUnitOfWork uow = new SObjectUnitOfWork(new List<Schema.SobjectType>{FieloPLT__Email__c.SObjectType});
+        for(FieloPLT__Member__c member : members){
+            String recipientName = member.FieloPLT__FirstName__c + ' ' + member.FieloPLT__LastName__c;
+            String url = programsMap.get(member.FieloPLT__Program__c).FieloPLT__SiteUrl__c + 'FieloPLT__Page?memberId=' + member.Id + '&pageId=' + programsMap.get(member.FieloPLT__Program__c).FieloPLT__RegisterPage__c;
+            uow.registerNew( new FieloPLT__Email__c(FieloPLT__Email__c = member.FieloPLT__Email__c, FieloPLT__Type__c = 'Register', FieloPLT__Member__c = member.Id, FieloPLT__Program__c = member.FieloPLT__Program__c, FieloPLT__Link__c = url, FieloPLT__RecipientName__c = recipientName) );
         }
 
         uow.commitWork();
@@ -83,13 +83,13 @@ global with sharing class HandleInvitationsMembersController implements FieloCMS
 
     public static void cancelInvitations(Set<Id> memberIds){        
         Boolean doCommit = false;
-        SObjectUnitOfWork uow = new SObjectUnitOfWork(new List<Schema.SobjectType>{FieloAlpha__Member__c.SObjectType});                
-        for(FieloAlpha__Member__c member : new MembersSelector( new Set<String>{'RecordType.DeveloperName', 'FieloAlpha__OrganizationAccount__r.FieloAlpha__Blocked__c'} ).selectById(memberIds)){
-            if(!member.FieloAlpha__OrganizationAccount__r.FieloAlpha__Blocked__c){
+        SObjectUnitOfWork uow = new SObjectUnitOfWork(new List<Schema.SobjectType>{FieloPLT__Member__c.SObjectType});                
+        for(FieloPLT__Member__c member : new MembersSelector( new Set<String>{'RecordType.DeveloperName', 'FieloPLT__OrganizationAccount__r.FieloPLT__Blocked__c'} ).selectById(memberIds)){
+            if(!member.FieloPLT__OrganizationAccount__r.FieloPLT__Blocked__c){
                 if(member.RecordType.DeveloperName != 'OrganizationContributor'){
                     throw new FieloCustomException(Label.ErrorOrganizationAccountAction);
                 } else {
-                    if(member.FieloAlpha__FieloAccountStatus__c == 'New'){
+                    if(member.FieloPLT__FieloAccountStatus__c == 'New'){
                         uow.registerDeleted(member);
                         doCommit = true;
                     } else {

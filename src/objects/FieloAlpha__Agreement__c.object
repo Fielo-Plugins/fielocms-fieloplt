@@ -46,7 +46,7 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
-    <customHelpPage>FieloAlpha__AgreementHelpBackEnd</customHelpPage>
+    <customHelpPage>FieloPLT__AgreementHelpBackEnd</customHelpPage>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
@@ -58,7 +58,7 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
-        <fullName>FieloAlpha__Agreements</fullName>
+        <fullName>FieloPLT__Agreements</fullName>
         <availableFields>
             <field>IsDeleted</field>
             <isFieldManaged>false</isFieldManaged>
@@ -71,19 +71,19 @@
         </availableFields>
         <description>Agreement Edit Back End</description>
         <displayedFields>
-            <field>FieloAlpha__Program__c</field>
+            <field>FieloPLT__Program__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Agreement__c</field>
+            <field>FieloPLT__Agreement__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <label>Agreement Back End</label>
     </fieldSets>
     <fields>
-        <fullName>FieloAlpha__Agreement__c</fullName>
+        <fullName>FieloPLT__Agreement__c</fullName>
         <deprecated>false</deprecated>
         <description>Name of the agreement</description>
         <externalId>false</externalId>
@@ -96,14 +96,14 @@
         <visibleLines>25</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Program__c</fullName>
+        <fullName>FieloPLT__Program__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>The program to which this agreement belongs.</description>
         <externalId>false</externalId>
         <inlineHelpText>Select the program to which this agreement belongs.</inlineHelpText>
         <label>Program</label>
-        <referenceTo>FieloAlpha__Program__c</referenceTo>
+        <referenceTo>FieloPLT__Program__c</referenceTo>
         <relationshipLabel>Agreements</relationshipLabel>
         <relationshipName>Agreements</relationshipName>
         <required>false</required>
@@ -112,7 +112,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Status__c</fullName>
+        <fullName>FieloPLT__Status__c</fullName>
         <deprecated>false</deprecated>
         <description>This field allow to follow the lifecycle of an agreement:
 Draft: user is writting the next release
@@ -143,11 +143,11 @@ Remember that if &quot;Use Agreement&quot; is unchecked for the corresponding pr
     </fields>
     <label>Agreement</label>
     <listViews>
-        <fullName>FieloAlpha__All_Agreements</fullName>
+        <fullName>FieloPLT__All_Agreements</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Program__c</columns>
-        <columns>FieloAlpha__Agreement__c</columns>
-        <columns>FieloAlpha__Status__c</columns>
+        <columns>FieloPLT__Program__c</columns>
+        <columns>FieloPLT__Agreement__c</columns>
+        <columns>FieloPLT__Status__c</columns>
         <columns>CREATEDBY_USER</columns>
         <columns>UPDATEDBY_USER</columns>
         <filterScope>Everything</filterScope>
@@ -163,11 +163,11 @@ Remember that if &quot;Use Agreement&quot; is unchecked for the corresponding pr
     <pluralLabel>Agreements</pluralLabel>
     <recordTypeTrackHistory>false</recordTypeTrackHistory>
     <recordTypes>
-        <fullName>FieloAlpha__Default</fullName>
+        <fullName>FieloPLT__Default</fullName>
         <active>true</active>
         <label>Default</label>
         <picklistValues>
-            <picklist>FieloAlpha__Status__c</picklist>
+            <picklist>FieloPLT__Status__c</picklist>
             <values>
                 <fullName>Draft</fullName>
                 <default>true</default>
@@ -175,11 +175,11 @@ Remember that if &quot;Use Agreement&quot; is unchecked for the corresponding pr
         </picklistValues>
     </recordTypes>
     <recordTypes>
-        <fullName>FieloAlpha__Draft</fullName>
+        <fullName>FieloPLT__Draft</fullName>
         <active>true</active>
         <label>Draft</label>
         <picklistValues>
-            <picklist>FieloAlpha__Status__c</picklist>
+            <picklist>FieloPLT__Status__c</picklist>
             <values>
                 <fullName>Draft</fullName>
                 <default>true</default>
@@ -187,23 +187,23 @@ Remember that if &quot;Use Agreement&quot; is unchecked for the corresponding pr
         </picklistValues>
     </recordTypes>
     <searchLayouts>
-        <customTabListAdditionalFields>FieloAlpha__Agreement__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>FieloAlpha__Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__Agreement__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__Status__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
         <customTabListAdditionalFields>UPDATEDBY_USER</customTabListAdditionalFields>
         <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
-        <fullName>FieloAlpha__ModifyProgram</fullName>
+        <fullName>FieloPLT__ModifyProgram</fullName>
         <active>true</active>
         <description>Is not possible to modify the associated Program</description>
-        <errorConditionFormula>ISCHANGED(FieloAlpha__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloAlpha__Program__c)))</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__Program__c</errorDisplayField>
+        <errorConditionFormula>ISCHANGED(FieloPLT__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloPLT__Program__c)))</errorConditionFormula>
+        <errorDisplayField>FieloPLT__Program__c</errorDisplayField>
         <errorMessage>Is not possible to modify the associated Program</errorMessage>
     </validationRules>
     <webLinks>
-        <fullName>FieloAlpha__Active</fullName>
+        <fullName>FieloPLT__Active</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <linkType>javascript</linkType>
@@ -215,11 +215,11 @@ Remember that if &quot;Use Agreement&quot; is unchecked for the corresponding pr
 var url = parent.location.href;
 var agreementUpdate = [];
 
-var idAgreement= &quot;{!FieloAlpha__Agreement__c.Id}&quot;;
-var resultAgreement = sforce.connection.query(&quot;SELECT Id, {!IF(!isBLank($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Status__c FROM {!IF(!ISBLANK($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Agreement__c WHERE Id = \&apos;{!FieloAlpha__Agreement__c.Id}\&apos; &quot;);
+var idAgreement= &quot;{!FieloPLT__Agreement__c.Id}&quot;;
+var resultAgreement = sforce.connection.query(&quot;SELECT Id, {!IF(!isBLank($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Status__c FROM {!IF(!ISBLANK($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Agreement__c WHERE Id = \&apos;{!FieloPLT__Agreement__c.Id}\&apos; &quot;);
 
 var agreement = resultAgreement.getArray(&quot;records&quot;)[0];
-agreement.{!IF(!isBLank($Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c), $Setup.FieloAlpha__PublicSettings__c.FieloAlpha__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Status__c = &apos;Current&apos;;
+agreement.{!IF(!isBLank($Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c), $Setup.FieloPLT__PublicSettings__c.FieloPLT__PackagePrefix__c + &apos;__&apos;,&apos;&apos;)}Status__c = &apos;Current&apos;;
 agreementUpdate.push(agreement);
 result = sforce.connection.update(agreementUpdate);
 

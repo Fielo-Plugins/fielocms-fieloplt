@@ -58,7 +58,7 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>FieloAlpha__BooleanValue__c</fullName>
+        <fullName>FieloPLT__BooleanValue__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -68,7 +68,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__DateValue__c</fullName>
+        <fullName>FieloPLT__DateValue__c</fullName>
         <deprecated>false</deprecated>
         <description>Date when level criteria will be valid.</description>
         <externalId>false</externalId>
@@ -79,7 +79,7 @@
         <type>Date</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__FieldName__c</fullName>
+        <fullName>FieloPLT__FieldName__c</fullName>
         <deprecated>false</deprecated>
         <description>In order to make a rule, it is necessary to choose fields to make a logical structure.</description>
         <externalId>false</externalId>
@@ -92,7 +92,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__FieldType__c</fullName>
+        <fullName>FieloPLT__FieldType__c</fullName>
         <deprecated>false</deprecated>
         <description>Type of field selected.</description>
         <externalId>false</externalId>
@@ -121,12 +121,12 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Level__c</fullName>
+        <fullName>FieloPLT__Level__c</fullName>
         <deprecated>false</deprecated>
         <description>Level for the rule.</description>
         <externalId>false</externalId>
         <label>Level</label>
-        <referenceTo>FieloAlpha__Level__c</referenceTo>
+        <referenceTo>FieloPLT__Level__c</referenceTo>
         <relationshipLabel>Level Criterias</relationshipLabel>
         <relationshipName>LevelCriterias</relationshipName>
         <relationshipOrder>0</relationshipOrder>
@@ -137,11 +137,11 @@
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Name__c</fullName>
+        <fullName>FieloPLT__Name__c</fullName>
         <deprecated>false</deprecated>
         <description>Name of the level.</description>
         <externalId>false</externalId>
-        <formula>HYPERLINK(&apos;/&apos; + Id, FieloAlpha__FieldName__c + &apos; &apos; + Text(FieloAlpha__Operator__c ) + &apos; &apos; + FieloAlpha__Values__c )</formula>
+        <formula>HYPERLINK(&apos;/&apos; + Id, FieloPLT__FieldName__c + &apos; &apos; + Text(FieloPLT__Operator__c ) + &apos; &apos; + FieloPLT__Values__c )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <inlineHelpText>Enter a name for this level.</inlineHelpText>
         <label>Name</label>
@@ -152,7 +152,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__NumberValue__c</fullName>
+        <fullName>FieloPLT__NumberValue__c</fullName>
         <deprecated>false</deprecated>
         <description>Numerical value.</description>
         <externalId>false</externalId>
@@ -166,7 +166,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Operator__c</fullName>
+        <fullName>FieloPLT__Operator__c</fullName>
         <deprecated>false</deprecated>
         <description>Each value of this picklist allows to make a logical structure with fields selected.</description>
         <externalId>false</externalId>
@@ -211,7 +211,7 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Values__c</fullName>
+        <fullName>FieloPLT__Values__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Values</label>

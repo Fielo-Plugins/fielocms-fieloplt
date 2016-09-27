@@ -59,7 +59,7 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>FieloAlpha__AttachmentId__c</fullName>
+        <fullName>FieloPLT__AttachmentId__c</fullName>
         <deprecated>false</deprecated>
         <description>Image of the Tag</description>
         <externalId>false</externalId>
@@ -72,7 +72,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Filter__c</fullName>
+        <fullName>FieloPLT__Filter__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Filter</label>
@@ -96,17 +96,17 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Image__c</fullName>
+        <fullName>FieloPLT__Image__c</fullName>
         <deprecated>false</deprecated>
         <description>Link to the phisical attachment</description>
         <externalId>false</externalId>
         <formula>IF( 
     AND( 
-        NOT( ISNULL(FieloAlpha__AttachmentId__c) )
-        , NOT( ISBLANK(FieloAlpha__AttachmentId__c) ) 
+        NOT( ISNULL(FieloPLT__AttachmentId__c) )
+        , NOT( ISBLANK(FieloPLT__AttachmentId__c) ) 
     ) ,
       IMAGE(
-            IF( CONTAINS(FieloAlpha__AttachmentId__c, &apos;&amp;LastModifiedDate&apos;), LEFT(FieloAlpha__AttachmentId__c, FIND(&apos;&amp;LastModifiedDate&apos;, FieloAlpha__AttachmentId__c)), FieloAlpha__AttachmentId__c)
+            IF( CONTAINS(FieloPLT__AttachmentId__c, &apos;&amp;LastModifiedDate&apos;), LEFT(FieloPLT__AttachmentId__c, FIND(&apos;&amp;LastModifiedDate&apos;, FieloPLT__AttachmentId__c)), FieloPLT__AttachmentId__c)
             ,&quot;photo&quot;,50, 50),
     &apos;&apos;)</formula>
         <label>Image</label>
@@ -117,7 +117,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Order__c</fullName>
+        <fullName>FieloPLT__Order__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Order</label>
@@ -130,13 +130,13 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Program__c</fullName>
+        <fullName>FieloPLT__Program__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>Select the program to which the tag belongs</inlineHelpText>
         <label>Program</label>
-        <referenceTo>FieloAlpha__Program__c</referenceTo>
+        <referenceTo>FieloPLT__Program__c</referenceTo>
         <relationshipLabel>Tags</relationshipLabel>
         <relationshipName>Tags</relationshipName>
         <required>false</required>
@@ -145,12 +145,12 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Tag__c</fullName>
+        <fullName>FieloPLT__Tag__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Tag</label>
-        <referenceTo>FieloAlpha__Tag__c</referenceTo>
+        <referenceTo>FieloPLT__Tag__c</referenceTo>
         <relationshipLabel>Tags</relationshipLabel>
         <relationshipName>Tags</relationshipName>
         <required>false</required>
@@ -159,12 +159,12 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__TotalRewards__c</fullName>
+        <fullName>FieloPLT__TotalRewards__c</fullName>
         <deprecated>false</deprecated>
         <description>Quantity of rewards with this tag</description>
         <externalId>false</externalId>
         <label>Total Rewards</label>
-        <summaryForeignKey>FieloAlpha__RewardTag__c.FieloAlpha__Tag__c</summaryForeignKey>
+        <summaryForeignKey>FieloPLT__RewardTag__c.FieloPLT__Tag__c</summaryForeignKey>
         <summaryOperation>count</summaryOperation>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -172,21 +172,21 @@
     </fields>
     <label>Tag</label>
     <listViews>
-        <fullName>FieloAlpha__All</fullName>
+        <fullName>FieloPLT__All</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__TotalRewards__c</columns>
-        <columns>FieloAlpha__Order__c</columns>
-        <columns>FieloAlpha__Image__c</columns>
+        <columns>FieloPLT__TotalRewards__c</columns>
+        <columns>FieloPLT__Order__c</columns>
+        <columns>FieloPLT__Image__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
         <language>en_US</language>
     </listViews>
     <listViews>
-        <fullName>FieloAlpha__All_Tags</fullName>
+        <fullName>FieloPLT__All_Tags</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__Image__c</columns>
-        <columns>FieloAlpha__TotalRewards__c</columns>
-        <columns>FieloAlpha__Program__c</columns>
+        <columns>FieloPLT__Image__c</columns>
+        <columns>FieloPLT__TotalRewards__c</columns>
+        <columns>FieloPLT__Program__c</columns>
         <filterScope>Everything</filterScope>
         <label>All Tags</label>
         <language>en_US</language>
@@ -199,11 +199,11 @@
     <pluralLabel>Tags</pluralLabel>
     <recordTypeTrackHistory>false</recordTypeTrackHistory>
     <recordTypes>
-        <fullName>FieloAlpha__Dynamic</fullName>
+        <fullName>FieloPLT__Dynamic</fullName>
         <active>true</active>
         <label>Dynamic</label>
         <picklistValues>
-            <picklist>FieloAlpha__Filter__c</picklist>
+            <picklist>FieloPLT__Filter__c</picklist>
             <values>
                 <fullName>Likes</fullName>
                 <default>false</default>
@@ -219,11 +219,11 @@
         </picklistValues>
     </recordTypes>
     <recordTypes>
-        <fullName>FieloAlpha__Standard</fullName>
+        <fullName>FieloPLT__Standard</fullName>
         <active>true</active>
         <label>Standard</label>
         <picklistValues>
-            <picklist>FieloAlpha__Filter__c</picklist>
+            <picklist>FieloPLT__Filter__c</picklist>
             <values>
                 <fullName>Likes</fullName>
                 <default>false</default>
@@ -239,36 +239,36 @@
         </picklistValues>
     </recordTypes>
     <searchLayouts>
-        <customTabListAdditionalFields>FieloAlpha__TotalRewards__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>FieloAlpha__Order__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__TotalRewards__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__Order__c</customTabListAdditionalFields>
         <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
-        <listViewButtons>FieloAlpha__ReorderTags</listViewButtons>
+        <listViewButtons>FieloPLT__ReorderTags</listViewButtons>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
-        <fullName>FieloAlpha__ModifyProgram</fullName>
+        <fullName>FieloPLT__ModifyProgram</fullName>
         <active>true</active>
         <description>Is not possible to modify the associated Program</description>
-        <errorConditionFormula>ISCHANGED(FieloAlpha__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloAlpha__Program__c)))</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__Program__c</errorDisplayField>
+        <errorConditionFormula>ISCHANGED(FieloPLT__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloPLT__Program__c)))</errorConditionFormula>
+        <errorDisplayField>FieloPLT__Program__c</errorDisplayField>
         <errorMessage>Is not possible to modify the associated Program</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>FieloAlpha__OrderMustBePositive</fullName>
+        <fullName>FieloPLT__OrderMustBePositive</fullName>
         <active>true</active>
-        <errorConditionFormula>FieloAlpha__Order__c &lt; 0</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__Order__c</errorDisplayField>
+        <errorConditionFormula>FieloPLT__Order__c &lt; 0</errorConditionFormula>
+        <errorDisplayField>FieloPLT__Order__c</errorDisplayField>
         <errorMessage>Order must be positive</errorMessage>
     </validationRules>
     <webLinks>
-        <fullName>FieloAlpha__ReorderTags</fullName>
+        <fullName>FieloPLT__ReorderTags</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
         <height>600</height>
         <linkType>page</linkType>
         <masterLabel>Reorder Tags</masterLabel>
         <openType>sidebar</openType>
-        <page>FieloAlpha__TagReorderBackend</page>
+        <page>FieloPLT__TagReorderBackend</page>
         <protected>false</protected>
         <requireRowSelection>true</requireRowSelection>
     </webLinks>

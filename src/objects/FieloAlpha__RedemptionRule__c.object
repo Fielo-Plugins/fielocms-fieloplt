@@ -46,7 +46,7 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
-    <customHelpPage>FieloAlpha__RedemptionRuleHelpBackEnd</customHelpPage>
+    <customHelpPage>FieloPLT__RedemptionRuleHelpBackEnd</customHelpPage>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <description>Arbitrary groups to which members can belong. You can create segments by age, by location, etc.</description>
@@ -59,27 +59,27 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
-        <fullName>FieloAlpha__Edit</fullName>
+        <fullName>FieloPLT__Edit</fullName>
         <availableFields>
-            <field>FieloAlpha__Order__c</field>
+            <field>FieloPLT__Order__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <description>Redemption Rule Edit Backend</description>
         <displayedFields>
-            <field>FieloAlpha__Description__c</field>
+            <field>FieloPLT__Description__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>FieloAlpha__Program__c</field>
+            <field>FieloPLT__Program__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <label>Edit</label>
     </fieldSets>
     <fields>
-        <fullName>FieloAlpha__Description__c</fullName>
+        <fullName>FieloPLT__Description__c</fullName>
         <deprecated>false</deprecated>
         <description>A description for this segment.</description>
         <externalId>false</externalId>
@@ -92,7 +92,7 @@
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Order__c</fullName>
+        <fullName>FieloPLT__Order__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Order</label>
@@ -105,12 +105,12 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloAlpha__Program__c</fullName>
+        <fullName>FieloPLT__Program__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Program</label>
-        <referenceTo>FieloAlpha__Program__c</referenceTo>
+        <referenceTo>FieloPLT__Program__c</referenceTo>
         <relationshipLabel>Segments</relationshipLabel>
         <relationshipName>Segments</relationshipName>
         <required>false</required>
@@ -119,7 +119,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>FieloAlpha__isActive__c</fullName>
+        <fullName>FieloPLT__isActive__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <description>Checking this option will make this segment active.</description>
@@ -132,12 +132,12 @@
     </fields>
     <label>Segment</label>
     <listViews>
-        <fullName>FieloAlpha__All_Segments</fullName>
+        <fullName>FieloPLT__All_Segments</fullName>
         <columns>NAME</columns>
-        <columns>FieloAlpha__isActive__c</columns>
-        <columns>FieloAlpha__Description__c</columns>
+        <columns>FieloPLT__isActive__c</columns>
+        <columns>FieloPLT__Description__c</columns>
         <columns>CREATED_DATE</columns>
-        <columns>FieloAlpha__Program__c</columns>
+        <columns>FieloPLT__Program__c</columns>
         <filterScope>Everything</filterScope>
         <label>All Segments</label>
         <language>en_US</language>
@@ -150,41 +150,41 @@
     <pluralLabel>Segments</pluralLabel>
     <recordTypeTrackHistory>false</recordTypeTrackHistory>
     <recordTypes>
-        <fullName>FieloAlpha__Dynamic</fullName>
+        <fullName>FieloPLT__Dynamic</fullName>
         <active>true</active>
         <description>Once you define the criteria of the segment, when the member performs an operation the system calculates online the member’s segment.</description>
         <label>Dynamic</label>
     </recordTypes>
     <recordTypes>
-        <fullName>FieloAlpha__Manual</fullName>
+        <fullName>FieloPLT__Manual</fullName>
         <active>true</active>
         <description>The administrator adds manually members to a segment.</description>
         <label>Manual</label>
     </recordTypes>
     <recordTypes>
-        <fullName>FieloAlpha__Private</fullName>
+        <fullName>FieloPLT__Private</fullName>
         <active>true</active>
         <description>This is the record type that will identify a segment for the logged user</description>
         <label>Private</label>
     </recordTypes>
     <recordTypes>
-        <fullName>FieloAlpha__Public</fullName>
+        <fullName>FieloPLT__Public</fullName>
         <active>true</active>
         <description>This is the record type that will identify a segment for the guest user</description>
         <label>Public</label>
     </recordTypes>
     <searchLayouts>
-        <customTabListAdditionalFields>FieloAlpha__isActive__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__isActive__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
         <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
-        <fullName>FieloAlpha__ModifyProgram</fullName>
+        <fullName>FieloPLT__ModifyProgram</fullName>
         <active>true</active>
         <description>Is not possible to modify the associated Program</description>
-        <errorConditionFormula>ISCHANGED(FieloAlpha__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloAlpha__Program__c)))</errorConditionFormula>
-        <errorDisplayField>FieloAlpha__Program__c</errorDisplayField>
+        <errorConditionFormula>ISCHANGED(FieloPLT__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloPLT__Program__c)))</errorConditionFormula>
+        <errorDisplayField>FieloPLT__Program__c</errorDisplayField>
         <errorMessage>Is not possible to modify the associated Program</errorMessage>
     </validationRules>
 </CustomObject>
