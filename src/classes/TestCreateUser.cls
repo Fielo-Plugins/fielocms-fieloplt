@@ -3,14 +3,12 @@ private class TestCreateUser
 {
 	@isTest
 	static void itShould(){
-        FieloPLT__Program__c defaultProgram = new FieloPLT__Program__c(FieloPLT__Default__c = true);
+        FieloPLT__Program__c defaultProgram = new FieloPLT__Program__c(FieloPLT__IsDefault__c = true);
         insert defaultProgram;
 
         FieloPLT__Segment__c segment = new FieloPLT__Segment__c();
         insert segment;
 
-        insert new FieloPLT__SegmentDomain__c(FieloPLT__Segment__c = segment.Id);
-		
         OrganizationUtil.dummyTest1();
         OrganizationUtil.dummyTest2();
         OrganizationUtil.dummyTest3();
@@ -33,8 +31,8 @@ private class TestCreateUser
     static void testInstallScript(){
         //Inserto un par de programas
         List<FieloPLT__Program__c> programs = new List<FieloPLT__Program__c>();
-        programs.add(new FieloPLT__Program__c(Name = 'Test Program 1', FieloPLT__Default__c = true));
-        programs.add(new FieloPLT__Program__c(Name = 'Test Program 2', FieloPLT__Default__c = false));
+        programs.add(new FieloPLT__Program__c(Name = 'Test Program 1', FieloPLT__IsDefault__c = true));
+        programs.add(new FieloPLT__Program__c(Name = 'Test Program 2', FieloPLT__IsDefault__c = false));
         insert programs;
         //Corro al script de instalación
         PackageInstallation installScript = new PackageInstallation();
@@ -59,7 +57,7 @@ private class TestCreateUser
         //Voy a probar cancelar una invitación para un member que fue creado por otro usuario que no es el que está tratando de cancelar la invitación
         
         //Creo un programa
-        FieloPLT__Program__c defaultProgram = new FieloPLT__Program__c(FieloPLT__Default__c = true);
+        FieloPLT__Program__c defaultProgram = new FieloPLT__Program__c(FieloPLT__IsDefault__c = true);
         insert defaultProgram;
 
         //Creo una cuenta, y luego una organization Account relacionada a esta cuenta
@@ -98,7 +96,7 @@ private class TestCreateUser
     @isTest
     static void testBlockUnblock(){
         //Creo un programa
-        FieloPLT__Program__c defaultProgram = new FieloPLT__Program__c(FieloPLT__Default__c = true);
+        FieloPLT__Program__c defaultProgram = new FieloPLT__Program__c(FieloPLT__IsDefault__c = true);
         insert defaultProgram;
 
         //Creo una cuenta, y luego una organization Account relacionada a esta cuenta

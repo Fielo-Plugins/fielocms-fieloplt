@@ -16,7 +16,7 @@ public with sharing class AgreementAcceptController {
         //if the member exists and have accepted the agreement then updates the agreement for the member
         if(acceptAgreement){
             member.FieloPLT__Agreement__c = agreement.Id;
-            FieloPLT.OrganizationUtil.validateReadOnlyFieldsMember(false);
+            FieloPLT.SObjectService.enableAdminPermission(true);
             try{
                 upsert member;
             }catch(DMLException e){

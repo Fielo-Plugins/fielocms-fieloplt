@@ -6,7 +6,6 @@ public class NavigationService{
 		query += ' WHERE FieloCMS__Site__c =: siteId AND FieloCMS__Parent__c =: parentId ';
 
 		Set<Id> appliedSegments;
-		Set<Id> navIds;
 		if(filterBySegments){
 			appliedSegments = FieloPLT.SegmentService.getMemberSegments(memberId, null);
 			//ya que platform no me devuelve los segmentos privado y público, los agrego yo según corresponda
@@ -16,11 +15,7 @@ public class NavigationService{
 				appliedSegments.add([SELECT Id FROM FieloPLT__Segment__c WHERE RecordType.DeveloperName = 'Private' LIMIT 1].Id);
 			}
 
-			navIds = new Set<Id>();
-			for(FieloPLT__SegmentDomain__c segDom : [SELECT Navigation__c FROM FieloPLT__SegmentDomain__c WHERE FieloPLT__Segment__c in : appliedSegments AND Navigation__c != NULL]){
-                navIds.add(segDom.Navigation__c);
-            }
-            query += ' AND (Id IN : navIds OR HasSegments__c = false)';
+            query += ' AND Segment__c IN : appliedSegments';
 		}
 
 		query += ' ORDER BY FieloCMS__Order__c';
