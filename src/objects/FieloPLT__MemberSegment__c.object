@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>It manually relates Members to Segments. It corresponds to the Manual Segment type.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>FieloPLT__MemberSegmentCombination__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>Unique, automatically generated Member ID and Segment ID field. It prevents assigning different Segments to the same Member.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Unique, automatically generated Member ID and Segment ID field.</inlineHelpText>
+        <label>Member Segment Combination</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>FieloPLT__Member__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Member whose Segment is related.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose a Member to assign a Segment.</inlineHelpText>
+        <label>Member</label>
+        <referenceTo>FieloPLT__Member__c</referenceTo>
+        <relationshipLabel>Segments</relationshipLabel>
+        <relationshipName>MembersSegments</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FieloPLT__Segment__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Segment to relate to the Member Segment.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose a Segment.</inlineHelpText>
+        <label>Segment</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>FieloPLT__Segment__c.RecordType.DeveloperName</field>
+                <operation>equals</operation>
+                <value>Manual</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>FieloPLT__Segment__c</referenceTo>
+        <relationshipLabel>Members</relationshipLabel>
+        <relationshipName>MembersSegments</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Member Segment</label>
+    <nameField>
+        <displayFormat>MS-{0000}</displayFormat>
+        <label>Member Segment Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Member Segments</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>FieloPLT__ProgramConsistency</fullName>
+        <active>true</active>
+        <description>The Segment belongs to other Program. Choose a Segment from the same Member Program.</description>
+        <errorConditionFormula>FieloPLT__Member__r.FieloPLT__Program__c  &lt;&gt;  FieloPLT__Segment__r.FieloPLT__Program__c</errorConditionFormula>
+        <errorMessage>The Segment belongs to other Program. Choose a Segment from the same Member Program</errorMessage>
+    </validationRules>
+</CustomObject>

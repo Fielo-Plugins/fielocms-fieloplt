@@ -285,6 +285,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <gender>Feminine</gender>
     <label>Component Library</label>
     <nameField>
         <label>Name</label>
@@ -295,6 +296,25 @@
         <fullName>FieloCMS__List</fullName>
         <active>true</active>
         <label>List</label>
+        <picklistValues>
+            <picklist>FieloCMS__Layouts__c</picklist>
+            <values>
+                <fullName>Grid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Menu</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slider</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Table</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
         <picklistValues>
             <picklist>FieloCMS__RecordType__c</picklist>
             <values>
@@ -323,6 +343,21 @@
         <active>true</active>
         <label>Record</label>
         <picklistValues>
+            <picklist>FieloCMS__Layouts__c</picklist>
+            <values>
+                <fullName>Edit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Markup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>View</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>FieloCMS__RecordType__c</picklist>
             <values>
                 <fullName>Record</fullName>
@@ -349,6 +384,37 @@
         <fullName>FieloCMS__Widget</fullName>
         <active>true</active>
         <label>Widget</label>
+        <picklistValues>
+            <picklist>FieloCMS__Layouts__c</picklist>
+            <values>
+                <fullName>Edit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Markup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Menu</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slider</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Table</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>View</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
         <picklistValues>
             <picklist>FieloCMS__RecordType__c</picklist>
             <values>

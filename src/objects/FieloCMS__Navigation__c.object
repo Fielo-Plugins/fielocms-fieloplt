@@ -167,15 +167,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <fields>
-        <fullName>HasSegments__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Has Segments</label>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
+    <gender>Masculine</gender>
     <label>Navigation</label>
     <nameField>
         <label>Navigation Name</label>

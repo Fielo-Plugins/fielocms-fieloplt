@@ -53,7 +53,7 @@
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>false</enableReports>
-    <enableSearch>true</enableSearch>
+    <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
@@ -117,6 +117,14 @@
                 <fullName>Template</fullName>
                 <default>false</default>
             </picklistValues>
+            <picklistValues>
+                <fullName>Component</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Site</fullName>
+                <default>false</default>
+            </picklistValues>
             <sorted>false</sorted>
         </picklist>
         <trackTrending>false</trackTrending>
@@ -132,12 +140,8 @@
         <type>LongTextArea</type>
         <visibleLines>20</visibleLines>
     </fields>
+    <gender>Feminine</gender>
     <label>Model</label>
-    <listViews>
-        <fullName>All</fullName>
-        <filterScope>Everything</filterScope>
-        <label>All</label>
-    </listViews>
     <nameField>
         <label>Name</label>
         <type>Text</type>

@@ -30,8 +30,7 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>New</actionName>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Standard</type>
+        <type>Default</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>SaveEdit</actionName>
@@ -308,6 +307,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <gender>Masculine</gender>
     <label>Layout</label>
     <nameField>
         <label>Name</label>

@@ -170,6 +170,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <gender>Feminine</gender>
     <label>Page</label>
     <listViews>
         <fullName>FieloCMS__All_Menu</fullName>
@@ -186,7 +187,6 @@
         <columns>FieloCMS__Description__c</columns>
         <columns>FieloCMS__Template__c</columns>
         <columns>FieloCMS__Site__c</columns>
-        <columns>RECORDTYPE</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>RECORDTYPE</field>
@@ -194,6 +194,7 @@
             <value>FieloCMS__Page__c.FieloCMS__Page</value>
         </filters>
         <label>Pages</label>
+        <language>en_US</language>
     </listViews>
     <listViews>
         <fullName>FieloCMS__Templates</fullName>
