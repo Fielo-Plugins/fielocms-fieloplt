@@ -10,21 +10,21 @@ public class LoginService {
                 update inactiveUsers;                                
             }            
         }catch(exception e){            
-            throw new FieloCustomException(e.getMessage());            
+            throw new FieloException(e.getMessage());            
         }
         
         FieloPLT__Program__c program = ProgramService.getCurrentProgram();
         //look for the member related to the username
-        List<FieloPLT__Member__c> membersByEmail = [SELECT FieloPLT__Blocked__c, FieloPLT__User__c FROM FieloPLT__Member__c WHERE FieloPLT__Email__c =: username AND FieloPLT__Program__c =: program.Id];
+        List<FieloPLT__Member__c> membersByEmail = [SELECT FieloPLT__IsBlocked__c, FieloPLT__User__c FROM FieloPLT__Member__c WHERE FieloPLT__Email__c =: username AND FieloPLT__Program__c =: program.Id];
         
         //if the member was not found throws an error
         if(membersByEmail.isEmpty()){
-            throw new FieloCustomException(Label.ErrorLoginProgramValidation);            
+            throw new FieloException(Label.ErrorLoginProgramValidation);            
         }
         
         //if the member was found but is blocked thtrows an error
-        if(membersByEmail.get(0).FieloPLT__Blocked__c){
-            throw new FieloCustomException(Label.ErrorLoginMemberBlocked);                        
+        if(membersByEmail.get(0).FieloPLT__IsBlocked__c){
+            throw new FieloException(Label.ErrorLoginMemberBlocked);                        
         }
 
         //check selection member page
@@ -49,7 +49,7 @@ public class LoginService {
     public static PageReference forgotPassword(String userName){        
         //Validates if the userName is not empty
         if(String.isBlank(username)){
-            throw new FieloCustomException(Label.UsernameIsRequired);
+            throw new FieloException(Label.UsernameIsRequired);
             return null;
         }
         //looks if the user is inactive and then activates the user
@@ -63,7 +63,7 @@ public class LoginService {
             }
         //if the user does not exist an error is returned
         }else{
-            throw new FieloCustomException(Label.ErrorMemberForgotPasswordInexist);            
+            throw new FieloException(Label.ErrorMemberForgotPasswordInexist);            
         }
         
         Site.forgotPassword(username);

@@ -149,7 +149,7 @@
         <type>Number</type>
         <unique>false</unique>
     </fields>
-    <gender>Feminine</gender>
+    
     <label>Media</label>
     <nameField>
         <label>Media Name</label>

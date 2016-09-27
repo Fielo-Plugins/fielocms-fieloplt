@@ -298,7 +298,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloPLT__Banner__c.FieloPLT__RedemptionRule__c</field>
+        <field>FieloPLT__Banner__c.FieloPLT__Segment__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -833,7 +833,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloPLT__Member__c.FieloPLT__Blocked__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__IsBlocked__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -873,7 +873,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloPLT__Member__c.FieloPLT__FieloAccountStatus__c</field>
+        <field>FieloPLT__Member__c.FieloPLT__Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1218,7 +1218,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloPLT__Menu__c.FieloPLT__RedemptionRule__c</field>
+        <field>FieloPLT__Menu__c.FieloPLT__Segment__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1328,7 +1328,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloPLT__News__c.FieloPLT__RedemptionRule__c</field>
+        <field>FieloPLT__News__c.FieloPLT__Segment__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2233,22 +2233,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloPLT__RedemptionRule__c.FieloPLT__Description__c</field>
+        <field>FieloPLT__Segment__c.FieloPLT__Description__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloPLT__RedemptionRule__c.FieloPLT__Order__c</field>
+        <field>FieloPLT__Segment__c.FieloPLT__Order__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloPLT__RedemptionRule__c.FieloPLT__Program__c</field>
+        <field>FieloPLT__Segment__c.FieloPLT__Program__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloPLT__RedemptionRule__c.FieloPLT__isActive__c</field>
+        <field>FieloPLT__Segment__c.FieloPLT__isActive__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2428,7 +2428,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloPLT__Reward__c.FieloPLT__RedemptionRule__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__Segment__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2684,36 +2684,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>FieloPLT__Section__c.FieloPLT__Width__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>FieloPLT__SegmentDomain__c.FieloPLT__Banner__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>FieloPLT__SegmentDomain__c.FieloPLT__Menu__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>FieloPLT__SegmentDomain__c.FieloPLT__News__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>FieloPLT__SegmentDomain__c.FieloPLT__Promotion__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>FieloPLT__SegmentDomain__c.FieloPLT__Reward__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>FieloPLT__SegmentDomain__c.Navigation__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3183,7 +3153,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloCMS__Component__c.ParemeterName__c</field>
+        <field>FieloCMS__Component__c.ParameterName__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3791,7 +3761,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloPLT__RedemptionRule__c</object>
+        <object>FieloPLT__Segment__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -3873,15 +3843,6 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
         <object>FieloPLT__Section__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
-        <object>FieloPLT__SegmentDomain__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -4276,22 +4237,22 @@
     <recordTypeVisibilities>
         <default>true</default>
         <personAccountDefault>true</personAccountDefault>
-        <recordType>FieloPLT__RedemptionRule__c.FieloPLT__Dynamic</recordType>
+        <recordType>FieloPLT__Segment__c.FieloPLT__Dynamic</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>FieloPLT__RedemptionRule__c.FieloPLT__Manual</recordType>
+        <recordType>FieloPLT__Segment__c.FieloPLT__Manual</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>FieloPLT__RedemptionRule__c.FieloPLT__Private</recordType>
+        <recordType>FieloPLT__Segment__c.FieloPLT__Private</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>FieloPLT__RedemptionRule__c.FieloPLT__Public</recordType>
+        <recordType>FieloPLT__Segment__c.FieloPLT__Public</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>

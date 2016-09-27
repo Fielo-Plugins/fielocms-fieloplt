@@ -55,7 +55,7 @@ global with sharing class ShoppingCartController {
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, 'success')));
             result.redirectURL = '#';
             //result.refresh.add(new FieloCMS.RemoteActionResult.RemoteActionRefresh('refresh',componentId));
-        }catch(FieloPLT.FieloCustomException e){
+        }catch(FieloPLT.FieloException e){
             Database.rollBack(sp);
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
         }
@@ -96,7 +96,7 @@ global with sharing class ShoppingCartController {
     global static FieloCMS.RemoteActionResult checkout(Id componentId, String newQuantJSON){
         FieloPLT__Redemption__c redemption = RedemptionService.getOpenRedemption(MemberService.getCurrentMemberId(), 'FrontEnd');
         
-        FieloCMS__Component__c component = [SELECT ParemeterName__c, RedirectPage__c FROM FieloCMS__Component__c WHERE Id =: componentId];        
+        FieloCMS__Component__c component = [SELECT ParameterName__c, RedirectPage__c FROM FieloCMS__Component__c WHERE Id =: componentId];        
         FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
         Savepoint sp = Database.setSavepoint();
         try{
@@ -111,7 +111,7 @@ global with sharing class ShoppingCartController {
             if(redemption.FieloPLT__Status__c == 'Close'){
                 PageReference retPage = Page.FieloCMS__Page;
                 retPage.getParameters().put('pageId',component.RedirectPage__c);
-                retPage.getParameters().put(component.ParemeterName__c,redemption.Id);
+                retPage.getParameters().put(component.ParameterName__c,redemption.Id);
                 result.redirectURL = retPage.getUrl();
             }else{
                 result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.InfoRedemptionApproval)));

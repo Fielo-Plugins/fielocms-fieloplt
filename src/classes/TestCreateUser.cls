@@ -6,7 +6,7 @@ private class TestCreateUser
         FieloPLT__Program__c defaultProgram = new FieloPLT__Program__c(FieloPLT__Default__c = true);
         insert defaultProgram;
 
-        FieloPLT__RedemptionRule__c segment = new FieloPLT__RedemptionRule__c();
+        FieloPLT__Segment__c segment = new FieloPLT__Segment__c();
         insert segment;
 
         insert new FieloPLT__SegmentDomain__c(FieloPLT__Segment__c = segment.Id);
@@ -41,7 +41,7 @@ private class TestCreateUser
         Test.testInstall(installScript, null);
 
         //Ahora verifico que se hayan creado los segmentos públicos y privados
-        List<FieloPLT__RedemptionRule__c> segments = [SELECT RecordType.DeveloperName, FieloPLT__Program__c FROM FieloPLT__RedemptionRule__c WHERE FieloPLT__Program__c IN : programs AND (RecordType.DeveloperName = 'Private' OR RecordType.DeveloperName = 'Public') ORDER BY FieloPLT__Program__r.Name, RecordType.DeveloperName];
+        List<FieloPLT__Segment__c> segments = [SELECT RecordType.DeveloperName, FieloPLT__Program__c FROM FieloPLT__Segment__c WHERE FieloPLT__Program__c IN : programs AND (RecordType.DeveloperName = 'Private' OR RecordType.DeveloperName = 'Public') ORDER BY FieloPLT__Program__r.Name, RecordType.DeveloperName];
 
         System.assertEquals(segments[0].FieloPLT__Program__c, programs[0].Id);//que pertenezca al primer programa
         System.assertEquals(segments[1].FieloPLT__Program__c, programs[0].Id);//que pertenezca al primer programa
@@ -129,10 +129,10 @@ private class TestCreateUser
         System.runAs(managerUser){
             FieloCMS.RemoteActionResult resultCancelInvitation = BlockUnblockMemberController.blockUnblockMember(contributor2.Id, 'true');
         
-            contributor2 = [SELECT FieloPLT__OrganizationAccount__c, FieloPLT__Blocked__c FROM FieloPLT__Member__c WHERE Id =: contributor2.Id];
+            contributor2 = [SELECT FieloPLT__OrganizationAccount__c, FieloPLT__IsBlocked__c FROM FieloPLT__Member__c WHERE Id =: contributor2.Id];
         
             System.assertEquals(null, contributor2.FieloPLT__OrganizationAccount__c);
-            System.assertEquals(false, contributor2.FieloPLT__Blocked__c);
+            System.assertEquals(false, contributor2.FieloPLT__IsBlocked__c);
         }
 
     }

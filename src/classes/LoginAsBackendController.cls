@@ -4,7 +4,7 @@ public with sharing class LoginAsBackendController {
         //get member Id
         String memberId = system.currentPageReference().getParameters().get('memberId');
         //look for the site url of the program's member
-        Member__c member = [SELECT Program__r.SiteURL__c, Program__c, Name__c FROM Member__c WHERE Id =: memberId];
+        FieloPLT__Member__c member = [SELECT FieloPLT__Program__r.SiteURL__c, FieloPLT__Program__c, Name FROM FieloPLT__Member__c WHERE Id =: memberId];
 
         User siteUser;
         //look if exists the test user

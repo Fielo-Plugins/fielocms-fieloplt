@@ -21,7 +21,7 @@ global with sharing class ChangePasswordFieloController {
             } else if(redirectPage != null){
                 result.redirectURL = redirectPage.getUrl();
             }
-        }catch(FieloCustomException e){
+        }catch(FieloException e){
             result.redirectURL = '';
             result.addMessage(new RemoteActionResult.RemoteActionMessage(e));
         }    

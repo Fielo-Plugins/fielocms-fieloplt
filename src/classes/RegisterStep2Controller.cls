@@ -45,10 +45,10 @@ global without sharing class RegisterStep2Controller {
             FieloPLT.MemberService.finishRegistration(member);
             //MemberUtil.sendToApprove(new List<Member__c>{member});
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.SucessAwardingApprovalRegistration)));
-        }catch(FieloCustomException e){
+        }catch(FieloException e){
             Database.rollback(sp);
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
-        }catch(FieloPLT.FieloCustomException e){
+        }catch(FieloPLT.FieloException e){
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
         }
 

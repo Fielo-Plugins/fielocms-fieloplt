@@ -32,9 +32,9 @@ global with sharing class AddToCartController implements FieloCMS.ViewSubCompone
                     result.redirectURL = detailUrl + redemption.Id;
                 }
             }
-        }catch(FieloCustomException e){
+        }catch(FieloException e){
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
-        }catch(FieloPLT.FieloCustomException e){
+        }catch(FieloPLT.FieloException e){
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
         }
 

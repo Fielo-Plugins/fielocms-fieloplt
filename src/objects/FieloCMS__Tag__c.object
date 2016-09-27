@@ -125,7 +125,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <gender>Feminine</gender>
+    
     <label>Tag</label>
     <nameField>
         <label>Tag Name</label>

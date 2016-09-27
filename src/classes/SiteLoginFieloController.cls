@@ -9,10 +9,10 @@ global with sharing class SiteLoginFieloController {
             if(redirectPage != null){
                 result.redirectURL = redirectPage.getUrl();
             }
-        }catch(FieloCustomException e){
+        }catch(FieloException e){
             result.redirectURL = '';
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
-        }catch(FieloPLT.FieloCustomException e){
+        }catch(FieloPLT.FieloException e){
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
         }
         
@@ -34,10 +34,10 @@ global with sharing class SiteLoginFieloController {
             redirectPage = LoginService.forgotPassword(username);
             if(redirectPage != null) result.redirectURL = redirectPage.getUrl();
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.site.temp_password_sent + '<a href="/" >' + Label.GoToHome + '</a>')));
-        }catch(FieloCustomException e){
+        }catch(FieloException e){
             result.redirectURL = '';
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
-        }catch(FieloPLT.FieloCustomException e){
+        }catch(FieloPLT.FieloException e){
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
         }
         

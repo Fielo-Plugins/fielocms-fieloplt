@@ -84,20 +84,20 @@ global with sharing class HandleInvitationsMembersController implements FieloCMS
     public static void cancelInvitations(Set<Id> memberIds){        
         Boolean doCommit = false;
         SObjectUnitOfWork uow = new SObjectUnitOfWork(new List<Schema.SobjectType>{FieloPLT__Member__c.SObjectType});                
-        for(FieloPLT__Member__c member : new MembersSelector( new Set<String>{'RecordType.DeveloperName', 'FieloPLT__OrganizationAccount__r.FieloPLT__Blocked__c'} ).selectById(memberIds)){
-            if(!member.FieloPLT__OrganizationAccount__r.FieloPLT__Blocked__c){
+        for(FieloPLT__Member__c member : new MembersSelector( new Set<String>{'RecordType.DeveloperName', 'FieloPLT__OrganizationAccount__r.FieloPLT__IsBlocked__c'} ).selectById(memberIds)){
+            if(!member.FieloPLT__OrganizationAccount__r.FieloPLT__IsBlocked__c){
                 if(member.RecordType.DeveloperName != 'OrganizationContributor'){
-                    throw new FieloCustomException(Label.ErrorOrganizationAccountAction);
+                    throw new FieloException(Label.ErrorOrganizationAccountAction);
                 } else {
-                    if(member.FieloPLT__FieloAccountStatus__c == 'New'){
+                    if(member.FieloPLT__Status__c == 'New'){
                         uow.registerDeleted(member);
                         doCommit = true;
                     } else {
-                        throw new FieloCustomException(Label.ErrorDeleteFieloAccount);
+                        throw new FieloException(Label.ErrorDeleteFieloAccount);
                     }
                 }
             }else{
-                throw new FieloCustomException(Label.ErrorFieloAccountBlocked);
+                throw new FieloException(Label.ErrorFieloAccountBlocked);
             }
         }
         if(doCommit)

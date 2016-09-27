@@ -11,9 +11,9 @@ public class NavigationService{
 			appliedSegments = FieloPLT.SegmentService.getMemberSegments(memberId, null);
 			//ya que platform no me devuelve los segmentos privado y público, los agrego yo según corresponda
 			if(UserInfo.getUserType() == 'Guest'){
-				appliedSegments.add([SELECT Id FROM FieloPLT__RedemptionRule__c WHERE RecordType.DeveloperName = 'Public' LIMIT 1].Id);
+				appliedSegments.add([SELECT Id FROM FieloPLT__Segment__c WHERE RecordType.DeveloperName = 'Public' LIMIT 1].Id);
 			}else{
-				appliedSegments.add([SELECT Id FROM FieloPLT__RedemptionRule__c WHERE RecordType.DeveloperName = 'Private' LIMIT 1].Id);
+				appliedSegments.add([SELECT Id FROM FieloPLT__Segment__c WHERE RecordType.DeveloperName = 'Private' LIMIT 1].Id);
 			}
 
 			navIds = new Set<Id>();

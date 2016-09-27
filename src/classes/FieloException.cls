@@ -1,4 +1,4 @@
-public class FieloCustomException extends Exception {
+public class FieloException extends Exception {
 
 	public String field;
 

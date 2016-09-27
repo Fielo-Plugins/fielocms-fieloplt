@@ -74,9 +74,9 @@ public with sharing class MemberService {
 
     public static PageReference setPasswordAndLogin(Id memberId, String password){
         if(memberId == null){
-            throw new FieloCustomException(Label.MemberIdRequired);
+            throw new FieloException(Label.MemberIdRequired);
         }else if(String.isBlank(password)){
-            throw new FieloCustomException(Label.PasswordIsRequired);
+            throw new FieloException(Label.PasswordIsRequired);
         }
         Savepoint sp = Database.setSavepoint();
         try{
@@ -92,13 +92,9 @@ public with sharing class MemberService {
         PageReference agreementPage;
         /*Cookie memberCookie = ApexPages.currentPage().getCookies().get('agreementAccepted');
         if(memberCookie == null || String.isBlank(memberCookie.getValue()) || memberCookie.getValue() != 'true'){*/
-            FieloPLT__Member__c member = [SELECT Id, FieloPLT__Agreement__r.FieloPLT__Status__c, FieloPLT__Program__r.FieloPLT__UseAgreement__c, FieloPLT__Program__r.FieloPLT__AgreementView__c FROM FieloPLT__Member__c WHERE Id =: memberId limit 1];            
+            FieloPLT__Member__c member = [SELECT Id, FieloPLT__Agreement__r.FieloPLT__Status__c, FieloPLT__Program__r.FieloPLT__UseAgreement__c FROM FieloPLT__Member__c WHERE Id =: memberId limit 1];            
             if(member.FieloPLT__Program__r.FieloPLT__UseAgreement__c && member.FieloPLT__Agreement__r.FieloPLT__Status__c != 'Current'){
-                if(String.isNotBlank(member.FieloPLT__Program__r.FieloPLT__AgreementView__c)){
-                    agreementPage = new PageReference('/' + member.FieloPLT__Program__r.FieloPLT__AgreementView__c);
-                }else{
-                    agreementPage = Page.AgreementAccept;
-                }
+                agreementPage = Page.AgreementAccept;
                 agreementPage.getParameters().put('retUrl','');
             }
         //}
@@ -107,9 +103,9 @@ public with sharing class MemberService {
 
     public static PageReference login(Id memberId, String password){
         if(memberId == null){
-            throw new FieloCustomException(Label.MemberIdRequired);
+            throw new FieloException(Label.MemberIdRequired);
         }else if(String.isBlank(password)){
-            throw new FieloCustomException(Label.PasswordIsRequired);
+            throw new FieloException(Label.PasswordIsRequired);
         }
         Savepoint sp = Database.setSavepoint();
         try{
@@ -124,9 +120,9 @@ public with sharing class MemberService {
 
     public static void setPassword(Id memberId, String password){
         if(memberId == null){
-            throw new FieloCustomException(Label.MemberIdRequired);
+            throw new FieloException(Label.MemberIdRequired);
         }else if(String.isBlank(password)){
-            throw new FieloCustomException(Label.PasswordIsRequired);
+            throw new FieloException(Label.PasswordIsRequired);
         }
         Savepoint sp = Database.setSavepoint();
         try{

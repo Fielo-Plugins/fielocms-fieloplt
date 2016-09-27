@@ -96,7 +96,7 @@
         <type>MasterDetail</type>
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
-    <gender>Feminine</gender>
+    
     <label>Tag Item</label>
     <nameField>
         <displayFormat>{0000}</displayFormat>

@@ -27,9 +27,9 @@ global with sharing class SelectMemberController implements FieloCMS.ViewSubComp
             }
             
             result.redirectURL = '/';                                   
-        }catch(FieloCustomException e){
+        }catch(FieloException e){
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
-        }catch(FieloPLT.FieloCustomException e){
+        }catch(FieloPLT.FieloException e){
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
         }
 

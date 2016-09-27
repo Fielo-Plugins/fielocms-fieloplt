@@ -163,7 +163,7 @@ If there an End Date is set will be automatically move to Unpublished.</descript
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
-    <gender>Feminine</gender>
+    
     <label>Post</label>
     <nameField>
         <label>Post Name</label>

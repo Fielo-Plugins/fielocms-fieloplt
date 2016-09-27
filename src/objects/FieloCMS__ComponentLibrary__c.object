@@ -285,7 +285,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <gender>Feminine</gender>
+    
     <label>Component Library</label>
     <nameField>
         <label>Name</label>

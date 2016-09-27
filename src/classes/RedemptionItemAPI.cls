@@ -8,8 +8,8 @@ global with sharing class RedemptionItemAPI implements FieloCMS.DataInterface{
                 c.FieloCMS__Limit__c = 5;
             
             String whereCondition;
-            if(String.isNotBlank(c.ParemeterName__c) && ApexPages.CurrentPage().getParameters().containsKey(c.ParemeterName__c) != null){
-                Id redemptionId = ApexPages.CurrentPage().getParameters().get(c.ParemeterName__c);
+            if(String.isNotBlank(c.ParameterName__c) && ApexPages.CurrentPage().getParameters().containsKey(c.ParameterName__c) != null){
+                Id redemptionId = ApexPages.CurrentPage().getParameters().get(c.ParameterName__c);
                 whereCondition = ' FieloPLT__Redemption__c = \'' + redemptionId + '\'';
             }else{
                 whereCondition = 'FieloPLT__Redemption__r.FieloPLT__Status__c != \'Open\' AND FieloPLT__Redemption__r.FieloPLT__Member__c = \'' + MemberService.getCurrentMemberId() + '\'';

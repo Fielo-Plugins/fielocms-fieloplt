@@ -167,7 +167,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <gender>Masculine</gender>
+    
     <label>Navigation</label>
     <nameField>
         <label>Navigation Name</label>

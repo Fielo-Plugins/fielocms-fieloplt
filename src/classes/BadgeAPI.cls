@@ -29,8 +29,8 @@ public with sharing class BadgeAPI implements FieloCMS.DataInterface{
         String query = 'SELECT ' + String.join(new List<String>(fields),',');
         
         Set<Id> badgeIds = new Set<Id>();
-        for(FieloPLT__BadgeMember__c bm : [Select FieloPLT__Badge2__c FROM FieloPLT__BadgeMember__c WHERE FieloPLT__Member2__c =: memberId]){
-            badgeIds.add(bm.FieloPLT__Badge2__c);
+        for(FieloPLT__BadgeMember__c bm : [Select FieloPLT__Badge__c FROM FieloPLT__BadgeMember__c WHERE FieloPLT__Member__c =: memberId]){
+            badgeIds.add(bm.FieloPLT__Badge__c);
         }
 
         query += ' FROM FieloPLT__Badge__c WHERE Id In : badgeIds AND FieloPLT__Program__c =: programId';
