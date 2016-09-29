@@ -1,7 +1,7 @@
 public with sharing class LoginAsController {
 
 	public PageReference login(){
-		//get user id and hash from browser
+		/*//get user id and hash from browser
 		String userId = system.currentPageReference().getParameters().get('testUser');
 		String hash = system.currentPageReference().getParameters().get('hash');
 
@@ -19,6 +19,6 @@ public with sharing class LoginAsController {
 			ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.Error,Label.LoginAsError));
 		}
 
-		return null;
+		return null;*/
 	}
 }

@@ -1,7 +1,7 @@
 public with sharing class LoginAsBackendController {
 
     public PageReference redirect(){                
-        //get member Id
+        /*//get member Id
         String memberId = system.currentPageReference().getParameters().get('memberId');
         //look for the site url of the program's member
         FieloPLT__Member__c member = [SELECT FieloPLT__Program__r.SiteURL__c, FieloPLT__Program__c, Name FROM FieloPLT__Member__c WHERE Id =: memberId];
@@ -77,7 +77,8 @@ public with sharing class LoginAsBackendController {
             return null;
         }
 
-        return retPage;
+        return retPage;*/
+        return null;
 
     }
 }
