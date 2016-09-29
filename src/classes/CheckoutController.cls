@@ -15,9 +15,9 @@ global with sharing class CheckoutController implements FieloCMS.ViewSubComponen
     global static FieloCMS.RemoteActionResult checkout(Id rewardId, Integer quantity, String detailUrl){
         FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
         try{            
-            List<FieloPLT__Redemption__c> redemptions = FieloPLT.createRedemptions(new Map<Id,Integer>{rewardId => quantity}, MemberService.getCurrentMemberId());
+            List<FieloPLT__Redemption__c> redemptions = FieloPLT.RedemptionService.createRedemptions(new Map<Id,Integer>{rewardId => quantity}, MemberService.getCurrentMemberId());
             if(redemptions[0].FieloPLT__Status__c == 'Close'){
-                result.redirectURL = detailUrl + redemption.Id;
+                result.redirectURL = detailUrl + redemptions[0].Id;
             }else if(redemptions[0].FieloPLT__Status__c == 'Pending'){
                 result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.InfoRedemptionApproval)));                
                 result.refresh.add( new FieloCMS.RemoteActionResult.RemoteActionRefresh('quantity', '1'));

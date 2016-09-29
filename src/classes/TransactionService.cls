@@ -1,4 +1,4 @@
-global with sharing class TransactionAPI implements FieloCMS.DataInterface, FieloCMS.ControlInterface{
+global with sharing class TransactionService implements FieloCMS.DataInterface, FieloCMS.ControlInterface{
 	
 	public Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){                
         Map<Id,Object> newMapData = new Map<Id,Object>();

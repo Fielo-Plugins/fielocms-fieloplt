@@ -84,6 +84,16 @@
         <label>Highlight Section</label>
     </fieldSets>
     <fieldSets>
+        <fullName>RegistrationStep2</fullName>        
+        <description>Highlight information on the member page layout</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>        
+        <label>RegistrationStep2</label>
+    </fieldSets>
+    <fieldSets>
         <fullName>FieloPLT__MemberQuery</fullName>
         <description>Member API to optimize query</description>
         <label>Member Query</label>
