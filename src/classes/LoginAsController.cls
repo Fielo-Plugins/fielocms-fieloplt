@@ -17,8 +17,8 @@ public with sharing class LoginAsController {
 		}else{
 			//shows error message in the page
 			ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.Error,Label.LoginAsError));
-		}
+		}*/
 
-		return null;*/
+		return null;
 	}
 }

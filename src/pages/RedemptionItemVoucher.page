@@ -1,6 +1,6 @@
 <apex:page Controller="RedemptionItemVoucherController"  sidebar="false" showHeader="false" standardStylesheets="false"  renderAs="pdf">
 
-    <apex:stylesheet value="{!URLFOR($Resource.FieloEE_Legacy, 'css/voucher.css')}" />
+    <!--<apex:stylesheet value="{!URLFOR($Resource.FieloEE_Legacy, 'css/voucher.css')}" />-->
     <apex:variable var="newUI" value="newSkinOn"  rendered="{!(voucherCustomVoucher != null)}">
         <apex:stylesheet value="{!URLFOR($Action.Document.Download, voucherCustomVoucher)}" />
     </apex:variable>
@@ -18,7 +18,7 @@
                 <div class="logo left">
                     <apex:image styleClass="logoCustom" rendered="{!!ISNULL(imageId)}" value="{!URLFOR($Action.Document.Download, imageId)}" />
 
-                    <apex:image styleClass="logoDefault"  rendered="{!ISNULL(imageId)}" value="{!URLFOR($Resource.FieloEE_Legacy, 'images/logo/fielo-000000.png')}" />
+                    <!--<apex:image styleClass="logoDefault"  rendered="{!ISNULL(imageId)}" value="{!URLFOR($Resource.FieloEE_Legacy, 'images/logo/fielo-000000.png')}" />-->
                 </div>
                 <!--Codigo de barras-->
                 <!--<div class="barCode right">
@@ -34,7 +34,7 @@
 
                     <apex:panelGroup layout="none" rendered="{!NOT(ISBLANK(v.imageId))}">
                         <!-- no se cachea la imagen con el https como en otros lados porque al renderizar esta página como PDF hace que no se vea la imagen-->
-                        <img src="{!IF(LEFT(v.imageId,3) == '00P', URLFOR($Action.Attachment.Download, v.imageId), IF(LEFT(v.imageId,3) == '015', URLFOR($Action.Document.Download, v.imageId),URLFOR($Resource.FieloEE_Legacy, 'images/'+v.imageId)))}" />
+                        <!--<img src="{!IF(LEFT(v.imageId,3) == '00P', URLFOR($Action.Attachment.Download, v.imageId), IF(LEFT(v.imageId,3) == '015', URLFOR($Action.Document.Download, v.imageId),URLFOR($Resource.FieloEE_Legacy, 'images/'+v.imageId)))}" />-->
                     </apex:panelGroup>
 
 
@@ -42,14 +42,14 @@
 
                 <!--datos premio -->
                 <div class="info left">
-                    <apex:repeat value="{!$ObjectType.RedemptionItem__c.FieldSets.Voucher}" var="f">
-                        <div class="{!SUBSTITUTE($ObjectType.RedemptionItem__c.Fields[f].label, ' ', '')}">
-                            <apex:outputLabel value="{!$ObjectType.RedemptionItem__c.Fields[f].label}:"/>&nbsp;<apex:outputField value="{!v.redemptionItem[f]}"/>
+                    <!--<apex:repeat value="{!$ObjectType.FieloPLT__RedemptionItem__c.FieldSets.FieloPLT__Voucher}" var="f">
+                        <div class="{!SUBSTITUTE($ObjectType.FieloPLT__RedemptionItem__c.Fields[f].label, ' ', '')}">
+                            <apex:outputLabel value="{!$ObjectType.FieloPLT__RedemptionItem__c.Fields[f].label}:"/>&nbsp;<apex:outputField value="{!v.redemptionItem[f]}"/>
                         </div>
                     </apex:repeat>
                     <apex:panelGroup rendered="{!v.redemptionItem.Reward__r.UniqueVoucher__c}">
                         <apex:outputLabel value="{!$ObjectType.RedemptionItem__c.Fields.Quantity__c.label}:"/>&nbsp;<apex:outputField value="{!v.redemptionItem.Quantity__c}"/>
-                    </apex:panelGroup>
+                    </apex:panelGroup>-->
                 </div>
             </div>
         </div>

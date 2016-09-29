@@ -5,7 +5,7 @@ public with sharing class RedemptionItemVoucherController {
     public FieloPLT__Program__c program {get; set;}
 
     public String imageId {get{
-        List<Document> docs = [SELECT Id FROM Document WHERE DeveloperName = 'FieloLogoSmallBackEnd' AND NamespacePrefix =: OrganizationUtil.getPrefix() LIMIT 1];
+        List<Document> docs = [SELECT Id FROM Document WHERE DeveloperName = 'FieloLogoSmallBackEnd' LIMIT 1];
         if(docs.size() > 0){
             return docs[0].Id;
         }
@@ -13,7 +13,7 @@ public with sharing class RedemptionItemVoucherController {
 
     public String docURL{get{
         if(docURL == null){
-                docURL = OrganizationUtil.getDocURL();
+                //docURL = OrganizationUtil.getDocURL();
             }
             return docURL;
         } set;}
@@ -22,26 +22,26 @@ public with sharing class RedemptionItemVoucherController {
 
     public with sharing class voucherItem {
 
-        public RedemptionItem__c redemptionItem {get;set;}
+        public FieloPLT__RedemptionItem__c redemptionItem {get;set;}
         public Id imageId{get;set;}
         public Integer voucherNum {get;set;}
         public String instructionsReward{get;set;}
         public String instructionsVoucher{get;set;}
 
-        public voucherItem (RedemptionItem__c redemptionItem, Id imageId, Integer i ,String instructionsVoucher, String instructionsReward ) {
+        public voucherItem (FieloPLT__RedemptionItem__c redemptionItem, Id imageId, Integer i ,String instructionsVoucher, String instructionsReward ) {
             this.redemptionItem = redemptionItem;
             this.imageId = imageId;
             this.voucherNum = i;
             this.instructionsVoucher = instructionsVoucher;
-            if(redemptionItem.Reward__r.Instructions__c != null){
+            /*if(redemptionItem.Reward__r.Instructions__c != null){
                 this.instructionsReward = redemptionItem.Reward__r.InstructionsRichText__c;
             }else{
                 this.instructionsReward = instructionsReward;
-            }
+            }*/
         }
     }
 
-    public RedemptionItemVoucherController(){
+    /*public RedemptionItemVoucherController(){
         String idOrden = ApexPages.currentPage().getParameters().get('ordenId');
         String voucherId = ApexPages.currentPage().getParameters().get('voucherId');
 
@@ -80,5 +80,5 @@ public with sharing class RedemptionItemVoucherController {
                 i = ( i == 2 )?0:i;
             }
         }
-    }
+    }*/
 }

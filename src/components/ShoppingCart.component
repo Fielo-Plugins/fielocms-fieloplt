@@ -23,7 +23,7 @@
                                     <th class="fielo-field fielo-field--is-{!field} mdl-data-table__cell--non-numeric"><span data-order-value="{!field}">{!$ObjectType.FieloPLT__Reward__c.fields[field].label}</span></th>
                                 </apex:repeat>
                                 <th class="fielo-field fielo-field--is-quantity mdl-data-table__cell--non-numeric"><span data-order-value="quantity">{!$Label.FieloPLT__Quantity}</span></th>
-                                <th class="fielo-field fielo-field--is-total mdl-data-table__cell--non-numeric"><span data-order-value="total">{!$Label.FieloPLT__TotalPoints}</span></th>
+                                <th class="fielo-field fielo-field--is-total mdl-data-table__cell--non-numeric"><span data-order-value="total">{!$Label.TotalPoints}</span></th>
                                 <th class="fielo-field fielo-field--is-delete mdl-data-table__cell--non-numeric"><span data-order-value="delete">{!$Label.FieloPLT__Delete}</span></th>
                             </tr>
                         </thead>
@@ -39,7 +39,7 @@
                                     </apex:repeat>
                                     <td class="fielo-field fielo-field--is-ShoppingQuantity mdl-data-table__cell--non-numeric" data-th="Shopping Quantity">
                                         <span class="fielo-field__value">
-                                            <input type="number" min="0" required="required" class="fielo-shopping__quantity js-to-be-initialized" name="quantities.{!record.Id}" value="{!quantitiesMap[record.Id]}" onchange="document.getElementById('shoppingTotal{!record.Id}').innerHTML = this.value * document.getElementById('{!record.Id}FieloPLT__PointsCant__c').children[0].innerHTML;" data-attribute-replace="value"/>
+                                            <!--<input type="number" min="0" required="required" class="fielo-shopping__quantity js-to-be-initialized" name="quantities.{!record.Id}" value="{!quantitiesMap[record.Id]}" onchange="document.getElementById('shoppingTotal{!record.Id}').innerHTML = this.value * document.getElementById('{!record.Id}FieloPLT__PointsCant__c').children[0].innerHTML;" data-attribute-replace="value"/>-->
                                         </span>
                                     </td>
                                     <td class="fielo-field fielo-field--is-ShoppingTotal mdl-data-table__cell--non-numeric" data-th="Shopping Total">
@@ -49,7 +49,7 @@
                                             <apex:repeat value="{!record['FieloPLT__RedemptionItems__r']}"  var="cartItem">
                                                 <apex:variable var="total" value="{! total + (cartItem.quantity__c * record['PointsCant__c']) }" />
                                             </apex:repeat>-->
-                                            <span id="shoppingTotal{!record.Id}" class="fielo-shopping__total">{!record['FieloPLT__PointsCant__c'] * quantitiesMap[record.Id]}</span>
+                                            <!--<span id="shoppingTotal{!record.Id}" class="fielo-shopping__total">{!record['FieloPLT__PointsCant__c'] * quantitiesMap[record.Id]}</span>-->
                                         </span>
                                     </td>
                                     <td class="fielo-field fielo-field--is-ShoppingDelete mdl-data-table__cell--non-numeric" data-th="Shopping Total">
@@ -68,7 +68,15 @@
                 </div>
                 <div class="fielo-controls" >
                     <button data-remoteaction="{!namespace}ShoppingCartController.save" class="fielo-button fielo-button--safe fielo-js-upgrade fielo-button__save" >{!$Label.Save}</button>
+                    <!-- var inputs = document.getElementsByClassName("fielo-shopping__quantity");
+                    var cookie = "";
+                    for(var i = 0; i < inputs.length; i++){
+                        cookie = inputs[i].name.split("quantities.")[0] + ":" + inputs[i].value + "-";
+                    }
+                    setCookie("shoppingCart", cookie, 1);
+                    -->
                     <button data-remoteaction="{!namespace}ShoppingCartController.emptyCart" class="fielo-button fielo-button--danger fielo-js-confirm fielo-js-upgrade fielo-button__empty-cart" >{!$Label.EmptyCart}</button>
+                    <!-- setCookie("shoppingCart","","0"); -->
                     <button data-remoteaction="{!namespace}ShoppingCartController.checkout" class="fielo-button fielo-button--safe fielo-js-upgrade fielo-button__checkout" >{!$Label.CreateVoucher}</button>
                 </div>
             </form>
@@ -79,4 +87,41 @@
             {! $Label.ErrorNoItemShoppingCart}
         </span>
     </apex:panelGroup>
+
+    <script>
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays*24*60*60*1000));
+            var expires = "expires="+d.toUTCString();
+            document.cookie = cname + "=" + cvalue + "; " + expires;
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for(var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        /*function checkCookie() {
+            var user = getCookie("username");
+            if (user != "") {
+                alert("Welcome again " + user);
+            } else {
+                user = prompt("Please enter your name:", "");
+                if (user != "" && user != null) {
+                    setCookie("username", user, 365);
+                }
+            }
+        }*/
+    </script>
+
 </apex:component>
