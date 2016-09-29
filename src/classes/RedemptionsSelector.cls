@@ -1,7 +1,7 @@
 public class RedemptionsSelector extends SObjectSelector{
 	public List<Schema.SObjectField> getSObjectFieldList(){
 		return new List<Schema.SObjectField> {
-				Redemption__c.Id
+				FieloPLT__Redemption__c.Id
 			};
 	}
 
@@ -14,16 +14,16 @@ public class RedemptionsSelector extends SObjectSelector{
 	}
 
 	public Schema.SObjectType getSObjectType(){
-		return Redemption__c.sObjectType;
+		return FieloPLT__Redemption__c.sObjectType;
 	}
 
-	public List<Redemption__c> selectById(Set<ID> idSet){
-		return (List<Redemption__c>) selectSObjectsById(idSet);
+	public List<FieloPLT__Redemption__c> selectById(Set<ID> idSet){
+		return (List<FieloPLT__Redemption__c>) selectSObjectsById(idSet);
 	}
 
-	public List<Redemption__c> selectByStatusOriginAndMember(String status, String origin, Id memberId){
+	public List<FieloPLT__Redemption__c> selectByStatusOriginAndMember(String status, String origin, Id memberId){
 		assertIsAccessible();
-		return (List<Redemption__c>) Database.query(
+		return (List<FieloPLT__Redemption__c>) Database.query(
 				String.format(
 				'select {0} ' +
 				  'from {1} ' +
@@ -38,10 +38,10 @@ public class RedemptionsSelector extends SObjectSelector{
 	/*
 	 * For more examples see https://github.com/financialforcedev/fflib-apex-common-samplecode
 	 * 
-	public List<Redemption__c> selectBySomethingElse(List<String> somethings)
+	public List<FieloPLT__Redemption__c> selectBySomethingElse(List<String> somethings)
 	{
 		assertIsAccessible();
-		return (List<Redemption__c>) Database.query(
+		return (List<FieloPLT__Redemption__c>) Database.query(
 				String.format(
 				'select {0} ' +
 				  'from {1} ' +

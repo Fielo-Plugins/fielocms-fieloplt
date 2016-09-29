@@ -33,11 +33,11 @@ global with sharing class RewardService implements FieloCMS.DataInterface{
         if(component.FieloCMS__Limit__c == null)
             component.FieloCMS__Limit__c = 5;
 
-        if(categoryId == null && component.Category__c != null){
-            categoryId = component.Category__c;
+        if(categoryId == null && component.FieloCMS__Category__c != null){
+            categoryId = component.FieloCMS__Category__c;
         }
-        if(tagId == null && component.Tag__c != null){
-            tagId = component.Tag__c;
+        if(tagId == null && component.FieloCMS__Tag__c != null){
+            tagId = component.FieloCMS__Tag__c;
         }
 
         //Calculate the offset from the Page Number

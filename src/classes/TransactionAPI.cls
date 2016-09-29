@@ -43,9 +43,11 @@ global with sharing class TransactionAPI implements FieloCMS.DataInterface, Fiel
             sp = Database.setSavepoint();
             
             FieloPLT__Transaction__c trans = (FieloPLT__Transaction__c)record;
-            trans.FieloPLT__Type__c = (component.TransactionType__c != null && component.TransactionType__c != '') ? component.TransactionType__c : 'Code Insert';
+            //se comenta porque el code insert pasa a una solution
+            //trans.FieloPLT__Type__c = (component.TransactionType__c != null && component.TransactionType__c != '') ? component.TransactionType__c : 'Code Insert';
             trans.FieloPLT__Member__c = MemberService.getCurrentMemberId();
-            FieloPLT.CodeUtil.sendCode(trans);
+            //se comenta porque el code insert pasa a una solution
+            //FieloPLT.CodeUtil.sendCode(trans);
             successMessages.add(new FieloCMS.RemoteActionResult.RemoteActionMessage( ApexPages.Severity.Info, 'Success'));            
         }catch(DmlException e){            
             Database.rollback(sp);
