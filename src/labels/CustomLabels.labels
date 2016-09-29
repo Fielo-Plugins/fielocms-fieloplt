@@ -1,55 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
     <labels>
-        <fullName>Block</fullName>
-        <categories>BlockUnblockMember.component</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Block</shortDescription>
-        <value>Block</value>
-    </labels>
-    <labels>
-        <fullName>Unblock</fullName>
-        <categories>BlockUnblockMember.component</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Unblock</shortDescription>
-        <value>Unblock</value>
-    </labels>
-    TotalPoints
-    <labels>
-        <fullName>TotalPoints</fullName>
-        <categories>ShoppingCart.component</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Total Points</shortDescription>
-        <value>Total Points</value>
-    </labels>
-    <labels>
-        <fullName>IAgree</fullName>
-        <categories>AgreementAccept.page</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Agreement</shortDescription>
-        <value>I Agree</value>
-    </labels>
-    <labels>
-        <fullName>Set</fullName>
-        <categories>ToggleManager.component</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Set</shortDescription>
-        <value>Set</value>
-    </labels>
-    <labels>
-        <fullName>Unset</fullName>
-        <categories>ToggleManager.component</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Unset</shortDescription>
-        <value>Unset</value>
-    </labels>
-    <labels>
         <fullName>Add</fullName>
         <categories>LevelEditBackEnd.page</categories>
         <language>en_US</language>
@@ -64,6 +15,14 @@
         <protected>false</protected>
         <shortDescription>Back</shortDescription>
         <value>Back</value>
+    </labels>
+    <labels>
+        <fullName>Block</fullName>
+        <categories>BlockUnblockMember.component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Block</shortDescription>
+        <value>Block</value>
     </labels>
     <labels>
         <fullName>BlockUnblock</fullName>
@@ -196,6 +155,14 @@
         <protected>false</protected>
         <shortDescription>Go To Home</shortDescription>
         <value>Go to Home</value>
+    </labels>
+    <labels>
+        <fullName>IAgree</fullName>
+        <categories>AgreementAccept.page</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Agreement</shortDescription>
+        <value>I Agree</value>
     </labels>
     <labels>
         <fullName>InfoMemberInApproval</fullName>
@@ -341,6 +308,14 @@
         <value>Save</value>
     </labels>
     <labels>
+        <fullName>Set</fullName>
+        <categories>ToggleManager.component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Set</shortDescription>
+        <value>Set</value>
+    </labels>
+    <labels>
         <fullName>ShoppingExistingReward</fullName>
         <categories>RewardDetailController.cls</categories>
         <language>en_US</language>
@@ -396,12 +371,43 @@
         <value>Set / Unset Manager</value>
     </labels>
     <labels>
+        <fullName>TotalPoints</fullName>
+        <categories>ShoppingCart.component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Total Points</shortDescription>
+        <value>Total Points</value>
+    </labels>
+    <labels>
+        <fullName>Unblock</fullName>
+        <categories>BlockUnblockMember.component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Unblock</shortDescription>
+        <value>Unblock</value>
+    </labels>
+    <labels>
+        <fullName>Unset</fullName>
+        <categories>ToggleManager.component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Unset</shortDescription>
+        <value>Unset</value>
+    </labels>
+    <labels>
         <fullName>UsernameIsRequired</fullName>
         <categories>ForgotPasswordFieloController.cls</categories>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Required Username</shortDescription>
         <value>E-mail is required</value>
+    </labels>
+    <labels>
+        <fullName>Voucher</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Voucher</shortDescription>
+        <value>Voucher</value>
     </labels>
     <labels>
         <fullName>Welcome</fullName>
