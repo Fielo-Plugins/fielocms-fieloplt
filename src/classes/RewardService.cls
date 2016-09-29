@@ -21,9 +21,9 @@ global with sharing class RewardService implements FieloCMS.DataInterface{
         if(filters != null){
             Map<String,Object> filtersMap = (Map<String,Object>) JSON.deserializeUntyped(filters);
             for(String s : filtersMap.keySet()){
-                if(s == 'Category__c'){
+                if(s == 'FieloCMS__Category__c'){
                     categoryId = (String)filtersMap.get(s);
-                }else if(s == 'Tag__c'){
+                }else if(s == 'FieloCMS__Tag__c'){
                     tagId = (String)filtersMap.get(s);
                 }
             }

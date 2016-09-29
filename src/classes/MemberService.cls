@@ -110,32 +110,6 @@ public with sharing class MemberService implements FieloCMS.DataInterface, Fielo
         if(UserInfo.getUserType() == 'Guest')
             return null;
 
-        /*Cookie memberCookie = ApexPages.currentPage().getCookies().get('memberId');
-        Cookie sessionIdCookie = ApexPages.currentPage().getCookies().get('sessionMemberId');
-        if(memberCookie != null && sessionIdCookie != null && (sessionIdCookie.getValue() == UserInfo.getSessionId())){        
-            return (Id)memberCookie.getValue();
-        }else if(memId == null){
-            try{
-                List<FieloPLT__Member__c> members = [SELECT Id, FieloPLT__Program__c FROM FieloPLT__Member__c WHERE FieloPLT__User__c =: UserInfo.getUserId()];
-                if(members.size() == 1){
-                    memId = members[0].Id;
-                    setCurrentMemberId(memId);
-                }else{
-                    Id programId = FieloPLT.ProgramUtil.getProgramByDomain().Id;
-                    for(FieloPLT__Member__c m : members){
-                        if(m.FieloPLT__Program__c == programId){
-                            memId = m.Id;
-                            setCurrentMemberId(memId);
-                            break;
-                        }
-                    }
-                }
-            }catch(Exception e){
-                return null;
-            }
-        }*/
-
-
         if(memId == null){
             SessionCache__c sessionCache = SessionCache__c.getInstance(UserInfo.getUserId());
             if((sessionCache.SessionId__c == UserInfo.getSessionId() || UserInfo.getUserType() == 'Standard') && sessionCache.MemberId__c != null){
@@ -146,7 +120,7 @@ public with sharing class MemberService implements FieloCMS.DataInterface, Fielo
                     if(members.size() == 1){
                         memId = members[0].Id;
                     }else{
-                        Id programId = new ProgramsSelector(new List<String>()).getProgramByDomain().Id;
+                        Id programId = ProgramService.getProgramByDomain().Id;
                         for(FieloPLT__Member__c m : members){
                             if(m.FieloPLT__Program__c == programId){
                                 memId = m.Id;

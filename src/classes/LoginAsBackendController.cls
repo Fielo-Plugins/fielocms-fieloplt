@@ -22,7 +22,7 @@ public with sharing class LoginAsBackendController {
                 return null;
             }
 
-            Profile fieloProfile = MemberUtil.getFieloProfile(member.Program__c);
+            Profile fieloProfile = MemberUtil.getFieloProfile(member.FieloPLT__Program__c);
             Program__c program = new ProgramsSelector().selectById(new Set<Id>{member.Program__c})[0];
             
             String withSameLastName = String.valueOf([SELECT Id FROM User WHERE LastName =: UserInfo.getLastName()].size());

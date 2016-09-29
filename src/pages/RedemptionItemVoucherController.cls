@@ -2,7 +2,7 @@ public with sharing class RedemptionItemVoucherController {
 
     public List<voucherItem> vouchers {get; set;}
     public String voucherCustomVoucher {get; set;}
-    public Program__c program {get; set;}
+    public FieloPLT__Program__c program {get; set;}
 
     public String imageId {get{
         List<Document> docs = [SELECT Id FROM Document WHERE DeveloperName = 'FieloLogoSmallBackEnd' AND NamespacePrefix =: OrganizationUtil.getPrefix() LIMIT 1];
@@ -47,9 +47,8 @@ public with sharing class RedemptionItemVoucherController {
 
         if(String.isNotBlank(idOrden) || String.isNotBlank(voucherId)){
             List<RedemptionItem__c> redemptionItem;
-            String query = 'SELECT Name, Redemption__r.Member__r.Program__c, LastModifiedDate, Id, Redemption__c, Quantity__c, Status__c, Reward__c, Reward__r.AttachmentId__c, Reward__r.InstructionsRichText__c, Reward__r.Instructions__c, Reward__r.UniqueVoucher__c, UniqueCode__c, Code__c, CreatedDate, CreatedById';
-            String fieldSet = OrganizationUtil.hasPrefix() ? OrganizationUtil.getPrefixUnderScore() + 'Voucher' : 'Voucher';
-            List<Schema.FieldSetMember> fieldsRedemptionItem = Schema.SObjectType.RedemptionItem__c.fieldSets.getMap().get(fieldSet).getFields();
+            String query = 'SELECT Name, FieloPLT__Redemption__r.FieloPLT__Member__r.FieloPLT__Program__c, LastModifiedDate, Id, Redemption__c, Quantity__c, Status__c, Reward__c, Reward__r.AttachmentId__c, Reward__r.InstructionsRichText__c, Reward__r.Instructions__c, Reward__r.UniqueVoucher__c, UniqueCode__c, Code__c, CreatedDate, CreatedById';
+            List<Schema.FieldSetMember> fieldsRedemptionItem = Schema.SObjectType.RedemptionItem__c.fieldSets.getMap().get('Voucher').getFields();
 
             for(Schema.FieldSetMember f : fieldsRedemptionItem){
                 if(!query.contains(f.getFieldPath().replace(OrganizationUtil.getPrefixUnderScore(),''))){
@@ -66,7 +65,7 @@ public with sharing class RedemptionItemVoucherController {
             }
             redemptionItem = Database.query(query);
             if(!redemptionItem.isEmpty()){
-                program = new ProgramsSelector(new Set<String>{'ShowVoucherCode__c', 'CustomVoucherCss__c', 'InstructionsVoucher__c', 'InstructionsReward__c'}).selectById(new Set<Id>{redemptionItem[0].Redemption__r.Member__r.Program__c})[0];
+                program = new ProgramsSelector(new Set<String>{'ShowVoucherCode__c', 'CustomVoucherCss__c', 'InstructionsVoucher__c', 'InstructionsReward__c'}).selectById(new Set<Id>{redemptionItem[0].FieloPLT__Redemption__r.FieloPLT__Member__r.FieloPLT__Program__c})[0];
             }else{
                 program = new ProgramsSelector(new Set<String>{'ShowVoucherCode__c', 'CustomVoucherCss__c', 'InstructionsVoucher__c', 'InstructionsReward__c'}).selectByDefault();
             }

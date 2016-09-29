@@ -1,27 +1,27 @@
 public with sharing class ProgramsSelector extends SObjectSelector{
   public List<Schema.SObjectField> getSObjectFieldList(){
     return new List<Schema.SObjectField> {
-        Program__c.Id,
-        Program__c.Name,
-        Program__c.RequestMemberAuthorization__c,
-        Program__c.UserCreationClass__c,
-                Program__c.AuditPoints__c,
-                Program__c.ExpirationMode__c,
-                Program__c.PointsSpendingMode__c
+        FieloPLT__Program__c.Id,
+        FieloPLT__Program__c.Name,
+        FieloPLT__Program__c.FieloPLT__RequestMemberAuthorization__c,
+        FieloPLT__Program__c.FieloPLT__UserCreationClass__c,
+        FieloPLT__Program__c.FieloPLT__AuditPoints__c,
+        FieloPLT__Program__c.FieloPLT__ExpirationMode__c,
+        FieloPLT__Program__c.FieloPLT__PointsSpendingMode__c
       };
   }
 
   public Schema.SObjectType getSObjectType(){
-    return Program__c.sObjectType;
+    return FieloPLT__Program__c.sObjectType;
   }
 
-  public List<Program__c> selectById(Set<Id> idSet){
-    return (List<Program__c>)selectSObjectsById(idSet);
+  public List<FieloPLT__Program__c> selectById(Set<Id> idSet){
+    return (List<FieloPLT__Program__c>)selectSObjectsById(idSet);
   }
 
     private Id lastProgramId;
-  private Program__c staticProgram;
-  public Program__c selectStaticProgram(Id programId){
+  private FieloPLT__Program__c staticProgram;
+  public FieloPLT__Program__c selectStaticProgram(Id programId){
     if(lastProgramId == null || lastProgramId != programId){
       lastProgramId = programId;
       Set<String> fieldSet = getFieldList();
@@ -30,7 +30,7 @@ public with sharing class ProgramsSelector extends SObjectSelector{
       setFieldList(fieldSet);
     }
 
-        Program__c returnProgram = new Program__c(Id = staticProgram.Id);
+        FieloPLT__Program__c returnProgram = new FieloPLT__Program__c(Id = staticProgram.Id);
         for(String field : getFieldList()){
             try{
                 returnProgram.put(field, staticProgram.get(field));
@@ -60,17 +60,17 @@ public with sharing class ProgramsSelector extends SObjectSelector{
   private static Set<String> getAllFields(){
         //String query = ' ';
         Set<String> fieldSet = new Set<String>();
-        PublicSettings__c settings = PublicSettings__c.getOrgDefaults();
+        FieloPLT__PublicSettings__c settings = FieloPLT__PublicSettings__c.getOrgDefaults();
         //If the Custom Setting is not empty then used the Optimized query
-        if(settings.OptimizedProgramQuery__c){
+        if(settings.FieloPLT__OptimizedProgramQuery__c){
             //If its the Default Case use only Standard Field
-            fieldSet.addAll(new Set<String>{'Name','RewardInjectQuery__c','SegmentInjectQuery__c','CategoryInjectQuery__c','TagInjectQuery__c','Image__c','AuditPoints__c','IsDefault__c','ExpirationMode__c','ExpirationPeriod__c','InstructionsReward__c','VoucherInstructions__c','Language__c','Locale__c','NumberOfVoucherDigits__c','OpenRedemptionDays__c','PointCost__c','RequestRedemptionAuthorization__c','RequestMemberAuthorization__c','RequestTransactionAuthorization__c','ShowVoucherCode__c','PointsSpendingMode__c','OnlineTransactionProcessing__c','UseAgreement__c','UserCreationClass__c'});
-            for(Schema.FieldSetMember fsm : Schema.SObjectType.Program__c.fieldSets.ProgramQuery.getFields()){
+            fieldSet.addAll(new Set<String>{'Name','FieloPLT__RewardInjectQuery__c','FieloPLT__SegmentInjectQuery__c','FieloPLT__CategoryInjectQuery__c','FieloPLT__TagInjectQuery__c','FieloPLT__AuditPoints__c','FieloPLT__IsDefault__c','FieloPLT__ExpirationMode__c','FieloPLT__ExpirationPeriod__c','FieloPLT__NumberOfVoucherDigits__c','FieloPLT__ActualPointCost__c','FieloPLT__RequestRedemptionAuthorization__c','FieloPLT__RequestMemberAuthorization__c','RequestTransactionAuthorization__c','FieloPLT__RequestTransactionAuthorization__c','FieloPLT__PointsSpendingMode__c','FieloPLT__OnlineTransactionProcessing__c','FieloPLT__UseAgreement__c','FieloPLT__UserCreationClass__c'});
+            for(Schema.FieldSetMember fsm : Schema.SObjectType.FieloPLT__Program__c.fieldSets.FieloPLT__ProgramQuery.getFields()){
                 fieldSet.add(fsm.getFieldPath());
             }
         }else{
             //Use Describe to get all the Fields
-            Map<String, Schema.SObjectField> fields = Program__c.SObjectType.getDescribe().fields.getMap();
+            Map<String, Schema.SObjectField> fields = FieloPLT__Program__c.SObjectType.getDescribe().fields.getMap();
             Set<String> fieldFilter = new Set<String> {'CreatedById', 'IsDeleted', 'OwnerId', 'LastModifiedDate', 'LastModifiedById', 'SystemModstamp'};
             for(Schema.SObjectField field : fields.values()){
                 fieldSet.add(field.getDescribe().getName());
@@ -79,17 +79,17 @@ public with sharing class ProgramsSelector extends SObjectSelector{
         return fieldSet;
     }
 
-  //private static Program__c programBySiteUrl;
-  public Program__c selectBySiteUrl(String siteDomain){
+  //private static FieloPLT__Program__c programBySiteUrl;
+  public FieloPLT__Program__c selectBySiteUrl(String siteDomain){
     //if(programBySiteUrl == null){
           if(siteDomain != null) siteDomain = siteDomain.replace('.secure.','.');
 
       assertIsAccessible();
-      List<Program__c> programs = (List<Program__c>) Database.query(
+      List<FieloPLT__Program__c> programs = (List<FieloPLT__Program__c>) Database.query(
           String.format(
           'select {0} ' +
             'from {1} ' +
-            'where SiteDomain__c =: siteDomain ' +
+            'where FieloPLT__SiteDomain__c =: siteDomain ' +
             'order by {2}',
           new List<String> {
             getFieldListString(),
@@ -107,9 +107,9 @@ public with sharing class ProgramsSelector extends SObjectSelector{
       //return programBySiteUrl;
   }
 
-  /*Program__c p = getProgramByDomain();
-    Program__c returnProgram = new Program__c(Id = p.Id);
-    Map<String, Schema.SObjectField> fieldsDescribe = Program__c.SObjectType.getDescribe().fields.getMap();
+  /*FieloPLT__Program__c p = getProgramByDomain();
+    FieloPLT__Program__c returnProgram = new FieloPLT__Program__c(Id = p.Id);
+    Map<String, Schema.SObjectField> fieldsDescribe = FieloPLT__Program__c.SObjectType.getDescribe().fields.getMap();
     if(fields != null){
         for(String field : fields){
             try{
@@ -121,13 +121,13 @@ public with sharing class ProgramsSelector extends SObjectSelector{
     }
     return returnProgram;*/
 
-  private static Program__c programDefault;
-  public Program__c selectByDefault(){
-    programDefault = (Program__c) Database.query(
+  private static FieloPLT__Program__c programDefault;
+  public FieloPLT__Program__c selectByDefault(){
+    programDefault = (FieloPLT__Program__c) Database.query(
         String.format(
         'select {0} ' +
           'from {1} ' +
-          'where IsDefault__c = true ' +
+          'where FieloPLT__IsDefault__c = true ' +
           'order by {2}',
         new List<String> {
           getFieldListString(),
@@ -137,8 +137,8 @@ public with sharing class ProgramsSelector extends SObjectSelector{
     return programDefault;
   }
 
-  public List<Program__c> selectAll(){
-    return (List<Program__c>) Database.query(
+  public List<FieloPLT__Program__c> selectAll(){
+    return (List<FieloPLT__Program__c>) Database.query(
       String.format(
       'select {0} ' +
         'from {1} ' +
@@ -152,10 +152,10 @@ public with sharing class ProgramsSelector extends SObjectSelector{
   /*
    * For more examples see https://github.com/financialforcedev/fflib-apex-common-samplecode
    *
-  public List<Program__c> selectBySomethingElse(List<String> somethings)
+  public List<FieloPLT__Program__c> selectBySomethingElse(List<String> somethings)
   {
     assertIsAccessible();
-    return (List<Program__c>) Database.query(
+    return (List<FieloPLT__Program__c>) Database.query(
         String.format(
         'select {0} ' +
           'from {1} ' +

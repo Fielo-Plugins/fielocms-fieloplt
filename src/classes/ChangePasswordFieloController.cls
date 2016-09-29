@@ -15,7 +15,7 @@ global with sharing class ChangePasswordFieloController {
         try{
             if(oldpassword == '') oldpassword = null;
             redirectPage = Site.changePassword(newPassword, verifyNewPassword, oldpassword);
-            Program__c program = new ProgramsSelector(new Set<String>{'MemberSelectionPage__c'}).selectBySiteUrl(Site.getDomain());
+            FieloPLT__Program__c program = new ProgramsSelector(new Set<String>{'MemberSelectionPage__c'}).selectBySiteUrl(Site.getDomain());
             if(program.MemberSelectionPage__c != null){
                 result.redirectURL = '/Page?pageId=' + program.MemberSelectionPage__c;
             } else if(redirectPage != null){

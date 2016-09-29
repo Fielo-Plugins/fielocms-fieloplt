@@ -122,6 +122,40 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>RedirectPage__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Redirect Page</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>FieloCMS__Page__c.RecordType.DeveloperName</field>
+                <operation>equals</operation>
+                <value>Page</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>FieloCMS__Page__c</referenceTo>
+        <relationshipLabel>Components (Detail page)</relationshipLabel>
+        <relationshipName>ListComponentsDetailPage</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Program__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Program</label>
+        <referenceTo>FieloPLT__Program__c</referenceTo>
+        <relationshipLabel>Components</relationshipLabel>
+        <relationshipName>Components</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>AccountCRMMode__c</fullName>
         <deprecated>false</deprecated>
         <description>Person Account: Create a new Person Account related to the member
