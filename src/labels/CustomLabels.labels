@@ -16,6 +16,23 @@
         <shortDescription>Unblock</shortDescription>
         <value>Unblock</value>
     </labels>
+    TotalPoints
+    <labels>
+        <fullName>TotalPoints</fullName>
+        <categories>ShoppingCart.component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Total Points</shortDescription>
+        <value>Total Points</value>
+    </labels>
+    <labels>
+        <fullName>IAgree</fullName>
+        <categories>AgreementAccept.page</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Agreement</shortDescription>
+        <value>I Agree</value>
+    </labels>
     <labels>
         <fullName>Set</fullName>
         <categories>ToggleManager.component</categories>

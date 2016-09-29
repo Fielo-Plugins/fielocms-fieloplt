@@ -25,13 +25,13 @@
                         <input id="password" required="true" name="password" type="password" />
                     </div>
                 </div>
-                <div class="mdl-grid">
+                <!--<div class="mdl-grid">
                     <apex:panelGroup layout="none" rendered="{!config.Facebook__c}" >
                         <div class="fielo-facebook js-to-be-initialized" data-organizationid="{!$Organization.Id}" data-siteurl="{!$Site.CurrentSiteUrl}" >
                             <a href="https://login.salesforce.com/services/auth/sso/{!$Organization.Id}/FacebookLogin?site={!$Site.CurrentSiteUrl}" ><i></i>&nbsp; {!$Label.FacebookLogin}</a>
                         </div>
                     </apex:panelGroup>
-                </div>
+                </div>-->
             </fieldset>
             <div class="fielo-controls" >
                 <a href="#" class="fielo-login__link" data-switchlabel="{!$Label.back}" >{!$Label.site.forgot_password}</a>

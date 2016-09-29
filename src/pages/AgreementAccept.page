@@ -24,7 +24,7 @@
                                         <apex:inputCheckbox value="{!acceptAgreement}"> 
                                             <apex:actionSupport event="onclick" rerender="botonId"/>
                                         </apex:inputCheckbox> 
-                                        <apex:outputText value="{!$Label.FieloPLT__IAgree}" /> 
+                                        <apex:outputText value="{!$Label.IAgree}" /> 
                                     </label>
                                     <!--Button -->
                                     <apex:commandButton value="{!$Label.FieloPLT__Save}" action="{!doSave}" styleClass="fielo-button" id="botonId"/>

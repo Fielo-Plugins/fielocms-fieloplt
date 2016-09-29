@@ -16,7 +16,7 @@ global with sharing class ChangePasswordFieloController {
             if(oldpassword == '') oldpassword = null;
             redirectPage = Site.changePassword(newPassword, verifyNewPassword, oldpassword);
             if(redirectPage != null){
-            result.redirectURL = redirectPage.getUrl();
+                result.redirectURL = redirectPage.getUrl();
             }
         }catch(FieloException e){
             result.redirectURL = '';

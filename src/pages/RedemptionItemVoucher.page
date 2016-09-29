@@ -21,12 +21,12 @@
                     <apex:image styleClass="logoDefault"  rendered="{!ISNULL(imageId)}" value="{!URLFOR($Resource.FieloEE_Legacy, 'images/logo/fielo-000000.png')}" />
                 </div>
                 <!--Codigo de barras-->
-                <div class="barCode right">
+                <!--<div class="barCode right">
                     <apex:panelGroup rendered="{!program.ShowVoucherCode__c}" >
                         <c:BarCode Value="{!v.redemptionItem.UniqueCode__c}"/>
                         <div style="height: 24px;margin-top: 46px;"><apex:outputText Value="{!v.redemptionItem.UniqueCode__c}" style="font-size:20px;" /></div>
                     </apex:panelGroup>
-                </div>
+                </div>-->
             </div>
             <div class="infoVoucher clearfix">
                 <!--imagen premio-->

@@ -12,7 +12,7 @@ global without sharing class RegisterStep2Controller {
 
     private String getFieldset(){
         List<String> fields = new List<String>{'Id'};
-        for(Schema.FieldSetMember fsm : Schema.SObjectType.FieloPLT__Member__c.fieldSets.FieloPLT__RegistrationStep2.getFields()){
+        for(Schema.FieldSetMember fsm : Schema.SObjectType.FieloPLT__Member__c.fieldSets.RegistrationStep2.getFields()){
             fields.add(fsm.getFieldPath());
         }    
         return String.join(fields,',');

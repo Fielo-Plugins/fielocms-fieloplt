@@ -70,15 +70,15 @@ global with sharing class HandleInvitationsMembersController implements FieloCMS
         for(FieloPLT__Member__c member : members){
             programIds.add(member.FieloPLT__Program__c);
         }
-        Map<Id, FieloPLT__Program__c> programsMap = new Map<Id, FieloPLT__Program__c>([SELECT SiteUrl__c, FieloPLT__RegisterPage__c FROM FieloPLT__Program__c WHERE Id in : programIds]);
+        /*Map<Id, FieloPLT__Program__c> programsMap = new Map<Id, FieloPLT__Program__c>([SELECT SiteUrl__c, RegisterPage__c FROM FieloPLT__Program__c WHERE Id in : programIds]);
         SObjectUnitOfWork uow = new SObjectUnitOfWork(new List<Schema.SobjectType>{FieloPLT__Email__c.SObjectType});
         for(FieloPLT__Member__c member : members){
             String recipientName = member.FieloPLT__FirstName__c + ' ' + member.FieloPLT__LastName__c;
             String url = programsMap.get(member.FieloPLT__Program__c).SiteUrl__c + 'FieloCMS__Page?memberId=' + member.Id + '&pageId=' + programsMap.get(member.FieloPLT__Program__c).FieloPLT__RegisterPage__c;
             uow.registerNew( new FieloPLT__Email__c(FieloPLT__Email__c = member.FieloPLT__Email__c, FieloPLT__Type__c = 'Register', FieloPLT__Member__c = member.Id, FieloPLT__Program__c = member.FieloPLT__Program__c, FieloPLT__Link__c = url, FieloPLT__RecipientName__c = recipientName) );
-        }
+        }*/
 
-        uow.commitWork();
+        //uow.commitWork();
     }
 
     public static void cancelInvitations(Set<Id> memberIds){        

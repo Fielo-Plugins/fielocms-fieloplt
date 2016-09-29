@@ -1,4 +1,4 @@
-global with sharing class TagAPI implements FieloCMS.ViewSubComponentInterface,FieloCMS.DataInterface{
+global with sharing class TagService implements FieloCMS.ViewSubComponentInterface,FieloCMS.DataInterface{
 	
 	public Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){        
         FieloPLT__Program__c program = ProgramService.getCurrentProgram();
@@ -8,7 +8,7 @@ global with sharing class TagAPI implements FieloCMS.ViewSubComponentInterface,F
             if(c.FieloCMS__Limit__c == null)
                 c.FieloCMS__Limit__c = 5;
                         
-            newMapData.put(c.Id, FieloPLT.TagService.getTags(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c), c.Tag__c, program.Id, MemberService.getCurrentMemberId(), c.FieloCMS__Limit__c.intValue(), 0, c.FieloCMS__OrderBy__c));
+            //newMapData.put(c.Id, FieloPLT.TagService.getTags(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c), c.Tag__c, program.Id, MemberService.getCurrentMemberId(), c.FieloCMS__Limit__c.intValue(), 0, c.FieloCMS__OrderBy__c));
         }
         return newMapData;
     }
