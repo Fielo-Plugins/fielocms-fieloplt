@@ -1,4 +1,4 @@
-public with sharing class BadgeAPI implements FieloCMS.DataInterface{
+public with sharing class BadgeService implements FieloCMS.DataInterface{
 	
 	//BADGES
     public Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){

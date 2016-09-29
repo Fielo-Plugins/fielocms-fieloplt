@@ -9,8 +9,8 @@ global with sharing class ChangePasswordFieloController {
     }
 
     @RemoteAction
-    global static RemoteActionResult changePassword(String newPassword, String verifyNewPassword, String oldpassword){        
-        RemoteActionResult result = new RemoteActionResult();                
+    global static FieloCMS.RemoteActionResult changePassword(String newPassword, String verifyNewPassword, String oldpassword){        
+        FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();                
         Pagereference redirectPage;
         try{
             if(oldpassword == '') oldpassword = null;

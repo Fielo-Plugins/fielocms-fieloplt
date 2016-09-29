@@ -1,5 +1,0 @@
-Hello {!FieloPLT__Email__c.FieloPLT__RecipientName__c}: 
-
-Your request to be a participant of our Loyalty Program begin. Please complete the registration proccess going to this link: 
-
-{!FieloPLT__Email__c.Link__c}

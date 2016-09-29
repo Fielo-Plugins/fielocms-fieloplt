@@ -1,5 +1,0 @@
-Hello {!FieloPLT__Email__c.FieloPLT__RecipientName__c}: 
-
-Your registration has been approved. Please complete the registration proccess going to this link: 
-
-{!FieloPLT__Email__c.Link__c}

@@ -1,4 +1,4 @@
-global with sharing class RewardAPI implements FieloCMS.DataInterface{
+global with sharing class RewardService implements FieloCMS.DataInterface{
 
     public Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){        
         FieloPLT__Program__c program = ProgramService.getCurrentProgram();
@@ -8,7 +8,8 @@ global with sharing class RewardAPI implements FieloCMS.DataInterface{
             if(c.FieloCMS__Limit__c == null)
                 c.FieloCMS__Limit__c = 5;
 
-            newMapData.put(c.Id, FieloPLT.RewardService.getRewards(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), c.Tag__c, c.Category__c, c.FieloCMS__Limit__c.intValue(), 0, c.FieloCMS__OrderBy__c, c.FilterBySegment__c));                       
+            //newMapData.put(c.Id, FieloPLT.RewardService.getRewards(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), c.Tag__c, c.Category__c, c.FieloCMS__Limit__c.intValue(), 0, c.FieloCMS__OrderBy__c, c.FilterBySegment__c));
+            newMapData.put(c.Id, null);
         }
         return newMapData;
     }
@@ -41,7 +42,8 @@ global with sharing class RewardAPI implements FieloCMS.DataInterface{
 
         //Calculate the offset from the Page Number
         Integer offset = Integer.valueOf(component.FieloCMS__Limit__c * (pageNumber - 1));
-        return FieloPLT.RewardService.getRewards(OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), tagId, categoryId, component.FieloCMS__Limit__c.intValue(), offset, orderBy, component.FilterBySegment__c);
+        //return FieloPLT.RewardService.getRewards(OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c), program.Id, MemberService.getCurrentMemberId(), tagId, categoryId, component.FieloCMS__Limit__c.intValue(), offset, orderBy, component.FilterBySegment__c);
+        return null;
     }
 
 }

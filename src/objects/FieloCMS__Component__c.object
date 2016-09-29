@@ -108,6 +108,20 @@
         <label>Record Fieldset</label>
     </fieldSets>
     <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description></description>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Accounts</relationshipLabel>
+        <relationshipName>Accounts</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>AccountCRMMode__c</fullName>
         <deprecated>false</deprecated>
         <description>Person Account: Create a new Person Account related to the member

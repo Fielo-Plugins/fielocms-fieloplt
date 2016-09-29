@@ -64,10 +64,10 @@
 		<members>*</members>
 		<name>CustomTab</name>
 	</types>
-	<types>
+	<!--<types>
 		<members>*</members>
 		<name>Translations</name>
-	</types>
+	</types>-->
 	<types>
 		<members>*</members>
 		<name>ApexTrigger</name>

@@ -327,6 +327,19 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <fields>
+        <fullName>SiteURL__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Site url of the site to map the program with a salesforce site</description>
+        <externalId>false</externalId>
+        <inlineHelpText></inlineHelpText>
+        <label>Site URL</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <label>Program</label>
     <listViews>
         <fullName>FieloPLT__All</fullName>

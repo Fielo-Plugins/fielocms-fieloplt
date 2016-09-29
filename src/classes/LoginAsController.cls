@@ -6,7 +6,7 @@ public with sharing class LoginAsController {
 		String hash = system.currentPageReference().getParameters().get('hash');
 
 		//get the user custom setting and validates hash and expiration date
-		FrontEndSessionData__c fe = FrontEndSessionData__c.getInstance(userId);
+		SessionCache__c fe = SessionCache__c.getInstance(userId);
 		if(fe.Hash__c != null && fe.Hash__c != '' && hash == fe.Hash__c && fe.ExpirationDate__c >= System.now()){
 			//set the temporary password
 	    	String pass = system.resetPassword(userId, false).getPassword() + system.now().millisecond();
