@@ -4,4 +4,14 @@
     <availableInTouch>false</availableInTouch>
     <confirmationTokenRequired>false</confirmationTokenRequired>
     <label>LoginAs</label>
+    <packageVersions>
+        <majorNumber>1</majorNumber>
+        <minorNumber>52</minorNumber>
+        <namespace>FieloCMS</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>1</majorNumber>
+        <minorNumber>0</minorNumber>
+        <namespace>FieloPLT</namespace>
+    </packageVersions>
 </ApexPage>

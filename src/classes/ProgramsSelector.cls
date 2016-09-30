@@ -89,7 +89,7 @@ public with sharing class ProgramsSelector extends SObjectSelector{
           String.format(
           'select {0} ' +
             'from {1} ' +
-            'where FieloPLT__SiteDomain__c =: siteDomain ' +
+            'where SiteDomain__c =: siteDomain ' +
             'order by {2}',
           new List<String> {
             getFieldListString(),

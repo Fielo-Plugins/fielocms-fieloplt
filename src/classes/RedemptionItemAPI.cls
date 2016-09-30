@@ -1,6 +1,6 @@
 global with sharing class RedemptionItemAPI implements FieloCMS.DataInterface{
 	
-	public Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){                
+	global Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){                
         Map<Id,Object> newMapData = new Map<Id,Object>();
         //Prepare all the queries
         for(FieloCMS__Component__c c : components){            
@@ -20,7 +20,7 @@ global with sharing class RedemptionItemAPI implements FieloCMS.DataInterface{
         return newMapData;
     }
 
-    public List<sObject> getData(FieloCMS__Component__c component, Integer pageNumber, String orderBy, String filters){        
+    global List<sObject> getData(FieloCMS__Component__c component, Integer pageNumber, String orderBy, String filters){        
         
         if(component.FieloCMS__Limit__c == null)
             component.FieloCMS__Limit__c = 5;
@@ -37,4 +37,4 @@ global with sharing class RedemptionItemAPI implements FieloCMS.DataInterface{
         whereCondition += ' OFFSET ' + String.valueOf(component.FieloCMS__Limit__c);
         return Database.query('SELECT ' + String.join(new List<String>(OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c)), ',') + ' FROM FieloPLT__RedemptionItem__c WHERE ' + whereCondition);
     }
-}   
+}
