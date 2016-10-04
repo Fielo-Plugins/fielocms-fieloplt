@@ -38,7 +38,7 @@
       "FieloCMS__ExcludeFields__c" : "Id,OwnerId,IsDeleted,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp,FieloPLT__Image__c,FieloPLT__Segment__c",
       "FieloCMS__Icon__c" : "FieloCms_Salesforce-vendor/images/sections/one_column.jpg",
       "FieloCMS__RecordType__c" : "Record",
-      "FieloCMS__Subcomponents__c" : "[{\"apiName\": \"AddtoCart\",\"label\": \"Add to Cart\", \"reflectionClass\": \"AddToCartController\", \"type\": \"Subcomponent\",\"closeOrder\":\"false\",\"detailUrl\":\"\"},{\"apiName\": \"ViewImage\",\"label\": \"ViewImage\", \"reflectionClass\": \"FieloCMS.Subcomponents.ImageView\", \"type\": \"Subcomponent\", \"fieldName\":\"FieloPLT__Image__c\",\"showLabel\":false}]",
+      "FieloCMS__Subcomponents__c" : "[{\"apiName\": \"AddtoCart\",\"label\": \"Add to Cart\", \"reflectionClass\": \"RewardAPI\", \"type\": \"Subcomponent\"},{\"apiName\": \"Checkout\",\"label\": \"Checkout\", \"reflectionClass\": \"CheckoutController\", \"type\": \"Subcomponent\",\"detailUrl\":\"\"},{\"apiName\": \"ViewImage\",\"label\": \"ViewImage\", \"reflectionClass\": \"FieloCMS.Subcomponents.ImageView\", \"type\": \"Subcomponent\", \"fieldName\":\"FieloPLT__Image__c\",\"showLabel\":false}]",
       "FieloCMS__Visibility__c" : "Both",
       "FieloCMS__sObject__c" : "FieloPLT__Reward__c",
       "FieloCMS__Layouts__c" : "View"
@@ -137,7 +137,7 @@
       "FieloCMS__ExcludeFields__c" : "Id,OwnerId,IsDeleted,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp,LastActivityDate,LastViewedDate,LastReferencedDate,FieloPLT__Image__c,FieloPLT__Image__c,FieloPLT__Segment__c",
       "FieloCMS__Icon__c" : "fielo-icon-content",
       "FieloCMS__RecordType__c" : "List",
-      "FieloCMS__Subcomponents__c" : "[     {         \"apiName\": \"AddtoCart\",         \"closeOrder\": \"false\",         \"detailUrl\": \"\",         \"label\": \"Add to Cart\",         \"reflectionClass\": \"AddToCartController\",         \"type\": \"Subcomponent\"     },     {         \"apiName\": \"ViewImage\",         \"fieldName\": \"FieloPLT__Image__c\",         \"label\": \"ViewImage\",         \"reflectionClass\": \"FieloCMS.Subcomponents.ImageView\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     },     {         \"apiName\": \"Tags\",         \"fieldName\": \"FieloPLT__Image__c\",         \"label\": \"Tags\",         \"reflectionClass\": \"TagAPI\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     } ]",
+      "FieloCMS__Subcomponents__c" : "[     {\"apiName\": \"AddtoCart\",\"label\": \"Add to Cart\", \"reflectionClass\": \"RewardAPI\", \"type\": \"Subcomponent\"},{\"apiName\": \"Checkout\",\"label\": \"Checkout\", \"reflectionClass\": \"CheckoutController\", \"type\": \"Subcomponent\",\"detailUrl\":\"\"},{         \"apiName\": \"ViewImage\",         \"fieldName\": \"FieloPLT__Image__c\",         \"label\": \"ViewImage\",         \"reflectionClass\": \"FieloCMS.Subcomponents.ImageView\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     },     {         \"apiName\": \"Tags\",         \"fieldName\": \"FieloPLT__Image__c\",         \"label\": \"Tags\",         \"reflectionClass\": \"TagAPI\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     } ]",
       "FieloCMS__Visibility__c" : "Both",
       "FieloCMS__sObject__c" : "FieloPLT__Reward__c",
       "FieloCMS__Layouts__c" : "Grid;Slider;Table"
