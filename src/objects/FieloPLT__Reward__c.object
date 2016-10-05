@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Rewards are the prizes available to Members who are part of a Program.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>FieloPLT__RewardTab</fullName>
+        <description>RewardTab</description>
+        <displayedFields>
+            <field>FieloPLT__Stock__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FieloPLT__Points__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FieloPLT__ExpirationDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CreatedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Reward Tab</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>ShoppingCart</fullName>
+        <description>Fieldset to show in the shopping cart component</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FieloPLT__Points__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Shopping Cart</label>
+    </fieldSets>
+    <fields>
+        <fullName>FieloPLT__Category__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Categories organize Rewards within a Catalog.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose the Category where the Reward can be included.</inlineHelpText>
+        <label>Category</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>That category belongs to another program. You must create the category in this program before trying to use it.</errorMessage>
+            <filterItems>
+                <field>$Source.FieloPLT__Program__c</field>
+                <operation>equals</operation>
+                <valueField>FieloPLT__Category__c.FieloPLT__Program__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>FieloPLT__Category__c</referenceTo>
+        <relationshipLabel>Rewards</relationshipLabel>
+        <relationshipName>Rewards</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FieloPLT__DaysAvailable__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Number of days a Voucher is valid after Redemption.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the number of days a Voucher is valid after Redemption.</inlineHelpText>
+        <label>Reward Voucher Validity (Days)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieloPLT__Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Product detailed description.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Reward product description.</inlineHelpText>
+        <label>Description</label>
+        <length>5000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>FieloPLT__ExpirationDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Date after which the Reward is no longer valid to redeem.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose the Reward expiration date.</inlineHelpText>
+        <label>Expiration Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>FieloPLT__Image__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Reward image (upload an image or enter URL).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose a Reward image (upload an image or enter URL).</inlineHelpText>
+        <label>Image</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieloPLT__Instructions__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Detailed steps to obtain the Voucher.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter detailed steps to obtain the Voucher.</inlineHelpText>
+        <label>Instructions</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>FieloPLT__IsInstantReward__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The Reward will be available to be given directly to Members via Incentives.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When ticked, the Reward will be available to be given directly to Members via Incentives.</inlineHelpText>
+        <label>Instant Reward</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FieloPLT__Points__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Number of points needed by Rewards to be redeemed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of points needed by Rewards to be redeemed.</inlineHelpText>
+        <label>Points</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieloPLT__Program__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Program where the Reward belongs to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose the Program where the Reward belongs to.</inlineHelpText>
+        <label>Program</label>
+        <referenceTo>FieloPLT__Program__c</referenceTo>
+        <relationshipLabel>Rewards</relationshipLabel>
+        <relationshipName>Rewards</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FieloPLT__Segment__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>It relates the Reward to a particular Segment.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>It relates the Reward to a particular Segment.</inlineHelpText>
+        <label>Segment</label>
+        <referenceTo>FieloPLT__Segment__c</referenceTo>
+        <relationshipLabel>Rewards</relationshipLabel>
+        <relationshipName>Rewards</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FieloPLT__Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Reward status.</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Available</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>FieloPLT__StockManagement__c</fullName>
+        <deprecated>false</deprecated>
+        <description>It performs stock control.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose Reward stock control.</inlineHelpText>
+        <label>Stock Management</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Controlled By Quantity</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Controlled By Item</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unlimited</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>FieloPLT__Stock__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Reward items available to be redeemed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Reward items available to be redeem.</inlineHelpText>
+        <label>Items Available</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieloPLT__UniqueVoucher__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>When ticked, a Voucher may include more than one Reward item.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When ticked, a Voucher may include more than one Reward item.</inlineHelpText>
+        <label>Unique Voucher</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FieloPLT__UnitCost__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Reward purchase cost.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Reward purchase cost.</inlineHelpText>
+        <label>Unit Cost</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>Reward</label>
+    <listViews>
+        <fullName>FieloPLT__All</fullName>
+        <columns>NAME</columns>
+        <columns>FieloPLT__Description__c</columns>
+        <columns>FieloPLT__Points__c</columns>
+        <columns>FieloPLT__StockManagement__c</columns>
+        <columns>FieloPLT__Stock__c</columns>
+        <columns>FieloPLT__ExpirationDate__c</columns>
+        <columns>FieloPLT__IsInstantReward__c</columns>
+        <columns>FieloPLT__UniqueVoucher__c</columns>
+        <columns>FieloPLT__Program__c</columns>
+        <columns>FieloPLT__Instructions__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Rewards</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>Reward Name</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Rewards</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>FieloPLT__UnitCost__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__Stock__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__Points__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieloPLT__ExpirationDate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>FieloPLT__Program__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>FieloPLT__Stock__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>FieloPLT__Points__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>FieloPLT__Program__c</searchFilterFields>
+        <searchFilterFields>FieloPLT__Stock__c</searchFilterFields>
+        <searchFilterFields>FieloPLT__Points__c</searchFilterFields>
+        <searchResultsAdditionalFields>FieloPLT__Program__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>FieloPLT__Stock__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>FieloPLT__Points__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>FieloPLT__AvailableDays</fullName>
+        <active>true</active>
+        <description>Value must be positive.</description>
+        <errorConditionFormula>FieloPLT__DaysAvailable__c &lt; 0</errorConditionFormula>
+        <errorDisplayField>FieloPLT__DaysAvailable__c</errorDisplayField>
+        <errorMessage>Value must be positive.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FieloPLT__ChangeStockMode</fullName>
+        <active>true</active>
+        <description>Only allowed when stock equals zero.</description>
+        <errorConditionFormula>((ISPICKVAL(PRIORVALUE(FieloPLT__StockManagement__c), &apos;Controlled By Quantity&apos;) &amp;&amp; (ISPICKVAL(FieloPLT__StockManagement__c, &apos;Unlimited&apos;) || ISPICKVAL(FieloPLT__StockManagement__c, &apos;Controlled By Item&apos;))) ||
+(ISPICKVAL(PRIORVALUE(FieloPLT__StockManagement__c), &apos;Controlled By Item&apos;) &amp;&amp; (ISPICKVAL(FieloPLT__StockManagement__c, &apos;Unlimited&apos;) ||
+ISPICKVAL(FieloPLT__StockManagement__c, &apos;Controlled By Quantity&apos;)))) &amp;&amp;
+FieloPLT__Stock__c &gt; 0</errorConditionFormula>
+        <errorDisplayField>FieloPLT__StockManagement__c</errorDisplayField>
+        <errorMessage>Only allowed when stock equals zero.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FieloPLT__MultiVoucher</fullName>
+        <active>true</active>
+        <description>Controlled by Item Rewards with preloaded Vouchers cannot have a Unique Voucher.</description>
+        <errorConditionFormula>FieloPLT__UniqueVoucher__c &amp;&amp;  ISPICKVAL(FieloPLT__StockManagement__c, &apos;Controlled By Item&apos;)</errorConditionFormula>
+        <errorMessage>Controlled by Item Rewards with preloaded Vouchers cannot have a Unique Voucher.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FieloPLT__PointsRequired</fullName>
+        <active>true</active>
+        <description>Set point value to the Reward.</description>
+        <errorConditionFormula>ISNULL( FieloPLT__Points__c )</errorConditionFormula>
+        <errorDisplayField>FieloPLT__Points__c</errorDisplayField>
+        <errorMessage>Include point value to the Reward.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FieloPLT__PositivePointsQuantity</fullName>
+        <active>true</active>
+        <description>Value must be positive.</description>
+        <errorConditionFormula>FieloPLT__Points__c &lt; 0</errorConditionFormula>
+        <errorDisplayField>FieloPLT__Points__c</errorDisplayField>
+        <errorMessage>Value must be positive.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FieloPLT__PositiveStock</fullName>
+        <active>true</active>
+        <description>Stock must be positive.</description>
+        <errorConditionFormula>AND(IF(ISCHANGED(FieloPLT__Stock__c) ,
+IF( OR(ISBLANK(FieloPLT__Stock__c) , FieloPLT__Stock__c &lt; 0) ,
+true,
+false),
+false), NOT( ISPICKVAL(FieloPLT__StockManagement__c, &apos;Unlimited&apos;) ))</errorConditionFormula>
+        <errorMessage>Stock must be positive.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FieloPLT__PositiveUnitCost</fullName>
+        <active>true</active>
+        <description>Value must be positive.</description>
+        <errorConditionFormula>FieloPLT__UnitCost__c &lt; 0</errorConditionFormula>
+        <errorDisplayField>FieloPLT__UnitCost__c</errorDisplayField>
+        <errorMessage>Value must be positive.</errorMessage>
+    </validationRules>
+</CustomObject>
