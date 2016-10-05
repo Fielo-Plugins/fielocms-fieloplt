@@ -55,6 +55,7 @@
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
@@ -62,6 +63,17 @@
         <description>Program API to optimize query</description>
         <label>Program Query</label>
     </fieldSets>
+    <fields>
+        <fullName>CustomVoucherCss__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the CSS code to be applied to customized vouchers.</inlineHelpText>
+        <label>Custom Voucher CSS</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <fields>
         <fullName>FieloPLT__ActualPointCost__c</fullName>
         <deprecated>false</deprecated>
@@ -341,6 +353,25 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>RewardInstructions__c</fullName>
+        <description>The instructions for redeeming a reward.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Instructions for the rewards, will be also shown in the vouchers</inlineHelpText>
+        <label>Reward Instructions</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ShowVoucherCode__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Show Voucher Code</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>SiteDomain__c</fullName>
         <externalId>false</externalId>
         <label>Site Domain</label>
@@ -361,6 +392,16 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>VoucherInstructions__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Instructions for the vouchers, will be also shown in the vouchers</inlineHelpText>
+        <label>Voucher Instructions</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
     </fields>
     <label>Program</label>
     <listViews>
