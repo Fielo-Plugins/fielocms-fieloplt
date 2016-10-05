@@ -1,7 +1,8 @@
+
 {
   "plugins" : [ {
     "Name" : "Platform Plugin",
-    "FieloCMS__ResourceId__c" : "08136000001YelSAAS",
+    "FieloCMS__Version__c" : 0.901,
     "components" : [ {
       "recordTypeName" : "Record",
       "Name" : "Redemption Detail",
@@ -11,23 +12,25 @@
       "FieloCMS__DefaultFields__c" : "Name,FieloPLT__Status__c,FieloPLT__Points__c,FieloPLT__TotalItems__c",
       "FieloCMS__ExcludeFields__c" : "Id,IsDeleted,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp,LastViewedDate,LastReferencedDate",
       "FieloCMS__Icon__c" : "FieloCms_Salesforce-vendor/images/sections/one_column.jpg",
+      "FieloCMS__Layouts__c" : "View",
       "FieloCMS__RecordType__c" : "Record",
       "FieloCMS__Visibility__c" : "Private",
       "FieloCMS__sObject__c" : "FieloPLT__Redemption__c",
-      "FieloCMS__Layouts__c" : "View"
+      "FieloCMS__DeveloperName__c" : "RedemptionDetail"
     }, {
       "recordTypeName" : "List",
       "Name" : "Transactions",
       "FieloCMS__ControlClass__c" : "FieloCMS.StandardAPI",
       "FieloCMS__CssClasses__c" : "fielo-transactions",
       "FieloCMS__DataClass__c" : "TransactionAPI",
-      "FieloCMS__DefaultFields__c" : "Name,FieloPLT__Points__c,FieloPLT__IsProcessed__c,FieloPLT__Status__c",
+      "FieloCMS__DefaultFields__c" : "Name,FieloPLT__IsProcessed__c,FieloPLT__Points__c,FieloPLT__Status__c",
       "FieloCMS__ExcludeFields__c" : "Id,OwnerId,IsDeleted,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp",
       "FieloCMS__Icon__c" : "FieloCms_Salesforce-vendor/images/sections/one_column.jpg",
+      "FieloCMS__Layouts__c" : "Grid;Table",
       "FieloCMS__RecordType__c" : "List",
       "FieloCMS__Visibility__c" : "Private",
       "FieloCMS__sObject__c" : "FieloPLT__Transaction__c",
-      "FieloCMS__Layouts__c" : "Grid;Table"
+      "FieloCMS__DeveloperName__c" : "Transactions"
     }, {
       "recordTypeName" : "Record",
       "Name" : "Reward Detail",
@@ -37,53 +40,16 @@
       "FieloCMS__DefaultFields__c" : "Name",
       "FieloCMS__ExcludeFields__c" : "Id,OwnerId,IsDeleted,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp,FieloPLT__Image__c,FieloPLT__Segment__c",
       "FieloCMS__Icon__c" : "FieloCms_Salesforce-vendor/images/sections/one_column.jpg",
+      "FieloCMS__Layouts__c" : "View",
       "FieloCMS__RecordType__c" : "Record",
+<<<<<<< HEAD
       "FieloCMS__Subcomponents__c" : "[{\"apiName\": \"AddtoCart\",\"label\": \"Add to Cart\", \"reflectionClass\": \"RewardAPI\", \"type\": \"Subcomponent\"},{\"apiName\": \"Checkout\",\"label\": \"Checkout\", \"reflectionClass\": \"CheckoutController\", \"type\": \"Subcomponent\",\"detailUrl\":\"\"},{\"apiName\": \"ViewImage\",\"label\": \"ViewImage\", \"reflectionClass\": \"FieloCMS.Subcomponents.ImageView\", \"type\": \"Subcomponent\", \"fieldName\":\"FieloPLT__Image__c\",\"showLabel\":false}]",
+=======
+      "FieloCMS__Subcomponents__c" : "[     {\"apiName\": \"AddtoCart\",\"label\": \"Add to Cart\", \"reflectionClass\": \"RewardAPI\", \"type\": \"Subcomponent\"},{\"apiName\": \"Checkout\",\"label\": \"Checkout\", \"reflectionClass\": \"CheckoutController\", \"type\": \"Subcomponent\",\"detailUrl\":\"\"},{         \"apiName\": \"ViewImage\",         \"fieldName\": \"FieloPLT__Image__c\",         \"label\": \"ViewImage\",         \"reflectionClass\": \"FieloCMS.Subcomponents.ImageView\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     },     {         \"apiName\": \"Tags\",         \"fieldName\": \"FieloPLT__Image__c\",         \"label\": \"Tags\",         \"reflectionClass\": \"TagAPI\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     } ]",
+>>>>>>> 63a7234e6e4c423114b5905f7eaa7a3b05229329
       "FieloCMS__Visibility__c" : "Both",
       "FieloCMS__sObject__c" : "FieloPLT__Reward__c",
-      "FieloCMS__Layouts__c" : "View"
-    }, {
-      "recordTypeName" : "Record",
-      "Name" : "Organization Account",
-      "FieloCMS__ControlClass__c" : "FieloCMS.StandardAPI",
-      "FieloCMS__CssClasses__c" : "fielo-organization-account",
-      "FieloCMS__DataClass__c" : "MemberAPI",
-      "FieloCMS__DefaultFields__c" : "FieloPLT__OrganizationName__c",
-      "FieloCMS__ExcludeFields__c" : "Id,OwnerId,IsDeleted,RecordTypeId,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp",
-      "FieloCMS__Icon__c" : "FieloCms_Salesforce-vendor/images/sections/one_column.jpg",
-      "FieloCMS__RecordType__c" : "Record",
-      "FieloCMS__Subcomponents__c" : "[     {         \"apiName\": \"UploadImage\",         \"label\": \"UploadImage\",         \"reflectionClass\": \"FieloCMS.Subcomponents.ImageUpload\",         \"type\": \"Subcomponent\"     } ]",
-      "FieloCMS__Visibility__c" : "Private",
-      "FieloCMS__sObject__c" : "FieloPLT__Member__c",
-      "FieloCMS__Layouts__c" : "View"
-    }, {
-      "recordTypeName" : "List",
-      "Name" : "Organization Members",
-      "FieloCMS__ControlClass__c" : "FieloCMS.StandardAPI",
-      "FieloCMS__CssClasses__c" : "fielo-organization-members",
-      "FieloCMS__DataClass__c" : "MemberAPI",
-      "FieloCMS__DefaultFields__c" : "FieloPLT__IsBlocked__c,FieloPLT__Status__c,FieloPLT__IsManager__c,Name__c",
-      "FieloCMS__ExcludeFields__c" : "Id,OwnerId,IsDeleted,CreatedById,SystemModstamp,LastActivityDate,LastViewedDate,LastReferencedDate,FieloPLT__Image__c",
-      "FieloCMS__Icon__c" : "FieloCms_Salesforce-vendor/images/sections/one_column.jpg",
-      "FieloCMS__RecordType__c" : "List",
-      "FieloCMS__Subcomponents__c" : "[{\"reflectionClass\":\"BlockUnblockMemberController\",\"type\":\"Subcomponent\",\"label\":\"Block/Unblock\",\"apiName\":\"BlockUnblock\"},{\"reflectionClass\":\"ToggleManagerController\",\"type\":\"Subcomponent\",\"label\":\"Toggle Manager\",\"apiName\":\"ToggleManager\"},{\"reflectionClass\":\"HandleInvitationsMembersController\",\"type\":\"Subcomponent\",\"label\":\"Handle Invitations\",\"apiName\":\"HandleInvitations\"}]",
-      "FieloCMS__Visibility__c" : "Private",
-      "FieloCMS__sObject__c" : "FieloPLT__Member__c",
-      "FieloCMS__Layouts__c" : "Grid;Table"
-    }, {
-      "recordTypeName" : "List",
-      "Name" : "Member Selection",
-      "FieloCMS__ControlClass__c" : "FieloCMS.StandardAPI",
-      "FieloCMS__CssClasses__c" : "fielo-member-selection",
-      "FieloCMS__DataClass__c" : "MemberAPI",
-      "FieloCMS__DefaultFields__c" : "Name,FieloPLT__OrganizationAccount__c",
-      "FieloCMS__ExcludeFields__c" : "Id,OwnerId,IsDeleted,RecordTypeId,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp",
-      "FieloCMS__Icon__c" : "FieloCms_Salesforce-vendor/images/sections/one_column.jpg",
-      "FieloCMS__RecordType__c" : "List",
-      "FieloCMS__Subcomponents__c" : "[{\"reflectionClass\":\"SelectMemberController\",\"type\":\"Subcomponent\",\"label\":\"Login as Member\",\"apiName\":\"LoginAsMember\",\"memberType\":\"Member\"},{\"reflectionClass\":\"SelectMemberController\",\"type\":\"Subcomponent\",\"label\":\"Login as Organization\",\"apiName\":\"LoginAsOrganization\",\"memberType\":\"Organization\"}]",
-      "FieloCMS__Visibility__c" : "Private",
-      "FieloCMS__sObject__c" : "FieloPLT__Member__c",
-      "FieloCMS__Layouts__c" : "Table"
+      "FieloCMS__DeveloperName__c" : "RewardDetail"
     }, {
       "recordTypeName" : "Record",
       "Name" : "Account",
@@ -93,54 +59,28 @@
       "FieloCMS__DefaultFields__c" : "Name,FieloPLT__Email__c",
       "FieloCMS__ExcludeFields__c" : "Id,OwnerId,IsDeleted,RecordTypeId,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp",
       "FieloCMS__Icon__c" : "FieloCms_Salesforce-vendor/images/sections/one_column.jpg",
+      "FieloCMS__Layouts__c" : "Edit",
       "FieloCMS__RecordType__c" : "Record",
       "FieloCMS__Subcomponents__c" : "[     {         \"apiName\": \"UploadImage\",         \"label\": \"UploadImage\",         \"reflectionClass\": \"FieloCMS.Subcomponents.ImageUpload\",         \"type\": \"Subcomponent\"     },     {         \"apiName\": \"ViewImage\",         \"label\": \"View Image\",         \"fieldName\": \"FieloPLT__Image__c\",         \"reflectionClass\": \"FieloCMS.Subcomponents.ImageView\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     } ,{\"apiName\": \"Captcha\",\"label\": \"Captcha\", \"reflectionClass\": \"FieloCMS.Subcomponents.captcha\", \"type\": \"Subcomponent\", \"secretKey\":\"XXX\", \"siteKey\":\"XXX\"}]",
       "FieloCMS__Visibility__c" : "Private",
       "FieloCMS__sObject__c" : "FieloPLT__Member__c",
-      "FieloCMS__Layouts__c" : "View;Edit;Markup"
-    }, {
-      "recordTypeName" : "Widget",
-      "Name" : "Platform Login",
-      "FieloCMS__ControlClass__c" : "FieloCMS.StandardAPI",
-      "FieloCMS__DataClass__c" : "FieloCMS.StandardAPI",
-      "FieloCMS__DefaultFields__c" : "Name",
-      "FieloCMS__ExcludeFields__c" : "Id,OwnerId,IsDeleted,RecordTypeId,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp",
-      "FieloCMS__Icon__c" : "FieloCms_Salesforce-vendor/images/sections/one_column.jpg",
-      "FieloCMS__RecordType__c" : "Widget",
-      "FieloCMS__ViewClass__c" : "LoginAPI",
-      "FieloCMS__Visibility__c" : "Public",
-      "FieloCMS__sObject__c" : "FieloCMS__Navigation__c",
-      "FieloCMS__RelatedListName__c" : "FieloCMS__Navigations__r"
-    }, {
-      "recordTypeName" : "List",
-      "Name" : "Segment Navigation",
-      "FieloCMS__AdditionalFields__c" : "FieloCMS__IsAppMenu__c,FieloCMS__Navigation__c",
-      "FieloCMS__ControlClass__c" : "FieloCMS.StandardAPI",
-      "FieloCMS__CssClasses__c" : "fielo-navigation",
-      "FieloCMS__DataClass__c" : "NavigationAPI",
-      "FieloCMS__DefaultFields__c" : "Name",
-      "FieloCMS__ExcludeFields__c" : "Id,OwnerId,IsDeleted,RecordTypeId,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp,LastViewedDate,LastReferencedDate",
-      "FieloCMS__Icon__c" : "FieloCms_Salesforce-vendor/images/sections/one_column.jpg",
-      "FieloCMS__RecordType__c" : "List",
-      "FieloCMS__Visibility__c" : "Both",
-      "FieloCMS__sObject__c" : "FieloCMS__Navigation__c",
-      "FieloCMS__Layouts__c" : "Menu",
-      "FieloCMS__RelatedListName__c" : "FieloCMS__Navigations__r"
+      "FieloCMS__DeveloperName__c" : "Account"
     }, {
       "recordTypeName" : "List",
       "Name" : "Catalog",
-      "FieloCMS__AdditionalFields__c" : "Category__c,FilterBySegment__c,Tag__c",
+      "FieloCMS__AdditionalFields__c" : "FieloCMS__Category__c,FieloCMS__Tag__c,FilterBySegment__c,Program__c",
       "FieloCMS__ControlClass__c" : "FieloCMS.StandardAPI",
       "FieloCMS__CssClasses__c" : "fielo-catalog",
       "FieloCMS__DataClass__c" : "RewardAPI",
       "FieloCMS__DefaultFields__c" : "Name,FieloPLT__Points__c",
-      "FieloCMS__ExcludeFields__c" : "Id,OwnerId,IsDeleted,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp,LastActivityDate,LastViewedDate,LastReferencedDate,FieloPLT__Image__c,FieloPLT__Image__c,FieloPLT__Segment__c",
+      "FieloCMS__ExcludeFields__c" : "Id,OwnerId,IsDeleted,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp,LastActivityDate,LastViewedDate,LastReferencedDate,FieloPLT__Image__c,FieloPLT__Segment__c",
       "FieloCMS__Icon__c" : "fielo-icon-content",
+      "FieloCMS__Layouts__c" : "Grid;Slider;Table",
       "FieloCMS__RecordType__c" : "List",
       "FieloCMS__Subcomponents__c" : "[     {\"apiName\": \"AddtoCart\",\"label\": \"Add to Cart\", \"reflectionClass\": \"RewardAPI\", \"type\": \"Subcomponent\"},{\"apiName\": \"Checkout\",\"label\": \"Checkout\", \"reflectionClass\": \"CheckoutController\", \"type\": \"Subcomponent\",\"detailUrl\":\"\"},{         \"apiName\": \"ViewImage\",         \"fieldName\": \"FieloPLT__Image__c\",         \"label\": \"ViewImage\",         \"reflectionClass\": \"FieloCMS.Subcomponents.ImageView\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     },     {         \"apiName\": \"Tags\",         \"fieldName\": \"FieloPLT__Image__c\",         \"label\": \"Tags\",         \"reflectionClass\": \"TagAPI\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     } ]",
       "FieloCMS__Visibility__c" : "Both",
       "FieloCMS__sObject__c" : "FieloPLT__Reward__c",
-      "FieloCMS__Layouts__c" : "Grid;Slider;Table"
+      "FieloCMS__DeveloperName__c" : "Catalog"
     }, {
       "recordTypeName" : "Record",
       "Name" : "Register",
@@ -148,28 +88,29 @@
       "FieloCMS__ControlClass__c" : "MemberAPI",
       "FieloCMS__CssClasses__c" : "fielo-register",
       "FieloCMS__DataClass__c" : "MemberAPI",
-      "FieloCMS__DefaultFields__c" : "FieloPLT__Email__c,Name",
+      "FieloCMS__DefaultFields__c" : "Name,FieloPLT__Email__c",
       "FieloCMS__ExcludeFields__c" : "Id,OwnerId,IsDeleted,RecordTypeId,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp",
       "FieloCMS__Icon__c" : "FieloCms_Salesforce-vendor/images/sections/one_column.jpg",
+      "FieloCMS__Layouts__c" : "Edit",
       "FieloCMS__RecordType__c" : "Record",
       "FieloCMS__Subcomponents__c" : "[{\"apiName\": \"Captcha\",\"label\": \"Captcha\", \"reflectionClass\": \"FieloCMS.Subcomponents.captcha\", \"type\": \"Subcomponent\", \"secretKey\":\"XXX\", \"siteKey\":\"XXX\"}]",
       "FieloCMS__Visibility__c" : "Both",
       "FieloCMS__sObject__c" : "FieloPLT__Member__c",
-      "FieloCMS__Layouts__c" : "Edit"
+      "FieloCMS__DeveloperName__c" : "Register"
     }, {
       "recordTypeName" : "List",
       "Name" : "Redemption Items",
-      "FieloCMS__AdditionalFields__c" : "ParameterName__c",
       "FieloCMS__ControlClass__c" : "FieloCMS.StandardAPI",
       "FieloCMS__CssClasses__c" : "fielo-redemption-items",
       "FieloCMS__DataClass__c" : "RedemptionItemAPI",
-      "FieloCMS__DefaultFields__c" : "FieloPLT__RewardItem__c,FieloPLT__DeliveredDate__c,FieloPLT__ExpirationDate__c,FieloPLT__Status__c,FieloPLT__UniqueCode__c,VoucherLink__c",
+      "FieloCMS__DefaultFields__c" : "FieloPLT__DeliveredDate__c,FieloPLT__ExpirationDate__c,FieloPLT__RewardItem__c,FieloPLT__Status__c,FieloPLT__UniqueCode__c,VoucherLink__c",
       "FieloCMS__ExcludeFields__c" : "Id,IsDeleted,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp,FieloPLT__Code__c",
       "FieloCMS__Icon__c" : "FieloCms_Salesforce-vendor/images/sections/one_column.jpg",
+      "FieloCMS__Layouts__c" : "Grid;Table",
       "FieloCMS__RecordType__c" : "List",
       "FieloCMS__Visibility__c" : "Private",
       "FieloCMS__sObject__c" : "FieloPLT__RedemptionItem__c",
-      "FieloCMS__Layouts__c" : "Grid;Table"
+      "FieloCMS__DeveloperName__c" : "RedemptionItems"
     }, {
       "recordTypeName" : "Widget",
       "Name" : "Register Step 2",
@@ -179,19 +120,115 @@
       "FieloCMS__RecordType__c" : "Widget",
       "FieloCMS__Subcomponents__c" : "[{\"apiName\": \"Captcha\",\"label\": \"Captcha\", \"reflectionClass\": \"FieloCMS.Subcomponents.Captcha\", \"type\": \"Subcomponent\"}]",
       "FieloCMS__ViewClass__c" : "MemberAPI",
-      "FieloCMS__Visibility__c" : "Public"
+      "FieloCMS__Visibility__c" : "Public",
+      "FieloCMS__DeveloperName__c" : "RegisterStep2"
     }, {
       "recordTypeName" : "Widget",
       "Name" : "Shopping Cart",
-      "FieloCMS__AdditionalFields__c" : "ParameterName__c,RedirectPage__c",
+      "FieloCMS__AdditionalFields__c" : "RedirectPage__c",
       "FieloCMS__ControlClass__c" : "FieloCMS.StandardAPI",
       "FieloCMS__CssClasses__c" : "fielo-shopping-cart",
       "FieloCMS__DataClass__c" : "FieloCMS.StandardAPI",
       "FieloCMS__Icon__c" : "FieloCms_Salesforce-vendor/images/sections/one_column.jpg",
       "FieloCMS__RecordType__c" : "Widget",
       "FieloCMS__ViewClass__c" : "RedemptionAPI",
-      "FieloCMS__Visibility__c" : "Private"
-    } ],
-    "models" : []
+      "FieloCMS__Visibility__c" : "Private",
+      "FieloCMS__DeveloperName__c" : "ShoppingCart"
+    }, {
+      "recordTypeName" : "Record",
+      "Name" : "Welcome",
+      "FieloCMS__ControlClass__c" : "FieloCMS.StandardAPI",
+      "FieloCMS__CssClasses__c" : "fielo-account",
+      "FieloCMS__DataClass__c" : "MemberAPI",
+      "FieloCMS__DefaultFields__c" : "Name",
+      "FieloCMS__ExcludeFields__c" : "Id,OwnerId,IsDeleted,RecordTypeId,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp",
+      "FieloCMS__Icon__c" : "FieloCms_Salesforce-vendor/images/sections/one_column.jpg",
+      "FieloCMS__Layouts__c" : "Markup",
+      "FieloCMS__RecordType__c" : "Record",
+      "FieloCMS__Visibility__c" : "Private",
+      "FieloCMS__sObject__c" : "FieloPLT__Member__c",
+      "FieloCMS__DeveloperName__c" : "Welcome"
+    }, {
+      "recordTypeName" : "List",
+      "Name" : "Navigation",
+      "FieloCMS__AdditionalFields__c" : "FieloCMS__Navigation__c,FieloCMS__IsAppMenu__c",
+      "FieloCMS__ControlClass__c" : "FieloCMS.StandardAPI",
+      "FieloCMS__CssClasses__c" : "fielo-navigation",
+      "FieloCMS__DataClass__c" : "NavigationAPI",
+      "FieloCMS__DefaultFields__c" : "Name",
+      "FieloCMS__ExcludeFields__c" : "Id,OwnerId,IsDeleted,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp",
+      "FieloCMS__Icon__c" : "fielosf-icon-link",
+      "FieloCMS__RecordType__c" : "List",
+      "FieloCMS__RelatedListName__c" : "FieloCMS__Navigations__r",
+      "FieloCMS__Visibility__c" : "Both",
+      "FieloCMS__sObject__c" : "FieloCMS__Navigation__c",
+      "FieloCMS__DeveloperName__c" : "FieloCMS.Navigations"
+    }, {
+      "recordTypeName" : "Widget",
+      "Name" : "Login",
+      "FieloCMS__ControlClass__c" : "FieloCMS.StandardAPI",
+      "FieloCMS__CssClasses__c" : "fielo-login",
+      "FieloCMS__DataClass__c" : "FieloCMS.StandardAPI",
+      "FieloCMS__ViewClass__c" : "LoginAPI",
+      "FieloCMS__Icon__c" : "fielosf-icon-login",
+      "FieloCMS__RecordType__c" : "Record",
+      "FieloCMS__Visibility__c" : "Public",
+      "FieloCMS__DeveloperName__c" : "FieloCMS.Login"
+    },
+{
+      "recordTypeName" : "List",
+      "Name" : "Media",
+      "FieloCMS__AdditionalFields__c" : "FieloCMS__Tag__c",
+      "FieloCMS__ControlClass__c" : "FieloCMS.StandardAPI",
+      "FieloCMS__CssClasses__c" : "fielo-navigation",
+      "FieloCMS__DataClass__c" : "FieloCMS.MediaApi",
+      "FieloCMS__DefaultFields__c" : "Name",
+      "FieloCMS__ExcludeFields__c" : "Id,OwnerId,IsDeleted,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp",
+      "FieloCMS__Icon__c" : "fielosf-icon-slider",
+      "FieloCMS__Layouts__c" : "Grid;Slider;Table",
+      "FieloCMS__RecordType__c" : "List",
+      "FieloCMS__Subcomponents__c" : "[{\"apiName\": \"ViewImage\",\"label\": \"ViewImage\", \"reflectionClass\": \"Subcomponents.ImageView\", \"type\": \"Subcomponent\", \"fieldName\":\"FieloCMS__URL__c\"  } ]",
+      "FieloCMS__Visibility__c" : "Both",
+      "FieloCMS__sObject__c" : "FieloCMS__Media__c",
+      "FieloCMS__DeveloperName__c" : "FieloCMS.Media"
+    }, {
+      "recordTypeName" : "List",
+      "Name" : "Post",
+      "FieloCMS__AdditionalFields__c" : "FieloCMS__Category__c,FieloCMS__Tag__c",
+      "FieloCMS__ControlClass__c" : "FieloCMS.StandardAPI",
+      "FieloCMS__CssClasses__c" : "fielo-navigation",
+      "FieloCMS__DataClass__c" : "FieloCMS.PostApi",
+      "FieloCMS__DefaultFields__c" : "Name",
+      "FieloCMS__ExcludeFields__c" : "Id,OwnerId,IsDeleted,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp",
+      "FieloCMS__Icon__c" : "fielosf-icon-news",
+      "FieloCMS__RecordType__c" : "List",
+      "FieloCMS__Visibility__c" : "Both",
+      "FieloCMS__sObject__c" : "FieloCMS__Post__c",
+      "FieloCMS__DeveloperName__c" : "FieloCMS.Posts"
+    }],
+    "models" : [ {
+      "Name" : "Catalog",
+      "FieloCMS__Description__c" : "Page with catalog linked to a detail page for every reward",
+      "FieloCMS__Icon__c" : "fielosf-icon-grid",
+      "FieloCMS__Type__c" : "Page",
+      "FieloCMS__XMLReference__c" : "{\r\n    \"pages\": [\r\n        {\r\n            \"sourceId\": \"a0e41000000CCCYAA4\",\r\n            \"recordTypeName\": \"Page\",\r\n            \"Name\": \"Catalog\",\r\n            \"FieloCMS__Icon__c\": \"fielo-icon-content\",\r\n            \"sections\": [\r\n                {\r\n                    \"FieloCMS__ElementType__c\": \"Div\",\r\n                    \"FieloCMS__IsBody__c\": false,\r\n                    \"FieloCMS__Order__c\": 3,\r\n                    \"FieloCMS__Width__c\": \"12\",\r\n                    \"subsections\": [\r\n                        {\r\n                            \"FieloCMS__ElementType__c\": \"Div\",\r\n                            \"FieloCMS__IsBody__c\": false,\r\n                            \"FieloCMS__Order__c\": 4,\r\n                            \"FieloCMS__Width__c\": \"12\",\r\n                            \"components\": [\r\n                                {\r\n                                    \"recordTypeName\": \"List\",\r\n                                    \"componentLibrary\": \"Platform Plugin.Catalog\",\r\n                                    \"Name\": \"Catalog\",\r\n                                    \"FieloCMS__Columns__c\": 3,\r\n                                    \"FieloCMS__Delay__c\": 2500,\r\n                                    \"FieloCMS__Desktop__c\": true,\r\n                                    \"FieloCMS__DetailParameter__c\": \"rewardid\",\r\n                                    \"FieloCMS__DetailURL__c\": \"FieloCMS__Component?pageId=a0e41000000CZfRAAW&componentId=a0Y410000007uh0EAA\",\r\n                                    \"FieloCMS__DetailView__c\": \"Modal\",\r\n                                    \"FieloCMS__FieldSet__c\": \"[{\\\"type\\\":\\\"Subcomponent\\\",\\\"showLabel\\\":false,\\\"reflectionClass\\\":\\\"FieloCMS.Subcomponents.ImageView\\\",\\\"label\\\":\\\"ViewImage\\\",\\\"fieldName\\\":\\\"FieloPLT__Image__c\\\",\\\"apiName\\\":\\\"ViewImage\\\"},{\\\"apiName\\\":\\\"Name\\\",\\\"label\\\":\\\"Reward Name\\\",\\\"type\\\":\\\"STRING\\\",\\\"showLabel\\\":false,\\\"orderBy\\\":\\\"disabled\\\",\\\"linkToDetail\\\":true},{\\\"type\\\":\\\"DOUBLE\\\",\\\"apiName\\\":\\\"FieloPLT__Points__c\\\",\\\"label\\\":\\\"Points\\\",\\\"showLabel\\\":true,\\\"orderBy\\\":\\\"disabled\\\",\\\"linkToDetail\\\":false},{\\\"closeOrder\\\":\\\"false\\\",\\\"detailUrl\\\":\\\"\\\",\\\"reflectionClass\\\":\\\"RewardAPI\\\",\\\"showLabel\\\":true,\\\"type\\\":\\\"Subcomponent\\\",\\\"label\\\":\\\"Add to Cart\\\",\\\"apiName\\\":\\\"AddtoCart\\\"},{\\\"reflectionClass\\\":\\\"CheckoutController\\\",\\\"detailUrl\\\":\\\"\\\",\\\"showLabel\\\":true,\\\"type\\\":\\\"Subcomponent\\\",\\\"label\\\":\\\"Checkout\\\",\\\"apiName\\\":\\\"Checkout\\\"}]]\",\r\n                                    \"FieloCMS__IsAppMenu__c\": false,\r\n                                    \"FieloCMS__Layout__c\": \"Grid\",\r\n                                    \"FieloCMS__Limit__c\": 9,\r\n                                    \"FieloCMS__Mobile__c\": true,\r\n                                    \"FieloCMS__Order__c\": 2,\r\n                                    \"FieloCMS__Paging__c\": true,\r\n                                    \"FieloCMS__ParameterName__c\": \"paginatorBinding\",\r\n                                    \"FieloCMS__Rows__c\": 3,\r\n                                    \"FieloCMS__Tablet__c\": true,\r\n                                    \"FieloCMS__Width__c\": 0,\r\n                                    \"FilterBySegment__c\": false\r\n                                }\r\n                            ]\r\n                        }\r\n                    ]\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"sourceId\": \"a0e41000000CZfRAAW\",\r\n            \"recordTypeName\": \"Page\",\r\n            \"Name\": \"Catalog Detail\",\r\n            \"FieloCMS__Icon__c\": \"fielo-icon-content\",\r\n            \"sections\": [\r\n                {\r\n                    \"FieloCMS__ElementType__c\": \"Div\",\r\n                    \"FieloCMS__IsBody__c\": false,\r\n                    \"FieloCMS__Order__c\": 86,\r\n                    \"FieloCMS__Width__c\": \"12\",\r\n                    \"subsections\": [\r\n                        {\r\n                            \"FieloCMS__ElementType__c\": \"Div\",\r\n                            \"FieloCMS__IsBody__c\": false,\r\n                            \"FieloCMS__Order__c\": 87,\r\n                            \"FieloCMS__Width__c\": \"12\",\r\n                            \"components\": [\r\n                                {\r\n                                    \"recordTypeName\": \"Record\",\r\n                                    \"componentLibrary\": \"Platform Plugin.Reward Detail\",\r\n                                    \"Name\": \"Reward Detail\",\r\n                                    \"FieloCMS__Columns__c\": 2,\r\n                                    \"FieloCMS__Delay__c\": 2500,\r\n                                    \"FieloCMS__Desktop__c\": true,\r\n                                    \"FieloCMS__DetailParameter__c\": \"rewardid\",\r\n                                    \"FieloCMS__FieldSet__c\": \"[{\\\"type\\\":\\\"STRING\\\",\\\"apiName\\\":\\\"Name\\\",\\\"label\\\":\\\"Reward Name\\\",\\\"showLabel\\\":true},{\\\"apiName\\\":\\\"ViewImage\\\",\\\"label\\\":\\\"ViewImage\\\",\\\"reflectionClass\\\":\\\"FieloCMS.Subcomponents.ImageView\\\",\\\"type\\\":\\\"Subcomponent\\\",\\\"fieldName\\\":\\\"FieloPLT__Image__c\\\",\\\"showLabel\\\":false},{\\\"type\\\":\\\"DOUBLE\\\",\\\"apiName\\\":\\\"FieloPLT__Points__c\\\",\\\"label\\\":\\\"Points\\\",\\\"showLabel\\\":true},{\\\"apiName\\\":\\\"AddtoCart\\\",\\\"label\\\":\\\"Add to Cart\\\",\\\"reflectionClass\\\":\\\"AddToCartController\\\",\\\"type\\\":\\\"Subcomponent\\\",\\\"closeOrder\\\":\\\"false\\\",\\\"detailUrl\\\":\\\"\\\",\\\"showLabel\\\":true}]]\",\r\n                                    \"FieloCMS__IsAppMenu__c\": false,\r\n                                    \"FieloCMS__Layout__c\": \"View\",\r\n                                    \"FieloCMS__Limit__c\": 6,\r\n                                    \"FieloCMS__Mobile__c\": true,\r\n                                    \"FieloCMS__Order__c\": 1,\r\n                                    \"FieloCMS__Paging__c\": true,\r\n                                    \"FieloCMS__ParameterName__c\": \"paginatorBinding\",\r\n                                    \"FieloCMS__Rows__c\": 2,\r\n                                    \"FieloCMS__Tablet__c\": true,\r\n                                    \"FieloCMS__Width__c\": 0,\r\n                                    \"FilterBySegment__c\": false\r\n                                }\r\n                            ]\r\n                        }\r\n                    ]\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
+    }, {
+      "Name" : "Shopping Cart",
+      "FieloCMS__Icon__c" : "fielosf-icon-grid",
+      "FieloCMS__Type__c" : "Page",
+      "FieloCMS__XMLReference__c" : "{\r\n    \"pages\": [\r\n        {\r\n            \"sourceId\": \"a0e41000000CDxHAAW\",\r\n            \"recordTypeName\": \"Page\",\r\n            \"Name\": \"Shopping Cart\",\r\n            \"FieloCMS__Icon__c\": \"fielo-icon-content\",\r\n            \"FieloCMS__Title__c\": \"Shopping Cart\",\r\n            \"sections\": [\r\n                {\r\n                    \"FieloCMS__ElementType__c\": \"Div\",\r\n                    \"FieloCMS__IsBody__c\": false,\r\n                    \"FieloCMS__Order__c\": 12,\r\n                    \"FieloCMS__Width__c\": \"12\",\r\n                    \"subsections\": [\r\n                        {\r\n                            \"FieloCMS__ElementType__c\": \"Div\",\r\n                            \"FieloCMS__IsBody__c\": false,\r\n                            \"FieloCMS__Order__c\": 0,\r\n                            \"FieloCMS__Width__c\": \"12\",\r\n                            \"components\": [\r\n                                {\r\n                                    \"recordTypeName\": \"Widget\",\r\n                                    \"componentLibrary\": \"Platform Plugin.Shopping Cart\",\r\n                                    \"Name\": \"Shopping Cart\",\r\n                                    \"FieloCMS__Columns__c\": 2,\r\n                                    \"FieloCMS__Delay__c\": 2500,\r\n                                    \"FieloCMS__Desktop__c\": true,\r\n                                    \"FieloCMS__DetailParameter__c\": \"id\",\r\n                                    \"FieloCMS__IsAppMenu__c\": false,\r\n                                    \"FieloCMS__Layout__c\": \"View\",\r\n                                    \"FieloCMS__Limit__c\": 6,\r\n                                    \"FieloCMS__Mobile__c\": true,\r\n                                    \"FieloCMS__Order__c\": 1,\r\n                                    \"FieloCMS__Paging__c\": true,\r\n                                    \"FieloCMS__ParameterName__c\": \"paginatorBinding\",\r\n                                    \"FieloCMS__Rows__c\": 2,\r\n                                    \"FieloCMS__Tablet__c\": true,\r\n                                    \"FieloCMS__Title__c\": \"\",\r\n                                    \"FieloCMS__Width__c\": 0,\r\n                                    \"FilterBySegment__c\": false\r\n                                }\r\n                            ]\r\n                        }\r\n                    ]\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"sourceId\": \"a0e41000000CEBLAA4\",\r\n            \"recordTypeName\": \"Page\",\r\n            \"Name\": \"Redemption Detail\",\r\n            \"FieloCMS__Icon__c\": \"fielo-icon-content\",\r\n            \"sections\": [\r\n                {\r\n                    \"FieloCMS__ElementType__c\": \"Div\",\r\n                    \"FieloCMS__IsBody__c\": false,\r\n                    \"FieloCMS__Order__c\": 10,\r\n                    \"FieloCMS__Width__c\": \"12\",\r\n                    \"subsections\": [\r\n                        {\r\n                            \"FieloCMS__ElementType__c\": \"Div\",\r\n                            \"FieloCMS__IsBody__c\": false,\r\n                            \"FieloCMS__Order__c\": 11,\r\n                            \"FieloCMS__Width__c\": \"12\",\r\n                            \"components\": [\r\n                                {\r\n                                    \"recordTypeName\": \"Record\",\r\n                                    \"componentLibrary\": \"Platform Plugin.Redemption Detail\",\r\n                                    \"Name\": \"Redemption Detail\",\r\n                                    \"FieloCMS__Columns__c\": 2,\r\n                                    \"FieloCMS__Delay__c\": 2500,\r\n                                    \"FieloCMS__Desktop__c\": true,\r\n                                    \"FieloCMS__DetailParameter__c\": \"id\",\r\n                                    \"FieloCMS__FieldSet__c\": \"[{\\\"showLabel\\\":true,\\\"label\\\":\\\"Code\\\",\\\"apiName\\\":\\\"Name\\\",\\\"type\\\":\\\"STRING\\\"},{\\\"showLabel\\\":true,\\\"label\\\":\\\"Status\\\",\\\"apiName\\\":\\\"FieloPLT__Status__c\\\",\\\"type\\\":\\\"PICKLIST\\\"},{\\\"showLabel\\\":true,\\\"label\\\":\\\"Points\\\",\\\"apiName\\\":\\\"FieloPLT__Points__c\\\",\\\"type\\\":\\\"DOUBLE\\\"},{\\\"showLabel\\\":true,\\\"label\\\":\\\"Total Items\\\",\\\"apiName\\\":\\\"FieloPLT__TotalItems__c\\\",\\\"type\\\":\\\"DOUBLE\\\"}]]\",\r\n                                    \"FieloCMS__IsAppMenu__c\": false,\r\n                                    \"FieloCMS__Layout__c\": \"View\",\r\n                                    \"FieloCMS__Limit__c\": 6,\r\n                                    \"FieloCMS__Mobile__c\": true,\r\n                                    \"FieloCMS__Order__c\": 1,\r\n                                    \"FieloCMS__Paging__c\": true,\r\n                                    \"FieloCMS__ParameterName__c\": \"paginatorBinding\",\r\n                                    \"FieloCMS__Rows__c\": 2,\r\n                                    \"FieloCMS__Tablet__c\": true,\r\n                                    \"FieloCMS__Title__c\": \"\",\r\n                                    \"FieloCMS__Width__c\": 0,\r\n                                    \"FilterBySegment__c\": false\r\n                                },\r\n                                {\r\n                                    \"recordTypeName\": \"List\",\r\n                                    \"componentLibrary\": \"Platform Plugin.Redemption Items\",\r\n                                    \"Name\": \"Redemption Items\",\r\n                                    \"FieloCMS__Columns__c\": 2,\r\n                                    \"FieloCMS__Delay__c\": 2500,\r\n                                    \"FieloCMS__Desktop__c\": true,\r\n                                    \"FieloCMS__DetailParameter__c\": \"id\",\r\n                                    \"FieloCMS__FieldSet__c\": \"[{\\\"linkToDetail\\\":false,\\\"orderBy\\\":\\\"disabled\\\",\\\"showLabel\\\":true,\\\"label\\\":\\\"Reward Item\\\",\\\"apiName\\\":\\\"FieloPLT__RewardItem__c\\\",\\\"type\\\":\\\"REFERENCE\\\"},{\\\"linkToDetail\\\":false,\\\"orderBy\\\":\\\"disabled\\\",\\\"showLabel\\\":true,\\\"label\\\":\\\"Delivered Date\\\",\\\"apiName\\\":\\\"FieloPLT__DeliveredDate__c\\\",\\\"type\\\":\\\"DATE\\\"},{\\\"linkToDetail\\\":false,\\\"orderBy\\\":\\\"disabled\\\",\\\"showLabel\\\":true,\\\"label\\\":\\\"Expiration Date\\\",\\\"apiName\\\":\\\"FieloPLT__ExpirationDate__c\\\",\\\"type\\\":\\\"DATE\\\"},{\\\"linkToDetail\\\":false,\\\"orderBy\\\":\\\"disabled\\\",\\\"showLabel\\\":true,\\\"label\\\":\\\"Status\\\",\\\"apiName\\\":\\\"FieloPLT__Status__c\\\",\\\"type\\\":\\\"PICKLIST\\\"},{\\\"linkToDetail\\\":false,\\\"orderBy\\\":\\\"disabled\\\",\\\"showLabel\\\":true,\\\"label\\\":\\\"Unique Code\\\",\\\"apiName\\\":\\\"FieloPLT__UniqueCode__c\\\",\\\"type\\\":\\\"STRING\\\"},{\\\"linkToDetail\\\":false,\\\"orderBy\\\":\\\"disabled\\\",\\\"showLabel\\\":true,\\\"label\\\":\\\"Voucher Link\\\",\\\"apiName\\\":\\\"VoucherLink__c\\\",\\\"type\\\":\\\"STRING\\\"}]]\",\r\n                                    \"FieloCMS__IsAppMenu__c\": false,\r\n                                    \"FieloCMS__Layout__c\": \"Grid\",\r\n                                    \"FieloCMS__Limit__c\": 4,\r\n                                    \"FieloCMS__Mobile__c\": true,\r\n                                    \"FieloCMS__Order__c\": 2,\r\n                                    \"FieloCMS__Paging__c\": true,\r\n                                    \"FieloCMS__ParameterName__c\": \"paginatorBinding\",\r\n                                    \"FieloCMS__Rows__c\": 2,\r\n                                    \"FieloCMS__Tablet__c\": true,\r\n                                    \"FieloCMS__Title__c\": \"\",\r\n                                    \"FieloCMS__Width__c\": 0,\r\n                                    \"FilterBySegment__c\": false\r\n                                }\r\n                            ]\r\n                        }\r\n                    ]\r\n                }\r\n            ]\r\n        }\r\n   ]\r\n}"
+    }, {
+      "Name" : "Welcome",
+      "FieloCMS__Description__c" : "Template with Header, Footer and component Welcome",
+      "FieloCMS__Icon__c" : "fielosf-icon-grid",
+      "FieloCMS__Type__c" : "Template",
+      "FieloCMS__XMLReference__c" : "{\r\n    \"pages\": [\r\n        {\r\n            \"FieloCMS__Icon__c\": \"fielo-icon-content\",\r\n            \"Name\": \"Template default\",\r\n            \"recordTypeName\": \"Template\",\r\n            \"sections\": [\r\n                {\r\n                    \"FieloCMS__ElementType__c\": \"Header\",\r\n                    \"FieloCMS__IsBody__c\": false,\r\n                    \"FieloCMS__Order__c\": 0,\r\n                    \"FieloCMS__Width__c\": \"12\",\r\n                    \"subsections\": [\r\n                        {\r\n                            \"FieloCMS__ElementType__c\": \"Div\",\r\n                            \"FieloCMS__IsBody__c\": false,\r\n                            \"FieloCMS__Order__c\": 0,\r\n                            \"FieloCMS__Width__c\": \"4\",\r\n                            \"components\": [\r\n                                {\r\n                                    \"FieloCMS__Columns__c\": 2,\r\n                                    \"FieloCMS__Delay__c\": 2500,\r\n                                    \"FieloCMS__Desktop__c\": true,\r\n                                    \"FieloCMS__DetailParameter__c\": \"id\",\r\n                                    \"FieloCMS__FieldSet__c\": \"[{\\\"type\\\":\\\"STRING\\\",\\\"apiName\\\":\\\"Name\\\",\\\"label\\\":\\\"Navigation Name\\\",\\\"showLabel\\\":true,\\\"orderBy\\\":\\\"disabled\\\",\\\"linkToDetail\\\":true}]]\",\r\n                                    \"FieloCMS__IsAppMenu__c\": false,\r\n                                    \"FieloCMS__LayoutMode__c\": \"Horizontal\",\r\n                                    \"FieloCMS__Layout__c\": \"Menu\",\r\n                                    \"FieloCMS__Limit__c\": 4,\r\n                                    \"FieloCMS__Mobile__c\": true,\r\n                                    \"FieloCMS__Order__c\": 2,\r\n                                    \"FieloCMS__Paging__c\": false,\r\n                                    \"FieloCMS__ParameterName__c\": \"paginatorBinding\",\r\n                                    \"FieloCMS__Rows__c\": 2,\r\n                                    \"FieloCMS__Tablet__c\": true,\r\n                                    \"FieloCMS__Width__c\": 0,\r\n                                    \"FilterBySegment__c\": false,\r\n                                    \"Name\": \"Navigation\",\r\n                                    \"componentLibrary\": \"FieloCMS.Navigation\",\r\n                                    \"navigationName\": \"Navigation Header Left\",\r\n                                    \"recordTypeName\": \"List\"\r\n                                }\r\n                            ]\r\n                        },\r\n                        {\r\n                            \"FieloCMS__ElementType__c\": \"Div\",\r\n                            \"FieloCMS__IsBody__c\": false,\r\n                            \"FieloCMS__Order__c\": 13,\r\n                            \"FieloCMS__Width__c\": \"4\",\r\n                            \"components\": [\r\n                                {\r\n                                    \"FieloCMS__Columns__c\": 2,\r\n                                    \"FieloCMS__Content__c\": \"Hello {!Name}\",\r\n                                    \"FieloCMS__Delay__c\": 2500,\r\n                                    \"FieloCMS__Desktop__c\": true,\r\n                                    \"FieloCMS__DetailParameter__c\": \"id\",\r\n                                    \"FieloCMS__FieldSet__c\": \"[{\\\"type\\\":\\\"STRING\\\",\\\"apiName\\\":\\\"Name\\\",\\\"label\\\":\\\"Name\\\",\\\"showLabel\\\":true,\\\"autocomplete\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"inlineHelpText\\\":\\\"\\\",\\\"readOnly\\\":false,\\\"required\\\":false}]]\",\r\n                                    \"FieloCMS__IsAppMenu__c\": false,\r\n                                    \"FieloCMS__Layout__c\": \"Markup\",\r\n                                    \"FieloCMS__Limit__c\": 6,\r\n                                    \"FieloCMS__Mobile__c\": true,\r\n                                    \"FieloCMS__Order__c\": 1,\r\n                                    \"FieloCMS__Paging__c\": true,\r\n                                    \"FieloCMS__ParameterName__c\": \"paginatorBinding\",\r\n                                    \"FieloCMS__Rows__c\": 2,\r\n                                    \"FieloCMS__Tablet__c\": true,\r\n                                    \"FieloCMS__Title__c\": \"Account\",\r\n                                    \"FieloCMS__Width__c\": 0,\r\n                                    \"FilterBySegment__c\": false,\r\n                                    \"Name\": \"Account\",\r\n                                    \"componentLibrary\": \"Platform Plugin.Welcome\",\r\n                                    \"recordTypeName\": \"Record\"\r\n                                }\r\n                            ]\r\n                        },\r\n                        {\r\n                            \"FieloCMS__ElementType__c\": \"Div\",\r\n                            \"FieloCMS__IsBody__c\": false,\r\n                            \"FieloCMS__Order__c\": 14,\r\n                            \"FieloCMS__Width__c\": \"4\",\r\n                            \"components\": [\r\n                                {\r\n                                    \"FieloCMS__Columns__c\": 2,\r\n                                    \"FieloCMS__Delay__c\": 2500,\r\n                                    \"FieloCMS__Desktop__c\": true,\r\n                                    \"FieloCMS__DetailParameter__c\": \"id\",\r\n                                    \"FieloCMS__FieldSet__c\": \"[{\\\"linkToDetail\\\":true,\\\"orderBy\\\":\\\"disabled\\\",\\\"showLabel\\\":true,\\\"label\\\":\\\"Navigation Name\\\",\\\"apiName\\\":\\\"Name\\\",\\\"type\\\":\\\"STRING\\\"}]]\",\r\n                                    \"FieloCMS__IsAppMenu__c\": false,\r\n                                    \"FieloCMS__LayoutMode__c\": \"Vertical\",\r\n                                    \"FieloCMS__Layout__c\": \"Menu\",\r\n                                    \"FieloCMS__Limit__c\": 6,\r\n                                    \"FieloCMS__Mobile__c\": true,\r\n                                    \"FieloCMS__Order__c\": 1,\r\n                                    \"FieloCMS__Paging__c\": false,\r\n                                    \"FieloCMS__ParameterName__c\": \"paginatorBinding\",\r\n                                    \"FieloCMS__Rows__c\": 2,\r\n                                    \"FieloCMS__Tablet__c\": true,\r\n                                    \"FieloCMS__Width__c\": 0,\r\n                                    \"FilterBySegment__c\": false,\r\n                                    \"Name\": \"Navigation\",\r\n                                    \"componentLibrary\": \"FieloCMS.Navigation\",\r\n                                    \"navigationName\": \"Navigation Header Right\",\r\n                                    \"recordTypeName\": \"List\"\r\n                                }\r\n                            ]\r\n                        }\r\n                    ]\r\n                },\r\n                {\r\n                    \"FieloCMS__ElementType__c\": \"Main\",\r\n                    \"FieloCMS__IsBody__c\": true,\r\n                    \"FieloCMS__Order__c\": 1,\r\n                    \"FieloCMS__Width__c\": \"12\"\r\n                },\r\n                {\r\n                    \"FieloCMS__ElementType__c\": \"Footer\",\r\n                    \"FieloCMS__IsBody__c\": false,\r\n                    \"FieloCMS__Order__c\": 2,\r\n                    \"FieloCMS__Width__c\": \"12\",\r\n                    \"subsections\": [\r\n                        {\r\n                            \"FieloCMS__ElementType__c\": \"Div\",\r\n                            \"FieloCMS__IsBody__c\": false,\r\n                            \"FieloCMS__Order__c\": 0,\r\n                            \"FieloCMS__Width__c\": \"12\",\r\n                            \"components\": [\r\n                                {\r\n                                    \"FieloCMS__Columns__c\": 2,\r\n                                    \"FieloCMS__Delay__c\": 2500,\r\n                                    \"FieloCMS__Desktop__c\": true,\r\n                                    \"FieloCMS__DetailParameter__c\": \"id\",\r\n                                    \"FieloCMS__FieldSet__c\": \"[{\\\"linkToDetail\\\":true,\\\"orderBy\\\":\\\"disabled\\\",\\\"showLabel\\\":true,\\\"label\\\":\\\"Navigation Name\\\",\\\"apiName\\\":\\\"Name\\\",\\\"type\\\":\\\"STRING\\\"}]]\",\r\n                                    \"FieloCMS__IsAppMenu__c\": false,\r\n                                    \"FieloCMS__LayoutMode__c\": \"Horizontal\",\r\n                                    \"FieloCMS__Layout__c\": \"Menu\",\r\n                                    \"FieloCMS__Limit__c\": 6,\r\n                                    \"FieloCMS__Mobile__c\": true,\r\n                                    \"FieloCMS__Order__c\": 1,\r\n                                    \"FieloCMS__Paging__c\": false,\r\n                                    \"FieloCMS__ParameterName__c\": \"paginatorBinding\",\r\n                                    \"FieloCMS__Rows__c\": 2,\r\n                                    \"FieloCMS__Tablet__c\": true,\r\n                                    \"FieloCMS__Width__c\": 0,\r\n                                    \"FilterBySegment__c\": false,\r\n                                    \"Name\": \"Navigation\",\r\n                                    \"componentLibrary\": \"FieloCMS.Navigations\",\r\n                                    \"navigationName\": \"Navigation Footer\",\r\n                                    \"recordTypeName\": \"List\"\r\n                                }\r\n                            ]\r\n                        }\r\n                    ]\r\n                }\r\n            ],\r\n            \"sourceId\": \"a0e41000000CCCTAA4\"\r\n        }\r\n    ]\r\n}"
+    }, {
+      "Name" : "Login & Register",
+      "FieloCMS__Description__c" : "Page Models for Registration & Login.\r\nIt creates 2 pages\r\n1 page with components Login & Register\r\n1 page with component Register Step 2\r\n\r\nIt needs extra configuration in the program.",
+      "FieloCMS__Icon__c" : "fielosf-icon-grid",
+      "FieloCMS__Type__c" : "Page",
+      "FieloCMS__XMLReference__c" : "{ \"pages\" : [ { \"sourceId\" : \"a0e41000000CCCdAAO\", \"recordTypeName\" : \"Page\", \"Name\" : \"Register & Login\", \"FieloCMS__Icon__c\" : \"fielo-icon-content\", \"sections\" : [ { \"FieloCMS__ElementType__c\" : \"Div\", \"FieloCMS__IsBody__c\" : false, \"FieloCMS__Order__c\" : 7, \"FieloCMS__Width__c\" : \"12\", \"subsections\" : [ { \"FieloCMS__ElementType__c\" : \"Div\", \"FieloCMS__IsBody__c\" : false, \"FieloCMS__Order__c\" : 0, \"FieloCMS__Width__c\" : \"6\", \"components\" : [ { \"recordTypeName\" : \"Widget\", \"componentLibrary\" : \"Fielo CMS.Login\", \"Name\" : \"Login\", \"FieloCMS__Columns__c\" : 2, \"FieloCMS__Delay__c\" : 2500, \"FieloCMS__Desktop__c\" : true, \"FieloCMS__DetailParameter__c\" : \"id\", \"FieloCMS__IsAppMenu__c\" : false, \"FieloCMS__Layout__c\" : \"View\", \"FieloCMS__Limit__c\" : 6, \"FieloCMS__Mobile__c\" : true, \"FieloCMS__Order__c\" : 1, \"FieloCMS__Paging__c\" : true, \"FieloCMS__ParameterName__c\" : \"paginatorBinding\", \"FieloCMS__Rows__c\" : 2, \"FieloCMS__Tablet__c\" : true, \"FieloCMS__Title__c\" : \"Login\", \"FieloCMS__Width__c\" : 0, \"FilterBySegment__c\" : false } ] }, { \"FieloCMS__ElementType__c\" : \"Div\", \"FieloCMS__IsBody__c\" : false, \"FieloCMS__Order__c\" : 1, \"FieloCMS__Width__c\" : \"6\", \"components\" : [ { \"recordTypeName\" : \"Record\", \"componentLibrary\" : \"Platform Plugin.Register\", \"Name\" : \"Register\", \"FieloCMS__Columns__c\" : 2, \"FieloCMS__Delay__c\" : 2500, \"FieloCMS__Desktop__c\" : true, \"FieloCMS__DetailParameter__c\" : \"id\", \"FieloCMS__FieldSet__c\" : \"[{\\\"required\\\":false,\\\"readOnly\\\":false,\\\"inlineHelpText\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"autocomplete\\\":\\\"\\\",\\\"showLabel\\\":true,\\\"label\\\":\\\"E-Mail\\\",\\\"apiName\\\":\\\"FieloPLT__Email__c\\\",\\\"type\\\":\\\"EMAIL\\\"},{\\\"required\\\":false,\\\"readOnly\\\":false,\\\"inlineHelpText\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"autocomplete\\\":\\\"\\\",\\\"showLabel\\\":true,\\\"label\\\":\\\"Name\\\",\\\"apiName\\\":\\\"Name\\\",\\\"type\\\":\\\"STRING\\\"}]]\", \"FieloCMS__IsAppMenu__c\" : false, \"FieloCMS__LayoutMode__c\" : \"Form\", \"FieloCMS__Layout__c\" : \"Edit\", \"FieloCMS__Limit__c\" : 6, \"FieloCMS__Mobile__c\" : true, \"FieloCMS__Order__c\" : 1, \"FieloCMS__Paging__c\" : true, \"FieloCMS__ParameterName__c\" : \"paginatorBinding\", \"FieloCMS__Rows__c\" : 2, \"FieloCMS__Tablet__c\" : true, \"FieloCMS__Title__c\" : \"New Register\", \"FieloCMS__Width__c\" : 0, \"AccountCRMMode__c\" : \"Standard Account\", \"FilterBySegment__c\" : false } ] } ] } ] } ] }\r\n { \"pages\" : [ { \"sourceId\" : \"a0e41000000CFlYAAW\", \"recordTypeName\" : \"Page\", \"Name\" : \"Register 2\", \"FieloCMS__Icon__c\" : \"fielo-icon-content\", \"sections\" : [ { \"FieloCMS__ElementType__c\" : \"Div\", \"FieloCMS__IsBody__c\" : false, \"FieloCMS__Order__c\" : 15, \"FieloCMS__Width__c\" : \"12\", \"subsections\" : [ { \"FieloCMS__ElementType__c\" : \"Div\", \"FieloCMS__IsBody__c\" : false, \"FieloCMS__Order__c\" : 16, \"FieloCMS__Width__c\" : \"12\", \"components\" : [ { \"recordTypeName\" : \"Widget\", \"componentLibrary\" : \"Platform Plugin.Register Step 2\", \"Name\" : \"Register Step 2\", \"FieloCMS__Columns__c\" : 2, \"FieloCMS__Delay__c\" : 2500, \"FieloCMS__Desktop__c\" : true, \"FieloCMS__DetailParameter__c\" : \"id\", \"FieloCMS__IsAppMenu__c\" : false, \"FieloCMS__Layout__c\" : \"View\", \"FieloCMS__Limit__c\" : 6, \"FieloCMS__Mobile__c\" : true, \"FieloCMS__Order__c\" : 1, \"FieloCMS__Paging__c\" : true, \"FieloCMS__ParameterName__c\" : \"paginatorBinding\", \"FieloCMS__Rows__c\" : 2, \"FieloCMS__Tablet__c\" : true, \"FieloCMS__Title__c\" : \"Register Step 2\", \"FieloCMS__Width__c\" : 0, \"FilterBySegment__c\" : false } ] } ] } ] } ] }"
+    } ]
   } ]
 }

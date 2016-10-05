@@ -29,50 +29,7 @@
         <name>CustomLabels</name>
     </types>
     <types>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
-        <members>undefined</members>
+        <members>*</members>
         <name>CustomObject</name>
     </types>
     <types>

@@ -1,0 +1,5 @@
+Hello {!FieloPLT__Name__c}: 
+
+Your registration has been approved. Please complete the registration process going to this link: 
+
+{!FieloPLT__Member__c.SiteURL__c}

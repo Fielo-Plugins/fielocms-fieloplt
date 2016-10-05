@@ -6,12 +6,12 @@
     <label>Redemption Item Voucher</label>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>52</minorNumber>
+        <minorNumber>54</minorNumber>
         <namespace>FieloCMS</namespace>
     </packageVersions>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>0</minorNumber>
+        <minorNumber>1</minorNumber>
         <namespace>FieloPLT</namespace>
     </packageVersions>
 </ApexPage>
