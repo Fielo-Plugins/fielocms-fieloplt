@@ -1,8 +1,7 @@
 <apex:component layout="none" >
 
     <apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.AccountCRMMode__c.Name}" />
-    <apex:variable var="namespace" value="{!SUBSTITUTE(SUBSTITUTE(fieldName,'AccountCRMMode__c',''),'__','.')}" />
-
+    
     <apex:attribute name="record" type="SObject" description="" />
     <apex:attribute name="field" type="FieloCMS.Field" description="" />
 
@@ -14,14 +13,59 @@
         </apex:repeat>-->
 
         <div class="fielo-form">
-            <!--<form class="fielo-add-to-cart fielo-js-upgrade" data-remoteaction="{!namespace}AddToCartController.addToCart" data-remotearguments="recordId,quant,closeOrder,detailUrl" data-remoteobject="FieloPLT__Redemption__c" data-alreadyincart="{!$Label.ShoppingExistingReward}">
-                <input type="hidden" name="closeOrder" value="{!field.attributes['closeOrder']}" />
-                <input type="hidden" name="detailUrl" value="{!field.attributes['detailUrl']}" />
-                <input type="hidden" name="recordId" value="{!record['Id']}" data-object-property="Id"  data-attribute-replace="value"/>
-                <input type="number" name="quant" required="required" value="1" min="1" class="fielo-form__quantity"/>
+            <div class="fielo-add-to-cart" data-alreadyincart="{!$Label.ShoppingExistingReward}"><!-- fielo-js-upgrade data-remoteaction="{!namespace}AddToCartController.addToCart" data-remotearguments="recordId,quant,closeOrder,detailUrl" data-remoteobject="FieloPLT__Redemption__c"-->
+
+                <!--<input type="hidden" name="closeOrder" value="{!field.attributes['closeOrder']}" />
+                <input type="hidden" name="detailUrl" value="{!field.attributes['detailUrl']}" />-->
+                <!--<input type="hidden" name="recordId" value="{!record['Id']}" data-object-property="Id"  data-attribute-replace="value"/>-->
+                <input type="number" id="input{!record.Id}" name="quant" required="required" value="1" min="1" class="fielo-form__quantity"/>
                 <!--<input type="hidden" class="fielo-form__quantity-in-cart js-to-be-initialized" name="quantInCart" value="{!isInCart}" data-object-property="'FieloPLT__RedemptionItems__r'"  data-attribute-replace="value"/>-->
-                <!--<button type="submit" class="fielo-button fielo-button__submit" >{!$Label.Add} </button>
-            </form>-->
+                <button onclick="addToCart('{!record.Id}', document.getElementById('input{!record.Id}').value);" class="fielo-button fielo-button__submit" >{!$Label.Add} </button>
+            </div>
         </div>
     </apex:panelGroup>
+
+    <script>
+        function addToCart(rewardId, quantity){
+            var jsonShop = {};
+            var shopCookie = getCookie("apex__shoppingCart");
+            if(shopCookie != undefined && shopCookie != ""){
+                jsonShop = JSON.parse(shopCookie);                
+                if(jsonShop[rewardId] != undefined){
+                    jsonShop[rewardId] += parseInt(quantity);
+                }else{
+                    jsonShop[rewardId] = parseInt(quantity);
+                }                                    
+            }else{                
+                jsonShop[rewardId] = parseInt(quantity);
+            }            
+            setCookie("apex__shoppingCart", JSON.stringify(jsonShop), 1);
+            fieloUtils.message.FieloMessage.clear();
+            fieloUtils.message.FieloMessage.addMessages('{!$Label.SuccessRewardAddToChart}');            
+            fieloUtils.message.FieloMessage.setRedirect('#', 3);
+            fieloUtils.message.FieloMessage.show();
+        }
+
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays*24*60*60*1000));
+            var expires = "expires="+d.toUTCString();
+            document.cookie = cname + "=" + cvalue + "; " + expires;
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for(var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+    </script>
 </apex:component>

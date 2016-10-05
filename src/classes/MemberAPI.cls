@@ -1,5 +1,5 @@
 global with sharing class MemberAPI implements FieloCMS.DataInterface, FieloCMS.ControlInterface, FieloCMS.ViewInterface{
-	
+    
     global ApexPages.Component getComponent(FieloCMS__Component__c component){                                
         if(component.FieloCMS__ComponentLibrary__r.Name == 'Register Step 2'){                    
             return new Component.RegisterStep2(config = component);                            
@@ -35,6 +35,7 @@ global with sharing class MemberAPI implements FieloCMS.DataInterface, FieloCMS.
             }else if(c.FieloCMS__ComponentLibrary__r.Name == 'Register'){
                 newMapData.put(c.Id, new FieloPLT__Member__c());
             } else if(c.FieloCMS__ComponentLibrary__r.Name == 'Member Detail' || c.FieloCMS__ComponentLibrary__r.Name == 'Account'){
+                system.debug('member: ' + MemberService.getCurrentMember(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c)));
                 newMapData.put(c.Id, MemberService.getCurrentMember(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c)));
             }
         }
