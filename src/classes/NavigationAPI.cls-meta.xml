@@ -3,11 +3,8 @@
     <apiVersion>36.0</apiVersion>
     <packageVersions>
         <majorNumber>1</majorNumber>
-<packageVersions>
-        <majorNumber>1</majorNumber>
-        <minorNumber>54</minorNumber>
+        <minorNumber>52</minorNumber>
         <namespace>FieloCMS</namespace>
     </packageVersions>
-    <status>Active</status>        <namespace>FieloPLT</namespace>
-    </packageVersions>
+    <status>Active</status>
 </ApexClass>
