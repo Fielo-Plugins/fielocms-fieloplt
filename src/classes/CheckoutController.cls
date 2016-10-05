@@ -1,6 +1,6 @@
 global with sharing class CheckoutController implements FieloCMS.ViewSubComponentInterface {
 
-    public ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){        
+    global ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){        
         Component.Checkout checkout = new Component.Checkout();
         if(record != null){
             checkout.record = record;
@@ -12,19 +12,22 @@ global with sharing class CheckoutController implements FieloCMS.ViewSubComponen
     }
 
     @RemoteAction
-    global static FieloCMS.RemoteActionResult checkout(Id rewardId, Integer quantity, String detailUrl){
+    global static FieloCMS.RemoteActionResult checkout(Id rewardId, Integer quantity, String detailUrl){                        
         FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
-        try{            
+        Savepoint sp = Database.setSavepoint();
+        try{                            
             List<FieloPLT__Redemption__c> redemptions = FieloPLT.RedemptionService.createRedemptions(new Map<Id,Integer>{rewardId => quantity}, MemberService.getCurrentMemberId());
-            if(redemptions[0].FieloPLT__Status__c == 'Close'){
+            if(redemptions[0].FieloPLT__Status__c == 'Closed'){
+                /*PageReference retPage = Page.FieloCMS__Page;
+                retPage.getParameters().put('pageId',component.RedirectPage__c);
+                retPage.getParameters().put(component.FieloCMS__ParameterName__c,redemption.Id);*/
                 result.redirectURL = detailUrl + redemptions[0].Id;
-            }else if(redemptions[0].FieloPLT__Status__c == 'Pending'){
-                result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.InfoRedemptionApproval)));                
+            }else{
+                result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.InfoRedemptionApproval)));
                 result.refresh.add( new FieloCMS.RemoteActionResult.RemoteActionRefresh('quantity', '1'));
             }            
-        }catch(FieloException e){
-            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
-        }catch(FieloPLT.FieloException e){
+        }catch(Exception e){
+            Database.rollBack(sp);
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
         }
 
