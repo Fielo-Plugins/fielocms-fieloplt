@@ -16,7 +16,7 @@
                 <input type="hidden" name="recordId" value="{!record['Id']}" data-object-property="Id"  data-attribute-replace="value"/>
                 <input type="number" name="quant" required="required" value="1" min="1" class="fielo-form__quantity"/>
                 <!--<input type="hidden" class="fielo-form__quantity-in-cart js-to-be-initialized" name="quantInCart" value="{!isInCart}" data-object-property="'FieloPLT__RedemptionItems__r'"  data-attribute-replace="value"/>-->
-                <button type="submit" class="fielo-button fielo-button__submit" >{!$Label.Add} </button>
+                <button type="submit" class="fielo-button fielo-button__submit" >Checkout</button>
             </form>
         </div>
     </apex:panelGroup>

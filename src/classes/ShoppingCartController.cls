@@ -10,7 +10,7 @@ global with sharing class ShoppingCartController {
 
     public Map<Id,Integer> quantitiesMap {get{
         if(quantitiesMap == null){
-            Cookie shopCartCookie = ApexPages.currentPage().getCookies().get('shoppingCart');            
+            Cookie shopCartCookie = ApexPages.currentPage().getCookies().get('shoppingCart');
             if(shopCartCookie != null && !String.isBlank(shopCartCookie.getValue())){
                 quantitiesMap = (Map<Id,Integer>)JSON.deserialize(shopCartCookie.getValue(),Map<Id,Integer>.class);                
             }else{
@@ -50,7 +50,7 @@ global with sharing class ShoppingCartController {
 
     @RemoteAction
     global static FieloCMS.RemoteActionResult checkout(Id componentId, String newQuantJSON){                
-        FieloCMS__Component__c component = [SELECT FieloCMS__ParameterName__c, RedirectPage__c FROM FieloCMS__Component__c WHERE Id =: componentId];
+        FieloCMS__Component__c component = [SELECT FieloCMS__DetailParameter__c, RedirectPage__c FROM FieloCMS__Component__c WHERE Id =: componentId];
         FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
         Savepoint sp = Database.setSavepoint();
         try{
@@ -61,8 +61,9 @@ global with sharing class ShoppingCartController {
                 if(redemption.FieloPLT__Status__c == 'Closed'){
                     PageReference retPage = Page.FieloCMS__Page;
                     retPage.getParameters().put('pageId',component.RedirectPage__c);
-                    retPage.getParameters().put(component.FieloCMS__ParameterName__c,redemption.Id);
-                    result.redirectURL = retPage.getUrl();
+                    retPage.getParameters().put(component.FieloCMS__DetailParameter__c,redemption.Id);
+                    result.redirectURL = retPage.getUrl().replace('/apex','');
+                    ApexPages.currentPage().setCookies(new Cookie[]{new Cookie('shoppingCart', '', null, -1,true)});                    
                 }else{
                     result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.InfoRedemptionApproval)));
                 }

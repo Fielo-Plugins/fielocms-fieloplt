@@ -1,12 +1,9 @@
 <apex:component controller="SiteLoginFieloController" allowDML="true" access="global" layout="none" >
 
-    <apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.AccountCRMMode__c.Name}" />
-    <apex:variable var="namespace" value="{!SUBSTITUTE(SUBSTITUTE(fieldName,'AccountCRMMode__c',''),'__','.')}" />
-
     <apex:attribute name="config" type="FieloCMS__Component__c" description="" />
 
     <div class="fielo-form fielo-login fielo-widget fielo-js-component" data-componentid="{!config.Id}" >
-        <form class="fielo-js-upgrade" data-remotearguments="username,password" data-remoteaction="{!namespace}SiteLoginFieloController.login"  >
+        <form class="fielo-js-upgrade" data-remotearguments="username,password" data-remoteaction="SiteLoginFieloController.login"  >
             <fieldset>
                 <legend class="fielo-title" >Login</legend><!--{!$Label.FieloPLT__Login}-->
                 <div class="mdl-grid fielo-field fielo-field--is-username fielo-field" >
@@ -40,7 +37,7 @@
         </form>
     </div>
     <script>
-        function deleteCart(){
+        function deleteCart(){            
             setCookie("apex__shoppingCart", "", -1);            
         }
         
