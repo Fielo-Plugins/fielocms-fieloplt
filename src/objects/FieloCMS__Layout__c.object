@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Define the different look and feels and default template for a Site</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>FieloCMS__CSSClasses__c</fullName>
+        <deprecated>false</deprecated>
+        <description>this classes will be added to the HTML node</description>
+        <externalId>false</externalId>
+        <label>CSS Classes</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__Default__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Default</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__DesktopCSS__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field have a list of the url of implementer&apos;s style sheet resources for Desktop devices</description>
+        <externalId>false</externalId>
+        <label>Desktop&apos;s CSS URLs</label>
+        <length>1200</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__DesktopJS__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field have a list of the url of implementer&apos;s javascript resources for Desktop devices</description>
+        <externalId>false</externalId>
+        <label>Desktop&apos;s Javacsript URLs</label>
+        <length>1200</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__DesktopTemplate__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Define the default template of the Desktop devices that will be use in this layout</description>
+        <externalId>false</externalId>
+        <label>Desktop&apos;s Template</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>That template belongs to another site. You must create the template in this program before trying to use it.</errorMessage>
+            <filterItems>
+                <field>FieloCMS__Page__c.RecordType.DeveloperName</field>
+                <operation>equals</operation>
+                <value>Template</value>
+            </filterItems>
+            <filterItems>
+                <field>$Source.FieloCMS__Site__c</field>
+                <operation>equals</operation>
+                <valueField>FieloCMS__Page__c.FieloCMS__Site__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>FieloCMS__Page__c</referenceTo>
+        <relationshipLabel>Layouts</relationshipLabel>
+        <relationshipName>ProgramLayoutsTemplates</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__DisableProductResources__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If this field is checked the product styles sheets and javascript will not be used.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If you check this option the product resources will not be used. Don&apos;t check this unless you understand what you are doing.</inlineHelpText>
+        <label>Disable Product Resources</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__HomeNavigation__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is the home for this layout. It replaces the previous look up to Menu (Home__c)</description>
+        <externalId>false</externalId>
+        <label>Home</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>That navigation belongs to another program. You must create the navigation in this program before trying to use it.</errorMessage>
+            <filterItems>
+                <field>$Source.FieloCMS__Site__c</field>
+                <operation>equals</operation>
+                <valueField>FieloCMS__Navigation__c.FieloCMS__Site__c</valueField>
+            </filterItems>
+            <filterItems>
+                <field>FieloCMS__Navigation__c.RecordTypeId</field>
+                <operation>notEqual</operation>
+                <value>List</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>FieloCMS__Navigation__c</referenceTo>
+        <relationshipLabel>Layouts</relationshipLabel>
+        <relationshipName>Program_Layouts</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__MobileCSS__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field have a list of the url of implementer style sheet resources for Mobile devices</description>
+        <externalId>false</externalId>
+        <label>Mobile&apos;s CSS URLs</label>
+        <length>1200</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__MobileJS__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field have a list of the url of implementer&apos;s javascript resources for Mobile devices</description>
+        <externalId>false</externalId>
+        <label>Mobile&apos;s JS URLs</label>
+        <length>1200</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__MobileTemplate__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Define the default template of the Mobile devices that will be use in this layout</description>
+        <externalId>false</externalId>
+        <label>Mobile&apos;s Template</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>FieloCMS__Page__c.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Template</value>
+            </filterItems>
+            <filterItems>
+                <field>FieloCMS__Page__c.FieloCMS__Site__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.FieloCMS__Site__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>FieloCMS__Page__c</referenceTo>
+        <relationshipLabel>Layouts (Mobile&apos;s Template)</relationshipLabel>
+        <relationshipName>LayoutsMobile</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__SEOTitle__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>SEO Title</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__Site__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Site</label>
+        <referenceTo>FieloCMS__Site__c</referenceTo>
+        <relationshipLabel>Layouts</relationshipLabel>
+        <relationshipName>ProgramPortals</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__TabletCSS__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field have a list of the url of implementer&apos;s style sheet resources for Tablet devices</description>
+        <externalId>false</externalId>
+        <label>Tablet&apos;s CSS URLs</label>
+        <length>1200</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__TabletJS__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field have a list of the url of implementer&apos;s javascript resources for Tablet devices</description>
+        <externalId>false</externalId>
+        <label>Tablet&apos;s Javacsript URLs</label>
+        <length>1200</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__TabletTemplate__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Define the default template of the Tablet devices that will be use in this layout</description>
+        <externalId>false</externalId>
+        <label>Tablet&apos;s Template</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>That template belongs to another site. You must create the template in this program before trying to use it.</errorMessage>
+            <filterItems>
+                <field>FieloCMS__Page__c.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Template</value>
+            </filterItems>
+            <filterItems>
+                <field>$Source.FieloCMS__Site__c</field>
+                <operation>equals</operation>
+                <valueField>FieloCMS__Page__c.FieloCMS__Site__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>FieloCMS__Page__c</referenceTo>
+        <relationshipLabel>Layouts (Tablet&apos;s Template)</relationshipLabel>
+        <relationshipName>Layouts</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__Theme__c</fullName>
+        <defaultValue>&apos;FieloCms_Themes_Default&apos;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Name of the Static Resource that have the branding style sheet.</description>
+        <externalId>false</externalId>
+        <label>Theme</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Masculine</gender>
+    <label>Layout</label>
+    <nameField>
+        <label>Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Layouts</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>
