@@ -316,6 +316,13 @@
         <value>Set</value>
     </labels>
     <labels>
+        <fullName>ShoppingCartSave</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ShoppingCartSave</shortDescription>
+        <value>The changes were saved.</value>
+    </labels>
+    <labels>
         <fullName>ShoppingExistingReward</fullName>
         <categories>RewardDetailController.cls</categories>
         <language>en_US</language>
