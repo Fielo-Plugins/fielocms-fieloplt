@@ -8,6 +8,7 @@ public class NavigationService {
 		Set<Id> appliedSegments;
 		if(filterBySegments){
 			appliedSegments = FieloPLT.SegmentService.getMemberSegments(memberId, null);
+			//appliedSegments = new Map<Id, FieloPLT__Segment__c>([SELECT Id FROM FieloPLT__Segment__c LIMIT 5]).keySet();
 			//ya que platform no me devuelve los segmentos privado y público, los agrego yo según corresponda
 			if(UserInfo.getUserType() == 'Guest'){
 				appliedSegments.add([SELECT Id FROM FieloPLT__Segment__c WHERE RecordType.DeveloperName = 'Public' LIMIT 1].Id);
