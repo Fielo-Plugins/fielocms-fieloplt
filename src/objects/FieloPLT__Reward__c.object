@@ -55,6 +55,7 @@
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
@@ -137,17 +138,6 @@
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>InstructionsRichText__c</fullName>
-        <description>Allows to show more details on instructions</description>
-        <externalId>false</externalId>
-        <label>Instructions RichText</label>
-        <length>32768</length>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Html</type>
-        <visibleLines>15</visibleLines>
     </fields>
     <fields>
         <fullName>FieloPLT__Description__c</fullName>
@@ -345,6 +335,17 @@
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>InstructionsRichText__c</fullName>
+        <description>Allows to show more details on instructions</description>
+        <externalId>false</externalId>
+        <label>Instructions RichText</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
     </fields>
     <label>Reward</label>
     <listViews>
