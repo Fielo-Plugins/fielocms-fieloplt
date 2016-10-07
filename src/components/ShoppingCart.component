@@ -133,9 +133,8 @@
         }
 
         function checkDeleteCookie(result, event){
-
             // Coloco los mensajes de error o de exito segun corresponda
-            /*if (event.status && result !== undefined) {
+            if (event.status && result !== undefined) {
               var error = false;
               // Si existen mensajes verifico si hay alguno de error
               // y seteo el flag error a true
@@ -157,11 +156,10 @@
                 }
               }
 
-              if(!error){*/
-                alert("ejecute pre process");
-                /*setCookie("apex__shoppingCart", "", -1);
+              if(!error){                
+                setCookie("apex__shoppingCart", "", -1);
               }
-            }*/
+            }
         }
         
     </script>

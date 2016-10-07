@@ -42,7 +42,7 @@
       "FieloCMS__Icon__c" : "FieloCms_Salesforce-vendor/images/sections/one_column.jpg",
       "FieloCMS__Layouts__c" : "View",
       "FieloCMS__RecordType__c" : "Record",
-      "FieloCMS__Subcomponents__c" : "[     {\"apiName\": \"AddtoCart\",\"label\": \"Add to Cart\", \"reflectionClass\": \"RewardAPI\", \"type\": \"Subcomponent\"},{\"apiName\": \"Checkout\",\"label\": \"Checkout\", \"reflectionClass\": \"CheckoutController\", \"type\": \"Subcomponent\",\"detailUrl\":\"\"},{         \"apiName\": \"ViewImage\",         \"fieldName\": \"FieloPLT__Image__c\",         \"label\": \"ViewImage\",         \"reflectionClass\": \"FieloCMS.Subcomponents.ImageView\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     },     {         \"apiName\": \"Tags\",         \"fieldName\": \"FieloPLT__Image__c\",         \"label\": \"Tags\",         \"reflectionClass\": \"TagAPI\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     } ]",
+      "FieloCMS__Subcomponents__c" : "[     {\"apiName\": \"AddtoCart\",\"label\": \"Add to Cart\", \"reflectionClass\": \"RewardAPI\", \"type\": \"Subcomponent\"},{\"apiName\": \"Checkout\",\"label\": \"Checkout\", \"reflectionClass\": \"CheckoutController\", \"type\": \"Subcomponent\",\"detailUrl\":\"\"},{         \"apiName\": \"ViewImage\",         \"fieldName\": \"FieloPLT__Image__c\",         \"label\": \"ViewImage\",         \"reflectionClass\": \"FieloCMS.Subcomponents.ImageView\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     },     {         \"apiName\": \"Tags\",         \"fieldName\": \"FieloPLT__Image__c\",         \"label\": \"Tags\",         \"reflectionClass\": \"FieloCMS.TagAPI\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     } ]",
       "FieloCMS__Visibility__c" : "Both",
       "FieloCMS__sObject__c" : "FieloPLT__Reward__c",
       "FieloCMS__DeveloperName__c" : "PlatformPlugin.RewardDetail"
@@ -73,7 +73,7 @@
       "FieloCMS__Icon__c" : "fielo-icon-content",
       "FieloCMS__Layouts__c" : "Grid;Slider;Table",
       "FieloCMS__RecordType__c" : "List",
-      "FieloCMS__Subcomponents__c" : "[     {\"apiName\": \"AddtoCart\",\"label\": \"Add to Cart\", \"reflectionClass\": \"RewardAPI\", \"type\": \"Subcomponent\"},{\"apiName\": \"Checkout\",\"label\": \"Checkout\", \"reflectionClass\": \"CheckoutController\", \"type\": \"Subcomponent\",\"detailUrl\":\"\"},{         \"apiName\": \"ViewImage\",         \"fieldName\": \"FieloPLT__Image__c\",         \"label\": \"ViewImage\",         \"reflectionClass\": \"FieloCMS.Subcomponents.ImageView\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     },     {         \"apiName\": \"Tags\",         \"fieldName\": \"FieloPLT__Image__c\",         \"label\": \"Tags\",         \"reflectionClass\": \"TagAPI\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     } ]",
+      "FieloCMS__Subcomponents__c" : "[     {\"apiName\": \"AddtoCart\",\"label\": \"Add to Cart\", \"reflectionClass\": \"RewardAPI\", \"type\": \"Subcomponent\"},{\"apiName\": \"Checkout\",\"label\": \"Checkout\", \"reflectionClass\": \"CheckoutController\", \"type\": \"Subcomponent\",\"detailUrl\":\"\"},{         \"apiName\": \"ViewImage\",         \"fieldName\": \"FieloPLT__Image__c\",         \"label\": \"ViewImage\",         \"reflectionClass\": \"FieloCMS.Subcomponents.ImageView\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     },     {         \"apiName\": \"Tags\",         \"fieldName\": \"FieloPLT__Image__c\",         \"label\": \"Tags\",         \"reflectionClass\": \"FieloCMS.TagAPI\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     } ]",
       "FieloCMS__Visibility__c" : "Both",
       "FieloCMS__sObject__c" : "FieloPLT__Reward__c",
       "FieloCMS__DeveloperName__c" : "PlatformPlugin.Catalog"
@@ -167,11 +167,11 @@
       "FieloCMS__DataClass__c" : "FieloCMS.StandardAPI",
       "FieloCMS__ViewClass__c" : "LoginAPI",
       "FieloCMS__Icon__c" : "fielosf-icon-login",
-      "FieloCMS__RecordType__c" : "Record",
+      "FieloCMS__RecordType__c" : "Widget",
       "FieloCMS__Visibility__c" : "Public",
       "FieloCMS__DeveloperName__c" : "FieloCMS.Login"
     },
-{
+    {
       "recordTypeName" : "List",
       "Name" : "Media",
       "FieloCMS__AdditionalFields__c" : "FieloCMS__Tag__c",
