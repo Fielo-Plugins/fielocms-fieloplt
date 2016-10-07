@@ -167,7 +167,7 @@
       "FieloCMS__DataClass__c" : "FieloCMS.StandardAPI",
       "FieloCMS__ViewClass__c" : "LoginAPI",
       "FieloCMS__Icon__c" : "fielosf-icon-login",
-      "FieloCMS__RecordType__c" : "Record",
+      "FieloCMS__RecordType__c" : "Widget",
       "FieloCMS__Visibility__c" : "Public",
       "FieloCMS__DeveloperName__c" : "FieloCMS.Login"
     },
