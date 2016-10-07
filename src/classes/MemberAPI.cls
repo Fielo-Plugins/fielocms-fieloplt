@@ -34,7 +34,7 @@ global with sharing class MemberAPI implements FieloCMS.DataInterface, FieloCMS.
                 }
             }else if(c.FieloCMS__ComponentLibrary__r.Name == 'Register'){
                 newMapData.put(c.Id, new FieloPLT__Member__c());
-            } else if(c.FieloCMS__ComponentLibrary__r.Name == 'Member Detail' || c.FieloCMS__ComponentLibrary__r.Name == 'Account'){
+            } else if(c.FieloCMS__ComponentLibrary__r.Name == 'Member Detail' || c.FieloCMS__ComponentLibrary__r.Name == 'Account' || c.FieloCMS__ComponentLibrary__r.Name == 'Welcome'){
                 system.debug('member: ' + MemberService.getCurrentMember(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c)));
                 newMapData.put(c.Id, MemberService.getCurrentMember(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c)));
             }

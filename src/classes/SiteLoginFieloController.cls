@@ -5,9 +5,9 @@ global with sharing class SiteLoginFieloController {
         FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();                
         Pagereference redirectPage;
         try{
-            redirectPage = LoginService.login(username, password, null);
+            redirectPage = LoginService.login(username, password, null);            
             if(redirectPage != null){
-                result.redirectURL = redirectPage.getUrl();
+                result.redirectURL = redirectPage.getUrl().replace('%2Fapex','');
             }
         }catch(FieloException e){
             result.redirectURL = '';
