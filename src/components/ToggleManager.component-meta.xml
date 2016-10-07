@@ -4,12 +4,12 @@
     <label>ToggleManager</label>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>54</minorNumber>
+        <minorNumber>52</minorNumber>
         <namespace>FieloCMS</namespace>
     </packageVersions>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>1</minorNumber>
+        <minorNumber>0</minorNumber>
         <namespace>FieloPLT</namespace>
     </packageVersions>
 </ApexComponent>

@@ -4,12 +4,17 @@
     <label>AddToCart</label>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>54</minorNumber>
+        <minorNumber>57</minorNumber>
         <namespace>FieloCMS</namespace>
     </packageVersions>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>1</minorNumber>
+        <minorNumber>2</minorNumber>
         <namespace>FieloPLT</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>4</majorNumber>
+        <minorNumber>24</minorNumber>
+        <namespace>INFA</namespace>
     </packageVersions>
 </ApexComponent>

@@ -14,6 +14,9 @@ global with sharing class TransactionAPI implements FieloCMS.DataInterface, Fiel
                 String query = 'SELECT ' + String.join(new List<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c)), ',') + ' FROM FieloPLT__Transaction__c WHERE FieloPLT__Member__c =: memberId';
                 query += ' LIMIT ' + String.valueOf(c.FieloCMS__Limit__c);
                 newMapData.put(c.Id, Database.query(query));
+
+                System.debug(newMapData.values());
+
             }                
         }
         return newMapData;
