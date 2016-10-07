@@ -14,4 +14,9 @@
         <minorNumber>1</minorNumber>
         <namespace>FieloPLT</namespace>
     </packageVersions>
+    <packageVersions>
+        <majorNumber>4</majorNumber>
+        <minorNumber>24</minorNumber>
+        <namespace>INFA</namespace>
+    </packageVersions>
 </ApexPage>

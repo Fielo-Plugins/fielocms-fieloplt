@@ -3,7 +3,7 @@
     <apiVersion>31.0</apiVersion>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>1</minorNumber>
+        <minorNumber>0</minorNumber>
         <namespace>FieloPLT</namespace>
     </packageVersions>
     <status>Active</status>

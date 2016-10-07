@@ -80,6 +80,26 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>FieloCMS__PluginCSS__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Plugin&apos;s CSS</label>
+        <length>1200</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>FieloCMS__PluginJS__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Plugin&apos;s Javascript</label>
+        <length>1200</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
         <fullName>FieloCMS__SiteDomain__c</fullName>
         <caseSensitive>false</caseSensitive>
         <deprecated>false</deprecated>

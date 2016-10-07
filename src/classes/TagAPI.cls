@@ -1,6 +1,6 @@
 global with sharing class TagAPI implements FieloCMS.ViewSubComponentInterface,FieloCMS.DataInterface{
-	
-	global Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){        
+    
+    global Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){        
         FieloPLT__Program__c program = ProgramService.getCurrentProgram();
         Map<Id,Object> newMapData = new Map<Id,Object>();
         //Prepare all the queries

@@ -35,6 +35,7 @@ public with sharing class MemberService {
         }
 
         return memId;
+        //return 'a0D41000000y2fM';
     }
 
     public static void setCurrentMemberId(Id memberId){

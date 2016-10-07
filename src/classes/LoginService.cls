@@ -1,9 +1,9 @@
 public class LoginService {
-	
-	public static Pagereference login(String userName, String password, String startUrl){
+    
+    public static Pagereference login(String userName, String password, String startUrl){
         username = username.trim();
         try{
-        	//Checks if the user is inactive and activate it, after that redirects to the page to reactivate the user
+            //Checks if the user is inactive and activate it, after that redirects to the page to reactivate the user
             List<User> inactiveUsers = [SELECT Username, Name, IsActive, Id, Email From User where IsActive = false AND Username =: username limit 1];            
             if(inactiveUsers.size() > 0){
                 inactiveUsers.get(0).IsActive = true;

@@ -1,6 +1,6 @@
 global with sharing class BadgeAPI implements FieloCMS.DataInterface{
-	
-	//BADGES
+    
+    //BADGES
     global Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){
         FieloPLT__Program__c program = ProgramService.getCurrentProgram();
         Map<Id,Object> newMapData = new Map<Id,Object>();
