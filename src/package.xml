@@ -84,6 +84,7 @@
         <members>Admin</members>
         <members>Fielo Member Site</members>
         <members>Fielo REST</members>
+        <members>Fielo Profile</members>
         <name>Profile</name>
     </types>
     <types>
