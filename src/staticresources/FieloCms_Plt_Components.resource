@@ -123,7 +123,7 @@
       "Name" : "Shopping Cart",
       "FieloCMS__AdditionalFields__c" : "RedirectPage__c",
       "FieloCMS__ControlClass__c" : "FieloCMS.StandardAPI",
-      "FieloCMS__CssClasses__c" : "fielo-shopping-cart",
+      "FieloCMS__CssClasses__c" : "",
       "FieloCMS__DataClass__c" : "FieloCMS.StandardAPI",
       "FieloCMS__Icon__c" : "FieloCms_Salesforce-vendor/images/sections/one_column.jpg",
       "FieloCMS__RecordType__c" : "Widget",
