@@ -1,19 +1,13 @@
 <apex:component controller="ShoppingCartController" allowDML="true" access="global" layout="none">
-
 	<apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.AccountCRMMode__c.Name}" />
     <apex:variable var="namespace" value="{!SUBSTITUTE(SUBSTITUTE(fieldName,'AccountCRMMode__c',''),'__','.')}" />
-
     <apex:attribute name="config" type="FieloCMS__Component__c" description="" />
-
     <apex:panelGroup layout="none" rendered="{!config.FieloCMS__Layout__c != 'View'}" >
-        <apex:panelGroup rendered="{!rewards.size > 0}" >
-            <div class="fielo-form fielo-js-component {!config.FieloCMS__ComponentLibrary__r.FieloCMS__CSSClasses__c} {!config.FieloCMS__CSSClasses__c}" data-componentid="{!config.Id}" id="shopp{!config.Id}" >
-                <!--<div  class="fielo-message" data-componentid="{!config.Id}" ></div>-->
-                <form class="fielo-form__shopping-cart fielo-js-upgrade" data-remotearguments="componentId,quantities" data-remotepreprocess="checkDeleteCookie">
+        <apex:panelGroup rendered="{!rewards.size > 0}" layout="none">
+            <div class="fielo-form fieloplt-shopping-cart fielo-js-component {!config.FieloCMS__ComponentLibrary__r.FieloCMS__CSSClasses__c} {!config.FieloCMS__CSSClasses__c}" data-componentid="{!config.Id}" id="shopp{!config.Id}" >
+                <form class="fielo-js-upgrade" data-remotearguments="componentId,quantities" data-remotepreprocess="checkDeleteCookie">
                     <input type="hidden" name="componentId" value="{!config.Id}" />
-
                     <div class="fielo-record-set fielo-record-set--is-table fielo-record-set--is-component-ShoppingCart {!config.FieloCMS__CSSClasses__c}" data-layout="table" data-componentid="{! config.Id}" >
-                        <!--<div class="fielo-messages" data-componentid="{! config.Id}" ></div>-->
                         <apex:panelGroup layout="none" rendered="{!config.FieloCMS__Title__c != ''}" >
                             <h3 class="fielo-title">{!config.FieloCMS__Title__c}</h3>
                         </apex:panelGroup>
@@ -40,12 +34,12 @@
                                         </apex:repeat>
                                         <td class="fielo-field fielo-field--is-ShoppingQuantity mdl-data-table__cell--non-numeric" data-th="Shopping Quantity">
                                             <span class="fielo-field__value">
-                                                <input type="number" min="0" required="required" class="fielo-shopping__quantity js-to-be-initialized" name="quantities.{!record.Id}" value="{!quantitiesMap[record.Id]}" onchange="document.getElementById('shoppingTotal{!record.Id}').innerHTML = this.value * document.getElementById('{!record.Id}FieloPLT__Points__c').children[0].innerHTML.replace(',','');" data-attribute-replace="value"/>
+                                                <input type="number" min="0" required="required" class="fieloplt-shopping-cart__quantity js-to-be-initialized" name="quantities.{!record.Id}" value="{!quantitiesMap[record.Id]}" onchange="document.getElementById('shoppingTotal{!record.Id}').innerHTML = this.value * document.getElementById('{!record.Id}FieloPLT__Points__c').children[0].innerHTML.replace(',','');" data-attribute-replace="value"/>
                                             </span>
                                         </td>
                                         <td class="fielo-field fielo-field--is-ShoppingTotal mdl-data-table__cell--non-numeric" data-th="Shopping Total">
                                             <span class="fielo-field__value">
-                                                <span id="shoppingTotal{!record.Id}" class="fielo-shopping__total">{!totalPointsMap[record.Id]}</span>
+                                                <span id="shoppingTotal{!record.Id}" class="fieloplt-shopping-cart__total">{!totalPointsMap[record.Id]}</span>
                                             </span>
                                         </td>
                                         <td class="fielo-field fielo-field--is-ShoppingDelete mdl-data-table__cell--non-numeric" data-th="Shopping Total">
@@ -57,10 +51,6 @@
                                 </apex:repeat>
                             </tbody>
                         </table>
-                        <!--<nav class="fielo-controls {!IF(config['Paging__c'],'','hidden')}" data-quantity-per-page="{!config['FieloCMS__Limit__c']}" data-page="1" data-component-id="{!config['Id']}" data-binding="{!config['ParameterName__c']}" data-filters="{}" data-order-by="">
-                            <a href="#previousPage" class="fielo-link fielo-link__previous disabled">{!$Label.Previous}</a>
-                            <a href="#nextPage" class="fielo-link fielo-link__next">{!$Label.Next}</a>
-                        </nav>-->
                     </div>
                     <div class="fielo-controls" >
                         <a class="fielo-button fielo-button--safe fielo-button__save" onclick="saveCart();" >{!$Label.Save}</a>
@@ -70,42 +60,42 @@
                 </form>
             </div>
         </apex:panelGroup>
-        <apex:panelGroup rendered="{!rewards.size == 0 }" >
+        <apex:panelGroup rendered="{!rewards.size == 0 }" layout="none">
             <span>
                 {!$Label.ErrorNoItemShoppingCart}
             </span>
         </apex:panelGroup>
     </apex:panelGroup>
-    <apex:panelGroup rendered="{!config.FieloCMS__Layout__c == 'View'}">
+    <apex:panelGroup rendered="{!config.FieloCMS__Layout__c == 'View'}" layout="none">
         {!totalItems} Items
     </apex:panelGroup>
 
-    <script>   
+    <script>
         function saveCart(){
-            var inputs = document.getElementsByClassName("fielo-shopping__quantity");            
-            var jsonShop = {};            
+            var inputs = document.getElementsByClassName("fieloplt-shopping-cart__quantity");
+            var jsonShop = {};
             for(var i = 0; i < inputs.length; i++){
                 jsonShop[inputs[i].name.split("quantities.")[1]] = parseInt(inputs[i].value);
             }
             setCookie("apex__shoppingCart", JSON.stringify(jsonShop), 1);
             fieloUtils.message.FieloMessage.clear();
-            fieloUtils.message.FieloMessage.addMessages('{!$Label.ShoppingCartSave}');            
+            fieloUtils.message.FieloMessage.addMessages('{!$Label.ShoppingCartSave}');
             fieloUtils.message.FieloMessage.setRedirect('#', 3);
             fieloUtils.message.FieloMessage.show();
         }
 
         function deleteRow(link, divElement){
             if(confirm("Are you Sure?")){
-                var record = fieloUtils.getParentUntil(link, '.fielo-record');                
+                var record = fieloUtils.getParentUntil(link, '.fielo-record');
                 var save = divElement.querySelector('.fielo-button__save');
-                save.click();                
-                record.parentElement.removeChild(record);                
+                save.click();
+                record.parentElement.removeChild(record);
             }
         }
 
         function emptyCart(element){
             if(confirm("Are you Sure?")){
-                setCookie("apex__shoppingCart", "", -1);            
+                setCookie("apex__shoppingCart", "", -1);
                 oldLoader.components.refreshView(element);
             }
         }
@@ -156,12 +146,12 @@
                 }
               }
 
-              if(!error){                
+              if(!error){
                 setCookie("apex__shoppingCart", "", -1);
               }
             }
         }
-        
+
     </script>
 
 </apex:component>

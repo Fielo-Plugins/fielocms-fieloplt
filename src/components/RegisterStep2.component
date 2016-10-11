@@ -1,10 +1,8 @@
 <apex:component layout="none" controller="RegisterStep2Controller" allowDML="true" access="global">
-
     <apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.AccountCRMMode__c.Name}" />
     <apex:variable var="namespace" value="{!SUBSTITUTE(SUBSTITUTE(fieldName,'AccountCRMMode__c',''),'__','.')}" />
-
     <apex:attribute name="config" type="FieloCMS__Component__c" description="" />
-    <div class="fielo-form fielo-register-step-2 fielo-widget fielo-js-component" data-componentid="{!config.Id}" >
+    <div class="fielo-form fieloplt-register-step-2 fielo-widget fielo-js-component" data-componentid="{!config.Id}" >
         <div class="fielo-title">{!$Label.Welcome}</div>
         <apex:panelGroup layout="none" rendered="{!(status != 'Ok' && status != 'User exist')}">
             <apex:panelGroup layout="none" rendered="{!status != 'Send for Approval'}">
@@ -36,7 +34,6 @@
         <apex:panelGroup layout="none" rendered="{!(status == 'Ok' || status == 'User exist')}">
             <form class="fielo-js-upgrade" data-remoteaction="{!namespace}RegisterStep2Controller.finishRegistration" data-remotearguments="SObject,password" data-remoteobject="Member__c" >
                 <fieldset>
-
                     <input type="hidden" name="SObject.id" value="{!member.Id}" />
                     <apex:repeat value="{!$ObjectType.FieloPLT__Member__c.FieldSets.RegistrationStep2}" var="field" >
                         <div class="mdl-grid fielo-field fielo-field--is-{!field}">
@@ -44,7 +41,7 @@
                                 <label for="{!field}" >{!$ObjectType.FieloPLT__Member__c.fields[field].label}</label>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__value">
-                                <input class="fielo-input fielo-js-upgrade"   id="{!field}" name="SObject.{!field}"  value="{!member[field]}" /><!-- data-required="{!field.required}" --> <!--data-type="{!field.type}"-->
+                                <input class="fielo-input fielo-js-upgrade"   id="{!field}" name="SObject.{!field}"  value="{!member[field]}" />
                             </div>
                         </div>
                     </apex:repeat>
@@ -54,7 +51,7 @@
                                 <label for="password" >{!$Label.Password}</label>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__value">
-                                <input class="fielo-input" type="password" required="required"  autocomplete="current-password" id="showPassword" name="password"  /><!--  {! config['Id'] }- -->
+                                <input class="fielo-input" type="password" required="required"  autocomplete="current-password" id="showPassword" name="password"  />
                             </div>
                         </div>
                         <div class="mdl-grid fielo-field fielo-field--is-confirmpassword">
@@ -73,6 +70,5 @@
                 </div>
             </form>
         </apex:panelGroup>
-
     </div>
 </apex:component>
