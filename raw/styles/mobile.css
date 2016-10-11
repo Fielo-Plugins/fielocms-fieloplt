@@ -19,8 +19,8 @@
 }
 
 /* Add To Cart - Mobile */
-
-.fieloplt-add-to-cart__quantity{
+.fieloplt-add-to-cart__quantity,
+.fieloplt-checkout__quantity {
   width: 40px;
   text-align: center;
 }
@@ -34,7 +34,8 @@
 
 /* Shopping Cart - Mobile */
 
-.fieloplt-shopping-cart__quantity {
+.fieloplt-shopping-cart__quantity,
+.fieloplt-checkout__quantity  {
   width: 40px;
   text-align: center;
 }
