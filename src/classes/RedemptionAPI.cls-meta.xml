@@ -6,13 +6,10 @@
         <minorNumber>60</minorNumber>
         <namespace>FieloCMS</namespace>
     </packageVersions>
-<<<<<<< HEAD
-=======
     <packageVersions>
         <majorNumber>1</majorNumber>
         <minorNumber>2</minorNumber>
         <namespace>FieloPLT</namespace>
     </packageVersions>
->>>>>>> d8058770d60298a357f6485f536ee671927198f8
     <status>Active</status>
 </ApexClass>
