@@ -17,10 +17,7 @@ global with sharing class CheckoutController implements FieloCMS.ViewSubComponen
         Savepoint sp = Database.setSavepoint();
         try{                            
             List<FieloPLT__Redemption__c> redemptions = FieloPLT.RedemptionService.createRedemptions(new Map<Id,Integer>{rewardId => quantity}, MemberService.getCurrentMemberId());
-            if(redemptions[0].FieloPLT__Status__c == 'Closed'){
-                /*PageReference retPage = Page.FieloCMS__Page;
-                retPage.getParameters().put('pageId',component.RedirectPage__c);
-                retPage.getParameters().put(component.FieloCMS__ParameterName__c,redemption.Id);*/
+            if(redemptions[0].FieloPLT__Status__c == 'Closed'){                
                 result.redirectURL = detailUrl + redemptions[0].Id;
             }else{
                 result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.InfoRedemptionApproval)));

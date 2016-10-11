@@ -9,7 +9,7 @@
         <apex:panelGroup rendered="{!rewards.size > 0}" >
             <div class="fielo-form fielo-js-component {!config.FieloCMS__ComponentLibrary__r.FieloCMS__CSSClasses__c} {!config.FieloCMS__CSSClasses__c}" data-componentid="{!config.Id}" id="shopp{!config.Id}" >
                 <!--<div  class="fielo-message" data-componentid="{!config.Id}" ></div>-->
-                <form class="fielo-form__shopping-cart fielo-js-upgrade" data-remotearguments="componentId,quantities" >
+                <form class="fielo-form__shopping-cart fielo-js-upgrade" data-remotearguments="componentId,quantities" data-remotepreprocess="checkDeleteCookie">
                     <input type="hidden" name="componentId" value="{!config.Id}" />
 
                     <div class="fielo-record-set fielo-record-set--is-table fielo-record-set--is-component-ShoppingCart {!config.FieloCMS__CSSClasses__c}" data-layout="table" data-componentid="{! config.Id}" >
@@ -132,7 +132,35 @@
             return "";
         }
 
+        function checkDeleteCookie(result, event){
+            // Coloco los mensajes de error o de exito segun corresponda
+            if (event.status && result !== undefined) {
+              var error = false;
+              // Si existen mensajes verifico si hay alguno de error
+              // y seteo el flag error a true
+              if (typeof result.messages !== 'undefined') {
+                for (
+                  var index = 0, maximun = result.messages.length;
+                  index < maximun;
+                  index++
+                ) {
+                  if (
+                    result.messages[index]
+                      .severity.toLowerCase() === 'ERROR'.toLowerCase() ||
+                    result.messages[index]
+                      .severity.toLowerCase() === 'FATAL'.toLowerCase()
+                  ) {
+                    error = true;
+                    break;
+                  }
+                }
+              }
 
+              if(!error){                
+                setCookie("apex__shoppingCart", "", -1);
+              }
+            }
+        }
         
     </script>
 
