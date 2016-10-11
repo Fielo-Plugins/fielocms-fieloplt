@@ -307,7 +307,6 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <gender>Masculine</gender>
     <label>Layout</label>
     <nameField>
         <label>Name</label>

@@ -184,7 +184,6 @@
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
-    <gender>Masculine</gender>
     <label>Navigation</label>
     <nameField>
         <label>Navigation Name</label>
