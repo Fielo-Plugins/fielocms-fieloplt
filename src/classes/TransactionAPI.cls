@@ -1,4 +1,4 @@
-global with sharing class TransactionAPI implements FieloCMS.DataInterface, FieloCMS.ControlInterface{
+global with sharing class TransactionAPI implements FieloCMS.DataInterface{
 	
 	global Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){                
         Map<Id,Object> newMapData = new Map<Id,Object>();
@@ -35,44 +35,4 @@ global with sharing class TransactionAPI implements FieloCMS.DataInterface, Fiel
         return Database.query(query);
     }
     
-    global FieloCMS.RemoteActionResult remoteComponentAction(FieloCMS__Component__c component, sObject record, String json){
-        
-        Savepoint sp;
-
-        FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
-        List<FieloCMS.RemoteActionResult.RemoteActionMessage> successMessages = new List<FieloCMS.RemoteActionResult.RemoteActionMessage>();
-
-        try{                    
-            sp = Database.setSavepoint();
-            
-            FieloPLT__Transaction__c trans = (FieloPLT__Transaction__c)record;
-            //se comenta porque el code insert pasa a una solution
-            //trans.FieloPLT__Type__c = (component.TransactionType__c != null && component.TransactionType__c != '') ? component.TransactionType__c : 'Code Insert';
-            trans.FieloPLT__Member__c = MemberService.getCurrentMemberId();
-            //se comenta porque el code insert pasa a una solution
-            //FieloPLT.CodeUtil.sendCode(trans);
-            successMessages.add(new FieloCMS.RemoteActionResult.RemoteActionMessage( ApexPages.Severity.Info, 'Success'));            
-        }catch(DmlException e){            
-            Database.rollback(sp);
-            if(ApexPages.hasMessages()){
-                result.redirectURL = '';
-                for(ApexPages.Message m : ApexPages.getMessages()){
-                    result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(m));
-                }
-            }
-            return result;
-        }catch(Exception e){
-            if(sp != null){
-                Database.rollback(sp);
-            }
-            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
-            return result;
-        }
-
-        if(!successMessages.isEmpty()){            
-            result.addMessages(successMessages);            
-        }
-
-        return result;
-    }
 }

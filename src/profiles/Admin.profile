@@ -121,10 +121,6 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>PackageInstallation</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>ProgramService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -222,10 +218,6 @@
     </classAccesses>
     <classAccesses>
         <apexClass>StringBuilder</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>TagAPI</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>

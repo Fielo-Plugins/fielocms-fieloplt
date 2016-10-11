@@ -4,7 +4,7 @@
     <label>AddToCart</label>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>57</minorNumber>
+        <minorNumber>60</minorNumber>
         <namespace>FieloCMS</namespace>
     </packageVersions>
     <packageVersions>
