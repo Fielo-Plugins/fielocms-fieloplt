@@ -22,8 +22,11 @@ global class NavigationAPI implements FieloCMS.DataInterface{
                 fieldsToQuery.add(fieldName.toLowerCase());
             }
 
-            newMapData.put(c.Id, NavigationService.getNavigations(c.FieloCMS__Navigation__c, fieldsToQuery, siteId, MemberService.getCurrentMemberId(), true));
+            newMapData.put(c.Id, NavigationService.getNavigations(c.FieloCMS__Navigation__c, fieldsToQuery, siteId, MemberService.getCurrentMemberId()));
         }
+
+        System.debug(newMapData.values());
+
         return newMapData;
     }
 
