@@ -10,16 +10,18 @@ public class NavigationService {
 			appliedSegments = FieloPLT.SegmentService.getMemberSegments(memberId, null);
 			//appliedSegments = new Map<Id, FieloPLT__Segment__c>([SELECT Id FROM FieloPLT__Segment__c LIMIT 5]).keySet();
 			//ya que platform no me devuelve los segmentos privado y público, los agrego yo según corresponda
-			if(UserInfo.getUserType() == 'Guest'){
+			/*if(UserInfo.getUserType() == 'Guest'){
 				appliedSegments.add([SELECT Id FROM FieloPLT__Segment__c WHERE RecordType.DeveloperName = 'Public' LIMIT 1].Id);
 			}else{
 				appliedSegments.add([SELECT Id FROM FieloPLT__Segment__c WHERE RecordType.DeveloperName = 'Private' LIMIT 1].Id);
-			}
+			}*/
 
-            query += ' AND Segment__c IN : appliedSegments';
+            query += ' AND (Segment__c = ' + null + ' OR Segment__c IN : appliedSegments) ';
 		}
 
 		query += ' ORDER BY FieloCMS__Order__c';
+
+		System.debug(query);
 
 		return Database.query(query);
 	}
