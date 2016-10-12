@@ -23,20 +23,8 @@
             </fieldset>
             <div class="fielo-controls" >
                 <a href="#" class="fielo-login__link" data-switchlabel="{!$Label.back}" >{!$Label.site.forgot_password}</a>
-                <button class="fielo-button fielo-button--safe" onclick="deleteCart();" >{!$Label.submit}</button>
+                <button class="fieloplt-login__submit fielo-button fielo-button--safe" >{!$Label.submit}</button>
             </div>
         </form>
     </div>
-    <script>
-        function deleteCart(){
-            setCookie("apex__shoppingCart", "", -1);
-        }
-
-        function setCookie(cname, cvalue, exdays) {
-            var d = new Date();
-            d.setTime(d.getTime() + (exdays*24*60*60*1000));
-            var expires = "expires="+d.toUTCString();
-            document.cookie = cname + "=" + cvalue + "; " + expires;
-        }
-    </script>
 </apex:component>

@@ -164,8 +164,8 @@
   FieloPLTShoppingCart.prototype.setDefaults_ = function() {
     this.save_ =
       this.element_.getElementsByClassName(this.CssClasses_.SAVE)[0];
-    this.delete_ =
-      this.element_.getElementsByClassName(this.CssClasses_.DELETE)[0];
+    this.deleteButtons_ =
+      this.element_.getElementsByClassName(this.CssClasses_.DELETE);
     this.empty_ =
       this.element_.getElementsByClassName(this.CssClasses_.EMPTY)[0];
     this.success_ = this.element_.dataset.labelSuccess;
@@ -198,7 +198,9 @@
    */
   FieloPLTShoppingCart.prototype.addEventListeners_ = function() {
     this.save_.addEventListener('click', this.saveClickHandler_.bind(this));
-    this.delete_.addEventListener('click', this.deleteClickHandler_.bind(this));
+    [].forEach.call(this.deleteButtons_, function(button){
+      button.addEventListener('click', this.deleteClickHandler_.bind(this));
+    }, this);
     this.empty_.addEventListener('click', this.emptyClickHandler_.bind(this));
   };
 
@@ -315,3 +317,91 @@ function FieloPLTcheckDeleteCookie(result, event){
     }
 }
 
+
+
+
+(function() {
+  'use strict';
+
+  /**
+   * @description Constructor for the login form
+   * FieloPLTLogin Implements design patterns defined by MDL at
+   * {@link https://github.com/jasonmayes/mdl-component-design-pattern}
+   *
+   * @version 1
+   * @author Alejandro Spinelli <alejandro.spinelli@fielo.com>
+   * @author Hugo Gómez Mac Gregor <hugo.gomez@fielo.com>
+   * @param {HTMLElement} element - Element to be upgraded
+   * @constructor
+   */
+  var FieloPLTLogin = function FieloPLTLogin(element) {
+    this.element_ = element;
+
+    // Initialize instance.
+    this.init();
+  };
+  window.FieloPLTLogin = FieloPLTLogin;
+
+  // Properties
+
+  /**
+   * Css name classes
+   *
+   * @enum {string}
+   * @private
+   */
+  FieloPLTLogin.prototype.CssClasses_ = {
+    SUBMIT: 'fieloplt-login__submit'
+  };
+
+  // Private methods
+
+  /**
+   * Set Defaults settings
+   *
+   * @private
+   */
+  FieloPLTLogin.prototype.setDefaults_ = function() {
+    this.submit_ =
+      this.element_.getElementsByClassName(this.CssClasses_.SUBMIT)[0];
+  };
+
+  /**
+   * Sets listeners
+   *
+   * @private
+   */
+  FieloPLTLogin.prototype.addEventListeners_ = function() {
+    this.submit_.addEventListener('click', this.submitClickHandler_.bind(this));
+  };
+
+  /**
+   * Even handler for the save button
+   *
+   * @private
+   */
+  FieloPLTLogin.prototype.submitClickHandler_ = function() {
+    fieloUtils.setCookie('apex__shoppingCart', '', -1);
+  };
+
+  // Public methods
+
+  /**
+   * Inicializa el elemento
+   */
+  FieloPLTLogin.prototype.init = function() {
+    if (this.element_) {
+      this.setDefaults_();
+      this.addEventListeners_();
+    }
+  };
+
+  // El componente se registra por si solo.
+  // Asume que el componentHandler esta habilitado en el scope global
+  componentHandler.register({
+    constructor: FieloPLTLogin,
+    classAsString: 'FieloPLTLogin',
+    cssClass: 'fieloplt-login',
+    widget: true
+  });
+})();
