@@ -2,7 +2,7 @@
 {
   "plugins" : [ {
     "Name" : "PlatformPlugin",
-    "FieloCMS__Version__c" : 0.907,
+    "FieloCMS__Version__c" : 0.908,
     "components" : [ {
       "recordTypeName" : "Record",
       "Name" : "Redemption Detail",
