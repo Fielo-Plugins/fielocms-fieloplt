@@ -1,16 +1,15 @@
 /**
 * @description
 */
-public with sharing class MediaApi implements FieloCMS.DataInterface{
+global with sharing class MediaApi implements FieloCMS.DataInterface{
 
     /**
     * @brief Method to get the data on execution
     * @param List<FieloCMS__Component__c> components
     * @return Map<Id, List<sObject>>
     **/
-    public Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){
+    global Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){
 
-        System.debug('hola');
 
         Map<Id,Object> newMapData = new Map<Id,Object>();
 
@@ -18,7 +17,8 @@ public with sharing class MediaApi implements FieloCMS.DataInterface{
         Map<Id, Id> mapComponentRecord = new Map<Id, Id>();
         for(FieloCMS__Component__c c : components) {
             if(c.FieloCMS__ComponentLibrary__r.FieloCMS__RecordType__c == 'List'){
-                newMapData.put(c.Id, MediaService.getMedia(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c), c.FieloCMS__Tag__c, c.FieloCMS__Limit__c.intValue(), 0, c.FieloCMS__OrderBy__c, MemberService.getCurrentMemberId()));
+                //newMapData.put(c.Id, MediaService.getMedia(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c), c.FieloCMS__Tag__c, c.FieloCMS__Limit__c.intValue(), 0, c.FieloCMS__OrderBy__c, MemberService.getCurrentMemberId()));
+                newMapData.put(c.Id, new List<FieloCMS__Media__c>());
             } else if(c.FieloCMS__ComponentLibrary__r.FieloCMS__RecordType__c == 'Record') {
                 fieldSet.addAll( OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c) );
                 if ( String.isBlank(c.FieloCMS__RecordId__c) ) {
@@ -39,9 +39,7 @@ public with sharing class MediaApi implements FieloCMS.DataInterface{
         return newMapData;
     }
 
-    public List<sObject> getData(FieloCMS__Component__c component, Integer pageNumber, String orderBy, String filters){
-        
-        System.debug('chau');
+    global List<sObject> getData(FieloCMS__Component__c component, Integer pageNumber, String orderBy, String filters){
 
         List<SObject> newData = new List<SObject>();
         String categoryId;
