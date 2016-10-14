@@ -20,9 +20,9 @@ global with sharing class RewardAPI implements FieloCMS.DataInterface,FieloCMS.V
         if(filters != null){
             Map<String,Object> filtersMap = (Map<String,Object>) JSON.deserializeUntyped(filters);
             for(String s : filtersMap.keySet()){
-                if(s == 'FieloCMS__Category__c'){
+                if(s == 'Category__c'){
                     categoryId = (String)filtersMap.get(s);
-                }else if(s == 'FieloCMS__Tag__c'){
+                }else if(s == 'Tag__c'){
                     tagId = (String)filtersMap.get(s);
                 }
             }
@@ -38,10 +38,30 @@ global with sharing class RewardAPI implements FieloCMS.DataInterface,FieloCMS.V
         if(tagId == null && component.FieloCMS__Tag__c != null){
             tagId = component.FieloCMS__Tag__c;
         }
+        
+        //to review performance
+        Set<Id> setTaggedRewards = new Set<Id>();
+        String rewardIds = null;
+        if(tagId != null){
+            rewardIds = '(';
+            for(FieloCMS__TagItem__c tag: [SELECT Reward__c FROM FieloCMS__TagItem__c WHERE FieloCMS__Tag__c =: tagId AND Reward__c != null]){
+                setTaggedRewards.add(tag.Reward__c);
+                rewardIds += '\'' + tag.Reward__c + '\'' + ',';
+            }
+            rewardIds = rewardIds.removeEnd(',');
+            rewardIds += ')';
+        }    
 
         //Calculate the offset from the Page Number
         Integer offset = Integer.valueOf(component.FieloCMS__Limit__c * (pageNumber - 1));
-        return FieloPLT.RewardService.getRewards(OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c), MemberService.getCurrentMemberId(), component.FieloCMS__Limit__c.intValue(), offset, orderBy, '(FieloPLT__Program__c = null OR FieloPLT__Program__c = \'' + program.Id + '\')');
+
+        //builds the where condition
+        String whereCondition = '';
+        whereCondition = whereCondition + '(FieloPLT__Program__c = ' + null + ' OR FieloPLT__Program__c = \'' + program.Id + '\')';
+        whereCondition += categoryId != null ? ' AND Category__c = \'' + categoryId + '\'' : '';
+        whereCondition += (tagId != null && rewardIds != null) ? ' AND Id IN ' + rewardIds : '';
+
+        return FieloPLT.RewardService.getRewards(OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c), MemberService.getCurrentMemberId(), component.FieloCMS__Limit__c.intValue(), offset, orderBy, whereCondition);
     }
 
     public ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){        
