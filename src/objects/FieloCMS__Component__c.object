@@ -48,6 +48,7 @@
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
+    <description>A Component is a visual element which has a specific functionality and it can be included in Pages and Templates.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableEnhancedLookup>false</enableEnhancedLookup>
@@ -161,7 +162,7 @@ Default Account: The member will be related to an specific default CRM account</
     <fields>
         <fullName>FieloCMS__CSSClasses__c</fullName>
         <deprecated>false</deprecated>
-        <description>Here will be stored the CSS Classes for the corresponding Component.</description>
+        <description>Component CSS classes applied in the HTML class attribute.</description>
         <externalId>false</externalId>
         <label>CSS Classes</label>
         <length>255</length>
@@ -174,8 +175,9 @@ Default Account: The member will be related to an specific default CRM account</
         <fullName>FieloCMS__Category__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
+        <description>Parent category filters the Component content.</description>
         <externalId>false</externalId>
-        <label>Category</label>
+        <label>Parent category</label>
         <referenceTo>FieloCMS__Category__c</referenceTo>
         <relationshipLabel>Components</relationshipLabel>
         <relationshipName>Components</relationshipName>
@@ -187,10 +189,10 @@ Default Account: The member will be related to an specific default CRM account</
         <fullName>FieloCMS__Columns__c</fullName>
         <defaultValue>2</defaultValue>
         <deprecated>false</deprecated>
-        <description>Columns of the Catalog component in Grid view only</description>
+        <description>Number of Grid columns.</description>
         <externalId>false</externalId>
         <inlineHelpText>Set the number of columns for the Grid view only</inlineHelpText>
-        <label>Number of Columns</label>
+        <label>Number of columns</label>
         <precision>2</precision>
         <required>false</required>
         <scale>0</scale>
@@ -202,6 +204,7 @@ Default Account: The member will be related to an specific default CRM account</
         <fullName>FieloCMS__ComponentLibrary__c</fullName>
         <deleteConstraint>Restrict</deleteConstraint>
         <deprecated>false</deprecated>
+        <description>Lookup to the Component within the Component Library.</description>
         <externalId>false</externalId>
         <label>Component Library</label>
         <referenceTo>FieloCMS__ComponentLibrary__c</referenceTo>
@@ -214,7 +217,7 @@ Default Account: The member will be related to an specific default CRM account</
     <fields>
         <fullName>FieloCMS__Content__c</fullName>
         <deprecated>false</deprecated>
-        <description>Used on the Content Component to add a free text on the frontend</description>
+        <description>It is used in the Content Component to add free text.</description>
         <externalId>false</externalId>
         <label>Content</label>
         <length>32768</length>
@@ -226,7 +229,7 @@ Default Account: The member will be related to an specific default CRM account</
         <fullName>FieloCMS__Delay__c</fullName>
         <defaultValue>2500</defaultValue>
         <deprecated>false</deprecated>
-        <description>Used on the Banner Component to set the delay of slider banners</description>
+        <description>It sets the slide time duration (ms) in any Component whose layout is Slider.</description>
         <externalId>false</externalId>
         <inlineHelpText>This is the time that each image will show in the banner type Slider.</inlineHelpText>
         <label>Delay</label>
@@ -241,7 +244,7 @@ Default Account: The member will be related to an specific default CRM account</
         <fullName>FieloCMS__Desktop__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
-        <description>If selected, it is rendered for Desktop Device</description>
+        <description>Component is sent to a Desktop device.</description>
         <externalId>false</externalId>
         <label>Desktop</label>
         <trackTrending>false</trackTrending>
@@ -251,7 +254,7 @@ Default Account: The member will be related to an specific default CRM account</
         <fullName>FieloCMS__DetailComponent__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
-        <description>This is the component that contains the information to show the detail of an item in an accordion/modal.</description>
+        <description>Component which displays an item detail.</description>
         <externalId>false</externalId>
         <label>Detail component</label>
         <referenceTo>FieloCMS__Component__c</referenceTo>
@@ -265,6 +268,7 @@ Default Account: The member will be related to an specific default CRM account</
         <fullName>FieloCMS__DetailPage__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
+        <description>Page which displays an item detail.</description>
         <externalId>false</externalId>
         <label>Detail page</label>
         <referenceTo>FieloCMS__Page__c</referenceTo>
@@ -278,7 +282,7 @@ Default Account: The member will be related to an specific default CRM account</
         <fullName>FieloCMS__DetailParameter__c</fullName>
         <defaultValue>&apos;id&apos;</defaultValue>
         <deprecated>false</deprecated>
-        <description>The name of the parameter that a list will use to send to a detail component</description>
+        <description>It relates a List Component to a Record Component.</description>
         <externalId>false</externalId>
         <label>Detail parameter</label>
         <length>30</length>
@@ -290,6 +294,7 @@ Default Account: The member will be related to an specific default CRM account</
     <fields>
         <fullName>FieloCMS__DetailURL__c</fullName>
         <deprecated>false</deprecated>
+        <description>It sets a URL to the Page detail.</description>
         <externalId>false</externalId>
         <label>Detail URL</label>
         <length>255</length>
@@ -301,7 +306,7 @@ Default Account: The member will be related to an specific default CRM account</
     <fields>
         <fullName>FieloCMS__DetailView__c</fullName>
         <deprecated>false</deprecated>
-        <description>This field will determine how the detail an item from a list is displayed.</description>
+        <description>It displays detail view options.</description>
         <externalId>false</externalId>
         <label>Detail view</label>
         <picklist>
@@ -340,8 +345,9 @@ Default Account: The member will be related to an specific default CRM account</
     <fields>
         <fullName>FieloCMS__FieldSet__c</fullName>
         <deprecated>false</deprecated>
+        <description>It allows you to choose the fields to be shown in a Component list or detail.</description>
         <externalId>false</externalId>
-        <label>FieldSet</label>
+        <label>Field set</label>
         <length>32768</length>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
@@ -351,15 +357,16 @@ Default Account: The member will be related to an specific default CRM account</
         <fullName>FieloCMS__IsAppMenu__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
-        <description>If this field is checked the Navigation will be available in the mobile menu (App Menu or Hamburger Menu)</description>
+        <description>Navigation is available in the Hamburguer menu.</description>
         <externalId>false</externalId>
-        <label>Is App Menu</label>
+        <label>Hamburguer Menu</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>FieloCMS__LayoutMode__c</fullName>
         <deprecated>false</deprecated>
+        <description>Layout additional configuration.</description>
         <externalId>false</externalId>
         <label>Layout Mode</label>
         <picklist>
@@ -393,6 +400,7 @@ Default Account: The member will be related to an specific default CRM account</
     <fields>
         <fullName>FieloCMS__Layout__c</fullName>
         <deprecated>false</deprecated>
+        <description>Component view options.</description>
         <externalId>false</externalId>
         <label>Layout</label>
         <picklist>
@@ -433,6 +441,7 @@ Default Account: The member will be related to an specific default CRM account</
         <fullName>FieloCMS__Limit__c</fullName>
         <defaultValue>6</defaultValue>
         <deprecated>false</deprecated>
+        <description>It sets the item number per page.</description>
         <externalId>false</externalId>
         <inlineHelpText>Set the number of items to show per page</inlineHelpText>
         <label>Items per Page</label>
@@ -447,7 +456,7 @@ Default Account: The member will be related to an specific default CRM account</
         <fullName>FieloCMS__Mobile__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
-        <description>If selected, it is rendered for Mobile Device</description>
+        <description>Component is sent to a Mobile device.</description>
         <externalId>false</externalId>
         <label>Mobile</label>
         <trackTrending>false</trackTrending>
@@ -457,6 +466,7 @@ Default Account: The member will be related to an specific default CRM account</
         <fullName>FieloCMS__Navigation__c</fullName>
         <deleteConstraint>Restrict</deleteConstraint>
         <deprecated>false</deprecated>
+        <description>It chooses a Navigation group for the Navigation Component.</description>
         <externalId>false</externalId>
         <label>Navigation</label>
         <lookupFilter>
@@ -478,6 +488,7 @@ Default Account: The member will be related to an specific default CRM account</
     <fields>
         <fullName>FieloCMS__Object__c</fullName>
         <deprecated>false</deprecated>
+        <description>It allows you to choose the Object whose Tags can be filtered.</description>
         <externalId>false</externalId>
         <label>Object</label>
         <picklist>
@@ -489,6 +500,10 @@ Default Account: The member will be related to an specific default CRM account</
                 <fullName>FieloCMS__Media__c</fullName>
                 <default>false</default>
             </picklistValues>
+            <picklistValues>
+                <fullName>FieloPLT__Reward__c</fullName>
+                <default>false</default>
+            </picklistValues>
             <restrictedPicklist>true</restrictedPicklist>
             <sorted>false</sorted>
         </picklist>
@@ -498,7 +513,7 @@ Default Account: The member will be related to an specific default CRM account</
     <fields>
         <fullName>FieloCMS__OrderBy__c</fullName>
         <deprecated>false</deprecated>
-        <description>Used on the Catalogo Component to give to the user the option to order the rewards</description>
+        <description>It orders records through a field ascendantly or descendantly.</description>
         <externalId>false</externalId>
         <label>Order By</label>
         <picklist>
@@ -515,7 +530,7 @@ Default Account: The member will be related to an specific default CRM account</
         <fullName>FieloCMS__Order__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
-        <description>In which order they are placed within the section</description>
+        <description>Order in which the Component is shown.</description>
         <externalId>false</externalId>
         <inlineHelpText>In what order the components are placed within the section.</inlineHelpText>
         <label>Order</label>
@@ -529,6 +544,7 @@ Default Account: The member will be related to an specific default CRM account</
     <fields>
         <fullName>FieloCMS__Page__c</fullName>
         <deprecated>false</deprecated>
+        <description>Page which the Component is assigned to.</description>
         <externalId>false</externalId>
         <formula>HYPERLINK(&apos;/&apos; + FieloCMS__Section__r.FieloCMS__Parent__r.FieloCMS__Page__c, FieloCMS__Section__r.FieloCMS__Parent__r.FieloCMS__Page__r.Name, &apos;_self&apos; )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
@@ -542,6 +558,7 @@ Default Account: The member will be related to an specific default CRM account</
         <fullName>FieloCMS__Paging__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
+        <description>It shows a list paging.</description>
         <externalId>false</externalId>
         <inlineHelpText>Check this option if you want a paging section</inlineHelpText>
         <label>Paging</label>
@@ -552,7 +569,7 @@ Default Account: The member will be related to an specific default CRM account</
         <fullName>FieloCMS__ParameterName__c</fullName>
         <defaultValue>&apos;paginatorBinding&apos;</defaultValue>
         <deprecated>false</deprecated>
-        <description>This parameter will bind a Filter Component and a List Component. When both values are the same the components will work together.</description>
+        <description>It relates a Filter Component to a List Component. When values are the same, Components work together.</description>
         <externalId>false</externalId>
         <label>Paginator Parameter</label>
         <length>30</length>
@@ -564,9 +581,9 @@ Default Account: The member will be related to an specific default CRM account</
     <fields>
         <fullName>FieloCMS__RecordId__c</fullName>
         <deprecated>false</deprecated>
-        <description>This field will be used just in memory, containing temporarily the Id of the record that the detail is going to be shown.</description>
+        <description>Record ID to be shown in the Record Component.</description>
         <externalId>false</externalId>
-        <label>Record Id</label>
+        <label>Record ID</label>
         <length>18</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -577,10 +594,10 @@ Default Account: The member will be related to an specific default CRM account</
         <fullName>FieloCMS__Rows__c</fullName>
         <defaultValue>2</defaultValue>
         <deprecated>false</deprecated>
-        <description>Used on the Catalog Component to set the quantity of rows</description>
+        <description>Number of Grid rows.</description>
         <externalId>false</externalId>
         <inlineHelpText>Set the number of rows  for the Grid view only</inlineHelpText>
-        <label>Number of Rows</label>
+        <label>Number of rows</label>
         <precision>2</precision>
         <required>false</required>
         <scale>0</scale>
@@ -592,7 +609,7 @@ Default Account: The member will be related to an specific default CRM account</
         <fullName>FieloCMS__Section__c</fullName>
         <deleteConstraint>Restrict</deleteConstraint>
         <deprecated>false</deprecated>
-        <description>Section to which the component belongs</description>
+        <description>Section which the Component belongs to.</description>
         <externalId>false</externalId>
         <label>Section</label>
         <referenceTo>FieloCMS__Section__c</referenceTo>
@@ -606,7 +623,7 @@ Default Account: The member will be related to an specific default CRM account</
         <fullName>FieloCMS__Tablet__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
-        <description>If selected, it is rendered for Tablet Device</description>
+        <description>Component is sent to a Tablet device.</description>
         <externalId>false</externalId>
         <label>Tablet</label>
         <trackTrending>false</trackTrending>
@@ -616,6 +633,7 @@ Default Account: The member will be related to an specific default CRM account</
         <fullName>FieloCMS__Tag__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
+        <description>Specific object Tags.</description>
         <externalId>false</externalId>
         <label>Tag</label>
         <referenceTo>FieloCMS__Tag__c</referenceTo>
@@ -628,6 +646,7 @@ Default Account: The member will be related to an specific default CRM account</
     <fields>
         <fullName>FieloCMS__Title__c</fullName>
         <deprecated>false</deprecated>
+        <description>When completed, Component title is shown in the Site.</description>
         <externalId>false</externalId>
         <inlineHelpText>If you set a title will appear at the top of the component with the title´s style</inlineHelpText>
         <label>Title</label>
@@ -641,7 +660,7 @@ Default Account: The member will be related to an specific default CRM account</
         <fullName>FieloCMS__Width__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
-        <description>Component Width</description>
+        <description>Component Width within a section. It is measured in columns (1 to 12).</description>
         <externalId>false</externalId>
         <label>Width</label>
         <precision>18</precision>
@@ -650,15 +669,6 @@ Default Account: The member will be related to an specific default CRM account</
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>FilterBySegment__c</fullName>
-        <defaultValue>false</defaultValue>
-        <description>When checked, logged in members will only see in the catalog rewards belonging to their segments. If it is unchecked, the catalog will show all the rewards.</description>
-        <externalId>false</externalId>
-        <label>Filter by Segment</label>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Program__c</fullName>
@@ -693,6 +703,7 @@ Default Account: The member will be related to an specific default CRM account</
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
+    <gender>Feminine</gender>
     <label>Component</label>
     <nameField>
         <label>Component Name</label>
@@ -702,7 +713,7 @@ Default Account: The member will be related to an specific default CRM account</
     <recordTypes>
         <fullName>FieloCMS__List</fullName>
         <active>true</active>
-        <description>Record type for component Transactions, Redemptions, Organization Members, Member Selecction, Branches, Badges</description>
+        <description>It shows a list of records.</description>
         <label>List</label>
         <picklistValues>
             <picklist>AccountCRMMode__c</picklist>
@@ -778,6 +789,10 @@ Default Account: The member will be related to an specific default CRM account</
                 <fullName>FieloCMS%5F%5FPost%5F%5Fc</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>FieloPLT%5F%5FReward%5F%5Fc</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
         <picklistValues>
             <picklist>FieloCMS__OrderBy__c</picklist>
@@ -790,7 +805,7 @@ Default Account: The member will be related to an specific default CRM account</
     <recordTypes>
         <fullName>FieloCMS__Record</fullName>
         <active>true</active>
-        <description>Record type for components that work with a single record</description>
+        <description>It shows and edits a single record.</description>
         <label>Record</label>
         <picklistValues>
             <picklist>AccountCRMMode__c</picklist>
@@ -866,6 +881,10 @@ Default Account: The member will be related to an specific default CRM account</
                 <fullName>FieloCMS%5F%5FPost%5F%5Fc</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>FieloPLT%5F%5FReward%5F%5Fc</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
         <picklistValues>
             <picklist>FieloCMS__OrderBy__c</picklist>
@@ -878,6 +897,7 @@ Default Account: The member will be related to an specific default CRM account</
     <recordTypes>
         <fullName>FieloCMS__Widget</fullName>
         <active>true</active>
+        <description>It allows creating a Component logic outside Fielo CMS.</description>
         <label>Widget</label>
         <picklistValues>
             <picklist>AccountCRMMode__c</picklist>
@@ -937,6 +957,10 @@ Default Account: The member will be related to an specific default CRM account</
                 <fullName>FieloCMS%5F%5FPost%5F%5Fc</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>FieloPLT%5F%5FReward%5F%5Fc</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
         <picklistValues>
             <picklist>FieloCMS__OrderBy__c</picklist>
@@ -951,9 +975,10 @@ Default Account: The member will be related to an specific default CRM account</
     <validationRules>
         <fullName>FieloCMS__SiteConsistencyNavigation</fullName>
         <active>true</active>
+        <description>The Navigation belongs to another Site. A Navigation for this Site must be created.</description>
         <errorConditionFormula>IF( NOT( ISBLANK( FieloCMS__Navigation__c ) ) , FieloCMS__Navigation__r.FieloCMS__Site__c &lt;&gt; FieloCMS__Section__r.FieloCMS__Parent__r.FieloCMS__Page__r.FieloCMS__Site__c , false)</errorConditionFormula>
         <errorDisplayField>FieloCMS__Navigation__c</errorDisplayField>
-        <errorMessage>That navigation belongs to another Site. You must create the navigation in this Site before trying to use it</errorMessage>
+        <errorMessage>The Navigation belongs to another Site. A Navigation for this Site must be created.</errorMessage>
     </validationRules>
     <webLinks>
         <fullName>FieloCMS__Preview</fullName>
