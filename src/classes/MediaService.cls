@@ -17,7 +17,7 @@ public with sharing class MediaService {
             }else{
                 appliedSegments.add([SELECT Id FROM FieloPLT__Segment__c WHERE RecordType.DeveloperName = 'Private' LIMIT 1].Id);
             }
-            query += ' AND (Segment__c = ' + null + ' OR Segment__c IN : appliedSegments) ';
+            query += ' WHERE (Segment__c = ' + null + ' OR Segment__c IN : appliedSegments) ';
 
             // ORDER BY,  LIMIT & OFFSET
             if( String.isNotBlank(orderBy) ){
@@ -36,13 +36,7 @@ public with sharing class MediaService {
             return medias;
         }         
         String query = 'SELECT ' + String.join(new List<String>(fields), ',') + ' FROM FieloCMS__Media__c ';
-        // WHERE CONDITION 
-        String whereCondition = '';
-
-        if ( whereCondition != '' ) {
-            query += ' WHERE ' + whereCondition.substring(4);
-        }
-
+     
         //segmentation
         Set<Id> appliedSegments = new Set<Id>();
         if(memberId != null) appliedSegments = FieloPLT.SegmentService.getMemberSegments(memberId, null);
@@ -52,7 +46,7 @@ public with sharing class MediaService {
         }else{
             appliedSegments.add([SELECT Id FROM FieloPLT__Segment__c WHERE RecordType.DeveloperName = 'Private' LIMIT 1].Id);
         }
-        query += ' AND (Segment__c = ' + null + ' OR Segment__c IN : appliedSegments) ';
+        query += ' WHERE (Segment__c = ' + null + ' OR Segment__c IN : appliedSegments) ';
 
         // ORDER BY,  LIMIT & OFFSET
         if( String.isNotBlank(orderBy) ){

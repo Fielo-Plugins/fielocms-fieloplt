@@ -2,7 +2,7 @@
 {
   "plugins" : [ {
     "Name" : "PlatformPlugin",
-    "FieloCMS__Version__c" : 0.908,
+    "FieloCMS__Version__c" : 0.910,
     "components" : [ {
       "recordTypeName" : "Record",
       "Name" : "Redemption Detail",
@@ -64,7 +64,7 @@
     }, {
       "recordTypeName" : "List",
       "Name" : "Catalog",
-      "FieloCMS__AdditionalFields__c" : "FieloCMS__Category__c,FieloCMS__Tag__c,FilterBySegment__c,Program__c",
+      "FieloCMS__AdditionalFields__c" : "FieloCMS__Category__c,FieloCMS__Tag__c,Program__c",
       "FieloCMS__ControlClass__c" : "FieloCMS.StandardAPI",
       "FieloCMS__CssClasses__c" : "fieloplt-catalog",
       "FieloCMS__DataClass__c" : "RewardAPI",
@@ -119,16 +119,28 @@
       "FieloCMS__Visibility__c" : "Public",
       "FieloCMS__DeveloperName__c" : "PlatformPlugin.RegisterStep2"
     }, {
-      "recordTypeName" : "Widget",
+      "recordTypeName" : "Record",
       "Name" : "Shopping Cart",
       "FieloCMS__AdditionalFields__c" : "RedirectPage__c",
       "FieloCMS__ControlClass__c" : "FieloCMS.StandardAPI",
       "FieloCMS__DataClass__c" : "FieloCMS.StandardAPI",
       "FieloCMS__Icon__c" : "fa-shopping-cart",
-      "FieloCMS__RecordType__c" : "Widget",
+      "FieloCMS__RecordType__c" : "Record",
+      "FieloCMS__Layouts__c" : "Edit",
       "FieloCMS__ViewClass__c" : "RedemptionAPI",
       "FieloCMS__Visibility__c" : "Private",
       "FieloCMS__DeveloperName__c" : "PlatformPlugin.ShoppingCart"
+    }, {
+      "recordTypeName" : "Record",
+      "Name" : "Shopping Cart Information",
+      "FieloCMS__ControlClass__c" : "FieloCMS.StandardAPI",
+      "FieloCMS__DataClass__c" : "FieloCMS.StandardAPI",
+      "FieloCMS__Icon__c" : "fa-shopping-cart",
+      "FieloCMS__RecordType__c" : "Record",
+      "FieloCMS__Layouts__c" : "View",
+      "FieloCMS__ViewClass__c" : "RedemptionAPI",
+      "FieloCMS__Visibility__c" : "Private",
+      "FieloCMS__DeveloperName__c" : "PlatformPlugin.ShoppingCartInformation"
     }, {
       "recordTypeName" : "Record",
       "Name" : "Welcome",
