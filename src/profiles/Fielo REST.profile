@@ -1907,16 +1907,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>FieloPLT__Category__c.FieloPLT__CategoryGroup</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>FieloPLT__Category__c.FieloPLT__CategoryItem</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
         <recordType>FieloPLT__Member__c.FieloPLT__IndividualAccount</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
