@@ -485,11 +485,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloCMS__Component__c.FilterBySegment__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>FieloCMS__Component__c.Program__c</field>
         <readable>false</readable>
     </fieldPermissions>

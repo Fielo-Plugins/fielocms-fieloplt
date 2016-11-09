@@ -1,7 +1,7 @@
 /**
 * @description
 */
-global with sharing class MediaApi implements FieloCMS.DataInterface{
+global with sharing class MediaAPI implements FieloCMS.DataInterface{
 
     /**
     * @brief Method to get the data on execution
