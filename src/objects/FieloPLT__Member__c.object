@@ -55,7 +55,6 @@
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
-    <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
@@ -364,6 +363,7 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
@@ -383,10 +383,11 @@
     </fields>
     <fields>
         <fullName>SiteURL__c</fullName>
-        <description>Link to continue the registration process.</description>
+        <description>Link that allows Members to finish their registration process.</description>
         <externalId>false</externalId>
         <formula>FieloPLT__Program__r.SiteURL__c +  &apos;FieloCMS__Page?memberId=&apos; + Id + &apos;&amp;pageId=&apos; +  FieloPLT__Program__r.RegisterStep2Page__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Link that allows Members to finish their registration process.</inlineHelpText>
         <label>Site URL</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -425,7 +426,7 @@
     <recordTypes>
         <fullName>FieloPLT__IndividualAccount</fullName>
         <active>true</active>
-        <description>Fielo Account that represents the participation of an individual person</description>
+        <description>A one-person Fielo account.</description>
         <label>Individual Account</label>
         <picklistValues>
             <picklist>FieloPLT__Status__c</picklist>
@@ -454,7 +455,7 @@
     <recordTypes>
         <fullName>FieloPLT__OrganizationAccount</fullName>
         <active>true</active>
-        <description>Fielo Account that represents a organization (for example, company, household)</description>
+        <description>Fielo Account for entities.</description>
         <label>Organization Account</label>
         <picklistValues>
             <picklist>FieloPLT__Status__c</picklist>
@@ -483,7 +484,7 @@
     <recordTypes>
         <fullName>FieloPLT__OrganizationContributor</fullName>
         <active>true</active>
-        <description>Represents a person assigned to an organization (for example, employees or household members)</description>
+        <description>Fielo account for an individual person who contributes to an Organization account.</description>
         <label>Organization Contributor</label>
         <picklistValues>
             <picklist>FieloPLT__Status__c</picklist>

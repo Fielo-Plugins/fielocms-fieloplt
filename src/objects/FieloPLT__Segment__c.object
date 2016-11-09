@@ -54,7 +54,6 @@
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
-    <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
@@ -135,19 +134,24 @@
     <recordTypes>
         <fullName>FieloPLT__Dynamic</fullName>
         <active>true</active>
-        <description>Once you define the criteria of the segment, when the member performs an operation the system calculates online the member’s segment.</description>
+        <description>It defines criteria so that Members are automatically assessed and thus connected to the proper Segment.</description>
         <label>Dynamic</label>
     </recordTypes>
     <recordTypes>
         <fullName>FieloPLT__Manual</fullName>
         <active>true</active>
-        <description>The administrator adds manually members to a segment.</description>
+        <description>Segment needs to be manually linked to the chosen Members.</description>
         <label>Manual</label>
     </recordTypes>
     <recordTypes>
         <fullName>Private</fullName>
         <active>true</active>
         <label>Private</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Public</fullName>
+        <active>true</active>
+        <label>Public</label>
     </recordTypes>
     <searchLayouts>
         <customTabListAdditionalFields>FieloPLT__IsActive__c</customTabListAdditionalFields>

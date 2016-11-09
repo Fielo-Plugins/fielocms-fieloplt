@@ -48,13 +48,12 @@
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
-    <description>Define the different look and feels and default template for a Site</description>
+    <description>A Layout refers to the branding style given to Sites, by means of related Themes and Templates.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
-    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
@@ -307,6 +306,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <gender>Masculine</gender>
     <label>Layout</label>
     <nameField>
         <label>Name</label>
