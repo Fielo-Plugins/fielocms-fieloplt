@@ -48,14 +48,13 @@
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
-    <description>The members’ portal&apos;s pages and templates</description>
+    <description>Pages are content frames to add content using a set of common Components.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
-    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
@@ -170,6 +169,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <gender>Feminine</gender>
     <label>Page</label>
     <listViews>
         <fullName>FieloCMS__All_Menu</fullName>
@@ -217,12 +217,13 @@
     <recordTypes>
         <fullName>FieloCMS__Page</fullName>
         <active>true</active>
-        <description>This record type is for menu records that are meant to be Pages</description>
+        <description>A Page is a content frame to add content using a set of common Components.</description>
         <label>Page</label>
     </recordTypes>
     <recordTypes>
         <fullName>FieloCMS__Template</fullName>
         <active>true</active>
+        <description>A Template provides a way of enforcing a reusable and flexible Site structure.</description>
         <label>Template</label>
     </recordTypes>
     <searchLayouts>
@@ -235,17 +236,17 @@
     <validationRules>
         <fullName>FieloCMS__AvoidAssigningTemplate</fullName>
         <active>true</active>
-        <description>This validation rule avoids assigning a record with Record Type = Template a Template</description>
+        <description>A Template cannot be assigned to a Template record.</description>
         <errorConditionFormula>RecordType.DeveloperName = &apos;Template&apos;  &amp;&amp; NOT(ISNULL(FieloCMS__Template__c) || ISBLANK(FieloCMS__Template__c))</errorConditionFormula>
-        <errorMessage>You cannot assign a template to a record that is already a template</errorMessage>
+        <errorMessage>A Template cannot be assigned to a Template record.</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>FieloCMS__ModifySite</fullName>
         <active>true</active>
-        <description>Is not possible to modify the associated Site</description>
+        <description>The related Program cannot be modified.</description>
         <errorConditionFormula>ISCHANGED(FieloCMS__Site__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloCMS__Site__c)))</errorConditionFormula>
         <errorDisplayField>FieloCMS__Site__c</errorDisplayField>
-        <errorMessage>Is not possible to modify the associated Program</errorMessage>
+        <errorMessage>The related Program cannot be modified.</errorMessage>
     </validationRules>
     <webLinks>
         <fullName>FieloCMS__BackToSites</fullName>

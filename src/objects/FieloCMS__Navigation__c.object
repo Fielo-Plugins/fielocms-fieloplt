@@ -48,17 +48,22 @@
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
+    <description>A Navigation allows you to access the created Pages and Content from the Site.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>false</enableReports>
-    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
         <fullName>FieloCMS__Edit</fullName>
         <description>navigationCreate</description>
+        <displayedFields>
+            <field>Segment__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
         <label>Edit</label>
     </fieldSets>
     <fields>
@@ -175,7 +180,9 @@
     <fields>
         <fullName>Segment__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
+        <description>It allows filtering Navigation elements depending on Member Segments.</description>
         <externalId>false</externalId>
+        <inlineHelpText>Choose a Segment to apply to a Navigation element.</inlineHelpText>
         <label>Segment</label>
         <referenceTo>FieloPLT__Segment__c</referenceTo>
         <relationshipLabel>Navigations</relationshipLabel>
@@ -184,6 +191,7 @@
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
+    <gender>Masculine</gender>
     <label>Navigation</label>
     <nameField>
         <label>Navigation Name</label>
@@ -193,18 +201,19 @@
     <recordTypes>
         <fullName>FieloCMS__CustomLink</fullName>
         <active>true</active>
+        <description>Navigation items which enable custom URL to be entered.</description>
         <label>Custom Link</label>
     </recordTypes>
     <recordTypes>
         <fullName>FieloCMS__Item</fullName>
         <active>true</active>
-        <description>The records with this record type will appear on the site</description>
+        <description>Navigation items which point to pages created by Fielo CMS.</description>
         <label>Item</label>
     </recordTypes>
     <recordTypes>
         <fullName>FieloCMS__List</fullName>
         <active>true</active>
-        <description>This is a just grouper for the navigations, it won&apos;t be rendered in the site</description>
+        <description>It groups Navigation in Sites.</description>
         <label>List</label>
     </recordTypes>
     <searchLayouts>
@@ -214,17 +223,18 @@
     <validationRules>
         <fullName>FieloCMS__CustomLinkRequired</fullName>
         <active>true</active>
-        <description>The Custom URL is required for a custom link navigation</description>
+        <description>The Custom URL is required for a custom link Navigation.</description>
         <errorConditionFormula>ISBLANK(FieloCMS__CustomURL__c)&amp;&amp;  RecordType.DeveloperName  = &apos;CustomLink&apos;</errorConditionFormula>
         <errorDisplayField>FieloCMS__CustomURL__c</errorDisplayField>
-        <errorMessage>Please complete this field</errorMessage>
+        <errorMessage>The Custom URL is required for a custom link Navigation.</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>FieloCMS__NameRequired</fullName>
         <active>true</active>
+        <description>Navigation name is required.</description>
         <errorConditionFormula>ISBLANK(Name)</errorConditionFormula>
         <errorDisplayField>Name</errorDisplayField>
-        <errorMessage>Please complete a name for the navigation</errorMessage>
+        <errorMessage>Navigation name is required.</errorMessage>
     </validationRules>
     <webLinks>
         <fullName>FieloCMS__BackToSites</fullName>

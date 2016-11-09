@@ -48,12 +48,12 @@
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
+    <description>A Model is a pre-configured, reusable Pages and Templates pattern which may include Components to make Sites building easier.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>false</enableReports>
-    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
@@ -127,6 +127,7 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
@@ -140,6 +141,7 @@
         <type>LongTextArea</type>
         <visibleLines>20</visibleLines>
     </fields>
+    <gender>Feminine</gender>
     <label>Model</label>
     <nameField>
         <label>Name</label>

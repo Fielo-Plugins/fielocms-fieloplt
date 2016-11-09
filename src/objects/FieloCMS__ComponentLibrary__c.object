@@ -48,12 +48,12 @@
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
+    <description>A group of defined available Components which can be included in Pages and Templates. They are divided into the following types: List, Record and Widget.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>false</enableReports>
-    <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
@@ -143,7 +143,7 @@
     </fields>
     <fields>
         <fullName>FieloCMS__Icon__c</fullName>
-        <defaultValue>&apos;fielosf-icon-grid&apos;</defaultValue>
+        <defaultValue>&apos;fa-puzzle-piece&apos;</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Icon</label>
@@ -190,6 +190,7 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>MultiselectPicklist</type>
         <visibleLines>4</visibleLines>
@@ -227,6 +228,7 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
@@ -283,6 +285,7 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
@@ -297,6 +300,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <gender>Feminine</gender>
     <label>Component Library</label>
     <nameField>
         <label>Name</label>
@@ -306,6 +310,7 @@
     <recordTypes>
         <fullName>FieloCMS__List</fullName>
         <active>true</active>
+        <description>It shows a list of records.</description>
         <label>List</label>
         <picklistValues>
             <picklist>FieloCMS__Layouts__c</picklist>
@@ -352,6 +357,7 @@
     <recordTypes>
         <fullName>FieloCMS__Record</fullName>
         <active>true</active>
+        <description>It shows and edits a single record.</description>
         <label>Record</label>
         <picklistValues>
             <picklist>FieloCMS__Layouts__c</picklist>
@@ -394,6 +400,7 @@
     <recordTypes>
         <fullName>FieloCMS__Widget</fullName>
         <active>true</active>
+        <description>It allows creating a Component logic outside Fielo CMS.</description>
         <label>Widget</label>
         <picklistValues>
             <picklist>FieloCMS__Layouts__c</picklist>

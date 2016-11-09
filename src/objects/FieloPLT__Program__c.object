@@ -55,7 +55,6 @@
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
-    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
@@ -65,6 +64,7 @@
     </fieldSets>
     <fields>
         <fullName>CustomVoucherCss__c</fullName>
+        <description>CSS code to be applied to customized vouchers.</description>
         <externalId>false</externalId>
         <inlineHelpText>Enter the CSS code to be applied to customized vouchers.</inlineHelpText>
         <label>Custom Voucher CSS</label>
@@ -128,6 +128,7 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
@@ -157,6 +158,7 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
@@ -217,6 +219,7 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
@@ -341,9 +344,9 @@
     <fields>
         <fullName>RegisterStep2Page__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
-        <description>Page which contains the component Register Step 2 to complete registration. This field is use to make the url to complete the registration</description>
+        <description>Page where the Register Step 2 Component redirects to when checking out.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Select the CMS Page where the component Register step 2 is setted up to finish the registration.</inlineHelpText>
+        <inlineHelpText>Choose the Page where the Register Step 2 Component redirects to when finishing the registration process.</inlineHelpText>
         <label>Register Step 2 Page</label>
         <referenceTo>FieloCMS__Page__c</referenceTo>
         <relationshipLabel>Programs</relationshipLabel>
@@ -354,9 +357,9 @@
     </fields>
     <fields>
         <fullName>RewardInstructions__c</fullName>
-        <description>The instructions for redeeming a reward.</description>
+        <description>Detailed steps to obtain the Reward voucher.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Instructions for the rewards, will be also shown in the vouchers</inlineHelpText>
+        <inlineHelpText>Enter the detailed steps to obtain the Reward voucher.</inlineHelpText>
         <label>Reward Instructions</label>
         <length>32768</length>
         <trackTrending>false</trackTrending>
@@ -366,14 +369,18 @@
     <fields>
         <fullName>ShowVoucherCode__c</fullName>
         <defaultValue>true</defaultValue>
+        <description>When ticked, a code is shown in the Voucher.</description>
         <externalId>false</externalId>
+        <inlineHelpText>When ticked, a code is shown in the Voucher.</inlineHelpText>
         <label>Show Voucher Code</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>SiteDomain__c</fullName>
+        <description>Salesforce Site domain to relate the URL with the Program.</description>
         <externalId>false</externalId>
+        <inlineHelpText>Enter the Salesforce Site domain to relate the URL with the Program.</inlineHelpText>
         <label>Site Domain</label>
         <length>255</length>
         <required>false</required>
@@ -383,9 +390,9 @@
     </fields>
     <fields>
         <fullName>SiteURL__c</fullName>
-        <description>The URL used to complete the registration process.</description>
+        <description>Site URL which Members enter to complete their registration process.</description>
         <externalId>false</externalId>
-        <inlineHelpText>URL of the site used to send the links to continue the registration process</inlineHelpText>
+        <inlineHelpText>Enter Site URL for Members to complete their registration process.</inlineHelpText>
         <label>Site URL</label>
         <length>255</length>
         <required>false</required>
@@ -395,8 +402,9 @@
     </fields>
     <fields>
         <fullName>VoucherInstructions__c</fullName>
+        <description>Steps to redeem Vouchers.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Instructions for the vouchers, will be also shown in the vouchers</inlineHelpText>
+        <inlineHelpText>Enter the steps to redeem Voucher.</inlineHelpText>
         <label>Voucher Instructions</label>
         <length>32768</length>
         <trackTrending>false</trackTrending>

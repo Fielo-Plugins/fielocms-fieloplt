@@ -55,7 +55,6 @@
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
-    <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
@@ -99,24 +98,13 @@
         <label>Shopping Cart</label>
     </fieldSets>
     <fields>
-        <fullName>FieloPLT__Category__c</fullName>
+        <fullName>Category__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <description>Categories organize Rewards within a Catalog.</description>
+        <description>Group in which a Reward can be included.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Choose the Category where the Reward can be included.</inlineHelpText>
+        <inlineHelpText>Choose a group in which a Reward can be included.</inlineHelpText>
         <label>Category</label>
-        <lookupFilter>
-            <active>true</active>
-            <errorMessage>That category belongs to another program. You must create the category in this program before trying to use it.</errorMessage>
-            <filterItems>
-                <field>$Source.FieloPLT__Program__c</field>
-                <operation>equals</operation>
-                <valueField>FieloPLT__Category__c.FieloPLT__Program__c</valueField>
-            </filterItems>
-            <isOptional>false</isOptional>
-        </lookupFilter>
-        <referenceTo>FieloPLT__Category__c</referenceTo>
+        <referenceTo>FieloCMS__Category__c</referenceTo>
         <relationshipLabel>Rewards</relationshipLabel>
         <relationshipName>Rewards</relationshipName>
         <required>false</required>
@@ -264,6 +252,7 @@
             <restrictedPicklist>true</restrictedPicklist>
             <sorted>false</sorted>
         </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -290,6 +279,7 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -338,9 +328,10 @@
     </fields>
     <fields>
         <fullName>InstructionsRichText__c</fullName>
-        <description>Allows to show more details on instructions</description>
+        <description>It allows rich text to be included in the instructions.</description>
         <externalId>false</externalId>
-        <label>Instructions RichText</label>
+        <inlineHelpText>Enter rich text to be included in the instructions.</inlineHelpText>
+        <label>Instructions Rich Text</label>
         <length>32768</length>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -359,10 +350,10 @@
         <columns>FieloPLT__IsInstantReward__c</columns>
         <columns>FieloPLT__UniqueVoucher__c</columns>
         <columns>FieloPLT__Program__c</columns>
-        <columns>FieloPLT__Instructions__c</columns>
+        <columns>FieloPLT__Segment__c</columns>
+        <columns>Category__c</columns>
         <filterScope>Everything</filterScope>
         <label>All Rewards</label>
-        <language>en_US</language>
     </listViews>
     <nameField>
         <label>Reward Name</label>

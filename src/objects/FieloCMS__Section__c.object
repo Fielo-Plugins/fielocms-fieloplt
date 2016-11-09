@@ -48,13 +48,13 @@
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
+    <description>A Section is an area within Pages and Templates which include Subsections.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
-    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
@@ -100,6 +100,7 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
@@ -175,18 +176,19 @@
     <validationRules>
         <fullName>FieloCMS__ErrorInvalidElementTypeForChild</fullName>
         <active>true</active>
+        <description>The Element Type for a child Section cannot be Header, Main or Footer.</description>
         <errorConditionFormula>FieloCMS__Parent__r.FieloCMS__Page__r.RecordType.DeveloperName = &apos;Template&apos; &amp;&amp; 
 NOT(ISNULL(FieloCMS__Parent__c)) &amp;&amp; 
 ((ISPICKVAL(FieloCMS__ElementType__c, &apos;Header&apos;)) || 
 (ISPICKVAL(FieloCMS__ElementType__c, &apos;Footer&apos;)) || 
 (ISPICKVAL(FieloCMS__ElementType__c, &apos;Main&apos;)))</errorConditionFormula>
         <errorDisplayField>FieloCMS__ElementType__c</errorDisplayField>
-        <errorMessage>The Element Type for a child Section can not be Header, Main or Footer.</errorMessage>
+        <errorMessage>The Element Type for a child Section cannot be Header, Main or Footer.</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>FieloCMS__ErrorInvalidElementTypeForPage</fullName>
         <active>true</active>
-        <description>A Page can not have sections with Header, Main or Footer as Element Type</description>
+        <description>This Element Type is not valid for a Page.</description>
         <errorConditionFormula>(FieloCMS__Page__r.RecordType.DeveloperName = &apos;Page&apos; ||
 FieloCMS__Parent__r.FieloCMS__Page__r.RecordType.DeveloperName = &apos;Page&apos;)
 &amp;&amp; 
@@ -194,32 +196,33 @@ FieloCMS__Parent__r.FieloCMS__Page__r.RecordType.DeveloperName = &apos;Page&apos
 ISPICKVAL(FieloCMS__ElementType__c, &apos;Main&apos;) ||
 ISPICKVAL(FieloCMS__ElementType__c, &apos;Footer&apos;))</errorConditionFormula>
         <errorDisplayField>FieloCMS__ElementType__c</errorDisplayField>
-        <errorMessage>This Element Type is not valid for a Page</errorMessage>
+        <errorMessage>This Element Type is not valid for a Page.</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>FieloCMS__ErrorInvalidElementTypeForParent</fullName>
         <active>true</active>
+        <description>The Element Type for a parent Section must be Header, Main or Footer.</description>
         <errorConditionFormula>FieloCMS__Page__r.RecordType.DeveloperName = &apos;Template&apos; &amp;&amp; 
 ISNULL(FieloCMS__Parent__c) &amp;&amp;  
 NOT(ISPICKVAL(FieloCMS__ElementType__c, &apos;Header&apos;)) &amp;&amp; 
 NOT(ISPICKVAL(FieloCMS__ElementType__c, &apos;Footer&apos;)) &amp;&amp; 
 NOT(ISPICKVAL(FieloCMS__ElementType__c, &apos;Main&apos;))</errorConditionFormula>
         <errorDisplayField>FieloCMS__ElementType__c</errorDisplayField>
-        <errorMessage>The Element Type for a parent Section can only be Head, Footer or Main.</errorMessage>
+        <errorMessage>The Element Type for a parent Section must be Header, Main or Footer.</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>FieloCMS__ErrorThirdLevelSection</fullName>
         <active>true</active>
-        <description>A Section can not be child of another child Section</description>
+        <description>A Section cannot be a child of another child section.</description>
         <errorConditionFormula>IF(NOT(ISBLANK(FieloCMS__Parent__c)), NOT(ISBLANK(FieloCMS__Parent__r.FieloCMS__Parent__c)), false)</errorConditionFormula>
         <errorDisplayField>FieloCMS__Parent__c</errorDisplayField>
-        <errorMessage>A Section can not be child of another child Section</errorMessage>
+        <errorMessage>A Section cannot be a child of another child section.</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>FieloCMS__OrphanSections</fullName>
         <active>true</active>
-        <description>A section must be child of Page or another Section (in case is subsection)</description>
+        <description>The sections/subsections must be child of a Page/Section.</description>
         <errorConditionFormula>ISBLANK(FieloCMS__Parent__c) &amp;&amp; ISBLANK( FieloCMS__Page__c )</errorConditionFormula>
-        <errorMessage>The sections must be child of a Page or in case their are subsections must be  childs of another section.</errorMessage>
+        <errorMessage>The sections/subsections must be child of a Page/Section.</errorMessage>
     </validationRules>
 </CustomObject>

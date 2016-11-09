@@ -54,7 +54,6 @@
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
-    <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
@@ -133,6 +132,7 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
+        <required>false</required>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -161,6 +161,7 @@
     <recordTypes>
         <fullName>FieloPLT__Active</fullName>
         <active>true</active>
+        <description>The Agreement status is Active.</description>
         <label>Active</label>
         <picklistValues>
             <picklist>FieloPLT__Status__c</picklist>
@@ -173,6 +174,7 @@
     <recordTypes>
         <fullName>FieloPLT__Draft</fullName>
         <active>true</active>
+        <description>The Agreement status is Draft.</description>
         <label>Draft</label>
         <picklistValues>
             <picklist>FieloPLT__Status__c</picklist>
@@ -213,10 +215,10 @@ var url = parent.location.href;
 var agreementUpdate = [];
 
 var idAgreement= &quot;{!FieloPLT__Agreement__c.Id}&quot;;
-var resultAgreement = sforce.connection.query(&quot;SELECT Id, Status__c FROM Agreement__c WHERE Id = \&apos;{!FieloPLT__Agreement__c.Id}\&apos; &quot;);
+var resultAgreement = sforce.connection.query(&quot;SELECT Id, FieloPLT__Status__c FROM FieloPLT__Agreement__c WHERE Id = \&apos;{!FieloPLT__Agreement__c.Id}\&apos; &quot;);
 
 var agreement = resultAgreement.getArray(&quot;records&quot;)[0];
-agreement.Status__c = &apos;Current&apos;;
+agreement.FieloPLT__Status__c = &apos;Current&apos;;
 agreementUpdate.push(agreement);
 result = sforce.connection.update(agreementUpdate);
 
