@@ -484,11 +484,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>FieloCMS__Component__c.FilterBySegment__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>false</editable>
         <field>FieloCMS__Component__c.Program__c</field>
         <readable>true</readable>
@@ -805,21 +800,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloPLT__Category__c.FieloPLT__Image__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>FieloPLT__Category__c.FieloPLT__Parent__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>FieloPLT__Category__c.FieloPLT__Program__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>FieloPLT__Criterion__c.FieloPLT__BooleanValue__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1115,11 +1095,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloPLT__Program__c.FieloPLT__CategoryInjectQuery__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>FieloPLT__Program__c.FieloPLT__ExpirationMode__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1181,11 +1156,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>FieloPLT__Program__c.FieloPLT__SiteUserProfile__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>FieloPLT__Program__c.FieloPLT__TagInjectQuery__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1376,11 +1346,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>FieloPLT__RewardItem__c.FieloPLT__Status__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>FieloPLT__Reward__c.FieloPLT__Category__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1601,26 +1566,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>FieloPLT__Segment__c.FieloPLT__Program__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>FieloPLT__TagItem__c.FieloPLT__Reward__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>FieloPLT__Tag__c.FieloPLT__Image__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>FieloPLT__Tag__c.FieloPLT__Program__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>FieloPLT__Tag__c.FieloPLT__Tag__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
