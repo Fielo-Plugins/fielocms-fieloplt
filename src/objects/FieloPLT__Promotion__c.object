@@ -198,7 +198,6 @@
         <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
-    <startsWith>Vowel</startsWith>
     <validationRules>
         <fullName>FieloPLT__ModifyProgram</fullName>
         <active>true</active>
