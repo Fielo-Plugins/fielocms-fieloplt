@@ -2206,6 +2206,7 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ActivateContract</name>
+	</userPermissions>
     <userPermissions>
         <enabled>true</enabled>
         <name>CanUseNewDashboardBuilder</name>
