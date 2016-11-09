@@ -1095,11 +1095,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__Program__c.FieloPLT__CategoryInjectQuery__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>FieloPLT__Program__c.FieloPLT__ExpirationMode__c</field>
         <readable>false</readable>
     </fieldPermissions>
