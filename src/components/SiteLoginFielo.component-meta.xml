@@ -4,7 +4,7 @@
     <label>Site Login Fielo</label>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>54</minorNumber>
+        <minorNumber>63</minorNumber>
         <namespace>FieloCMS</namespace>
     </packageVersions>
     <packageVersions>
