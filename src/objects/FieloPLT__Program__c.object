@@ -99,18 +99,6 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloPLT__CategoryInjectQuery__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Field that filters Category by means of conditions.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Field that filters Category by means of conditions.</inlineHelpText>
-        <label>Category Inject Query</label>
-        <length>1000</length>
-        <trackTrending>false</trackTrending>
-        <type>LongTextArea</type>
-        <visibleLines>3</visibleLines>
-    </fields>
-    <fields>
         <fullName>FieloPLT__ExpirationMode__c</fullName>
         <deprecated>false</deprecated>
         <description>It allows you to choose the point expiration type.</description>
@@ -304,18 +292,6 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__TagInjectQuery__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Field that filters Tags by means of conditions.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Field that filters Tags by means of conditions.</inlineHelpText>
-        <label>Tag Inject Query</label>
-        <length>1000</length>
-        <trackTrending>false</trackTrending>
-        <type>LongTextArea</type>
-        <visibleLines>3</visibleLines>
     </fields>
     <fields>
         <fullName>FieloPLT__UseAgreement__c</fullName>
