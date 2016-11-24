@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <customSettingsType>Hierarchy</customSettingsType>
-    <enableFeeds>false</enableFeeds>
     <description>Application configuration.</description>
+    <enableFeeds>false</enableFeeds>
     <fields>
-        <fullName>FieloPLT__ContactRelationshipClass__c</fullName>
+        <fullName>ContactRelationshipClass__c</fullName>
         <deprecated>false</deprecated>
+        <description>Class name which shows how Members relate to Contacts. If empty, Member&apos;s email is used.</description>
         <externalId>false</externalId>
-        <label>Contact Relationship Class</label>
+        <inlineHelpText>Class name which shows how Members relate to Contacts.</inlineHelpText>
+        <label>Contact Relationship class</label>
         <length>50</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -15,9 +17,11 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloPLT__FieloVersion__c</fullName>
+        <fullName>FieloVersion__c</fullName>
         <deprecated>false</deprecated>
+        <description>Fielo installed version.</description>
         <externalId>false</externalId>
+        <inlineHelpText>Fielo installed version.</inlineHelpText>
         <label>Fielo Version</label>
         <length>10</length>
         <required>false</required>
@@ -26,11 +30,11 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloPLT__Instance__c</fullName>
+        <fullName>Instance__c</fullName>
         <deprecated>false</deprecated>
-        <description>Instance (server) used by the Org (Backend)</description>
+        <description>Instance (server) name used by the ORG (Backend)</description>
         <externalId>false</externalId>
-        <inlineHelpText>Instance (server) used by the Org (Backend)</inlineHelpText>
+        <inlineHelpText>Instance (server) name used by the ORG (Backend)</inlineHelpText>
         <label>Instance</label>
         <length>6</length>
         <required>false</required>
@@ -39,11 +43,13 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>FieloPLT__OptimizedProgramQuery__c</fullName>
+        <fullName>OptimizedProgramQuery__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
+        <description>When ticked, the Site only retrieves the Program custom fields defined in the Program fieldset.</description>
         <externalId>false</externalId>
-        <label>Optimized Program Query</label>
+        <inlineHelpText>When ticked, the Site only retrieves the Program custom fields defined in the Program fieldset.</inlineHelpText>
+        <label>Optimized Program query</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
