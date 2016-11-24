@@ -43,6 +43,6 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <label>Audit Permission</label>
+    <label>Audit Permissions</label>
     <visibility>Public</visibility>
 </CustomObject>
