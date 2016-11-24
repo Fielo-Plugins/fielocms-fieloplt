@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <customSettingsType>Hierarchy</customSettingsType>
-    <description>It grants admin permission to a specific User.</description>
+    <description>It grants Admin permission to a specific User.</description>
     <enableFeeds>false</enableFeeds>
     <fields>
         <fullName>FieloPLT__To__c</fullName>
