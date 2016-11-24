@@ -4,9 +4,11 @@
     <description>It grants Admin permission to a specific User.</description>
     <enableFeeds>false</enableFeeds>
     <fields>
-        <fullName>FieloPLT__To__c</fullName>
+        <fullName>To__c</fullName>
         <deprecated>false</deprecated>
+        <description>Date up to which Admin permissions are granted.</description>
         <externalId>false</externalId>
+        <inlineHelpText>Choose the date up to which Admin permissions are granted.</inlineHelpText>
         <label>To</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
