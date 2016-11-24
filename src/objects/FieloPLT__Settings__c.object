@@ -3,6 +3,7 @@
     <customSettingsType>Hierarchy</customSettingsType>
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
+    <description>It enables to set general application settings.</description>
     <fields>
         <fullName>FieloPLT__CurrentProgramId__c</fullName>
         <deprecated>false</deprecated>
