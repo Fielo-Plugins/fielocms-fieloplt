@@ -12,6 +12,6 @@
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
     </fields>
-    <label>Admin Permission</label>
+    <label>Admin Permissions</label>
     <visibility>Public</visibility>
 </CustomObject>
