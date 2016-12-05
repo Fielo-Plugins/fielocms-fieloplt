@@ -703,7 +703,6 @@ Default Account: The member will be related to an specific default CRM account</
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
-    <gender>Feminine</gender>
     <label>Component</label>
     <nameField>
         <label>Component Name</label>
