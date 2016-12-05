@@ -2097,5 +2097,10 @@
         <recordType>FieloPLT__Segment__c.Private</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>FieloPLT__Segment__c.Public</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
     <userLicense>Salesforce</userLicense>
 </Profile>
