@@ -80,6 +80,8 @@ global with sharing class MemberAPI implements FieloCMS.DataInterface, FieloCMS.
                 for(ApexPages.Message m : ApexPages.getMessages()){
                     result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(m));
                 }
+            } else {
+                result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
             }
             return result;
         }catch(Exception e){
