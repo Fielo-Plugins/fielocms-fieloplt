@@ -1,8 +1,7 @@
-
 {
   "plugins" : [ {
     "Name" : "PlatformPlugin",
-    "FieloCMS__Version__c" : 0.912,
+    "FieloCMS__Version__c" : 0.913,
     "components" : [ {
       "recordTypeName" : "Record",
       "Name" : "Redemption Detail",
@@ -204,7 +203,7 @@
       "FieloCMS__AdditionalFields__c" : "FieloCMS__Category__c,FieloCMS__Tag__c",
       "FieloCMS__ControlClass__c" : "FieloCMS.StandardAPI",
       "FieloCMS__CssClasses__c" : "fielo-navigation",
-      "FieloCMS__DataClass__c" : "FieloCMS.PostApi",
+      "FieloCMS__DataClass__c" : "PostApi",
       "FieloCMS__DefaultFields__c" : "Name",
       "FieloCMS__ExcludeFields__c" : "Id,OwnerId,IsDeleted,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp",
       "FieloCMS__Icon__c" : "fielosf-icon-news",
