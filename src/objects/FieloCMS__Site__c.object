@@ -82,6 +82,7 @@
     <fields>
         <fullName>FieloCMS__PluginCSS__c</fullName>
         <deprecated>false</deprecated>
+        <description>Path to CSS resources from different Plugins.</description>
         <externalId>false</externalId>
         <label>Plugin CSS</label>
         <length>1200</length>
@@ -92,6 +93,7 @@
     <fields>
         <fullName>FieloCMS__PluginJS__c</fullName>
         <deprecated>false</deprecated>
+        <description>Path to JavScript resources from different Plugins.</description>
         <externalId>false</externalId>
         <label>Plugin JavaScript</label>
         <length>1200</length>
