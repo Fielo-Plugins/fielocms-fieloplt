@@ -520,11 +520,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloCMS__Model__c.FieloCMS__Class__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>FieloCMS__Model__c.FieloCMS__Description__c</field>
         <readable>false</readable>
     </fieldPermissions>
