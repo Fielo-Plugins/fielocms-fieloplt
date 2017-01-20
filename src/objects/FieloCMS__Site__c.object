@@ -103,7 +103,7 @@
         <fullName>FieloCMS__SiteDomain__c</fullName>
         <caseSensitive>false</caseSensitive>
         <deprecated>false</deprecated>
-        <descriptionSalesforce Site URL.</description>
+        <description>Salesforce Site URL.</description>
         <externalId>false</externalId>
         <label>Site Domain</label>
         <length>255</length>
