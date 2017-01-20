@@ -69,6 +69,7 @@
     <fields>
         <fullName>FieloCMS__ControlClass__c</fullName>
         <deprecated>false</deprecated>
+        <description>It allows you to exercise control when saving a record.</description>
         <externalId>false</externalId>
         <label>Control Class</label>
         <length>80</length>
@@ -80,7 +81,7 @@
     <fields>
         <fullName>FieloCMS__CssClasses__c</fullName>
         <deprecated>false</deprecated>
-        <description>Nombres de clases CSS que van en la vista del componente</description>
+        <description>Keywords that are included in the HTML class attribute. Keywords must be separated by blank spaces.</description>
         <externalId>false</externalId>
         <label>Css Classes</label>
         <length>100</length>
@@ -92,6 +93,7 @@
     <fields>
         <fullName>FieloCMS__DataClass__c</fullName>
         <deprecated>false</deprecated>
+        <description>It enables you to choose a class, by means of reflection, whose logic retrieves information.</description>
         <externalId>false</externalId>
         <label>Data Class</label>
         <length>50</length>
@@ -103,6 +105,7 @@
     <fields>
         <fullName>FieloCMS__DefaultFields__c</fullName>
         <deprecated>false</deprecated>
+        <description>Fields to be shown by default when the Component is created.</description>
         <externalId>false</externalId>
         <label>Default Fields</label>
         <length>1200</length>
@@ -113,6 +116,7 @@
     <fields>
         <fullName>FieloCMS__Description__c</fullName>
         <deprecated>false</deprecated>
+        <description>Component description.</description>
         <externalId>false</externalId>
         <label>Description</label>
         <required>false</required>
@@ -123,6 +127,7 @@
         <fullName>FieloCMS__DeveloperName__c</fullName>
         <caseSensitive>false</caseSensitive>
         <deprecated>false</deprecated>
+        <description>Component internal name in Salesforce.</description>
         <externalId>false</externalId>
         <label>Developer Name</label>
         <length>80</length>
@@ -134,7 +139,7 @@
     <fields>
         <fullName>FieloCMS__ExcludeFields__c</fullName>
         <deprecated>false</deprecated>
-        <description>Set of fields that will be avoid in the Component Field set</description>
+        <description>Fields to be excluded from the Component field set.</description>
         <externalId>false</externalId>
         <label>Exclude Fields</label>
         <required>false</required>
@@ -145,6 +150,7 @@
         <fullName>FieloCMS__Icon__c</fullName>
         <defaultValue>&apos;fa-puzzle-piece&apos;</defaultValue>
         <deprecated>false</deprecated>
+        <description>Icon name for the Component. Icons should be chosen from the Font Awesome library (http://fontawesome.io/icons/).</description>
         <externalId>false</externalId>
         <label>Icon</label>
         <length>255</length>
@@ -199,6 +205,7 @@
         <fullName>FieloCMS__Plugin__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
+        <description>Plugin which the Component belongs to.</description>
         <externalId>false</externalId>
         <label>Plugin</label>
         <referenceTo>FieloCMS__Plugin__c</referenceTo>
@@ -248,6 +255,7 @@
     <fields>
         <fullName>FieloCMS__Subcomponents__c</fullName>
         <deprecated>false</deprecated>
+        <description>Subcomponents to appear in the field set. Subcomponents should be included in JSON format.</description>
         <externalId>false</externalId>
         <label>Subcomponents</label>
         <length>1200</length>
@@ -258,6 +266,7 @@
     <fields>
         <fullName>FieloCMS__ViewClass__c</fullName>
         <deprecated>false</deprecated>
+        <description>Class whose logic can render the Component.</description>
         <externalId>false</externalId>
         <label>View Class</label>
         <length>80</length>
