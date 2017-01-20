@@ -174,7 +174,7 @@
     <fields>
         <fullName>FieloCMS__Url__c</fullName>
         <deprecated>false</deprecated>
-        <description>Build the url using the CustomUrl or the Page&apos;s lookup field</description>
+        <description>Final URL composed of a Custom URL or a Page.</description>
         <externalId>false</externalId>
         <formula>IF( !ISBLANK(FieloCMS__CustomURL__c) &amp;&amp; !ISNULL(FieloCMS__CustomURL__c) , FieloCMS__CustomURL__c , IF(!ISBLANK($Setup.FieloCMS__OrganizationSettings__c.FieloCMS__PackagePrefix__c) &amp;&amp; !ISNULL($Setup.FieloCMS__OrganizationSettings__c.FieloCMS__PackagePrefix__c), &apos;/&apos; + $Setup.FieloCMS__OrganizationSettings__c.FieloCMS__PackagePrefix__c + &apos;__Page?navId=&apos; + Id , &apos;/Page?navId=&apos; + Id))</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
