@@ -4,7 +4,7 @@
     <label>HandleInvitationsMembers</label>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>63</minorNumber>
+        <minorNumber>64</minorNumber>
         <namespace>FieloCMS</namespace>
     </packageVersions>
     <packageVersions>
