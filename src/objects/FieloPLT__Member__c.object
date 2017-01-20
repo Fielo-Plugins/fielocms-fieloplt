@@ -596,7 +596,7 @@ if( confirm(&apos;{!$Label.FieloPLT__ConfirmBlockUnblock}&apos;) ){
         <masterLabel>Search Vouchers</masterLabel>
         <openType>replace</openType>
         <protected>false</protected>
-        <url>/apex/FieloPLT__RedemptionVouchersManagement?memberId={!FieloPLT__Member__c.Id}&retURL={!FieloPLT__Member__c.Id}</url>
+        <url>/apex/FieloPLT__RedemptionVouchersManagement?memberId={!Member__c.Id}&amp;retURL={!Member__c.Id}</url>
     </webLinks>
     <webLinks>
         <fullName>FieloPLT__SetUnsetManager</fullName>
