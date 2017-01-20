@@ -69,6 +69,7 @@
     <fields>
         <fullName>FieloCMS__CustomURL__c</fullName>
         <deprecated>false</deprecated>
+        <description>URL for the Navigation link set by the User.</description>
         <externalId>false</externalId>
         <label>Custom URL</label>
         <required>false</required>
@@ -78,6 +79,7 @@
     <fields>
         <fullName>FieloCMS__Description__c</fullName>
         <deprecated>false</deprecated>
+        <description>Navigation description.</description>
         <externalId>false</externalId>
         <label>Description</label>
         <required>false</required>
@@ -87,6 +89,7 @@
     <fields>
         <fullName>FieloCMS__Order__c</fullName>
         <deprecated>false</deprecated>
+        <description>Navigation order number.</description>
         <externalId>false</externalId>
         <label>Order</label>
         <precision>5</precision>
@@ -100,6 +103,7 @@
         <fullName>FieloCMS__Page__c</fullName>
         <deleteConstraint>Restrict</deleteConstraint>
         <deprecated>false</deprecated>
+        <description>Page ID linked to the Navigation.</description>
         <externalId>false</externalId>
         <label>Page</label>
         <lookupFilter>
@@ -122,6 +126,7 @@
         <fullName>FieloCMS__Parent__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
+        <description>Navigation parent.</description>
         <externalId>false</externalId>
         <label>Parent</label>
         <lookupFilter>
@@ -144,6 +149,7 @@
         <fullName>FieloCMS__Site__c</fullName>
         <deleteConstraint>Restrict</deleteConstraint>
         <deprecated>false</deprecated>
+        <description>Site where Navigation belongs to.</description>
         <externalId>false</externalId>
         <label>Site</label>
         <referenceTo>FieloCMS__Site__c</referenceTo>
@@ -156,6 +162,7 @@
     <fields>
         <fullName>FieloCMS__Slug__c</fullName>
         <deprecated>false</deprecated>
+        <description>Navigation slug (URL short name).</description>
         <externalId>false</externalId>
         <label>Slug</label>
         <length>80</length>
