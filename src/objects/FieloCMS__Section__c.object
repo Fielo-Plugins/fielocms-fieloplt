@@ -110,7 +110,7 @@
         <fullName>FieloCMS__IsBody__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
-        <description>This field is checked when the section is the one that contains the body por the page/template</description>
+        <description>When ticked, the section represents the Main section of a Page/Template.</description>
         <externalId>false</externalId>
         <inlineHelpText>This field is checked when the section is the one that contains the body por the page/template</inlineHelpText>
         <label>Body</label>
@@ -183,7 +183,7 @@
         <fullName>FieloCMS__ErrorInvalidElementTypeForChild</fullName>
         <active>true</active>
         <description>The Element Type for a child Section cannot be Header, Main or Footer.</description>
-        <errorConditionFormula>Parent__r.Page__r.RecordType.DeveloperName = &apos;Template&apos; &amp;&amp;
+<errorConditionFormula>Parent__r.Page__r.RecordType.DeveloperName = &apos;Template&apos; &amp;&amp;
 NOT(ISNULL(Parent__c)) &amp;&amp;
 ((ISPICKVAL(ElementType__c, &apos;Header&apos;)) ||
 (ISPICKVAL(ElementType__c, &apos;Footer&apos;)) ||
