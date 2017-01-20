@@ -57,19 +57,6 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>FieloCMS__Class__c</fullName>
-        <defaultValue>&apos;&apos;</defaultValue>
-        <deprecated>false</deprecated>
-        <description>Group of Models, for example Pages of &apos;Rewards&apos;</description>
-        <externalId>false</externalId>
-        <label>Class</label>
-        <length>50</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>FieloCMS__Description__c</fullName>
         <deprecated>false</deprecated>
         <description>Model description.</description>
