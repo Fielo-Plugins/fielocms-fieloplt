@@ -59,7 +59,7 @@
     <fields>
         <fullName>FieloCMS__AdditionalFields__c</fullName>
         <deprecated>false</deprecated>
-        <description>You can choose a list of custom fields that will be added at the bottom of the New and Edit Form when the component library record is selected</description>
+        <description>Available fields to be edited.</description>
         <externalId>false</externalId>
         <label>Additional Fields</label>
         <required>false</required>
@@ -156,7 +156,7 @@
     <fields>
         <fullName>FieloCMS__Layouts__c</fullName>
         <deprecated>false</deprecated>
-        <description>A subset of the layouts that are available, if the field is empty will show all</description>
+        <description>Available views for the Component.</description>
         <externalId>false</externalId>
         <label>Layouts</label>
         <picklist>
@@ -211,6 +211,7 @@
     <fields>
         <fullName>FieloCMS__RecordType__c</fullName>
         <deprecated>false</deprecated>
+        <description>Type of Component: List, Record or Widget.</description>
         <externalId>false</externalId>
         <label>Component Type</label>
         <picklist>
@@ -235,7 +236,7 @@
     <fields>
         <fullName>FieloCMS__RelatedListName__c</fullName>
         <deprecated>false</deprecated>
-        <description>List[Menu]</description>
+        <description>Related list which contains the hierarchical relationship.</description>
         <externalId>false</externalId>
         <label>Related List Name</label>
         <length>80</length>
@@ -268,6 +269,7 @@
     <fields>
         <fullName>FieloCMS__Visibility__c</fullName>
         <deprecated>false</deprecated>
+        <description>Component visibility for Members.</description>
         <externalId>false</externalId>
         <label>Visibility</label>
         <picklist>
@@ -292,6 +294,7 @@
     <fields>
         <fullName>FieloCMS__sObject__c</fullName>
         <deprecated>false</deprecated>
+        <description>Salesforce available objects.</description>
         <externalId>false</externalId>
         <label>Object</label>
         <length>80</length>
