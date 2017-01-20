@@ -123,7 +123,7 @@
     <fields>
         <fullName>FieloPLT__ExpirationPeriod__c</fullName>
         <deprecated>false</deprecated>
-        <description>It sets the active Points period.</description>
+        <description>It sets the active Points period in months for Total Expiration</description>
         <externalId>false</externalId>
         <inlineHelpText>Set the active Points period.</inlineHelpText>
         <label>Expiration Period</label>
