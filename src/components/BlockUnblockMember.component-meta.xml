@@ -9,7 +9,7 @@
     </packageVersions>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>7</minorNumber>
+        <minorNumber>16</minorNumber>
         <namespace>FieloPLT</namespace>
     </packageVersions>
 </ApexComponent>
