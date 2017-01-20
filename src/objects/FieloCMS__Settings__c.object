@@ -6,7 +6,7 @@
     <fields>
         <fullName>FieloCMS__CurrentSiteId__c</fullName>
         <deprecated>false</deprecated>
-        <description>In this field will be kept the Id of the current Site when working from backend</description>
+        <description>Site ID when working from backend.</description>
         <externalId>false</externalId>
         <label>Current Site ID</label>
         <length>18</length>
