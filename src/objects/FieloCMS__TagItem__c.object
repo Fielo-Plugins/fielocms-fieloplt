@@ -60,7 +60,7 @@
         <fullName>FieloCMS__Media__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
-        <description>Media is a repository to show image files.</description>
+        <description>Media to be tagged.</description>
         <externalId>false</externalId>
         <label>Media</label>
         <referenceTo>FieloCMS__Media__c</referenceTo>
@@ -74,7 +74,7 @@
         <fullName>FieloCMS__Post__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
-        <description>Posts is a repository used to show entries in your Site.</description>
+        <description>Post to be tagged.</description>
         <externalId>false</externalId>
         <label>Post</label>
         <referenceTo>FieloCMS__Post__c</referenceTo>
@@ -87,7 +87,7 @@
     <fields>
         <fullName>FieloCMS__Tag__c</fullName>
         <deprecated>false</deprecated>
-        <description>A Tag groups Media and Posts.</description>
+        <description>Tag to be applied.</description>
         <externalId>false</externalId>
         <label>Tag</label>
         <referenceTo>FieloCMS__Tag__c</referenceTo>
