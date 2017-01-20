@@ -3,19 +3,6 @@
     <customSettingsType>Hierarchy</customSettingsType>
     <enableFeeds>false</enableFeeds>
     <fields>
-        <fullName>FieloCMS__ImageObject__c</fullName>
-        <deprecated>false</deprecated>
-        <description>API name of the object to save Images using the &quot;Photo Upload&quot; component (for example &quot;Attachment&quot; or &quot;Document&quot;).</description>
-        <externalId>false</externalId>
-        <inlineHelpText>API name of the object to save Images using the &quot;Photo Upload&quot; component (for example &quot;Attachment&quot; or &quot;Document&quot;).</inlineHelpText>
-        <label>Image Object</label>
-        <length>80</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>FieloCMS__Instance__c</fullName>
         <deprecated>false</deprecated>
         <description>Salesforce instance name (e.g. na00.salesforce.com). Used for external images URL.</description>
