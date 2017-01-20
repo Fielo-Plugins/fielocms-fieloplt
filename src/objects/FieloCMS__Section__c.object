@@ -60,6 +60,7 @@
     <fields>
         <fullName>FieloCMS__CSSClasses__c</fullName>
         <deprecated>false</deprecated>
+        <description>Keywords that can be included in the HTML class attribute. Keywords must be separated by blank spaces.</description>
         <externalId>false</externalId>
         <label>CSS Classes</label>
         <length>255</length>
@@ -71,6 +72,7 @@
     <fields>
         <fullName>FieloCMS__ElementType__c</fullName>
         <deprecated>false</deprecated>
+        <description>Type of section element (Header, Main, Footer, Div, Article, Aside).</description>
         <externalId>false</externalId>
         <label>Element type</label>
         <picklist>
@@ -118,6 +120,7 @@
     <fields>
         <fullName>FieloCMS__Order__c</fullName>
         <deprecated>false</deprecated>
+        <description>Section order number.</description>
         <externalId>false</externalId>
         <label>Order</label>
         <precision>18</precision>
@@ -131,6 +134,7 @@
         <fullName>FieloCMS__Page__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
+        <description>Page/Template where the Section belongs to.</description>
         <externalId>false</externalId>
         <label>Page</label>
         <referenceTo>FieloCMS__Page__c</referenceTo>
@@ -144,6 +148,7 @@
         <fullName>FieloCMS__Parent__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
+        <description>Section where a subsection belongs to.</description>
         <externalId>false</externalId>
         <label>Parent</label>
         <referenceTo>FieloCMS__Section__c</referenceTo>
@@ -156,6 +161,7 @@
     <fields>
         <fullName>FieloCMS__Width__c</fullName>
         <deprecated>false</deprecated>
+        <description>Section/subsection size.</description>
         <externalId>false</externalId>
         <label>Width</label>
         <length>255</length>
@@ -221,7 +227,7 @@ NOT(ISPICKVAL(FieloCMS__ElementType__c, &apos;Main&apos;))</errorConditionFormul
     <validationRules>
         <fullName>FieloCMS__OrphanSections</fullName>
         <active>true</active>
-        <description>The sections/subsections must be child of a Page/Section.</description>
+        <description>The sections/subsections must be children of a Page/Section.</description>
         <errorConditionFormula>ISBLANK(FieloCMS__Parent__c) &amp;&amp; ISBLANK( FieloCMS__Page__c )</errorConditionFormula>
         <errorMessage>The sections/subsections must be child of a Page/Section.</errorMessage>
     </validationRules>
