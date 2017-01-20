@@ -18,6 +18,7 @@
     <fields>
         <fullName>FieloCMS__Instance__c</fullName>
         <deprecated>false</deprecated>
+        <description>Salesforce instance name (e.g. na00.salesforce.com). Used for external images URL.</description>
         <externalId>false</externalId>
         <label>Instance</label>
         <length>6</length>
@@ -29,6 +30,7 @@
     <fields>
         <fullName>FieloCMS__PackagePrefix__c</fullName>
         <deprecated>false</deprecated>
+        <description>Prefix that identifies the package (e.g. FieloCMS).</description>
         <externalId>false</externalId>
         <label>Package Prefix</label>
         <length>20</length>
