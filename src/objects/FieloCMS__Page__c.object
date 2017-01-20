@@ -60,6 +60,7 @@
     <fields>
         <fullName>FieloCMS__CSSClasses__c</fullName>
         <deprecated>false</deprecated>
+        <description>Keywords that can be included in the HTML class attribute. Keywords must be separated by blank spaces.</description>
         <externalId>false</externalId>
         <label>CSS Classes</label>
         <length>255</length>
@@ -83,6 +84,7 @@
         <fullName>FieloCMS__Icon__c</fullName>
         <defaultValue>&apos;fielo-icon-content&apos;</defaultValue>
         <deprecated>false</deprecated>
+        <description>Page/Template icon.</description>
         <externalId>false</externalId>
         <label>Icon</label>
         <length>255</length>
@@ -94,6 +96,7 @@
     <fields>
         <fullName>FieloCMS__SEODescription__c</fullName>
         <deprecated>false</deprecated>
+        <description>Description of used SEO.</description>
         <externalId>false</externalId>
         <label>SEO Description</label>
         <length>32768</length>
@@ -104,6 +107,7 @@
     <fields>
         <fullName>FieloCMS__SEOKeywords__c</fullName>
         <deprecated>false</deprecated>
+        <description>Words that allow search engines to index your Site.</description>
         <externalId>false</externalId>
         <label>SEO Keywords</label>
         <required>false</required>
@@ -113,6 +117,7 @@
     <fields>
         <fullName>FieloCMS__SEOTitle__c</fullName>
         <deprecated>false</deprecated>
+        <description>Title used by search engines for indexing Pages/Templates in their search pages.</description>
         <externalId>false</externalId>
         <label>SEO Title</label>
         <length>80</length>
@@ -125,6 +130,7 @@
         <fullName>FieloCMS__Site__c</fullName>
         <deleteConstraint>Restrict</deleteConstraint>
         <deprecated>false</deprecated>
+        <description>Site where the Page/Templates belongs to.</description>
         <externalId>false</externalId>
         <label>Site</label>
         <referenceTo>FieloCMS__Site__c</referenceTo>
@@ -138,7 +144,7 @@
         <fullName>FieloCMS__Template__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
-        <description>Lookup to the template</description>
+        <description>Page Template which overwrites the Site Template.</description>
         <externalId>false</externalId>
         <label>Template</label>
         <lookupFilter>
