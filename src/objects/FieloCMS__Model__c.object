@@ -48,7 +48,7 @@
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
-    <description>A Model is a pre-configured, reusable Pages and Templates pattern which may include Components to make Sites building easier.</description>
+    <description>A Model is a pre-configured, reusable Page or Template pattern which may include Components to make Sites building easier.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
