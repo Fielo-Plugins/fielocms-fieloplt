@@ -183,11 +183,11 @@
         <fullName>FieloCMS__ErrorInvalidElementTypeForChild</fullName>
         <active>true</active>
         <description>The Element Type for a child Section cannot be Header, Main or Footer.</description>
-<errorConditionFormula>Parent__r.Page__r.RecordType.DeveloperName = &apos;Template&apos; &amp;&amp;
-NOT(ISNULL(Parent__c)) &amp;&amp;
-((ISPICKVAL(ElementType__c, &apos;Header&apos;)) ||
-(ISPICKVAL(ElementType__c, &apos;Footer&apos;)) ||
-(ISPICKVAL(ElementType__c, &apos;Main&apos;)))</errorConditionFormula>
+<errorConditionFormula>FieloCMS__Parent__r.FieloCMS__Page__r.RecordType.DeveloperName = &apos;Template&apos; &amp;&amp;
+NOT(ISNULL(FieloCMS__Parent__c)) &amp;&amp;
+((ISPICKVAL(FieloCMS__ElementType__c, &apos;Header&apos;)) ||
+(ISPICKVAL(FieloCMS__ElementType__c, &apos;Footer&apos;)) ||
+(ISPICKVAL(FieloCMS__ElementType__c, &apos;Main&apos;)))</errorConditionFormula>
         <errorDisplayField>FieloCMS__ElementType__c</errorDisplayField>
         <errorMessage>The Element Type for a child Section cannot be Header, Main or Footer.</errorMessage>
     </validationRules>
@@ -195,12 +195,12 @@ NOT(ISNULL(Parent__c)) &amp;&amp;
         <fullName>FieloCMS__ErrorInvalidElementTypeForPage</fullName>
         <active>true</active>
         <description>This Element Type is not valid for a Page.</description>
-        <errorConditionFormula>(Page__r.RecordType.DeveloperName = &apos;Page&apos; ||
-Parent__r.Page__r.RecordType.DeveloperName = &apos;Page&apos;)
+        <errorConditionFormula>(FieloCMS__Page__r.RecordType.DeveloperName = &apos;Page&apos; ||
+FieloCMS__Parent__r.FieloCMS__Page__r.RecordType.DeveloperName = &apos;Page&apos;)
 &amp;&amp;
-(ISPICKVAL(ElementType__c, &apos;Header&apos;) ||
-ISPICKVAL(ElementType__c, &apos;Main&apos;) ||
-ISPICKVAL(ElementType__c, &apos;Footer&apos;))</errorConditionFormula>
+(ISPICKVAL(FieloCMS__ElementType__c, &apos;Header&apos;) ||
+ISPICKVAL(FieloCMS__ElementType__c, &apos;Main&apos;) ||
+ISPICKVAL(FieloCMS__ElementType__c, &apos;Footer&apos;))</errorConditionFormula>
         <errorDisplayField>FieloCMS__ElementType__c</errorDisplayField>
         <errorMessage>This Element Type is not valid for a Page.</errorMessage>
     </validationRules>
@@ -208,11 +208,11 @@ ISPICKVAL(ElementType__c, &apos;Footer&apos;))</errorConditionFormula>
         <fullName>FieloCMS__ErrorInvalidElementTypeForParent</fullName>
         <active>true</active>
         <description>The Element Type for a parent Section must be Header, Main or Footer.</description>
-        <errorConditionFormula>Page__r.RecordType.DeveloperName = &apos;Template&apos; &amp;&amp;
-ISNULL(Parent__c) &amp;&amp;
-NOT(ISPICKVAL(ElementType__c, &apos;Header&apos;)) &amp;&amp;
-NOT(ISPICKVAL(ElementType__c, &apos;Footer&apos;)) &amp;&amp;
-NOT(ISPICKVAL(ElementType__c, &apos;Main&apos;))</errorConditionFormula>
+        <errorConditionFormula>FieloCMS__Page__r.RecordType.DeveloperName = &apos;Template&apos; &amp;&amp;
+ISNULL(FieloCMS__Parent__c) &amp;&amp;
+NOT(ISPICKVAL(FieloCMS__ElementType__c, &apos;Header&apos;)) &amp;&amp;
+NOT(ISPICKVAL(FieloCMS__ElementType__c, &apos;Footer&apos;)) &amp;&amp;
+NOT(ISPICKVAL(FieloCMS__ElementType__c, &apos;Main&apos;))</errorConditionFormula>
         <errorDisplayField>ElementType__c</errorDisplayField>
         <errorMessage>The Element Type for a parent Section must be Header, Main or Footer.</errorMessage>
     </validationRules>
