@@ -21,7 +21,7 @@ El member completa la registracion en el site y el sistema genera el user para e
 
 1. El member presiona el link en el mail recibido
 2. El sistema verifica que el id del member recibido exista
-3. El sistema verifica que el status del member es New o Approved y que la Fielo Account no es de tipo Organization Account
+3. El sistema verifica que el status del member es Pending User que la Fielo Account no es de tipo Organization Account
 4. El sistema verifica que existen campos configurados en el fieldset de Register del objeto Member
 5. El sistema muestra el site con la pagina de registracion con:
 	- Los campos configurados en el fieldset del objeto
@@ -32,7 +32,7 @@ El member completa la registracion en el site y el sistema genera el user para e
 8. El sistema verifica que los campos esten completos y validos
 9. El sistema verifica que la fielo account no tiene user
 10. El sistema crea un nuevo usuario relacionado a la Fielo Account y a su contact relacionado con la password configurada por el member en la segunda pagina de Registracion y con el language, time zone y locale seteado en el program. 
-10. El sistema actualiza el status de la Fielo Account a Complete y cambia el owner al user recien creado.
+10. El sistema actualiza el status de la Fielo Account a Active y cambia el owner al user recien creado.
 11. El sistema loguea al member invocando el caso de uso [Validar Login](?name=UC-PLG-ME009)
 12. Fin de flujo.
 
@@ -44,9 +44,9 @@ El member completa la registracion en el site y el sistema genera el user para e
 2. El sistema muestra el mensaje de error correspondiente
 3. Fin de flujo.
 
-##### 2. El status de la fielo account es Pending (paso 3 del flujo basico)
+##### 2. El status de la fielo account es Submitted for Approval (paso 3 del flujo basico)
 
-1. El sistema verifica que el status de la Fielo Account es Pending
+1. El sistema verifica que el status de la Fielo Account es Submitted for Approval
 2. El sistema muestra un mensaje de error indicando que la fielo account esta pendiente de aprobacion
 3. Fin de flujo
 
@@ -56,10 +56,10 @@ El member completa la registracion en el site y el sistema genera el user para e
 2. El sistema muestra un mensaje de error indicando que la fielo account no fue aprobada
 3. Fin de flujo
 
-##### 4. El status de la fielo account es Completed (paso 3 del flujo basico)
+##### 4. El status de la fielo account es Active (paso 3 del flujo basico)
 
-1. El sistema verifica que el status de la Fielo Account es Completed
-2. El sistema muestra un mensaje de error indicando que la fielo account ya es member
+1. El sistema verifica que el status de la Fielo Account es Active
+2. El sistema muestra un mensaje de error indicando que la fielo account ya es un member activo
 3. Fin de flujo
 
 ##### 5. La fielo account es una organization account (paso 3 del flujo basico)
