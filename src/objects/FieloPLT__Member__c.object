@@ -551,31 +551,7 @@ false)</errorConditionFormula>
         <errorDisplayField>FieloPLT__OrganizationAccount__c</errorDisplayField>
         <errorMessage>An Organization Account cannot  be related to another Organization Account.</errorMessage>
     </validationRules>
-    <webLinks>
-        <fullName>FieloPLT__BlockUnblock</fullName>
-        <availability>online</availability>
-        <displayType>button</displayType>
-        <linkType>javascript</linkType>
-        <masterLabel>Block/Unblock</masterLabel>
-        <openType>onClickJavaScript</openType>
-        <protected>false</protected>
-        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/19.0/connection.js&quot;)} 
-{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)}
-
-if( confirm(&apos;{!$Label.FieloPLT__ConfirmBlockUnblock}&apos;) ){
-    var ids = [&apos;{!FieloPLT__Member__c.Id}&apos;];
-    var action = &apos;&apos;;
-
-    if( &apos;{!FieloPLT__Member__c.FieloPLT__IsBlocked__c}&apos; == 1 ){
-        action = &apos;false&apos;;
-    } else {
-        action = &apos;true&apos;;
-    }
-
-    var status = sforce.apex.execute(prefix+&apos;MemberService&apos;, &apos;blockUnblock&apos;, {memberIds:ids, action:action});
-    window.location.reload();
-}</url>
-    </webLinks>
+    
     <webLinks>
         <fullName>FieloPLT__RedeemPoints</fullName>
         <availability>online</availability>
@@ -597,36 +573,5 @@ if( confirm(&apos;{!$Label.FieloPLT__ConfirmBlockUnblock}&apos;) ){
         <openType>replace</openType>
         <protected>false</protected>
         <url>/apex/FieloPLT__RedemptionVouchersManagement?memberId={!FieloPLT__Member__c.Id}&amp;retURL={!FieloPLT__Member__c.Id}</url>
-    </webLinks>
-    <webLinks>
-        <fullName>FieloPLT__SetUnsetManager</fullName>
-        <availability>online</availability>
-        <displayType>button</displayType>
-        <linkType>javascript</linkType>
-        <masterLabel>Set/Unset Manager</masterLabel>
-        <openType>onClickJavaScript</openType>
-        <protected>false</protected>
-        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/37.0/connection.js&quot;)}
-{!REQUIRESCRIPT(&quot;/soap/ajax/37.0/apex.js&quot;)} 
-
-if( confirm(&apos;{!$Label.FieloPLT__ConfirmSetManager}&apos;) ){
-    var ids = [&apos;{!FieloPLT__Member__c.Id}&apos;];
-    var action = &apos;&apos;;
-
-    if( &apos;{!FieloPLT__Member__c.FieloPLT__IsManager__c}&apos; == 1 ){
-        action = &apos;false&apos;;
-    } else {
-        action = &apos;true&apos;;
-    }
-    try{
-        var status = sforce.apex.execute(prefix+&apos;MemberService&apos;, &apos;toggleManagers&apos;, {memberIds:ids, action:action});
-        window.location.reload();
-    }catch(e){
-        var error = e.toString();
-        error = error.substring(error.indexOf(&quot;FIELD_CUSTOM_VALIDATION_EXCEPTION&quot;)+34, error.indexOf(&quot;: []&quot;));
-
-        alert(error);
-    }
-}</url>
     </webLinks>
 </CustomObject>
