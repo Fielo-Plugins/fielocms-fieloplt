@@ -433,28 +433,4 @@
         <protected>false</protected>
         <url>/apex/FieloPLT__BatchExecution</url>
     </webLinks>
-    <webLinks>
-        <fullName>FieloPLT__SetDefault</fullName>
-        <availability>online</availability>
-        <displayType>button</displayType>
-        <linkType>javascript</linkType>
-        <masterLabel>Set Default</masterLabel>
-        <openType>onClickJavaScript</openType>
-        <protected>false</protected>
-        <url>{!REQUIRESCRIPT("/soap/ajax/22.0/connection.js")}
-
-var programUpdate = [];
-
-var idProgram = "{!FieloPLT__Program__c.Id}";
-var resultProgram = sforce.connection.query("SELECT Id, FieloPLT__IsDefault__c FROM FieloPLT__Program__c WHERE Id = \'{!FieloPLT__Program__c.Id}\' ");
-
-var program = resultProgram.getArray("records")[0];
-program.FieloPLT__IsDefault__c = 'true';
-programUpdate.push(program);
-
-if(confirm('{!$Label.fieloplt__programsetdefault}')){
-result = sforce.connection.update(programUpdate);
-parent.location.href = idProgram;
-}</url>
-    </webLinks>
 </CustomObject>
