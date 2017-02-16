@@ -434,24 +434,4 @@
         <errorConditionFormula>AND( OR( ISPICKVAL(FieloPLT__TransactionConversionMode__c,&apos;Fixed Value&apos;), ISPICKVAL(FieloPLT__TransactionConversionMode__c,&apos;Factor&apos;), ISPICKVAL(FieloPLT__TransactionConversionMode__c,&apos;Multiplier&apos;) ), OR(FieloPLT__ConversionValue__c == 0, ISNULL(FieloPLT__ConversionValue__c), ISBLANK(FieloPLT__ConversionValue__c)) )</errorConditionFormula>
         <errorMessage>Points cannot be empty or 0.</errorMessage>
     </validationRules>
-    <webLinks>
-        <fullName>FieloPLT__RuleChangeStatus</fullName>
-        <availability>online</availability>
-        <displayType>button</displayType>
-        <linkType>javascript</linkType>
-        <masterLabel>Active/Inactive</masterLabel>
-        <openType>onClickJavaScript</openType>
-        <protected>false</protected>
-        <url>{!REQUIRESCRIPT (&quot;/soap/ajax/23.0/connection.js&quot;)}
-if(confirm(&apos;{!$Label.FieloPLT__Fielo_ChangeStatus}?&apos;)){
-     var c = new sforce.SObject(&quot;FieloPLT__Rule__c&quot;);
-     var toUpdate = [];
-     c.id = &apos;{!FieloPLT__Rule__c.Id}&apos;;
-     c.FieloPLT__IsActive__c = {!IF(FieloPLT__Rule__c.FieloPLT__IsActive__c, &apos;false&apos;, &apos;true&apos;)};
-    toUpdate.push(c);
-    sforce.connection.update(toUpdate);
-
-    window.location.reload();
-}</url>
-    </webLinks>
 </CustomObject>
