@@ -66,5 +66,4 @@
     </nameField>
     <pluralLabel>Reward Items</pluralLabel>
     <searchLayouts/>
-    <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>
