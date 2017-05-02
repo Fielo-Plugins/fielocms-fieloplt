@@ -695,11 +695,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloPLT__Action__c.FieloPLT__IsCrossField__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>FieloPLT__Action__c.FieloPLT__RelatedList__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1046,11 +1041,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>FieloPLT__Program__c.FieloPLT__AuditPoints__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>FieloPLT__Program__c.FieloPLT__ExpirationMode__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
