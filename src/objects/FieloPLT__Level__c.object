@@ -158,7 +158,6 @@
     <searchLayouts>
         <customTabListAdditionalFields>FieloPLT__IsActive__c</customTabListAdditionalFields>
         <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
-        <listViewButtons>FieloPLT__LevelReorder</listViewButtons>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
@@ -169,97 +168,5 @@
         <errorDisplayField>FieloPLT__Program__c</errorDisplayField>
         <errorMessage>The related Program cannot be modified.</errorMessage>
     </validationRules>
-    <webLinks>
-        <fullName>FieloPLT__Active</fullName>
-        <availability>online</availability>
-        <displayType>button</displayType>
-        <linkType>javascript</linkType>
-        <masterLabel>Active</masterLabel>
-        <openType>onClickJavaScript</openType>
-        <protected>false</protected>
-        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/22.0/connection.js&quot;)}
 
-var url = parent.location.href;
-var levelUpdate = [];
-
-var idLevel = &quot;{!FieloPLT__Level__c.Id}&quot;;
-var resultLevel = sforce.connection.query(&quot;SELECT Id, IsActive__c, RecordTypeID FROM Level__c WHERE Id = \&apos;{!FieloPLT__Level__c.Id}\&apos; &quot;);
-
-var level = resultLevel.getArray(&quot;records&quot;)[0];
-level.IsActive__c = true;
-levelUpdate.push(level);
-
-result = sforce.connection.update(levelUpdate);
-parent.location.href = idLevel;</url>
-    </webLinks>
-    <webLinks>
-        <fullName>FieloPLT__ExportLevel</fullName>
-        <availability>online</availability>
-        <displayType>button</displayType>
-        <encodingKey>UTF-8</encodingKey>
-        <linkType>url</linkType>
-        <masterLabel>Export Level</masterLabel>
-        <openType>replace</openType>
-        <protected>false</protected>
-        <url>/apex/FieloPLT__XMLExport?type=Level&amp;id={!FieloPLT__Level__c.Id}</url>
-    </webLinks>
-    <webLinks>
-        <fullName>FieloPLT__Inactive</fullName>
-        <availability>online</availability>
-        <displayType>button</displayType>
-        <linkType>javascript</linkType>
-        <masterLabel>Inactive</masterLabel>
-        <openType>onClickJavaScript</openType>
-        <protected>false</protected>
-        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/22.0/connection.js&quot;)}
-
-var url = parent.location.href;
-var levelUpdate = [];
-
-var idLevel = &quot;{!FieloPLT__Level__c.Id}&quot;;
-var resultLevel = sforce.connection.query(&quot;SELECT Id, IsActive__c, RecordTypeID FROM Level__c WHERE Id = \&apos;{!FieloPLT__Level__c.Id}\&apos; &quot;);
-
-var level = resultLevel.getArray(&quot;records&quot;)[0];
-level.IsActive__c = false;
-levelUpdate.push(level);
-
-result = sforce.connection.update(levelUpdate);
-parent.location.href = idLevel;</url>
-    </webLinks>
-    <webLinks>
-        <fullName>FieloPLT__ReorderLevels</fullName>
-        <availability>online</availability>
-        <displayType>massActionButton</displayType>
-        <height>600</height>
-        <linkType>page</linkType>
-        <masterLabel>Reorder Levels</masterLabel>
-        <openType>sidebar</openType>
-        <page>FieloPLT__LevelReorder</page>
-        <protected>false</protected>
-        <requireRowSelection>true</requireRowSelection>
-    </webLinks>
-    <webLinks>
-        <fullName>FieloPLT__RunBatch</fullName>
-        <availability>online</availability>
-        <displayType>massActionButton</displayType>
-        <height>600</height>
-        <linkType>page</linkType>
-        <masterLabel>Recalculate Levels</masterLabel>
-        <openType>sidebar</openType>
-        <page>FieloPLT__LevelExecuteBatch</page>
-        <protected>false</protected>
-        <requireRowSelection>true</requireRowSelection>
-    </webLinks>
-    <webLinks>
-        <fullName>FieloPLT__UploadPhoto</fullName>
-        <availability>online</availability>
-        <displayType>button</displayType>
-        <encodingKey>UTF-8</encodingKey>
-        <height>600</height>
-        <linkType>url</linkType>
-        <masterLabel>Upload Photo</masterLabel>
-        <openType>sidebar</openType>
-        <protected>false</protected>
-        <url>/apex/FieloPLT__LevelPhotoUpload?id={!FieloPLT__Level__c.Id}</url>
-    </webLinks>
 </CustomObject>
