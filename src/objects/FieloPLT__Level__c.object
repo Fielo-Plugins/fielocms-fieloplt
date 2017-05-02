@@ -158,8 +158,7 @@
     <searchLayouts>
         <customTabListAdditionalFields>FieloPLT__IsActive__c</customTabListAdditionalFields>
         <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
-        <listViewButtons>FieloPLT__ReorderLevels</listViewButtons>
-        <listViewButtons>FieloPLT__RunBatch</listViewButtons>
+        <listViewButtons>FieloPLT__LevelReorder</listViewButtons>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
