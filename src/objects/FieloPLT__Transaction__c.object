@@ -48,7 +48,6 @@
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
-    <description>Actions that grant Points, Badges o Rewards to Members in exchange of a specific actions performed</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableEnhancedLookup>false</enableEnhancedLookup>
@@ -432,10 +431,10 @@
         <masterLabel>Revert</masterLabel>
         <openType>onClickJavaScript</openType>
         <protected>false</protected>
-        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)} 
-{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)} 
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)}
 
-var status = sforce.apex.execute(&apos;FieloPLT.TransactionService&apos;, &apos;revertTransaction&apos;, {tranId: &apos;{!FieloPLT__Transaction__c.Id}&apos;}); 
+var status = sforce.apex.execute(&apos;FieloPLT.TransactionService&apos;, &apos;revertTransaction&apos;, {tranId: &apos;{!FieloPLT__Transaction__c.Id}&apos;});
 
 alert(status);</url>
     </webLinks>

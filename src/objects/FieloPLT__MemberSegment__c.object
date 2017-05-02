@@ -119,11 +119,4 @@
     <pluralLabel>Member Segments</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
-    <validationRules>
-        <fullName>FieloPLT__ProgramConsistency</fullName>
-        <active>true</active>
-        <description>The Segment belongs to other Program. Choose a Segment from the same Member Program.</description>
-        <errorConditionFormula>FieloPLT__Member__r.FieloPLT__Program__c  &lt;&gt;  FieloPLT__Segment__r.FieloPLT__Program__c</errorConditionFormula>
-        <errorMessage>The Segment belongs to other Program. Choose a Segment from the same Member Program</errorMessage>
-    </validationRules>
 </CustomObject>
