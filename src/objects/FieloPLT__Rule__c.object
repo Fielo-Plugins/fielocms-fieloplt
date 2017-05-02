@@ -56,12 +56,5 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <label>Rule</label>
-    <nameField>
-        <label>Rule Name</label>
-        <trackHistory>true</trackHistory>
-        <type>Text</type>
-    </nameField>
-    <pluralLabel>Rules</pluralLabel>
     <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

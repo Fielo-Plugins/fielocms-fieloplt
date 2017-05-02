@@ -63,7 +63,7 @@
         <label>Name</label>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Points Usage</pluralLabel>
+    <pluralLabel>Point Usage</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

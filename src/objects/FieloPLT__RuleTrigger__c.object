@@ -56,12 +56,12 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <label>Rule Trigger</label>
+    <label>Name</label>
     <nameField>
-        <label>Rule Trigger</label>
+        <label>Name</label>
         <type>Text</type>
     </nameField>
-    <pluralLabel>Rule Triggers</pluralLabel>
+    <pluralLabel>Name</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
 </CustomObject>
