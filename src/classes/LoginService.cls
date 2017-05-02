@@ -1,31 +1,31 @@
 public class LoginService {
-    
+
     public static Pagereference login(String userName, String password, String startUrl){
         username = username.trim();
         try{
             //Checks if the user is inactive and activate it, after that redirects to the page to reactivate the user
-            List<User> inactiveUsers = [SELECT Username, Name, IsActive, Id, Email From User where IsActive = false AND Username =: username limit 1];            
+            List<User> inactiveUsers = [SELECT Username, Name, IsActive, Id, Email From User where IsActive = false AND Username =: username limit 1];
             if(inactiveUsers.size() > 0){
                 inactiveUsers.get(0).IsActive = true;
-                update inactiveUsers;                                
-            }            
-        }catch(exception e){            
-            throw new FieloException(e.getMessage());            
+                update inactiveUsers;
+            }
+        }catch(exception e){
+            throw new FieloException(e.getMessage());
         }
-        
+
         FieloPLT__Program__c program = ProgramService.getCurrentProgram();
         //look for the member related to the username
-        List<FieloPLT__Member__c> membersByEmail = [SELECT FieloPLT__IsBlocked__c, FieloPLT__User__c FROM FieloPLT__Member__c WHERE FieloPLT__Email__c =: username AND FieloPLT__Program__c =: program.Id];
-        
+        List<FieloPLT__Member__c> membersByEmail = null;//[SELECT FieloPLT__IsBlocked__c, FieloPLT__User__c FROM FieloPLT__Member__c WHERE FieloPLT__Email__c =: username AND FieloPLT__Program__c =: program.Id];
+
         //if the member was not found throws an error
         if(membersByEmail.isEmpty()){
-            throw new FieloException(Label.ErrorLoginProgramValidation);            
+            throw new FieloException(Label.ErrorLoginProgramValidation);
         }
-        
+
         //if the member was found but is blocked thtrows an error
-        if(membersByEmail.get(0).FieloPLT__IsBlocked__c){
-            throw new FieloException(Label.ErrorLoginMemberBlocked);                        
-        }
+        /*if(membersByEmail.get(0).FieloPLT__IsBlocked__c){
+            throw new FieloException(Label.ErrorLoginMemberBlocked);
+        }*/
 
         //check selection member page
         /*if(membersByEmail.get(0).FieloPLT__User__c != null){
@@ -46,7 +46,7 @@ public class LoginService {
         return Site.login(username, password, startUrl);
     }
 
-    public static PageReference forgotPassword(String userName){        
+    public static PageReference forgotPassword(String userName){
         //Validates if the userName is not empty
         if(String.isBlank(username)){
             throw new FieloException(Label.UsernameIsRequired);
@@ -63,9 +63,9 @@ public class LoginService {
             }
         //if the user does not exist an error is returned
         }else{
-            throw new FieloException(Label.ErrorMemberForgotPasswordInexist);            
+            throw new FieloException(Label.ErrorMemberForgotPasswordInexist);
         }
-        
+
         Site.forgotPassword(username);
 
         return null;

@@ -13,7 +13,6 @@ public with sharing class MembersSelector extends SObjectSelector{
             FieloPLT__Member__c.FieloPLT__OrganizationAccount__c,
             FieloPLT__Member__c.FieloPLT__Contact__c,
             FieloPLT__Member__c.FieloPLT__IsManager__c,
-            FieloPLT__Member__c.FieloPLT__IsBlocked__c,
 			FieloPLT__Member__c.RecordTypeId
 		};
 	}
