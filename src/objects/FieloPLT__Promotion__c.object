@@ -57,12 +57,12 @@
     <enableReports>true</enableReports>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <label>Incentive</label>
+    <label>Promotion</label>
     <nameField>
         <label>Name</label>
         <trackHistory>true</trackHistory>
         <type>Text</type>
     </nameField>
-    <pluralLabel>Incentives</pluralLabel>
+    <pluralLabel>Promotions</pluralLabel>
     <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

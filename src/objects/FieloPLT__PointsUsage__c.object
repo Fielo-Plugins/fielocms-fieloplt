@@ -57,13 +57,13 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <label>Points Usage</label>
+    <label>Point Usage</label>
     <nameField>
         <displayFormat>PU-{0000000}</displayFormat>
         <label>Name</label>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Points Usage</pluralLabel>
+    <pluralLabel>Point Usage</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

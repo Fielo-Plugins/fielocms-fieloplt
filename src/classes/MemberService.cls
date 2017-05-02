@@ -1,11 +1,11 @@
 public with sharing class MemberService {
-	
+
 	public static FieloPLT__Member__c getCurrentMember(Set<String> fields){
         return new MembersSelector(fields).selectById(new Set<Id>{getCurrentMemberId()})[0];
     }
 
     private static Id memId;
-    public static Id getCurrentMemberId(){        
+    public static Id getCurrentMemberId(){
         if(UserInfo.getUserType() == 'Guest')
             return null;
 
@@ -43,7 +43,7 @@ public with sharing class MemberService {
 
         SessionCache__c sessionCache = SessionCache__c.getInstance(UserInfo.getUserId());
         sessionCache.SessionId__c = UserInfo.getSessionId();
-        sessionCache.MemberId__c = memberId;        
+        sessionCache.MemberId__c = memberId;
         upsert sessionCache;
     }
 
@@ -67,11 +67,11 @@ public with sharing class MemberService {
         PageReference agreementPage;
         /*Cookie memberCookie = ApexPages.currentPage().getCookies().get('agreementAccepted');
         if(memberCookie == null || String.isBlank(memberCookie.getValue()) || memberCookie.getValue() != 'true'){*/
-            FieloPLT__Member__c member = [SELECT Id, FieloPLT__Agreement__r.FieloPLT__Status__c, FieloPLT__Program__r.FieloPLT__UseAgreement__c FROM FieloPLT__Member__c WHERE Id =: memberId limit 1];            
-            if(member.FieloPLT__Program__r.FieloPLT__UseAgreement__c && member.FieloPLT__Agreement__r.FieloPLT__Status__c != 'Current'){
+            FieloPLT__Member__c member = [SELECT Id, FieloPLT__Agreement__r.FieloPLT__Status__c FROM FieloPLT__Member__c WHERE Id =: memberId limit 1];
+            /*if(member.FieloPLT__Program__r.FieloPLT__UseAgreement__c && member.FieloPLT__Agreement__r.FieloPLT__Status__c != 'Current'){
                 agreementPage = Page.AgreementAccept;
                 agreementPage.getParameters().put('retUrl','');
-            }
+            }*/
         //}
         return agreementPage;
     }

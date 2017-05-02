@@ -57,12 +57,12 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
+    <sharingModel>ReadWrite</sharingModel>
     <label>Rule</label>
     <nameField>
-        <label>Rule Name</label>
+        <label>Name</label>
         <trackHistory>true</trackHistory>
         <type>Text</type>
     </nameField>
     <pluralLabel>Rules</pluralLabel>
-    <sharingModel>ReadWrite</sharingModel>
 </CustomObject>
