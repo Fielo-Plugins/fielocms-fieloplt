@@ -84,8 +84,8 @@ global with sharing class HandleInvitationsMembersController implements FieloCMS
     public static void cancelInvitations(Set<Id> memberIds){        
         Boolean doCommit = false;
         SObjectUnitOfWork uow = new SObjectUnitOfWork(new List<Schema.SobjectType>{FieloPLT__Member__c.SObjectType});                
-        for(FieloPLT__Member__c member : new MembersSelector( new Set<String>{'RecordType.DeveloperName', 'FieloPLT__OrganizationAccount__r.FieloPLT__IsBlocked__c'} ).selectById(memberIds)){
-            if(!member.FieloPLT__OrganizationAccount__r.FieloPLT__IsBlocked__c){
+        for(FieloPLT__Member__c member : new MembersSelector( new Set<String>{'RecordType.DeveloperName', 'FieloPLT__OrganizationAccount__r.FieloPLT__Status__c'} ).selectById(memberIds)){
+            if(member.FieloPLT__OrganizationAccount__r.FieloPLT__Status__c == 'Active'){
                 if(member.RecordType.DeveloperName != 'OrganizationContributor'){
                     throw new FieloException(Label.ErrorOrganizationAccountAction);
                 } else {

@@ -15,7 +15,7 @@ public class LoginService {
         
         FieloPLT__Program__c program = ProgramService.getCurrentProgram();
         //look for the member related to the username
-        List<FieloPLT__Member__c> membersByEmail = [SELECT FieloPLT__IsBlocked__c, FieloPLT__User__c FROM FieloPLT__Member__c WHERE FieloPLT__Email__c =: username AND FieloPLT__Program__c =: program.Id];
+        List<FieloPLT__Member__c> membersByEmail = [SELECT FieloPLT__Status__c, FieloPLT__User__c FROM FieloPLT__Member__c WHERE FieloPLT__Email__c =: username AND FieloPLT__Program__c =: program.Id];
         
         //if the member was not found throws an error
         if(membersByEmail.isEmpty()){
@@ -23,7 +23,7 @@ public class LoginService {
         }
         
         //if the member was found but is blocked thtrows an error
-        if(membersByEmail.get(0).FieloPLT__IsBlocked__c){
+        if(membersByEmail.get(0).FieloPLT__Status__c == 'Blocked'){
             throw new FieloException(Label.ErrorLoginMemberBlocked);                        
         }
 
