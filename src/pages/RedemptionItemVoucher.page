@@ -1,6 +1,6 @@
 <apex:page Controller="RedemptionItemVoucherController"  sidebar="false" showHeader="false" standardStylesheets="false"  renderAs="pdf">
 
-    <apex:stylesheet value="{!URLFOR($Resource.FieloPLT__FieloPlt_Legacy, 'css/voucher.css')}" />
+    <!-- <apex:stylesheet value="{!URLFOR($Resource.FieloPLT__FieloPlt_Legacy, 'css/voucher.css')}" /> -->
     <apex:variable var="newUI" value="newSkinOn"  rendered="{!(voucherCustomVoucher != null)}">
         <apex:stylesheet value="{!URLFOR($Action.Document.Download, voucherCustomVoucher)}" />
     </apex:variable>
