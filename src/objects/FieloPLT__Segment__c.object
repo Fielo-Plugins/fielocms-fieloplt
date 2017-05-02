@@ -68,4 +68,11 @@
         <label>Public</label>
     </recordTypes>
     <sharingModel>ReadWrite</sharingModel>
+    <label>Segment</label>
+    <nameField>
+        <label>Name</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Segments</pluralLabel>
 </CustomObject>

@@ -58,4 +58,11 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <sharingModel>ReadWrite</sharingModel>
+    <label>Rule</label>
+    <nameField>
+        <label>Name</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Rules</pluralLabel>
 </CustomObject>

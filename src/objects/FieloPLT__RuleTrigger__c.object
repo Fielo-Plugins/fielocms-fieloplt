@@ -57,12 +57,6 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <label>Name</label>
-    <nameField>
-        <label>Name</label>
-        <type>Text</type>
-    </nameField>
-    <pluralLabel>Name</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
 </CustomObject>
