@@ -59,4 +59,11 @@
     <enableStreamingApi>true</enableStreamingApi>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
+    <pluralLabel>Rule Triggers</pluralLabel>
+    <label>Rule Trigger</label>
+
+    <nameField>
+        <label>Name</label>
+        <type>Text</type>
+    </nameField>
 </CustomObject>
