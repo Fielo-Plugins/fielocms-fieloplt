@@ -690,7 +690,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__Action__c.FieloPLT__IsActive__c</field>
+        <field>FieloPLT__Action__c.FieloPLT__Active__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
