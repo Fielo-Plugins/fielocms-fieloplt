@@ -33,11 +33,11 @@ public with sharing class RedemptionItemVoucherController {
             this.image = imageId;
             this.voucherNum = i;
             this.instructionsVoucher = instructionsVoucher;
-            if(redemptionItem.FieloPLT__Reward__r.FieloPLT__Instructions__c != null){
+            /*if(redemptionItem.FieloPLT__Reward__r.FieloPLT__Instructions__c != null){
                 this.instructionsReward = redemptionItem.FieloPLT__Reward__r.InstructionsRichText__c;
             }else{
                 this.instructionsReward = instructionsReward;
-            }
+            }*/
         }
     }
 
