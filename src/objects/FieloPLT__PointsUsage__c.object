@@ -47,6 +47,7 @@
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
+    <description>It audits and tracks Point origin and usage.</description>
     <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
@@ -56,50 +57,6 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <fields>
-        <fullName>FieloPLT__PointsSource__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <description>Point origen.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Point origen.</inlineHelpText>
-        <label>Points Source</label>
-        <referenceTo>FieloPLT__Point__c</referenceTo>
-        <relationshipLabel>Points Source Detail</relationshipLabel>
-        <relationshipName>PointsSource</relationshipName>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__Quantity__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Number of points.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Number of points.</inlineHelpText>
-        <label>Quantity</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__UsedPoints__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <description>Points used in the Transaction.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Points used in the Transaction.</inlineHelpText>
-        <label>Used Points</label>
-        <referenceTo>FieloPLT__Point__c</referenceTo>
-        <relationshipLabel>Used Points Detail</relationshipLabel>
-        <relationshipName>UsedPoints</relationshipName>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
     <label>Points Usage</label>
     <nameField>
         <displayFormat>PU-{0000000}</displayFormat>

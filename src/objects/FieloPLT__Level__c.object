@@ -57,116 +57,12 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <fieldSets>
-        <fullName>FieloPLT__Edit</fullName>
-        <availableFields>
-            <field>FieloPLT__Order__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <description>LevelCreate</description>
-        <label>Edit</label>
-    </fieldSets>
-    <fields>
-        <fullName>FieloPLT__Description__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Level detail.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Enter the Level description.</inlineHelpText>
-        <label>Description</label>
-        <length>32768</length>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>LongTextArea</type>
-        <visibleLines>3</visibleLines>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__Image__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Level image (upload an image or enter URL).</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Choose a Level image (upload an image or enter URL).</inlineHelpText>
-        <label>Image</label>
-        <length>255</length>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__IsActive__c</fullName>
-        <defaultValue>true</defaultValue>
-        <deprecated>false</deprecated>
-        <description>When ticked, this Level can be applied to Members.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>When ticked, this Level can be applied to Members.</inlineHelpText>
-        <label>Active</label>
-        <trackHistory>true</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__Order__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Levels hierarchical order.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Levels hierarchical order.</inlineHelpText>
-        <label>Order</label>
-        <precision>4</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackHistory>true</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__Program__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <description>Program where the Level belongs to.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Choose the Program which the Level belongs to.</inlineHelpText>
-        <label>Program</label>
-        <referenceTo>FieloPLT__Program__c</referenceTo>
-        <relationshipLabel>Levels</relationshipLabel>
-        <relationshipName>Levels</relationshipName>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
     <label>Level</label>
-    <listViews>
-        <fullName>FieloPLT__All</fullName>
-        <columns>NAME</columns>
-        <columns>FieloPLT__Program__c</columns>
-        <columns>FieloPLT__Description__c</columns>
-        <columns>FieloPLT__IsActive__c</columns>
-        <columns>CREATED_DATE</columns>
-        <filterScope>Everything</filterScope>
-        <label>All Levels</label>
-        <language>en_US</language>
-    </listViews>
     <nameField>
         <label>Level Name</label>
         <trackHistory>true</trackHistory>
         <type>Text</type>
     </nameField>
     <pluralLabel>Levels</pluralLabel>
-    <searchLayouts>
-        <customTabListAdditionalFields>FieloPLT__IsActive__c</customTabListAdditionalFields>
-        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
-    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
-    <validationRules>
-        <fullName>FieloPLT__ModifyProgram</fullName>
-        <active>true</active>
-        <description>The related Program cannot be modified.</description>
-        <errorConditionFormula>ISCHANGED(FieloPLT__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloPLT__Program__c)))</errorConditionFormula>
-        <errorDisplayField>FieloPLT__Program__c</errorDisplayField>
-        <errorMessage>The related Program cannot be modified.</errorMessage>
-    </validationRules>
-
 </CustomObject>
