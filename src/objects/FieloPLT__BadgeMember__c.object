@@ -57,65 +57,6 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <fields>
-        <fullName>FieloPLT__Badge__c</fullName>
-        <deleteConstraint>Restrict</deleteConstraint>
-        <deprecated>false</deprecated>
-        <description>Badge granted to a Member.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Badge granted to a Member.</inlineHelpText>
-        <label>Badge</label>
-        <referenceTo>FieloPLT__Badge__c</referenceTo>
-        <relationshipLabel>Badge Members</relationshipLabel>
-        <relationshipName>BadgesMembers</relationshipName>
-        <required>true</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__Member__c</fullName>
-        <deleteConstraint>Restrict</deleteConstraint>
-        <deprecated>false</deprecated>
-        <description>Member who obtained a Badge.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Member who obtained a Badge.</inlineHelpText>
-        <label>Member</label>
-        <referenceTo>FieloPLT__Member__c</referenceTo>
-        <relationshipLabel>Badge Members</relationshipLabel>
-        <relationshipName>BadgesMembers</relationshipName>
-        <required>true</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__Quantity__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Number of Badges granted to a Member.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Number of Badges granted to a Member.</inlineHelpText>
-        <label>Quantity</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__Transaction__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <description>Transaction that generated the Badge for the Member.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Transaction that generated the Badge for the Member.</inlineHelpText>
-        <label>Transaction</label>
-        <referenceTo>FieloPLT__Transaction__c</referenceTo>
-        <relationshipLabel>Badges Members</relationshipLabel>
-        <relationshipName>BadgesMembers</relationshipName>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
     <label>Badge Member</label>
     <nameField>
         <label>BadgeMember Name</label>
@@ -124,11 +65,4 @@
     <pluralLabel>Badges Members</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
-    <validationRules>
-        <fullName>FieloPLT__ProgramConsistency</fullName>
-        <active>true</active>
-        <description>The Segment belongs to other Program. Create the Segment in this Program to use it.</description>
-        <errorConditionFormula>FieloPLT__Member__r.FieloPLT__Program__c &lt;&gt; FieloPLT__Badge__r.FieloPLT__Program__c</errorConditionFormula>
-        <errorMessage>The Badge belongs to other Program. Create the Badge in this Program to use it.</errorMessage>
-    </validationRules>
 </CustomObject>

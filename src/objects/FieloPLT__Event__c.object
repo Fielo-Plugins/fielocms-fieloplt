@@ -56,52 +56,7 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <fields>
-        <fullName>FieloPLT__Member__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <description>Member who takes place in the Event.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Choose Member to enter the Event.</inlineHelpText>
-        <label>Member</label>
-        <referenceTo>FieloPLT__Member__c</referenceTo>
-        <relationshipLabel>Events</relationshipLabel>
-        <relationshipName>Events</relationshipName>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__Type__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Event type.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Choose the Event type.</inlineHelpText>
-        <label>Type</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Registration</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Login</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Redeem</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-    </fields>
     <label>Event</label>
-    <listViews>
-        <fullName>FieloPLT__All</fullName>
-        <filterScope>Everything</filterScope>
-        <label>All</label>
-    </listViews>
     <nameField>
         <displayFormat>E-{000000}</displayFormat>
         <label>Event</label>

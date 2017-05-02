@@ -57,40 +57,7 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <fields>
-        <fullName>FieloPLT__Image__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Badge Image (Document, Attachment or URL)</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Choose a Badge image (upload an image or enter URL).</inlineHelpText>
-        <label>Image</label>
-        <length>255</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__Program__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <description>Program where the Members belong to.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Choose a Program.</inlineHelpText>
-        <label>Program</label>
-        <referenceTo>FieloPLT__Program__c</referenceTo>
-        <relationshipLabel>Badges</relationshipLabel>
-        <relationshipName>Badges</relationshipName>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
     <label>Badge</label>
-    <listViews>
-        <fullName>FieloPLT__All</fullName>
-        <filterScope>Everything</filterScope>
-        <label>All</label>
-    </listViews>
     <nameField>
         <label>Badge Name</label>
         <type>Text</type>
