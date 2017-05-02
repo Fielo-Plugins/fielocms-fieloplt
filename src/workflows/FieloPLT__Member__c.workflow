@@ -54,7 +54,7 @@
         <criteriaItems>
             <field>FieloPLT__Member__c.FieloPLT__Status__c</field>
             <operation>equals</operation>
-            <value>New</value>
+            <value>Pending User</value>
         </criteriaItems>
         <description>Workflow Email to finish the Registration process</description>
         <triggerType>onCreateOnly</triggerType>
@@ -69,7 +69,7 @@
         <criteriaItems>
             <field>FieloPLT__Member__c.FieloPLT__Status__c</field>
             <operation>equals</operation>
-            <value>Approved</value>
+            <value>Active</value>
         </criteriaItems>
         <description>Workflow Email to finish the Registration process after members were approved</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
