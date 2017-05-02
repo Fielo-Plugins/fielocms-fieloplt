@@ -1896,11 +1896,6 @@
         <recordType>FieloPLT__Segment__c.FieloPLT__Manual</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>FieloPLT__Segment__c.Private</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
     <userLicense>Authenticated Website</userLicense>
     <userPermissions>
         <enabled>true</enabled>
