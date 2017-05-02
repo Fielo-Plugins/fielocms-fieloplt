@@ -118,4 +118,5 @@ HYPERLINK( &apos;./apex/RedemptionItemVoucher?voucherId=&apos; + Id, $Label.Vouc
     <searchLayouts>
         <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
     </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
 </CustomObject>
