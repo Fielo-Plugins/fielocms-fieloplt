@@ -47,6 +47,7 @@
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
+    <description>Rewards when Stock management is &quot;Controlled by item&quot;.</description>
     <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
@@ -65,5 +66,4 @@
     </nameField>
     <pluralLabel>Reward Items</pluralLabel>
     <searchLayouts/>
-    <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>
