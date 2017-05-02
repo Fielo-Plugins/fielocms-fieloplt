@@ -273,17 +273,4 @@ location.reload()</url>
         <requireRowSelection>true</requireRowSelection>
         <url>/apex/FieloPLT__RedemptionCreate?memberId={!FieloPLT__Member__c.Id}</url>
     </webLinks>
-    <webLinks>
-        <fullName>FieloPLT__NewRedemption</fullName>
-        <availability>online</availability>
-        <displayType>massActionButton</displayType>
-        <encodingKey>UTF-8</encodingKey>
-        <height>600</height>
-        <linkType>url</linkType>
-        <masterLabel>New Redemption</masterLabel>
-        <openType>sidebar</openType>
-        <protected>false</protected>
-        <requireRowSelection>true</requireRowSelection>
-        <url>/apex/FieloPLT__RedemptionCreate?memberId={!FieloPLT__Member__c.Id}</url>
-    </webLinks>
 </CustomObject>
