@@ -65,14 +65,11 @@ public with sharing class MemberService {
 
     public static PageReference getAgreementPage(Id memberId){
         PageReference agreementPage;
-        /*Cookie memberCookie = ApexPages.currentPage().getCookies().get('agreementAccepted');
-        if(memberCookie == null || String.isBlank(memberCookie.getValue()) || memberCookie.getValue() != 'true'){*/
-            FieloPLT__Member__c member = [SELECT Id, FieloPLT__Agreement__r.FieloPLT__Status__c FROM FieloPLT__Member__c WHERE Id =: memberId limit 1];
-            /*if(member.FieloPLT__Program__r.FieloPLT__UseAgreement__c && member.FieloPLT__Agreement__r.FieloPLT__Status__c != 'Current'){
-                agreementPage = Page.AgreementAccept;
-                agreementPage.getParameters().put('retUrl','');
-            }*/
-        //}
+        FieloPLT__Member__c member = [SELECT Id, FieloPLT__Agreement__r.FieloPLT__Status__c, FieloPLT__Program__r.UseAgreement__c FROM FieloPLT__Member__c WHERE Id =: memberId limit 1];
+        if(member.FieloPLT__Program__r.UseAgreement__c && member.FieloPLT__Agreement__r.FieloPLT__Status__c != 'Current'){
+            agreementPage = Page.AgreementAccept;
+            agreementPage.getParameters().put('retUrl','');
+        }
         return agreementPage;
     }
 

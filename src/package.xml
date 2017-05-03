@@ -51,7 +51,9 @@
 		<members>FieloPLT__Member__c</members>
 		<members>FieloPLT__Point__c</members>
 		<members>FieloPLT__PointsUsage__c</members>
+		<members>FieloPLT__PointType__c</members>
 		<members>FieloPLT__Program__c</members>
+		<members>FieloPLT__ProgramPointType__c</members>
 		<members>FieloPLT__Promotion__c</members>
 		<members>FieloPLT__PublicSettings__c</members>
 		<members>FieloPLT__RESTSettings__c</members>

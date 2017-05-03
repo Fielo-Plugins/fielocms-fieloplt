@@ -15,7 +15,7 @@ public class LoginService {
 
         FieloPLT__Program__c program = ProgramService.getCurrentProgram();
         //look for the member related to the username
-        List<FieloPLT__Member__c> membersByEmail = [SELECT FieloPLT__Status__c, FieloPLT__User__c FROM FieloPLT__Member__c WHERE FieloPLT__Email__c =: username AND FieloPLT__Program__c =: program.Id];
+        List<FieloPLT__Member__c> membersByEmail = [SELECT FieloPLT__Status__c, FieloPLT__User__c, FieloPLT__Program__r.UseAgreement__c FROM FieloPLT__Member__c WHERE FieloPLT__Email__c =: username AND FieloPLT__Program__c =: program.Id];
 
         //if the member was not found throws an error
         if(membersByEmail.isEmpty()){
@@ -29,20 +29,23 @@ public class LoginService {
 
 
         //check selection member page
-        /*if(membersByEmail.get(0).FieloPLT__User__c != null){
+        if(membersByEmail.get(0).FieloPLT__User__c != null){
             List<FieloPLT__Member__c> relatedMembers = new MembersSelector().selectRelatedMembers(UserInfo.getUserId(), program.Id);
-            if(relatedMembers.size() > 1 && String.isNotBlank(program.FieloPLT__MemberSelectionPage__c)){
+            if(relatedMembers.size() > 1 && String.isNotBlank(program.MemberSelectionPage__c)){
                 PageReference selectionPage = new PageReference('/FieloCMS__Page');
-                selectionPage.getParameters().put('pageId',program.FieloPLT__MemberSelectionPage__c);
+                selectionPage.getParameters().put('pageId',program.MemberSelectionPage__c);
                 startUrl = selectionPage.getUrl();
             }
-        }*/
+        }
 
         //check agreement
-        PageReference agreementPage = MemberService.getAgreementPage(membersByEmail.get(0).Id);
-        if(agreementPage != null)
-            startUrl = agreementPage.getUrl();
-
+        List<FieloPLT__Agreement__c> agreements = new AgreementsSelector().selectCurrentByProgram(program.Id);
+        //redirecciono a la página para aceptar el agreement si está habilitado para el program y además existe alguno con status current
+        if(membersByEmail.get(0).FieloPLT__Program__r.UseAgreement__c && !agreements.isEmpty()){
+            PageReference agreementPage = MemberService.getAgreementPage(membersByEmail.get(0).Id);
+            if(agreementPage != null)
+                startUrl = agreementPage.getUrl();
+        }
         //login
         return Site.login(username, password, startUrl);
     }
