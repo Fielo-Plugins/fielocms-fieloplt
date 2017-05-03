@@ -24,7 +24,7 @@ public class LoginService {
 
         //if the member was found but is blocked thtrows an error
         if(membersByEmail.get(0).FieloPLT__Status__c == 'Blocked'){
-            throw new FieloException(Label.ErrorLoginMemberBlocked);                        
+            throw new FieloException(Label.ErrorLoginMemberBlocked);
         }
 
 

@@ -4,7 +4,7 @@ public class ProgramService{
 		if(currentProgram == null){
 			Id currentMemberId = MemberService.getCurrentMemberId();
 			//si es guest tomo el pr
-			if(currentMemberId == null){				
+			if(currentMemberId == null){
 				currentProgram = new ProgramsSelector(false).selectBySiteUrl(Site.getDomain());
 			}else{
 				Id programId = [SELECT FieloPLT__Program__c FROM FieloPLT__Member__c WHERE Id =: currentMemberId].FieloPLT__Program__c;

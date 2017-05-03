@@ -80,6 +80,7 @@ public with sharing class ProgramsSelector extends SObjectSelector{
   public FieloPLT__Program__c selectBySiteUrl(String siteDomain){
     //if(programBySiteUrl == null){
           if(siteDomain != null) siteDomain = siteDomain.replace('.secure.','.');
+          System.debug(loggingLevel.Error, '*** siteDomain: ' + siteDomain);
 
       assertIsAccessible();
       List<FieloPLT__Program__c> programs = (List<FieloPLT__Program__c>) Database.query(
