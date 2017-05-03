@@ -11,7 +11,9 @@ El presente caso de uso describe como un member completa la registracion desde f
 
 - En el program, el campo RegisterPage tiene la page de CMS con el componente Register2.
 
-- El member comenzo la registracion desde Frontend o el administrador comenzo la registracion desde backend
+- El member comenzo la registracion desde Frontend o el administrador comenzo la registracion desde backend.
+
+- En el program la marca de Request User = TRUE y el member tiene status Pending User
 
 ### Postcondiciones
 
@@ -31,8 +33,8 @@ El member completa la registracion en el site y el sistema genera el user para e
 7. El member presiona el boton Submit
 8. El sistema verifica que los campos esten completos y validos
 9. El sistema verifica que la fielo account no tiene user
-10. El sistema crea un nuevo usuario relacionado a la Fielo Account y a su contact relacionado con la password configurada por el member en la segunda pagina de Registracion y con el language, time zone y locale seteado en el program. 
-10. El sistema actualiza el status de la Fielo Account a Active y cambia el owner al user recien creado.
+10. El sistema crea un nuevo usuario relacionado al member y a su contact relacionado con la password configurada por el member 
+11. El sistema actualiza el status de la Fielo Account a Active y cambia el owner al user recien creado.
 11. El sistema loguea al member invocando el caso de uso [Validar Login](?name=UC-PLG-ME009)
 12. Fin de flujo.
 
