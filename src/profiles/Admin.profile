@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+    <custom>false</custom>
     <classAccesses>
         <apexClass>AgreementAcceptController</apexClass>
         <enabled>true</enabled>
@@ -216,7 +217,6 @@
         <apexClass>UserCreationFielo</apexClass>
         <enabled>true</enabled>
     </classAccesses>
-    <custom>false</custom>
     <fieldPermissions>
         <editable>true</editable>
         <field>FieloCMS__ComponentLibrary__c.FieloCMS__AdditionalFields__c</field>
@@ -2142,7 +2142,6 @@
         <recordType>FieloPLT__Segment__c.Public</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
-    <userLicense>Salesforce</userLicense>
     <userPermissions>
         <enabled>true</enabled>
         <name>ActivateContract</name>
