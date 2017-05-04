@@ -27,7 +27,7 @@ public class LoginService {
             throw new FieloException(Label.ErrorLoginMemberBlocked);
         }
 
-
+        /*
         //check selection member page
         if(membersByEmail.get(0).FieloPLT__User__c != null){
             List<FieloPLT__Member__c> relatedMembers = new MembersSelector().selectRelatedMembers(UserInfo.getUserId(), program.Id);
@@ -36,7 +36,7 @@ public class LoginService {
                 selectionPage.getParameters().put('pageId',program.MemberSelectionPage__c);
                 startUrl = selectionPage.getUrl();
             }
-        }
+        }*/
 
         //check agreement
         List<FieloPLT__Agreement__c> agreements = new AgreementsSelector().selectCurrentByProgram(program.Id);
