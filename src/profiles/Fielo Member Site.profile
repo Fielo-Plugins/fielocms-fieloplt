@@ -1448,11 +1448,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__Reward__c.FieloPLT__StockManagement__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>FieloPLT__Reward__c.FieloPLT__Stock__c</field>
         <readable>true</readable>
     </fieldPermissions>
