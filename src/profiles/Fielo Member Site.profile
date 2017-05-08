@@ -858,11 +858,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__Criterion__c.FieloPLT__FieldName__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>FieloPLT__Criterion__c.FieloPLT__FieldType__c</field>
         <readable>false</readable>
     </fieldPermissions>
