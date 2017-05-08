@@ -1208,11 +1208,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__Program__c.MemberSelectionPage__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>FieloPLT__Program__c.RegisterStep2Page__c</field>
         <readable>true</readable>
     </fieldPermissions>
