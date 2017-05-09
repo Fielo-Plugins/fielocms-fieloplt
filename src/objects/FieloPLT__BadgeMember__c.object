@@ -60,7 +60,7 @@
     <enableStreamingApi>true</enableStreamingApi>
     <label>Badge Member</label>
     <nameField>
-        <label>BadgeMember Name</label>
+        <label>Badge Member Name</label>
         <type>Text</type>
     </nameField>
     <pluralLabel>Badges Members</pluralLabel>
