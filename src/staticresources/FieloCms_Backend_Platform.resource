@@ -20,7 +20,8 @@
   window.MetaSegment = MetaSegment;
 
   /**
-   * Guarda strings para nombres de clases definidas por este componente que son usadas por JavaScript.
+   * Guarda strings para nombres de clases definidas por este componente que son 
+   * usadas por JavaScript.
    * Esto nos permite cambiarlos solo en un lugar
    * @enum {string}
    * @private
@@ -32,7 +33,22 @@
    */
   MetaSegment.prototype.init = function() {
     if (this.element_) {
-     alert('meta segment init');
+      this.element_.innerHTML = 'Label.Multisegmentss';
+
+      var url = document.getElementById('tsid-menuItems') || '';
+      if (url !== '') {
+     	  url = url.querySelector('a[href*="salesforce.com/home/home.jsp"]')
+     	  	.getAttribute('href');
+     	  if (url.indexOf("://") > -1) {
+        	url =  url.split('/')[0] + '//' + url.split('/')[2];
+		    } else {
+	        url = 'https://' + url.split('/')[0];
+		    }
+      } 
+
+   	  url = url + '/apex/segmentselection';
+
+     	this.element_.setAttribute('href', url);
     }
   };
 
@@ -52,14 +68,16 @@ document.addEventListener("DOMContentLoaded", function() {
 		'.fielosf-post-create,' +
 		'.fielosf-navigation-create'
 		);
-	var segmentButton = $('<div/>').html(
-		'<button class="slds-button slds-button--neutral fielosf-meta-segment">Label.MultiSegment' +
-		'</button>'
-	);
 	if (addSegmentLogic.length == 1) {
-		$(
+		var segmentButton = document.createElement('a');
+		segmentButton.classList.add('slds-button');
+		segmentButton.classList.add('slds-button--neutral');
+		segmentButton.classList.add('fielosf-meta-segment');
+
+		var actions = document.querySelector(
 			'.fielosf-header > .slds-grid > '+
 			'.slds-col:nth-child(2) .slds-button-group:nth-child(1)'
-		).prepend(segmentButton.html());
+		);
+		actions.insertBefore(segmentButton, actions.children[0]);
 	}
 });
