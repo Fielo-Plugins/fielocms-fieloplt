@@ -1,3 +1,59 @@
-<apex:page docType="html-5.0" sidebar="false">
-	<fieloplt:segmentsselection segmentField="segment__c"/>
+<apex:page docType="html-5.0" sidebar="false" controller="SegmentsSelectionController">
+
+	<apex:form >
+
+	<apex:pageBlock title="{!$ObjectType.FieloPLT__Segment__c.LabelPlural}" >
+		<apex:pageBlockButtons >  
+			<apex:commandButton action="{!saveAndExit}" value="{!$Label.FieloPLT__Save}"/>
+			<apex:commandButton action="{!save}" value="{!$Label.FieloPLT__QuickSave}"/>
+			<apex:commandButton action="{!cancel}" value="{!$Label.FieloPLT__Cancel}"/>
+		</apex:pageBlockButtons>
+
+
+		<!-- AVAILABLE SEGMENTS -->
+		<apex:pageBlockSection id="AvailableList" columns="1" collapsible="false" title="{!$Label.FieloPLT__Available}">
+	        	<apex:pageBlockTable id="pageBlockTable" value="{!availableSegments}" var="segWrapper" >                             
+	            <apex:column > 
+	                <apex:inputCheckBox id="checkbox" value="{!segWrapper.checkbox}"/>
+	            </apex:column>
+	            <apex:repeat value="{!fields}" var="f">
+	            	 <apex:column headerValue="{!$ObjectType.FieloPLT__Segment__c.Fields[f].label}"> 
+		                <apex:outputField id="Segment" value="{!segWrapper.segment[f.fieldPath]}"/>
+		            </apex:column>
+	            </apex:repeat>
+	                           
+
+	       	</apex:pageBlockTable>
+			<apex:commandButton action="{!addSelected}" value="{!$Label.FieloPLT__Add}"/>
+	   	</apex:pageBlockSection>
+
+
+
+	   	<apex:variable id="counter" var="counter" value="0" />
+		<!-- SELECTED SEGMENTS -->
+	    <apex:pageBlockSection id="SelectedList" columns="2" collapsible="false" title="{!$Label.FieloPLT__Selected}">
+	        	<apex:pageBlockTable id="pageBlockTable" value="{!selectedSegments}" var="segWrapper" >                             
+	            <apex:column > 
+	                <apex:commandLink action="{!remove}" value="{!$Label.FieloPLT__Delete}">
+	                	<apex:param name="indexToRemove" value="{!counter}" />
+	                </apex:commandLink>
+	            </apex:column>
+	            <apex:repeat value="{!fields}" var="f">
+	            	 <apex:column headerValue="{!$ObjectType.FieloPLT__Segment__c.Fields[f].label}"> 
+		                <apex:outputField id="Segment" value="{!segWrapper.segment[f.fieldPath]}"/>
+		            </apex:column>
+	            </apex:repeat>
+			<apex:variable var="counter" value="{! Text(Value(counter) + 1)}" />                                                                                  
+	       	</apex:pageBlockTable>
+	   	</apex:pageBlockSection>
+
+
+	</apex:pageBlock>
+
+
+
+
+    </apex:form>
+
+
 </apex:page>
