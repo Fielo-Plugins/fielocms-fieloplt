@@ -49,29 +49,49 @@ var QueryString = function () {
    * @enum {string}
    * @private
    */
-  MetaSegment.prototype.CssClasses_ = {};
+  MetaSegment.prototype.CssClasses_ = {
+    HIDE: 'slds-hide'
+  };
 
    /**
    * Inicializa el elemento
    */
   MetaSegment.prototype.init = function() {
     if (this.element_) {
-      this.element_.innerHTML = 'Label.Multisegmentss';
+      // Segment lookup
+      var segment = document.getElementsByClassName(
+        'fielosf-other-fields__item--Segment__c'
+      )[0] || null;
 
-      var url = document.getElementById('tsid-menuItems') || '';
-      if (url !== '') {
-     	  url = url.querySelector('a[href*="salesforce.com/home/home.jsp"]')
-     	  	.getAttribute('href');
-     	  if (url.indexOf("://") > -1) {
-        	url =  url.split('/')[0] + '//' + url.split('/')[2];
-		    } else {
-	        url = 'https://' + url.split('/')[0];
-		    }
-      } 
-      
-   	  url = url + '/apex/segmentselection?id=' + QueryString.id;
+      // si existe el lookup inicializo el resto de las propiedades
+      if (segment) {
+        segment.classList.add(this.CssClasses_.HIDE);
+        
+        var url = document.getElementById('tsid-menuItems') || '';
+        if (url !== '') {
+          url = url.querySelector('a[href*="salesforce.com/home/home.jsp"]')
+            .getAttribute('href');
+          if (url.indexOf("://") > -1) {
+            url =  url.split('/')[0] + '//' + url.split('/')[2];
+          } else {
+            url = 'https://' + url.split('/')[0];
+          }
+        } 
+        
+        url = url + '/apex/segmentselection?id=' + QueryString.id;
 
-     	this.element_.setAttribute('href', url);
+        this.element_.setAttribute('href', url);
+        
+        // Sets label
+        this.element_.innerHTML = segment.getElementsByClassName(
+          'slds-form-element__label'
+        )[0].innerHTML;
+
+        // Show button
+       	this.element_.classList.remove(this.CssClasses_.HIDE);
+      } else {
+        this.element_.remove();
+      }
     }
   };
 
@@ -94,8 +114,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	if (addSegmentLogic.length == 1) {
 		var segmentButton = document.createElement('a');
 		segmentButton.classList.add('slds-button');
-		segmentButton.classList.add('slds-button--neutral');
-		segmentButton.classList.add('fielosf-meta-segment');
+    segmentButton.classList.add('slds-button--neutral');
+    segmentButton.classList.add('fielosf-meta-segment');
+		segmentButton.classList.add('slds-hide');
 
 		var actions = document.querySelector(
 			'.fielosf-header > .slds-grid > '+
