@@ -9,6 +9,7 @@ public with sharing class SegmentsSelectionController {
     private Id programId {get; set;}
     private SObject record {get; set;}
     private String query {get; set;}
+    private String programField;
 
 
     public class SegmentWrapper{
@@ -21,7 +22,7 @@ public with sharing class SegmentsSelectionController {
         }
     }
 
-    public void init(){
+    public SegmentsSelectionController(){
         id = ApexPages.currentPage().getParameters().get('id');
 
         String objectPrefix = id.subString(0,3);
@@ -31,15 +32,15 @@ public with sharing class SegmentsSelectionController {
 
         String recordQuery;
 
-        if(String.isBlank('Program__c')){
-            record = Database.query('SELECT ' + 'Segment__c' + ', ' + 'Segment__c'.replace('FieloPLT____c', '__r') + '.FieloPLT__RelatedSegments__c FROM ' + objectName + ' WHERE Id =: id' );
+        if(String.isBlank(programField)){
+            record = Database.query('SELECT ' + 'Segment__c' + ', ' + 'Segment__r.FieloPLT__RelatedSegments__c FROM ' + objectName + ' WHERE Id =: id' );
         }else{
-            record = Database.query('SELECT ' + 'Program__c' + ', ' + 'Segment__c' + ', ' + 'Segment__c'.replace('FieloPLT____c', '__r') + '.FieloPLT__RelatedSegments__c FROM ' + objectName + ' WHERE Id =: id' );
+            record = Database.query('SELECT ' + programField + ', ' + 'Segment__c' + ', ' + 'Segment__r' + '.FieloPLT__RelatedSegments__c FROM ' + objectName + ' WHERE Id =: id' );
         }
 
-        programId = String.isBlank('Program__c') ? null : (Id)record.get('Program__c');
+        programId = String.isBlank(programField) ? null : (Id)record.get(programField);
 
-        FieloPLT__Segment__c segment = (FieloPLT__Segment__c)record.getSObject('Segment__c'.replace('FieloPLT____c', '__r'));
+        FieloPLT__Segment__c segment = (FieloPLT__Segment__c)record.getSObject('Segment__r');
         String previousSegments;
         Set<String> setPreviousSegments = new Set<String>();
 
@@ -55,25 +56,25 @@ public with sharing class SegmentsSelectionController {
         }
 
         //query all the existing segments for the program  (if it has)
-        query = 'SELECT Name, FieloPLT__Program__c, FieloPLT__Description__c ';
+        query = 'SELECT Id, ';
 
-        /*for(Schema.FieldSetMember f : getFields()) {
+        for(Schema.FieldSetMember f : getFields()) {
             query += f.getFieldPath() + ', ';
-        }*/
+        }
 
         query = query.removeEnd(', ');
 
         query += ' FROM FieloPLT__Segment__c WHERE';
 
-        System.debug('Program__c');
-
-        if(String.isBlank('Program__c')){
+        if(String.isBlank(programField)){
             query += ' FieloPLT__RelatedSegments__c = \'\' ORDER BY Name';
         }else if(programId == null){
             query += ' FieloPLT__Program__c = null AND FieloPLT__RelatedSegments__c = \'\' ORDER BY Name';
         }else{
             query += ' (FieloPLT__Program__c = null OR FieloPLT__Program__c =: programId) AND FieloPLT__RelatedSegments__c = \'\' ORDER BY Name';
         }
+
+        System.debug(LoggingLevel.ERROR, query);
 
         List<FieloPLT__Segment__c> segs = Database.query(query);
 
@@ -132,7 +133,7 @@ public with sharing class SegmentsSelectionController {
     }
 
     public List<Schema.FieldSetMember> getFields() {
-        return null;//SObjectType.FieloPLT__Segment__c.FieldSets.SegmentsSelection.getFields();
+        return SObjectType.FieloPLT__Segment__c.FieldSets.SegmentsSelection.getFields();
     }
 
     /**
