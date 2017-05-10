@@ -65,8 +65,8 @@ var QueryString = function () {
 
       // si existe el lookup inicializo el resto de las propiedades
       if (segment) {
-        segment.classList.add(this.CssClasses_.HIDE);
-        
+        segment.setAttribute('style', 'display:none;');
+
         var url = document.getElementById('tsid-menuItems') || '';
         if (url !== '') {
           url = url.querySelector('a[href*="salesforce.com/home/home.jsp"]')
