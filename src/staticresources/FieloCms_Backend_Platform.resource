@@ -64,31 +64,32 @@ var QueryString = function () {
       )[0] || null;
 
       // si existe el lookup inicializo el resto de las propiedades
-      if (segment && QueryString.id) {
+      if (segment) {
         segment.setAttribute('style', 'display:none;');
+        if (QueryString.id) {
+          var url = document.getElementById('tsid-menuItems') || '';
+          if (url !== '') {
+            url = url.querySelector('a[href*="salesforce.com/home/home.jsp"]')
+              .getAttribute('href');
+            if (url.indexOf("://") > -1) {
+              url =  url.split('/')[0] + '//' + url.split('/')[2];
+            } else {
+              url = 'https://' + url.split('/')[0];
+            }
+          } 
+          
+          url = url + '/apex/segmentselection?id=' + QueryString.id;
 
-        var url = document.getElementById('tsid-menuItems') || '';
-        if (url !== '') {
-          url = url.querySelector('a[href*="salesforce.com/home/home.jsp"]')
-            .getAttribute('href');
-          if (url.indexOf("://") > -1) {
-            url =  url.split('/')[0] + '//' + url.split('/')[2];
-          } else {
-            url = 'https://' + url.split('/')[0];
-          }
-        } 
-        
-        url = url + '/apex/segmentselection?id=' + QueryString.id;
+          this.element_.setAttribute('href', url);
+          
+          // Sets label
+          this.element_.innerHTML = segment.getElementsByClassName(
+            'slds-form-element__label'
+          )[0].innerHTML;
 
-        this.element_.setAttribute('href', url);
-        
-        // Sets label
-        this.element_.innerHTML = segment.getElementsByClassName(
-          'slds-form-element__label'
-        )[0].innerHTML;
-
-        // Show button
-       	this.element_.classList.remove(this.CssClasses_.HIDE);
+          // Show button
+         	this.element_.classList.remove(this.CssClasses_.HIDE);
+        }
       } else {
         this.element_.remove();
       }
