@@ -6,12 +6,12 @@
     <label>Redemption Item Voucher</label>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>64</minorNumber>
+        <minorNumber>65</minorNumber>
         <namespace>FieloCMS</namespace>
     </packageVersions>
     <packageVersions>
         <majorNumber>2</majorNumber>
-        <minorNumber>19</minorNumber>
+        <minorNumber>20</minorNumber>
         <namespace>FieloPLT</namespace>
     </packageVersions>
     <packageVersions>

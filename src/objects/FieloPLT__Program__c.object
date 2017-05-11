@@ -92,6 +92,7 @@
         <fullName>FieloPLT__CriteriaFields__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
+        <description>Internal field. It stores all "Field Name" fields used in the Criterion of Rules.</description>
         <label>Criteria Fields</label>
         <length>32768</length>
         <trackTrending>false</trackTrending>
@@ -101,7 +102,7 @@
     <fields>
         <fullName>FieloPLT__NumberOfVoucherDigits__c</fullName>
         <deprecated>false</deprecated>
-        <description>Number of digits displayed on the voucher.</description>
+        <description>Number of digits displayed on the voucher. Vouchers must include at least 4 digits.</description>
         <externalId>false</externalId>
         <inlineHelpText>Set the number of digits displayed on the voucher.</inlineHelpText>
         <label>Number of Voucher Digits</label>
@@ -116,7 +117,7 @@
         <fullName>FieloPLT__OnlineTransactionProcessing__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
-        <description>When ticked, Transactions and trackers are processed online when recorded. Otherwise, all transactions and trackers are processed offline.</description>
+        <description>When ticked, Transactions and Trackers are processed online when recorded. Otherwise, all transactions and trackers are processed offline.</description>
         <externalId>false</externalId>
         <inlineHelpText>When ticked, Transactions and trackers are processed online when recorded.</inlineHelpText>
         <label>Online Processing</label>
@@ -297,9 +298,9 @@
     <validationRules>
         <fullName>FieloPLT__ValidateNumerOfVoucherDigits</fullName>
         <active>true</active>
-        <description>Voucher must have more than 4 digits.</description>
+        <description>Voucher must include at least 4 digits.</description>
         <errorConditionFormula>FieloPLT__NumberOfVoucherDigits__c &lt; 4</errorConditionFormula>
         <errorDisplayField>FieloPLT__NumberOfVoucherDigits__c</errorDisplayField>
-        <errorMessage>Voucher must have more than 4 digits.</errorMessage>
+        <errorMessage>Voucher must include at least 4 digits.</errorMessage>
     </validationRules>
 </CustomObject>
