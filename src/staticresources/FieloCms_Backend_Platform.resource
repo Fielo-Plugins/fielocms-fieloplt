@@ -64,7 +64,7 @@ var QueryString = function () {
       )[0] || null;
 
       // si existe el lookup inicializo el resto de las propiedades
-      if (segment) {
+      if (segment && QueryString.id) {
         segment.setAttribute('style', 'display:none;');
 
         var url = document.getElementById('tsid-menuItems') || '';
