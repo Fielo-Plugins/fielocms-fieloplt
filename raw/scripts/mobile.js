@@ -453,6 +453,7 @@ function FieloPLTcheckDeleteCookie(result, event){
   FieloAgreement.prototype.setDefaults_ = function() {
     this.submit_ =
       this.element_.getElementsByClassName(this.CssClasses_.SUBMIT)[0];
+    this.submit_.setAttribute('disabled', 'disabled');
     this.submit_.classList.remove(this.CssClasses_.SUBMIT);
     this.submit_.classList.remove(this.CssClasses_.HIDE);
     this.agree_ =

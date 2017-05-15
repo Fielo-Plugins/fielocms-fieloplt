@@ -1,6 +1,5 @@
-<apex:component controller="AgreementAcceptController" layout='none' allowDML="true">
+<apex:component controller="AgreementAcceptController" layout="none" allowDML="true">
   <apex:attribute name="config" type="FieloCMS__Component__c" description="" />
-  {!showAgreement}
   <apex:panelGroup layout="none" rendered="{!showAgreement}">
     <div class="cms-plt-agreement {!config['FieloCMS__ComponentLibrary__r']['FieloCMS__CSSClasses__c']} {!config['FieloCMS__CSSClasses__c']}" data-componentid="{! config['Id'] }"  data-component-name="{!LOWER(SUBSTITUTE(config['FieloCMS__ComponentLibrary__r']['Name'],' ','-'))}">
       <div class="cms-plt-agreement__container">
@@ -17,7 +16,7 @@
             <apex:outputText value="{!$Label.IAgree}" styleClass="cms-plt-agreement__label" /> 
           </label>
           <!--Button -->
-          <apex:commandButton value="{!$Label.fieloplt__save}" disabled="true" action="{!doSave}" styleClass="fielo-button fielo-button__submit slds-hide" id="botonId"/>
+          <apex:commandButton action="{!doSave}" value="{!$Label.fieloplt__save}" styleClass="fielo-button fielo-button__submit slds-hide" />
         </apex:form>
       </div>
       <div class="cms-plt-agreement__backdrop"></div>
