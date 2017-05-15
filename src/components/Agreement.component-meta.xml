@@ -4,7 +4,7 @@
     <label>Agreement</label>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>65</minorNumber>
+        <minorNumber>67</minorNumber>
         <namespace>FieloCMS</namespace>
     </packageVersions>
     <packageVersions>
