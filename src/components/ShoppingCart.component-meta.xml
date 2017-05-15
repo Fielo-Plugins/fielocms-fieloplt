@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ApexComponent xmlns="http://soap.sforce.com/2006/04/metadata">
-    <apiVersion>29.0</apiVersion>
+    <apiVersion>39.0</apiVersion>
     <label>Shopping Cart</label>
-    <packageVersions>
-        <majorNumber>1</majorNumber>
-        <minorNumber>65</minorNumber>
-        <namespace>FieloCMS</namespace>
-    </packageVersions>
-    <packageVersions>
-        <majorNumber>2</majorNumber>
-        <minorNumber>20</minorNumber>
-        <namespace>FieloPLT</namespace>
-    </packageVersions>
-    <packageVersions>
-        <majorNumber>4</majorNumber>
-        <minorNumber>24</minorNumber>
-        <namespace>INFA</namespace>
-    </packageVersions>
 </ApexComponent>
