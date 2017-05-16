@@ -1,7 +1,7 @@
 {
   "plugins" : [ {
     "Name" : "PlatformPlugin",
-    "FieloCMS__Version__c" : 0.913,
+    "FieloCMS__Version__c" : 0.915,
     "components" : [ {
       "recordTypeName" : "Record",
       "Name" : "Redemption Detail",
@@ -117,6 +117,17 @@
       "FieloCMS__ViewClass__c" : "MemberAPI",
       "FieloCMS__Visibility__c" : "Public",
       "FieloCMS__DeveloperName__c" : "PlatformPlugin.RegisterStep2"
+    }, {
+      "recordTypeName" : "Widget",
+      "Name" : "Agreement",
+      "FieloCMS__ControlClass__c" : "FieloCMS.StandardAPI",
+      "FieloCMS__DataClass__c" : "FieloCMS.StandardAPI",
+      "FieloCMS__Icon__c" : "fa-check-square-o",
+      "FieloCMS__RecordType__c" : "Widget",
+      "FieloCMS__Subcomponents__c" : "",
+      "FieloCMS__ViewClass__c" : "AgreementAPI",
+      "FieloCMS__Visibility__c" : "Private",
+      "FieloCMS__DeveloperName__c" : "PlatformPlugin.Agreement"
     }, {
       "recordTypeName" : "Record",
       "Name" : "Shopping Cart",
