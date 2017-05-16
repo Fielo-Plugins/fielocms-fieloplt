@@ -38,14 +38,7 @@ public class LoginService {
             }
         }*/
 
-        //check agreement
-        List<FieloPLT__Agreement__c> agreements = new AgreementsSelector().selectCurrentByProgram(program.Id);
-        //redirecciono a la página para aceptar el agreement si está habilitado para el program y además existe alguno con status current
-        if(membersByEmail.get(0).FieloPLT__Program__r.UseAgreement__c && !agreements.isEmpty()){
-            PageReference agreementPage = MemberService.getAgreementPage(membersByEmail.get(0).Id);
-            if(agreementPage != null)
-                startUrl = agreementPage.getUrl();
-        }
+        
         //login
         return Site.login(username, password, startUrl);
     }

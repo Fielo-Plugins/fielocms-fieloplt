@@ -57,3 +57,47 @@
   height:24px;
   display:block;
 }
+
+/* Agreement */
+.cms-plt-agreement {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+}
+.cms-plt-agreement .fielo-form {
+  margin-top: 20px;
+}
+.cms-plt-agreement__container {
+  margin-top: 5%;
+  margin-left: 10%;
+  width: 80%;
+  height: 80%;
+  background-color: #FFFFFF;
+  position:fixed;
+  z-index: 99;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  border: 1px solid #000000;
+}
+.cms-plt-agreement__content {
+  height: calc(100% - 140px);
+    overflow-y: scroll;
+}
+.cms-plt-agreement__backdrop  {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+  box-sizing: border-box;
+}
+
+.cms-plt-agreement__label {
+  margin-right: 10px;
+  margin-left: 10px;
+}

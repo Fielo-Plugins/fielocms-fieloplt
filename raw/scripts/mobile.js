@@ -405,3 +405,91 @@ function FieloPLTcheckDeleteCookie(result, event){
     widget: true
   });
 })();
+
+
+(function() {
+  'use strict';
+
+  /**
+   * @description Constructor for the login form
+   * FieloAgreement Implements design patterns defined by MDL at
+   * {@link https://github.com/jasonmayes/mdl-component-design-pattern}
+   *
+   * @version 1
+   * @author Alejandro Spinelli <alejandro.spinelli@fielo.com>
+   * @author Hugo Gómez Mac Gregor <hugo.gomez@fielo.com>
+   * @param {HTMLElement} element - Element to be upgraded
+   * @constructor
+   */
+  var FieloAgreement = function FieloAgreement(element) {
+    this.element_ = element;
+
+    // Initialize instance.
+    this.init();
+  };
+  window.FieloAgreement = FieloAgreement;
+
+  // Properties
+
+  /**
+   * Css name classes
+   *
+   * @enum {string}
+   * @private
+   */
+  FieloAgreement.prototype.CssClasses_ = {
+    AGREE: 'cms-plt-agreement__checkbox',
+    HIDE: 'slds-hide',
+    SUBMIT: 'fielo-button__submit'
+  };
+
+  // Private methods
+
+  /**
+   * Set Defaults settings
+   *
+   * @private
+   */
+  FieloAgreement.prototype.setDefaults_ = function() {
+    this.submit_ =
+      this.element_.getElementsByClassName(this.CssClasses_.SUBMIT)[0];
+    this.submit_.setAttribute('disabled', 'disabled');
+    this.submit_.classList.remove(this.CssClasses_.SUBMIT);
+    this.submit_.classList.remove(this.CssClasses_.HIDE);
+    this.agree_ =
+      this.element_.getElementsByClassName(this.CssClasses_.AGREE)[0];
+  };
+
+  FieloAgreement.prototype.addEventListeners_ = function() {
+    this.agree_.addEventListener('change', function() {
+      if (this.agree_.checked) {
+      this.submit_.classList.add(this.CssClasses_.SUBMIT);
+      this.submit_.removeAttribute('disabled');
+    } else {
+      this.submit_.classList.remove(this.CssClasses_.SUBMIT);
+      this.submit_.setAttribute('disabled', 'disabled');
+    }
+    }.bind(this));
+  };
+
+  // Public methods
+
+  /**
+   * Inicializa el elemento
+   */
+  FieloAgreement.prototype.init = function() {
+    if (this.element_) {
+      this.setDefaults_();
+      this.addEventListeners_();
+    }
+  };
+
+  // El componente se registra por si solo.
+  // Asume que el componentHandler esta habilitado en el scope global
+  componentHandler.register({
+    constructor: FieloAgreement,
+    classAsString: 'FieloAgreement',
+    cssClass: 'cms-plt-agreement',
+    widget: true
+  });
+})();

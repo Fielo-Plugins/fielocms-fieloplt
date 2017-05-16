@@ -1,33 +1,34 @@
 public with sharing class AgreementAcceptController {
 
-    public FieloPLT__Agreement__c agreement {get;set;}
-    public Boolean acceptAgreement {get;set;}
+    public Boolean showAgreement {get; set;}
+    public FieloPLT__Agreement__c agreement {get; set;}
 
-    private FieloPLT__Member__c member;
-
-    public AgreementAcceptController() {
-        acceptAgreement = false;
+    public AgreementAcceptController(){
         //looks for the current agreement and the logged in user
-        member = [SELECT Id, FieloPLT__Program__c FROM FieloPLT__Member__c WHERE Id =: MemberService.getCurrentMemberId()];        
-        agreement = [SELECT Id, FieloPLT__Agreement__c FROM FieloPLT__Agreement__c WHERE FieloPLT__Status__c = 'Current' AND FieloPLT__Program__c =: member.FieloPLT__Program__c LIMIT 1];
+        FieloPLT__Member__c member = new MembersSelector(new Set<String>{'Id', 'FieloPLT__Agreement__c', 'FieloPLT__Program__c'}).selectById(new Set<Id>{MemberService.getCurrentMemberId()})[0];
+        List<FieloPLT__Agreement__c> agreements = new AgreementsSelector(new Set<String>{'Id', 'FieloPLT__Agreement__c '}).selectCurrentByProgram(member.FieloPLT__Program__c);
+    
+        showAgreement = true;
+        if(!agreements.isEmpty()){
+            //chequeo si el member tiene el último agreement aceptado
+            agreement = agreements[0];
+            showAgreement = member.FieloPLT__Agreement__c != agreements[0].Id;
+        }
     }
 
-    public PageReference doSave(){
+    public static PageReference doSave(){
+        FieloPLT__Member__c member = new MembersSelector(new Set<String>{'Id', 'FieloPLT__Agreement__c', 'FieloPLT__Program__c'}).selectById(new Set<Id>{MemberService.getCurrentMemberId()})[0];
+        List<FieloPLT__Agreement__c> agreements = new AgreementsSelector(new Set<String>{'Id'}).selectCurrentByProgram(member.FieloPLT__Program__c);
         //if the member exists and have accepted the agreement then updates the agreement for the member
-        if(acceptAgreement){
-            member.FieloPLT__Agreement__c = agreement.Id;
-            FieloPLT.SObjectService.enableAdminPermission(true);
-            try{
-                upsert member;
-            }catch(DMLException e){
-                ApexPages.addMessage(new ApexPages.Message(ApexPages.SEVERITY.Error, e.getDMLMessage(0)));
-                return null;                    
-            }                
-        }else{
-            ApexPages.addMessage(new ApexPages.Message(ApexPages.SEVERITY.Error, 'You must accept the agreement to continue.'));
-            return null;
-        }
-        
+        member.FieloPLT__Agreement__c = agreements[0].Id;
+        FieloPLT.SObjectService.enableAdminPermission(true);
+        try{
+            upsert member;
+        }catch(DMLException e){
+            ApexPages.addMessage(new ApexPages.Message(ApexPages.SEVERITY.Error, e.getDMLMessage(0)));
+            return null;                    
+        }                
+
         //if no errors checks then returns to the ret url
         if(!ApexPages.hasMessages()){
             String retUrl = ApexPages.currentPage().getParameters().get('retUrl');
