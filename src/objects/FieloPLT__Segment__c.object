@@ -47,8 +47,8 @@
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <description>Segments are identifiable characteristics shared among a group of Members.</description>
     <deprecated>false</deprecated>
+    <description>Segments are identifiable characteristics shared among a group of Members.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
@@ -56,7 +56,131 @@
     <enableReports>true</enableReports>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>SegmentsSelection</fullName>
+        <description>SegmentSelection</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FieloPLT__Description__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FieloPLT__Program__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Segments Selection</label>
+    </fieldSets>
+    <fields>
+        <fullName>FieloPLT__Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Segment detailed description.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Segment detailed description.</inlineHelpText>
+        <label>Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>FieloPLT__IsActive__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>When ticked, the Segment is applied.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When ticked, the Segment is applied.</inlineHelpText>
+        <label>Active</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FieloPLT__LogicalExpression__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Logical expressions which can be applied to Segment Criteria. The expressions available are: &quot;All&quot; (it meets all the established criteria); &quot;Any&quot; (it meets at least one established Criterion) and &quot;Custom&quot; (it enables creating a formula based on the established criteria. E.g. ((1 AND 2) OR 3).).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter a custom formula (e.g. 1 or 2, and 3) based on the Criteria established above.</inlineHelpText>
+        <label>Match Criteria</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>FieloPLT__Program__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Program where the Segment belongs to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose the Program where the Segment belongs to.</inlineHelpText>
+        <label>Program</label>
+        <referenceTo>FieloPLT__Program__c</referenceTo>
+        <relationshipLabel>Segments</relationshipLabel>
+        <relationshipName>Segments</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FieloPLT__RelatedSegments__c</fullName>
+        <deprecated>false</deprecated>
+        <description>It stores the different Segment IDs when assigning more than one Segment (Multisegment).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>It stores the different Segment IDs when assigning more than one Segment (Multisegment).</inlineHelpText>
+        <label>Related Segments</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Segment</label>
+    <listViews>
+        <fullName>FieloPLT__All</fullName>
+        <columns>NAME</columns>
+        <columns>FieloPLT__IsActive__c</columns>
+        <columns>FieloPLT__Description__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>FieloPLT__Program__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>Name</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Segments</pluralLabel>
     <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>FieloPLT__Dynamic</fullName>
+        <active>true</active>
+        <description>It defines Criteria so that Members are automatically assessed and thus connected to the proper Segment.</description>
+        <label>Dynamic</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>FieloPLT__Manual</fullName>
+        <active>true</active>
+        <description>Segment needs to be manually linked to the chosen Members.</description>
+        <label>Manual</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>FieloPLT__Metasegment</fullName>
+        <active>true</active>
+        <description>Segment used to link two or more segments</description>
+        <label>Metasegment</label>
+    </recordTypes>
     <recordTypes>
         <fullName>Private</fullName>
         <active>true</active>
@@ -67,12 +191,14 @@
         <active>true</active>
         <label>Public</label>
     </recordTypes>
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
-    <label>Segment</label>
-    <nameField>
-        <label>Name</label>
-        <trackHistory>true</trackHistory>
-        <type>Text</type>
-    </nameField>
-    <pluralLabel>Segments</pluralLabel>
+    <validationRules>
+        <fullName>FieloPLT__ModifyProgram</fullName>
+        <active>true</active>
+        <description>The related Program cannot be modified.</description>
+        <errorConditionFormula>ISCHANGED(FieloPLT__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloPLT__Program__c)))</errorConditionFormula>
+        <errorDisplayField>FieloPLT__Program__c</errorDisplayField>
+        <errorMessage>The related Program cannot be modified.</errorMessage>
+    </validationRules>
 </CustomObject>
