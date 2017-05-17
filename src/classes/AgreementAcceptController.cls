@@ -8,7 +8,7 @@ public with sharing class AgreementAcceptController {
         FieloPLT__Member__c member = new MembersSelector(new Set<String>{'Id', 'FieloPLT__Agreement__c', 'FieloPLT__Program__c'}).selectById(new Set<Id>{MemberService.getCurrentMemberId()})[0];
         List<FieloPLT__Agreement__c> agreements = new AgreementsSelector(new Set<String>{'Id', 'FieloPLT__Agreement__c '}).selectCurrentByProgram(member.FieloPLT__Program__c);
     
-        showAgreement = true;
+        showAgreement = false;
         if(!agreements.isEmpty()){
             //chequeo si el member tiene el último agreement aceptado
             agreement = agreements[0];
