@@ -63,15 +63,6 @@ public with sharing class MemberService {
         }
     }
 
-    public static PageReference getAgreementPage(Id memberId){
-        PageReference agreementPage;
-        FieloPLT__Member__c member = [SELECT Id, FieloPLT__Agreement__r.FieloPLT__Status__c, FieloPLT__Program__r.UseAgreement__c FROM FieloPLT__Member__c WHERE Id =: memberId limit 1];
-        if(member.FieloPLT__Program__r.UseAgreement__c && member.FieloPLT__Agreement__r.FieloPLT__Status__c != 'Current'){
-            agreementPage = Page.AgreementAccept;
-            agreementPage.getParameters().put('retUrl','');
-        }
-        return agreementPage;
-    }
 
     public static PageReference login(Id memberId, String password){
         if(memberId == null){
