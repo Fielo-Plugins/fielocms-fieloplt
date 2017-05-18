@@ -1,7 +1,7 @@
 {
   "plugins" : [ {
     "Name" : "PlatformPlugin",
-    "FieloCMS__Version__c" : 0.918,
+    "FieloCMS__Version__c" : 0.919,
     "components" : [ {
       "recordTypeName" : "Record",
       "Name" : "Redemption Detail",
@@ -54,7 +54,7 @@
       "FieloCMS__DefaultFields__c" : "Name,FieloPLT__Email__c",
       "FieloCMS__ExcludeFields__c" : "Id,OwnerId,IsDeleted,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp",
       "FieloCMS__Icon__c" : "fa-user",
-      "FieloCMS__Layouts__c" : "View",
+      "FieloCMS__Layouts__c" : "View;Edit",
       "FieloCMS__RecordType__c" : "Record",
       "FieloCMS__Subcomponents__c" : "[     {         \"apiName\": \"UploadImage\",         \"label\": \"UploadImage\",         \"reflectionClass\": \"FieloCMS.Subcomponents.ImageUpload\",         \"type\": \"Subcomponent\"     },     {         \"apiName\": \"ViewImage\",         \"label\": \"View Image\",         \"fieldName\": \"FieloPLT__ExternalURL__c\",         \"reflectionClass\": \"FieloCMS.Subcomponents.ImageView\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     } ,{\"apiName\": \"Captcha\",\"label\": \"Captcha\", \"reflectionClass\": \"FieloCMS.Subcomponents.captcha\", \"type\": \"Subcomponent\", \"secretKey\":\"XXX\", \"siteKey\":\"XXX\"}]",
       "FieloCMS__Visibility__c" : "Private",
