@@ -4,19 +4,4 @@
     <availableInTouch>false</availableInTouch>
     <confirmationTokenRequired>false</confirmationTokenRequired>
     <label>Redemption Item Voucher</label>
-    <packageVersions>
-        <majorNumber>1</majorNumber>
-        <minorNumber>64</minorNumber>
-        <namespace>FieloCMS</namespace>
-    </packageVersions>
-    <packageVersions>
-        <majorNumber>1</majorNumber>
-        <minorNumber>16</minorNumber>
-        <namespace>FieloPLT</namespace>
-    </packageVersions>
-    <packageVersions>
-        <majorNumber>4</majorNumber>
-        <minorNumber>24</minorNumber>
-        <namespace>INFA</namespace>
-    </packageVersions>
 </ApexPage>

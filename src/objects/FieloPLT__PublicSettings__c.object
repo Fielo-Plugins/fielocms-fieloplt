@@ -3,56 +3,6 @@
     <customSettingsType>Hierarchy</customSettingsType>
     <description>Application configuration.</description>
     <enableFeeds>false</enableFeeds>
-    <fields>
-        <fullName>ContactRelationshipClass__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Class name which shows how Members relate to Contacts. If empty, Member&apos;s email is used.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Class name which shows how Members relate to Contacts.</inlineHelpText>
-        <label>Contact Relationship class</label>
-        <length>50</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>FieloVersion__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Fielo installed version.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Fielo installed version.</inlineHelpText>
-        <label>Fielo Version</label>
-        <length>10</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Instance__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Instance (server) name used by the ORG (Backend)</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Instance (server) name used by the ORG (Backend)</inlineHelpText>
-        <label>Instance</label>
-        <length>6</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>OptimizedProgramQuery__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <description>When ticked, the Site only retrieves the Program custom fields defined in the Program fieldset.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>When ticked, the Site only retrieves the Program custom fields defined in the Program fieldset.</inlineHelpText>
-        <label>Optimized Program query</label>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
     <label>Public Settings</label>
     <visibility>Public</visibility>
 </CustomObject>

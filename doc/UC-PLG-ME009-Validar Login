@@ -1,0 +1,33 @@
+## Validar Login
+### Objetivo
+
+El presente caso de uso describe las validaciones que realiza el sistema una vez que el member se loguea.
+
+### Precondiciones
+
+### Postcondiciones
+
+### Flujo de Eventos
+
+### Flujo Basico
+
+ 1. El sistema valida que el member no este bloqueado
+ 2. El sistema valida que el usuario no este inactivo.
+ 3. El sistema direcciona al member al menu principal del sitio.
+ 4. El sistema evalua todos los segments dinamicos activos y almacena en una cookie aquellos a los que el member aplica.
+ 5. El sistema almacena en una cookie todos los segments manuales relacionados al member
+ 6. El sistema muestra el frontend de acuerdo a los componentes visibles acorde a la segmentacion para el member que esta realizando el login.
+
+### Flujos Alternativos
+
+#### 1. El sistema valida que el member esta bloqueado (paso 1 del flujo basico)
+
+1. El sistema verifica que el member esta bloqueado y muestra el siguiente mensaje de error: ‘Login is blocked. Please contact your administrator.' 
+2. Fin de flujo 
+
+#### 2. El sistema valida que el usuario esta inactivo (paso 2 del flujo basico)
+
+1. El sistema verifica que el usuario relacionado al member esta inactivo.
+2. El sistema activa el usuario relacionado al member.
+3. Continua en el paso 3 del flujo basico. 
+

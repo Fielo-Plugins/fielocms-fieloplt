@@ -33,7 +33,7 @@ public with sharing class RedemptionItemVoucherController {
             this.image = imageId;
             this.voucherNum = i;
             this.instructionsVoucher = instructionsVoucher;
-            if(redemptionItem.FieloPLT__Reward__r.FieloPLT__Instructions__c != null){
+            if(redemptionItem.FieloPLT__Reward__r.InstructionsRichText__c != null){
                 this.instructionsReward = redemptionItem.FieloPLT__Reward__r.InstructionsRichText__c;
             }else{
                 this.instructionsReward = instructionsReward;
@@ -47,7 +47,7 @@ public with sharing class RedemptionItemVoucherController {
 
         if(String.isNotBlank(idOrden) || String.isNotBlank(voucherId)){
             List<FieloPLT__RedemptionItem__c> redemptionItem;
-            String query = 'SELECT Name, FieloPLT__Redemption__r.FieloPLT__Member__r.FieloPLT__Program__c, LastModifiedDate, Id, FieloPLT__Redemption__c, FieloPLT__Quantity__c, FieloPLT__Status__c, FieloPLT__Reward__c, FieloPLT__Reward__r.FieloPLT__Image__c, FieloPLT__Reward__r.InstructionsRichText__c, FieloPLT__Reward__r.FieloPLT__Instructions__c, FieloPLT__Reward__r.FieloPLT__UniqueVoucher__c, FieloPLT__UniqueCode__c, FieloPLT__Code__c, CreatedDate, CreatedById';
+            String query = 'SELECT Name, FieloPLT__Redemption__r.FieloPLT__Member__r.FieloPLT__Program__c, LastModifiedDate, Id, FieloPLT__Redemption__c, FieloPLT__Quantity__c, FieloPLT__Status__c, FieloPLT__Reward__c, FieloPLT__Reward__r.FieloPLT__Image__c, FieloPLT__Reward__r.InstructionsRichText__c, FieloPLT__Reward__r.FieloPLT__UniqueVoucher__c, FieloPLT__UniqueCode__c, FieloPLT__Code__c, CreatedDate, CreatedById';
             List<Schema.FieldSetMember> fieldsRedemptionItem = Schema.SObjectType.FieloPLT__RedemptionItem__c.fieldSets.Voucher.getFields();
 
             for(Schema.FieldSetMember f : fieldsRedemptionItem){

@@ -47,8 +47,8 @@
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
+    <description>It relates Members  and Levels together.</description>
     <deprecated>false</deprecated>
-    <description>It relates Members and Levels together.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
@@ -57,36 +57,6 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <fields>
-        <fullName>FieloPLT__Level__c</fullName>
-        <deleteConstraint>Restrict</deleteConstraint>
-        <deprecated>false</deprecated>
-        <description>Level related to Member.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Level related to Member.</inlineHelpText>
-        <label>Level</label>
-        <referenceTo>FieloPLT__Level__c</referenceTo>
-        <relationshipLabel>Levels Members</relationshipLabel>
-        <relationshipName>LevelsMembers</relationshipName>
-        <required>true</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__Member__c</fullName>
-        <deleteConstraint>Restrict</deleteConstraint>
-        <deprecated>false</deprecated>
-        <description>Member related to Level.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Member related to Level.</inlineHelpText>
-        <label>Member</label>
-        <referenceTo>FieloPLT__Member__c</referenceTo>
-        <relationshipLabel>Levels Members</relationshipLabel>
-        <relationshipName>LevelsMembers</relationshipName>
-        <required>true</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
     <label>Level Member</label>
     <nameField>
         <displayFormat>LM-{0000000000}</displayFormat>

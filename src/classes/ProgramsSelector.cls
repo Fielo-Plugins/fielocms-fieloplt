@@ -4,10 +4,7 @@ public with sharing class ProgramsSelector extends SObjectSelector{
         FieloPLT__Program__c.Id,
         FieloPLT__Program__c.Name,
         FieloPLT__Program__c.FieloPLT__RequestMemberAuthorization__c,
-        FieloPLT__Program__c.FieloPLT__UserCreationClass__c,
-        FieloPLT__Program__c.FieloPLT__AuditPoints__c,
-        FieloPLT__Program__c.FieloPLT__ExpirationMode__c,
-        FieloPLT__Program__c.FieloPLT__PointsSpendingMode__c
+        FieloPLT__Program__c.FieloPLT__UserCreationClass__c
       };
   }
 
@@ -64,7 +61,7 @@ public with sharing class ProgramsSelector extends SObjectSelector{
         //If the Custom Setting is not empty then used the Optimized query
         if(settings.FieloPLT__OptimizedProgramQuery__c){
             //If its the Default Case use only Standard Field
-            fieldSet.addAll(new Set<String>{'Name','FieloPLT__RewardInjectQuery__c','FieloPLT__SegmentInjectQuery__c','FieloPLT__CategoryInjectQuery__c','FieloPLT__AuditPoints__c','FieloPLT__IsDefault__c','FieloPLT__ExpirationMode__c','FieloPLT__ExpirationPeriod__c','FieloPLT__NumberOfVoucherDigits__c','FieloPLT__ActualPointCost__c','FieloPLT__RequestRedemptionAuthorization__c','FieloPLT__RequestMemberAuthorization__c','RequestTransactionAuthorization__c','FieloPLT__RequestTransactionAuthorization__c','FieloPLT__PointsSpendingMode__c','FieloPLT__OnlineTransactionProcessing__c','FieloPLT__UseAgreement__c','FieloPLT__UserCreationClass__c'});
+            fieldSet.addAll(new Set<String>{'Name','FieloPLT__RewardInjectQuery__c','FieloPLT__SegmentInjectQuery__c','FieloPLT__CategoryInjectQuery__c','FieloPLT__ExpirationPeriod__c','FieloPLT__NumberOfVoucherDigits__c','FieloPLT__ActualPointCost__c','FieloPLT__RequestRedemptionAuthorization__c','FieloPLT__RequestMemberAuthorization__c','RequestTransactionAuthorization__c','FieloPLT__RequestTransactionAuthorization__c','FieloPLT__OnlineTransactionProcessing__c','FieloPLT__UseAgreement__c','FieloPLT__UserCreationClass__c'});
             for(Schema.FieldSetMember fsm : Schema.SObjectType.FieloPLT__Program__c.fieldSets.FieloPLT__ProgramQuery.getFields()){
                 fieldSet.add(fsm.getFieldPath());
             }
@@ -83,6 +80,7 @@ public with sharing class ProgramsSelector extends SObjectSelector{
   public FieloPLT__Program__c selectBySiteUrl(String siteDomain){
     //if(programBySiteUrl == null){
           if(siteDomain != null) siteDomain = siteDomain.replace('.secure.','.');
+          System.debug(loggingLevel.Error, '*** siteDomain: ' + siteDomain);
 
       assertIsAccessible();
       List<FieloPLT__Program__c> programs = (List<FieloPLT__Program__c>) Database.query(

@@ -57,8 +57,13 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
-        <fullName>FieloPLT__Edit</fullName>
-        <description>Segment Create</description>
+        <fullName>SegmentsSelection</fullName>
+        <description>SegmentSelection</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
         <displayedFields>
             <field>FieloPLT__Description__c</field>
             <isFieldManaged>false</isFieldManaged>
@@ -69,7 +74,7 @@
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
-        <label>Edit</label>
+        <label>Segments Selection</label>
     </fieldSets>
     <fields>
         <fullName>FieloPLT__Description__c</fullName>
@@ -97,6 +102,19 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>FieloPLT__LogicalExpression__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Logical expressions which can be applied to Segment Criteria. The expressions available are: &quot;All&quot; (it meets all the established criteria); &quot;Any&quot; (it meets at least one established Criterion) and &quot;Custom&quot; (it enables creating a formula based on the established criteria. E.g. ((1 AND 2) OR 3).).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter a custom formula (e.g. 1 or 2, and 3) based on the Criteria established above.</inlineHelpText>
+        <label>Match Criteria</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
         <fullName>FieloPLT__Program__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
@@ -112,6 +130,20 @@
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
+    <fields>
+        <fullName>FieloPLT__RelatedSegments__c</fullName>
+        <deprecated>false</deprecated>
+        <description>It stores the different Segment IDs when assigning more than one Segment (Multisegment).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>It stores the different Segment IDs when assigning more than one Segment (Multisegment).</inlineHelpText>
+        <label>Related Segments</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <label>Segment</label>
     <listViews>
         <fullName>FieloPLT__All</fullName>
@@ -120,12 +152,12 @@
         <columns>FieloPLT__Description__c</columns>
         <columns>CREATED_DATE</columns>
         <columns>FieloPLT__Program__c</columns>
-        <columns>RECORDTYPE</columns>
         <filterScope>Everything</filterScope>
-        <label>All Segments</label>
+        <label>All</label>
+        <language>en_US</language>
     </listViews>
     <nameField>
-        <label>Segment Name</label>
+        <label>Name</label>
         <trackHistory>true</trackHistory>
         <type>Text</type>
     </nameField>
@@ -134,7 +166,7 @@
     <recordTypes>
         <fullName>FieloPLT__Dynamic</fullName>
         <active>true</active>
-        <description>It defines criteria so that Members are automatically assessed and thus connected to the proper Segment.</description>
+        <description>It defines Criteria so that Members are automatically assessed and thus connected to the proper Segment.</description>
         <label>Dynamic</label>
     </recordTypes>
     <recordTypes>
@@ -142,6 +174,12 @@
         <active>true</active>
         <description>Segment needs to be manually linked to the chosen Members.</description>
         <label>Manual</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>FieloPLT__Metasegment</fullName>
+        <active>true</active>
+        <description>Segment used to link two or more segments</description>
+        <label>Metasegment</label>
     </recordTypes>
     <recordTypes>
         <fullName>Private</fullName>
@@ -153,11 +191,7 @@
         <active>true</active>
         <label>Public</label>
     </recordTypes>
-    <searchLayouts>
-        <customTabListAdditionalFields>FieloPLT__IsActive__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
-        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
-    </searchLayouts>
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
         <fullName>FieloPLT__ModifyProgram</fullName>

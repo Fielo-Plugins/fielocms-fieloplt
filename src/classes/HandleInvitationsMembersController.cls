@@ -1,7 +1,7 @@
 global with sharing class HandleInvitationsMembersController implements FieloCMS.ViewSubComponentInterface {
 
-    public ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){   
-        Component.HandleInvitationsMembers handleInvitationsMembers = new Component.HandleInvitationsMembers();        
+    public ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){
+        Component.HandleInvitationsMembers handleInvitationsMembers = new Component.HandleInvitationsMembers();
         handleInvitationsMembers.field = field;
         if(record != null){
             handleInvitationsMembers.record = record;
@@ -81,12 +81,12 @@ global with sharing class HandleInvitationsMembersController implements FieloCMS
         //uow.commitWork();
     }
 
-    public static void cancelInvitations(Set<Id> memberIds){        
+    public static void cancelInvitations(Set<Id> memberIds){
         Boolean doCommit = false;
-        SObjectUnitOfWork uow = new SObjectUnitOfWork(new List<Schema.SobjectType>{FieloPLT__Member__c.SObjectType});                
-        for(FieloPLT__Member__c member : new MembersSelector( new Set<String>{'RecordType.DeveloperName', 'FieloPLT__OrganizationAccount__r.FieloPLT__IsBlocked__c'} ).selectById(memberIds)){
-            if(!member.FieloPLT__OrganizationAccount__r.FieloPLT__IsBlocked__c){
-                if(member.RecordType.DeveloperName != 'OrganizationContributor'){
+        SObjectUnitOfWork uow = new SObjectUnitOfWork(new List<Schema.SobjectType>{FieloPLT__Member__c.SObjectType});
+        for(FieloPLT__Member__c member : new MembersSelector( new Set<String>{'FieloPLT__OrganizationAccount__r.FieloPLT__Status__c','FieloPLT__Type__c'} ).selectById(memberIds)){
+            if(member.FieloPLT__OrganizationAccount__r.FieloPLT__Status__c == 'Active'){
+                if(member.FieloPLT__Type__c != 'OrganizationContributor'){
                     throw new FieloException(Label.ErrorOrganizationAccountAction);
                 } else {
                     if(member.FieloPLT__Status__c == 'New'){
@@ -101,6 +101,6 @@ global with sharing class HandleInvitationsMembersController implements FieloCMS
             }
         }
         if(doCommit)
-            uow.commitWork();            
+            uow.commitWork();
     }
 }

@@ -48,13 +48,14 @@
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
-    <description>Programs establish the general operations settings of your loyalty program.</description>
+    <description>Programs establish the general operation settings of your loyalty program.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
@@ -77,9 +78,9 @@
     <fields>
         <fullName>FieloPLT__ActualPointCost__c</fullName>
         <deprecated>false</deprecated>
-        <description>It translates Transaction Points into real cost.</description>
+        <description>It translates Transaction Points into real currency cost.</description>
         <externalId>false</externalId>
-        <inlineHelpText>It translates Transaction Points into real cost.</inlineHelpText>
+        <inlineHelpText>It translates Transaction Points into real currency cost.</inlineHelpText>
         <label>Actual Point Cost</label>
         <precision>12</precision>
         <required>false</required>
@@ -88,83 +89,20 @@
         <type>Currency</type>
     </fields>
     <fields>
-        <fullName>FieloPLT__AuditPoints__c</fullName>
-        <defaultValue>true</defaultValue>
+        <fullName>FieloPLT__CriteriaFields__c</fullName>
         <deprecated>false</deprecated>
-        <description>It specifies where Points used in a Redemption come from.</description>
         <externalId>false</externalId>
-        <inlineHelpText>When ticked, it specifies where Points used in a Redemption come from.</inlineHelpText>
-        <label>Audit Points</label>
+        <description>Internal field. It stores all "Field Name" fields used in the Criterion of Rules.</description>
+        <label>Criteria Fields</label>
+        <length>32768</length>
         <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__ExpirationMode__c</fullName>
-        <deprecated>false</deprecated>
-        <description>It allows you to choose the point expiration type.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Choose the point expiration type.</inlineHelpText>
-        <label>Expiration Mode</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Total</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Partial</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__ExpirationPeriod__c</fullName>
-        <deprecated>false</deprecated>
-        <description>It sets the active Points period in months for Total Expiration</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Set the active Points period.</inlineHelpText>
-        <label>Expiration Period</label>
-        <picklist>
-            <controllingField>FieloPLT__ExpirationMode__c</controllingField>
-            <picklistValues>
-                <fullName>3</fullName>
-                <default>true</default>
-                <controllingFieldValues>Total</controllingFieldValues>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6</fullName>
-                <default>false</default>
-                <controllingFieldValues>Total</controllingFieldValues>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9</fullName>
-                <default>false</default>
-                <controllingFieldValues>Total</controllingFieldValues>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__IsDefault__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <description>Checking this option makes this your default Program.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>When ticked, Program becomes your Default Program.</inlineHelpText>
-        <label>Default</label>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
     </fields>
     <fields>
         <fullName>FieloPLT__NumberOfVoucherDigits__c</fullName>
         <deprecated>false</deprecated>
-        <description>Number of digits displayed on the voucher.</description>
+        <description>Number of digits displayed on the voucher. Vouchers must include at least 4 digits.</description>
         <externalId>false</externalId>
         <inlineHelpText>Set the number of digits displayed on the voucher.</inlineHelpText>
         <label>Number of Voucher Digits</label>
@@ -179,37 +117,12 @@
         <fullName>FieloPLT__OnlineTransactionProcessing__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
-        <description>When ticked, Transactions are processed online when recorded. Otherwise, all transactions are processed offline once a day.</description>
+        <description>When ticked, Transactions and Trackers are processed online when recorded. Otherwise, all transactions and trackers are processed offline.</description>
         <externalId>false</externalId>
-        <inlineHelpText>When ticked, Transactions are processed online when recorded.</inlineHelpText>
-        <label>Online Transaction Processing</label>
+        <inlineHelpText>When ticked, Transactions and trackers are processed online when recorded.</inlineHelpText>
+        <label>Online Processing</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__PointsSpendingMode__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Way in which Points will be consumed by Redemptions or negative adjustment Transactions.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Choose Point spending mode</inlineHelpText>
-        <label>Points Spending Mode</label>
-        <picklist>
-            <controllingField>FieloPLT__ExpirationMode__c</controllingField>
-            <picklistValues>
-                <fullName>Expiration Date</fullName>
-                <default>false</default>
-                <controllingFieldValues>Partial</controllingFieldValues>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Created Date</fullName>
-                <default>false</default>
-                <controllingFieldValues>Partial</controllingFieldValues>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
     </fields>
     <fields>
         <fullName>FieloPLT__RequestMemberAuthorization__c</fullName>
@@ -234,13 +147,13 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloPLT__RequestTransactionAuthorization__c</fullName>
+        <fullName>FieloPLT__RequestUser__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
-        <description>When ticked, new Transactions need to be approved beforehand.</description>
+        <description>When ticked, Member status is &quot;Pending User&quot;. It is used when either an external or Fielo Site is used.</description>
         <externalId>false</externalId>
-        <inlineHelpText>When ticked, new Transactions need to be approved beforehand.</inlineHelpText>
-        <label>Request Transaction Authorization</label>
+        <inlineHelpText>When ticked, Member status is &quot;Pending User&quot; (used only when there is an external or Fielo Site).</inlineHelpText>
+        <label>Request User Authorization</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -252,18 +165,6 @@
         <inlineHelpText>Field that filters Rewards by means of conditions.</inlineHelpText>
         <label>Reward Inject Query</label>
         <length>1000</length>
-        <trackTrending>false</trackTrending>
-        <type>LongTextArea</type>
-        <visibleLines>3</visibleLines>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__SegmentCriteriaFields__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Segment field names grouped by Program.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Segment field names grouped by Program.</inlineHelpText>
-        <label>Segment Criteria Fields</label>
-        <length>32768</length>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>3</visibleLines>
@@ -292,17 +193,6 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__UseAgreement__c</fullName>
-        <defaultValue>true</defaultValue>
-        <deprecated>false</deprecated>
-        <description>Members need to accept the terms and conditions. This option is always checked by default.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>When checked, Members need to accept the terms and conditions to operate in the Site.</inlineHelpText>
-        <label>Use Agreement</label>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>FieloPLT__UserCreationClass__c</fullName>
@@ -377,6 +267,16 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>UseAgreement__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Members need to accept the terms and conditions. This option is always checked by default.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When checked, Members need to accept the terms and conditions to operate in the Site.</inlineHelpText>
+        <label>Use Agreement</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>VoucherInstructions__c</fullName>
         <description>Steps to redeem Vouchers.</description>
         <externalId>false</externalId>
@@ -388,49 +288,19 @@
         <visibleLines>3</visibleLines>
     </fields>
     <label>Program</label>
-    <listViews>
-        <fullName>FieloPLT__All</fullName>
-        <filterScope>Everything</filterScope>
-        <label>All</label>
-    </listViews>
     <nameField>
         <label>Program Name</label>
         <type>Text</type>
     </nameField>
     <pluralLabel>Programs</pluralLabel>
-    <searchLayouts>
-        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
-    </searchLayouts>
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
         <fullName>FieloPLT__ValidateNumerOfVoucherDigits</fullName>
         <active>true</active>
-        <description>Voucher must have more than 4 digits.</description>
+        <description>Voucher must include at least 4 digits.</description>
         <errorConditionFormula>FieloPLT__NumberOfVoucherDigits__c &lt; 4</errorConditionFormula>
         <errorDisplayField>FieloPLT__NumberOfVoucherDigits__c</errorDisplayField>
-        <errorMessage>Voucher must have more than 4 digits.</errorMessage>
+        <errorMessage>Voucher must include at least 4 digits.</errorMessage>
     </validationRules>
-    <webLinks>
-        <fullName>FieloPLT__BatchExecution</fullName>
-        <availability>online</availability>
-        <displayType>massActionButton</displayType>
-        <height>600</height>
-        <linkType>page</linkType>
-        <masterLabel>Batch Excution</masterLabel>
-        <openType>sidebar</openType>
-        <page>FieloPLT__BatchExecution</page>
-        <protected>false</protected>
-        <requireRowSelection>false</requireRowSelection>
-    </webLinks>
-    <webLinks>
-        <fullName>FieloPLT__BatchManagementDetail</fullName>
-        <availability>online</availability>
-        <displayType>button</displayType>
-        <encodingKey>UTF-8</encodingKey>
-        <linkType>url</linkType>
-        <masterLabel>Batch Management</masterLabel>
-        <openType>replace</openType>
-        <protected>false</protected>
-        <url>/apex/FieloPLT__BatchExecution</url>
-    </webLinks>
 </CustomObject>

@@ -47,8 +47,8 @@
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
+    <description>Points granted to Members as a result of performing a specific Action.</description>
     <deprecated>false</deprecated>
-    <description>Member&apos;s points.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableEnhancedLookup>false</enableEnhancedLookup>
@@ -58,164 +58,6 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <fields>
-        <fullName>FieloPLT__ActionDescription__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Related Transaction Name.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Related Transaction Name.</inlineHelpText>
-        <label>Action Description</label>
-        <length>255</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__Balance__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Point available balance.</description>
-        <externalId>false</externalId>
-        <formula>IF ( FieloPLT__TotalPoints__c &gt; 0 , FieloPLT__TotalPoints__c - FieloPLT__UsedPoints__c - 	FieloPLT__ExpiredPoints__c, 0 )</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <inlineHelpText>Point available balance.</inlineHelpText>
-        <label>Available</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__ExpirationDate__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Points expiration date. Date is automatically set when Point is generated.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Points expiration date. Date is automatically set when Point is generated.</inlineHelpText>
-        <label>Expiration Date</label>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Date</type>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__ExpiredPoints__c</fullName>
-        <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
-        <description>Points that have expired.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Expired Points.</inlineHelpText>
-        <label>Expired Points</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__MemberBalance__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Member&apos;s Point balance.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Member&apos;s Point balance.</inlineHelpText>
-        <label>Member Balance</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__Member__c</fullName>
-        <deleteConstraint>Restrict</deleteConstraint>
-        <deprecated>false</deprecated>
-        <description>Member who received the Points.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Member who received the Points.</inlineHelpText>
-        <label>Member</label>
-        <referenceTo>FieloPLT__Member__c</referenceTo>
-        <relationshipLabel>Points</relationshipLabel>
-        <relationshipName>Points</relationshipName>
-        <required>true</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__Redemption__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <description>Redemption that spent the Points.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Redemption that spent the Points.</inlineHelpText>
-        <label>Redemption</label>
-        <referenceTo>FieloPLT__Redemption__c</referenceTo>
-        <relationshipLabel>Points</relationshipLabel>
-        <relationshipName>Points</relationshipName>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__Rule__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <description>Rule that generated the Point.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Rule that generated the Point.</inlineHelpText>
-        <label>Rule</label>
-        <referenceTo>FieloPLT__Rule__c</referenceTo>
-        <relationshipLabel>Points</relationshipLabel>
-        <relationshipName>Points</relationshipName>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__TotalPoints__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Total generated Points.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Total generated Points.</inlineHelpText>
-        <label>Total Points</label>
-        <precision>15</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__Transaction__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <description>Transaction that generated the Points.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Transaction that generated the Points.</inlineHelpText>
-        <label>Transaction</label>
-        <referenceTo>FieloPLT__Transaction__c</referenceTo>
-        <relationshipLabel>Points</relationshipLabel>
-        <relationshipName>Points</relationshipName>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>FieloPLT__UsedPoints__c</fullName>
-        <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
-        <description>Points used in the Transaction.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Points used in the Transaction.</inlineHelpText>
-        <label>Used Points</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
     <label>Point</label>
     <nameField>
         <displayFormat>P-{0000000}</displayFormat>
@@ -223,9 +65,5 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Points</pluralLabel>
-    <searchLayouts>
-        <customTabListAdditionalFields>FieloPLT__TotalPoints__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>CREATED_DATE</customTabListAdditionalFields>
-    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

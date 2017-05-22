@@ -5,6 +5,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>AgreementsSelector</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>BadgeAPI</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -14,6 +18,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>BlockUnblockMemberController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ChangePasswordController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ChangePasswordControllerTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -38,6 +50,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>FieloException</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ForgotPasswordController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ForgotPasswordControllerTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -69,6 +89,14 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>MediaAPI</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MediaService</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>MemberAPI</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -78,6 +106,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>MembersSelector</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MyProfilePageController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MyProfilePageControllerTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -94,6 +130,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>OrganizationUtil</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>PostAPI</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>PostService</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -145,6 +189,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>Rewards</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>SObjectDescribe</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -173,7 +221,23 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>SiteLoginController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SiteLoginControllerTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>SiteLoginFieloController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SiteRegisterController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SiteRegisterControllerTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -289,7 +353,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>FieloCMS__Component__c.Account__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -520,6 +584,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>FieloCMS__Model__c.FieloCMS__Category__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>FieloCMS__Model__c.FieloCMS__Description__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -666,10 +735,10 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>FieloCMS__Site__c.FieloCMS__PluginCSS__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>FieloCMS__Site__c.FieloCMS__PluginJS__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -685,37 +754,47 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>FieloCMS__TagItem__c.FieloCMS__Media__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__TagItem__c.FieloCMS__Post__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__TagItem__c.Reward__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloPLT__Action__c.FieloPLT__Active__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>FieloPLT__Action__c.FieloPLT__CriteriaFields__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__Action__c.FieloPLT__IsActive__c</field>
+        <field>FieloPLT__Action__c.FieloPLT__MissionsQuantity__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__Action__c.FieloPLT__IsCrossField__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>FieloPLT__Action__c.FieloPLT__RelatedList__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>FieloPLT__Action__c.FieloPLT__RuleTrigger__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>FieloPLT__Action__c.FieloPLT__TargetMember__c</field>
+        <field>FieloPLT__Action__c.FieloPLT__RulesQuantity__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>FieloPLT__Action__c.FieloPLT__TargetObject__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloPLT__Action__c.FieloPLT__UniqueKey__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -760,12 +839,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>FieloPLT__Criterion__c.FieloPLT__CriterionGroup__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>FieloPLT__Criterion__c.FieloPLT__DateValue__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__Criterion__c.FieloPLT__FieldName__c</field>
+        <field>FieloPLT__Criterion__c.FieloPLT__Description__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -785,17 +869,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>FieloPLT__Criterion__c.FieloPLT__Mission__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>FieloPLT__Criterion__c.FieloPLT__Name__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>FieloPLT__Criterion__c.FieloPLT__NumberValue__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>FieloPLT__Criterion__c.FieloPLT__Operator__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -855,6 +939,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>FieloPLT__Event__c.FieloPLT__Value__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>FieloPLT__Level__c.FieloPLT__Description__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -870,6 +959,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>FieloPLT__Level__c.FieloPLT__LogicalExpression__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>FieloPLT__Level__c.FieloPLT__Order__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -881,7 +975,7 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>FieloPLT__MemberSegment__c.FieloPLT__MemberSegmentCombination__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -915,27 +1009,12 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloPLT__Member__c.FieloPLT__IsBlocked__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>FieloPLT__Member__c.FieloPLT__IsManager__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>FieloPLT__Member__c.FieloPLT__LastTransactionDate__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>FieloPLT__Member__c.FieloPLT__Level__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>FieloPLT__Member__c.FieloPLT__MemberId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1005,6 +1084,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>FieloPLT__Point__c.FieloPLT__Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>FieloPLT__Point__c.FieloPLT__TotalPoints__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1035,8 +1119,28 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__Program__c.CustomVoucherCss__c</field>
+        <field>FieloPLT__ProgramPointType__c.FieloPLT__AuditPoints__c</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloPLT__ProgramPointType__c.FieloPLT__ExpirationMode__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloPLT__ProgramPointType__c.FieloPLT__RequestPointApproval__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloPLT__ProgramPointType__c.FieloPLT__UniqueKey__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloPLT__Program__c.CustomVoucherCss__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -1045,22 +1149,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__Program__c.FieloPLT__AuditPoints__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>FieloPLT__Program__c.FieloPLT__ExpirationMode__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>FieloPLT__Program__c.FieloPLT__ExpirationPeriod__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>FieloPLT__Program__c.FieloPLT__IsDefault__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__CriteriaFields__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1075,11 +1164,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__Program__c.FieloPLT__PointsSpendingMode__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>FieloPLT__Program__c.FieloPLT__RequestMemberAuthorization__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1090,17 +1174,12 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__Program__c.FieloPLT__RequestTransactionAuthorization__c</field>
+        <field>FieloPLT__Program__c.FieloPLT__RequestUser__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>FieloPLT__Program__c.FieloPLT__RewardInjectQuery__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>FieloPLT__Program__c.FieloPLT__SegmentCriteriaFields__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1111,11 +1190,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>FieloPLT__Program__c.FieloPLT__SiteUserProfile__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>FieloPLT__Program__c.FieloPLT__UseAgreement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1131,12 +1205,12 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>FieloPLT__Program__c.RewardInstructions__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>FieloPLT__Program__c.ShowVoucherCode__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -1150,8 +1224,13 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>FieloPLT__Program__c.UseAgreement__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>FieloPLT__Program__c.VoucherInstructions__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -1161,6 +1240,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>FieloPLT__Promotion__c.FieloPLT__EndDate__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloPLT__Promotion__c.FieloPLT__Period__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1245,6 +1329,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>FieloPLT__RedemptionItem__c.FieloPLT__UnitCost__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>FieloPLT__RedemptionItem__c.VoucherLink__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1275,33 +1364,33 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__Redemption__c.FieloPLT__TotalItems__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>FieloPLT__Redemption__c.FieloPLT__Transaction__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>FieloPLT__RewardItem__c.FieloPLT__Code__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>FieloPLT__RewardItem__c.FieloPLT__Quantity__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>FieloPLT__RewardItem__c.FieloPLT__RedemptionItem__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>FieloPLT__RewardItem__c.FieloPLT__Status__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__RewardItem__c.FieloPLT__Status__c</field>
-        <readable>false</readable>
+        <field>FieloPLT__Reward__c.Category__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -1320,12 +1409,12 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__Reward__c.FieloPLT__Image__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__ExternalURL__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__Reward__c.FieloPLT__Instructions__c</field>
+        <field>FieloPLT__Reward__c.FieloPLT__Image__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1345,17 +1434,12 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>FieloPLT__Reward__c.FieloPLT__Provider__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>FieloPLT__Reward__c.FieloPLT__Segment__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>FieloPLT__Reward__c.FieloPLT__Status__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>FieloPLT__Reward__c.FieloPLT__StockManagement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1376,11 +1460,16 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>FieloPLT__Reward__c.InstructionsRichText__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>FieloPLT__RuleTrigger__c.FieloPLT__ConditionField__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloPLT__RuleTrigger__c.FieloPLT__ConditionType__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1395,12 +1484,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__RuleTrigger__c.FieloPLT__DynamicTargetMember__c</field>
+        <field>FieloPLT__RuleTrigger__c.FieloPLT__Library__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__RuleTrigger__c.FieloPLT__Object__c</field>
+        <field>FieloPLT__RuleTrigger__c.FieloPLT__LookupFromTransaction__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloPLT__RuleTrigger__c.FieloPLT__LookupfromTracker__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1410,12 +1504,12 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__Rule__c.FieloPLT__ActionDescription__c</field>
+        <field>FieloPLT__RuleTrigger__c.FieloPLT__UniqueKey__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__Rule__c.FieloPLT__Action__c</field>
+        <field>FieloPLT__Rule__c.FieloPLT__ActionDescription__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1450,11 +1544,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__Rule__c.FieloPLT__IsActive__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>FieloPLT__Rule__c.FieloPLT__LogicalExpression__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1465,7 +1554,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__Rule__c.FieloPLT__Promotion__c</field>
+        <field>FieloPLT__Rule__c.FieloPLT__PointConversionMode__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloPLT__Rule__c.FieloPLT__PointType__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloPLT__Rule__c.FieloPLT__RecordFieldName__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1490,38 +1589,28 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__Rule__c.FieloPLT__TargetMember__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>FieloPLT__Rule__c.FieloPLT__TransactionConversionMode__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>FieloPLT__Rule__c.FieloPLT__TransactionFieldName__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>FieloPLT__Rule__c.FieloPLT__Type__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>FieloPLT__Segment__c.FieloPLT__Description__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>FieloPLT__Segment__c.FieloPLT__IsActive__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloPLT__Segment__c.FieloPLT__LogicalExpression__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>FieloPLT__Segment__c.FieloPLT__Program__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloPLT__Segment__c.FieloPLT__RelatedSegments__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -1540,11 +1629,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__Transaction__c.FieloPLT__IsApproved__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>FieloPLT__Transaction__c.FieloPLT__IsOffline__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1556,11 +1640,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>FieloPLT__Transaction__c.FieloPLT__IsReverted__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>FieloPLT__Transaction__c.FieloPLT__Member__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1590,7 +1669,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__Transaction__c.FieloPLT__Status__c</field>
+        <field>FieloPLT__Transaction__c.FieloPLT__Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1598,6 +1677,168 @@
         <field>FieloPLT__Transaction__c.FieloPLT__Value__c</field>
         <readable>true</readable>
     </fieldPermissions>
+        <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Category__c.FieloCMS__Order__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Category__c.FieloCMS__Category__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Category__c.FieloCMS__Items__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Category__c.FieloCMS__URL__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Category__c.FieloCMS__DocumentId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+        <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Media__c.FieloCMS__URL__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Media__c.FieloCMS__ExternalURL__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Media__c.FieloCMS__AlternativeText__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Media__c.FieloCMS__Category__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Media__c.FieloCMS__Height__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Media__c.FieloCMS__Width__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Media__c.FieloCMS__DocumentId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Media__c.Segment__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Media__c.FieloCMS__Caption__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+        <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Post__c.Segment__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Post__c.FieloCMS__Content__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Post__c.FieloCMS__Category__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Post__c.FieloCMS__StartDate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Post__c.FieloCMS__Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Post__c.FieloCMS__Featured__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Post__c.FieloCMS__EndDate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Post__c.FieloCMS__Excerpt__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+        <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Tag__c.FieloCMS__Order__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Tag__c.FieloCMS__DocumentId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Tag__c.FieloCMS__Objects__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Tag__c.FieloCMS__Items__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FieloCMS__Tag__c.FieloCMS__URL__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>FieloCMS__Tag__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>FieloCMS__Post__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>FieloCMS__Media__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
     <objectPermissions>
         <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>
@@ -1671,6 +1912,15 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>FieloPLT__MemberSegment__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>false</allowDelete>
         <allowEdit>true</allowEdit>
@@ -1682,7 +1932,7 @@
     <objectPermissions>
         <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>
-        <allowEdit>false</allowEdit>
+        <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
         <object>FieloPLT__Point__c</object>
@@ -1716,6 +1966,15 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>FieloPLT__RewardItem__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>
         <allowEdit>true</allowEdit>
@@ -1725,7 +1984,16 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
-        <allowCreate>true</allowCreate>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>FieloPLT__Segment__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>
         <allowEdit>false</allowEdit>
         <allowRead>true</allowRead>
@@ -1733,10 +2001,15 @@
         <object>FieloPLT__Transaction__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
-    <pageAccesses>
-        <apexPage>AgreementAccept</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>FieloCMS__Category__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
     <pageAccesses>
         <apexPage>AnswersHome</apexPage>
         <enabled>false</enabled>
@@ -1888,21 +2161,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <recordType>FieloPLT__Member__c.FieloPLT__IndividualAccount</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>FieloPLT__Member__c.FieloPLT__OrganizationAccount</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>FieloPLT__Member__c.FieloPLT__OrganizationContributor</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>true</default>
         <recordType>FieloPLT__Segment__c.FieloPLT__Dynamic</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -1913,7 +2171,17 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
+        <recordType>FieloPLT__Segment__c.FieloPLT__Metasegment</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
         <recordType>FieloPLT__Segment__c.Private</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>FieloPLT__Segment__c.Public</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
     <userLicense>Authenticated Website</userLicense>
@@ -1923,14 +2191,14 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ChatterOwnGroups</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>EnableNotifications</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
         <name>SelectFilesFromSalesforce</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ShowCompanyNameAsUserBadge</name>
     </userPermissions>
 </Profile>
