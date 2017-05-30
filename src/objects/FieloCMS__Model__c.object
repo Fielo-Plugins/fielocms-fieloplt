@@ -160,7 +160,6 @@
         <type>LongTextArea</type>
         <visibleLines>20</visibleLines>
     </fields>
-    <gender>Feminine</gender>
     <label>Model</label>
     <nameField>
         <label>Name</label>
