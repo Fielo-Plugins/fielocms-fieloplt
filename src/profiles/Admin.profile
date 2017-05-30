@@ -584,11 +584,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloCMS__Model__c.FieloCMS__Category__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>FieloCMS__Model__c.FieloCMS__Description__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -600,11 +595,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>FieloCMS__Model__c.FieloCMS__Plugin__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>FieloCMS__Model__c.FieloCMS__Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
