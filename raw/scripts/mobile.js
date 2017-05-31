@@ -412,6 +412,196 @@ function FieloPLTcheckDeleteCookie(result, event){
 
   /**
    * @description Constructor for the login form
+   * FieloPLTRegister Implements design patterns defined by MDL at
+   * {@link https://github.com/jasonmayes/mdl-component-design-pattern}
+   *
+   * @version 1
+   * @author Nicolas Alejandro Soberon <nicolas.soberon@fielo.com>
+   * @param {HTMLElement} element - Element to be upgraded
+   * @constructor
+   */
+  var FieloPLTRegister = function FieloPLTRegister(element) {
+    this.element_ = element;
+
+    // Initialize instance.
+    this.init();
+  };
+
+  window.FieloPLTRegister = FieloPLTRegister;
+
+  // Properties
+
+  /**
+   * Css name classes
+   *
+   * @enum {string}
+   * @private
+   */
+  FieloPLTRegister.prototype.CssClasses_ = {
+    SUBMIT: 'fielo-button__submit'
+  };
+
+  // Private methods
+
+  /**
+   * Set Defaults settings
+   *
+   * @private
+   */
+  FieloPLTRegister.prototype.setDefaults_ = function() {
+    this.submit_ =
+      this.element_.getElementsByClassName(this.CssClasses_.SUBMIT)[0];    
+  };
+
+  /**
+   * Sets listeners
+   *
+   * @private
+   */
+  FieloPLTRegister.prototype.addEventListeners_ = function() {
+    this.submit_.addEventListener('click', this.submitClickHandler_.bind(this));
+  };
+
+  /**
+   * Even handler for the save button
+   *
+   * @private
+   */
+  FieloPLTRegister.prototype.submitClickHandler_ = function(event) {
+    fieloUtils.setCookie("apex__shoppingCart", "", -1);          
+  };
+
+  // Public methods
+
+  /**
+   * Inicializa el elemento
+   */
+  FieloPLTRegister.prototype.init = function() {
+    if (this.element_) {
+      this.setDefaults_();
+      this.addEventListeners_();
+    }
+  };
+
+  // El componente se registra por si solo.
+  // Asume que el componentHandler esta habilitado en el scope global
+  componentHandler.register({
+    constructor: FieloPLTRegister,
+    classAsString: 'FieloPLTRegister',
+    cssClass: 'fieloplt-register',
+    widget: true
+  });
+})();
+
+
+(function() {
+  'use strict';
+
+  /**
+   * @description Constructor for the login form
+   * FieloPLTRegisterS2 Implements design patterns defined by MDL at
+   * {@link https://github.com/jasonmayes/mdl-component-design-pattern}
+   *
+   * @version 1
+   * @author Nicolas Alejandro Soberon <nicolas.soberon@fielo.com>
+   * @param {HTMLElement} element - Element to be upgraded
+   * @constructor
+   */
+  var FieloPLTRegisterS2 = function FieloPLTRegisterS2(element) {
+    this.element_ = element;
+
+    // Initialize instance.
+    this.init();
+  };
+
+  window.FieloPLTRegisterS2 = FieloPLTRegisterS2;
+
+  // Properties
+
+  /**
+   * Css name classes
+   *
+   * @enum {string}
+   * @private
+   */
+  FieloPLTRegisterS2.prototype.CssClasses_ = {
+    SUBMIT: 'fielo-register-step-2__submit',
+    PASSWORD: 'password',
+    CONFIRM_PASSWORD: 'confirmPassword',
+    TYPE_ERROR: 'ERROR'
+  };
+
+  // Private methods
+
+  /**
+   * Set Defaults settings
+   *
+   * @private
+   */
+  FieloPLTRegisterS2.prototype.setDefaults_ = function() {
+    this.submit_ =
+      this.element_.getElementsByClassName(this.CssClasses_.SUBMIT)[0];
+    this.password_ =
+      this.element_.getElementsByClassName(this.CssClasses_.PASSWORD)[0];
+    this.confirmPassword_ =
+      this.element_.getElementsByClassName(this.CssClasses_.CONFIRM_PASSWORD)[0];
+    this.errorMsg_ = 'Password does not match confirmation';
+  };
+
+  /**
+   * Sets listeners
+   *
+   * @private
+   */
+  FieloPLTRegisterS2.prototype.addEventListeners_ = function() {
+    this.submit_.addEventListener('click', this.submitClickHandler_.bind(this));
+  };
+
+  /**
+   * Even handler for the save button
+   *
+   * @private
+   */
+  FieloPLTRegisterS2.prototype.submitClickHandler_ = function(event) {
+    if (this.password_.value !== this.confirmPassword_.value) {
+      event.preventDefault();
+      fieloUtils.message.FieloMessage.clear();
+      fieloUtils.message.FieloMessage.setType(this.CssClasses_.TYPE_ERROR);
+      fieloUtils.message.FieloMessage.addMessages(this.errorMsg_);
+      fieloUtils.message.FieloMessage.show();
+    } else{
+      fieloUtils.setCookie("apex__shoppingCart", "", -1);      
+    }
+  };
+
+  // Public methods
+
+  /**
+   * Inicializa el elemento
+   */
+  FieloPLTRegisterS2.prototype.init = function() {
+    if (this.element_) {
+      this.setDefaults_();
+      this.addEventListeners_();
+    }
+  };
+
+  // El componente se registra por si solo.
+  // Asume que el componentHandler esta habilitado en el scope global
+  componentHandler.register({
+    constructor: FieloPLTRegisterS2,
+    classAsString: 'FieloPLTRegisterS2',
+    cssClass: 'fieloplt-register-step-2',
+    widget: true
+  });
+})();
+
+
+(function() {
+  'use strict';
+
+  /**
+   * @description Constructor for the login form
    * FieloAgreement Implements design patterns defined by MDL at
    * {@link https://github.com/jasonmayes/mdl-component-design-pattern}
    *
