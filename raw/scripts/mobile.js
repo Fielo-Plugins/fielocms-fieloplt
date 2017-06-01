@@ -648,6 +648,7 @@ function FieloPLTcheckDeleteCookie(result, event){
     this.submit_.classList.remove(this.CssClasses_.HIDE);
     this.agree_ =
       this.element_.getElementsByClassName(this.CssClasses_.AGREE)[0];
+    fieloUtils.getParentUntil(this.element_, '.mdl-cell').style.zIndex = '99999';
   };
 
   FieloAgreement.prototype.addEventListeners_ = function() {
