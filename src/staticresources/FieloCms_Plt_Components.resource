@@ -1,7 +1,7 @@
 {
   "plugins" : [ {
     "Name" : "PlatformPlugin",
-    "FieloCMS__Version__c" : 0.930,
+    "FieloCMS__Version__c" : 0.931,
     "components" : [ {
       "recordTypeName" : "Record",
       "Name" : "Redemption Detail",
@@ -135,7 +135,7 @@
       "FieloCMS__ControlClass__c" : "FieloCMS.StandardAPI",
       "FieloCMS__DataClass__c" : "FieloCMS.StandardAPI",
       "FieloCMS__Icon__c" : "fa-shopping-cart",
-      "FieloCMS__RecordType__c" : "Record",
+      "FieloCMS__RecordType__c" : "Widget",
       "FieloCMS__Layouts__c" : "Edit",
       "FieloCMS__ViewClass__c" : "RedemptionAPI",
       "FieloCMS__Visibility__c" : "Private",
