@@ -32,7 +32,7 @@
             </apex:panelGroup>
         </apex:panelGroup>
         <apex:panelGroup layout="none" rendered="{!(status == 'Ok' || status == 'User exist')}">
-            <form class="fielo-js-upgrade" data-remoteaction="{!namespace}RegisterStep2Controller.finishRegistration" data-remotearguments="SObject,password" data-remoteobject="Member__c" >
+            <form class="fielo-js-upgrade register-step-2-form" data-remoteaction="{!namespace}RegisterStep2Controller.finishRegistration" data-remotearguments="SObject,password" data-remoteobject="Member__c" >
                 <fieldset>
                     <input type="hidden" name="SObject.id" value="{!member.Id}" />
                     <apex:repeat value="{!$ObjectType.FieloPLT__Member__c.FieldSets.RegistrationStep2}" var="field" >
@@ -51,7 +51,7 @@
                                 <label for="password" >{!$Label.Password}</label>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__value">
-                                <input class="fielo-input" type="password" required="required"  autocomplete="current-password" id="showPassword" name="password"  />
+                                <input class="fielo-input password" type="password" required="required"  autocomplete="current-password" id="showPassword" name="password"  />
                             </div>
                         </div>
                         <div class="mdl-grid fielo-field fielo-field--is-confirmpassword">
@@ -59,14 +59,14 @@
                                 <label for="confirmpassword" >{!$Label.PasswordConfirm}</label>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__value">
-                                <input class="fielo-input" type="password" required="required"  autocomplete="current-password" />
+                                <input class="fielo-input confirmPassword" type="password" required="required"  autocomplete="current-password" />
                             </div>
                         </div>
                     </apex:panelGroup>
                 </fieldset>
                 <div class="fielo-controls" >
                     <button type="button" class="fielo-button fielo-button__cancel hidden" >{!$Label.cancel}</button>
-                    <button type="submit" class="fielo-button fielo-button__submit" >{!$Label.submit}</button>
+                    <button type="submit" class="fielo-button fielo-button__submit fielo-register-step-2__submit" >{!$Label.submit}</button>
                 </div>
             </form>
         </apex:panelGroup>
