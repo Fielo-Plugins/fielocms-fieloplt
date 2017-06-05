@@ -16,4 +16,15 @@ public class OrganizationUtil {
         }
         return fields;
     }
+
+    public static Boolean testPersonAccountEnabled = false;
+    public static Boolean isPersonAccountEnabled(){
+        if(System.Test.isRunningTest()){
+            return testPersonAccountEnabled;
+        }
+        Map<String, Schema.SObjectField> M = Schema.SObjectType.Account.fields.getMap();
+        //Boolean flag to detect person account enabled or not
+        Boolean isPersonAccountEnabled = M.containsKey('IsPersonAccount');
+        return isPersonAccountEnabled;
+    }
 }

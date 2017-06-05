@@ -18,42 +18,44 @@ public class Plugins extends SObjectDomain {
 	}
 
 	public override void onBeforeInsert(){
-		Boolean loadCSSJS = false;
-		List<StaticResource> resourceList = [SELECT Name, NamespacePrefix, SystemModStamp FROM StaticResource WHERE Name = 'FieloCms_Plt_Components'];
-		Id cmspltSR;
-		if(!resourceList.isEmpty()){
-			cmspltSR = resourceList.get(0).Id;
+		loadCSSJS();
+	}
+
+	public override void onBeforeUpdate(Map<Id,SObject> existingrecords){
+		loadCSSJS();
+	}
+
+	//for every site, put the CSS and JS information taking into account the static resources
+	private static void loadCSSJS(){
+		//query all static resources whose name starts with FieloPlugin_
+		List<StaticResource> resourceList = [SELECT Name, NamespacePrefix, SystemModStamp FROM StaticResource WHERE Name Like 'FieloPlugin_%'];
+
+		List<FieloCMS__Site__c> sites = new SitesSelector(new Set<String>{'Id'}).selectAll();
+		//limpio
+		for(FieloCMS__Site__c site : sites){
+			site.FieloCMS__PluginCSS__c = '';
+			site.FieloCMS__PluginJS__c = '';
 		}
-		for(FieloCMS__Plugin__c record : (List<FieloCMS__Plugin__c>) records){
-			if(record.FieloCMS__ResourceId__c == cmspltSR){
-				loadCSSJS = true;
-				break;
+
+		for(FieloCMS__Site__c site : sites){
+			for(StaticResource sr : resourceList){
+				String urlSR = getResourceURL(sr);
+				site.FieloCMS__PluginCSS__c += urlSR + '\n';
+				site.FieloCMS__PluginJS__c += urlSR + '\n';		
 			}
 		}
-
-		String urlSR = getResourceURL(resourceList, 'FieloCms_Plt_Components');
-		List<FieloCMS__Site__c> sites = new SitesSelector(new Set<String>{'Id'}).selectAll();
-		for(FieloCMS__Site__c site : sites){
-			site.FieloCMS__PluginCSS__c = urlSR;
-			site.FieloCMS__PluginJS__c = urlSR;
-		}
-
 		SObjectUnitOfWork uow = new SObjectUnitOfWork(new List<Schema.SobjectType>{FieloCMS__Site__c.SObjectType});
 		uow.registerDirty(sites);
 		uow.commitWork();
 	}
 
 	// Pass the resource name
-	public static String getResourceURL(List<StaticResource> resourceList, String resourceName){
+	public static String getResourceURL(StaticResource resource){
 
-            // Checking if the result is returned or not
-		if(resourceList.size() == 1){
-			// Getting namespace
-			String namespace = resourceList[0].NamespacePrefix;
-			// Resource URL
-			return '/resource/' + resourceList[0].SystemModStamp.getTime() + '/' + (namespace != null && namespace != '' ? namespace + '__' : '') + resourceName; 
-            }
-            else return '';
+		// Getting namespace
+		String namespace = resource.NamespacePrefix;
+		// Resource URL
+		return '/resource/' + resource.SystemModStamp.getTime() + '/' + (String.isNotBlank(namespace) ? namespace + '__' : '') + resource.Name; 
 	}
 
 	public class Constructor implements SObjectDomain.IConstructable{
