@@ -102,19 +102,6 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>FieloPLT__LogicalExpression__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Logical expressions which can be applied to Segment Criteria. The expressions available are: &quot;All&quot; (it meets all the established criteria); &quot;Any&quot; (it meets at least one established Criterion) and &quot;Custom&quot; (it enables creating a formula based on the established criteria. E.g. ((1 AND 2) OR 3).).</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Enter a custom formula (e.g. 1 or 2, and 3) based on the Criteria established above.</inlineHelpText>
-        <label>Match Criteria</label>
-        <length>1000</length>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>LongTextArea</type>
-        <visibleLines>2</visibleLines>
-    </fields>
-    <fields>
         <fullName>FieloPLT__Program__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>

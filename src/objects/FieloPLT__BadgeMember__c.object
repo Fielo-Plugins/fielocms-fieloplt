@@ -58,10 +58,6 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <label>Badge Member</label>
-    <nameField>
-        <label>Badge Member Name</label>
-        <type>Text</type>
-    </nameField>
     <pluralLabel>Badges Members</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
