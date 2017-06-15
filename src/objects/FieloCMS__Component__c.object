@@ -9,24 +9,29 @@ Default Account: The member will be related to an specific default CRM account</
         <externalId>false</externalId>
         <inlineHelpText>Select the behavior about the CRM account for the registration when the contact doesn&apos;t exist or the contact doesn&apos;t have a related CRM account</inlineHelpText>
         <label>Account CRM Mode</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Person Account</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Standard Account</fullName>
-                <default>true</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Defined Account</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Person Account</fullName>
+                    <default>false</default>
+                    <label>Person Account</label>
+                </value>
+                <value>
+                    <fullName>Standard Account</fullName>
+                    <default>true</default>
+                    <label>Standard Account</label>
+                </value>
+                <value>
+                    <fullName>Defined Account</fullName>
+                    <default>false</default>
+                    <label>Defined Account</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>AccountOwner__c</fullName>
