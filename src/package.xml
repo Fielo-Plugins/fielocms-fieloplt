@@ -25,6 +25,13 @@
 		<name>CustomLabels</name>
 	</types>
 	<types>
+		<members>FieloPLT__RedemptionItem__c.Voucher</members>
+		<members>FieloPLT__Member__c.RegistrationStep2</members>
+		<members>FieloPLT__Segment__c.SegmentsSelection</members>
+		<members>FieloPLT__Reward__c.ShoppingCart</members>
+		<name>FieldSet</name>
+	</types>
+	<types>
 		<members>FieloCMS__Component__c.AccountCRMMode__c</members>
 		<members>FieloCMS__Component__c.AccountOwner__c</members>
 		<members>FieloCMS__Component__c.Account__c</members>
