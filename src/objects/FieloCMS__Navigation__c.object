@@ -2,12 +2,16 @@
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
         <fullName>Segment__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
         <description>It allows filtering Navigation elements depending on Member Segments.</description>
+        <externalId>false</externalId>
         <inlineHelpText>Choose a Segment to apply to a Navigation element.</inlineHelpText>
         <label>Segment</label>
         <referenceTo>FieloPLT__Segment__c</referenceTo>
         <relationshipLabel>Navigations</relationshipLabel>
         <relationshipName>Navigations</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
 </CustomObject>

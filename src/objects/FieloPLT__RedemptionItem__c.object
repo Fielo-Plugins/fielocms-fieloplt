@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <fieldSets>
+        <fullName>Voucher</fullName>
+        <description>In the Voucher page</description>
+        <displayedFields>
+            <field>FieloPLT__Reward__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FieloPLT__UniqueCode__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CreatedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FieloPLT__ExpirationDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FieloPLT__Points__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FieloPLT__Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Voucher</label>
+    </fieldSets>
     <fields>
         <fullName>VoucherLink__c</fullName>
+        <externalId>false</externalId>
         <formula>IF(
 ISPICKVAL( FieloPLT__Status__c ,&apos;Ready&apos; ) ,
 HYPERLINK( &apos;./apex/RedemptionItemVoucher?voucherId=&apos; + Id, $Label.Voucher ),
@@ -9,6 +46,9 @@ HYPERLINK( &apos;./apex/RedemptionItemVoucher?voucherId=&apos; + Id, $Label.Vouc
 )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Voucher Link</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
         <type>Text</type>
+        <unique>false</unique>
     </fields>
 </CustomObject>

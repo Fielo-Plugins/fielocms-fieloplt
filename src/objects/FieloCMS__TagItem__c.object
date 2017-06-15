@@ -2,12 +2,16 @@
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
         <fullName>Reward__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
         <description>It relates a Tag with a specific Reward.</description>
+        <externalId>false</externalId>
         <inlineHelpText>Choose a Tag to apply to the Reward.</inlineHelpText>
         <label>Reward</label>
         <referenceTo>FieloPLT__Reward__c</referenceTo>
         <relationshipLabel>Tag Items</relationshipLabel>
         <relationshipName>TagItems</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
 </CustomObject>

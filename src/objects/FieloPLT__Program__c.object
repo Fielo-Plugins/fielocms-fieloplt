@@ -1,37 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableEnhancedLookup>false</enableEnhancedLookup>
     <fields>
         <fullName>CustomVoucherCss__c</fullName>
         <description>CSS code to be applied to customized vouchers.</description>
+        <externalId>false</externalId>
         <inlineHelpText>Enter the CSS code to be applied to customized vouchers.</inlineHelpText>
         <label>Custom Voucher CSS</label>
         <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
         <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>MemberSelectionPage__c</fullName>
         <description>Provide the name of the Visualforce Page where the User has to be redirected in order to select which Member is going to use.</description>
+        <externalId>false</externalId>
         <inlineHelpText>Provide the name of the Visualforce Page where the User has to be redirected in order to select which Member is going to use.</inlineHelpText>
         <label>Member Selection Page</label>
         <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
         <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>RegisterStep2Page__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
         <description>Page where the Register Step 2 Component redirects to when checking out.</description>
+        <externalId>false</externalId>
         <inlineHelpText>Choose the Page where the Register Step 2 Component redirects to when finishing the registration process.</inlineHelpText>
         <label>Register Step 2 Page</label>
         <referenceTo>FieloCMS__Page__c</referenceTo>
         <relationshipLabel>Programs</relationshipLabel>
         <relationshipName>Programs</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>RewardInstructions__c</fullName>
         <description>Detailed steps to obtain the Reward voucher.</description>
+        <externalId>false</externalId>
         <inlineHelpText>Enter the detailed steps to obtain the Reward voucher.</inlineHelpText>
         <label>Reward Instructions</label>
         <length>32768</length>
+        <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>3</visibleLines>
     </fields>
@@ -39,40 +54,54 @@
         <fullName>ShowVoucherCode__c</fullName>
         <defaultValue>true</defaultValue>
         <description>When ticked, a code is shown in the Voucher.</description>
+        <externalId>false</externalId>
         <inlineHelpText>When ticked, a code is shown in the Voucher.</inlineHelpText>
         <label>Show Voucher Code</label>
+        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>SiteDomain__c</fullName>
         <description>Salesforce Site domain to relate the URL with the Program.</description>
+        <externalId>false</externalId>
         <inlineHelpText>Enter the Salesforce Site domain to relate the URL with the Program.</inlineHelpText>
         <label>Site Domain</label>
         <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
         <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>SiteURL__c</fullName>
         <description>Site URL which Members enter to complete their registration process.</description>
+        <externalId>false</externalId>
         <inlineHelpText>Enter Site URL for Members to complete their registration process.</inlineHelpText>
         <label>Site URL</label>
         <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
         <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>UseAgreement__c</fullName>
         <defaultValue>false</defaultValue>
         <description>Members need to accept the terms and conditions. This option is always checked by default.</description>
+        <externalId>false</externalId>
         <inlineHelpText>When checked, Members need to accept the terms and conditions to operate in the Site.</inlineHelpText>
         <label>Use Agreement</label>
+        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>VoucherInstructions__c</fullName>
         <description>Steps to redeem Vouchers.</description>
+        <externalId>false</externalId>
         <inlineHelpText>Enter the steps to redeem Voucher.</inlineHelpText>
         <label>Voucher Instructions</label>
         <length>32768</length>
+        <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>3</visibleLines>
     </fields>
