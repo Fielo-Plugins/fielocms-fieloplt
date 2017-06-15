@@ -257,11 +257,11 @@
         <enabled>true</enabled>
     </classAccesses>
     <custom>false</custom>
-    <fieldPermissions>
+    <!--<fieldPermissions>
         <editable>true</editable>
         <field>FieloCMS__ComponentLibrary__c.FieloCMS__AdditionalFields__c</field>
         <readable>true</readable>
-    </fieldPermissions>
+    </fieldPermissions>-->
     <fieldPermissions>
         <editable>true</editable>
         <field>FieloCMS__ComponentLibrary__c.FieloCMS__ControlClass__c</field>
