@@ -25,7 +25,6 @@
 		<name>CustomLabels</name>
 	</types>
 	<types>
-		<members>FieloCMS__ComponentLibrary__c.FieloCMS__AdditionalFields__c</members>
 		<members>FieloCMS__Component__c.AccountCRMMode__c</members>
 		<members>FieloCMS__Component__c.AccountOwner__c</members>
 		<members>FieloCMS__Component__c.Account__c</members>
@@ -50,8 +49,8 @@
 		<members>FieloPLT__Reward__c.InstructionsRichText__c</members>
 		<name>CustomField</name>
 	</types>
-	<!--<types>
-		<members>FieloCMS__ComponentLibrary__c</members>
+	<<types>
+		<!--<members>FieloCMS__ComponentLibrary__c</members>
 		<members>FieloCMS__Component__c</members>
 		<members>FieloCMS__Layout__c</members>
 		<members>FieloCMS__Model__c</members>
@@ -94,10 +93,10 @@
 		<members>FieloPLT__Segment__c</members>
 		<members>FieloPLT__Settings__c</members>
 		<members>FieloPLT__Transaction__c</members>
-		<members>FieloPLT__Triggers__c</members>
+		<members>FieloPLT__Triggers__c</members>-->
 		<members>SessionCache__c</members>
 		<name>CustomObject</name>
-	</types>-->
+	</types>
 	<types>
 		<members>*</members>
 		<name>Document</name>
