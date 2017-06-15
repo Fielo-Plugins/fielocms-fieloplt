@@ -376,10 +376,6 @@
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
-        <apexPage>SiteRegisterConfirm</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
         <apexPage>SiteTemplate</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
