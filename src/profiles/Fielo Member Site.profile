@@ -375,5 +375,5 @@
         <apexPage>SegmentSelection</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
-    <userLicense>High Volume Customer Portal</userLicense>
+    <userLicense>Authenticated Website</userLicense>
 </Profile>
