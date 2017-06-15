@@ -400,10 +400,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <pageAccesses>
-        <apexPage>AnswersHome</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
         <apexPage>BandwidthExceeded</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
@@ -413,10 +409,6 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>ChangePasswordFielo</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>Exception</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>

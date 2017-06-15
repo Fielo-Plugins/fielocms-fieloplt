@@ -399,16 +399,8 @@
         <field>FieloPLT__Reward__c.InstructionsRichText__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    <loginIpRanges>
-        <endAddress>255.255.255.0</endAddress>
-        <startAddress>1.1.1.0</startAddress>
-    </loginIpRanges>
     <pageAccesses>
         <apexPage>ChangePasswordFielo</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>Exception</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
