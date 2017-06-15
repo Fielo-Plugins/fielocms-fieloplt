@@ -5,7 +5,7 @@
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <fields>
-        <fullName>CurrentProgramId__c</fullName>
+        <fullName>FieloPLT__CurrentProgramId__c</fullName>
         <deprecated>false</deprecated>
         <description>ID of current Program when working from backend.</description>
         <externalId>false</externalId>

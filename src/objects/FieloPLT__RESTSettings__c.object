@@ -4,7 +4,19 @@
     <description>Fielo REST configuration.</description>
     <enableFeeds>false</enableFeeds>
     <fields>
-        <fullName>OwnerId__c</fullName>
+        <fullName>FieloPLT__MemberExternalIds__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A comma-separated list of fields (API name) to return new fieldsets in the response.</description>
+        <externalId>false</externalId>
+        <label>Member External IDs</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieloPLT__OwnerId__c</fullName>
         <deprecated>false</deprecated>
         <description>Owner ID when registering as a new Member.</description>
         <externalId>false</externalId>
@@ -17,13 +29,25 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>ProfileId__c</fullName>
+        <fullName>FieloPLT__ProfileId__c</fullName>
         <deprecated>false</deprecated>
         <description>User Profile ID. When empty, Fielo REST Profile is completed.</description>
         <externalId>false</externalId>
         <inlineHelpText>User Profile ID. When empty, Fielo REST Profile is completed.</inlineHelpText>
         <label>Profile ID</label>
         <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieloPLT__RedemptionItemsExternalIds__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A comma-separated list of fields (API name) to return new fieldsets in the response.</description>
+        <externalId>false</externalId>
+        <label>Redemption Items External IDs</label>
+        <length>255</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Text</type>

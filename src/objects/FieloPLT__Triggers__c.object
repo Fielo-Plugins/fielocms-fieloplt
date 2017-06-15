@@ -4,7 +4,7 @@
     <description>It allows you to disable default Fielo Triggers.</description>
     <enableFeeds>false</enableFeeds>
     <fields>
-        <fullName>Member__c</fullName>
+        <fullName>FieloPLT__Member__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <description>It disables Member trigger.</description>
@@ -15,7 +15,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>RedemptionItem__c</fullName>
+        <fullName>FieloPLT__RedemptionItem__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <description>It disables Redemption Item trigger.</description>
@@ -26,7 +26,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>Redemption__c</fullName>
+        <fullName>FieloPLT__Redemption__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <description>It disables Redemption trigger.</description>
@@ -37,7 +37,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>Transaction__c</fullName>
+        <fullName>FieloPLT__Transaction__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>

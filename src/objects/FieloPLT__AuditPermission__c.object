@@ -4,7 +4,7 @@
     <description>It enables to control permissions granted throughout time.</description>
     <enableFeeds>false</enableFeeds>
     <fields>
-        <fullName>From__c</fullName>
+        <fullName>FieloPLT__From__c</fullName>
         <deprecated>false</deprecated>
         <description>Date when Admin permissions have been granted from.</description>
         <externalId>false</externalId>
@@ -15,7 +15,7 @@
         <type>DateTime</type>
     </fields>
     <fields>
-        <fullName>GrantingUser__c</fullName>
+        <fullName>FieloPLT__GrantingUser__c</fullName>
         <deprecated>false</deprecated>
         <description>User who grants Admin permissions.</description>
         <externalId>false</externalId>
@@ -28,7 +28,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>To__c</fullName>
+        <fullName>FieloPLT__To__c</fullName>
         <deprecated>false</deprecated>
         <description>Date when Admin permissions have been granted to.</description>
         <externalId>false</externalId>
@@ -39,7 +39,7 @@
         <type>DateTime</type>
     </fields>
     <fields>
-        <fullName>UserGranted__c</fullName>
+        <fullName>FieloPLT__UserGranted__c</fullName>
         <deprecated>false</deprecated>
         <description>User who grants the Admin permissions.</description>
         <externalId>false</externalId>

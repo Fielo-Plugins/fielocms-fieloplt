@@ -25,6 +25,31 @@
 		<name>CustomLabels</name>
 	</types>
 	<types>
+		<members>FieloCMS__Component__c.AccountCRMMode__c</members>
+		<members>FieloCMS__Component__c.AccountOwner__c</members>
+		<members>FieloCMS__Component__c.Account__c</members>
+		<members>FieloCMS__Component__c.Program__c</members>
+		<members>FieloCMS__Component__c.RedirectPage__c</members>
+		<members>FieloCMS__Media__c.Segment__c</members>
+		<members>FieloCMS__Navigation__c.Segment__c</members>
+		<members>FieloCMS__Post__c.Segment__c</members>
+		<members>FieloCMS__TagItem__c.Reward__c</members>
+		<members>FieloPLT__Member__c.SiteURL__c</members>
+		<members>FieloPLT__Program__c.CustomVoucherCss__c</members>
+		<members>FieloPLT__Program__c.MemberSelectionPage__c</members>
+		<members>FieloPLT__Program__c.RegisterStep2Page__c</members>
+		<members>FieloPLT__Program__c.RewardInstructions__c</members>
+		<members>FieloPLT__Program__c.ShowVoucherCode__c</members>
+		<members>FieloPLT__Program__c.SiteDomain__c</members>
+		<members>FieloPLT__Program__c.SiteURL__c</members>
+		<members>FieloPLT__Program__c.UseAgreement__c</members>
+		<members>FieloPLT__Program__c.VoucherInstructions__c</members>
+		<members>FieloPLT__RedemptionItem__c.VoucherLink__c</members>
+		<members>FieloPLT__Reward__c.Category__c</members>
+		<members>FieloPLT__Reward__c.InstructionsRichText__c</members>
+		<name>CustomField</name>
+	</types>
+	<!--<types>
 		<members>FieloCMS__ComponentLibrary__c</members>
 		<members>FieloCMS__Component__c</members>
 		<members>FieloCMS__Layout__c</members>
@@ -71,7 +96,7 @@
 		<members>FieloPLT__Triggers__c</members>
 		<members>SessionCache__c</members>
 		<name>CustomObject</name>
-	</types>
+	</types>-->
 	<types>
 		<members>*</members>
 		<name>Document</name>
