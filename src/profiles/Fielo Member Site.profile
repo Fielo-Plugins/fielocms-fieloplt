@@ -400,15 +400,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <pageAccesses>
-        <apexPage>ChangePassword</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
         <apexPage>ChangePasswordFielo</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>ForgotPassword</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
