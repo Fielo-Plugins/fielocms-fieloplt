@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableEnhancedLookup>false</enableEnhancedLookup>
     <fields>
         <fullName>AccountCRMMode__c</fullName>
         <description>Person Account: Create a new Person Account related to the member
 Standard Account: Create a new Standard CRM Account related to the member
 Default Account: The member will be related to an specific default CRM account</description>
+        <externalId>false</externalId>
         <inlineHelpText>Select the behavior about the CRM account for the registration when the contact doesn&apos;t exist or the contact doesn&apos;t have a related CRM account</inlineHelpText>
         <label>Account CRM Mode</label>
         <picklist>
@@ -22,39 +24,66 @@ Default Account: The member will be related to an specific default CRM account</
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
     <fields>
         <fullName>AccountOwner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
         <description>To create CRM account, it is needed a defined user with role as a owner</description>
+        <externalId>false</externalId>
         <inlineHelpText>Select the owner of the new CRM account created by the component Register</inlineHelpText>
         <label>Account Owner</label>
         <referenceTo>User</referenceTo>
         <relationshipName>Components2</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Account__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
         <label>Account</label>
         <referenceTo>Account</referenceTo>
         <relationshipLabel>Accounts</relationshipLabel>
         <relationshipName>Accounts</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Program__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
         <label>Program</label>
         <referenceTo>FieloPLT__Program__c</referenceTo>
         <relationshipLabel>Components</relationshipLabel>
         <relationshipName>Components</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>RedirectPage__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
         <label>Redirect Page</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>FieloCMS__Page__c.RecordType.DeveloperName</field>
+                <operation>equals</operation>
+                <value>Page</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
         <referenceTo>FieloCMS__Page__c</referenceTo>
         <relationshipLabel>Components (Detail page)</relationshipLabel>
         <relationshipName>ListComponentsDetailPage</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
 </CustomObject>
