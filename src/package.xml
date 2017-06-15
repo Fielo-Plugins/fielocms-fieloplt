@@ -50,50 +50,6 @@
 		<name>CustomField</name>
 	</types>
 	<types>
-		<!--<members>FieloCMS__ComponentLibrary__c</members>
-		<members>FieloCMS__Component__c</members>
-		<members>FieloCMS__Layout__c</members>
-		<members>FieloCMS__Model__c</members>
-		<members>FieloCMS__Media__c</members>
-		<members>FieloCMS__Navigation__c</members>
-		<members>FieloCMS__OrganizationSettings__c</members>
-		<members>FieloCMS__Page__c</members>
-		<members>FieloCMS__Post__c</members>
-		<members>FieloCMS__Section__c</members>
-		<members>FieloCMS__Settings__c</members>
-		<members>FieloCMS__Site__c</members>
-		<members>FieloCMS__TagItem__c</members>
-		<members>FieloPLT__Action__c</members>
-		<members>FieloPLT__AdminPermission__c</members>
-		<members>FieloPLT__Agreement__c</members>
-		<members>FieloPLT__AuditPermission__c</members>
-		<members>FieloPLT__BadgeMember__c</members>
-		<members>FieloPLT__Badge__c</members>
-		<members>FieloPLT__Criterion__c</members>
-		<members>FieloPLT__ErrorLog__c</members>
-		<members>FieloPLT__Event__c</members>
-		<members>FieloPLT__LevelMember__c</members>
-		<members>FieloPLT__Level__c</members>
-		<members>FieloPLT__MemberSegment__c</members>
-		<members>FieloPLT__Member__c</members>
-		<members>FieloPLT__Point__c</members>
-		<members>FieloPLT__PointsUsage__c</members>
-		<members>FieloPLT__PointType__c</members>
-		<members>FieloPLT__Program__c</members>
-		<members>FieloPLT__ProgramPointType__c</members>
-		<members>FieloPLT__Promotion__c</members>
-		<members>FieloPLT__PublicSettings__c</members>
-		<members>FieloPLT__RESTSettings__c</members>
-		<members>FieloPLT__RedemptionItem__c</members>
-		<members>FieloPLT__Redemption__c</members>
-		<members>FieloPLT__RewardItem__c</members>
-		<members>FieloPLT__Reward__c</members>
-		<members>FieloPLT__RuleTrigger__c</members>
-		<members>FieloPLT__Rule__c</members>
-		<members>FieloPLT__Segment__c</members>
-		<members>FieloPLT__Settings__c</members>
-		<members>FieloPLT__Transaction__c</members>
-		<members>FieloPLT__Triggers__c</members>-->
 		<members>SessionCache__c</members>
 		<name>CustomObject</name>
 	</types>
@@ -119,5 +75,5 @@
 		<members>FieloPLT__Member__c</members>
 		<name>Workflow</name>
 	</types>
-	<version>34.0</version>
+	<version>39.0</version>
 </Package>
