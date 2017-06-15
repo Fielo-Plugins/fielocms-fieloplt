@@ -233,10 +233,6 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>TestCreateUser</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>ToggleManagerController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
