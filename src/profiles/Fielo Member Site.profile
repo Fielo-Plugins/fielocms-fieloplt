@@ -375,9 +375,5 @@
         <apexPage>SegmentSelection</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
-    <pageAccesses>
-        <apexPage>UnderConstruction</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
     <userLicense>High Volume Customer Portal</userLicense>
 </Profile>

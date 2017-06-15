@@ -375,9 +375,5 @@
         <apexPage>SegmentSelection</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
-    <pageAccesses>
-        <apexPage>UnderConstruction</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
     <userLicense>Salesforce</userLicense>
 </Profile>
