@@ -404,10 +404,6 @@
         <startAddress>1.1.1.0</startAddress>
     </loginIpRanges>
     <pageAccesses>
-        <apexPage>ChangePassword</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
         <apexPage>ChangePasswordFielo</apexPage>
         <enabled>true</enabled>
     </pageAccesses>

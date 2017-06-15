@@ -487,5 +487,5 @@
         <apexPage>UnderConstruction</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
-    <userLicense>Authenticated Website</userLicense>
+    <userLicense>High Volume Customer Portal</userLicense>
 </Profile>
