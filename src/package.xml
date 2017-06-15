@@ -49,7 +49,7 @@
 		<members>FieloPLT__Reward__c.InstructionsRichText__c</members>
 		<name>CustomField</name>
 	</types>
-	<<types>
+	<types>
 		<!--<members>FieloCMS__ComponentLibrary__c</members>
 		<members>FieloCMS__Component__c</members>
 		<members>FieloCMS__Layout__c</members>
