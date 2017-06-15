@@ -368,10 +368,6 @@
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
-        <apexPage>MyProfilePage</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
         <apexPage>RedemptionItemVoucher</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
