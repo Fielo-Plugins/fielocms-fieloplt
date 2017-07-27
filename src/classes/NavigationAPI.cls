@@ -17,6 +17,8 @@ global class NavigationAPI implements FieloCMS.DataInterface{
             //como hay campos que necesito sí o sí traer en el query, me armo un set en low case de los campos
             Set<String> fieldsToQuery = new Set<String>();
             fieldsToQuery.add('fielocms__url__c');
+            fieldsToQuery.add('fielocms__icon__c');
+            fieldsToQuery.add('fielocms__cssclasses__c');
 
             for(String fieldName : OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c)){
                 fieldsToQuery.add(fieldName.toLowerCase());
