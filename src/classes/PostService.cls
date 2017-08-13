@@ -14,7 +14,7 @@ public with sharing class PostService {
             }
 
             //segmentation
-            Set<Id> appliedSegments = new Set<Id>();
+            /*Set<Id> appliedSegments = new Set<Id>();
 			if(memberId != null) appliedSegments = FieloPLT.SegmentService.getMemberSegments(memberId, null);
 			//ya que platform no me devuelve los segmentos privado y público, los agrego yo según corresponda
 			if(UserInfo.getUserType() == 'Guest'){
@@ -22,7 +22,7 @@ public with sharing class PostService {
 			}else{
 				appliedSegments.add([SELECT Id FROM FieloPLT__Segment__c WHERE RecordType.DeveloperName = 'Private' LIMIT 1].Id);
 			}
-            query += ' AND (Segment__c = ' + null + ' OR Segment__c IN : appliedSegments) ';
+            query += ' AND (Segment__c = ' + null + ' OR Segment__c IN : appliedSegments) ';*/
 
             // ORDER BY,  LIMIT & OFFSET
             if( String.isNotBlank(orderBy) ){

@@ -6,7 +6,10 @@ private class ChangePasswordFieloControllerTest {
         controller.oldPassword = '123456';
         controller.newPassword = 'qwerty1'; 
         controller.verifyNewPassword = 'qwerty1';                
-        System.assertEquals(null,controller.changePassword());                           
+        System.assertEquals(null,controller.changePassword());
+
+
+        ChangePasswordFieloController.changePassword('qwer123','qwer123', '123456' );
     }        
     
 }
