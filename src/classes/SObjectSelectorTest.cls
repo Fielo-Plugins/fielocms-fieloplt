@@ -257,4 +257,31 @@ private with sharing class SObjectSelectorTest
 		}
 		return testUser;
 	}
+
+	@isTest
+	private static void test1(){
+		TestSObjectSelector sos = new TestSObjectSelector();
+		sos.getLimit();
+		sos.getOffset();
+		sos.setOffset(1);
+		sos.setLimit(10);
+		
+
+		sos.setFieldList(new Set<String>{'Name'});
+		sos.getFieldList();
+
+		//sos.SObjectSelector(new Set<String>{'Name'});
+
+		sos.getOffsetCondition();
+
+		sos.getLimitCondition();
+
+		sos.sObjectType();
+		sos.newQueryFactory(true);
+
+		QueryFactory qf = new QueryFactory(FieloPLT__Member__c.SObjectType);
+		try{
+			sos.configureQueryFactoryFields(qf, 'FieloPLT__Member__c');	
+		}catch(Exception e){}
+	}
 }

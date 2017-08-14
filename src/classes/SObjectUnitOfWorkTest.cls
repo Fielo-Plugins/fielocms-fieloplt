@@ -427,4 +427,50 @@ private with sharing class SObjectUnitOfWorkTest
 
 	public class DerivedUnitOfWorkException extends Exception {}
 	public class FailDoingWorkException extends Exception {}
+
+
+	@isTest
+	private static void test1(){
+		SObjectUnitOfWork uow = new SObjectUnitOfWork(new List<Schema.SobjectType>{FieloPLT__Program__c.SObjectType, FieloPLT__Member__c.SObjectType}, false);
+
+		FieloPLT__Program__c program = new FieloPLT__Program__c(Name = 'test');
+		insert program;
+		FieloPLT__Member__c member = new FieloPLT__Member__c(Name = 'test', FieloPLT__Email__c = 'test@fielo.com', FieloPLT__Program__c = program.Id, FieloPLT__User__c = UserInfo.getUserId());
+		FieloPLT__Member__c member3 = new FieloPLT__Member__c(Name = 'test', FieloPLT__Email__c = 'test3465@fielo.com', FieloPLT__Program__c = program.Id, FieloPLT__User__c = UserInfo.getUserId());
+		insert member3;
+
+		uow.registerNew(member);
+
+		uow.registerForApproval(member3.Id, 'For Approval');
+
+		List<FieloPLT__Member__c> member2 = [Select id, name from FieloPLT__Member__c];
+		member2.get(0).Name = 'NewName';
+		//uow.registerDirty(member2);
+		uow.registerDirty(member3);
+		uow.registerDirty(member2.get(0), new List<String>{'Name'});
+		uow.registerDirty(member2);
+		uow.registerEmail(null);
+
+
+		uow.registerDeleted(member2);
+
+		Schema.DescribeFieldResult objeto = FieloPLT__Program__c.Name.getDescribe();
+		Schema.sObjectField campo = objeto.getSObjectField();
+
+		uow.registerDirty(program, new List<Schema.sObjectField>{campo});
+
+
+		SObjectUnitOfWork.PartialDML ins = new SObjectUnitOfWork.PartialDML();
+		ins.dmlInsert(new List<SObject>());
+		ins.dmlUpdate(new List<SObject>());
+		ins.dmlDelete(new List<SObject>());
+
+		uow.onCommitWorkStarting();
+		uow.onDMLStarting();
+		uow.onDMLFinished();
+		uow.onDoWorkStarting();
+		uow.onDoWorkFinished();
+		uow.onCommitWorkFinishing();
+		uow.onCommitWorkFinished(true);
+	}
 }
