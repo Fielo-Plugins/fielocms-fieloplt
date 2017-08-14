@@ -31,7 +31,23 @@ private class SegmentsSelectionControllerTest {
 
 		sgc.getObjectLabel();
 		
-		sgc.remove();
+		try{
+			apexpages.currentpage().getparameters().put('indexToRemove', '1');
+			sgc.remove();
+		}catch(Exception e){}
+
+
+		FieloPLT__Program__c program = new FieloPLT__Program__c(Name = 'test');
+		insert program;
+		FieloPLT__Member__c member = new FieloPLT__Member__c(Name = 'test', FieloPLT__Email__c = 'test@fielo.com', FieloPLT__Program__c = program.Id, FieloPLT__User__c = UserInfo.getUserId());
+		insert member;
+		SegmentsSelectionController.getMetaSegmentId(new List<String>(), program.Id);
+
+
+		List<String> segmentos = new List<String>();
+		segmentos.add(String.valueOf(segment2));
+		segmentos.add(String.valueOf(segment));
+		SegmentsSelectionController.getMetaSegmentId(segmentos, program.Id);
 
 	}
 	
