@@ -40,7 +40,7 @@ private class MemberServiceTest{
 		try{
 			MemberService.setPassword(member.Id, null);
 		}catch(Exception e){}
-		MemberService.setPassword(member.Id, 'qwer1234');
+		MemberService.setPassword(member.Id, '1234qwer');
 	}
 
 	@isTest
