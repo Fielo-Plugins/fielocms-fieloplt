@@ -61,6 +61,11 @@
 		<name>CustomObject</name>
 	</types>
 	<types>
+	    <members>FieloPLT__Segment__c.Private</members>
+	    <members>FieloPLT__Segment__c.Public</members>
+	    <name>RecordType</name>
+	</types>
+	<types>
 		<members>*</members>
 		<name>Document</name>
 	</types>
