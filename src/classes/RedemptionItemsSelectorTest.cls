@@ -1,7 +1,9 @@
 @isTest
-private class RedemptionItemVoucherControllerTest {
+private class RedemptionItemsSelectorTest {
+  
+    @isTest static void test_method_one() {
 
-    static testMethod void itemVoucherControllerTest(){
+        // Given
         FieloPLT__Program__c program = new FieloPLT__Program__c(Name = 'test');
         insert program;
         FieloPLT__Member__c member = new FieloPLT__Member__c(Name = 'test', FieloPLT__Email__c = 'test@fielo.com', FieloPLT__Program__c = program.Id, FieloPLT__User__c = UserInfo.getUserId());
@@ -19,25 +21,13 @@ private class RedemptionItemVoucherControllerTest {
         insert reward;
         Map<Id, Integer> quantityPerReward = new Map<Id, Integer>{reward.Id => 1};
         List<FieloPLT__Redemption__c> redemptions = FieloPLT.RedemptionService.createRedemptions(quantityPerReward, member.Id);
-        System.debug(loggingLevel.Error, '*** redemptions: ' + redemptions);
+        
+        FieloPLT__RedemptionItem__c redemptionItem = [SELECT Id FROM FieloPLT__RedemptionItem__c];
 
-        FieloPLT__RedemptionItem__c item = [SElect id from FieloPLT__RedemptionItem__c limit 1];
-                
-        Pagereference pageRef = ApexPages.currentPage();
-        pageRef.getParameters().put('ordenId', redemptions.get(0).id);
-        
-        // create redemption item voucher controller
-        RedemptionItemVoucherController controller = new RedemptionItemVoucherController();
-        
-        controller.vouchers.size();
-        String imageId = controller.imageId;
-        String docUrl = controller.docURL;
-        String orgId = controller.orgId;
-        
-        pageRef = ApexPages.currentPage();
-        pageRef.getParameters().put('voucherId', item.Id);
-        
-        
+        List<FieloPLT__RedemptionItem__c> redemptionItem1 = new RedemptionItemsSelector().selectById(new Set<Id>{redemptionItem.Id});
+        List<FieloPLT__RedemptionItem__c> redemptionItem2 = new RedemptionItemsSelector(new Set<String>{'Name'}).selectById(new Set<Id>{redemptionItem.Id});
+        List<FieloPLT__RedemptionItem__c> redemptionItem3 = new RedemptionItemsSelector().selectByMemberOriginStatusAndReward(reward.Id, 'Open', 'BackEnd', member.Id);
+        List<FieloPLT__RedemptionItem__c> redemptionItem4 = new RedemptionItemsSelector().selectByRedemptionAndRewards(redemptionItem.Id, new Set<Id>{reward.Id});  
+
     }
-
 }
