@@ -1,0 +1,16 @@
+{
+			"type":"repository",
+			"version":"master",
+			"dependencies":[
+				{
+					"type":"package",
+					"version":"1.26",
+					"name":"FieloPLT"
+				},
+				{
+					"type":"package",
+					"version":"1.52",
+					"name":"FieloCMS"
+				}
+			]
+		}
