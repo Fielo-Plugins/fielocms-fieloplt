@@ -18,74 +18,7 @@
 	</types>
 	<types>
 		<members>*</members>
-		<name>ApprovalProcess</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>CustomLabels</name>
-	</types>
-	<types>
-		<members>FieloPLT__RedemptionItem__c.Voucher</members>
-		<members>FieloPLT__Member__c.RegistrationStep2</members>
-		<members>FieloPLT__Segment__c.SegmentsSelection</members>
-		<members>FieloPLT__Reward__c.ShoppingCart</members>
-		<name>FieldSet</name>
-	</types>
-	<types>
-		<members>FieloCMS__Component__c.AccountCRMMode__c</members>
-		<members>FieloCMS__Component__c.AccountOwner__c</members>
-		<members>FieloCMS__Component__c.Account__c</members>
-		<members>FieloCMS__Component__c.Program__c</members>
-		<members>FieloCMS__Component__c.RedirectPage__c</members>
-		<members>FieloCMS__Media__c.Segment__c</members>
-		<members>FieloCMS__Navigation__c.Segment__c</members>
-		<members>FieloCMS__Post__c.Segment__c</members>
-		<members>FieloCMS__TagItem__c.Reward__c</members>
-		<members>FieloPLT__Member__c.SiteURL__c</members>
-		<members>FieloPLT__Program__c.CustomVoucherCss__c</members>
-		<members>FieloPLT__Program__c.MemberSelectionPage__c</members>
-		<members>FieloPLT__Program__c.RegisterStep2Page__c</members>
-		<members>FieloPLT__Program__c.RewardInstructions__c</members>
-		<members>FieloPLT__Program__c.ShowVoucherCode__c</members>
-		<members>FieloPLT__Program__c.SiteDomain__c</members>
-		<members>FieloPLT__Program__c.SiteURL__c</members>
-		<members>FieloPLT__Program__c.UseAgreement__c</members>
-		<members>FieloPLT__Program__c.VoucherInstructions__c</members>
-		<members>FieloPLT__RedemptionItem__c.VoucherLink__c</members>
-		<members>FieloPLT__Reward__c.Category__c</members>
-		<members>FieloPLT__Reward__c.InstructionsRichText__c</members>
-		<name>CustomField</name>
-	</types>
-	<types>
-		<members>SessionCache__c</members>
-		<name>CustomObject</name>
-	</types>
-	<types>
-	    <members>FieloPLT__Segment__c.Private</members>
-	    <members>FieloPLT__Segment__c.Public</members>
-	    <name>RecordType</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>Document</name>
-	</types>
-	<types>
-		<members>FieloPLT__Fielo_Templates/Register</members>
-		<members>FieloPLT__Fielo_Templates/Registration_Approved</members>
-		<name>EmailTemplate</name>
-	</types>
-	<types>
-		<members>Admin</members>
-		<members>Fielo Member Site</members>
-		<name>Profile</name>
-	</types>
-	<types>
-		<members>*</members>
 		<name>StaticResource</name>
 	</types>
-	<types>
-		<members>FieloPLT__Member__c</members>
-		<name>Workflow</name>
-	</types>
-	<version>39.0</version>
+	<version>36.0</version>
 </Package>
