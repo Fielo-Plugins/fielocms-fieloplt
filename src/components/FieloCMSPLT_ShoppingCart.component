@@ -4,7 +4,7 @@
     <apex:attribute name="config" type="FieloCMS__Component__c" description="" />
     <apex:panelGroup layout="none" rendered="{!config.FieloCMS__Layout__c != 'View'}" >
         <apex:panelGroup rendered="{!rewards.size > 0}" layout="none">
-            <div class="fielo-form fieloplt-shopping-cart fielo-js-component {!config.FieloCMS__ComponentLibrary__r.FieloCMS__CSSClasses__c} {!config.FieloCMS__CSSClasses__c}" data-componentid="{!config.Id}" data-label-success="{!$Label.ShoppingCartSave}" >
+            <div class="fielo-form fieloplt-shopping-cart fielo-js-component {!config.FieloCMS__ComponentLibrary__r.FieloCMS__CSSClasses__c} {!config.FieloCMS__CSSClasses__c}" data-componentid="{!config.Id}" data-label-success="{!$Label.FieloCMSPLT_ShoppingCartSave}" >
                 <form class="fielo-js-upgrade" data-remotearguments="componentId,quantities" data-remotepreprocess="FieloPLTcheckDeleteCookie">
                     <input type="hidden" name="componentId" value="{!config.Id}" />
                     <div class="fielo-record-set fielo-record-set--is-table fielo-record-set--is-component-ShoppingCart {!config.FieloCMS__CSSClasses__c}" data-layout="table" data-componentid="{! config.Id}" >
@@ -18,7 +18,7 @@
                                         <th class="fielo-field fielo-field--is-{!field} mdl-data-table__cell--non-numeric"><span data-order-value="{!field}">{!$ObjectType.FieloPLT__Reward__c.fields[field].label}</span></th>
                                     </apex:repeat>
                                     <th class="fielo-field fielo-field--is-quantity mdl-data-table__cell--non-numeric"><span data-order-value="quantity">{!$Label.FieloPLT__Quantity}</span></th>
-                                    <th class="fielo-field fielo-field--is-total mdl-data-table__cell--non-numeric"><span data-order-value="total">{!$Label.TotalPoints}</span></th>
+                                    <th class="fielo-field fielo-field--is-total mdl-data-table__cell--non-numeric"><span data-order-value="total">{!$Label.FieloCMSPLT_TotalPoints}</span></th>
                                     <th class="fielo-field fielo-field--is-delete mdl-data-table__cell--non-numeric"><span data-order-value="delete">{!$Label.FieloPLT__Delete}</span></th>
                                 </tr>
                             </thead>
@@ -44,7 +44,7 @@
                                         </td>
                                         <td class="fielo-field fielo-field--is-ShoppingDelete mdl-data-table__cell--non-numeric" data-th="Shopping Total">
                                             <span class="fielo-field__value">
-                                                <div class="fielo-button__delete">{!$Label.Delete}</div>
+                                                <div class="fielo-button__delete">{!$Label.FieloCMSPLT_Delete}</div>
                                             </span>
                                         </td>
                                     </tr>
@@ -53,16 +53,16 @@
                         </table>
                     </div>
                     <div class="fielo-controls" >
-                        <a class="fielo-button fielo-button--safe fielo-button__save" >{!$Label.Save}</a>
-                        <a class="fielo-button fielo-button--danger fielo-button__empty-cart"  >{!$Label.EmptyCart}</a>
-                        <button data-remoteaction="FieloCMSPLT_ShoppingCartController.checkout" class="fielo-button fielo-button--safe fielo-js-upgrade fielo-button__checkout" >{!$Label.CreateVoucher}</button>
+                        <a class="fielo-button fielo-button--safe fielo-button__save" >{!$Label.FieloCMSPLT_Save}</a>
+                        <a class="fielo-button fielo-button--danger fielo-button__empty-cart"  >{!$Label.FieloCMSPLT_EmptyCart}</a>
+                        <button data-remoteaction="FieloCMSPLT_ShoppingCartController.checkout" class="fielo-button fielo-button--safe fielo-js-upgrade fielo-button__checkout" >{!$Label.FieloCMSPLT_CreateVoucher}</button>
                     </div>
                 </form>
             </div>
         </apex:panelGroup>
         <apex:panelGroup rendered="{!rewards.size == 0 }" layout="none">
             <span>
-                {!$Label.ErrorNoItemShoppingCart}
+                {!$Label.FieloCMSPLT_ErrorNoItemShoppingCart}
             </span>
         </apex:panelGroup>
     </apex:panelGroup>

@@ -64,7 +64,7 @@ global with sharing class FieloCMSPLT_ShoppingCartController {
                     retPage.getParameters().put(component.FieloCMS__DetailParameter__c,redemption.Id);
                     result.redirectURL = retPage.getUrl().replace('/apex','');
                 }else{
-                    result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.InfoRedemptionApproval)));
+                    result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.FieloCMSPLT_InfoRedemptionApproval)));
                 }
             }
         }catch(DMLException e){

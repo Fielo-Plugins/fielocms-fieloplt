@@ -17,7 +17,7 @@ global with sharing class FieloCMSPLT_HandleInvitationsMembersController impleme
 
         try {
             resendInvitations(new Set<Id>{memberId});
-            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(ApexPages.Severity.CONFIRM, Label.SuccessfulRemoteActionRefresh));
+            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(ApexPages.Severity.CONFIRM, Label.FieloCMSPLT_SuccessfulRemoteActionRefresh));
             result.redirectURL = '#';
         } catch(DMLException e) {
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(ApexPages.Severity.Error, e.getDMLMessage(0)));
@@ -58,7 +58,7 @@ global with sharing class FieloCMSPLT_HandleInvitationsMembersController impleme
                 }
             }
         }else{
-            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(ApexPages.Severity.Error, Label.InsufficientAccessToCancelInvitation));
+            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(ApexPages.Severity.Error, Label.FieloCMSPLT_InsufficientAccessToCancelInvitation));
         }
 
         return result;
@@ -87,17 +87,17 @@ global with sharing class FieloCMSPLT_HandleInvitationsMembersController impleme
         for(FieloPLT__Member__c member : new MembersSelector( new Set<String>{'FieloPLT__OrganizationAccount__r.FieloPLT__Status__c','FieloPLT__Type__c'} ).selectById(memberIds)){
             if(member.FieloPLT__OrganizationAccount__r.FieloPLT__Status__c == 'Active'){
                 if(member.FieloPLT__Type__c != 'OrganizationContributor'){
-                    throw new FieloException(Label.ErrorOrganizationAccountAction);
+                    throw new FieloException(Label.FieloCMSPLT_ErrorOrganizationAccountAction);
                 } else {
                     if(member.FieloPLT__Status__c == 'New'){
                         uow.registerDeleted(member);
                         doCommit = true;
                     } else {
-                        throw new FieloException(Label.ErrorDeleteFieloAccount);
+                        throw new FieloException(Label.FieloCMSPLT_ErrorDeleteFieloAccount);
                     }
                 }
             }else{
-                throw new FieloException(Label.ErrorFieloAccountBlocked);
+                throw new FieloException(Label.FieloCMSPLT_ErrorFieloAccountBlocked);
             }
         }
         if(doCommit)

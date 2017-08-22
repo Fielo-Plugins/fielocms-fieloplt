@@ -17,7 +17,7 @@ global with sharing class FieloCMSPLT_ToggleManagerController implements FieloCM
 
         try {
             FieloPLT.MemberService.toggleManagers(new List<Id>{memberId}, action);
-            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(ApexPages.Severity.CONFIRM, Label.SuccessfulRemoteActionRefresh));
+            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(ApexPages.Severity.CONFIRM, Label.FieloCMSPLT_SuccessfulRemoteActionRefresh));
             result.refresh.add(new FieloCMS.RemoteActionResult.RemoteActionRefresh('action',action));
             result.redirectURL = '#';
         } catch(DMLException e) {

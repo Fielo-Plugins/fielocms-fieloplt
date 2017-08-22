@@ -3,31 +3,31 @@
     <apex:variable var="namespace" value="{!SUBSTITUTE(SUBSTITUTE(fieldName,'FieloCMSPLT_AccountCRMMode__c',''),'__','.')}" />
     <apex:attribute name="config" type="FieloCMS__Component__c" description="" />
     <div class="fielo-form fieloplt-register-step-2 fielo-widget fielo-js-component" data-componentid="{!config.Id}" >
-        <div class="fielo-title">{!$Label.Welcome}</div>
+        <div class="fielo-title">{!$Label.FieloCMSPLT_Welcome}</div>
         <apex:panelGroup layout="none" rendered="{!(status != 'Ok' && status != 'User exist')}">
             <apex:panelGroup layout="none" rendered="{!status != 'Send for Approval'}">
                 <div class="fielo-toast fielo-toast--is-error">
                     <apex:panelGroup layout="none" rendered="{!status == 'Member Completed'}">
-                        <p>{!$Label.ErrorRegistrationUserExists}</p>
+                        <p>{!$Label.FieloCMSPLT_ErrorRegistrationUserExists}</p>
                     </apex:panelGroup>
                     <apex:panelGroup layout="none" rendered="{!status == 'Invalid Member'}">
-                        <p>{!$Label.MemberInvalid}</p>
+                        <p>{!$Label.FieloCMSPLT_MemberInvalid}</p>
                     </apex:panelGroup>
                     <apex:panelGroup layout="none" rendered="{!status == 'Member in Approval'}">
-                        <p>{!$Label.InfoMemberInApproval}</p>
+                        <p>{!$Label.FieloCMSPLT_InfoMemberInApproval}</p>
                     </apex:panelGroup>
                     <apex:panelGroup layout="none" rendered="{!status == 'Member Rejected'}">
-                        <p>{!$Label.MemberRejected}</p>
+                        <p>{!$Label.FieloCMSPLT_MemberRejected}</p>
                     </apex:panelGroup>
                     <apex:panelGroup layout="none" rendered="{!status == 'Organization Account'}">
-                        <p>{!$Label.OrganizationNotAllowed}</p>
+                        <p>{!$Label.FieloCMSPLT_OrganizationNotAllowed}</p>
                     </apex:panelGroup>
                 </div>
             </apex:panelGroup>
             <apex:panelGroup layout="none" rendered="{!status == 'Send for Approval'}">
                 <form class="fielo-js-upgrade" data-remoteaction="{!namespace}RegisterStep2Controller.continueRegistration" data-remotearguments="id" data-remoteobject="Member__c" >
                     <input type="hidden" name="id" value="{!member.Id}" />
-                    <button type="submit" class="fielo-button fielo-button__submit" >{!$Label.Continue}</button>
+                    <button type="submit" class="fielo-button fielo-button__submit" >{!$Label.FieloCMSPLT_Continue}</button>
                 </form>
             </apex:panelGroup>
         </apex:panelGroup>
@@ -56,7 +56,7 @@
                         </div>
                         <div class="mdl-grid fielo-field fielo-field--is-confirmpassword">
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__label" >
-                                <label for="confirmpassword" >{!$Label.PasswordConfirm}</label>
+                                <label for="confirmpassword" >{!$Label.FieloCMSPLT_PasswordConfirm}</label>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__value">
                                 <input class="fielo-input confirmPassword" type="password" required="required"  autocomplete="current-password" />
@@ -65,8 +65,8 @@
                     </apex:panelGroup>
                 </fieldset>
                 <div class="fielo-controls" >
-                    <button type="button" class="fielo-button fielo-button__cancel hidden" >{!$Label.cancel}</button>
-                    <button type="submit" class="fielo-button fielo-button__submit fielo-register-step-2__submit" >{!$Label.submit}</button>
+                    <button type="button" class="fielo-button fielo-button__cancel hidden" >{!$Label.FieloCMSPLT_Cancel}</button>
+                    <button type="submit" class="fielo-button fielo-button__submit fielo-register-step-2__submit" >{!$Label.FieloCMSPLT_Submit}</button>
                 </div>
             </form>
         </apex:panelGroup>

@@ -33,7 +33,7 @@ global with sharing class FieloCMSPLT_SiteLoginFieloController {
         try{
             redirectPage = LoginService.forgotPassword(username);
             if(redirectPage != null) result.redirectURL = redirectPage.getUrl();
-            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.site.temp_password_sent + '<a href="/" >' + Label.GoToHome + '</a>')));
+            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.site.temp_password_sent + '<a href="/" >' + Label.FieloCMSPLT_GoToHome + '</a>')));
         }catch(FieloException e){
             result.redirectURL = '';
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));

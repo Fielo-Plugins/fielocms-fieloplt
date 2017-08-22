@@ -9,7 +9,7 @@
                 <input type="hidden" name="memberId" value="{!record.Id}" data-object-property="Id" data-attribute-replace="value"/>
                 <input type="hidden" name="type" value="{!field.attributes['memberType']}" />
                 <apex:panelGroup layout="none" rendered="{!record.FieloPLT__Status__c == 'Active'}">
-                    <button type="submit" class="fielo-button fielo-button__submit" >{!IF(field.attributes['memberType'] == 'Member', $Label.LoginAsMember,$Label.LoginAsOrganization)}</button>
+                    <button type="submit" class="fielo-button fielo-button__submit" >{!IF(field.attributes['memberType'] == 'Member', $Label.FieloCMSPLT_LoginAsMember,$Label.FieloCMSPLT_LoginAsOrganization)}</button>
                 </apex:panelGroup>
             </form>
         </div>

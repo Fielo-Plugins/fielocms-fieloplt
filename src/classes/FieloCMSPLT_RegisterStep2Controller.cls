@@ -44,7 +44,7 @@ global without sharing class FieloCMSPLT_RegisterStep2Controller {
             FieloPLT__Member__c member = new MembersSelector().selectById(new Set<Id>{memberId})[0];
             FieloPLT.MemberService.finishRegistration(member);
             //MemberUtil.sendToApprove(new List<Member__c>{member});
-            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.SucessAwardingApprovalRegistration)));
+            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.FieloCMSPLT_SucessAwardingApprovalRegistration)));
         }catch(FieloException e){
             Database.rollback(sp);
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
@@ -73,7 +73,7 @@ global without sharing class FieloCMSPLT_RegisterStep2Controller {
                 PageReference passResult = MemberService.setPasswordAndLogin(record.Id, password);
                 result.redirectURL = passResult.getUrl();
             }else{
-                result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.RegistrationSuccessExistingUser)));
+                result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.FieloCMSPLT_RegistrationSuccessExistingUser)));
             }
         }catch(DmlException e){            
             Database.rollback(sp);

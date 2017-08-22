@@ -20,7 +20,7 @@ global with sharing class FieloCMSPLT_CheckoutController implements FieloCMS.Vie
             if(redemptions[0].FieloPLT__Status__c == 'Closed'){                
                 result.redirectURL = detailUrl + redemptions[0].Id;
             }else{
-                result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.InfoRedemptionApproval)));
+                result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.FieloCMSPLT_InfoRedemptionApproval)));
                 result.refresh.add( new FieloCMS.RemoteActionResult.RemoteActionRefresh('quantity', '1'));
             }            
         }catch(Exception e){

@@ -52,13 +52,13 @@ public class FieloCMSPLT_SecurityUtils{
     		this.m_operation = operation;
     		this.m_objectType = objectType;
     		if(operation == OperationType.CREATE)
-    			this.setMessage(System.Label.security_error_object_not_insertable);
+    			this.setMessage(System.Label.FieloCMSPLT_security_error_object_not_insertable);
     		else if(operation == OperationType.READ)
-    			this.setMessage(System.Label.security_error_object_not_readable);
+    			this.setMessage(System.Label.FieloCMSPLT_security_error_object_not_readable);
     		else if(operation == OperationType.MODIFY)
-    			this.setMessage(System.Label.security_error_object_not_updateable);
+    			this.setMessage(System.Label.FieloCMSPLT_security_error_object_not_updateable);
     		else if(operation == OperationType.DEL)
-    			this.setMessage(System.Label.security_error_object_not_deletable);
+    			this.setMessage(System.Label.FieloCMSPLT_security_error_object_not_deletable);
 
     		this.setMessage(
     			String.format(
@@ -82,11 +82,11 @@ public class FieloCMSPLT_SecurityUtils{
     		this.m_objectType = objectType;
     		this.m_fieldToken = fieldToken;
     		if(operation == OperationType.CREATE)
-    			this.setMessage(System.Label.security_error_field_not_insertable);
+    			this.setMessage(System.Label.FieloCMSPLT_security_error_field_not_insertable);
     		else if(operation == OperationType.READ)
-    			this.setMessage(System.Label.security_error_field_not_readable);
+    			this.setMessage(System.Label.FieloCMSPLT_security_error_field_not_readable);
     		else if(operation == OperationType.MODIFY)
-    			this.setMessage(System.Label.security_error_field_not_updateable);
+    			this.setMessage(System.Label.FieloCMSPLT_security_error_field_not_updateable);
 
     		this.setMessage(
     			String.format(

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
     <labels>
-        <fullName>Add</fullName>
+        <fullName>FieloCMSPLT_Add</fullName>
         <categories>LevelEditBackEnd.page</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -9,7 +9,7 @@
         <value>Add</value>
     </labels>
     <labels>
-        <fullName>Back</fullName>
+        <fullName>FieloCMSPLT_Back</fullName>
         <categories>AgreementEditBackEnd.page</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -17,7 +17,7 @@
         <value>Back</value>
     </labels>
     <labels>
-        <fullName>Block</fullName>
+        <fullName>FieloCMSPLT_Block</fullName>
         <categories>BlockUnblockMember.component</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -25,7 +25,7 @@
         <value>Block</value>
     </labels>
     <labels>
-        <fullName>BlockUnblock</fullName>
+        <fullName>FieloCMSPLT_BlockUnblock</fullName>
         <categories>BlockUnblockMember.component</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -33,7 +33,7 @@
         <value>Block/Unblock</value>
     </labels>
     <labels>
-        <fullName>Cancel</fullName>
+        <fullName>FieloCMSPLT_Cancel</fullName>
         <categories>AgreementEditBackEnd.page</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -41,7 +41,7 @@
         <value>Cancel</value>
     </labels>
     <labels>
-        <fullName>CancelInvitation</fullName>
+        <fullName>FieloCMSPLT_CancelInvitation</fullName>
         <categories>HandleInvitationsMembers.component</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -49,14 +49,14 @@
         <value>Cancel Invite</value>
     </labels>
     <labels>
-        <fullName>Continue</fullName>
+        <fullName>FieloCMSPLT_Continue</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Continue button</shortDescription>
         <value>Continue</value>
     </labels>
     <labels>
-        <fullName>CreateVoucher</fullName>
+        <fullName>FieloCMSPLT_CreateVoucher</fullName>
         <categories>ShoppingCart.page</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -64,7 +64,7 @@
         <value>Checkout</value>
     </labels>
     <labels>
-        <fullName>Delete</fullName>
+        <fullName>FieloCMSPLT_Delete</fullName>
         <categories>ShoppingDelete.component</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -72,7 +72,7 @@
         <value>Delete</value>
     </labels>
     <labels>
-        <fullName>EmptyCart</fullName>
+        <fullName>FieloCMSPLT_EmptyCart</fullName>
         <categories>ShoppingCart.component</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -80,21 +80,21 @@
         <value>Empty Cart</value>
     </labels>
     <labels>
-        <fullName>ErrorDeleteFieloAccount</fullName>
+        <fullName>FieloCMSPLT_ErrorDeleteFieloAccount</fullName>
         <language>en_US</language>
         <protected>true</protected>
         <shortDescription>Error Delete Fielo Account</shortDescription>
         <value>You cannot delete a Fielo Account with status &quot;New&quot;.</value>
     </labels>
     <labels>
-        <fullName>ErrorFieloAccountBlocked</fullName>
+        <fullName>FieloCMSPLT_ErrorFieloAccountBlocked</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Error Fielo Account Blocked</shortDescription>
         <value>The Fielo Account that is trying to perform the action is blocked.</value>
     </labels>
     <labels>
-        <fullName>ErrorLoginMemberBlocked</fullName>
+        <fullName>FieloCMSPLT_ErrorLoginMemberBlocked</fullName>
         <categories>SiteLoginFieloController</categories>
         <language>en_US</language>
         <protected>true</protected>
@@ -102,7 +102,7 @@
         <value>Login is blocked. Please contact your administrator.</value>
     </labels>
     <labels>
-        <fullName>ErrorLoginProgramValidation</fullName>
+        <fullName>FieloCMSPLT_ErrorLoginProgramValidation</fullName>
         <categories>SiteLoginFieloController</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -110,7 +110,7 @@
         <value>Incorrect username</value>
     </labels>
     <labels>
-        <fullName>ErrorMemberForgotPasswordInexist</fullName>
+        <fullName>FieloCMSPLT_ErrorMemberForgotPasswordInexist</fullName>
         <categories>ForgotPasswordFieloController.cls</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -118,7 +118,7 @@
         <value>Member does not exist</value>
     </labels>
     <labels>
-        <fullName>ErrorNoItemShoppingCart</fullName>
+        <fullName>FieloCMSPLT_ErrorNoItemShoppingCart</fullName>
         <categories>ShoppingCartItemsController.cls</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -126,14 +126,14 @@
         <value>You don´t have items in your shopping cart</value>
     </labels>
     <labels>
-        <fullName>ErrorOrganizationAccountAction</fullName>
+        <fullName>FieloCMSPLT_ErrorOrganizationAccountAction</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Error Organization Account action</shortDescription>
         <value>Must be an Organization Account to perform this action.</value>
     </labels>
     <labels>
-        <fullName>ErrorRegistrationUserExists</fullName>
+        <fullName>FieloCMSPLT_ErrorRegistrationUserExists</fullName>
         <categories>RegisterStep2.page</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -141,7 +141,7 @@
         <value>You have been already registered.</value>
     </labels>
     <labels>
-        <fullName>FacebookLogin</fullName>
+        <fullName>FieloCMSPLT_FacebookLogin</fullName>
         <categories>RegisterFacebook.component</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -149,7 +149,7 @@
         <value>Facebook Login</value>
     </labels>
     <labels>
-        <fullName>GoToHome</fullName>
+        <fullName>FieloCMSPLT_GoToHome</fullName>
         <categories>ForgotPasswordConfirm.page</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -157,7 +157,7 @@
         <value>Go to Home</value>
     </labels>
     <labels>
-        <fullName>IAgree</fullName>
+        <fullName>FieloCMSPLT_IAgree</fullName>
         <categories>AgreementAccept.page</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -165,7 +165,7 @@
         <value>I Agree</value>
     </labels>
     <labels>
-        <fullName>InfoMemberInApproval</fullName>
+        <fullName>FieloCMSPLT_InfoMemberInApproval</fullName>
         <categories>RegisterStep2.component</categories>
         <language>en_US</language>
         <protected>true</protected>
@@ -173,14 +173,14 @@
         <value>Member in approval process</value>
     </labels>
     <labels>
-        <fullName>InfoRedemptionApproval</fullName>
+        <fullName>FieloCMSPLT_InfoRedemptionApproval</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>zz_deprecated_InfoRedemptionApproval</shortDescription>
         <value>Your order was sent to approve, once your redemption has been approved you will see it in your profile page.</value>
     </labels>
     <labels>
-        <fullName>InfoRegisterApprovalInstructions</fullName>
+        <fullName>FieloCMSPLT_InfoRegisterApprovalInstructions</fullName>
         <categories>RegisterStep2.component</categories>
         <language>en_US</language>
         <protected>true</protected>
@@ -188,7 +188,7 @@
         <value>Click submit to finish the registration.</value>
     </labels>
     <labels>
-        <fullName>InsufficientAccessToCancelInvitation</fullName>
+        <fullName>FieloCMSPLT_InsufficientAccessToCancelInvitation</fullName>
         <categories>HandleInvitationsMembersController.cls</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -196,28 +196,28 @@
         <value>You can not cancel the invitation because you do not have access to delete this Member.</value>
     </labels>
     <labels>
-        <fullName>Like</fullName>
+        <fullName>FieloCMSPLT_Like</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>zz_deprecated_Fielo_LikeOff</shortDescription>
         <value>Like</value>
     </labels>
     <labels>
-        <fullName>LoginAsMember</fullName>
+        <fullName>FieloCMSPLT_LoginAsMember</fullName>
         <language>en_US</language>
         <protected>true</protected>
         <shortDescription>Login as Member</shortDescription>
         <value>Member</value>
     </labels>
     <labels>
-        <fullName>LoginAsOrganization</fullName>
+        <fullName>FieloCMSPLT_LoginAsOrganization</fullName>
         <language>en_US</language>
         <protected>true</protected>
         <shortDescription>Login as Organization</shortDescription>
         <value>Organization</value>
     </labels>
     <labels>
-        <fullName>MemberIdRequired</fullName>
+        <fullName>FieloCMSPLT_MemberIdRequired</fullName>
         <categories>MemberService.cls</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -225,7 +225,7 @@
         <value>Member Id Required</value>
     </labels>
     <labels>
-        <fullName>MemberInvalid</fullName>
+        <fullName>FieloCMSPLT_MemberInvalid</fullName>
         <categories>RegisterStep2.component</categories>
         <language>en_US</language>
         <protected>true</protected>
@@ -233,14 +233,14 @@
         <value>Invalid Member</value>
     </labels>
     <labels>
-        <fullName>MemberRejected</fullName>
+        <fullName>FieloCMSPLT_MemberRejected</fullName>
         <language>en_US</language>
         <protected>true</protected>
         <shortDescription>Member Rejected</shortDescription>
         <value>The member was rejected</value>
     </labels>
     <labels>
-        <fullName>Next</fullName>
+        <fullName>FieloCMSPLT_Next</fullName>
         <categories>EmailCampaignStep1BackEnd.page</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -248,7 +248,7 @@
         <value>Next</value>
     </labels>
     <labels>
-        <fullName>OrganizationNotAllowed</fullName>
+        <fullName>FieloCMSPLT_OrganizationNotAllowed</fullName>
         <categories>RegisterStep2.component</categories>
         <language>en_US</language>
         <protected>true</protected>
@@ -256,21 +256,21 @@
         <value>The type of member is not allowed to continue the registration</value>
     </labels>
     <labels>
-        <fullName>Password</fullName>
+        <fullName>FieloCMSPLT_Password</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Password</shortDescription>
         <value>Password</value>
     </labels>
     <labels>
-        <fullName>PasswordConfirm</fullName>
+        <fullName>FieloCMSPLT_PasswordConfirm</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>PasswordConfirm</shortDescription>
         <value>Confirm Password</value>
     </labels>
     <labels>
-        <fullName>PasswordIsRequired</fullName>
+        <fullName>FieloCMSPLT_PasswordIsRequired</fullName>
         <categories>RegisterStep2Controller.cls</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -278,14 +278,14 @@
         <value>Password is required</value>
     </labels>
     <labels>
-        <fullName>Previous</fullName>
+        <fullName>FieloCMSPLT_Previous</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Previous</shortDescription>
         <value>Previous</value>
     </labels>
     <labels>
-        <fullName>RegistrationSuccessExistingUser</fullName>
+        <fullName>FieloCMSPLT_RegistrationSuccessExistingUser</fullName>
         <categories>RegisterStep2.component</categories>
         <language>en_US</language>
         <protected>true</protected>
@@ -293,14 +293,14 @@
         <value>Your registration was succesful, please go to the home page and login with your user and password.</value>
     </labels>
     <labels>
-        <fullName>Reinvite</fullName>
+        <fullName>FieloCMSPLT_Reinvite</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Reinvite</shortDescription>
         <value>Reinvite</value>
     </labels>
     <labels>
-        <fullName>Save</fullName>
+        <fullName>FieloCMSPLT_Save</fullName>
         <categories>AgreementAccept.page</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -308,7 +308,7 @@
         <value>Save</value>
     </labels>
     <labels>
-        <fullName>Set</fullName>
+        <fullName>FieloCMSPLT_Set</fullName>
         <categories>ToggleManager.component</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -316,14 +316,14 @@
         <value>Set</value>
     </labels>
     <labels>
-        <fullName>ShoppingCartSave</fullName>
+        <fullName>FieloCMSPLT_ShoppingCartSave</fullName>
         <language>en_US</language>
         <protected>true</protected>
         <shortDescription>ShoppingCartSave</shortDescription>
         <value>The changes were saved.</value>
     </labels>
     <labels>
-        <fullName>ShoppingExistingReward</fullName>
+        <fullName>FieloCMSPLT_ShoppingExistingReward</fullName>
         <categories>RewardDetailController.cls</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -331,14 +331,14 @@
         <value>This reward is already in your shopping cart, please modify the quantity in the shopping cart.</value>
     </labels>
     <labels>
-        <fullName>Submit</fullName>
+        <fullName>FieloCMSPLT_Submit</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>zz_deprecated_Submit</shortDescription>
         <value>Submit</value>
     </labels>
     <labels>
-        <fullName>SuccessRewardAddToChart</fullName>
+        <fullName>FieloCMSPLT_SuccessRewardAddToChart</fullName>
         <categories>CatalogController.cls</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -346,7 +346,7 @@
         <value>Reward added successfully</value>
     </labels>
     <labels>
-        <fullName>SuccessfulRemoteActionRefresh</fullName>
+        <fullName>FieloCMSPLT_SuccessfulRemoteActionRefresh</fullName>
         <categories>ToggleManagerController.cls, HandleInvitationsMembersController.cls, BlockUnblockMemberController.cls</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -354,7 +354,7 @@
         <value>Your action has been successful</value>
     </labels>
     <labels>
-        <fullName>SucessAwardingApprovalRegistration</fullName>
+        <fullName>FieloCMSPLT_SucessAwardingApprovalRegistration</fullName>
         <categories>RegisterStep2.page</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -362,7 +362,7 @@
         <value>You have finished the registration process. You will receive an email confirmation when the participant is active. Thank you.</value>
     </labels>
     <labels>
-        <fullName>SucessRegistrationStep1</fullName>
+        <fullName>FieloCMSPLT_SucessRegistrationStep1</fullName>
         <categories>RegisterStep1.page</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -370,7 +370,7 @@
         <value>Check your email to continue the registration process.</value>
     </labels>
     <labels>
-        <fullName>ToggleManager</fullName>
+        <fullName>FieloCMSPLT_ToggleManager</fullName>
         <categories>ToggleManager.component</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -378,7 +378,7 @@
         <value>Set / Unset Manager</value>
     </labels>
     <labels>
-        <fullName>TotalPoints</fullName>
+        <fullName>FieloCMSPLT_TotalPoints</fullName>
         <categories>ShoppingCart.component</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -386,7 +386,7 @@
         <value>Total Points</value>
     </labels>
     <labels>
-        <fullName>Unblock</fullName>
+        <fullName>FieloCMSPLT_Unblock</fullName>
         <categories>BlockUnblockMember.component</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -394,7 +394,7 @@
         <value>Unblock</value>
     </labels>
     <labels>
-        <fullName>Unset</fullName>
+        <fullName>FieloCMSPLT_Unset</fullName>
         <categories>ToggleManager.component</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -402,7 +402,7 @@
         <value>Unset</value>
     </labels>
     <labels>
-        <fullName>UsernameIsRequired</fullName>
+        <fullName>FieloCMSPLT_UsernameIsRequired</fullName>
         <categories>ForgotPasswordFieloController.cls</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -410,28 +410,28 @@
         <value>E-mail is required</value>
     </labels>
     <labels>
-        <fullName>Voucher</fullName>
+        <fullName>FieloCMSPLT_Voucher</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Voucher</shortDescription>
         <value>Voucher</value>
     </labels>
     <labels>
-        <fullName>Welcome</fullName>
+        <fullName>FieloCMSPLT_Welcome</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Welcome</shortDescription>
         <value>Registration Step 2</value>
     </labels>
     <labels>
-        <fullName>Wish</fullName>
+        <fullName>FieloCMSPLT_Wish</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>zz_deprecated_Fielo_WishOff</shortDescription>
         <value>Wish</value>
     </labels>
     <labels>
-        <fullName>security_error_field_not_insertable</fullName>
+        <fullName>FieloCMSPLT_security_error_field_not_insertable</fullName>
         <categories>security,error</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -439,7 +439,7 @@
         <value>You do not have permission to insert field {1} on {0}</value>
     </labels>
     <labels>
-        <fullName>security_error_field_not_readable</fullName>
+        <fullName>FieloCMSPLT_security_error_field_not_readable</fullName>
         <categories>security,error</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -447,7 +447,7 @@
         <value>You do not have permission to read the field {1} on {0}</value>
     </labels>
     <labels>
-        <fullName>security_error_field_not_updateable</fullName>
+        <fullName>FieloCMSPLT_security_error_field_not_updateable</fullName>
         <categories>security,error</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -455,14 +455,14 @@
         <value>You do not have permission to update the field {1} on {0}</value>
     </labels>
     <labels>
-        <fullName>security_error_object_not_deletable</fullName>
+        <fullName>FieloCMSPLT_security_error_object_not_deletable</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>security_error_object_not_deletable</shortDescription>
         <value>You do not have permission to delete {0}</value>
     </labels>
     <labels>
-        <fullName>security_error_object_not_insertable</fullName>
+        <fullName>FieloCMSPLT_security_error_object_not_insertable</fullName>
         <categories>security,error</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -470,7 +470,7 @@
         <value>You do not have permission to insert {0}</value>
     </labels>
     <labels>
-        <fullName>security_error_object_not_readable</fullName>
+        <fullName>FieloCMSPLT_security_error_object_not_readable</fullName>
         <categories>security,error</categories>
         <language>en_US</language>
         <protected>false</protected>
@@ -478,7 +478,7 @@
         <value>You do not have permission to read {0}</value>
     </labels>
     <labels>
-        <fullName>security_error_object_not_updateable</fullName>
+        <fullName>FieloCMSPLT_security_error_object_not_updateable</fullName>
         <categories>security,error</categories>
         <language>en_US</language>
         <protected>false</protected>

@@ -13,7 +13,7 @@
           <!--Checkbox -->
           <label class="fielo-input--is-checkbox">
             <input type="checkbox" class="cms-plt-agreement__checkbox"/> 
-            <apex:outputText value="{!$Label.IAgree}" styleClass="cms-plt-agreement__label" /> 
+            <apex:outputText value="{!$Label.FieloCMSPLT_IAgree}" styleClass="cms-plt-agreement__label" /> 
           </label>
           <!--Button -->
           <apex:commandButton action="{!doSave}" value="{!$Label.fieloplt__save}" styleClass="fielo-button fielo-button__submit slds-hide" />

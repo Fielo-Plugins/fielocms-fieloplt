@@ -19,12 +19,12 @@ public class FieloCMSPLT_LoginService {
 
         //if the member was not found throws an error
         if(membersByEmail.isEmpty()){
-            throw new FieloException(Label.ErrorLoginProgramValidation);
+            throw new FieloException(Label.FieloCMSPLT_ErrorLoginProgramValidation);
         }
 
         //if the member was found but is blocked thtrows an error
         if(membersByEmail.get(0).FieloPLT__Status__c == 'Blocked'){
-            throw new FieloException(Label.ErrorLoginMemberBlocked);
+            throw new FieloException(Label.FieloCMSPLT_ErrorLoginMemberBlocked);
         }
 
         /*
@@ -46,7 +46,7 @@ public class FieloCMSPLT_LoginService {
     public static PageReference forgotPassword(String userName){
         //Validates if the userName is not empty
         if(String.isBlank(username)){
-            throw new FieloException(Label.UsernameIsRequired);
+            throw new FieloException(Label.FieloCMSPLT_UsernameIsRequired);
             return null;
         }
         //looks if the user is inactive and then activates the user
@@ -60,7 +60,7 @@ public class FieloCMSPLT_LoginService {
             }
         //if the user does not exist an error is returned
         }else{
-            throw new FieloException(Label.ErrorMemberForgotPasswordInexist);
+            throw new FieloException(Label.FieloCMSPLT_ErrorMemberForgotPasswordInexist);
         }
 
         Site.forgotPassword(username);

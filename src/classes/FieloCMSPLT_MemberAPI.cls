@@ -71,7 +71,7 @@ global with sharing class FieloCMSPLT_MemberAPI implements FieloCMS.DataInterfac
             }
             member.FieloPLT__Program__c = component.FieloCMSPLT_Program__c;
             FieloPLT.MemberService.register(member, registerType, component.FieloCMSPLT_AccountOwner__c);
-            successMessages.add(new FieloCMS.RemoteActionResult.RemoteActionMessage( ApexPages.Severity.Info, Label.SucessRegistrationStep1 ));
+            successMessages.add(new FieloCMS.RemoteActionResult.RemoteActionMessage( ApexPages.Severity.Info, Label.FieloCMSPLT_SucessRegistrationStep1 ));
         }catch(DmlException e){
             Database.rollback(sp);
             if(ApexPages.hasMessages()){
