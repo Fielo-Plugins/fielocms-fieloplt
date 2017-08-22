@@ -11,8 +11,8 @@ public with sharing class FieloCMSPLT_MemberService {
 
         if(memId == null){
             SessionCache__c sessionCache = SessionCache__c.getInstance(UserInfo.getUserId());
-            if((sessionCache.SessionId__c == UserInfo.getSessionId() || UserInfo.getUserType() == 'Standard') && sessionCache.MemberId__c != null){
-                memId = sessionCache.MemberId__c;
+            if((sessionCache.FieloCMSPLT_SessionId__c == UserInfo.getSessionId() || UserInfo.getUserType() == 'Standard') && sessionCache.FieloCMSPLT_MemberId__c != null){
+                memId = sessionCache.FieloCMSPLT_MemberId__c;
             }else{
                 try{
                     List<FieloPLT__Member__c> members = [SELECT Id, FieloPLT__Program__c FROM FieloPLT__Member__c WHERE FieloPLT__User__c =: UserInfo.getUserId()];
@@ -42,8 +42,8 @@ public with sharing class FieloCMSPLT_MemberService {
         //ApexPages.currentPage().setCookies(new Cookie[]{new Cookie('memberId', memberId, null, -1,true),new Cookie('sessionMemberId', UserInfo.getSessionId(), null, -1,false)});
 
         SessionCache__c sessionCache = SessionCache__c.getInstance(UserInfo.getUserId());
-        sessionCache.SessionId__c = UserInfo.getSessionId();
-        sessionCache.MemberId__c = memberId;
+        sessionCache.FieloCMSPLT_SessionId__c = UserInfo.getSessionId();
+        sessionCache.FieloCMSPLT_MemberId__c = memberId;
         upsert sessionCache;
     }
 

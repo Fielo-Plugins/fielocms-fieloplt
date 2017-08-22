@@ -50,12 +50,12 @@ public with sharing class FieloCMSPLT_LoginAsBackendController {
         LoginAsLog__c log = new LoginAsLog__c(UserId__c = siteUser.Id);               
         Datetime dt = Datetime.now();
         log.Name = String.valueOf(dt.Year()) + String.valueOf(dt.month()) + String.valueOf(dt.day()) + String.valueOf(dt.hour()) + String.valueOf(dt.minute()) + String.valueOf(dt.second()) + UserInfo.getUserId();         
-        log.MemberId__c = memberId;
+        log.FieloCMSPLT_MemberId__c = memberId;
         insert log;
 
         //set the custom setting with memberid, hash and expiration date
         FrontEndSessionData__c fe = FrontEndSessionData__c.getInstance(siteUser.Id);
-        fe.MemberId__c = memberId;
+        fe.FieloCMSPLT_MemberId__c = memberId;
         fe.Hash__c = String.valueOf(Crypto.getRandomLong());//String.ValueOf((dt.millisecond() * dt.Year())/(dt.minute()+1));
         fe.ExpirationDate__c = System.now().addMinutes(5);
         upsert fe;            
