@@ -15,7 +15,7 @@ public class FieloCMSPLT_LoginService {
 
         FieloPLT__Program__c program = ProgramService.getCurrentProgram();
         //look for the member related to the username
-        List<FieloPLT__Member__c> membersByEmail = [SELECT FieloPLT__Status__c, FieloPLT__User__c, FieloPLT__Program__r.UseAgreement__c FROM FieloPLT__Member__c WHERE FieloPLT__Email__c =: username AND FieloPLT__Program__c =: program.Id];
+        List<FieloPLT__Member__c> membersByEmail = [SELECT FieloPLT__Status__c, FieloPLT__User__c, FieloPLT__Program__r.FieloCMSPLT_UseAgreement__c FROM FieloPLT__Member__c WHERE FieloPLT__Email__c =: username AND FieloPLT__Program__c =: program.Id];
 
         //if the member was not found throws an error
         if(membersByEmail.isEmpty()){
@@ -31,9 +31,9 @@ public class FieloCMSPLT_LoginService {
         //check selection member page
         if(membersByEmail.get(0).FieloPLT__User__c != null){
             List<FieloPLT__Member__c> relatedMembers = new MembersSelector().selectRelatedMembers(UserInfo.getUserId(), program.Id);
-            if(relatedMembers.size() > 1 && String.isNotBlank(program.MemberSelectionPage__c)){
+            if(relatedMembers.size() > 1 && String.isNotBlank(program.FieloCMSPLT_MemberSelectionPage__c)){
                 PageReference selectionPage = new PageReference('/FieloCMS__Page');
-                selectionPage.getParameters().put('pageId',program.MemberSelectionPage__c);
+                selectionPage.getParameters().put('pageId',program.FieloCMSPLT_MemberSelectionPage__c);
                 startUrl = selectionPage.getUrl();
             }
         }*/

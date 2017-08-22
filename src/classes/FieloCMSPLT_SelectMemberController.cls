@@ -20,10 +20,10 @@ global with sharing class FieloCMSPLT_SelectMemberController implements FieloCMS
                 //recalculate segments for the new member
                 FieloPLT.SegmentService.getMemberSegments(memberId, null);
             }else{
-                FieloPLT__Member__c member = new FieloCMSPLT_MembersSelector(new Set<String>{'FieloPLT__OrganizationAccount__c'}).selectById(new Set<Id>{memberId})[0];
-                FieloCMSPLT_MemberService.setCurrentMemberId(member.FieloPLT__OrganizationAccount__c);
+                FieloPLT__Member__c member = new FieloCMSPLT_MembersSelector(new Set<String>{'FieloPLT__OrganizationFieloCMSPLT_Account__c'}).selectById(new Set<Id>{memberId})[0];
+                FieloCMSPLT_MemberService.setCurrentMemberId(member.FieloPLT__OrganizationFieloCMSPLT_Account__c);
                 //recalculate segments for the new member
-                FieloPLT.SegmentService.getMemberSegments(member.FieloPLT__OrganizationAccount__c, null);
+                FieloPLT.SegmentService.getMemberSegments(member.FieloPLT__OrganizationFieloCMSPLT_Account__c, null);
             }
             
             result.redirectURL = '/';                                   

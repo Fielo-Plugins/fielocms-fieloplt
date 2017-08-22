@@ -1,6 +1,6 @@
 <apex:component layout="none" controller="FieloCMSPLT_RegisterStep2Controller" allowDML="true" access="global">
-    <apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.AccountCRMMode__c.Name}" />
-    <apex:variable var="namespace" value="{!SUBSTITUTE(SUBSTITUTE(fieldName,'AccountCRMMode__c',''),'__','.')}" />
+    <apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.FieloCMSPLT_AccountCRMMode__c.Name}" />
+    <apex:variable var="namespace" value="{!SUBSTITUTE(SUBSTITUTE(fieldName,'FieloCMSPLT_AccountCRMMode__c',''),'__','.')}" />
     <apex:attribute name="config" type="FieloCMS__Component__c" description="" />
     <div class="fielo-form fieloplt-register-step-2 fielo-widget fielo-js-component" data-componentid="{!config.Id}" >
         <div class="fielo-title">{!$Label.Welcome}</div>
@@ -35,7 +35,7 @@
             <form class="fielo-js-upgrade register-step-2-form" data-remoteaction="{!namespace}RegisterStep2Controller.finishRegistration" data-remotearguments="SObject,password" data-remoteobject="Member__c" >
                 <fieldset>
                     <input type="hidden" name="SObject.id" value="{!member.Id}" />
-                    <apex:repeat value="{!$ObjectType.FieloPLT__Member__c.FieldSets.RegistrationStep2}" var="field" >
+                    <apex:repeat value="{!$ObjectType.FieloPLT__Member__c.FieldSets.FieloCMSPLT_RegistrationStep2}" var="field" >
                         <div class="mdl-grid fielo-field fielo-field--is-{!field}">
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__label" >
                                 <label for="{!field}" >{!$ObjectType.FieloPLT__Member__c.fields[field].label}</label>

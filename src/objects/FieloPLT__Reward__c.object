@@ -17,7 +17,7 @@
         <label>Shopping Cart</label>
     </fieldSets>
     <fields>
-        <fullName>Category__c</fullName>
+        <fullName>FieloCMSPLT_Category__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <description>Group in which a Reward can be included.</description>
         <externalId>false</externalId>
@@ -32,7 +32,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>InstructionsRichText__c</fullName>
+        <fullName>FieloCMSPLT_InstructionsRichText__c</fullName>
         <description>It allows rich text to be included in the instructions.</description>
         <externalId>false</externalId>
         <inlineHelpText>Enter rich text to be included in the instructions.</inlineHelpText>

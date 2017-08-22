@@ -33,9 +33,9 @@ public with sharing class FieloCMSPLT_SegmentsSelectionController {
         String recordQuery;
 
         if(String.isBlank(programField)){
-            record = Database.query('SELECT ' + 'Segment__c' + ', ' + 'Segment__r.FieloPLT__RelatedSegments__c FROM ' + objectName + ' WHERE Id =: id' );
+            record = Database.query('SELECT ' + 'FieloCMSPLT_Segment__c' + ', ' + 'Segment__r.FieloPLT__RelatedSegments__c FROM ' + objectName + ' WHERE Id =: id' );
         }else{
-            record = Database.query('SELECT ' + programField + ', ' + 'Segment__c' + ', ' + 'Segment__r' + '.FieloPLT__RelatedSegments__c FROM ' + objectName + ' WHERE Id =: id' );
+            record = Database.query('SELECT ' + programField + ', ' + 'FieloCMSPLT_Segment__c' + ', ' + 'Segment__r' + '.FieloPLT__RelatedSegments__c FROM ' + objectName + ' WHERE Id =: id' );
         }
 
         programId = String.isBlank(programField) ? null : (Id)record.get(programField);
@@ -116,7 +116,7 @@ public with sharing class FieloCMSPLT_SegmentsSelectionController {
             }
         }
 
-        record.put('Segment__c', getMetaSegmentId(segmentsToSave, programId));
+        record.put('FieloCMSPLT_Segment__c', getMetaSegmentId(segmentsToSave, programId));
         update record;
 
         return null;

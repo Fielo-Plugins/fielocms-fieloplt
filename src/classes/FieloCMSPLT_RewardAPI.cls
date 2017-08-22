@@ -20,7 +20,7 @@ global with sharing class FieloCMSPLT_RewardAPI implements FieloCMS.DataInterfac
         if(filters != null){
             Map<String,Object> filtersMap = (Map<String,Object>) JSON.deserializeUntyped(filters);
             for(String s : filtersMap.keySet()){
-                if(s == 'Category__c'){
+                if(s == 'FieloCMSPLT_Category__c'){
                     categoryId = (String)filtersMap.get(s);
                 }else if(s == 'Tag__c'){
                     tagId = (String)filtersMap.get(s);
@@ -44,9 +44,9 @@ global with sharing class FieloCMSPLT_RewardAPI implements FieloCMS.DataInterfac
         String rewardIds = null;
         if(tagId != null){
             rewardIds = '(';
-            for(FieloCMS__TagItem__c tag: [SELECT Reward__c FROM FieloCMS__TagItem__c WHERE FieloCMS__Tag__c =: tagId AND Reward__c != null]){
-                setTaggedRewards.add(tag.Reward__c);
-                rewardIds += '\'' + tag.Reward__c + '\'' + ',';
+            for(FieloCMS__TagItem__c tag: [SELECT FieloCMSPLT_Reward__c FROM FieloCMS__TagItem__c WHERE FieloCMS__Tag__c =: tagId AND FieloCMSPLT_Reward__c != null]){
+                setTaggedRewards.add(tag.FieloCMSPLT_Reward__c);
+                rewardIds += '\'' + tag.FieloCMSPLT_Reward__c + '\'' + ',';
             }
             rewardIds = rewardIds.removeEnd(',');
             rewardIds += ')';
@@ -58,7 +58,7 @@ global with sharing class FieloCMSPLT_RewardAPI implements FieloCMS.DataInterfac
         //builds the where condition
         String whereCondition = '';
         whereCondition = whereCondition + '(FieloPLT__Program__c = ' + null + ' OR FieloPLT__Program__c = \'' + program.Id + '\')';
-        whereCondition += categoryId != null ? ' AND Category__c = \'' + categoryId + '\'' : '';
+        whereCondition += categoryId != null ? ' AND FieloCMSPLT_Category__c = \'' + categoryId + '\'' : '';
         whereCondition += (tagId != null && rewardIds != null) ? ' AND Id IN ' + rewardIds : '';
 
         return FieloPLT.RewardService.getRewards(FieloCMSPLT_OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c), FieloCMSPLT_MemberService.getCurrentMemberId(), component.FieloCMS__Limit__c.intValue(), offset, orderBy, whereCondition);

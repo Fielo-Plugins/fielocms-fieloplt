@@ -17,7 +17,7 @@ public with sharing class FieloCMSPLT_MediaService {
             }else{
                 appliedSegments.add([SELECT Id FROM FieloPLT__Segment__c WHERE RecordType.DeveloperName = 'Private' LIMIT 1].Id);
             }
-            query += ' AND (FieloCMS__Media__r.Segment__c = ' + null + ' OR FieloCMS__Media__r.Segment__c IN : appliedSegments) ';
+            query += ' AND (FieloCMS__Media__r.FieloCMSPLT_Segment__c = ' + null + ' OR FieloCMS__Media__r.FieloCMSPLT_Segment__c IN : appliedSegments) ';
 
             // ORDER BY,  LIMIT & OFFSET
             if( String.isNotBlank(orderBy) ){
@@ -46,7 +46,7 @@ public with sharing class FieloCMSPLT_MediaService {
         }else{
             appliedSegments.add([SELECT Id FROM FieloPLT__Segment__c WHERE RecordType.DeveloperName = 'Private' LIMIT 1].Id);
         }
-        query += ' WHERE (Segment__c = ' + null + ' OR Segment__c IN : appliedSegments) ';
+        query += ' WHERE (FieloCMSPLT_Segment__c = ' + null + ' OR FieloCMSPLT_Segment__c IN : appliedSegments) ';
 
         // ORDER BY,  LIMIT & OFFSET
         if( String.isNotBlank(orderBy) ){

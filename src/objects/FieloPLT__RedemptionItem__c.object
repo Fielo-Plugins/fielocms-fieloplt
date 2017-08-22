@@ -37,7 +37,7 @@
         <label>Voucher</label>
     </fieldSets>
     <fields>
-        <fullName>VoucherLink__c</fullName>
+        <fullName>FieloCMSPLT_VoucherLink__c</fullName>
         <externalId>false</externalId>
         <formula>IF(
 ISPICKVAL( FieloPLT__Status__c ,&apos;Ready&apos; ) ,

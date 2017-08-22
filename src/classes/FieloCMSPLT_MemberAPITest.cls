@@ -40,7 +40,7 @@ private class FieloCMSPLT_MemberAPITest{
         insert a;
         FieloPLT__Member__c orgAccount = new FieloPLT__Member__c(Name = 'test', FieloPLT__Email__c = 'test@fielo.com', FieloPLT__Program__c = programId, FieloPLT__Type__c = 'Organization Account', FieloPLT__Account__c = a.Id);
         insert orgAccount;
-        FieloPLT__Member__c contributor = new FieloPLT__Member__c(Name = 'test123', FieloPLT__Email__c = 'test123@fielo.com', FieloPLT__Program__c = programId, FieloPLT__Type__c = 'Organization contributor', FieloPLT__OrganizationAccount__c = orgAccount.Id);
+        FieloPLT__Member__c contributor = new FieloPLT__Member__c(Name = 'test123', FieloPLT__Email__c = 'test123@fielo.com', FieloPLT__Program__c = programId, FieloPLT__Type__c = 'Organization contributor', FieloPLT__OrganizationFieloCMSPLT_Account__c = orgAccount.Id);
         insert contributor;
         c.remoteComponentAction(component1, contributor, '');
     }

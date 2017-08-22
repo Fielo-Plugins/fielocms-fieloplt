@@ -1,6 +1,6 @@
 <apex:component layout="none" controller="FieloCMSPLT_ToggleManagerController">
-	<apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.AccountCRMMode__c.Name}" />
-    <apex:variable var="namespace" value="{!SUBSTITUTE(SUBSTITUTE(fieldName,'AccountCRMMode__c',''),'__','.')}" />
+	<apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.FieloCMSPLT_AccountCRMMode__c.Name}" />
+    <apex:variable var="namespace" value="{!SUBSTITUTE(SUBSTITUTE(fieldName,'FieloCMSPLT_AccountCRMMode__c',''),'__','.')}" />
     <apex:variable var="toogleClass" value="{!IF(record['FieloPLT__IsManager__c'] == true, 'fielo-button--danger', 'fielo-button--safe')}" />
     <apex:attribute name="record" type="SObject" description="" />
     <apex:attribute name="field" type="FieloCMS.Field" description="" />

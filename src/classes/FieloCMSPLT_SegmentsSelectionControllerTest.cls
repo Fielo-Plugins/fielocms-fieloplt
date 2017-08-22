@@ -12,7 +12,7 @@ private class FieloCMSPLT_SegmentsSelectionControllerTest {
 		FieloPLT__Segment__c segment2 = new FieloPLT__Segment__c(Name = 'Manual2', recordtypeId = manualId );
 		insert segment2;
 
-		FieloCMS__Post__c post = new FieloCMS__Post__c(Name = 'test', Segment__c = segment.Id);
+		FieloCMS__Post__c post = new FieloCMS__Post__c(Name = 'test', FieloCMSPLT_Segment__c = segment.Id);
 		insert post;
 		ApexPages.currentPage().getParameters().put('id', post.Id);
 

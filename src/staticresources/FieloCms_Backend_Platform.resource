@@ -60,7 +60,7 @@ var QueryString = function () {
     if (this.element_) {
       // Segment lookup
       var segment = document.getElementsByClassName(
-        'fielosf-other-fields__item--Segment__c'
+        'fielosf-other-fields__item--FieloCMSPLT_Segment__c'
       )[0] || null;
 
       // si existe el lookup inicializo el resto de las propiedades

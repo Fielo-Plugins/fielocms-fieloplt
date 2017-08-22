@@ -10,8 +10,8 @@ public without sharing class FieloCMSPLT_Components extends SObjectDomain {
         for(FieloCMS__Component__c record : (List<FieloCMS__Component__c>) records){
             componentLibraryIds.add(record.FieloCMS__ComponentLibrary__c);
 
-            if(record.AccountOwner__c != null){
-                ownerIds.add(record.AccountOwner__c);
+            if(record.FieloCMSPLT_AccountOwner__c != null){
+                ownerIds.add(record.FieloCMSPLT_AccountOwner__c);
             }
         }
         Map<Id, FieloCMS__ComponentLibrary__c> componentLibraryMap = new Map<Id, FieloCMS__ComponentLibrary__c>( new FieloCMSPLT_ComponentsLibrariesSelector(new Set<String>{'FieloCMS__DeveloperName__c'}).selectById(componentLibraryIds) );
@@ -22,34 +22,34 @@ public without sharing class FieloCMSPLT_Components extends SObjectDomain {
         FieloCMS__Component__c shoppingCartComponent = new FieloCMS__Component__c();
         for(FieloCMS__Component__c record : (List<FieloCMS__Component__c>) records){
             if( componentLibraryMap.containsKey(record.FieloCMS__ComponentLibrary__c) && componentLibraryMap.get(record.FieloCMS__ComponentLibrary__c).FieloCMS__DeveloperName__c == 'PlatformPlugin.RegisterStep2' ){
-                if( record.AccountCRMMode__c == null || record.AccountCRMMode__c == '' ){
-                    record.AccountCRMMode__c = 'Standard Account';
-                } else if(record.AccountCRMMode__c == 'Person Account' && !OrganizationUtil.isPersonAccountEnabled()) {
-                    record.AccountCRMMode__c.addError('Must activate Person Account feature.');
-                } else if(record.AccountCRMMode__c == 'Defined Account' && record.Account__c == null) {
-                    record.AccountCRMMode__c.addError('Must select an Account.');
+                if( record.FieloCMSPLT_AccountCRMMode__c == null || record.FieloCMSPLT_AccountCRMMode__c == '' ){
+                    record.FieloCMSPLT_AccountCRMMode__c = 'Standard Account';
+                } else if(record.FieloCMSPLT_AccountCRMMode__c == 'Person Account' && !OrganizationUtil.isPersonAccountEnabled()) {
+                    record.FieloCMSPLT_AccountCRMMode__c.addError('Must activate Person Account feature.');
+                } else if(record.FieloCMSPLT_AccountCRMMode__c == 'Defined Account' && record.FieloCMSPLT_Account__c == null) {
+                    record.FieloCMSPLT_AccountCRMMode__c.addError('Must select an Account.');
                 }
                 //Owner -> Admin con Role
-                if(record.AccountOwner__c == null ){
-                   record.AccountOwner__c = users.get(0).Id;
-                } else if(usersMap.containsKey(record.AccountOwner__c) && usersMap.get(record.AccountOwner__c).UserRoleId == null){
+                if(record.FieloCMSPLT_AccountOwner__c == null ){
+                   record.FieloCMSPLT_AccountOwner__c = users.get(0).Id;
+                } else if(usersMap.containsKey(record.FieloCMSPLT_AccountOwner__c) && usersMap.get(record.FieloCMSPLT_AccountOwner__c).UserRoleId == null){
                     record.addError('Owner must have a Role.');
                 }
             } else if( componentLibraryMap.containsKey(record.FieloCMS__ComponentLibrary__c) && componentLibraryMap.get(record.FieloCMS__ComponentLibrary__c).FieloCMS__DeveloperName__c == 'PlatformPlugin.RedemptionDetail' ){
                 sectionId.add(record.FieloCMS__Section__c);
-            } else if (componentLibraryMap.containsKey(record.FieloCMS__ComponentLibrary__c) && componentLibraryMap.get(record.FieloCMS__ComponentLibrary__c).FieloCMS__DeveloperName__c == 'PlatformPlugin.ShoppingCart'/* && record.RedirectPage__c == null*/ ) {
+            } else if (componentLibraryMap.containsKey(record.FieloCMS__ComponentLibrary__c) && componentLibraryMap.get(record.FieloCMS__ComponentLibrary__c).FieloCMS__DeveloperName__c == 'PlatformPlugin.ShoppingCart'/* && record.FieloCMSPLT_RedirectPage__c == null*/ ) {
                 shoppingCartComponent = record;
             }
 
             //Program -> el primer program creado
-            if(record.Program__c == null ){
-                record.Program__c = programs.get(0).Id;
+            if(record.FieloCMSPLT_Program__c == null ){
+                record.FieloCMSPLT_Program__c = programs.get(0).Id;
             }
         }
         if( !sectionId.isEmpty() && shoppingCartComponent != null ){
             List<FieloCMS__Section__c> sections = [select Id, FieloCMS__Parent__r.FieloCMS__Page__c from FieloCMS__Section__c where Id =: sectionId];
             if( !sections.isEmpty() ){
-                shoppingCartComponent.RedirectPage__c = sections.get(0).FieloCMS__Parent__r.FieloCMS__Page__c;
+                shoppingCartComponent.FieloCMSPLT_RedirectPage__c = sections.get(0).FieloCMS__Parent__r.FieloCMS__Page__c;
             }
         }
     }
@@ -60,8 +60,8 @@ public without sharing class FieloCMSPLT_Components extends SObjectDomain {
         for(FieloCMS__Component__c record : (List<FieloCMS__Component__c>) records){
             componentLibraryIds.add(record.FieloCMS__ComponentLibrary__c);
 
-            if(record.AccountOwner__c != null){
-                ownerIds.add(record.AccountOwner__c);
+            if(record.FieloCMSPLT_AccountOwner__c != null){
+                ownerIds.add(record.FieloCMSPLT_AccountOwner__c);
             }
         }
         Map<Id, FieloCMS__ComponentLibrary__c> componentLibraryMap = new Map<Id, FieloCMS__ComponentLibrary__c>( new ComponentsLibrariesSelector(new Set<String>{'FieloCMS__DeveloperName__c'}).selectById(componentLibraryIds) );
@@ -70,24 +70,24 @@ public without sharing class FieloCMSPLT_Components extends SObjectDomain {
         List<FieloPLT__Program__c> programs = [SELECT Id, name, CreatedDate FROM FieloPLT__Program__c order by CreatedDate ASC limit 1];
         for(FieloCMS__Component__c record : (List<FieloCMS__Component__c>) records){
             if( componentLibraryMap.containsKey(record.FieloCMS__ComponentLibrary__c) && componentLibraryMap.get(record.FieloCMS__ComponentLibrary__c).FieloCMS__DeveloperName__c == 'PlatformPlugin.RegisterStep2' ){
-                if( record.AccountCRMMode__c == null || record.AccountCRMMode__c == '' ){
-                    record.AccountCRMMode__c.addError('Must select a Mode.');
-                } else if(record.AccountCRMMode__c == 'Person Account' && !OrganizationUtil.isPersonAccountEnabled()) {
-                    record.AccountCRMMode__c.addError('Must activate Person Account feature.');
-                } else if(record.AccountCRMMode__c == 'Defined Account' && record.Account__c == null) {
-                    record.AccountCRMMode__c.addError('Must select an Account.');
+                if( record.FieloCMSPLT_AccountCRMMode__c == null || record.FieloCMSPLT_AccountCRMMode__c == '' ){
+                    record.FieloCMSPLT_AccountCRMMode__c.addError('Must select a Mode.');
+                } else if(record.FieloCMSPLT_AccountCRMMode__c == 'Person Account' && !OrganizationUtil.isPersonAccountEnabled()) {
+                    record.FieloCMSPLT_AccountCRMMode__c.addError('Must activate Person Account feature.');
+                } else if(record.FieloCMSPLT_AccountCRMMode__c == 'Defined Account' && record.FieloCMSPLT_Account__c == null) {
+                    record.FieloCMSPLT_AccountCRMMode__c.addError('Must select an Account.');
                 }
                 //Owner -> Admin con Role
-                if(record.AccountOwner__c == null ){
-                   record.AccountOwner__c.addError('Must select an Owner.');
-                } else if(usersMap.containsKey(record.AccountOwner__c) && usersMap.get(record.AccountOwner__c).UserRoleId == null){
+                if(record.FieloCMSPLT_AccountOwner__c == null ){
+                   record.FieloCMSPLT_AccountOwner__c.addError('Must select an Owner.');
+                } else if(usersMap.containsKey(record.FieloCMSPLT_AccountOwner__c) && usersMap.get(record.FieloCMSPLT_AccountOwner__c).UserRoleId == null){
                     record.addError('Owner must have a Role.');
                 }
             }
 
             //Program -> el primer program creado
-            if(record.Program__c == null ){
-                record.Program__c.addError('Must select a Program.');
+            if(record.FieloCMSPLT_Program__c == null ){
+                record.FieloCMSPLT_Program__c.addError('Must select a Program.');
             }
         }
     }

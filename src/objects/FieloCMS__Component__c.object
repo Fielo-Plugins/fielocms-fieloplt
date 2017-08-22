@@ -2,7 +2,7 @@
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <fields>
-        <fullName>AccountCRMMode__c</fullName>
+        <fullName>FieloCMSPLT_AccountCRMMode__c</fullName>
         <description>Person Account: Create a new Person Account related to the member
 Standard Account: Create a new Standard CRM Account related to the member
 Default Account: The member will be related to an specific default CRM account</description>
@@ -34,7 +34,7 @@ Default Account: The member will be related to an specific default CRM account</
         </valueSet>
     </fields>
     <fields>
-        <fullName>AccountOwner__c</fullName>
+        <fullName>FieloCMSPLT_AccountOwner__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <description>To create CRM account, it is needed a defined user with role as a owner</description>
         <externalId>false</externalId>
@@ -47,7 +47,7 @@ Default Account: The member will be related to an specific default CRM account</
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>Account__c</fullName>
+        <fullName>FieloCMSPLT_Account__c</fullName>
         <deleteConstraint>Restrict</deleteConstraint>
         <externalId>false</externalId>
         <label>Account</label>
@@ -59,7 +59,7 @@ Default Account: The member will be related to an specific default CRM account</
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>Program__c</fullName>
+        <fullName>FieloCMSPLT_Program__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>Program</label>
@@ -71,7 +71,7 @@ Default Account: The member will be related to an specific default CRM account</
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>RedirectPage__c</fullName>
+        <fullName>FieloCMSPLT_RedirectPage__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>Redirect Page</label>

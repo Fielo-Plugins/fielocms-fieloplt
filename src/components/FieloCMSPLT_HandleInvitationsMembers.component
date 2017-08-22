@@ -1,6 +1,6 @@
 <apex:component layout="none" controller="FieloCMSPLT_HandleInvitationsMembersController">
-    <apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.AccountCRMMode__c.Name}" />
-    <apex:variable var="namespace" value="{!SUBSTITUTE(SUBSTITUTE(fieldName,'AccountCRMMode__c',''),'__','.')}" />
+    <apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.FieloCMSPLT_AccountCRMMode__c.Name}" />
+    <apex:variable var="namespace" value="{!SUBSTITUTE(SUBSTITUTE(fieldName,'FieloCMSPLT_AccountCRMMode__c',''),'__','.')}" />
     <apex:attribute name="record" type="SObject" description="" />
     <apex:attribute name="field" type="FieloCMS.Field" description="" />
     <apex:panelGroup layout="none" rendered="{!record['FieloPLT__Status__c'] = 'New'}" >

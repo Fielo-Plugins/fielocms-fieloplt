@@ -9,7 +9,7 @@ public with sharing class FieloCMSPLT_MembersSelector extends SObjectSelector{
 			FieloPLT__Member__c.FieloPLT__User__c,
 			FieloPLT__Member__c.FieloPLT__Account__c,
 			FieloPLT__Member__c.FieloPLT__Status__c,
-            FieloPLT__Member__c.FieloPLT__OrganizationAccount__c,
+            FieloPLT__Member__c.FieloPLT__OrganizationFieloCMSPLT_Account__c,
             FieloPLT__Member__c.FieloPLT__Contact__c,
             FieloPLT__Member__c.FieloPLT__IsManager__c
 		};
@@ -34,8 +34,8 @@ public with sharing class FieloCMSPLT_MembersSelector extends SObjectSelector{
 	public List<FieloPLT__Member__c> selectRelatedMembers(Id userId, Id programId){
 		assertIsAccessible();
 		String fieldSet = getFieldListString();
-		if(!fieldset.contains('OrganizationAccount__c')){
-			fieldSet += ',OrganizationAccount__c';
+		if(!fieldset.contains('OrganizationFieloCMSPLT_Account__c')){
+			fieldSet += ',OrganizationFieloCMSPLT_Account__c';
 		}
 		if(!fieldset.contains('IsManager__c')){
 			fieldSet += ',IsManager__c';
@@ -58,7 +58,7 @@ public with sharing class FieloCMSPLT_MembersSelector extends SObjectSelector{
 		String query = String.format(
 				'select {0} ' +
 				  'from {1} ' +
-				  'where FieloPLT__OrganizationAccount__c =: orgAccountId {2} {3}',
+				  'where FieloPLT__OrganizationFieloCMSPLT_Account__c =: orgAccountId {2} {3}',
 				new List<String> {getFieldListString(),getSObjectName(),getLimitCondition(), getOffsetCondition()});
 
 		return (List<FieloPLT__Member__c>) Database.query(query);

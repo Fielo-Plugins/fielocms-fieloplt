@@ -87,7 +87,7 @@ public with sharing class FieloCMSPLT_ProgramsSelector extends SObjectSelector{
           String.format(
           'select {0} ' +
             'from {1} ' +
-            'where SiteDomain__c =: siteDomain ' +
+            'where FieloCMSPLT_SiteDomain__c =: siteDomain ' +
             'order by {2}',
           new List<String> {
             getFieldListString(),

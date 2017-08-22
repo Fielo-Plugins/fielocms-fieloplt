@@ -17,7 +17,7 @@ private class FieloCMSPLT_HandleInvitationsMembersControllerTest {
 		insert a;
 		FieloPLT__Member__c orgaAccount = new FieloPLT__Member__c(Name = 'test', FieloPLT__Account__c = a.Id, FieloPLT__Program__c = program.Id, FieloPLT__Status__c = 'Active', FieloPLT__Email__c = 'test1@fielo.com', FieloPLT__Type__c = 'Organization Account');
 		insert orgaAccount;
-		FieloPLT__Member__c member = new FieloPLT__Member__c(Name = 'test', FieloPLT__Email__c = 'test@fielo.com', FieloPLT__Program__c = program.Id, FieloPLT__User__c = UserInfo.getUserId(), FieloPLT__OrganizationAccount__c = orgaAccount.Id, FieloPLT__Type__c = 'Organization Contributor');
+		FieloPLT__Member__c member = new FieloPLT__Member__c(Name = 'test', FieloPLT__Email__c = 'test@fielo.com', FieloPLT__Program__c = program.Id, FieloPLT__User__c = UserInfo.getUserId(), FieloPLT__OrganizationFieloCMSPLT_Account__c = orgaAccount.Id, FieloPLT__Type__c = 'Organization Contributor');
 		insert member;
 
 		

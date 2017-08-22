@@ -14,7 +14,7 @@ public class FieloCMSPLT_NavigationService {
 			appliedSegments.add([SELECT Id FROM FieloPLT__Segment__c WHERE RecordType.DeveloperName = 'Private' LIMIT 1].Id);
 		}
 
-        query += ' AND (Segment__c = ' + null + ' OR Segment__c IN : appliedSegments) ';
+        query += ' AND (FieloCMSPLT_Segment__c = ' + null + ' OR FieloCMSPLT_Segment__c IN : appliedSegments) ';
 
 		query += ' ORDER BY FieloCMS__Order__c';
 

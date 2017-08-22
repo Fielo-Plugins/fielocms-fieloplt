@@ -2,7 +2,7 @@
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <fieldSets>
-        <fullName>RegistrationStep2</fullName>
+        <fullName>FieloCMSPLT_RegistrationStep2</fullName>
         <description>Highlight information on the member page layout</description>
         <displayedFields>
             <field>Name</field>
@@ -12,10 +12,10 @@
         <label>RegistrationStep2</label>
     </fieldSets>
     <fields>
-        <fullName>SiteURL__c</fullName>
+        <fullName>FieloCMSPLT_SiteURL__c</fullName>
         <description>Link that allows Members to finish their registration process.</description>
         <externalId>false</externalId>
-        <formula>FieloPLT__Program__r.SiteURL__c +  &apos;FieloCMS__Page?memberId=&apos; + Id + &apos;&amp;pageId=&apos; +  FieloPLT__Program__r.RegisterStep2Page__c</formula>
+        <formula>FieloPLT__Program__r.FieloCMSPLT_SiteURL__c +  &apos;FieloCMS__Page?memberId=&apos; + Id + &apos;&amp;pageId=&apos; +  FieloPLT__Program__r.FieloCMSPLT_RegisterStep2Page__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <inlineHelpText>Link that allows Members to finish their registration process.</inlineHelpText>
         <label>Site URL</label>

@@ -254,14 +254,14 @@ public abstract class FieloCMSPLT_SObjectSelector{
             if(hasCondition)
                 conditions += ' AND ';
 
-            conditions += 'Program__c =: programId';
+            conditions += 'FieloCMSPLT_Program__c =: programId';
             hasCondition = true;
         }
         if( !categoriesIds.isEmpty() ){
             if(hasCondition)
                 conditions += ' AND ';
 
-            conditions += 'Category__c =: programId';
+            conditions += 'FieloCMSPLT_Category__c =: programId';
             hasCondition = true;
         }
 

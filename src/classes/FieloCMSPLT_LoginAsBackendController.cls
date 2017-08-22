@@ -4,7 +4,7 @@ public with sharing class FieloCMSPLT_LoginAsBackendController {
         /*//get member Id
         String memberId = system.currentPageReference().getParameters().get('memberId');
         //look for the site url of the program's member
-        FieloPLT__Member__c member = [SELECT FieloPLT__Program__r.SiteURL__c, FieloPLT__Program__c, Name FROM FieloPLT__Member__c WHERE Id =: memberId];
+        FieloPLT__Member__c member = [SELECT FieloPLT__Program__r.FieloCMSPLT_SiteURL__c, FieloPLT__Program__c, Name FROM FieloPLT__Member__c WHERE Id =: memberId];
 
         User siteUser;
         //look if exists the test user
@@ -23,7 +23,7 @@ public with sharing class FieloCMSPLT_LoginAsBackendController {
             }
 
             Profile fieloProfile = MemberUtil.getFieloProfile(member.FieloPLT__Program__c);
-            Program__c program = new ProgramsSelector().selectById(new Set<Id>{member.Program__c})[0];
+            FieloCMSPLT_Program__c program = new ProgramsSelector().selectById(new Set<Id>{member.FieloCMSPLT_Program__c})[0];
             
             String withSameLastName = String.valueOf([SELECT Id FROM User WHERE LastName =: UserInfo.getLastName()].size());
             siteUser = new User(Username = 'site_' + UserInfo.getUsername(), FirstName = UserInfo.getFirstName(), LastName = UserInfo.getLastName(), Email = 'site_' + UserInfo.getUserEmail(), CommunityNickname = 'site_' + UserInfo.getLastName() + withSameLastName);
@@ -63,8 +63,8 @@ public with sharing class FieloCMSPLT_LoginAsBackendController {
         //redirects to the site
         PageReference retPage;
 
-        if(member.Program__r.SiteURL__c != null && member.Program__r.SiteURL__c != ''){
-            String siteURL = member.Program__r.SiteURL__c;
+        if(member.Program__r.FieloCMSPLT_SiteURL__c != null && member.Program__r.FieloCMSPLT_SiteURL__c != ''){
+            String siteURL = member.Program__r.FieloCMSPLT_SiteURL__c;
             siteURL = siteURL.replace('http://', 'https://');
             if (siteURL.indexOf('https://') < 0){
                 siteURL = 'https://' + siteURL;

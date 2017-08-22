@@ -50,7 +50,7 @@ global with sharing class FieloCMSPLT_ShoppingCartController {
 
     @RemoteAction
     global static FieloCMS.RemoteActionResult checkout(Id componentId, String newQuantJSON){
-        FieloCMS__Component__c component = [SELECT FieloCMS__DetailParameter__c, RedirectPage__c FROM FieloCMS__Component__c WHERE Id =: componentId];
+        FieloCMS__Component__c component = [SELECT FieloCMS__DetailParameter__c, FieloCMSPLT_RedirectPage__c FROM FieloCMS__Component__c WHERE Id =: componentId];
         FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
         Savepoint sp = Database.setSavepoint();
         try{
@@ -60,7 +60,7 @@ global with sharing class FieloCMSPLT_ShoppingCartController {
                 redemption = FieloPLT.RedemptionService.createRedemptions(quantitiesMap, MemberService.getCurrentMemberId())[0];
                 if(redemption.FieloPLT__Status__c == 'Closed'){
                     PageReference retPage = Page.FieloCMS__Page;
-                    retPage.getParameters().put('pageId',component.RedirectPage__c);
+                    retPage.getParameters().put('pageId',component.FieloCMSPLT_RedirectPage__c);
                     retPage.getParameters().put(component.FieloCMS__DetailParameter__c,redemption.Id);
                     result.redirectURL = retPage.getUrl().replace('/apex','');
                 }else{

@@ -1,6 +1,6 @@
 <apex:component controller="FieloCMSPLT_ShoppingCartController" allowDML="true" access="global" layout="none">
-	<apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.AccountCRMMode__c.Name}" />
-    <apex:variable var="namespace" value="{!SUBSTITUTE(SUBSTITUTE(fieldName,'AccountCRMMode__c',''),'__','.')}" />
+	<apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.FieloCMSPLT_AccountCRMMode__c.Name}" />
+    <apex:variable var="namespace" value="{!SUBSTITUTE(SUBSTITUTE(fieldName,'FieloCMSPLT_AccountCRMMode__c',''),'__','.')}" />
     <apex:attribute name="config" type="FieloCMS__Component__c" description="" />
     <apex:panelGroup layout="none" rendered="{!config.FieloCMS__Layout__c != 'View'}" >
         <apex:panelGroup rendered="{!rewards.size > 0}" layout="none">

@@ -131,7 +131,7 @@
             <div class="cms-plt-voucher__name">{!v.redemptionItem.FieloPLT__Reward__r.Name}</div>
           </div>
           <div class="cms-plt-voucher__header--c-20">
-            <apex:panelGroup rendered="{!program.ShowVoucherCode__c}" layout="none" >
+            <apex:panelGroup rendered="{!program.FieloCMSPLT_ShowVoucherCode__c}" layout="none" >
               <c:BarCode code="{!v.redemptionItem.FieloPLT__UniqueCode__c}"/>
             </apex:panelGroup>
           </div>
@@ -164,14 +164,14 @@
           <!-- Instrucciones Reward -->
           <apex:panelGroup rendered="{!NOT(ISBLANK(v.instructionsReward))}">
             <div class="cms-plt-voucher__reward-instruction">
-              <span class="cms-plt-voucher__reward-instruction-label">{!$ObjectType.FieloPLT__Reward__c.Fields.InstructionsRichText__c.label}:</span>
+              <span class="cms-plt-voucher__reward-instruction-label">{!$ObjectType.FieloPLT__Reward__c.Fields.FieloCMSPLT_InstructionsRichText__c.label}:</span>
               <span class="cms-plt-voucher__reward-instruction-value">{!v.instructionsReward}</span>
             </div>
           </apex:panelGroup>
           <!-- Instrucciones Generales -->
           <apex:panelGroup rendered="{!NOT(ISBLANK(v.instructionsVoucher))}">
             <div class="cms-plt-voucher__voucher-instruction">
-              <span class="cms-plt-voucher__voucher-instruction-label">{!$ObjectType.FieloPLT__Program__c.Fields.VoucherInstructions__c.label}:</span>
+              <span class="cms-plt-voucher__voucher-instruction-label">{!$ObjectType.FieloPLT__Program__c.Fields.FieloCMSPLT_VoucherInstructions__c.label}:</span>
               <span class="cms-plt-voucher__voucher-instruction-value">{!v.instructionsVoucher}</span>
             </div>
           </apex:panelGroup>

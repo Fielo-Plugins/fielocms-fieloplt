@@ -3,7 +3,7 @@ private class FieloCMSPLT_AgreementAcceptControllerTest{
     @isTest
     static void itShould_1(){
         // Given
-        FieloPLT__Program__c program = new FieloPLT__Program__c(Name = 'Test', SiteDomain__c = 'www.fielo.com');
+        FieloPLT__Program__c program = new FieloPLT__Program__c(Name = 'Test', FieloCMSPLT_SiteDomain__c = 'www.fielo.com');
         insert program;
         
         FieloPLT__Agreement__c agreement = new FieloPLT__Agreement__c(

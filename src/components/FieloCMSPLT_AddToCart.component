@@ -1,5 +1,5 @@
 <apex:component layout="none" >
-    <apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.AccountCRMMode__c.Name}" />
+    <apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.FieloCMSPLT_AccountCRMMode__c.Name}" />
     <apex:attribute name="record" type="SObject" description="" />
     <apex:attribute name="field" type="FieloCMS.Field" description="" />
     <apex:panelGroup rendered="{!!ISPICKVAL($User.UserType,'Guest')}" layout="none">

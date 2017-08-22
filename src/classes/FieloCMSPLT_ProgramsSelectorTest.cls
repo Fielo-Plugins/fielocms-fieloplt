@@ -3,7 +3,7 @@ private class FieloCMSPLT_ProgramsSelectorTest{
 	@isTest
 	static void itShould_1(){
 		// Given
-		FieloPLT__Program__c program1 = new FieloPLT__Program__c(Name = 'Test', SiteDomain__c = 'www.fielo.com');
+		FieloPLT__Program__c program1 = new FieloPLT__Program__c(Name = 'Test', FieloCMSPLT_SiteDomain__c = 'www.fielo.com');
 		insert program1;
 
 		// When
