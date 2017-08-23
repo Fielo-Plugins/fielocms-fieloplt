@@ -1,5 +1,5 @@
 @isTest
-private class FieloCMSPLT_CheckoutControllerTest {
+private class FieloCMSPLT_CheckoutCtrlTest {
 
     static testMethod void checkout1(){
         FieloPLT__Program__c program = new FieloPLT__Program__c(Name = 'test');
@@ -16,8 +16,8 @@ private class FieloCMSPLT_CheckoutControllerTest {
         insert reward;
         Map<Id, Integer> quantityPerReward = new Map<Id, Integer>{reward.Id => 1};
         
-        FieloCMSPLT_CheckoutController controller = new FieloCMSPLT_CheckoutController();
-        FieloCMSPLT_CheckoutController.checkout(reward.Id,1,'www.fielo.com');
+        FieloCMSPLT_CheckoutCtrl controller = new FieloCMSPLT_CheckoutCtrl();
+        FieloCMSPLT_CheckoutCtrl.checkout(reward.Id,1,'www.fielo.com');
         
     }
    
@@ -36,8 +36,8 @@ private class FieloCMSPLT_CheckoutControllerTest {
         insert reward;
         Map<Id, Integer> quantityPerReward = new Map<Id, Integer>{reward.Id => 1};
         
-        FieloCMSPLT_CheckoutController controller = new FieloCMSPLT_CheckoutController();
-        FieloCMSPLT_CheckoutController.checkout(reward.Id,1,'www.fielo.com');
+        FieloCMSPLT_CheckoutCtrl controller = new FieloCMSPLT_CheckoutCtrl();
+        FieloCMSPLT_CheckoutCtrl.checkout(reward.Id,1,'www.fielo.com');
         
     }   
 
@@ -56,8 +56,8 @@ private class FieloCMSPLT_CheckoutControllerTest {
         insert reward;
         Map<Id, Integer> quantityPerReward = new Map<Id, Integer>{member.Id => 1};
         
-        FieloCMSPLT_CheckoutController controller = new FieloCMSPLT_CheckoutController();
-        FieloCMSPLT_CheckoutController.checkout(reward.Id,1,'www.fielo.com');
+        FieloCMSPLT_CheckoutCtrl controller = new FieloCMSPLT_CheckoutCtrl();
+        FieloCMSPLT_CheckoutCtrl.checkout(reward.Id,1,'www.fielo.com');
         
     }
    

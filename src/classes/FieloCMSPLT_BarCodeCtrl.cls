@@ -3,7 +3,7 @@
 * @date 11/08/2011
 * @description Class used to perform a bar code
 */
-global with sharing class FieloCMSPLT_BarCodeController {
+global with sharing class FieloCMSPLT_BarCodeCtrl {
 	//Variables
     global String cCode {get; set;}        // codebar number
     global Boolean withCheckSum {get; set;} // Boolean to agregate the verificator digit at the end of the barcode in relation with the UPC rutine (http://en.wikipedia.org/wiki/Universal_Product_Code)
@@ -15,7 +15,7 @@ global with sharing class FieloCMSPLT_BarCodeController {
 	* @date 11/08/2011
 	* @description Constructor
 	*/
-    global FieloCMSPLT_BarCodeController(){
+    global FieloCMSPLT_BarCodeCtrl(){
         withCheckSum = false;
     }
 

@@ -1,5 +1,5 @@
 @isTest
-private class FieloCMSPLT_ShoppingCartControllerTest {
+private class FieloCMSPLT_ShoppingCartCtrlTest {
 	
 	@isTest static void test_method_one() {
 		FieloPLT__Program__c program = new FieloPLT__Program__c(Name = 'test');
@@ -9,7 +9,7 @@ private class FieloCMSPLT_ShoppingCartControllerTest {
 
 		FieloCMSPLT_MockUpFactory.createRewards('Test', 10,  program.Id, 10);
 
-		FieloCMSPLT_ShoppingCartController sc = new FieloCMSPLT_ShoppingCartController();
+		FieloCMSPLT_ShoppingCartCtrl sc = new FieloCMSPLT_ShoppingCartCtrl();
 		List<FieloPLT__Reward__c> rewards = sc.rewards;
 
 		Integer qant = sc.totalItems;
@@ -44,7 +44,7 @@ private class FieloCMSPLT_ShoppingCartControllerTest {
         insert component1;
 
         try{
-			FieloCMSPLT_ShoppingCartController.checkout(component1.Id, '{}');
+			FieloCMSPLT_ShoppingCartCtrl.checkout(component1.Id, '{}');
         }catch(Exception e){}
 	}
 	

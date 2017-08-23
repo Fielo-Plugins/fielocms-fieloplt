@@ -1,4 +1,4 @@
-global without sharing class FieloCMSPLT_RegisterStep2Controller {
+global without sharing class FieloCMSPLT_RegisterStep2Ctrl {
         
     public FieloPLT__Member__c member {get{
         if(member == null){     
@@ -26,7 +26,7 @@ global without sharing class FieloCMSPLT_RegisterStep2Controller {
     public String status {get{if(!initLoaded) init(); return status;} private set;}
 
     private Boolean initLoaded;
-    public FieloCMSPLT_RegisterStep2Controller(){
+    public FieloCMSPLT_RegisterStep2Ctrl(){
         initLoaded = false;
     }
 

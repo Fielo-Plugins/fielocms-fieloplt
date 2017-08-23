@@ -1,4 +1,4 @@
-<apex:page Controller="FieloCMSPLT_RedemptionItemVoucherController"  sidebar="false" showHeader="false" standardStylesheets="false"   applyBodyTag="false" applyHtmlTag="false" renderAs="pdf" >
+<apex:page Controller="FieloCMSPLT_RedemptionItemVouCtrl"  sidebar="false" showHeader="false" standardStylesheets="false"   applyBodyTag="false" applyHtmlTag="false" renderAs="pdf" >
 <html>
   <head>
     <style>

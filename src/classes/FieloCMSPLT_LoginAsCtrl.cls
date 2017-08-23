@@ -1,4 +1,4 @@
-public with sharing class FieloCMSPLT_LoginAsController {
+public with sharing class FieloCMSPLT_LoginAsCtrl {
 
 	public PageReference login(){
 		/*//get user id and hash from browser

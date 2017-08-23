@@ -1,4 +1,4 @@
-public with sharing class FieloCMSPLT_LoginAsBackendController {
+public with sharing class FieloCMSPLT_LoginAsBackendCtrl {
 
     public PageReference redirect(){                
         /*//get member Id

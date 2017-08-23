@@ -1,4 +1,4 @@
-<apex:component controller="FieloCMSPLT_AgreementAcceptController" layout="none" allowDML="true">
+<apex:component controller="FieloCMSPLT_AgreementAcceptCtrl" layout="none" allowDML="true">
   <apex:attribute name="config" type="FieloCMS__Component__c" description="" />
   <apex:panelGroup layout="none" rendered="{!showAgreement}">
     <div class="cms-plt-agreement {!config['FieloCMS__ComponentLibrary__r']['FieloCMS__CSSClasses__c']} {!config['FieloCMS__CSSClasses__c']}" data-componentid="{! config['Id'] }"  data-component-name="{!LOWER(SUBSTITUTE(config['FieloCMS__ComponentLibrary__r']['Name'],' ','-'))}">

@@ -1,4 +1,4 @@
-<apex:component layout="none" controller="FieloCMSPLT_CheckoutController" >
+<apex:component layout="none" controller="FieloCMSPLT_CheckoutCtrl" >
     <apex:attribute name="record" type="SObject" description="" />
     <apex:attribute name="field" type="FieloCMS.Field" description="" />
     <apex:panelGroup rendered="{!!ISPICKVAL($User.UserType,'Guest')}" layout="none">

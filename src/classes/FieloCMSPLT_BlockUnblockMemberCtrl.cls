@@ -1,4 +1,4 @@
-global class FieloCMSPLT_BlockUnblockMemberController implements FieloCMS.ViewSubComponentInterface {
+global class FieloCMSPLT_BlockUnblockMemberCtrl implements FieloCMS.ViewSubComponentInterface {
 
     global ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){   
         Component.FieloCMSPLT_BlockUnblockMember blockUnblockMember = new Component.FieloCMSPLT_BlockUnblockMember();        

@@ -1,5 +1,5 @@
 @isTest
-private class FieloCMSPLT_RedemptionItemVoucherControllerTest {
+private class FieloCMSPLT_RedemptionItemVouCtrlTest {
 
     static testMethod void itemVoucherControllerTest(){
         FieloPLT__Program__c program = new FieloPLT__Program__c(Name = 'test');
@@ -27,7 +27,7 @@ private class FieloCMSPLT_RedemptionItemVoucherControllerTest {
         pageRef.getParameters().put('ordenId', redemptions.get(0).id);
         
         // create redemption item voucher controller
-        FieloCMSPLT_RedemptionItemVoucherController controller = new FieloCMSPLT_RedemptionItemVoucherController();
+        FieloCMSPLT_RedemptionItemVouCtrl controller = new FieloCMSPLT_RedemptionItemVouCtrl();
         
         controller.vouchers.size();
         String imageId = controller.imageId;

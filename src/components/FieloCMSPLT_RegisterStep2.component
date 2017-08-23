@@ -1,4 +1,4 @@
-<apex:component layout="none" controller="FieloCMSPLT_RegisterStep2Controller" allowDML="true" access="global">
+<apex:component layout="none" controller="FieloCMSPLT_RegisterStep2Ctrl" allowDML="true" access="global">
     <apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.FieloCMSPLT_AccountCRMMode__c.Name}" />
     <apex:variable var="namespace" value="{!SUBSTITUTE(SUBSTITUTE(fieldName,'FieloCMSPLT_AccountCRMMode__c',''),'__','.')}" />
     <apex:attribute name="config" type="FieloCMS__Component__c" description="" />

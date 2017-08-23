@@ -1,4 +1,4 @@
-global with sharing class FieloCMSPLT_ToggleManagerController implements FieloCMS.ViewSubComponentInterface {
+global with sharing class FieloCMSPLT_ToggleManagerCtrl implements FieloCMS.ViewSubComponentInterface {
 
     public ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){
         Component.FieloCMSPLT_ToggleManager toggleManager = new Component.FieloCMSPLT_ToggleManager();        

@@ -5,7 +5,7 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>FieloCMSPLT_AgreementAcceptController</apexClass>
+        <apexClass>FieloCMSPLT_AgreementAcceptCtrl</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -21,11 +21,11 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>FieloCMSPLT_BarCodeController</apexClass>
+        <apexClass>FieloCMSPLT_BarCodeCtrl</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>FieloCMSPLT_BlockUnblockMemberController</apexClass>
+        <apexClass>FieloCMSPLT_BlockUnblockMemberCtrl</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -37,7 +37,7 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>FieloCMSPLT_CheckoutController</apexClass>
+        <apexClass>FieloCMSPLT_CheckoutCtrl</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -69,19 +69,19 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>FieloCMSPLT_LoginAsBackendController</apexClass>
+        <apexClass>FieloCMSPLT_LoginAsBackendCtrl</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>FieloCMSPLT_LoginAsBackendControllerTest</apexClass>
+        <apexClass>FieloCMSPLT_LoginAsBackendCtrlTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>FieloCMSPLT_LoginAsController</apexClass>
+        <apexClass>FieloCMSPLT_LoginAsCtrl</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>FieloCMSPLT_LoginAsControllerTest</apexClass>
+        <apexClass>FieloCMSPLT_LoginAsCtrlTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -161,11 +161,11 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>FieloCMSPLT_RedemptionItemVoucherController</apexClass>
+        <apexClass>FieloCMSPLT_RedemptionItemVouCtrl</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>FieloCMSPLT_RedemptionItemVoucherControllerTest</apexClass>
+        <apexClass>FieloCMSPLT_RedemptionItemVouCtrlTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -177,7 +177,7 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>FieloCMSPLT_RegisterStep2Controller</apexClass>
+        <apexClass>FieloCMSPLT_RegisterStep2Ctrl</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -209,11 +209,11 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>FieloCMSPLT_SegmentsSelectionController</apexClass>
+        <apexClass>FieloCMSPLT_SegmentsSelectionCtrl</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>FieloCMSPLT_SelectMemberController</apexClass>
+        <apexClass>FieloCMSPLT_SelectMemberCtrl</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -221,7 +221,7 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>FieloCMSPLT_SiteLoginFieloController</apexClass>
+        <apexClass>FieloCMSPLT_SiteLoginFieloCtrl</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -233,7 +233,7 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>FieloCMSPLT_ToggleManagerController</apexClass>
+        <apexClass>FieloCMSPLT_ToggleManagerCtrl</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>

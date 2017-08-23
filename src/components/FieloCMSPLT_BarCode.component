@@ -1,4 +1,4 @@
-<apex:component controller="FieloCMSPLT_BarCodeController" access="global" layout="none">
+<apex:component controller="FieloCMSPLT_BarCodeCtrl" access="global" layout="none">
     <apex:attribute access="global" name="code" assignTo="{!cCode}" description="" type="String" default="valueee" />
     <apex:variable var="codeThin" value="2"/>
     <apex:variable var="codeThick" value="4"/> 

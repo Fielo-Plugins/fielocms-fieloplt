@@ -1,5 +1,5 @@
 @isTest
-private class FieloCMSPLT_LoginAsControllerTest {
+private class FieloCMSPLT_LoginAsCtrlTest {
 
 	@isTest static void validLogin() {
 		//comentado porque ahora 

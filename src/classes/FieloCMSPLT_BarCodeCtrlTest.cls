@@ -1,9 +1,9 @@
 @isTest
-private class FieloCMSPLT_BarCodeControllerTest{
+private class FieloCMSPLT_BarCodeCtrlTest{
     @isTest
     static void itShould_1(){
 
-    	FieloCMSPLT_BarCodeController controller = new FieloCMSPLT_BarCodeController();
+    	FieloCMSPLT_BarCodeCtrl controller = new FieloCMSPLT_BarCodeCtrl();
     	controller.cCode = '123456';
     	controller.getFullNumber();
     	

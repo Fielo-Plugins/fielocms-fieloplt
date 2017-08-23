@@ -1,5 +1,5 @@
 @isTest
-private class FieloCMSPLT_AgreementAcceptControllerTest{
+private class FieloCMSPLT_AgreementAcceptCtrlTest{
     @isTest
     static void itShould_1(){
         // Given
@@ -25,9 +25,9 @@ private class FieloCMSPLT_AgreementAcceptControllerTest{
         
         MemberService.setCurrentMemberId(member.Id);
         
-        FieloCMSPLT_AgreementAcceptController controller = new FieloCMSPLT_AgreementAcceptController();
+        FieloCMSPLT_AgreementAcceptCtrl controller = new FieloCMSPLT_AgreementAcceptCtrl();
         controller.agreement = agreement;
-        FieloCMSPLT_AgreementAcceptController.doSave();
+        FieloCMSPLT_AgreementAcceptCtrl.doSave();
     
     }
 }

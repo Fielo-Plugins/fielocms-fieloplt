@@ -1,4 +1,4 @@
-public with sharing class FieloCMSPLT_SegmentsSelectionController {
+public with sharing class FieloCMSPLT_SegmentsSelectionCtrl {
 	public List<Schema.FieldSetMember> displayedFields {get; set;}
     public List<SegmentWrapper> selectedSegments {get; set;}
     public List<SegmentWrapper> availableSegments {get; set;}

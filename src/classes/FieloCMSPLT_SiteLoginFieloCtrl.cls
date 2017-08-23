@@ -1,4 +1,4 @@
-global with sharing class FieloCMSPLT_SiteLoginFieloController {
+global with sharing class FieloCMSPLT_SiteLoginFieloCtrl {
     
     @RemoteAction
     global static FieloCMS.RemoteActionResult login(String userName, String password){        

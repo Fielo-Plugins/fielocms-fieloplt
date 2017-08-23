@@ -1,5 +1,5 @@
 @isTest
-private class FieloCMSPLT_SegmentsSelectionControllerTest {
+private class FieloCMSPLT_SegmentsSelectionCtrlTest {
 	
 	@isTest static void test_method_one() {
 		Id publicId = [select id, name, sobjecttype from recordtype where name = 'Public' limit 1].Id;
@@ -16,7 +16,7 @@ private class FieloCMSPLT_SegmentsSelectionControllerTest {
 		insert post;
 		ApexPages.currentPage().getParameters().put('id', post.Id);
 
-		FieloCMSPLT_SegmentsSelectionController sgc = new FieloCMSPLT_SegmentsSelectionController();
+		FieloCMSPLT_SegmentsSelectionCtrl sgc = new FieloCMSPLT_SegmentsSelectionCtrl();
 
 
 		sgc.addSelected();
@@ -41,13 +41,13 @@ private class FieloCMSPLT_SegmentsSelectionControllerTest {
 		insert program;
 		FieloPLT__Member__c member = new FieloPLT__Member__c(Name = 'test', FieloPLT__Email__c = 'test@fielo.com', FieloPLT__Program__c = program.Id, FieloPLT__User__c = UserInfo.getUserId());
 		insert member;
-		FieloCMSPLT_SegmentsSelectionController.getMetaSegmentId(new List<String>(), program.Id);
+		FieloCMSPLT_SegmentsSelectionCtrl.getMetaSegmentId(new List<String>(), program.Id);
 
 
 		List<String> segmentos = new List<String>();
 		segmentos.add(String.valueOf(segment2));
 		segmentos.add(String.valueOf(segment));
-		FieloCMSPLT_SegmentsSelectionController.getMetaSegmentId(segmentos, program.Id);
+		FieloCMSPLT_SegmentsSelectionCtrl.getMetaSegmentId(segmentos, program.Id);
 
 	}
 	

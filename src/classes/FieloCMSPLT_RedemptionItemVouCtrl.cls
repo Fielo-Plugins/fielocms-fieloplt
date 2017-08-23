@@ -1,4 +1,4 @@
-public with sharing class FieloCMSPLT_RedemptionItemVoucherController {
+public with sharing class FieloCMSPLT_RedemptionItemVouCtrl {
 
     public List<voucherItem> vouchers {get; set;}
     public String voucherCustomVoucher {get; set;}
@@ -41,7 +41,7 @@ public with sharing class FieloCMSPLT_RedemptionItemVoucherController {
         }
     }
 
-    public FieloCMSPLT_RedemptionItemVoucherController(){
+    public FieloCMSPLT_RedemptionItemVouCtrl(){
         String idOrden = ApexPages.currentPage().getParameters().get('ordenId');
         String voucherId = ApexPages.currentPage().getParameters().get('voucherId');
 

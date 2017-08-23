@@ -1,4 +1,4 @@
-global with sharing class FieloCMSPLT_ShoppingCartController {
+global with sharing class FieloCMSPLT_ShoppingCartCtrl {
 
     public List<FieloPLT__Reward__c> rewards {get{
         if(rewards == null){

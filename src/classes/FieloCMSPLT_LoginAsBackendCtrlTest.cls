@@ -1,5 +1,5 @@
 @isTest
-private class FieloCMSPLT_LoginAsBackendControllerTest {
+private class FieloCMSPLT_LoginAsBackendCtrlTest {
 
 	@isTest(seeAllData=false) static void redirectSuccessful() {
 		//crate new member with user

@@ -1,4 +1,4 @@
-global with sharing class FieloCMSPLT_SelectMemberController implements FieloCMS.ViewSubComponentInterface {
+global with sharing class FieloCMSPLT_SelectMemberCtrl implements FieloCMS.ViewSubComponentInterface {
 
     public ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){
         Component.FieloCMSPLT_SelectMember selectMember = new Component.FieloCMSPLT_SelectMember();        

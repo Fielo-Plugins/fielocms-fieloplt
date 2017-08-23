@@ -1,5 +1,5 @@
 5@isTest
-private class FieloCMSPLT_SelectMemberControllerTest {
+private class FieloCMSPLT_SelectMemberCtrlTest {
 	
 	@isTest static void test_method_one() {
 		FieloPLT__Program__c program = new FieloPLT__Program__c(Name = 'test');
@@ -8,11 +8,11 @@ private class FieloCMSPLT_SelectMemberControllerTest {
 		insert member;
 
 
-		FieloCMSPLT_SelectMemberController.selectMember(member.Id, 'Member');
+		FieloCMSPLT_SelectMemberCtrl.selectMember(member.Id, 'Member');
 
-		FieloCMSPLT_SelectMemberController.selectMember(member.Id, 'Organization Account');
+		FieloCMSPLT_SelectMemberCtrl.selectMember(member.Id, 'Organization Account');
 		
-		FieloCMSPLT_SelectMemberController.selectMember(member.Id, null);
+		FieloCMSPLT_SelectMemberCtrl.selectMember(member.Id, null);
 
 	}
 	

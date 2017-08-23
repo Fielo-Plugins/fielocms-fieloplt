@@ -1,4 +1,4 @@
-global with sharing class FieloCMSPLT_CheckoutController implements FieloCMS.ViewSubComponentInterface {
+global with sharing class FieloCMSPLT_CheckoutCtrl implements FieloCMS.ViewSubComponentInterface {
 
     global ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){        
         Component.FieloCMSPLT_Checkout checkout = new Component.FieloCMSPLT_Checkout();

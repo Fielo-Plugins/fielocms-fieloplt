@@ -1,7 +1,7 @@
-<apex:component controller="FieloCMSPLT_SiteLoginFieloController" allowDML="true" access="global" layout="none" >
+<apex:component controller="FieloCMSPLT_SiteLoginFieloCtrl" allowDML="true" access="global" layout="none" >
     <apex:attribute name="config" type="FieloCMS__Component__c" description="" />
     <div class="fielo-form fieloplt-login fielo-widget fielo-js-component" data-componentid="{!config.Id}" >
-        <form class="fielo-js-upgrade" data-remotearguments="username,password" data-remoteaction="FieloCMSPLT_SiteLoginFieloController.login"  >
+        <form class="fielo-js-upgrade" data-remotearguments="username,password" data-remoteaction="FieloCMSPLT_SiteLoginFieloCtrl.login"  >
             <fieldset>
                 <legend class="fielo-title" >Login</legend>
                 <div class="mdl-grid fielo-field fielo-field--is-username fielo-field" >

@@ -1,9 +1,9 @@
-public with sharing class FieloCMSPLT_AgreementAcceptController {
+public with sharing class FieloCMSPLT_AgreementAcceptCtrl {
 
     public Boolean showAgreement {get; set;}
     public FieloPLT__Agreement__c agreement {get; set;}
 
-    public FieloCMSPLT_AgreementAcceptController(){
+    public FieloCMSPLT_AgreementAcceptCtrl(){
         //looks for the current agreement and the logged in user
         FieloPLT__Member__c member = new MembersSelector(new Set<String>{'Id', 'FieloPLT__Agreement__c', 'FieloPLT__Program__c'}).selectById(new Set<Id>{MemberService.getCurrentMemberId()})[0];
         List<FieloPLT__Agreement__c> agreements = new AgreementsSelector(new Set<String>{'Id', 'FieloPLT__Agreement__c '}).selectCurrentByProgram(member.FieloPLT__Program__c);
