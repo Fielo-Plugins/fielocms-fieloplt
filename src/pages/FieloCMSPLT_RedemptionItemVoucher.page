@@ -132,7 +132,7 @@
           </div>
           <div class="cms-plt-voucher__header--c-20">
             <apex:panelGroup rendered="{!program.FieloCMSPLT_ShowVoucherCode__c}" layout="none" >
-              <c:BarCode code="{!v.redemptionItem.FieloPLT__UniqueCode__c}"/>
+              <c:FieloCMSPLT_BarCode code="{!v.redemptionItem.FieloPLT__UniqueCode__c}"/>
             </apex:panelGroup>
           </div>
         </div>

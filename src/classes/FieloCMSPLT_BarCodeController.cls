@@ -15,7 +15,7 @@ global with sharing class FieloCMSPLT_BarCodeController {
 	* @date 11/08/2011
 	* @description Constructor
 	*/
-    global FieloCMSPLT_+fbbbBarCodeController(){
+    global FieloCMSPLT_BarCodeController(){
         withCheckSum = false;
     }
 
