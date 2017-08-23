@@ -29,11 +29,11 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>FieloCMSPLT_ChangePasswordFieloController</apexClass>
+        <apexClass>FieloCMSPLT_ChangePwdCtrl</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>FieloCMSPLT_ChangePasswordFieloControllerTest</apexClass>
+        <apexClass>FieloCMSPLT_ChangePwdCtrlTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -61,7 +61,7 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>FieloCMSPLT_HandleInvitationsMembersController</apexClass>
+        <apexClass>FieloCMSPLT_HandleInvitationsMbrCtrl</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>

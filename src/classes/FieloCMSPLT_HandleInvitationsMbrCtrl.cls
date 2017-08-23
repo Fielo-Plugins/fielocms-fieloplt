@@ -1,4 +1,4 @@
-global with sharing class FieloCMSPLT_HandleInvitationsMembersController implements FieloCMS.ViewSubComponentInterface {
+global with sharing class FieloCMSPLT_HandleInvitationsMbrCtrl implements FieloCMS.ViewSubComponentInterface {
 
     public ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){
         Component.FieloCMSPLT_HandleInvitationsMembers handleInvitationsMembers = new Component.FieloCMSPLT_HandleInvitationsMembers();

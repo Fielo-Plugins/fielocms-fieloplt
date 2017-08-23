@@ -1,13 +1,13 @@
 @isTest
-private class FieloCMSPLT_HandleInvitationsMembersControllerTest {
+private class FieloCMSPLT_HandleInvitationsMbrCtrlTest {
 	
 	@isTest static void test_method_one() {
 		FieloCMSPLT_MockupFactory.setProgramAndMember();
 
 		FieloPLT__Member__c member = [SElect id, name from FieloPLT__Member__c limit 1];
 
-		FieloCMSPLT_HandleInvitationsMembersController.resendInvitation(member.Id);
-		FieloCMSPLT_HandleInvitationsMembersController.cancelInvitation(member.Id);
+		FieloCMSPLT_HandleInvitationsMbrCtrl.resendInvitation(member.Id);
+		FieloCMSPLT_HandleInvitationsMbrCtrl.cancelInvitation(member.Id);
 	}
 	
 	@isTest static void test_method_two() {
@@ -23,7 +23,7 @@ private class FieloCMSPLT_HandleInvitationsMembersControllerTest {
 		
 
 
-		FieloCMSPLT_HandleInvitationsMembersController.cancelInvitation(member.Id);
+		FieloCMSPLT_HandleInvitationsMbrCtrl.cancelInvitation(member.Id);
 	}
 	
 }

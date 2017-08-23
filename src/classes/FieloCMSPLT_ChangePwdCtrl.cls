@@ -1,4 +1,4 @@
-global with sharing class FieloCMSPLT_ChangePasswordFieloController {
+global with sharing class FieloCMSPLT_ChangePwdCtrl {
 
     global String oldPassword {get; set;}
     global String newPassword {get; set;}
