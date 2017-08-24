@@ -25,10 +25,10 @@
 		<name>CustomLabels</name>
 	</types>
 	<types>
-		<members>FieloPLT__RedemptionItem__c.Voucher</members>
+		<members>FieloPLT__RedemptionItem__c.FieloCMSPLT_Voucher</members>
 		<members>FieloPLT__Member__c.FieloCMSPLT_RegistrationStep2</members>
-		<members>FieloPLT__Segment__c.SegmentsSelection</members>
-		<members>FieloPLT__Reward__c.ShoppingCart</members>
+		<members>FieloPLT__Segment__c.FieloCMSPLT_SegmentsSelection</members>
+		<members>FieloPLT__Reward__c.FieloCMSPLT_ShoppingCart</members>
 		<name>FieldSet</name>
 	</types>
 	<types>
@@ -87,5 +87,5 @@
 		<members>FieloPLT__Member__c</members>
 		<name>Workflow</name>
 	</types>
-	<version>39.0</version>
+	<version>40.0</version>
 </Package>
