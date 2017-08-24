@@ -267,7 +267,7 @@ public class FieloCMSPLT_SecurityUtils{
     **/
     public static void checkFieldIsUpdateable(SObjectType objType, String fieldName)
     {
-        checkFieldIsUpdateable(objType, SObjectDescribe.getDescribe(objType).getField(fieldName));
+        checkFieldIsUpdateable(objType, FieloCMSPLT_SObjectDescribe.getDescribe(objType).getField(fieldName));
     }
 
     /**
