@@ -24,7 +24,7 @@
  *  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 **/
 @isTest
-private class FieloCMSPLT_FieloCMSPLT_QueryFactoryTest {
+private class FieloCMSPLT_QueryFactoryTest {
 
 	@isTest
 	static void fieldSelections(){

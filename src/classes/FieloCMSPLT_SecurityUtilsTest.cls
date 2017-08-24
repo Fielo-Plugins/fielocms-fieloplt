@@ -66,7 +66,7 @@ private class FieloCMSPLT_SecurityUtilsTest {
                 System.assert(ex instanceof FieloCMSPLT_SecurityUtils.FlsException, 'Expected an FlsException, got '+ex.getTypeName());
             }
             {
-                SecurityUtils.SecurityException ex;
+                FieloCMSPLT_SecurityUtils.SecurityException ex;
                 try{
                     FieloCMSPLT_SecurityUtils.checkFieldIsReadable(Contact.SObjectType, 'LastNAME');
                 }catch(FieloCMSPLT_SecurityUtils.SecurityException e){

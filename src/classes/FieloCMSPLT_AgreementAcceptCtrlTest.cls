@@ -23,7 +23,7 @@ private class FieloCMSPLT_AgreementAcceptCtrlTest{
         );
         insert member;
         
-        MemberService.setCurrentMemberId(member.Id);
+        FieloCMSPLT_MemberService.setCurrentMemberId(member.Id);
         
         FieloCMSPLT_AgreementAcceptCtrl controller = new FieloCMSPLT_AgreementAcceptCtrl();
         controller.agreement = agreement;

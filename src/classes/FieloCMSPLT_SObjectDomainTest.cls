@@ -30,13 +30,13 @@ private with sharing class FieloCMSPLT_SObjectDomainTest
 	@IsTest
 	private static void testValidationWithoutDML()
 	{
-		FieloCMSPLT_SObjectDomain.TestFieloCMSPLT_SObjectDomain opps = new FieloCMSPLT_SObjectDomain.TestFieloCMSPLT_SObjectDomain(new Opportunity[] { new Opportunity ( Name = 'Test', Type = 'Existing Account' ) } );
+		FieloCMSPLT_SObjectDomain.TestSObjectDomain opps = new FieloCMSPLT_SObjectDomain.TestSObjectDomain(new Opportunity[] { new Opportunity ( Name = 'Test', Type = 'Existing Account' ) } );
 		opps.onValidate();
 		System.assertEquals(1, FieloCMSPLT_SObjectDomain.Errors.getAll().size());
 		System.assertEquals('You must provide an Account for Opportunities for existing Customers.', FieloCMSPLT_SObjectDomain.Errors.getAll()[0].message);
 		System.assertEquals(Opportunity.AccountId, ((FieloCMSPLT_SObjectDomain.FieldError)FieloCMSPLT_SObjectDomain.Errors.getAll()[0]).field);
 
-		opps = new FieloCMSPLT_SObjectDomain.TestFieloCMSPLT_SObjectDomain(new SObject[] { new Opportunity ( Name = 'Test', Type = 'Existing Account' ) }, Opportunity.SObjectType );
+		opps = new FieloCMSPLT_SObjectDomain.TestSObjectDomain(new SObject[] { new Opportunity ( Name = 'Test', Type = 'Existing Account' ) }, Opportunity.SObjectType );
 		System.assertEquals(1, FieloCMSPLT_SObjectDomain.Errors.getAll().size());
 		System.assertEquals('You must provide an Account for Opportunities for existing Customers.', FieloCMSPLT_SObjectDomain.Errors.getAll()[0].message);
 		System.assertEquals(Opportunity.AccountId, ((FieloCMSPLT_SObjectDomain.FieldError)FieloCMSPLT_SObjectDomain.Errors.getAll()[0]).field);
