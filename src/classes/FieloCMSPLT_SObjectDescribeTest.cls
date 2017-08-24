@@ -29,7 +29,7 @@
 	Used under a BSD license: https://github.com/capeterson/Apex-Util/blob/master/LICENSE
 **/
 @isTest
-private class FieloCMSPLT_FieloCMSPLT_SObjectDescribeTest {
+private class FieloCMSPLT_SObjectDescribeTest {
 
 	/**
 	 * Verify that the different ways of getting your hands on an FieloCMSPLT_SObjectDescribe instance all handle null inputs
