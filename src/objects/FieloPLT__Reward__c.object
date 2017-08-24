@@ -2,7 +2,7 @@
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <fieldSets>
-        <fullName>ShoppingCart</fullName>
+        <fullName>FieloCMSPLT_ShoppingCart</fullName>
         <description>Fieldset to show in the shopping cart component</description>
         <displayedFields>
             <field>Name</field>

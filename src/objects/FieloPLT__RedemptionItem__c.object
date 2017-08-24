@@ -2,7 +2,7 @@
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <fieldSets>
-        <fullName>Voucher</fullName>
+        <fullName>FieloCMSPLT_Voucher</fullName>
         <description>In the Voucher page</description>
         <displayedFields>
             <field>FieloPLT__Reward__c</field>
