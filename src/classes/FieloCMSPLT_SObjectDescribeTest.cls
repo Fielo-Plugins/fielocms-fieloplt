@@ -41,17 +41,17 @@ private class FieloCMSPLT_SObjectDescribeTest {
 		Schema.SObjectType nullType = null;
 		Schema.DescribeSObjectResult nullDescribe = null;
 		SObject nullSObject = null;
-		System.assertEquals(null, FieloCMSPLT_FieloCMSPLT_SObjectDescribe.getDescribe(nullStr));
-		System.assertEquals(null, FieloCMSPLT_FieloCMSPLT_SObjectDescribe.getDescribe(''));
-		System.assertEquals(null, FieloCMSPLT_FieloCMSPLT_SObjectDescribe.getDescribe(' '));
-		System.assertEquals(null, FieloCMSPLT_FieloCMSPLT_SObjectDescribe.getDescribe(nullType));
-		System.assertEquals(null, FieloCMSPLT_FieloCMSPLT_SObjectDescribe.getDescribe(nullDescribe));
-		System.assertEquals(null, FieloCMSPLT_FieloCMSPLT_SObjectDescribe.getDescribe(nullSObject));
+		System.assertEquals(null, FieloCMSPLT_SObjectDescribe.getDescribe(nullStr));
+		System.assertEquals(null, FieloCMSPLT_SObjectDescribe.getDescribe(''));
+		System.assertEquals(null, FieloCMSPLT_SObjectDescribe.getDescribe(' '));
+		System.assertEquals(null, FieloCMSPLT_SObjectDescribe.getDescribe(nullType));
+		System.assertEquals(null, FieloCMSPLT_SObjectDescribe.getDescribe(nullDescribe));
+		System.assertEquals(null, FieloCMSPLT_SObjectDescribe.getDescribe(nullSObject));
 	}
 
 	@isTest
 	static void NamespacedAttributeMap_implementations(){
-		FieloCMSPLT_FieloCMSPLT_SObjectDescribe.GlobalDescribeMap gdm = FieloCMSPLT_FieloCMSPLT_SObjectDescribe.getGlobalDescribe();
+		FieloCMSPLT_SObjectDescribe.GlobalDescribeMap gdm = FieloCMSPLT_SObjectDescribe.getGlobalDescribe();
 		Schema.SObjectType accountObjType = gdm.get('AccOunT');
 		System.assertEquals(accountObjType, Account.SobjectType);
 		//System.assertEquals(Schema.getGlobalDescribe().size(), gdm.size());
