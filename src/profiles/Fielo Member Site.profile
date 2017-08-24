@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
-    <classAccesses>
+   <!-- <classAccesses>
         <apexClass>FieloCMSPLT_AgreementAPI</apexClass>
         <enabled>false</enabled>
-    </classAccesses>
+    </classAccesses> 
     <classAccesses>
         <apexClass>FieloCMSPLT_AgreementAcceptCtrl</apexClass>
         <enabled>false</enabled>
@@ -243,7 +243,7 @@
     <classAccesses>
         <apexClass>FieloCMSPLT_UserCreationFielo</apexClass>
         <enabled>false</enabled>
-    </classAccesses>
+    </classAccesses> -->
     <custom>true</custom>
     <fieldPermissions>
         <editable>false</editable>
@@ -355,7 +355,7 @@
         <field>FieloPLT__Reward__c.FieloCMSPLT_InstructionsRichText__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    <pageAccesses>
+    <!-- <pageAccesses>
         <apexPage>FieloCMSPLT_ChangePasswordFielo</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
@@ -374,6 +374,6 @@
     <pageAccesses>
         <apexPage>FieloCMSPLT_SegmentSelection</apexPage>
         <enabled>false</enabled>
-    </pageAccesses>
+    </pageAccesses> -->
     <userLicense>Authenticated Website</userLicense>
 </Profile>
