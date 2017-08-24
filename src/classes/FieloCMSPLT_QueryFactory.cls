@@ -482,7 +482,7 @@ public class FieloCMSPLT_QueryFactory { //No explicit sharing declaration - inhe
 	**/
     public FieloCMSPLT_QueryFactory addOrdering(SObjectField field, SortOrder direction, Boolean nullsLast){
 		order.add(
-			new Ordering(new FieloCMSPLT_QueryField(field), direction, nullsLast)
+			new Ordering(new QueryField(field), direction, nullsLast)
 		);
 		return this;
     }
@@ -520,7 +520,7 @@ public class FieloCMSPLT_QueryFactory { //No explicit sharing declaration - inhe
 	**/
     public FieloCMSPLT_QueryFactory addOrdering(SObjectField field, SortOrder direction){
 		order.add(
-			new Ordering(new FieloCMSPLT_QueryField(field), direction)
+			new Ordering(new QueryField(field), direction)
 		);
 		return this;
     }
