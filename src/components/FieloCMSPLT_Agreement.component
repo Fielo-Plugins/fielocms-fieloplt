@@ -1,0 +1,25 @@
+<apex:component controller="FieloCMSPLT_AgreementAcceptCtrl" layout="none" allowDML="true">
+  <apex:attribute name="config" type="FieloCMS__Component__c" description="" />
+  <apex:panelGroup layout="none" rendered="{!showAgreement}">
+    <div class="cms-plt-agreement {!config['FieloCMS__ComponentLibrary__r']['FieloCMS__CSSClasses__c']} {!config['FieloCMS__CSSClasses__c']}" data-componentid="{! config['Id'] }"  data-component-name="{!LOWER(SUBSTITUTE(config['FieloCMS__ComponentLibrary__r']['Name'],' ','-'))}">
+      <div class="cms-plt-agreement__container">
+        <apex:panelGroup layout="none" rendered="{!config['FieloCMS__Title__c']!=''}">
+          <h3 class="fielo-title">{!config['FieloCMS__Title__c']}</h3>
+        </apex:panelGroup>
+        <div class="cms-plt-agreement__content">
+          <apex:outputField value="{!agreement.FieloPLT__Agreement__c}"/>
+        </div>
+        <apex:form styleClass="fielo-form">
+          <!--Checkbox -->
+          <label class="fielo-input--is-checkbox">
+            <input type="checkbox" class="cms-plt-agreement__checkbox"/> 
+            <apex:outputText value="{!$Label.FieloCMSPLT_IAgree}" styleClass="cms-plt-agreement__label" /> 
+          </label>
+          <!--Button -->
+          <apex:commandButton action="{!doSave}" value="{!$Label.fieloplt__save}" styleClass="fielo-button fielo-button__submit slds-hide" />
+        </apex:form>
+      </div>
+      <div class="cms-plt-agreement__backdrop"></div>
+    </div>
+  </apex:panelGroup>
+</apex:component>
