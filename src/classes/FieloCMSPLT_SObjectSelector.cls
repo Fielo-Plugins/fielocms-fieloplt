@@ -366,7 +366,7 @@ public abstract class FieloCMSPLT_SObjectSelector{
         // Automatically select the CurrencyIsoCode for MC orgs (unless the object is a known exception to the rule)
         if(Userinfo.isMultiCurrencyOrganization() &&
            !STANDARD_WITHOUT_CURRENCYISO.contains(getSObjectType().getDescribe().getName()))
-            FieloCMSPLT_QueryFactory.selectField(relationshipFieldPath+'.CurrencyIsoCode');
+                QueryFactory.selectField(relationshipFieldPath+'.CurrencyIsoCode');
     }
 
     /**
