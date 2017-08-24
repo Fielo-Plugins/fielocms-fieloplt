@@ -209,11 +209,11 @@ public abstract class FieloCMSPLT_SObjectSelector{
      *
      * @depricated See newQueryFactory
      **/
-    public StringBuilder.FieldListBuilder getFieldListBuilder(){
+    public FieloCMSPLT_StringBuilder.FieldListBuilder getFieldListBuilder(){
         List<SObjectField> sObjectFields = new List<SObjectField>();
         for(FieloCMSPLT_QueryFactory.QueryField queryField : newQueryFactory().getSelectedFields())
             sObjectFields.add(queryField.getBaseField());
-        return new StringBuilder.FieldListBuilder(sObjectFields);
+        return new FieloCMSPLT_StringBuilder.FieldListBuilder(sObjectFields);
     }
 
     /**
@@ -222,7 +222,7 @@ public abstract class FieloCMSPLT_SObjectSelector{
      *
      * @depricated See newQueryFactory
      **/
-    /*public void setFieldListBuilder(StringBuilder.FieldListBuilder fieldListBuilder){
+    /*public void setFieldListBuilder(FieloCMSPLT_StringBuilder.FieldListBuilder fieldListBuilder){
         // TODO: Consider if given the known use cases for this (dynamic selector optomisation) if it's OK to leave this as a null operation
     }*/
 
@@ -411,7 +411,7 @@ public abstract class FieloCMSPLT_SObjectSelector{
                 qfactory.assertIsAccessible();
             } catch (FieloCMSPLT_SecurityUtils.CrudException e) {
                 // Marshal exception into DomainException for backwards compatability
-                throw new SObjectDomain.DomainException(
+                throw new FieloCMSPLT_SObjectDomain.DomainException(
                     'Permission to access an ' + getSObjectType().getDescribe().getName() + ' denied.');
             }
         }

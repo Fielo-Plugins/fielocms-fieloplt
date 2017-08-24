@@ -246,7 +246,7 @@ public class FieloCMSPLT_SObjectDescribe {
 
 		protected NamespacedAttributeMap(Map<String,Object> values){
 			//namespace detection courtesey http://salesforce.stackexchange.com/a/28977/60
-			currentNamespace = SObjectDescribe.class.getName().substringBefore('SObjectDescribe').removeEnd('.').toLowerCase();
+			currentNamespace = FieloCMSPLT_SObjectDescribe.class.getName().substringBefore('SObjectDescribe').removeEnd('.').toLowerCase();
 			this.values = values;
 		}
 		//A no-args constructor to allow subclasses with different contructor signatures

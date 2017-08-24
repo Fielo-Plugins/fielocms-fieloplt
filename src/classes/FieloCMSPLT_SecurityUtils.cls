@@ -206,7 +206,7 @@ public class FieloCMSPLT_SecurityUtils{
     **/
     public static void checkFieldIsInsertable(SObjectType objType, String fieldName)
     {
-        checkFieldIsInsertable(objType, SObjectDescribe.getDescribe(objType).getField(fieldName));
+        checkFieldIsInsertable(objType, FieloCMSPLT_SObjectDescribe.getDescribe(objType).getField(fieldName));
     }
 
     /**
@@ -236,7 +236,7 @@ public class FieloCMSPLT_SecurityUtils{
     **/
     public static void checkFieldIsReadable(SObjectType objType, String fieldName)
     {
-    	checkFieldIsReadable(objType, SObjectDescribe.getDescribe(objType).getField(fieldName));
+    	checkFieldIsReadable(objType, FieloCMSPLT_SObjectDescribe.getDescribe(objType).getField(fieldName));
     }
 
     /**

@@ -85,7 +85,7 @@ public class FieloCMSPLT_QueryFactory { //No explicit sharing declaration - inhe
 	private QueryField getFieldToken(String fieldName){
 		QueryField result;
 		if(!fieldName.contains('.')){ //single field
-			Schema.SObjectField token = SObjectDescribe.getDescribe(table).getField(fieldName.toLowerCase());
+			Schema.SObjectField token = FieloCMSPLT_SObjectDescribe.getDescribe(table).getField(fieldName.toLowerCase());
 			if(token == null)
 				throw new InvalidFieldException(fieldName,this.table);
 			if (enforceFLS)
@@ -97,7 +97,7 @@ public class FieloCMSPLT_QueryFactory { //No explicit sharing declaration - inhe
 			Iterator<String> i = fieldName.split('\\.').iterator();
 			while(i.hasNext()){
 				String field = i.next();
-				Schema.SObjectField token = SObjectDescribe.getDescribe(lastSObjectType).getField(field.toLowerCase());
+				Schema.SObjectField token = FieloCMSPLT_SObjectDescribe.getDescribe(lastSObjectType).getField(field.toLowerCase());
 				if (token != null && enforceFLS)
 					FieloCMSPLT_SecurityUtils.checkFieldIsReadable(lastSObjectType, token);
 				if(token != null && i.hasNext() && token.getDescribe().getSOAPType() == Schema.SOAPType.ID){
@@ -401,7 +401,7 @@ public class FieloCMSPLT_QueryFactory { //No explicit sharing declaration - inhe
 			throw new InvalidSubqueryRelationshipException('Invalid call to subselectQuery.  You may not add a subselect query to a subselect query.');
 		}
 		if (this.subselectQueryMap == null){
-			this.subselectQueryMap = new Map<ChildRelationship, QueryFactory>();
+			this.subselectQueryMap = new Map<ChildRelationship, FieloCMSPLT_QueryFactory>();
 		}
 		if (this.subselectQueryMap.containsKey(relationship)){
 			return subselectQueryMap.get(relationship);
@@ -597,7 +597,7 @@ public class FieloCMSPLT_QueryFactory { //No explicit sharing declaration - inhe
 
 		public Ordering(String sobjType, String fieldName, SortOrder direction){
 			this(
-				SObjectDescribe.getDescribe(sobjType).getField(fieldName),
+				FieloCMSPLT_SObjectDescribe.getDescribe(sobjType).getField(fieldName),
 				direction
 			);
 		}

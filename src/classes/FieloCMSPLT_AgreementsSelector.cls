@@ -1,4 +1,4 @@
-public class FieloCMSPLT_AgreementsSelector extends SObjectSelector{
+public class FieloCMSPLT_AgreementsSelector extends FieloCMSPLT_SObjectSelector{
 	public List<Schema.SObjectField> getSObjectFieldList(){
 		return new List<Schema.SObjectField> {
 				FieloPLT__Agreement__c.Id
