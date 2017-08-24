@@ -17,7 +17,7 @@ public with sharing class FieloCMSPLT_AgreementAcceptCtrl {
     }
 
     public static PageReference doSave(){
-        FieloPLT__Member__c member = new FieloCMSPLT_MembersSelector(new Set<String>{'Id', 'FieloPLT__Agreement__c', 'FieloPLT__Program__c'}).selectById(new Set<Id>{MemberService.getCurrentMemberId()})[0];
+        FieloPLT__Member__c member = new FieloCMSPLT_MembersSelector(new Set<String>{'Id', 'FieloPLT__Agreement__c', 'FieloPLT__Program__c'}).selectById(new Set<Id>{FieloCMSPLT_MemberService.getCurrentMemberId()})[0];
         List<FieloPLT__Agreement__c> agreements = new FieloCMSPLT_AgreementsSelector(new Set<String>{'Id'}).selectCurrentByProgram(member.FieloPLT__Program__c);
         //if the member exists and have accepted the agreement then updates the agreement for the member
         member.FieloPLT__Agreement__c = agreements[0].Id;
