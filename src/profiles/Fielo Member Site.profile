@@ -221,7 +221,7 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>FieloCMSPLT_SiteLoginFieloCtrl</apexClass>
+        <apexClass>FieloCMSPLT_SiteLoginCtrl</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
