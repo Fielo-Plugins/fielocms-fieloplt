@@ -61,7 +61,7 @@ public class FieloCMSPLT_Plugins extends FieloCMSPLT_SObjectDomain {
 	public class Constructor implements FieloCMSPLT_SObjectDomain.IConstructable{
 		
 		public FieloCMSPLT_SObjectDomain construct(List<SObject> sObjectList){
-			return new Plugins(sObjectList);
+			return new FieloCMSPLT_Plugins(sObjectList);
 		}
 	}	
 }
