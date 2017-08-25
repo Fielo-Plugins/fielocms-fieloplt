@@ -1,5 +1,5 @@
 @isTest
-private class FieloCMSPLT_SiteLoginFieloCtrlTest {
+private class FieloCMSPLT_SiteLoginCtrlTest {
 
     static testMethod void checkout1(){
         FieloPLT__Program__c program = new FieloPLT__Program__c(Name = 'test');
