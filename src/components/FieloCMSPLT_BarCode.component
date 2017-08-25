@@ -1,0 +1,33 @@
+<apex:component controller="FieloCMSPLT_BarCodeCtrl" access="global" layout="none">
+    <apex:attribute access="global" name="code" assignTo="{!cCode}" description="" type="String" default="valueee" />
+    <apex:variable var="codeThin" value="2"/>
+    <apex:variable var="codeThick" value="4"/> 
+    <apex:variable var="codeHeight" value="45"/>
+    <div class="cms-plt-voucher__code">
+	    <div class="cms-plt-voucher__code-bar">
+		    <!-- HEADER -->
+		    <div class="cms-plt-voucher__code-unit cms-plt-voucher__code-unit--solid" style="width:{!codeThin}px;height:{!codeHeight}px;"></div>
+		    <div class="cms-plt-voucher__code-unit" style="width:{!codeThin}px;height:{!codeHeight}px;"></div>
+		    <div class="cms-plt-voucher__code-unit cms-plt-voucher__code-unit--solid" style="width:{!codeThin}px;height:{!codeHeight}px;"></div>
+		    <div class="cms-plt-voucher__code-unit" style="width:{!codeThin}px;height:{!codeHeight}px;"></div>
+		    
+		    <!-- BODY -->
+		    <apex:variable var="solid" value="0"/>
+		    <apex:repeat var="w" value="{!BodyElementsWidth}">
+		    <apex:panelGroup layout="none" rendered="{!(MOD(Value(solid),2)==0)}">
+		        <div class="cms-plt-voucher__code-unit cms-plt-voucher__code-unit--solid" style="width:{!if(w==0,codeThin,codeThick)}px;height:{!codeHeight}px;"></div>
+		    </apex:panelGroup>
+		    <apex:panelGroup layout="none" rendered="{!(MOD(Value(solid),2)<>0)}">
+		        <div class="cms-plt-voucher__code-unit" style="width:{!if(w==0,codeThin,codeThick)}px;height:{!codeHeight}px;"></div>
+		    </apex:panelGroup>
+		        <apex:variable var="solid" value="{!Text(MOD(Value(solid)+1,2))}"/>
+		    </apex:repeat> 
+
+		    <!-- FOOTER -->
+		    <div class="cms-plt-voucher__code-unit cms-plt-voucher__code-unit--solid" style="width:{!codeThick}px;height:{!codeHeight}px;"></div>
+		    <div class="cms-plt-voucher__code-unit" style="width:{!codeThin}px;height:{!codeHeight}px;"></div>
+		    <div class="cms-plt-voucher__code-unit cms-plt-voucher__code-unit--solid" style="width:{!codeThin}px;height:{!codeHeight}px;"></div>
+	    </div>
+    	<div class="cms-plt-voucher__code-number"><apex:outputText value="{!code}" /></div>
+    </div>
+</apex:component>
