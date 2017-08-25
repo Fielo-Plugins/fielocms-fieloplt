@@ -1,4 +1,4 @@
-public without sharing class FieloCMSPLT_Components extends SObjectDomain {
+public without sharing class FieloCMSPLT_Components extends FieloCMSPLT_SObjectDomain {
 
     public FieloCMSPLT_Components(List<FieloCMS__Component__c> records) {
         super(records);
