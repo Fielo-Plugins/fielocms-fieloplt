@@ -58,7 +58,7 @@ public class FieloCMSPLT_Plugins extends FieloCMSPLT_SObjectDomain {
 		return '/resource/' + resource.SystemModStamp.getTime() + '/' + (String.isNotBlank(namespace) ? namespace + '__' : '') + resource.Name; 
 	}
 
-	public class Constructor implements SObjectDomain.IConstructable{
+	public class Constructor implements FieloCMSPLT_SObjectDomain.IConstructable{
 		
 		public FieloCMSPLT_SObjectDomain construct(List<SObject> sObjectList){
 			return new Plugins(sObjectList);
