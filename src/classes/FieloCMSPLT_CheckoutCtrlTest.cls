@@ -12,7 +12,7 @@ private class FieloCMSPLT_CheckoutCtrlTest {
         update member;
         FieloPLT.SObjectService.enableAdminPermission(false);
         
-        FieloPLT__Reward__c reward = MockUpFactory.createRewards('Test', 10, program.Id, 10)[0];
+        FieloPLT__Reward__c reward = FieloCMSPLT_MockUpFactory.createRewards('Test', 10, program.Id, 10)[0];
         insert reward;
         Map<Id, Integer> quantityPerReward = new Map<Id, Integer>{reward.Id => 1};
         
