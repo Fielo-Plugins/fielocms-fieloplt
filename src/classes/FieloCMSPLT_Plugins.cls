@@ -44,7 +44,7 @@ public class FieloCMSPLT_Plugins extends FieloCMSPLT_SObjectDomain {
 				site.FieloCMS__PluginJS__c += urlSR + '\n';		
 			}
 		}
-		SObjectUnitOfWork uow = new SObjectUnitOfWork(new List<Schema.SobjectType>{FieloCMS__Site__c.SObjectType});
+		FieloCMSPLT_SObjectUnitOfWork uow = new FieloCMSPLT_SObjectUnitOfWork(new List<Schema.SobjectType>{FieloCMS__Site__c.SObjectType});
 		uow.registerDirty(sites);
 		uow.commitWork();
 	}
@@ -60,7 +60,7 @@ public class FieloCMSPLT_Plugins extends FieloCMSPLT_SObjectDomain {
 
 	public class Constructor implements SObjectDomain.IConstructable{
 		
-		public SObjectDomain construct(List<SObject> sObjectList){
+		public FieloCMSPLT_SObjectDomain construct(List<SObject> sObjectList){
 			return new Plugins(sObjectList);
 		}
 	}	
