@@ -2,7 +2,7 @@ global with sharing class FieloCMSPLT_MemberAPI implements FieloCMS.DataInterfac
 
     global ApexPages.Component getComponent(FieloCMS__Component__c component){
         if(component.FieloCMS__ComponentLibrary__r.Name == 'Register Step 2'){
-            return new Component.RegisterStep2(config = component);
+            return new Component.FieloCMSPLT_RegisterStep2(config = component);
         }
 
         return null;
@@ -16,14 +16,14 @@ global with sharing class FieloCMSPLT_MemberAPI implements FieloCMS.DataInterfac
                 c.FieloCMS__Limit__c = 5;
 
             if(c.FieloCMS__ComponentLibrary__r.Name == 'Organization Account'){
-                FieloPLT__Member__c loggedMember = MemberService.getCurrentMember(new Set<String>{'FieloPLT__OrganizationFieloCMSPLT_Account__c','FieloPLT__Type__c'});
-                if(loggedMember.FieloPLT__Type__c != 'Organization Account' && loggedMember.FieloPLT__OrganizationFieloCMSPLT_Account__c != null){
-                    newMapData.put(c.Id, new MembersSelector(new Set<String>(FieloCMSPLT_OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c))).selectById(new Set<Id>{loggedMember.FieloPLT__OrganizationFieloCMSPLT_Account__c})[0]);
+                FieloPLT__Member__c loggedMember = FieloCMSPLT_MemberService.getCurrentMember(new Set<String>{'FieloPLT__OrganizationFieloCMSPLT_Account__c','FieloPLT__Type__c'});
+                if(loggedMember.FieloPLT__Type__c != 'Organization Account' && loggedMember.FieloPLT__OrganizationAccount__c != null){
+                    newMapData.put(c.Id, new MembersSelector(new Set<String>(FieloCMSPLT_OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c))).selectById(new Set<Id>{loggedMember.FieloPLT__OrganizationAccount__c})[0]);
                 }else{
                     newMapData.put(c.Id, new FieloPLT__Member__c());
                 }
             }else if(c.FieloCMS__ComponentLibrary__r.Name == 'Member Selection'){
-                FieloPLT__Program__c program = ProgramService.getCurrentProgram();
+                FieloPLT__Program__c program = FieloCMSPLT_ProgramService.getCurrentProgram();
                 newMapData.put(c.Id, new FieloCMSPLT_MembersSelector(new Set<String>(FieloCMSPLT_OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c))).selectRelatedMembers(UserInfo.getUserId(), program.Id));
             }else if(c.FieloCMS__ComponentLibrary__r.Name == 'Organization Members'){
                 FieloPLT__Member__c loggedMember = FieloCMSPLT_MemberService.getCurrentMember(new Set<String>{'FieloPLT__Type__c'});
@@ -62,10 +62,10 @@ global with sharing class FieloCMSPLT_MemberAPI implements FieloCMS.DataInterfac
                     member.FieloPLT__Account__c = component.FieloCMSPLT_Account__c;
                 }
             }else{
-                FieloPLT__Member__c loggedMember = FieloCMSPLT_MemberService.getCurrentMember(new Set<String>{'FieloPLT__Type__c','FieloPLT__OrganizationFieloCMSPLT_Account__c'});
+                FieloPLT__Member__c loggedMember = FieloCMSPLT_MemberService.getCurrentMember(new Set<String>{'FieloPLT__Type__c','FieloPLT__OrganizationAccount__c'});
                 if(loggedMember.FieloPLT__Type__c == 'Organization Account'){
                     registerType = 'Organization';
-                    member.FieloPLT__OrganizationFieloCMSPLT_Account__c = loggedMember.Id;
+                    member.FieloPLT__OrganizationAccount__c = loggedMember.Id;
                     member.FieloPLT__Type__c = 'Organization Contributor';
                 }
             }
