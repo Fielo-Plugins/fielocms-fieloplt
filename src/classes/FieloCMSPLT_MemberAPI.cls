@@ -18,7 +18,7 @@ global with sharing class FieloCMSPLT_MemberAPI implements FieloCMS.DataInterfac
             if(c.FieloCMS__ComponentLibrary__r.Name == 'Organization Account'){
                 FieloPLT__Member__c loggedMember = FieloCMSPLT_MemberService.getCurrentMember(new Set<String>{'FieloPLT__OrganizationFieloCMSPLT_Account__c','FieloPLT__Type__c'});
                 if(loggedMember.FieloPLT__Type__c != 'Organization Account' && loggedMember.FieloPLT__OrganizationAccount__c != null){
-                    newMapData.put(c.Id, new MembersSelector(new Set<String>(FieloCMSPLT_OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c))).selectById(new Set<Id>{loggedMember.FieloPLT__OrganizationAccount__c})[0]);
+                    newMapData.put(c.Id, new FieloCMSPLT_MembersSelector(new Set<String>(FieloCMSPLT_OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c))).selectById(new Set<Id>{loggedMember.FieloPLT__OrganizationAccount__c})[0]);
                 }else{
                     newMapData.put(c.Id, new FieloPLT__Member__c());
                 }

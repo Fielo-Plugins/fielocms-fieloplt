@@ -70,7 +70,7 @@ global without sharing class FieloCMSPLT_RegisterStep2Ctrl {
             FieloPLT__Member__c member = (FieloPLT__Member__c)record;                
             FieloPLT.MemberService.finishRegistration(member);
             if(!String.isBlank(password)){
-                PageReference passResult = MemberService.setPasswordAndLogin(record.Id, password);
+                PageReference passResult = FieloCMSPLT_MemberService.setPasswordAndLogin(record.Id, password);
                 result.redirectURL = passResult.getUrl();
             }else{
                 result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.FieloCMSPLT_RegistrationSuccessExistingUser)));
