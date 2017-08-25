@@ -48,7 +48,7 @@ global without sharing class FieloCMSPLT_RegisterStep2Ctrl {
         }catch(FieloCMSPLT_Exception e){
             Database.rollback(sp);
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
-        }catch(FieloPLT.FieloCMSPLT_Exception e){
+        }catch(FieloPLT.Exception e){
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
         }
 
