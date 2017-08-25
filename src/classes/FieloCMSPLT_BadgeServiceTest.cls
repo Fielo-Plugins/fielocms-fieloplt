@@ -4,7 +4,7 @@ private class FieloCMSPLT_BadgeServiceTest{
     static void itShould_1(){
     
         // Given
-        FieloCMSPLT_BadgeServiceMockupFactory.setProgramAndMember();
+        FieloCMSPLT_MockupFactory.setProgramAndMember();
         
         FieloPLT__Program__c program = [SELECT Id FROM FieloPLT__Program__c];
         
