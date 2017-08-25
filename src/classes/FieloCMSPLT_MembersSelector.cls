@@ -1,4 +1,4 @@
-public with sharing class FieloCMSPLT_MembersSelector extends FieloCMSPLT_SObjectSelector{
+public with sharing class FieloCMSPLT_MembersSelector extends SObjectSelector{
 
 	public List<Schema.SObjectField> getSObjectFieldList(){
 		return new List<Schema.SObjectField>{
