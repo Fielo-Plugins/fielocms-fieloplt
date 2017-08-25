@@ -1,4 +1,4 @@
-global without sharing class FieloCMSPLT_RegisterStep2Ctrl {
+    global without sharing class FieloCMSPLT_RegisterStep2Ctrl {
         
     public FieloPLT__Member__c member {get{
         if(member == null){     
@@ -48,7 +48,7 @@ global without sharing class FieloCMSPLT_RegisterStep2Ctrl {
         }catch(FieloCMSPLT_Exception e){
             Database.rollback(sp);
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
-        }catch(FieloPLT.Exception e){
+        }catch(FieloPLT.FieloException e){
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
         }
 
