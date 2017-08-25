@@ -13,7 +13,7 @@ public class FieloCMSPLT_LoginService {
             throw new FieloCMSPLT_Exception(e.getMessage());
         }
 
-        FieloPLT__Program__c program = ProgramService.getCurrentProgram();
+        FieloPLT__Program__c program = FieloCMSPLT_ProgramService.getCurrentProgram();
         //look for the member related to the username
         List<FieloPLT__Member__c> membersByEmail = [SELECT FieloPLT__Status__c, FieloPLT__User__c, FieloPLT__Program__r.FieloCMSPLT_UseAgreement__c FROM FieloPLT__Member__c WHERE FieloPLT__Email__c =: username AND FieloPLT__Program__c =: program.Id];
 
@@ -46,7 +46,7 @@ public class FieloCMSPLT_LoginService {
     public static PageReference forgotPassword(String userName){
         //Validates if the userName is not empty
         if(String.isBlank(username)){
-            throw new FieloException(Label.FieloCMSPLT_UsernameIsRequired);
+            throw new FieloCMSPLT_Exception(Label.FieloCMSPLT_UsernameIsRequired);
             return null;
         }
         //looks if the user is inactive and then activates the user
@@ -60,7 +60,7 @@ public class FieloCMSPLT_LoginService {
             }
         //if the user does not exist an error is returned
         }else{
-            throw new FieloException(Label.FieloCMSPLT_ErrorMemberForgotPasswordInexist);
+            throw new FieloCMSPLT_Exception(Label.FieloCMSPLT_ErrorMemberForgotPasswordInexist);
         }
 
         Site.forgotPassword(username);

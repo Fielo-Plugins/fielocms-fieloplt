@@ -19,7 +19,7 @@ private class FieloCMSPLT_LoginServiceTest {
 			}catch(Exception e){}
 			
 		Test.stopTest();
-		//LoginService.login('plugintest@fielo.com', 'qwer1235', 'www.google.com');
+		//FieloCMSPLT_LoginService.login('plugintest@fielo.com', 'qwer1235', 'www.google.com');
 	}
 	
 	@isTest static void test_method_two() {
