@@ -57,7 +57,7 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>FieloCMSPLT_FieloException</apexClass>
+        <apexClass>FieloCMSPLT_Exception</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>

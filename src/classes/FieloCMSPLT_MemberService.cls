@@ -49,9 +49,9 @@ public with sharing class FieloCMSPLT_MemberService {
 
     public static PageReference setPasswordAndLogin(Id memberId, String password){
         if(memberId == null){
-            throw new FieloCMSPLT_FieloException(Label.FieloCMSPLT_MemberIdRequired);
+            throw new FieloCMSPLT_Exception(Label.FieloCMSPLT_MemberIdRequired);
         }else if(String.isBlank(password)){
-            throw new FieloCMSPLT_FieloException(Label.FieloCMSPLT_PasswordIsRequired);
+            throw new FieloCMSPLT_Exception(Label.FieloCMSPLT_PasswordIsRequired);
         }
         Savepoint sp = Database.setSavepoint();
         try{
@@ -66,9 +66,9 @@ public with sharing class FieloCMSPLT_MemberService {
 
     public static PageReference login(Id memberId, String password){
         if(memberId == null){
-            throw new FieloCMSPLT_FieloException(Label.FieloCMSPLT_MemberIdRequired);
+            throw new FieloCMSPLT_Exception(Label.FieloCMSPLT_MemberIdRequired);
         }else if(String.isBlank(password)){
-            throw new FieloCMSPLT_FieloException(Label.FieloCMSPLT_PasswordIsRequired);
+            throw new FieloCMSPLT_Exception(Label.FieloCMSPLT_PasswordIsRequired);
         }
         Savepoint sp = Database.setSavepoint();
         try{
@@ -83,9 +83,9 @@ public with sharing class FieloCMSPLT_MemberService {
 
     public static void setPassword(Id memberId, String password){
         if(memberId == null){
-            throw new FieloCMSPLT_FieloException(Label.FieloCMSPLT_MemberIdRequired);
+            throw new FieloCMSPLT_Exception(Label.FieloCMSPLT_MemberIdRequired);
         }else if(String.isBlank(password)){
-            throw new FieloCMSPLT_FieloException(Label.FieloCMSPLT_PasswordIsRequired);
+            throw new FieloCMSPLT_Exception(Label.FieloCMSPLT_PasswordIsRequired);
         }
         Savepoint sp = Database.setSavepoint();
         try{
