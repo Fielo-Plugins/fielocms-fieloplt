@@ -41,7 +41,7 @@ global without sharing class FieloCMSPLT_RegisterStep2Ctrl {
         SavePoint sp = Database.setSavepoint();
         FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
         try{
-            FieloPLT__Member__c member = new MembersSelector().selectById(new Set<Id>{memberId})[0];
+            FieloPLT__Member__c member = new FieloCMSPLT_MembersSelector().selectById(new Set<Id>{memberId})[0];
             FieloPLT.MemberService.finishRegistration(member);
             //MemberUtil.sendToApprove(new List<Member__c>{member});
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.FieloCMSPLT_SucessAwardingApprovalRegistration)));
