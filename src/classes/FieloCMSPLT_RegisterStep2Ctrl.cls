@@ -45,7 +45,7 @@ global without sharing class FieloCMSPLT_RegisterStep2Ctrl {
             FieloPLT.MemberService.finishRegistration(member);
             //MemberUtil.sendToApprove(new List<Member__c>{member});
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.FieloCMSPLT_SucessAwardingApprovalRegistration)));
-        }catch(FieloException e){
+        }catch(FieloCMSPLT_FieloException e){
             Database.rollback(sp);
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
         }catch(FieloPLT.FieloException e){
