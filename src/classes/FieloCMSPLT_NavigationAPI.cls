@@ -20,11 +20,11 @@ global class FieloCMSPLT_NavigationAPI implements FieloCMS.DataInterface{
             fieldsToQuery.add('fielocms__icon__c');
             fieldsToQuery.add('fielocms__cssclasses__c');
 
-            for(String fieldName : OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c)){
+            for(String fieldName : FieloCMSPLT_OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c)){
                 fieldsToQuery.add(fieldName.toLowerCase());
             }
 
-            newMapData.put(c.Id, NavigationService.getNavigations(c.FieloCMS__Navigation__c, fieldsToQuery, siteId, MemberService.getCurrentMemberId()));
+            newMapData.put(c.Id, FieloCMSPLT_NavigationService.getNavigations(c.FieloCMS__Navigation__c, fieldsToQuery, siteId, FieloCMSPLT_MemberService.getCurrentMemberId()));
         }
 
         System.debug(newMapData.values());
