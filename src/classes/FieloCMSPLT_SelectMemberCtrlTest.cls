@@ -1,4 +1,4 @@
-5@isTest
+@isTest
 private class FieloCMSPLT_SelectMemberCtrlTest {
 	
 	@isTest static void test_method_one() {
