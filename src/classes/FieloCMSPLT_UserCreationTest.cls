@@ -1,5 +1,5 @@
 @isTest
-private class FieloCMSPLT_UserCreationFieloTest {
+private class FieloCMSPLT_UserCreationTest {
 	
 	@isTest static void test_method_one() {
 		FieloPLT__Program__c program = new FieloPLT__Program__c(Name = 'test');
@@ -12,7 +12,7 @@ private class FieloCMSPLT_UserCreationFieloTest {
 		insert member;
 
 
-		FieloCMSPLT_UserCreationFielo uc = new FieloCMSPLT_UserCreationFielo();
+		FieloCMSPLT_UserCreation uc = new FieloCMSPLT_UserCreation();
 		uc.getUser(member, contact.Id);
 	}
 	

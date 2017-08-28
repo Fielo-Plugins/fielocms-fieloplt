@@ -1,4 +1,4 @@
-global class FieloCMSPLT_UserCreationFielo implements FieloPLT.UserCreation {
+global class FieloCMSPLT_UserCreation implements FieloPLT.UserCreation {
 
     global User getUser(FieloPLT__Member__c m, Id contactId){                
         String email = m.FieloPLT__Email__c;      

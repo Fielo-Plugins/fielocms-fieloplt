@@ -241,7 +241,7 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>FieloCMSPLT_UserCreationFielo</apexClass>
+        <apexClass>FieloCMSPLT_UserCreation</apexClass>
         <enabled>false</enabled>
     </classAccesses> -->
     <custom>true</custom>
