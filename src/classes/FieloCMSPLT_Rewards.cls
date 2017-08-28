@@ -18,7 +18,7 @@ public class FieloCMSPLT_Rewards extends FieloCMSPLT_SObjectDomain {
 
 	public class Constructor implements FieloCMSPLT_SObjectDomain.IConstructable{
 		
-		public SObjectDomain construct(List<SObject> sObjectList){
+		public FieloCMSPLT_SObjectDomain construct(List<SObject> sObjectList){
 			return new FieloCMSPLT_Rewards(sObjectList);
 		}
 	}	
