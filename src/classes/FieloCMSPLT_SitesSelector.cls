@@ -1,4 +1,4 @@
-public class FieloCMSPLT_SitesSelector extends FieloCMSPLT_SObjectSelector{
+public class FieloCMSPLT_SitesSelector extends SObjectSelector{
 	public List<Schema.SObjectField> getSObjectFieldList(){
 		return new List<Schema.SObjectField> {
 				FieloCMS__Site__c.Id
