@@ -20,7 +20,7 @@ global with sharing class FieloCMSPLT_SelectMemberCtrl implements FieloCMS.ViewS
                 //recalculate segments for the new member
                 FieloPLT.SegmentService.getMemberSegments(memberId, null);
             }else{
-                FieloPLT__Member__c member = new FieloCMSPLT_MembersSelector(new Set<String>{'FieloPLT__OrganizationFieloCMSPLT_Account__c'}).selectById(new Set<Id>{memberId})[0];
+                FieloPLT__Member__c member = new FieloCMSPLT_MembersSelector(new Set<String>{'FieloPLT__OrganizationAccount__c'}).selectById(new Set<Id>{memberId})[0];
                 FieloCMSPLT_MemberService.setCurrentMemberId(member.FieloPLT__OrganizationAccount__c);
                 //recalculate segments for the new member
                 FieloPLT.SegmentService.getMemberSegments(member.FieloPLT__OrganizationAccount__c, null);
