@@ -25,7 +25,7 @@
                             <tbody class="fielo-record-set__data">
                                 <apex:repeat value="{!rewards}" var="record">
                                     <tr class="fielo-record fielo-record-set__template">
-                                        <apex:repeat value="{!$ObjectType.FieloPLT__Reward__c.FieldSets.FieloCMSPLT_ ShoppingCart}" var="field">
+                                        <apex:repeat value="{!$ObjectType.FieloPLT__Reward__c.FieldSets.FieloCMSPLT_ShoppingCart}" var="field">
                                             <td class="fielo-field fielo-field--is-{!field} mdl-data-table__cell--non-numeric" data-th="{!field}">
                                                 <span id="{!record.Id}{!field}" class="fielo-field__value">
                                                     <apex:outputField value="{!record[field]}" />
