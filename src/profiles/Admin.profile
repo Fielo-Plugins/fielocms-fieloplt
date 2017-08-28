@@ -217,7 +217,7 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>FieloCMSPLT_ShoppingCartController</apexClass>
+        <apexClass>FieloCMSPLT_ShoppingCartCtrl</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
