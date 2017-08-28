@@ -27,7 +27,7 @@ global with sharing class FieloCMSPLT_SelectMemberCtrl implements FieloCMS.ViewS
             }
             
             result.redirectURL = '/';                                   
-        }catch(FieloException e){
+        }catch(FieloCMSPLT_Exception e){
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));
         }catch(FieloPLT.FieloException e){
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(e));

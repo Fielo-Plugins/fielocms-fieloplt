@@ -22,7 +22,7 @@ public with sharing class FieloCMSPLT_SegmentsSelectionCtrl {
         }
     }
 
-    public SegmentsSelectionController(){
+    public FieloCMSPLT_SegmentsSelectionCtrl(){
         id = ApexPages.currentPage().getParameters().get('id');
 
         String objectPrefix = id.subString(0,3);
