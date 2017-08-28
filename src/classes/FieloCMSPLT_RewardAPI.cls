@@ -65,7 +65,7 @@ global with sharing class FieloCMSPLT_RewardAPI implements FieloCMS.DataInterfac
     }
 
     public ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){        
-        Component.AddToCart addToCart = new Component.AddToCart();
+        Component.FieloCMSPLT_AddToCart addToCart = new Component.FieloCMSPLT_AddToCart();
         if(record != null){
             addToCart.record = record;
         }else{
