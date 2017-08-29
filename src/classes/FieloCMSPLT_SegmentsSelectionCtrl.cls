@@ -133,7 +133,7 @@ public with sharing class FieloCMSPLT_SegmentsSelectionCtrl {
     }
 
     public List<Schema.FieldSetMember> getFields() {
-        return SObjectType.FieloPLT__Segment__c.FieldSets.SegmentsSelection.getFields();
+        return SObjectType.FieloPLT__Segment__c.FieldSets.FieloCMSPLT_SegmentsSelection.getFields();
     }
 
     /**

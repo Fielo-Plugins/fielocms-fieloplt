@@ -48,7 +48,7 @@
                     <apex:panelGroup layout="none" rendered="{!status != 'User exist'}" >
                         <div class="mdl-grid fielo-field fielo-field--is-password">
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__label" >
-                                <label for="password" >{!$Label.Password}</label>
+                                <label for="password" >{!$Label.FieloCMSPLT_Password}</label>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__value">
                                 <input class="fielo-input password" type="password" required="required"  autocomplete="current-password" id="showPassword" name="password"  />

@@ -42,7 +42,7 @@ global with sharing class FieloCMSPLT_ShoppingCartCtrl {
 
     private String getFieldset(){
         Set<String> fields = new Set<String>{'Id','FieloPLT__Points__c'};
-        for(Schema.FieldSetMember fsm : Schema.SObjectType.FieloPLT__Reward__c.fieldSets.ShoppingCart.getFields()){
+        for(Schema.FieldSetMember fsm : Schema.SObjectType.FieloPLT__Reward__c.fieldSets.FieloCMSPLT_ShoppingCart.getFields()){
             fields.add(fsm.getFieldPath());
         }
         return String.join(new List<String>(fields),',');

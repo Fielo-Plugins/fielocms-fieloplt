@@ -41,7 +41,7 @@
         <externalId>false</externalId>
         <formula>IF(
 ISPICKVAL( FieloPLT__Status__c ,&apos;Ready&apos; ) ,
-HYPERLINK( &apos;./apex/RedemptionItemVoucher?voucherId=&apos; + Id, $Label.Voucher ),
+HYPERLINK( &apos;./apex/RedemptionItemVoucher?voucherId=&apos; + Id, $Label.FieloCMSPLT_Voucher ),
 &apos;&apos;
 )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
