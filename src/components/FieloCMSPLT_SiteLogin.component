@@ -23,7 +23,7 @@
             </fieldset>
             <div class="fielo-controls" >
                 <a href="#" class="fielo-login__link" data-switchlabel="{!$Label.FieloCMSPLT_back}" >{!$Label.site.forgot_password}</a>
-                <button class="fieloplt-login__submit fielo-button fielo-button--safe" >{!$Label.submit}</button>
+                <button class="fieloplt-login__submit fielo-button fielo-button--safe" >{!$Label.FieloCMSPLT_submit}</button>
             </div>
         </form>
     </div>
