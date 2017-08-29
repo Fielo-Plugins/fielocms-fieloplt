@@ -147,7 +147,7 @@
             </div>
             <div class="cms-plt-voucher__reward-fieldset">
               <!--datos premio -->
-              <apex:repeat value="{!$ObjectType.FieloPLT__RedemptionItem__c.FieldSets.Voucher}" var="f">
+              <apex:repeat value="{!$ObjectType.FieloPLT__RedemptionItem__c.FieldSets.FieloCMSPLT_Voucher}" var="f">
                 <div class="cms-plt-voucher__reward-fieldset-field cms-plt-voucher__reward-fieldset-field--{!SUBSTITUTE($ObjectType.FieloPLT__RedemptionItem__c.Fields[f].label, ' ', '')}">
                   <span class="cms-plt-voucher__reward-fieldset-label">{!$ObjectType.FieloPLT__RedemptionItem__c.Fields[f].label}:</span>
                   <span class="cms-plt-voucher__reward-fieldset-value">{!v.redemptionItem[f]}</span>
