@@ -33,14 +33,14 @@ public with sharing class FieloCMSPLT_SegmentsSelectionCtrl {
         String recordQuery;
 
         if(String.isBlank(programField)){
-            record = Database.query('SELECT ' + 'FieloCMSPLT_Segment__c' + ', ' + 'Segment__r.FieloPLT__RelatedSegments__c FROM ' + objectName + ' WHERE Id =: id' );
+            record = Database.query('SELECT ' + 'FieloCMSPLT_Segment__c' + ', ' + 'FieloCMSPLT_Segment__r.FieloPLT__RelatedSegments__c FROM ' + objectName + ' WHERE Id =: id' );
         }else{
-            record = Database.query('SELECT ' + programField + ', ' + 'FieloCMSPLT_Segment__c' + ', ' + 'Segment__r' + '.FieloPLT__RelatedSegments__c FROM ' + objectName + ' WHERE Id =: id' );
+            record = Database.query('SELECT ' + programField + ', ' + 'FieloCMSPLT_Segment__c' + ', ' + 'FieloCMSPLT_Segment__r' + '.FieloPLT__RelatedSegments__c FROM ' + objectName + ' WHERE Id =: id' );
         }
 
         programId = String.isBlank(programField) ? null : (Id)record.get(programField);
 
-        FieloPLT__Segment__c segment = (FieloPLT__Segment__c)record.getSObject('Segment__r');
+        FieloPLT__Segment__c segment = (FieloPLT__Segment__c)record.getSObject('FieloCMSPLT_Segment__r');
         String previousSegments;
         Set<String> setPreviousSegments = new Set<String>();
 

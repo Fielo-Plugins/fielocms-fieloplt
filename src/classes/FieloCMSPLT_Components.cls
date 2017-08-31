@@ -21,7 +21,7 @@ public without sharing class FieloCMSPLT_Components extends FieloCMSPLT_SObjectD
         Set<Id> sectionId = new Set<Id>();
         FieloCMS__Component__c shoppingCartComponent = new FieloCMS__Component__c();
         for(FieloCMS__Component__c record : (List<FieloCMS__Component__c>) records){
-            if( componentLibraryMap.containsKey(record.FieloCMS__ComponentLibrary__c) && componentLibraryMap.get(record.FieloCMS__ComponentLibrary__c).FieloCMS__DeveloperName__c == 'PlatformPlugin.RegisterStep2' ){
+            if( componentLibraryMap.containsKey(record.FieloCMS__ComponentLibrary__c) && componentLibraryMap.get(record.FieloCMS__ComponentLibrary__c).FieloCMS__DeveloperName__c == 'PlatformPlugin.FieloCMSPLT_RegisterStep2' ){
                 if( record.FieloCMSPLT_AccountCRMMode__c == null || record.FieloCMSPLT_AccountCRMMode__c == '' ){
                     record.FieloCMSPLT_AccountCRMMode__c = 'Standard Account';
                 } else if(record.FieloCMSPLT_AccountCRMMode__c == 'Person Account' && !FieloCMSPLT_OrganizationUtil.isPersonAccountEnabled()) {
@@ -35,9 +35,9 @@ public without sharing class FieloCMSPLT_Components extends FieloCMSPLT_SObjectD
                 } else if(usersMap.containsKey(record.FieloCMSPLT_AccountOwner__c) && usersMap.get(record.FieloCMSPLT_AccountOwner__c).UserRoleId == null){
                     record.addError('Owner must have a Role.');
                 }
-            } else if( componentLibraryMap.containsKey(record.FieloCMS__ComponentLibrary__c) && componentLibraryMap.get(record.FieloCMS__ComponentLibrary__c).FieloCMS__DeveloperName__c == 'PlatformPlugin.RedemptionDetail' ){
+            } else if( componentLibraryMap.containsKey(record.FieloCMS__ComponentLibrary__c) && componentLibraryMap.get(record.FieloCMS__ComponentLibrary__c).FieloCMS__DeveloperName__c == 'PlatformPlugin.FieloCMSPLT_RedemptionDetail' ){
                 sectionId.add(record.FieloCMS__Section__c);
-            } else if (componentLibraryMap.containsKey(record.FieloCMS__ComponentLibrary__c) && componentLibraryMap.get(record.FieloCMS__ComponentLibrary__c).FieloCMS__DeveloperName__c == 'PlatformPlugin.ShoppingCart'/* && record.FieloCMSPLT_RedirectPage__c == null*/ ) {
+            } else if (componentLibraryMap.containsKey(record.FieloCMS__ComponentLibrary__c) && componentLibraryMap.get(record.FieloCMS__ComponentLibrary__c).FieloCMS__DeveloperName__c == 'PlatformPlugin.FieloCMSPLT_ShoppingCart'/* && record.FieloCMSPLT_RedirectPage__c == null*/ ) {
                 shoppingCartComponent = record;
             }
 

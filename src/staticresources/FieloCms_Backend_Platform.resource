@@ -78,7 +78,7 @@ var QueryString = function () {
             }
           } 
           
-          url = url + '/apex/segmentselection?id=' + QueryString.id;
+          url = url + '/apex/FieloCMSPLT_segmentselection?id=' + QueryString.id;
 
           this.element_.setAttribute('href', url);
           
