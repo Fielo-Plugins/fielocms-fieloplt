@@ -7,7 +7,7 @@
         <apex:panelGroup layout="none" rendered="{!(status != 'Ok' && status != 'User exist')}">
             <apex:panelGroup layout="none" rendered="{!status != 'Send for Approval'}">
                 <div class="fielo-toast fielo-toast--is-error">
-                    <apex:panelGroup layout="none" rendered="{!status == 'Member Completed'}">
+                    <apex:panelGroup layout="none" rendered="{!status == 'Member Active'}">
                         <p>{!$Label.FieloCMSPLT_ErrorRegistrationUserExists}</p>
                     </apex:panelGroup>
                     <apex:panelGroup layout="none" rendered="{!status == 'Invalid Member'}">
@@ -25,14 +25,14 @@
                 </div>
             </apex:panelGroup>
             <apex:panelGroup layout="none" rendered="{!status == 'Send for Approval'}">
-                <form class="fielo-js-upgrade" data-remoteaction="{!namespace}RegisterStep2Ctrl.continueRegistration" data-remotearguments="id" data-remoteobject="Member__c" >
+                <form class="fielo-js-upgrade" data-remoteaction="{!namespace}FieloCMSPLT_RegisterStep2Ctrl.continueRegistration" data-remotearguments="id" data-remoteobject="Member__c" >
                     <input type="hidden" name="id" value="{!member.Id}" />
                     <button type="submit" class="fielo-button fielo-button__submit" >{!$Label.FieloCMSPLT_Continue}</button>
                 </form>
             </apex:panelGroup>
         </apex:panelGroup>
         <apex:panelGroup layout="none" rendered="{!(status == 'Ok' || status == 'User exist')}">
-            <form class="fielo-js-upgrade register-step-2-form" data-remoteaction="{!namespace}RegisterStep2Ctrl.finishRegistration" data-remotearguments="SObject,password" data-remoteobject="Member__c" >
+            <form class="fielo-js-upgrade register-step-2-form" data-remoteaction="{!namespace}FieloCMSPLT_RegisterStep2Ctrl.finishRegistration" data-remotearguments="SObject,password" data-remoteobject="Member__c" >
                 <fieldset>
                     <input type="hidden" name="SObject.id" value="{!member.Id}" />
                     <apex:repeat value="{!$ObjectType.FieloPLT__Member__c.FieldSets.FieloCMSPLT_RegistrationStep2}" var="field" >
