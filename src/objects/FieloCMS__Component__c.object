@@ -41,7 +41,7 @@ Default Account: The member will be related to an specific default CRM account</
         <inlineHelpText>Select the owner of the new CRM account created by the component Register</inlineHelpText>
         <label>Account Owner</label>
         <referenceTo>User</referenceTo>
-        <relationshipName>Components2</relationshipName>
+        <relationshipName>FieloCMSPLT_Components</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -53,7 +53,7 @@ Default Account: The member will be related to an specific default CRM account</
         <label>Account</label>
         <referenceTo>Account</referenceTo>
         <relationshipLabel>Accounts</relationshipLabel>
-        <relationshipName>Accounts</relationshipName>
+        <relationshipName>FieloCMSPLT_Accounts</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -65,7 +65,7 @@ Default Account: The member will be related to an specific default CRM account</
         <label>Program</label>
         <referenceTo>FieloPLT__Program__c</referenceTo>
         <relationshipLabel>Components</relationshipLabel>
-        <relationshipName>Components</relationshipName>
+        <relationshipName>FieloCMSPLT_Components</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -86,7 +86,7 @@ Default Account: The member will be related to an specific default CRM account</
         </lookupFilter>
         <referenceTo>FieloCMS__Page__c</referenceTo>
         <relationshipLabel>Components (Detail page)</relationshipLabel>
-        <relationshipName>ListComponentsDetailPage</relationshipName>
+        <relationshipName>FieloCMSPLT_ListComponentsDetailPage</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>

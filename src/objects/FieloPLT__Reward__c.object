@@ -25,7 +25,7 @@
         <label>Category</label>
         <referenceTo>FieloCMS__Category__c</referenceTo>
         <relationshipLabel>Rewards</relationshipLabel>
-        <relationshipName>Rewards</relationshipName>
+        <relationshipName>FieloCMSPLT_Rewards</relationshipName>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>

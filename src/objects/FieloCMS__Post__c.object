@@ -7,7 +7,7 @@
         <label>Segment</label>
         <referenceTo>FieloPLT__Segment__c</referenceTo>
         <relationshipLabel>Posts</relationshipLabel>
-        <relationshipName>Posts</relationshipName>
+        <relationshipName>FieloCMSPLT_Posts</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>

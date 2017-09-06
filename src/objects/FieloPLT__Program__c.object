@@ -34,7 +34,7 @@
         <label>Register Step 2 Page</label>
         <referenceTo>FieloCMS__Page__c</referenceTo>
         <relationshipLabel>Programs</relationshipLabel>
-        <relationshipName>Programs</relationshipName>
+        <relationshipName>FieloCMSPLT_Programs</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>

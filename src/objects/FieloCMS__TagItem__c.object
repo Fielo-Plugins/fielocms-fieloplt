@@ -9,7 +9,7 @@
         <label>Reward</label>
         <referenceTo>FieloPLT__Reward__c</referenceTo>
         <relationshipLabel>Tag Items</relationshipLabel>
-        <relationshipName>TagItems</relationshipName>
+        <relationshipName>FieloCMSPLT_TagItems</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>

@@ -7,7 +7,7 @@
         <label>Segment</label>
         <referenceTo>FieloPLT__Segment__c</referenceTo>
         <relationshipLabel>Media</relationshipLabel>
-        <relationshipName>Media</relationshipName>
+        <relationshipName>FieloCMSPLT_Media</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>

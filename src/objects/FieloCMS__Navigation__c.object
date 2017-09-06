@@ -9,7 +9,7 @@
         <label>Segment</label>
         <referenceTo>FieloPLT__Segment__c</referenceTo>
         <relationshipLabel>Navigations</relationshipLabel>
-        <relationshipName>Navigations</relationshipName>
+        <relationshipName>FieloCMSPLT_Navigations</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
