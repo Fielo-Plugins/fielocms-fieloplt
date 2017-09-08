@@ -5,11 +5,11 @@ public class FieloCMSPLT_Rewards extends FieloCMSPLT_SObjectDomain {
 	}
 
 	public override void onAfterInsert(){
-    	FieloCMS.CategoryService.updateCounters( records, 1);
+    	FieloCMS.CategoryService.updateCounters( records, 1, 'FieloCMSPLT_Category__c');
   	}
   
   	public override void onAfterUpdate(Map<Id,SObject> existingRecords){  
-    	FieloCMS.CategoryService.updateCounters( records, existingRecords);    
+    	FieloCMS.CategoryService.updateCounters( records, existingRecords, 'FieloCMSPLT_Category__c');
   	}
   
   	public override void onAfterDelete(){

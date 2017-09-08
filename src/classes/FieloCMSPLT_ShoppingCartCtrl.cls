@@ -12,7 +12,7 @@ global with sharing class FieloCMSPLT_ShoppingCartCtrl {
         if(quantitiesMap == null){
             Cookie shopCartCookie = ApexPages.currentPage().getCookies().get('shoppingCart');
             if(shopCartCookie != null && !String.isBlank(shopCartCookie.getValue())){
-                quantitiesMap = (Map<Id,Integer>)JSON.deserialize(shopCartCookie.getValue(),Map<Id,Integer>.class);
+                quantitiesMap = (Map<Id,Integer>)JSON.deserialize(shopCartCookie.getValue().replace('\'','"'),Map<Id,Integer>.class);
             }else{
                 quantitiesMap = new Map<Id,Integer>();
             }

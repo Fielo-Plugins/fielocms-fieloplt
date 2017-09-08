@@ -1,5 +1,5 @@
 <apex:component controller="FieloCMSPLT_ShoppingCartCtrl" allowDML="true" access="global" layout="none">
-	<apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.FieloCMSPLT_AccountCRMMode__c.Name}" />
+    <apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.FieloCMSPLT_AccountCRMMode__c.Name}" />
     <apex:variable var="namespace" value="{!SUBSTITUTE(SUBSTITUTE(fieldName,'FieloCMSPLT_AccountCRMMode__c',''),'__','.')}" />
     <apex:attribute name="config" type="FieloCMS__Component__c" description="" />
     <apex:panelGroup layout="none" rendered="{!config.FieloCMS__Layout__c != 'View'}" >
@@ -55,7 +55,7 @@
                     <div class="fielo-controls" >
                         <a class="fielo-button fielo-button--safe fielo-button__save" >{!$Label.FieloCMSPLT_Save}</a>
                         <a class="fielo-button fielo-button--danger fielo-button__empty-cart"  >{!$Label.FieloCMSPLT_EmptyCart}</a>
-                        <button data-remoteaction="FieloCMSPLT_ShoppingCartController.checkout" class="fielo-button fielo-button--safe fielo-js-upgrade fielo-button__checkout" >{!$Label.FieloCMSPLT_CreateVoucher}</button>
+                        <button data-remoteaction="FieloCMSPLT_ShoppingCartCtrl.checkout" class="fielo-button fielo-button--safe fielo-js-upgrade fielo-button__checkout" >{!$Label.FieloCMSPLT_CreateVoucher}</button>
                     </div>
                 </form>
             </div>
