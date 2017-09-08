@@ -1,0 +1,14 @@
+<apex:component layout="none" controller="FieloCMSPLT_ToggleManagerCtrl">
+	<apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.FieloCMSPLT_AccountCRMMode__c.Name}" />
+    <apex:variable var="namespace" value="{!SUBSTITUTE(SUBSTITUTE(fieldName,'FieloCMSPLT_AccountCRMMode__c',''),'__','.')}" />
+    <apex:variable var="toogleClass" value="{!IF(record['FieloPLT__IsManager__c'] == true, 'fielo-button--danger', 'fielo-button--safe')}" />
+    <apex:attribute name="record" type="SObject" description="" />
+    <apex:attribute name="field" type="FieloCMS.Field" description="" />
+    <div class="fielo-form fieloplt-toggle-manager">
+        <form class="fielo-js-upgrade" data-remoteaction="{!namespace}FieloCMSPLT_ToggleManagerCtrl.toggleManager" data-remotearguments="memberId,action"  >
+            <input type="hidden" name="memberId" value="{!record.Id}" data-object-property="Id"  data-attribute-replace="value"/>
+            <input type="hidden" name="action" value="{!!record['FieloPLT__IsManager__c']}" data-attribute-replace="value" />
+            <button type="submit" class="fielo-button fielo-button__submit {!toogleClass}" >{!IF(record['FieloPLT__IsManager__c'] == true, $Label.FieloCMSPLT_Unset, $Label.FieloCMSPLT_Set)}</button>
+        </form>
+    </div>
+</apex:component>

@@ -1,0 +1,17 @@
+<apex:component layout="none" controller="FieloCMSPLT_SelectMemberCtrl" >
+    <apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.FieloCMSPLT_AccountCRMMode__c.Name}" />
+    <apex:variable var="namespace" value="{!SUBSTITUTE(SUBSTITUTE(fieldName,'FieloCMSPLT_AccountCRMMode__c',''),'__','.')}" />
+    <apex:attribute name="record" type="FieloPLT__Member__c" description="" />
+    <apex:attribute name="field" type="FieloCMS.Field" description="" />
+    <apex:panelGroup layout="none" rendered="{!(field.attributes['memberType'] == 'Member' || (record.FieloPLT__OrganizationAccount__c != null && record.FieloPLT__IsManager__c == true))}" >
+        <div class="fielo-form fieloplt-select-member">
+            <form class="fielo-js-upgrade" data-remoteaction="{!namespace}FieloCMSPLT_SelectMemberCtrl.selectMember" data-remotearguments="memberId,type" >
+                <input type="hidden" name="memberId" value="{!record.Id}" data-object-property="Id" data-attribute-replace="value"/>
+                <input type="hidden" name="type" value="{!field.attributes['memberType']}" />
+                <apex:panelGroup layout="none" rendered="{!record.FieloPLT__Status__c == 'Active'}">
+                    <button type="submit" class="fielo-button fielo-button__submit" >{!IF(field.attributes['memberType'] == 'Member', $Label.FieloCMSPLT_LoginAsMember,$Label.FieloCMSPLT_LoginAsOrganization)}</button>
+                </apex:panelGroup>
+            </form>
+        </div>
+    </apex:panelGroup>
+</apex:component>

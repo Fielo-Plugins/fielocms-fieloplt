@@ -1,0 +1,72 @@
+<apex:component controller="FieloCMSPLT_ShoppingCartCtrl" allowDML="true" access="global" layout="none">
+    <apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.FieloCMSPLT_AccountCRMMode__c.Name}" />
+    <apex:variable var="namespace" value="{!SUBSTITUTE(SUBSTITUTE(fieldName,'FieloCMSPLT_AccountCRMMode__c',''),'__','.')}" />
+    <apex:attribute name="config" type="FieloCMS__Component__c" description="" />
+    <apex:panelGroup layout="none" rendered="{!config.FieloCMS__Layout__c != 'View'}" >
+        <apex:panelGroup rendered="{!rewards.size > 0}" layout="none">
+            <div class="fielo-form fieloplt-shopping-cart fielo-js-component {!config.FieloCMS__ComponentLibrary__r.FieloCMS__CSSClasses__c} {!config.FieloCMS__CSSClasses__c}" data-componentid="{!config.Id}" data-label-success="{!$Label.FieloCMSPLT_ShoppingCartSave}" >
+                <form class="fielo-js-upgrade" data-remotearguments="componentId,quantities" data-remotepreprocess="FieloPLTcheckDeleteCookie">
+                    <input type="hidden" name="componentId" value="{!config.Id}" />
+                    <div class="fielo-record-set fielo-record-set--is-table fielo-record-set--is-component-ShoppingCart {!config.FieloCMS__CSSClasses__c}" data-layout="table" data-componentid="{! config.Id}" >
+                        <apex:panelGroup layout="none" rendered="{!config.FieloCMS__Title__c != ''}" >
+                            <h3 class="fielo-title">{!config.FieloCMS__Title__c}</h3>
+                        </apex:panelGroup>
+                        <table class="fielo-table mdl-data-table">
+                            <thead class="fielo-table__head">
+                                <tr class="fielo-record">
+                                    <apex:repeat value="{!$ObjectType.FieloPLT__Reward__c.FieldSets.FieloCMSPLT_ShoppingCart}" var="field">
+                                        <th class="fielo-field fielo-field--is-{!field} mdl-data-table__cell--non-numeric"><span data-order-value="{!field}">{!$ObjectType.FieloPLT__Reward__c.fields[field].label}</span></th>
+                                    </apex:repeat>
+                                    <th class="fielo-field fielo-field--is-quantity mdl-data-table__cell--non-numeric"><span data-order-value="quantity">{!$Label.FieloPLT__Quantity}</span></th>
+                                    <th class="fielo-field fielo-field--is-total mdl-data-table__cell--non-numeric"><span data-order-value="total">{!$Label.FieloCMSPLT_TotalPoints}</span></th>
+                                    <th class="fielo-field fielo-field--is-delete mdl-data-table__cell--non-numeric"><span data-order-value="delete">{!$Label.FieloPLT__Delete}</span></th>
+                                </tr>
+                            </thead>
+                            <tbody class="fielo-record-set__data">
+                                <apex:repeat value="{!rewards}" var="record">
+                                    <tr class="fielo-record fielo-record-set__template">
+                                        <apex:repeat value="{!$ObjectType.FieloPLT__Reward__c.FieldSets.FieloCMSPLT_ShoppingCart}" var="field">
+                                            <td class="fielo-field fielo-field--is-{!field} mdl-data-table__cell--non-numeric" data-th="{!field}">
+                                                <span id="{!record.Id}{!field}" class="fielo-field__value">
+                                                    <apex:outputField value="{!record[field]}" />
+                                                </span>
+                                            </td>
+                                        </apex:repeat>
+                                        <td class="fielo-field fielo-field--is-ShoppingQuantity mdl-data-table__cell--non-numeric" data-th="Shopping Quantity">
+                                            <span class="fielo-field__value">
+                                                <input type="number" min="0" required="required" class="fieloplt-shopping-cart__quantity js-to-be-initialized" name="quantities.{!record.Id}" value="{!quantitiesMap[record.Id]}" onchange="document.getElementById('shoppingTotal{!record.Id}').innerHTML = this.value * document.getElementById('{!record.Id}FieloPLT__Points__c').children[0].innerHTML.replace(',','');" data-attribute-replace="value"/>
+                                            </span>
+                                        </td>
+                                        <td class="fielo-field fielo-field--is-ShoppingTotal mdl-data-table__cell--non-numeric" data-th="Shopping Total">
+                                            <span class="fielo-field__value">
+                                                <span id="shoppingTotal{!record.Id}" class="fieloplt-shopping-cart__total">{!totalPointsMap[record.Id]}</span>
+                                            </span>
+                                        </td>
+                                        <td class="fielo-field fielo-field--is-ShoppingDelete mdl-data-table__cell--non-numeric" data-th="Shopping Total">
+                                            <span class="fielo-field__value">
+                                                <div class="fielo-button__delete">{!$Label.FieloCMSPLT_Delete}</div>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </apex:repeat>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="fielo-controls" >
+                        <a class="fielo-button fielo-button--safe fielo-button__save" >{!$Label.FieloCMSPLT_Save}</a>
+                        <a class="fielo-button fielo-button--danger fielo-button__empty-cart"  >{!$Label.FieloCMSPLT_EmptyCart}</a>
+                        <button data-remoteaction="FieloCMSPLT_ShoppingCartCtrl.checkout" class="fielo-button fielo-button--safe fielo-js-upgrade fielo-button__checkout" >{!$Label.FieloCMSPLT_CreateVoucher}</button>
+                    </div>
+                </form>
+            </div>
+        </apex:panelGroup>
+        <apex:panelGroup rendered="{!rewards.size == 0 }" layout="none">
+            <span>
+                {!$Label.FieloCMSPLT_ErrorNoItemShoppingCart}
+            </span>
+        </apex:panelGroup>
+    </apex:panelGroup>
+    <apex:panelGroup rendered="{!config.FieloCMS__Layout__c == 'View'}" layout="none">
+        {!totalItems} Items
+    </apex:panelGroup>
+</apex:component>

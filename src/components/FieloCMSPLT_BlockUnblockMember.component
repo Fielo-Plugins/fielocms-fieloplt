@@ -1,0 +1,14 @@
+<apex:component layout="none" controller="FieloCMSPLT_BlockUnblockMemberCtrl">
+	<apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.FieloCMSPLT_AccountCRMMode__c.Name}" />
+    <apex:variable var="namespace" value="{!SUBSTITUTE(SUBSTITUTE(fieldName,'FieloCMSPLT_AccountCRMMode__c',''),'__','.')}" />
+    <apex:variable var="blockClass" value="{!IF(record['FieloPLT__Status__c'] == 'Blocked', 'fielo-button--safe', 'fielo-button--danger')}" />
+    <apex:attribute name="record" type="SObject" description="" />
+    <apex:attribute name="field" type="FieloCMS.Field" description="" />
+    <div class="fielo-form fieloplt-block-member">
+        <form class="fielo-js-upgrade" data-remoteaction="{!namespace}FieloCMSPLT_BlockUnblockMemberController.blockUnblockMember" data-remotearguments="memberId,action" >
+            <input type="hidden" name="memberId" value="{!record['Id']}" data-object-property="Id"  data-attribute-replace="value"/>
+            <input type="hidden" name="action" value="{!record['FieloPLT__Status__c'] == 'Active'}" data-attribute-replace="value" />
+            <button type="submit" class="fielo-button fielo-button__submit {!blockClass}" >{!IF(record['FieloPLT__Status__c'] == 'Blocked', $Label.FieloCMSPLT_Unblock, $Label.FieloCMSPLT_Block)}</button>
+        </form>
+    </div>
+</apex:component>

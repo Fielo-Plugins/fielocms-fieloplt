@@ -1,0 +1,30 @@
+<apex:component controller="FieloCMSPLT_SiteLoginCtrl" allowDML="true" access="global" layout="none" >
+    <apex:attribute name="config" type="FieloCMS__Component__c" description="" />
+    <div class="fielo-form fieloplt-login fielo-widget fielo-js-component" data-componentid="{!config.Id}" >
+        <form class="fielo-js-upgrade" data-remotearguments="username,password" data-remoteaction="FieloCMSPLT_SiteLoginCtrl.login"  >
+            <fieldset>
+                <legend class="fielo-title" >Login</legend>
+                <div class="mdl-grid fielo-field fielo-field--is-username fielo-field" >
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__label" >
+                        <label for="username" id="lblUsername" data-switchlabel="{!$Label.site.enter_password}" >{!$Label.site.email}</label>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__value">
+                        <input id="username" required="true" autofocus="true" name="username" type="email" autocomplete="username" />
+                    </div>
+                </div>
+                <div class="mdl-grid fielo-field fielo-field--is-password fielo-field">
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__label" >
+                        <label for="password" id="lblPassword">{!$Label.site.password}</label>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__value">
+                        <input id="password" required="true" name="password" type="password" />
+                    </div>
+                </div>
+            </fieldset>
+            <div class="fielo-controls" >
+                <a href="#" class="fielo-login__link" data-switchlabel="{!$Label.FieloCMSPLT_back}" >{!$Label.site.forgot_password}</a>
+                <button class="fieloplt-login__submit fielo-button fielo-button--safe" >{!$Label.FieloCMSPLT_submit}</button>
+            </div>
+        </form>
+    </div>
+</apex:component>

@@ -1,379 +1,379 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+     <classAccesses>
+        <apexClass>FieloCMSPLT_AgreementAPI</apexClass>
+        <enabled>true</enabled>
+    </classAccesses> 
     <classAccesses>
-        <apexClass>AgreementAPI</apexClass>
+        <apexClass>FieloCMSPLT_AgreementAcceptCtrl</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>AgreementAcceptController</apexClass>
+        <apexClass>FieloCMSPLT_AgreementsSelector</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>AgreementsSelector</apexClass>
+        <apexClass>FieloCMSPLT_BadgeAPI</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>BadgeAPI</apexClass>
+        <apexClass>FieloCMSPLT_BadgeService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>BadgeService</apexClass>
+        <apexClass>FieloCMSPLT_BarCodeCtrl</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>BarCodeController</apexClass>
+        <apexClass>FieloCMSPLT_BlockUnblockMemberCtrl</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>BlockUnblockMemberController</apexClass>
+        <apexClass>FieloCMSPLT_ChangePwdCtrl</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>ChangePasswordFieloController</apexClass>
+        <apexClass>FieloCMSPLT_ChangePwdCtrlTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>ChangePasswordFieloControllerTest</apexClass>
+        <apexClass>FieloCMSPLT_CheckoutCtrl</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>CheckoutController</apexClass>
+        <apexClass>FieloCMSPLT_Components</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>Components</apexClass>
+        <apexClass>FieloCMSPLT_ComponentsLibrariesSelector</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>ComponentsLibrariesSelector</apexClass>
+        <apexClass>FieloCMSPLT_ContactAPI</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>ContactAPI</apexClass>
+        <apexClass>FieloCMSPLT_ContactService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>ContactService</apexClass>
+        <apexClass>FieloCMSPLT_Exception</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>FieloException</apexClass>
+        <apexClass>FieloCMSPLT_HandleInvitationsMbrCtrl</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>HandleInvitationsMembersController</apexClass>
+        <apexClass>FieloCMSPLT_LoginAPI</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>LoginAPI</apexClass>
+        <apexClass>FieloCMSPLT_LoginAsBackendCtrl</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>LoginAsBackendController</apexClass>
+        <apexClass>FieloCMSPLT_LoginAsBackendCtrlTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>LoginAsBackendControllerTest</apexClass>
+        <apexClass>FieloCMSPLT_LoginAsCtrl</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>LoginAsController</apexClass>
+        <apexClass>FieloCMSPLT_LoginAsCtrlTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>LoginAsControllerTest</apexClass>
+        <apexClass>FieloCMSPLT_LoginService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>LoginService</apexClass>
+        <apexClass>FieloCMSPLT_MediaAPI</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>MediaAPI</apexClass>
+        <apexClass>FieloCMSPLT_MediaService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>MediaService</apexClass>
+        <apexClass>FieloCMSPLT_MemberAPI</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>MemberAPI</apexClass>
+        <apexClass>FieloCMSPLT_MemberService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>MemberService</apexClass>
+        <apexClass>FieloCMSPLT_MembersSelector</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>MembersSelector</apexClass>
+        <apexClass>FieloCMSPLT_NavigationAPI</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>NavigationAPI</apexClass>
+        <apexClass>FieloCMSPLT_NavigationService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>NavigationService</apexClass>
+        <apexClass>FieloCMSPLT_NavigationsSelector</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>NavigationsSelector</apexClass>
+        <apexClass>FieloCMSPLT_OrganizationUtil</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>OrganizationUtil</apexClass>
+        <apexClass>FieloCMSPLT_Plugins</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>Plugins</apexClass>
+        <apexClass>FieloCMSPLT_PostAPI</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>PostAPI</apexClass>
+        <apexClass>FieloCMSPLT_PostService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>PostService</apexClass>
+        <apexClass>FieloCMSPLT_ProgramService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>ProgramService</apexClass>
+        <apexClass>FieloCMSPLT_Programs</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>Programs</apexClass>
+        <apexClass>FieloCMSPLT_ProgramsSelector</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>ProgramsSelector</apexClass>
+        <apexClass>FieloCMSPLT_QueryFactory</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>QueryFactory</apexClass>
+        <apexClass>FieloCMSPLT_RedemptionAPI</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>RedemptionAPI</apexClass>
+        <apexClass>FieloCMSPLT_RedemptionItemAPI</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>RedemptionItemAPI</apexClass>
+        <apexClass>FieloCMSPLT_RedemptionItemVouCtrl</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>RedemptionItemVoucherController</apexClass>
+        <apexClass>FieloCMSPLT_RedemptionItemVouCtrlTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>RedemptionItemVoucherControllerTest</apexClass>
+        <apexClass>FieloCMSPLT_RedemptionItemsSelector</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>RedemptionItemsSelector</apexClass>
+        <apexClass>FieloCMSPLT_RedemptionsSelector</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>RedemptionsSelector</apexClass>
+        <apexClass>FieloCMSPLT_RegisterStep2Ctrl</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>RegisterStep2Controller</apexClass>
+        <apexClass>FieloCMSPLT_RewardAPI</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>RewardAPI</apexClass>
+        <apexClass>FieloCMSPLT_Rewards</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>Rewards</apexClass>
+        <apexClass>FieloCMSPLT_SObjectDescribe</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>SObjectDescribe</apexClass>
+        <apexClass>FieloCMSPLT_SObjectDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>SObjectDomain</apexClass>
+        <apexClass>FieloCMSPLT_SObjectSelector</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>SObjectSelector</apexClass>
+        <apexClass>FieloCMSPLT_SObjectUnitOfWork</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>SObjectUnitOfWork</apexClass>
+        <apexClass>FieloCMSPLT_SecurityUtils</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>SecurityUtils</apexClass>
+        <apexClass>FieloCMSPLT_SegmentsSelectionCtrl</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>SegmentsSelectionController</apexClass>
+        <apexClass>FieloCMSPLT_SelectMemberCtrl</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>SelectMemberController</apexClass>
+        <apexClass>FieloCMSPLT_ShoppingCartCtrl</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>ShoppingCartController</apexClass>
+        <apexClass>FieloCMSPLT_SiteLoginCtrl</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>SiteLoginFieloController</apexClass>
+        <apexClass>FieloCMSPLT_SitesSelector</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>SitesSelector</apexClass>
+        <apexClass>FieloCMSPLT_StringBuilder</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>StringBuilder</apexClass>
+        <apexClass>FieloCMSPLT_ToggleManagerCtrl</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>ToggleManagerController</apexClass>
+        <apexClass>FieloCMSPLT_TransactionAPI</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>TransactionAPI</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>UserCreationFielo</apexClass>
+        <apexClass>FieloCMSPLT_UserCreation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <custom>false</custom>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloCMS__Component__c.AccountCRMMode__c</field>
+        <field>FieloCMS__Component__c.FieloCMSPLT_AccountCRMMode__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloCMS__Component__c.AccountOwner__c</field>
+        <field>FieloCMS__Component__c.FieloCMSPLT_AccountOwner__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloCMS__Component__c.Account__c</field>
+        <field>FieloCMS__Component__c.FieloCMSPLT_Account__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloCMS__Component__c.Program__c</field>
+        <field>FieloCMS__Component__c.FieloCMSPLT_Program__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloCMS__Component__c.RedirectPage__c</field>
+        <field>FieloCMS__Component__c.FieloCMSPLT_RedirectPage__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloCMS__Media__c.Segment__c</field>
+        <field>FieloCMS__Media__c.FieloCMSPLT_Segment__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloCMS__Navigation__c.Segment__c</field>
+        <field>FieloCMS__Navigation__c.FieloCMSPLT_Segment__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloCMS__Post__c.Segment__c</field>
+        <field>FieloCMS__Post__c.FieloCMSPLT_Segment__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloCMS__TagItem__c.Reward__c</field>
+        <field>FieloCMS__TagItem__c.FieloCMSPLT_Reward__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__Member__c.SiteURL__c</field>
+        <field>FieloPLT__Member__c.FieloCMSPLT_SiteURL__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloPLT__Program__c.CustomVoucherCss__c</field>
+        <field>FieloPLT__Program__c.FieloCMSPLT_CustomVoucherCss__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloPLT__Program__c.MemberSelectionPage__c</field>
+        <field>FieloPLT__Program__c.FieloCMSPLT_MemberSelectionPage__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloPLT__Program__c.RegisterStep2Page__c</field>
+        <field>FieloPLT__Program__c.FieloCMSPLT_RegisterStep2Page__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloPLT__Program__c.RewardInstructions__c</field>
+        <field>FieloPLT__Program__c.FieloCMSPLT_RewardInstructions__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloPLT__Program__c.ShowVoucherCode__c</field>
+        <field>FieloPLT__Program__c.FieloCMSPLT_ShowVoucherCode__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloPLT__Program__c.SiteDomain__c</field>
+        <field>FieloPLT__Program__c.FieloCMSPLT_SiteDomain__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloPLT__Program__c.SiteURL__c</field>
+        <field>FieloPLT__Program__c.FieloCMSPLT_SiteURL__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloPLT__Program__c.UseAgreement__c</field>
+        <field>FieloPLT__Program__c.FieloCMSPLT_UseAgreement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloPLT__Program__c.VoucherInstructions__c</field>
+        <field>FieloPLT__Program__c.FieloCMSPLT_VoucherInstructions__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>FieloPLT__RedemptionItem__c.VoucherLink__c</field>
+        <field>FieloPLT__RedemptionItem__c.FieloCMSPLT_VoucherLink__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloPLT__Reward__c.Category__c</field>
+        <field>FieloPLT__Reward__c.FieloCMSPLT_Category__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>FieloPLT__Reward__c.InstructionsRichText__c</field>
+        <field>FieloPLT__Reward__c.FieloCMSPLT_InstructionsRichText__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    <pageAccesses>
-        <apexPage>ChangePasswordFielo</apexPage>
+|   <pageAccesses>
+        <apexPage>FieloCMSPLT_ChangePasswordFielo</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
-        <apexPage>LoginAs</apexPage>
+        <apexPage>FieloCMSPLT_LoginAs</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
-        <apexPage>LoginAsBackend</apexPage>
+        <apexPage>FieloCMSPLT_LoginAsBackend</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
-        <apexPage>RedemptionItemVoucher</apexPage>
+        <apexPage>FieloCMSPLT_RedemptionItemVoucher</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
-        <apexPage>SegmentSelection</apexPage>
+        <apexPage>FieloCMSPLT_SegmentSelection</apexPage>
         <enabled>true</enabled>
-    </pageAccesses>
+    </pageAccesses> 
     <userLicense>Salesforce</userLicense>
 </Profile>

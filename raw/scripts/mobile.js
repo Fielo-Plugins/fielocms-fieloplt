@@ -57,7 +57,7 @@
     var jsonShop = {};
     var shopCookie = fieloUtils.getCookie("apex__shoppingCart");
     if(shopCookie != undefined && shopCookie != ""){
-        jsonShop = JSON.parse(shopCookie);
+        jsonShop = JSON.parse(shopCookie.replace(/[']/g, "\""));
         if(jsonShop[this.rewardId_] != undefined){
           jsonShop[this.rewardId_] += parseInt(this.quantity_.value);
         }else{
@@ -66,8 +66,7 @@
     }else{
         jsonShop[this.rewardId_] = parseInt(this.quantity_.value);
     }
-    fieloUtils.setCookie("apex__shoppingCart", JSON.stringify(jsonShop), 1);
-
+    fieloUtils.setCookie("apex__shoppingCart", JSON.stringify(jsonShop).replace(/["]/g, "'"), 1);
     fieloUtils.message.FieloMessage.clear();
     fieloUtils.message.FieloMessage.addMessages(this.success_);
     fieloUtils.message.FieloMessage.setRedirect('#', 3);
@@ -184,7 +183,7 @@
       jsonShop[quantities_[i].name.split("quantities.")[1]] = parseInt(quantities_[i].value);
     }
     quantities_ = null;
-    fieloUtils.setCookie("apex__shoppingCart", JSON.stringify(jsonShop), 1);
+    fieloUtils.setCookie("apex__shoppingCart", JSON.stringify(jsonShop).replace(/["]/g, "'"), 1);
     fieloUtils.message.FieloMessage.clear();
     fieloUtils.message.FieloMessage.addMessages(this.success_);
     fieloUtils.message.FieloMessage.setRedirect('#', 3);

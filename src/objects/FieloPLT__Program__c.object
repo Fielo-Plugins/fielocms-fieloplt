@@ -2,7 +2,7 @@
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <fields>
-        <fullName>CustomVoucherCss__c</fullName>
+        <fullName>FieloCMSPLT_CustomVoucherCss__c</fullName>
         <description>CSS code to be applied to customized vouchers.</description>
         <externalId>false</externalId>
         <inlineHelpText>Enter the CSS code to be applied to customized vouchers.</inlineHelpText>
@@ -14,7 +14,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>MemberSelectionPage__c</fullName>
+        <fullName>FieloCMSPLT_MemberSelectionPage__c</fullName>
         <description>Provide the name of the Visualforce Page where the User has to be redirected in order to select which Member is going to use.</description>
         <externalId>false</externalId>
         <inlineHelpText>Provide the name of the Visualforce Page where the User has to be redirected in order to select which Member is going to use.</inlineHelpText>
@@ -26,7 +26,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>RegisterStep2Page__c</fullName>
+        <fullName>FieloCMSPLT_RegisterStep2Page__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <description>Page where the Register Step 2 Component redirects to when checking out.</description>
         <externalId>false</externalId>
@@ -34,13 +34,13 @@
         <label>Register Step 2 Page</label>
         <referenceTo>FieloCMS__Page__c</referenceTo>
         <relationshipLabel>Programs</relationshipLabel>
-        <relationshipName>Programs</relationshipName>
+        <relationshipName>FieloCMSPLT_Programs</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>RewardInstructions__c</fullName>
+        <fullName>FieloCMSPLT_RewardInstructions__c</fullName>
         <description>Detailed steps to obtain the Reward voucher.</description>
         <externalId>false</externalId>
         <inlineHelpText>Enter the detailed steps to obtain the Reward voucher.</inlineHelpText>
@@ -51,7 +51,7 @@
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>ShowVoucherCode__c</fullName>
+        <fullName>FieloCMSPLT_ShowVoucherCode__c</fullName>
         <defaultValue>true</defaultValue>
         <description>When ticked, a code is shown in the Voucher.</description>
         <externalId>false</externalId>
@@ -61,7 +61,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>SiteDomain__c</fullName>
+        <fullName>FieloCMSPLT_SiteDomain__c</fullName>
         <description>Salesforce Site domain to relate the URL with the Program.</description>
         <externalId>false</externalId>
         <inlineHelpText>Enter the Salesforce Site domain to relate the URL with the Program.</inlineHelpText>
@@ -73,7 +73,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>SiteURL__c</fullName>
+        <fullName>FieloCMSPLT_SiteURL__c</fullName>
         <description>Site URL which Members enter to complete their registration process.</description>
         <externalId>false</externalId>
         <inlineHelpText>Enter Site URL for Members to complete their registration process.</inlineHelpText>
@@ -85,7 +85,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>UseAgreement__c</fullName>
+        <fullName>FieloCMSPLT_UseAgreement__c</fullName>
         <defaultValue>false</defaultValue>
         <description>Members need to accept the terms and conditions. This option is always checked by default.</description>
         <externalId>false</externalId>
@@ -95,7 +95,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>VoucherInstructions__c</fullName>
+        <fullName>FieloCMSPLT_VoucherInstructions__c</fullName>
         <description>Steps to redeem Vouchers.</description>
         <externalId>false</externalId>
         <inlineHelpText>Enter the steps to redeem Voucher.</inlineHelpText>

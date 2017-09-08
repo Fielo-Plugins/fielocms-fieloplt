@@ -1,0 +1,14 @@
+<apex:component layout="none" controller="FieloCMSPLT_CheckoutCtrl" >
+    <apex:attribute name="record" type="SObject" description="" />
+    <apex:attribute name="field" type="FieloCMS.Field" description="" />
+    <apex:panelGroup rendered="{!!ISPICKVAL($User.UserType,'Guest')}" layout="none">
+        <div class="fielo-form">
+            <form class="fieloplt-checkout fielo-js-upgrade" data-remoteaction="FieloCMSPLT_CheckoutCtrl.checkout" data-remotearguments="recordId,quant,detailUrl" data-remoteobject="FieloPLT__Redemption__c" data-alreadyincart="{!$Label.FieloCMSPLT_ShoppingExistingReward}">
+                <input type="hidden" name="detailUrl" value="{!field.attributes['detailUrl']}" />
+                <input type="hidden" name="recordId" value="{!record['Id']}" data-object-property="Id"  data-attribute-replace="value"/>
+                <input type="number" name="quant" required="required" value="1" min="1" class="fieloplt-checkout__quantity"/>
+                <button type="submit" class="fielo-button fielo-button__submit" >{!$Label.FieloCMSPLT_CreateVoucher}</button>
+            </form>
+        </div>
+    </apex:panelGroup>
+</apex:component>

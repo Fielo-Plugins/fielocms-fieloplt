@@ -2,7 +2,7 @@
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <fieldSets>
-        <fullName>ShoppingCart</fullName>
+        <fullName>FieloCMSPLT_ShoppingCart</fullName>
         <description>Fieldset to show in the shopping cart component</description>
         <displayedFields>
             <field>Name</field>
@@ -17,7 +17,7 @@
         <label>Shopping Cart</label>
     </fieldSets>
     <fields>
-        <fullName>Category__c</fullName>
+        <fullName>FieloCMSPLT_Category__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <description>Group in which a Reward can be included.</description>
         <externalId>false</externalId>
@@ -25,14 +25,14 @@
         <label>Category</label>
         <referenceTo>FieloCMS__Category__c</referenceTo>
         <relationshipLabel>Rewards</relationshipLabel>
-        <relationshipName>Rewards</relationshipName>
+        <relationshipName>FieloCMSPLT_Rewards</relationshipName>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>InstructionsRichText__c</fullName>
+        <fullName>FieloCMSPLT_InstructionsRichText__c</fullName>
         <description>It allows rich text to be included in the instructions.</description>
         <externalId>false</externalId>
         <inlineHelpText>Enter rich text to be included in the instructions.</inlineHelpText>

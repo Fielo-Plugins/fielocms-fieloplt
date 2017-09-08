@@ -1,0 +1,18 @@
+<apex:component layout="none" controller="FieloCMSPLT_HandleInvitationsMbrCtrl">
+    <apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.FieloCMSPLT_AccountCRMMode__c.Name}" />
+    <apex:variable var="namespace" value="{!SUBSTITUTE(SUBSTITUTE(fieldName,'FieloCMSPLT_AccountCRMMode__c',''),'__','.')}" />
+    <apex:attribute name="record" type="SObject" description="" />
+    <apex:attribute name="field" type="FieloCMS.Field" description="" />
+    <apex:panelGroup layout="none" rendered="{!record['FieloPLT__Status__c'] = 'New'}" >
+        <div class="fielo-form fieloplt-invite-member">
+            <form class="fielo-js-upgrade" data-remoteaction="{!namespace}FieloCMSPLT_HandleInvitationsMembersController.resendInvitation" data-remotearguments="memberId" >
+                <input type="hidden" name="memberId" value="{!record.Id}" data-object-property="Id"  data-attribute-replace="value"/>
+                <button type="submit" class="fielo-button fielo-button__submit fielo-button--safe" >{!$Label.FieloCMSPLT_Reinvite}</button>
+            </form>
+            <form class="fielo-js-upgrade" data-remoteaction="{!namespace}FieloCMSPLT_HandleInvitationsMembersController.cancelInvitation" data-remotearguments="memberId" >
+                <input type="hidden" name="memberId" value="{!record.Id}" data-object-property="Id"  data-attribute-replace="value"/>
+                <button type="submit" class="fielo-button fielo-button__submit fielo-button--danger" >{!$Label.FieloCMSPLT_Cancel}</button>
+            </form>
+        </div>
+    </apex:panelGroup>
+</apex:component>

@@ -1,0 +1,184 @@
+<apex:page Controller="FieloCMSPLT_RedemptionItemVouCtrl"  sidebar="false" showHeader="false" standardStylesheets="false"   applyBodyTag="false" applyHtmlTag="false" renderAs="pdf" >
+<html>
+  <head>
+    <style>
+      @page {
+        size: A4;
+        margin: 25mm;
+        @top-center {
+          content: "";
+        }
+        @bottom-center {
+          content: counter(page);
+        }
+      }
+      .cms-plt-voucher {
+        border: 1px dotted black;
+      }
+
+      .cms-plt-voucher__header {
+        padding: 5px;
+        border-bottom:1px dotted;
+      }
+      .cms-plt-voucher__header--c-20 {
+        width:19%;
+        display: inline-block;
+        text-align: center;
+      }
+      .cms-plt-voucher__header--c-60 {
+        width:60%;
+        display: inline-block;
+      }
+      .cms-plt-voucher__logo {
+        margin-left:20px;
+      }
+      
+      .cms-plt-voucher__name {
+        text-transform: uppercase;
+        float: left;
+        width: 100%;
+        line-height: 64px;
+        text-align: center;
+      }
+
+      .cms-plt-voucher__code {
+        text-align: center;
+        margin-top: 6px
+      }
+      .cms-plt-voucher__code-bar {
+        overflow: auto;
+        display: inline-block;
+      }
+      .cms-plt-voucher__code-unit {
+        display:inline-block;
+        float:left;
+      }
+      .cms-plt-voucher__code-unit--solid {
+        background:#000;
+      }
+      .cms-plt-voucher__code-number {
+        text-align: center;
+      }
+
+      .cms-plt-voucher__detail {
+          overflow: auto;
+      }
+      .cms-plt-voucher__reward{
+        border-bottom: 1px dotted;
+      }
+      .cms-plt-voucher__reward-image {
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+        border: 1px solid grey;
+        display: inline-block;
+      }
+      .cms-plt-voucher__reward-image img {
+        width: 100%;
+        height: 100%;
+      }
+      .cms-plt-voucher__reward-fieldset {
+        padding: 20px;
+        display: inline-block;
+      }
+      
+      .cms-plt-voucher__reward-fieldset-field {}
+      .cms-plt-voucher__reward-fieldset-label {
+        font-weight: bold;
+      }
+      .cms-plt-voucher__reward-fieldset-value {}
+
+      .cms-plt-voucher__reward-voucher-field {}
+      .cms-plt-voucher__reward-voucher-label {
+        font-weight: bold;
+      }
+      .cms-plt-voucher__reward-voucher-value {}
+
+      .cms-plt-voucher__reward-instruction {
+        padding: 20px;
+        padding-bottom: 0;
+      }
+      .cms-plt-voucher__reward-instruction-label {
+        font-weight: bold;
+      }
+      .cms-plt-voucher__reward-instruction-value {}
+
+      .cms-plt-voucher__voucher-instruction {
+        padding: 20px;
+        font-size: 12px;
+      }
+      .cms-plt-voucher__voucher-instruction-label {
+        font-weight: bold;
+      }
+      .cms-plt-voucher__voucher-instruction-value {}
+    </style>
+  </head>
+  <body>
+    <apex:variable var="newUI" value="newSkinOn"  rendered="{!(voucherCustomVoucher != null)}">
+      <apex:stylesheet value="{!URLFOR($Action.Document.Download, voucherCustomVoucher)}" />
+    </apex:variable>
+    <apex:variable var="cont" value="1" />
+    <apex:repeat value="{!vouchers}" var="v" >
+      <apex:panelGroup rendered="{!VALUE(cont) > 1}" >
+        <div style="page-break-after:always;"><!-- Salto de pagina --></div>
+      </apex:panelGroup>
+      <div class="cms-plt-voucher">
+        <div class="cms-plt-voucher__header">
+          <div class="cms-plt-voucher__header--c-20">
+            <apex:image styleClass="cms-plt-voucher__logo" rendered="{!!ISNULL(imageId)}" value="{!URLFOR($Action.Document.Download, imageId)}" />
+          </div>
+          <div class="cms-plt-voucher__header--c-60">
+            <div class="cms-plt-voucher__name">{!v.redemptionItem.FieloPLT__Reward__r.Name}</div>
+          </div>
+          <div class="cms-plt-voucher__header--c-20">
+            <apex:panelGroup rendered="{!program.FieloCMSPLT_ShowVoucherCode__c}" layout="none" >
+              <c:FieloCMSPLT_BarCode code="{!v.redemptionItem.FieloPLT__UniqueCode__c}"/>
+            </apex:panelGroup>
+          </div>
+        </div>
+        <div class="cms-plt-voucher__detail">
+          <div class="cms-plt-voucher__reward">
+            <!--imagen premio-->
+            <div class="cms-plt-voucher__reward-image">
+              <apex:panelGroup layout="none" rendered="{!NOT(ISBLANK(v.image))}">
+                <!-- no se cachea la imagen con el https como en otros lados porque al renderizar esta página como PDF hace que no se vea la imagen-->
+                  <img src="{!IF(LEFT(v.image,3) == '00P',URLFOR($Action.Attachment.Download, v.image),URLFOR($Action.Document.Download, v.image))}" />
+              </apex:panelGroup>
+            </div>
+            <div class="cms-plt-voucher__reward-fieldset">
+              <!--datos premio -->
+              <apex:repeat value="{!$ObjectType.FieloPLT__RedemptionItem__c.FieldSets.FieloCMSPLT_Voucher}" var="f">
+                <div class="cms-plt-voucher__reward-fieldset-field cms-plt-voucher__reward-fieldset-field--{!SUBSTITUTE($ObjectType.FieloPLT__RedemptionItem__c.Fields[f].label, ' ', '')}">
+                  <span class="cms-plt-voucher__reward-fieldset-label">{!$ObjectType.FieloPLT__RedemptionItem__c.Fields[f].label}:</span>
+                  <span class="cms-plt-voucher__reward-fieldset-value">{!v.redemptionItem[f]}</span>
+                </div>
+              </apex:repeat>
+            </div>
+          </div>
+          <apex:panelGroup rendered="{!v.redemptionItem.FieloPLT__Reward__r.FieloPLT__UniqueVoucher__c}">
+            <div class="cms-plt-voucher__reward-voucher">
+              <span class="cms-plt-voucher__reward-voucher-label">{!$ObjectType.FieloPLT__RedemptionItem__c.Fields.FieloPLT__Quantity__c.label}:</span>
+              <span class="cms-plt-voucher__reward-voucher-value">{!v.redemptionItem.FieloPLT__Quantity__c}</span>
+            </div>
+          </apex:panelGroup>
+          <!-- Instrucciones Reward -->
+          <apex:panelGroup rendered="{!NOT(ISBLANK(v.instructionsReward))}">
+            <div class="cms-plt-voucher__reward-instruction">
+              <span class="cms-plt-voucher__reward-instruction-label">{!$ObjectType.FieloPLT__Reward__c.Fields.FieloCMSPLT_InstructionsRichText__c.label}:</span>
+              <span class="cms-plt-voucher__reward-instruction-value">{!v.instructionsReward}</span>
+            </div>
+          </apex:panelGroup>
+          <!-- Instrucciones Generales -->
+          <apex:panelGroup rendered="{!NOT(ISBLANK(v.instructionsVoucher))}">
+            <div class="cms-plt-voucher__voucher-instruction">
+              <span class="cms-plt-voucher__voucher-instruction-label">{!$ObjectType.FieloPLT__Program__c.Fields.FieloCMSPLT_VoucherInstructions__c.label}:</span>
+              <span class="cms-plt-voucher__voucher-instruction-value">{!v.instructionsVoucher}</span>
+            </div>
+          </apex:panelGroup>
+        </div>
+      </div>
+      <apex:variable var="cont" value="{!VALUE(cont)+1}" />
+    </apex:repeat>
+  </body>
+</html>
+</apex:page>
