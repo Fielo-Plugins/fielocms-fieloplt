@@ -1,0 +1,11 @@
+<apex:component layout="none" >
+    <apex:attribute name="record" type="SObject" description="" />
+    <apex:attribute name="field" type="FieloCMS.Field" description="" />
+    <apex:attribute name="relatedListName" type="String" description="" />
+    <apex:repeat value="{!record[relatedListName]}" var="tagItem" >
+        <div class="fieloplt-tag">
+          <span class="fieloplt-tag__name">{!tagItem.Tag__r.Name}</span>
+          <img src="{!tagItem['FieloPLT__Tag__r'][field.attributes['fieldName']]}" class="fielo-image fieloplt-tag__image" data-attribute-replace="src" />
+        </div>
+    </apex:repeat>
+</apex:component>

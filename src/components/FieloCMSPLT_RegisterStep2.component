@@ -1,0 +1,74 @@
+<apex:component layout="none" controller="FieloCMSPLT_RegisterStep2Ctrl" allowDML="true" access="global">
+    <apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.FieloCMSPLT_AccountCRMMode__c.Name}" />
+    <apex:variable var="namespace" value="{!SUBSTITUTE(SUBSTITUTE(fieldName,'FieloCMSPLT_AccountCRMMode__c',''),'__','.')}" />
+    <apex:attribute name="config" type="FieloCMS__Component__c" description="" />
+    <div class="fielo-form fieloplt-register-step-2 fielo-widget fielo-js-component" data-componentid="{!config.Id}" >
+        <div class="fielo-title">{!$Label.FieloCMSPLT_Welcome}</div>
+        <apex:panelGroup layout="none" rendered="{!(status != 'Ok' && status != 'User exist')}">
+            <apex:panelGroup layout="none" rendered="{!status != 'Send for Approval'}">
+                <div class="fielo-toast fielo-toast--is-error">
+                    <apex:panelGroup layout="none" rendered="{!status == 'Member Active'}">
+                        <p>{!$Label.FieloCMSPLT_ErrorRegistrationUserExists}</p>
+                    </apex:panelGroup>
+                    <apex:panelGroup layout="none" rendered="{!status == 'Invalid Member'}">
+                        <p>{!$Label.FieloCMSPLT_MemberInvalid}</p>
+                    </apex:panelGroup>
+                    <apex:panelGroup layout="none" rendered="{!status == 'Member in Approval'}">
+                        <p>{!$Label.FieloCMSPLT_InfoMemberInApproval}</p>
+                    </apex:panelGroup>
+                    <apex:panelGroup layout="none" rendered="{!status == 'Member Rejected'}">
+                        <p>{!$Label.FieloCMSPLT_MemberRejected}</p>
+                    </apex:panelGroup>
+                    <apex:panelGroup layout="none" rendered="{!status == 'Organization Account'}">
+                        <p>{!$Label.FieloCMSPLT_OrganizationNotAllowed}</p>
+                    </apex:panelGroup>
+                </div>
+            </apex:panelGroup>
+            <apex:panelGroup layout="none" rendered="{!status == 'Send for Approval'}">
+                <form class="fielo-js-upgrade" data-remoteaction="{!namespace}FieloCMSPLT_RegisterStep2Ctrl.continueRegistration" data-remotearguments="id" data-remoteobject="Member__c" >
+                    <input type="hidden" name="id" value="{!member.Id}" />
+                    <button type="submit" class="fielo-button fielo-button__submit" >{!$Label.FieloCMSPLT_Continue}</button>
+                </form>
+            </apex:panelGroup>
+        </apex:panelGroup>
+        <apex:panelGroup layout="none" rendered="{!(status == 'Ok' || status == 'User exist')}">
+            <form class="fielo-js-upgrade register-step-2-form" data-remoteaction="{!namespace}FieloCMSPLT_RegisterStep2Ctrl.finishRegistration" data-remotearguments="SObject,password" data-remoteobject="Member__c" >
+                <fieldset>
+                    <input type="hidden" name="SObject.id" value="{!member.Id}" />
+                    <apex:repeat value="{!$ObjectType.FieloPLT__Member__c.FieldSets.FieloCMSPLT_RegistrationStep2}" var="field" >
+                        <div class="mdl-grid fielo-field fielo-field--is-{!field}">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__label" >
+                                <label for="{!field}" >{!$ObjectType.FieloPLT__Member__c.fields[field].label}</label>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__value">
+                                <input class="fielo-input fielo-js-upgrade"   id="{!field}" name="SObject.{!field}"  value="{!member[field]}" />
+                            </div>
+                        </div>
+                    </apex:repeat>
+                    <apex:panelGroup layout="none" rendered="{!status != 'User exist'}" >
+                        <div class="mdl-grid fielo-field fielo-field--is-password">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__label" >
+                                <label for="password" >{!$Label.FieloCMSPLT_Password}</label>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__value">
+                                <input class="fielo-input password" type="password" required="required"  autocomplete="current-password" id="showPassword" name="password"  />
+                            </div>
+                        </div>
+                        <div class="mdl-grid fielo-field fielo-field--is-confirmpassword">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__label" >
+                                <label for="confirmpassword" >{!$Label.FieloCMSPLT_PasswordConfirm}</label>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet fielo-field__value">
+                                <input class="fielo-input confirmPassword" type="password" required="required"  autocomplete="current-password" />
+                            </div>
+                        </div>
+                    </apex:panelGroup>
+                </fieldset>
+                <div class="fielo-controls" >
+                    <button type="button" class="fielo-button fielo-button__cancel hidden" >{!$Label.FieloCMSPLT_Cancel}</button>
+                    <button type="submit" class="fielo-button fielo-button__submit fielo-register-step-2__submit" >{!$Label.FieloCMSPLT_Submit}</button>
+                </div>
+            </form>
+        </apex:panelGroup>
+    </div>
+</apex:component>

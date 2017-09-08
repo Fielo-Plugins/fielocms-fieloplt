@@ -60,7 +60,7 @@ var QueryString = function () {
     if (this.element_) {
       // Segment lookup
       var segment = document.getElementsByClassName(
-        'fielosf-other-fields__item--Segment__c'
+        'fielosf-other-fields__item--FieloCMSPLT_Segment__c'
       )[0] || null;
 
       // si existe el lookup inicializo el resto de las propiedades
@@ -78,7 +78,7 @@ var QueryString = function () {
             }
           } 
           
-          url = url + '/apex/segmentselection?id=' + QueryString.id;
+          url = url + '/apex/FieloCMSPLT_segmentselection?id=' + QueryString.id;
 
           this.element_.setAttribute('href', url);
           

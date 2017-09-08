@@ -1,0 +1,114 @@
+<apex:page docType="html-5.0" sidebar="false" controller="FieloCMSPLT_SegmentsSelectionCtrl" standardStylesheets="false" applyBodyTag="false">
+<body>
+	<link rel="stylesheet" href="{!URLFOR($Resource.FieloCMS__FieloSalesforce_Backend, 'lightning/styles/salesforce-lightning-design-system-vf.min.css')}"></link>
+	<apex:stylesheet value="{!URLFOR($Resource.FieloCMS__FieloCms_Salesforce, 'vendor/fonts/icons.css')}"/>
+	<link rel="stylesheet" href="{!URLFOR($Resource.FieloCMS__FieloSalesforce_Backend, 'fielo/styles/core.css')}"></link>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<style type="text/css">
+		body .bPageBlock .pbTitle h2 {
+			font-size: 1.25rem;
+			font-weight: 400;
+	  	line-height: 1.25;
+	  	display: inherit;
+		}
+		body .apexp .bPageBlock.apexDefaultPageBlock .pbHeader {
+			padding-top: 30px;	
+		}
+		body.homeTab .bPageBlock .pbTitle {
+			padding-bottom: 15px;
+			padding-left: 20px;
+		}
+		body .bPageBlock .pbHeader {
+			background: #f7f9fb;
+		}
+		.bPageBlock .pbHeader>table>tbody>tr>td.pbButton {
+			text-align: right;
+			padding-bottom: 15px;
+		}
+		body .bPageBlock .pbBody>div {
+			border:none;
+		}
+		body .bPageBlock .pbBody>div:hover {
+			background-color: inherit;
+		}
+		body .apexp .bPageBlock.apexDefaultPageBlock .pbBottomButtons {
+			display: none;
+		}
+		body .apexp .pbBody table.list {
+			border:inherit;
+			border-top: 1px solid #d8dde6;
+  		border-bottom: 1px solid #d8dde6;
+		}
+		body .pbBody table.list tr th {
+			border:inherit;
+		}
+		body .pbBody table.list tr.headerRow th {
+			font-family: "Salesforce Sans", Arial, sans-serif;
+  		font-size: 100%;
+		  color: #16325c;
+		  font-weight: 400;
+		  background-color: inherit;
+		  padding: 0.5rem;
+		}
+		.bPageBlock .detailList tr td {
+			border: none;;
+		}
+		.apexp .detailList .list .headerRow th {
+			border-bottom: inherit;
+		}
+		body .pbBody table.list tr.dataRow td {
+			border-width: inherit;
+			border-top: 1px solid #d8dde6;
+		}
+		body .pbBody table.list tr.dataRow.highlight td {
+			background-color: #f4f6f9;
+		}
+		.pbBody td {
+			color: #16325c;
+		}
+	</style>
+	<div class="fielosf fielosf-segment-selection">
+		<apex:form >
+			<apex:pageBlock title="{!$ObjectType.FieloPLT__Segment__c.LabelPlural}"  >
+				<apex:pageBlockButtons >
+					<apex:commandButton styleClass='slds-button slds-button--neutral' action="{!saveAndExit}" value="{!$Label.FieloPLT__Save}"/>
+					<apex:commandButton styleClass='slds-button slds-button--neutral' action="{!save}" value="{!$Label.FieloPLT__QuickSave}"/>
+					<apex:commandButton styleClass='slds-button slds-button--neutral' action="{!cancel}" value="{!$Label.FieloPLT__Cancel}"/>
+				</apex:pageBlockButtons>
+				<!-- AVAILABLE SEGMENTS -->
+				<apex:pageBlockSection id="AvailableList" columns="1" collapsible="false" title="{!$Label.FieloPLT__Available}">
+					<apex:pageBlockTable headerClass='slds-text-title--caps' styleClass='slds-table slds-table--bordered slds-table--cell-buffer' id="pageBlockTable" value="{!availableSegments}" var="segWrapper" >
+						<apex:column >
+							<apex:inputCheckBox id="checkbox" value="{!segWrapper.checkbox}"/>
+						</apex:column>
+						<apex:repeat value="{!fields}" var="f">
+							<apex:column headerValue="{!$ObjectType.FieloPLT__Segment__c.Fields[f].label}">
+								<apex:outputField id="Segment" value="{!segWrapper.segment[f.fieldPath]}"/>
+							</apex:column>
+						</apex:repeat>
+					</apex:pageBlockTable>
+					<apex:commandButton styleClass='slds-button slds-button--neutral' action="{!addSelected}" value="{!$Label.FieloPLT__Add}"/>
+				</apex:pageBlockSection>
+				<apex:variable id="counter" var="counter" value="0" />
+				<!-- SELECTED SEGMENTS -->
+				<apex:pageBlockSection id="SelectedList" columns="1" collapsible="false" title="{!$Label.FieloPLT__Selected}">
+					<apex:pageBlockTable headerClass='slds-text-title--caps' styleClass='slds-table slds-table--bordered slds-table--cell-buffer' id="pageBlockTable" value="{!selectedSegments}" var="segWrapper" >
+					<apex:column >
+						<apex:commandLink action="{!remove}" value="{!$Label.FieloPLT__Delete}">
+							<apex:param name="indexToRemove" value="{!counter}" />
+						</apex:commandLink>
+					</apex:column>
+						<apex:repeat value="{!fields}" var="f">
+							 <apex:column headerValue="{!$ObjectType.FieloPLT__Segment__c.Fields[f].label}">
+									<apex:outputField id="Segment" value="{!segWrapper.segment[f.fieldPath]}"/>
+							</apex:column>
+						</apex:repeat>
+						<apex:variable var="counter" value="{! Text(Value(counter) + 1)}" />
+					</apex:pageBlockTable>
+				</apex:pageBlockSection>
+			</apex:pageBlock>
+		</apex:form>
+	</div>
+	<!-- <c:BackendFooter /> -->
+</body>
+</apex:page>

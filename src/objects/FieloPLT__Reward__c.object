@@ -1,64 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <actionOverrides>
-        <actionName>Accept</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>CancelEdit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Clone</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Delete</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Edit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>List</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>New</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>SaveEdit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Tab</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
-    <deploymentStatus>Deployed</deploymentStatus>
-    <deprecated>false</deprecated>
-    <description>Rewards are the prizes available to Members who are part of a Program.</description>
-    <enableActivities>true</enableActivities>
-    <enableBulkApi>true</enableBulkApi>
     <enableEnhancedLookup>false</enableEnhancedLookup>
-    <enableFeeds>false</enableFeeds>
-    <enableHistory>true</enableHistory>
-    <enableReports>true</enableReports>
-    <enableSharing>true</enableSharing>
-    <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
-        <fullName>ShoppingCart</fullName>
+        <fullName>FieloCMSPLT_ShoppingCart</fullName>
         <description>Fieldset to show in the shopping cart component</description>
         <displayedFields>
             <field>Name</field>
@@ -73,7 +17,7 @@
         <label>Shopping Cart</label>
     </fieldSets>
     <fields>
-        <fullName>Category__c</fullName>
+        <fullName>FieloCMSPLT_Category__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <description>Group in which a Reward can be included.</description>
         <externalId>false</externalId>
@@ -81,14 +25,14 @@
         <label>Category</label>
         <referenceTo>FieloCMS__Category__c</referenceTo>
         <relationshipLabel>Rewards</relationshipLabel>
-        <relationshipName>Rewards</relationshipName>
+        <relationshipName>FieloCMSPLT_Rewards</relationshipName>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>InstructionsRichText__c</fullName>
+        <fullName>FieloCMSPLT_InstructionsRichText__c</fullName>
         <description>It allows rich text to be included in the instructions.</description>
         <externalId>false</externalId>
         <inlineHelpText>Enter rich text to be included in the instructions.</inlineHelpText>
@@ -99,12 +43,4 @@
         <type>Html</type>
         <visibleLines>15</visibleLines>
     </fields>
-    <label>Reward</label>
-    <nameField>
-        <label>Reward Name</label>
-        <trackHistory>true</trackHistory>
-        <type>Text</type>
-    </nameField>
-    <pluralLabel>Rewards</pluralLabel>
-    <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

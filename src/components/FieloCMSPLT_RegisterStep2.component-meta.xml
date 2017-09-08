@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>32.0</apiVersion>
+    <label>RegisterStep2</label>
+    <packageVersions>
+        <majorNumber>1</majorNumber>
+        <minorNumber>73</minorNumber>
+        <namespace>FieloCMS</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>2</majorNumber>
+        <minorNumber>27</minorNumber>
+        <namespace>FieloPLT</namespace>
+    </packageVersions>
+</ApexComponent>

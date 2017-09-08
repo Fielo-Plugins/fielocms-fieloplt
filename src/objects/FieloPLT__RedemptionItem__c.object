@@ -1,64 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <actionOverrides>
-        <actionName>Accept</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>CancelEdit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Clone</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Delete</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Edit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>List</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>New</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>SaveEdit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Tab</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
-    <deploymentStatus>Deployed</deploymentStatus>
-    <description>Items which are part of a Redemption order.</description>
-    <deprecated>false</deprecated>
-    <enableActivities>false</enableActivities>
-    <enableBulkApi>true</enableBulkApi>
-    <enableEnhancedLookup>false</enableEnhancedLookup>
-    <enableFeeds>false</enableFeeds>
-    <enableHistory>false</enableHistory>
-    <enableReports>true</enableReports>
-    <enableSharing>true</enableSharing>
-    <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
-        <fullName>Voucher</fullName>
+        <fullName>FieloCMSPLT_Voucher</fullName>
         <description>In the Voucher page</description>
         <displayedFields>
             <field>FieloPLT__Reward__c</field>
@@ -93,11 +36,11 @@
         <label>Voucher</label>
     </fieldSets>
     <fields>
-        <fullName>VoucherLink__c</fullName>
+        <fullName>FieloCMSPLT_VoucherLink__c</fullName>
         <externalId>false</externalId>
         <formula>IF(
 ISPICKVAL( FieloPLT__Status__c ,&apos;Ready&apos; ) ,
-HYPERLINK( &apos;./apex/RedemptionItemVoucher?voucherId=&apos; + Id, $Label.Voucher ),
+HYPERLINK( &apos;./apex/FieloCMSPLT_RedemptionItemVoucher?voucherId=&apos; + Id, $Label.FieloCMSPLT_Voucher ),
 &apos;&apos;
 )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
@@ -107,15 +50,4 @@ HYPERLINK( &apos;./apex/RedemptionItemVoucher?voucherId=&apos; + Id, $Label.Vouc
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <label>Redemption Item</label>
-    <nameField>
-        <displayFormat>RI-{000000}</displayFormat>
-        <label>Number</label>
-        <type>AutoNumber</type>
-    </nameField>
-    <pluralLabel>Redemption Items</pluralLabel>
-    <searchLayouts>
-        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
-    </searchLayouts>
-    <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

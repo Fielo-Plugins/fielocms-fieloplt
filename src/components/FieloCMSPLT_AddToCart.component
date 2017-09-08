@@ -1,0 +1,11 @@
+<apex:component layout="none" >
+    <apex:variable var="fieldName" value="{!$ObjectType.FieloCMS__Component__c.fields.FieloCMSPLT_AccountCRMMode__c.Name}" />
+    <apex:attribute name="record" type="SObject" description="" />
+    <apex:attribute name="field" type="FieloCMS.Field" description="" />
+    <apex:panelGroup rendered="{!!ISPICKVAL($User.UserType,'Guest')}" layout="none">
+    <div class="fieloplt-add-to-cart" data-alreadyincart="{!$Label.FieloCMSPLT_ShoppingExistingReward}" data-reward-id="{!record.Id}" data-label-success="{!$Label.FieloCMSPLT_SuccessRewardAddToChart}" data-attribute-replace="data-reward-id" data-object-property="Id">
+        <input type="number" name="quant" required="required" value="1" min="1" class="fieloplt-add-to-cart__quantity"/>
+        <button class="fielo-button fielo-button__submit fieloplt-add-to-cart__submit" >{!$Label.FieloCMSPLT_Add} </button>
+    </div>
+    </apex:panelGroup>
+</apex:component>

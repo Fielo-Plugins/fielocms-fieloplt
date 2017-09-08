@@ -1,68 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <actionOverrides>
-        <actionName>Accept</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>CancelEdit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Clone</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Delete</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Edit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>List</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>New</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>SaveEdit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Tab</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
-    <deploymentStatus>Deployed</deploymentStatus>
-    <deprecated>false</deprecated>
-    <enableActivities>false</enableActivities>
-    <enableBulkApi>true</enableBulkApi>
     <enableEnhancedLookup>false</enableEnhancedLookup>
-    <enableFeeds>false</enableFeeds>
-    <enableHistory>false</enableHistory>
-    <enableReports>true</enableReports>
-    <enableSharing>true</enableSharing>
-    <enableStreamingApi>true</enableStreamingApi>
-    <fieldSets>
-        <fullName>FieloPLT__ProgramQuery</fullName>
-        <description>Program API to optimize query</description>
-        <label>Program Query</label>
-    </fieldSets>
     <fields>
-        <fullName>CustomVoucherCss__c</fullName>
+        <fullName>FieloCMSPLT_CustomVoucherCss__c</fullName>
         <description>CSS code to be applied to customized vouchers.</description>
         <externalId>false</externalId>
         <inlineHelpText>Enter the CSS code to be applied to customized vouchers.</inlineHelpText>
@@ -74,7 +14,19 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>RegisterStep2Page__c</fullName>
+        <fullName>FieloCMSPLT_MemberSelectionPage__c</fullName>
+        <description>Provide the name of the Visualforce Page where the User has to be redirected in order to select which Member is going to use.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Provide the name of the Visualforce Page where the User has to be redirected in order to select which Member is going to use.</inlineHelpText>
+        <label>Member Selection Page</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieloCMSPLT_RegisterStep2Page__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <description>Page where the Register Step 2 Component redirects to when checking out.</description>
         <externalId>false</externalId>
@@ -82,13 +34,13 @@
         <label>Register Step 2 Page</label>
         <referenceTo>FieloCMS__Page__c</referenceTo>
         <relationshipLabel>Programs</relationshipLabel>
-        <relationshipName>Programs</relationshipName>
+        <relationshipName>FieloCMSPLT_Programs</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>RewardInstructions__c</fullName>
+        <fullName>FieloCMSPLT_RewardInstructions__c</fullName>
         <description>Detailed steps to obtain the Reward voucher.</description>
         <externalId>false</externalId>
         <inlineHelpText>Enter the detailed steps to obtain the Reward voucher.</inlineHelpText>
@@ -99,7 +51,7 @@
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>ShowVoucherCode__c</fullName>
+        <fullName>FieloCMSPLT_ShowVoucherCode__c</fullName>
         <defaultValue>true</defaultValue>
         <description>When ticked, a code is shown in the Voucher.</description>
         <externalId>false</externalId>
@@ -109,7 +61,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>SiteDomain__c</fullName>
+        <fullName>FieloCMSPLT_SiteDomain__c</fullName>
         <description>Salesforce Site domain to relate the URL with the Program.</description>
         <externalId>false</externalId>
         <inlineHelpText>Enter the Salesforce Site domain to relate the URL with the Program.</inlineHelpText>
@@ -121,7 +73,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>SiteURL__c</fullName>
+        <fullName>FieloCMSPLT_SiteURL__c</fullName>
         <description>Site URL which Members enter to complete their registration process.</description>
         <externalId>false</externalId>
         <inlineHelpText>Enter Site URL for Members to complete their registration process.</inlineHelpText>
@@ -133,7 +85,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>UseAgreement__c</fullName>
+        <fullName>FieloCMSPLT_UseAgreement__c</fullName>
         <defaultValue>false</defaultValue>
         <description>Members need to accept the terms and conditions. This option is always checked by default.</description>
         <externalId>false</externalId>
@@ -143,7 +95,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>VoucherInstructions__c</fullName>
+        <fullName>FieloCMSPLT_VoucherInstructions__c</fullName>
         <description>Steps to redeem Vouchers.</description>
         <externalId>false</externalId>
         <inlineHelpText>Enter the steps to redeem Voucher.</inlineHelpText>
@@ -153,20 +105,4 @@
         <type>LongTextArea</type>
         <visibleLines>3</visibleLines>
     </fields>
-    <label>Program</label>
-    <nameField>
-        <label>Program Name</label>
-        <type>Text</type>
-    </nameField>
-    <pluralLabel>Programs</pluralLabel>
-    <searchLayouts/>
-    <sharingModel>ReadWrite</sharingModel>
-    <validationRules>
-        <fullName>FieloPLT__ValidateNumerOfVoucherDigits</fullName>
-        <active>true</active>
-        <description>Voucher must include at least 4 digits.</description>
-        <errorConditionFormula>FieloPLT__NumberOfVoucherDigits__c &lt; 4</errorConditionFormula>
-        <errorDisplayField>FieloPLT__NumberOfVoucherDigits__c</errorDisplayField>
-        <errorMessage>Voucher must include at least 4 digits.</errorMessage>
-    </validationRules>
 </CustomObject>

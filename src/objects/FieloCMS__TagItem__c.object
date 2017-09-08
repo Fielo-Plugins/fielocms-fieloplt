@@ -1,106 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <actionOverrides>
-        <actionName>Accept</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>CancelEdit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Clone</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Delete</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Edit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>List</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>New</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>SaveEdit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Tab</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
-    <deploymentStatus>Deployed</deploymentStatus>
-    <deprecated>false</deprecated>
-    <description>A Tag item relates Posts and Media with a specific Tag.</description>
-    <enableActivities>false</enableActivities>
-    <enableBulkApi>true</enableBulkApi>
-    <enableFeeds>false</enableFeeds>
-    <enableHistory>false</enableHistory>
-    <enableReports>false</enableReports>
-    <enableSharing>true</enableSharing>
-    <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>FieloCMS__Media__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <description>Media to be tagged.</description>
-        <externalId>false</externalId>
-        <label>Media</label>
-        <referenceTo>FieloCMS__Media__c</referenceTo>
-        <relationshipLabel>Tag Items</relationshipLabel>
-        <relationshipName>Tag_Items</relationshipName>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>FieloCMS__Post__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <description>Post to be tagged.</description>
-        <externalId>false</externalId>
-        <label>Post</label>
-        <referenceTo>FieloCMS__Post__c</referenceTo>
-        <relationshipLabel>Tag Items</relationshipLabel>
-        <relationshipName>Tag_Items</relationshipName>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>FieloCMS__Tag__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Tag to be applied.</description>
-        <externalId>false</externalId>
-        <label>Tag</label>
-        <referenceTo>FieloCMS__Tag__c</referenceTo>
-        <relationshipLabel>Tag Items</relationshipLabel>
-        <relationshipName>Tag_Items</relationshipName>
-        <relationshipOrder>0</relationshipOrder>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
-        <trackTrending>false</trackTrending>
-        <type>MasterDetail</type>
-        <writeRequiresMasterRead>false</writeRequiresMasterRead>
-    </fields>
-    <fields>
-        <fullName>Reward__c</fullName>
+        <fullName>FieloCMSPLT_Reward__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <description>It relates a Tag with a specific Reward.</description>
         <externalId>false</externalId>
@@ -108,18 +9,9 @@
         <label>Reward</label>
         <referenceTo>FieloPLT__Reward__c</referenceTo>
         <relationshipLabel>Tag Items</relationshipLabel>
-        <relationshipName>TagItems</relationshipName>
+        <relationshipName>FieloCMSPLT_TagItems</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
-    <label>Tag Item</label>
-    <nameField>
-        <displayFormat>{0000}</displayFormat>
-        <label>Tag Item</label>
-        <type>AutoNumber</type>
-    </nameField>
-    <pluralLabel>Tag Items</pluralLabel>
-    <searchLayouts/>
-    <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>
