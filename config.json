@@ -4,12 +4,12 @@
 			"dependencies":[
 				{
 					"type":"package",
-					"version":"1.26",
+					"version":"2.29.2",
 					"name":"FieloPLT"
 				},
 				{
 					"type":"package",
-					"version":"1.52",
+					"version":"1.75",
 					"name":"FieloCMS"
 				}
 			]
