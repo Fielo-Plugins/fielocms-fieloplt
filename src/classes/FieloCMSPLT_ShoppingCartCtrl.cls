@@ -58,19 +58,20 @@ global with sharing class FieloCMSPLT_ShoppingCartCtrl {
             if(String.isNotBlank(newQuantJSON)){
                 Map<Id,Integer> quantitiesMap = (Map<Id,Integer>)JSON.deserialize(newQuantJSON, Map<Id,Integer>.class);
                 redemption = FieloPLT.RedemptionService.createRedemptions(quantitiesMap, FieloCMSPLT_MemberService.getCurrentMemberId())[0];
-                if(redemption.FieloPLT__Status__c == 'Closed'){
-                    PageReference retPage = Page.FieloCMS__Page;
-                    retPage.getParameters().put('pageId',component.FieloCMSPLT_RedirectPage__c);
-                    retPage.getParameters().put(component.FieloCMS__DetailParameter__c,redemption.Id);
-                    result.redirectURL = retPage.getUrl().replace('/apex','');
-                }else{
+                if(redemption.FieloPLT__Status__c == 'Pending'){
                     result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.FieloCMSPLT_InfoRedemptionApproval)));
                 }
+                PageReference retPage = Page.FieloCMS__Page;
+                retPage.getParameters().put('pageId',component.FieloCMSPLT_RedirectPage__c);
+                retPage.getParameters().put(component.FieloCMS__DetailParameter__c,redemption.Id);
+                result.redirectURL = retPage.getUrl().replace('/apex','');
             }
         }catch(DMLException e){
             Database.rollBack(sp);
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(ApexPages.Severity.ERROR, e.getDmlMessage(0)));
-        }
+        } catch(FieloPLT.FieloException e) {
+            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(ApexPages.Severity.ERROR, e.getMessage() ));
+        }        
 
         if(ApexPages.hasMessages()){
             result.redirectURL = '';
