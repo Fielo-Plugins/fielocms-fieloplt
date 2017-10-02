@@ -61,9 +61,9 @@
 		<name>CustomObject</name>
 	</types>
 	<types>
-	    <members>FieloPLT__Segment__c.Private</members>
-	    <members>FieloPLT__Segment__c.Public</members>
-	    <name>RecordType</name>
+		<members>FieloPLT__Segment__c.Private</members>
+		<members>FieloPLT__Segment__c.Public</members>
+		<name>RecordType</name>
 	</types>
 	<types>
 		<members>*</members>
@@ -87,5 +87,5 @@
 		<members>FieloPLT__Member__c</members>
 		<name>Workflow</name>
 	</types>
-	<version>40.0</version>
+	<version>36.0</version>
 </Package>
