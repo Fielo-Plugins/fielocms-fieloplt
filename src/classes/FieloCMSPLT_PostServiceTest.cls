@@ -29,7 +29,7 @@ private class FieloCMSPLT_PostServiceTest {
 		Id memberId = null;
 
 		try{
-			FieloCMSPLT_PostService.getPosts(fields, status, tagId, category.Id, quantity, offset, orderBy, memberId);
+			FieloCMSPLT_PostService.getPosts(fields, status, tagId, category.Id, quantity, offset, orderBy, memberId, null);
 		}catch(exception e){}
 	}
 
@@ -61,7 +61,7 @@ private class FieloCMSPLT_PostServiceTest {
 		Id memberId = null;
 
 		try{
-			FieloCMSPLT_PostService.getPosts(fields, status, tag.Id, category.Id, quantity, offset, orderBy, memberId);
+			FieloCMSPLT_PostService.getPosts(fields, status, tag.Id, category.Id, quantity, offset, orderBy, memberId, null);
 		}catch(exception e){}
 	}
 	
