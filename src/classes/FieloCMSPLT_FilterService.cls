@@ -130,6 +130,8 @@ public with sharing class FieloCMSPLT_FilterService {
                     whereCondition += prefix + filter.field + ' ' + operatorsMap.get(filter.operator) + ' ' + filter.value;
                 } else if(filter.operator == 'like'){
                     whereCondition += prefix + filter.field + ' ' + operatorsMap.get(filter.operator) + ' \'%' + filter.value + '%\'';
+                }else{
+                    whereCondition += filter.field + ' ' + operatorsMap.get(filter.operator) + ' \'' + filter.value + '\'';
                 }
             }else{
                 hasInConditions = true;
