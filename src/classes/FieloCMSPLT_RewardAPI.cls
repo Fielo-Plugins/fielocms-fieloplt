@@ -8,7 +8,10 @@ global with sharing class FieloCMSPLT_RewardAPI implements FieloCMS.DataInterfac
             if(c.FieloCMS__Limit__c == null)
                 c.FieloCMS__Limit__c = 5;
 
-            newMapData.put(c.Id, FieloPLT.RewardService.getRewards(FieloCMSPLT_OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c), FieloCMSPLT_MemberService.getCurrentMemberId(), c.FieloCMS__Limit__c.intValue(), 0, c.FieloCMS__OrderBy__c, '(FieloPLT__Program__c = null OR FieloPLT__Program__c = \'' + program.Id + '\')'));
+            FieloPLT__Member__c loggedMember = FieloCMSPLT_MemberService.getCurrentMember(new Set<String>{'FieloPLT__OrganizationFieloCMSPLT_Account__c','FieloPLT__Type__c','FieloPLT__IsManager__c'});
+            Id memberId = (loggedMember.FieloPLT__Type__c == 'Organization Contributor' && loggedMember.FieloPLT__OrganizationAccount__c != null && loggedMember.FieloPLT__IsManager__c) ? loggedMember.FieloPLT__OrganizationAccount__c : loggedMember.Id;
+
+            newMapData.put(c.Id, FieloPLT.RewardService.getRewards(FieloCMSPLT_OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c), memberId, c.FieloCMS__Limit__c.intValue(), 0, c.FieloCMS__OrderBy__c, '(FieloPLT__Program__c = null OR FieloPLT__Program__c = \'' + program.Id + '\')'));
         }
         return newMapData;
     }
@@ -61,7 +64,10 @@ global with sharing class FieloCMSPLT_RewardAPI implements FieloCMS.DataInterfac
         whereCondition += categoryId != null ? ' AND FieloCMSPLT_Category__c = \'' + categoryId + '\'' : '';
         whereCondition += (tagId != null && rewardIds != null) ? ' AND Id IN ' + rewardIds : '';
 
-        return FieloPLT.RewardService.getRewards(FieloCMSPLT_OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c), FieloCMSPLT_MemberService.getCurrentMemberId(), component.FieloCMS__Limit__c.intValue(), offset, orderBy, whereCondition);
+        FieloPLT__Member__c loggedMember = FieloCMSPLT_MemberService.getCurrentMember(new Set<String>{'FieloPLT__OrganizationFieloCMSPLT_Account__c','FieloPLT__Type__c','FieloPLT__IsManager__c'});
+        Id memberId = (loggedMember.FieloPLT__Type__c == 'Organization Contributor' && loggedMember.FieloPLT__OrganizationAccount__c != null && loggedMember.FieloPLT__IsManager__c) ? loggedMember.FieloPLT__OrganizationAccount__c : loggedMember.Id;
+
+        return FieloPLT.RewardService.getRewards(FieloCMSPLT_OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c), memberId, component.FieloCMS__Limit__c.intValue(), offset, orderBy, whereCondition);
     }
 
     public ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){        

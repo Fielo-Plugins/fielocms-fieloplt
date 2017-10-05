@@ -57,7 +57,10 @@ global with sharing class FieloCMSPLT_ShoppingCartCtrl {
             FieloPLT__Redemption__c redemption;
             if(String.isNotBlank(newQuantJSON)){
                 Map<Id,Integer> quantitiesMap = (Map<Id,Integer>)JSON.deserialize(newQuantJSON, Map<Id,Integer>.class);
-                redemption = FieloPLT.RedemptionService.createRedemptions(quantitiesMap, FieloCMSPLT_MemberService.getCurrentMemberId())[0];
+                FieloPLT__Member__c loggedMember = FieloCMSPLT_MemberService.getCurrentMember(new Set<String>{'FieloPLT__OrganizationFieloCMSPLT_Account__c','FieloPLT__Type__c','FieloPLT__IsManager__c'});
+                Id memberId = (loggedMember.FieloPLT__Type__c == 'Organization Contributor' && loggedMember.FieloPLT__OrganizationAccount__c != null && loggedMember.FieloPLT__IsManager__c) ? loggedMember.FieloPLT__OrganizationAccount__c : loggedMember.Id;
+
+                redemption = FieloPLT.RedemptionService.createRedemptions(quantitiesMap, memberId)[0];
                 if(redemption.FieloPLT__Status__c == 'Pending'){
                     result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(new ApexPages.Message(ApexPages.SEVERITY.Info, Label.FieloCMSPLT_InfoRedemptionApproval)));
                 }
