@@ -1,6 +1,6 @@
 global with sharing class FieloCMSPLT_RedemptionItemAPI implements FieloCMS.DataInterface{
-	
-	global Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){                
+    
+    global Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){                
         Map<Id,Object> newMapData = new Map<Id,Object>();
         //Prepare all the queries
         for(FieloCMS__Component__c c : components){            
@@ -33,8 +33,13 @@ global with sharing class FieloCMSPLT_RedemptionItemAPI implements FieloCMS.Data
         if(redemptionId != null){
             whereCondition += ' AND FieloPLT__Redemption__c = \'' + redemptionId + '\'';
         }
-        whereCondition += ' LIMIT ' + String.valueOf(offset);
-        whereCondition += ' OFFSET ' + String.valueOf(component.FieloCMS__Limit__c);
+
+        if(String.isNotBlank(filters) && filters != '[]'){
+            whereCondition += ' AND ' + FieloCMSPLT_FilterService.getDynamicWhereCondition(filters, 'FieloPLT__RedemptionItem__c', '');
+        }
+
+        whereCondition += ' LIMIT ' + String.valueOf(component.FieloCMS__Limit__c);
+        whereCondition += ' OFFSET ' + String.valueOf(offset);
         return Database.query('SELECT ' + String.join(new List<String>(FieloCMSPLT_OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c)), ',') + ' FROM FieloPLT__RedemptionItem__c WHERE ' + whereCondition);
     }
 }
