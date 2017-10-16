@@ -1,7 +1,7 @@
 {
   "plugins" : [ {
     "Name" : "PlatformPlugin",
-    "FieloCMS__Version__c" : 1.11,
+    "FieloCMS__Version__c" : 1.12,
     "components" : [ {
       "recordTypeName" : "Record",
       "Name" : "Redemption Detail",
@@ -178,7 +178,7 @@
       "FieloCMS__CssClasses__c" : "fielo-filter",
       "FieloCMS__DataClass__c" : "FieloCMS.StandardAPI",
       "FieloCMS__DefaultFields__c" : "FieloPLT__Date__c,FieloPLT__Points__c,FieloPLT__Type__c",
-      "FieloCMS__DeveloperName__c" : "FilterTransactions",
+      "FieloCMS__DeveloperName__c" : "PlatformPlugin.FilterTransactions",
       "FieloCMS__ExcludeFields__c" : "Id,IsDeleted,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp",
       "FieloCMS__Icon__c" : "fa-puzzle-piece",
       "FieloCMS__Layouts__c" : "Edit",
@@ -192,7 +192,7 @@
       "FieloCMS__CssClasses__c" : "fielo-filter",
       "FieloCMS__DataClass__c" : "FieloCMS.StandardAPI",
       "FieloCMS__DefaultFields__c" : "FieloPLT__Code__c,FieloPLT__ExpirationDate__c,FieloPLT__Points__c",
-      "FieloCMS__DeveloperName__c" : "FilterRedemptionItems",
+      "FieloCMS__DeveloperName__c" : "PlatformPlugin.FilterRedemptionItems",
       "FieloCMS__ExcludeFields__c" : "Id,IsDeleted,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp",
       "FieloCMS__Icon__c" : "fa-puzzle-piece",
       "FieloCMS__Layouts__c" : "Edit",
