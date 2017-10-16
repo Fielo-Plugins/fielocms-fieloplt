@@ -127,6 +127,11 @@ public with sharing class FieloCMSPLT_FilterService {
                 if(filter.value == null){
                     whereCondition += prefix + filter.field + ' ' + operatorsMap.get(filter.operator) + ' null ';
                 }else if(nonQuotedTypes.contains(fieldType)){
+                    if(fieldType == 'DATE'){
+                        filter.value = String.valueOf(DateTime.newInstance(Long.valueOf(filter.value)).formatGmt('yyyy-MM-dd'));
+                    }else if(fieldType == 'DATETIME'){
+                        filter.value = String.valueOf(DateTime.newInstance(Long.valueOf(filter.value)).formatGmt('yyyy-MM-dd\'T\'HH:mm:ss.SSS\'Z\''));
+                    }
                     whereCondition += prefix + filter.field + ' ' + operatorsMap.get(filter.operator) + ' ' + filter.value;
                 } else if(filter.operator == 'like'){
                     whereCondition += prefix + filter.field + ' ' + operatorsMap.get(filter.operator) + ' \'%' + filter.value + '%\'';
