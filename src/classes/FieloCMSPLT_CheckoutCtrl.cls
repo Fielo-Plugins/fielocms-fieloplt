@@ -15,8 +15,11 @@ global with sharing class FieloCMSPLT_CheckoutCtrl implements FieloCMS.ViewSubCo
     global static FieloCMS.RemoteActionResult checkout(Id rewardId, Integer quantity, String detailUrl){                        
         FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();
         Savepoint sp = Database.setSavepoint();
-        try{                            
-            List<FieloPLT__Redemption__c> redemptions = FieloPLT.RedemptionService.createRedemptions(new Map<Id,Integer>{rewardId => quantity}, FieloCMSPLT_MemberService.getCurrentMemberId());
+        try{  
+            FieloPLT__Member__c loggedMember = FieloCMSPLT_MemberService.getCurrentMember(new Set<String>{'FieloPLT__OrganizationFieloCMSPLT_Account__c','FieloPLT__Type__c','FieloPLT__IsManager__c'});
+            Id memberId = (loggedMember.FieloPLT__Type__c == 'Organization Contributor' && loggedMember.FieloPLT__OrganizationAccount__c != null && loggedMember.FieloPLT__IsManager__c) ? loggedMember.FieloPLT__OrganizationAccount__c : loggedMember.Id;
+                          
+            List<FieloPLT__Redemption__c> redemptions = FieloPLT.RedemptionService.createRedemptions(new Map<Id,Integer>{rewardId => quantity}, memberId);
             if(redemptions[0].FieloPLT__Status__c == 'Closed'){                
                 result.redirectURL = detailUrl + redemptions[0].Id;
             }else{
