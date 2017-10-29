@@ -17,7 +17,7 @@ global with sharing class FieloCMSPLT_MediaAPI implements FieloCMS.DataInterface
         Map<Id, Id> mapComponentRecord = new Map<Id, Id>();
         for(FieloCMS__Component__c c : components) {
             if(c.FieloCMS__ComponentLibrary__r.FieloCMS__RecordType__c == 'List'){
-                newMapData.put(c.Id, FieloCMSPLT_MediaService.getMedia(FieloCMSPLT_OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c), c.FieloCMS__Tag__c, c.FieloCMS__Limit__c.intValue(), 0, c.FieloCMS__OrderBy__c, FieloCMSPLT_MemberService.getCurrentMemberId()));
+                newMapData.put(c.Id, FieloCMSPLT_MediaService.getMedia(FieloCMSPLT_OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c), c.FieloCMS__Tag__c, c.FieloCMS__Category__c, c.FieloCMS__Limit__c.intValue(), 0, c.FieloCMS__OrderBy__c, FieloCMSPLT_MemberService.getCurrentMemberId(), null));
             } else if(c.FieloCMS__ComponentLibrary__r.FieloCMS__RecordType__c == 'Record') {
                 fieldSet.addAll( FieloCMSPLT_OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c) );
                 if ( String.isBlank(c.FieloCMS__RecordId__c) ) {
@@ -44,17 +44,22 @@ global with sharing class FieloCMSPLT_MediaAPI implements FieloCMS.DataInterface
     global List<sObject> getData(FieloCMS__Component__c component, Integer pageNumber, String orderBy, String filters){
 
         List<SObject> newData = new List<SObject>();
-        String categoryId;
-        String tagId;
-        if(filters != null){
-            Map<String,Object> filtersMap = (Map<String,Object>) JSON.deserializeUntyped(filters);
-            for(String s : filtersMap.keySet()){
-                if(s == 'FieloCMS__Category__c'){
-                    categoryId = (String)filtersMap.get(s);
-                }else if(s == 'FieloCMS__Tag__c'){
-                    tagId = (String)filtersMap.get(s);
+        if(String.isNotBlank(filters)){
+            List<FieloCMSPLT_FilterService.FilterWrapper> filtersList = (List<FieloCMSPLT_FilterService.FilterWrapper>) JSON.deserialize(filters, List<FieloCMSPLT_FilterService.FilterWrapper>.class);
+            //Map<String,Object> filtersMap = (Map<String,Object>) JSON.deserializeUntyped(filters);
+            if(!filtersList.isEmpty()){
+                for(Integer i = filtersList.size() - 1; i > 0; i--){
+                    if(filtersList[i].field == 'FieloCMS__Category__c' || filtersList[i].field == 'FieloCMS__Tag__c'){
+                        if(filtersList[i].value != null){
+                            component.put(filtersList[i].field, filtersList[i].value);
+                        }
+                        filtersList.remove(i);
+                    }else if(String.isBlank(filtersList[i].value)){
+                        filtersList.remove(i);
+                    }
                 }
             }
+            filters = JSON.serialize(filtersList);
         }
 
         //Prepare all the queries        
@@ -64,13 +69,6 @@ global with sharing class FieloCMSPLT_MediaAPI implements FieloCMS.DataInterface
         //Calculate the offset from the Page Number
         Integer offset = Integer.valueOf(component.FieloCMS__Limit__c * (pageNumber - 1));
 
-        if(categoryId == null && component.FieloCMS__Category__c != null){
-            categoryId = component.FieloCMS__Category__c;
-        }
-        if(tagId == null && component.FieloCMS__Tag__c != null){
-            tagId = component.FieloCMS__Tag__c;
-        }
-
-        return FieloCMSPLT_MediaService.getMedia(FieloCMSPLT_OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c), tagId, component.FieloCMS__Limit__c.intValue(), offset, orderBy, FieloCMSPLT_MemberService.getCurrentMemberId());
+        return FieloCMSPLT_MediaService.getMedia(FieloCMSPLT_OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c), component.FieloCMS__Tag__c, component.FieloCMS__Category__c, component.FieloCMS__Limit__c.intValue(), offset, orderBy, FieloCMSPLT_MemberService.getCurrentMemberId(), filters);
     }
 }
