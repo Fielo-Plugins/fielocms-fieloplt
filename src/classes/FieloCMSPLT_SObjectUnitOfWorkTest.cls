@@ -243,9 +243,9 @@ private with sharing class FieloCMSPLT_SObjectUnitOfWorkTest
 		} catch (System.DmlException dmlex) {
 			didFail = true;
 			caughtEx = dmlex;
-        } catch(FieloPLT.FieloException e) { 
+        }/* catch(FieloPLT.FieloException e) { 
             result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(ApexPages.Severity.ERROR, e.getMessage() )); 
-		}
+		}*/
 
 		// Assert Results
 		System.assertEquals(didFail, true, 'didFail');
