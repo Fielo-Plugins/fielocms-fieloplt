@@ -1,7 +1,7 @@
 global with sharing class CheckoutController implements FieloCMS.ViewSubComponentInterface {
 
     global ApexPages.Component getSubComponent(FieloCMS.Field field, SObject record){        
-        Component.Checkout checkout = new Component.Checkout();
+        Component.FieloCMSPLT_Checkout checkout = new Component.FieloCMSPLT_Checkout();
         if(record != null){
             checkout.record = record;
         }else{

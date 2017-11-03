@@ -1,12 +1,14 @@
 public with sharing class MediaService {
-	public static List<FieloCMS__Media__c> getMedia(Set<String> fields, Id tagId, Integer quantity, Integer offset, String orderBy, Id memberId) {
+    public static List<FieloCMS__Media__c> getMedia(Set<String> fields, Id tagId, Id categoryId, Integer quantity, Integer offset, String orderBy, Id memberId, String dynamicFilter) {
         if(tagId != null) {
             String query = 'SELECT ID';
             for ( String f: fields) {
                 query += ', FieloCMS__Media__r.' + f ;
             }
-            query += ' FROM FieloCMS__TagItem__c WHERE FieloCMS__Tag__c = :tagId ';
-          
+            query += ' FROM FieloCMS__TagItem__c WHERE FieloCMS__Tag__c = :tagId AND FieloCMS__Media__c <> NULL ';
+            if (categoryId != null) {
+                query += 'AND FieloCMS__Media__r.FieloCMS__Category__c =: categoryId ';
+            }
 
             //segmentation
             Set<Id> appliedSegments = new Set<Id>();
@@ -18,6 +20,10 @@ public with sharing class MediaService {
                 appliedSegments.add([SELECT Id FROM FieloPLT__Segment__c WHERE RecordType.DeveloperName = 'Private' LIMIT 1].Id);
             }
             query += ' AND (FieloCMS__Media__r.Segment__c = ' + null + ' OR FieloCMS__Media__r.Segment__c IN : appliedSegments) ';
+
+            if(String.isNotBlank(dynamicFilter)){
+                query += ' AND ' + FilterService.getDynamicWhereCondition(dynamicFilter, 'FieloCMS__Media__c', 'FieloCMS__Media__r.');
+            }
 
             // ORDER BY,  LIMIT & OFFSET
             if( String.isNotBlank(orderBy) ){
@@ -47,6 +53,14 @@ public with sharing class MediaService {
             appliedSegments.add([SELECT Id FROM FieloPLT__Segment__c WHERE RecordType.DeveloperName = 'Private' LIMIT 1].Id);
         }
         query += ' WHERE (Segment__c = ' + null + ' OR Segment__c IN : appliedSegments) ';
+
+        if (categoryId != null) {
+            query += 'AND ( FieloCMS__Category__c =: categoryId OR FieloCMS__Category__r.FieloCMS__Category__c =: categoryId ) ';
+        }
+
+        if(String.isNotBlank(dynamicFilter)){
+            query += ' AND ' + FilterService.getDynamicWhereCondition(dynamicFilter, 'FieloCMS__Media__c', '');
+        }
 
         // ORDER BY,  LIMIT & OFFSET
         if( String.isNotBlank(orderBy) ){

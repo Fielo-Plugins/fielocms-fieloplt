@@ -87,7 +87,7 @@ public without sharing class Components extends SObjectDomain {
 
             //Program -> el primer program creado
             if(record.Program__c == null ){
-                record.Program__c.addError('Must select a Program.');
+                //record.Program__c.addError('Must select a Program.');
             }
         }
     }

@@ -125,8 +125,7 @@ public with sharing class ProgramsSelector extends SObjectSelector{
         String.format(
         'select {0} ' +
           'from {1} ' +
-          'where FieloPLT__IsDefault__c = true ' +
-          'order by {2}',
+          'order by {2} limit 1',
         new List<String> {
           getFieldListString(),
           getSObjectName(),

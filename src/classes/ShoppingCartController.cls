@@ -12,7 +12,7 @@ global with sharing class ShoppingCartController {
         if(quantitiesMap == null){
             Cookie shopCartCookie = ApexPages.currentPage().getCookies().get('shoppingCart');
             if(shopCartCookie != null && !String.isBlank(shopCartCookie.getValue())){
-                quantitiesMap = (Map<Id,Integer>)JSON.deserialize(shopCartCookie.getValue(),Map<Id,Integer>.class);
+                quantitiesMap = (Map<Id,Integer>)JSON.deserialize(shopCartCookie.getValue().replace('\'','"'),Map<Id,Integer>.class);
             }else{
                 quantitiesMap = new Map<Id,Integer>();
             }
@@ -41,7 +41,7 @@ global with sharing class ShoppingCartController {
     } set;}
 
     private String getFieldset(){
-        Set<String> fields = new Set<String>{'Id','FieloPLT__Points__c'};
+        Set<String> fields = new Set<String>{'Id','FieloPLT__Points__c','FieloPLT__StockManagement__c,FieloPLT__Stock__c'};
         for(Schema.FieldSetMember fsm : Schema.SObjectType.FieloPLT__Reward__c.fieldSets.ShoppingCart.getFields()){
             fields.add(fsm.getFieldPath());
         }

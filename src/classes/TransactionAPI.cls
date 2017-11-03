@@ -1,6 +1,6 @@
 global with sharing class TransactionAPI implements FieloCMS.DataInterface{
-	
-	global Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){                
+    
+    global Map<Id, Object> getBulkData(List<FieloCMS__Component__c> components){                
         Map<Id,Object> newMapData = new Map<Id,Object>();
         //Prepare all the queries
         for(FieloCMS__Component__c c : components){            
@@ -13,9 +13,9 @@ global with sharing class TransactionAPI implements FieloCMS.DataInterface{
                 Id memberId = MemberService.getCurrentMemberId();
                 String query = 'SELECT ' + String.join(new List<String>(OrganizationUtil.getFieldSet(c.FieloCMS__FieldSet__c)), ',') + ' FROM FieloPLT__Transaction__c WHERE FieloPLT__Member__c =: memberId';
                 query += ' LIMIT ' + String.valueOf(c.FieloCMS__Limit__c);
+                query += ' OFFSET 0';
                 newMapData.put(c.Id, Database.query(query));
 
-                System.debug(newMapData.values());
 
             }                
         }

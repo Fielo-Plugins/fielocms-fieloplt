@@ -1,5 +1,5 @@
 public with sharing class PostService {
-    public static List<FieloCMS__Post__c> getPosts(Set<String> fields, String status, Id tagId, Id categoryId, Integer quantity, Integer offset, String orderBy, Id memberId) {
+    public static List<FieloCMS__Post__c> getPosts(Set<String> fields, String status, Id tagId, Id categoryId, Integer quantity, Integer offset, String orderBy, Id memberId, String dynamicFilter) {
         if(tagId != null) {
             String query = 'SELECT ID';
             for ( String f: fields) {
@@ -15,14 +15,18 @@ public with sharing class PostService {
 
             //segmentation
             Set<Id> appliedSegments = new Set<Id>();
-			if(memberId != null) appliedSegments = FieloPLT.SegmentService.getMemberSegments(memberId, null);
-			//ya que platform no me devuelve los segmentos privado y público, los agrego yo según corresponda
-			if(UserInfo.getUserType() == 'Guest'){
-				appliedSegments.add([SELECT Id FROM FieloPLT__Segment__c WHERE RecordType.DeveloperName = 'Public' LIMIT 1].Id);
-			}else{
-				appliedSegments.add([SELECT Id FROM FieloPLT__Segment__c WHERE RecordType.DeveloperName = 'Private' LIMIT 1].Id);
-			}
+            if(memberId != null) appliedSegments = FieloPLT.SegmentService.getMemberSegments(memberId, null);
+            //ya que platform no me devuelve los segmentos privado y público, los agrego yo según corresponda
+            if(UserInfo.getUserType() == 'Guest'){
+                appliedSegments.add([SELECT Id FROM FieloPLT__Segment__c WHERE RecordType.DeveloperName = 'Public' LIMIT 1].Id);
+            }else{
+                appliedSegments.add([SELECT Id FROM FieloPLT__Segment__c WHERE RecordType.DeveloperName = 'Private' LIMIT 1].Id);
+            }
             query += ' AND (Segment__c = ' + null + ' OR Segment__c IN : appliedSegments) ';
+
+            if(String.isNotBlank(dynamicFilter)){
+                query += ' AND ' + FilterService.getDynamicWhereCondition(dynamicFilter, 'FieloCMS__Post__c', 'FieloCMS__Post__r.');
+            }
 
             // ORDER BY,  LIMIT & OFFSET
             if( String.isNotBlank(orderBy) ){
@@ -55,14 +59,18 @@ public with sharing class PostService {
 
         //segmentation
         Set<Id> appliedSegments = new Set<Id>();
-		if(memberId != null) appliedSegments = FieloPLT.SegmentService.getMemberSegments(memberId, null);
-		//ya que platform no me devuelve los segmentos privado y público, los agrego yo según corresponda
-		if(UserInfo.getUserType() == 'Guest'){
-			appliedSegments.add([SELECT Id FROM FieloPLT__Segment__c WHERE RecordType.DeveloperName = 'Public' LIMIT 1].Id);
-		}else{
-			appliedSegments.add([SELECT Id FROM FieloPLT__Segment__c WHERE RecordType.DeveloperName = 'Private' LIMIT 1].Id);
-		}
-           query += ' AND (Segment__c = ' + null + ' OR Segment__c IN : appliedSegments) ';
+        if(memberId != null) appliedSegments = FieloPLT.SegmentService.getMemberSegments(memberId, null);
+        //ya que platform no me devuelve los segmentos privado y público, los agrego yo según corresponda
+        if(UserInfo.getUserType() == 'Guest'){
+            appliedSegments.add([SELECT Id FROM FieloPLT__Segment__c WHERE RecordType.DeveloperName = 'Public' LIMIT 1].Id);
+        }else{
+            appliedSegments.add([SELECT Id FROM FieloPLT__Segment__c WHERE RecordType.DeveloperName = 'Private' LIMIT 1].Id);
+        }
+        query += ' AND (Segment__c = ' + null + ' OR Segment__c IN : appliedSegments) ';
+
+        if(String.isNotBlank(dynamicFilter)){
+            query += ' AND ' + FilterService.getDynamicWhereCondition(dynamicFilter, 'FieloCMS__Post__c', '');
+        }
 
         // ORDER BY,  LIMIT & OFFSET
         if( String.isNotBlank(orderBy) ){
