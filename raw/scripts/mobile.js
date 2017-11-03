@@ -21,6 +21,17 @@
   window.FieloPLTAddToCart = FieloPLTAddToCart;
 
   // Properties
+  /**
+   * Css name classes
+   *
+   * @enum {string}
+   * @private
+   */
+  FieloPLTAddToCart.prototype.Constant_ = {
+    REDIRECT_PAGE: 'data-redirect-page',
+    REWARD_ID: 'data-reward-id',
+    SUCCESS: 'data-label-success'
+  };
 
   /**
    * Css name classes
@@ -44,8 +55,9 @@
     this.add_ = this.element_.getElementsByClassName(this.CssClasses_.ADD)[0];
     this.quantity_ =
         this.element_.getElementsByClassName(this.CssClasses_.QUANTITY)[0];
-    this.rewardId_ = this.element_.dataset.rewardId;
-    this.success_ = this.element_.dataset.labelSuccess;
+    this.rewardId_ = this.element_.getAttribute(this.Constant_.REWARD_ID);
+    this.success_ = this.element_.getAttribute(this.Constant_.SUCCESS);
+    this.redirectPage_ = this.element_.getAttribute(this.Constant_.REDIRECT_PAGE);
   };
 
    /**
@@ -72,6 +84,15 @@
     fieloUtils.message.FieloMessage.addMessages(this.success_);
     fieloUtils.message.FieloMessage.setRedirect('#', 3);
     fieloUtils.message.FieloMessage.show();
+
+    // Actualiza cada item que tenga el ShoppingCartQuantity
+    fieloUtils.shoppingCartQuantityItems.forEach(function(item){
+      item.FieloPLTShoppingCartQuantityIndicator.updateValue();
+    });
+
+    if (this.redirectPage_ !== '') {
+      window.location = '/FieloCMS__Page?pageId=' + this.redirectPage_;
+    }
   };
 
   /**
@@ -189,6 +210,11 @@
     fieloUtils.message.FieloMessage.addMessages(this.success_);
     fieloUtils.message.FieloMessage.setRedirect('#', 3);
     fieloUtils.message.FieloMessage.show();
+
+    // Actualiza cada item que tenga el ShoppingCartQuantity
+    fieloUtils.shoppingCartQuantityItems.forEach(function(item){
+      item.FieloPLTShoppingCartQuantityIndicator.updateValue();
+    });
   };
 
   /**
@@ -201,7 +227,9 @@
     [].forEach.call(this.deleteButtons_, function(button){
       button.addEventListener('click', this.deleteClickHandler_.bind(this));
     }, this);
-    this.empty_.addEventListener('click', this.emptyClickHandler_.bind(this));
+    if (this.empty_) {
+      this.empty_.addEventListener('click', this.emptyClickHandler_.bind(this));
+    }
   };
 
   /**
@@ -258,6 +286,12 @@
   FieloPLTShoppingCart.prototype.emptyCart_ = function(click){
     if (confirm(fieloUtils.site.FieloSite.getLabel('areYouSure'))) {
       fieloUtils.setCookie("apex__shoppingCart", "", -1);
+
+      // Actualiza cada item que tenga el ShoppingCartQuantity
+      fieloUtils.shoppingCartQuantityItems.forEach(function(item){
+        item.FieloPLTShoppingCartQuantityIndicator.updateValue();
+      });
+
       oldLoader.components.refreshView(this.element_);
     }
   };
@@ -313,6 +347,11 @@ function FieloPLTcheckDeleteCookie(result, event){
 
       if(!error){
         fieloUtils.setCookie("apex__shoppingCart", "", -1);
+
+        // Actualiza cada item que tenga el ShoppingCartQuantity
+        fieloUtils.shoppingCartQuantityItems.forEach(function(item){
+          item.FieloPLTShoppingCartQuantityIndicator.updateValue();
+        });
       }
     }
 }
@@ -382,6 +421,11 @@ function FieloPLTcheckDeleteCookie(result, event){
    */
   FieloPLTLogin.prototype.submitClickHandler_ = function() {
     fieloUtils.setCookie('apex__shoppingCart', '', -1);
+
+    // Actualiza cada item que tenga el ShoppingCartQuantity
+    fieloUtils.shoppingCartQuantityItems.forEach(function(item){
+      item.FieloPLTShoppingCartQuantityIndicator.updateValue();
+    });
   };
 
   // Public methods
@@ -468,7 +512,12 @@ function FieloPLTcheckDeleteCookie(result, event){
    * @private
    */
   FieloPLTRegister.prototype.submitClickHandler_ = function(event) {
-    fieloUtils.setCookie("apex__shoppingCart", "", -1);          
+    fieloUtils.setCookie("apex__shoppingCart", "", -1);
+
+    // Actualiza cada item que tenga el ShoppingCartQuantity
+    fieloUtils.shoppingCartQuantityItems.forEach(function(item){
+      item.FieloPLTShoppingCartQuantityIndicator.updateValue();
+    });        
   };
 
   // Public methods
@@ -570,7 +619,12 @@ function FieloPLTcheckDeleteCookie(result, event){
       fieloUtils.message.FieloMessage.addMessages(this.errorMsg_);
       fieloUtils.message.FieloMessage.show();
     } else{
-      fieloUtils.setCookie("apex__shoppingCart", "", -1);      
+      fieloUtils.setCookie("apex__shoppingCart", "", -1);
+
+      // Actualiza cada item que tenga el ShoppingCartQuantity
+      fieloUtils.shoppingCartQuantityItems.forEach(function(item){
+        item.FieloPLTShoppingCartQuantityIndicator.updateValue();
+      });   
     }
   };
 
@@ -681,6 +735,227 @@ function FieloPLTcheckDeleteCookie(result, event){
     constructor: FieloAgreement,
     classAsString: 'FieloAgreement',
     cssClass: 'cms-plt-agreement',
+    widget: true
+  });
+})();
+
+(function() {
+  'use strict';
+
+  /**
+   * @description Constructor de cantidad de rewards en el Shopping Cart.
+   * FieloPLTShoppingCart Implements design patterns defined by MDL at
+   * {@link https://github.com/jasonmayes/mdl-component-design-pattern}
+   *
+   * @version 1
+   * @author Ignacio Hurrell <ignacio@fielo.com>
+   * @param {HTMLElement} element - Element to be upgraded
+   * @constructor
+   */
+  var FieloPLTShoppingCartQuantityIndicator = function FieloPLTShoppingCartQuantityIndicator(element) {
+    this.element_ = element;
+
+    // Initialize instance.
+    this.init();
+  };
+  window.FieloPLTShoppingCartQuantityIndicator = FieloPLTShoppingCartQuantityIndicator;
+
+  // Properties
+
+  /**
+   * Css name classes
+   *
+   * @enum {string}
+   * @private
+   */
+  FieloPLTShoppingCartQuantityIndicator.prototype.CssClasses_ = {
+    VALUE: 'fieloplt-shopping-cart-quantity-indicator__value',
+    EMPTY: 'fieloplt-shopping-cart-quantity-indicator__value--is-empty'
+  };
+
+  // Private methods
+
+  /**
+   * Set Defaults settings
+   *
+   * @private
+   */
+  FieloPLTShoppingCartQuantityIndicator.prototype.setDefaults_ = function() {
+    this.value_ = document.createElement('div');
+    this.value_.classList.add(this.CssClasses_.VALUE);
+    this.element_.appendChild(this.value_);
+  };
+
+  
+  // Public methods
+
+  /**
+   * Inicializa el elemento
+   */
+  FieloPLTShoppingCartQuantityIndicator.prototype.updateValue = function() {
+    var quantity = 0;
+
+    var shopCookie = fieloUtils.getCookie("apex__shoppingCart");
+    if(shopCookie != undefined && shopCookie != ""){
+      shopCookie = JSON.parse(shopCookie);      
+
+      for (var property in shopCookie) {
+        if(shopCookie.hasOwnProperty(property)) {
+          quantity += shopCookie[property]
+        }
+      }
+    }
+    this.value_.innerText = quantity;
+    if (quantity === 0) {
+      this.value_.classList.add(this.CssClasses_.EMPTY);
+    }else{
+      this.value_.classList.remove(this.CssClasses_.EMPTY);
+    }
+  };
+  
+  // Public methods
+
+  /**
+   * Inicializa el elemento
+   */
+  FieloPLTShoppingCartQuantityIndicator.prototype.init = function() {
+    if (this.element_) {
+      this.setDefaults_();
+      this.updateValue();
+      if (typeof fieloUtils.shoppingCartQuantityItems === 'undefined') {
+        fieloUtils.shoppingCartQuantityItems = [];
+      }
+      fieloUtils.shoppingCartQuantityItems.push(this.element_);
+    }
+  };
+
+  // El componente se registra por si solo.
+  // Asume que el componentHandler esta habilitado en el scope global
+  componentHandler.register({
+    constructor: FieloPLTShoppingCartQuantityIndicator,
+    classAsString: 'FieloPLTShoppingCartQuantityIndicator',
+    cssClass: 'fieloplt-shopping-cart-quantity-indicator',
+    widget: true
+  });
+})();
+
+
+
+
+
+
+
+
+(function() {
+  'use strict';
+
+  /**
+   * @description Constructor de cantidad de rewards en el Shopping Cart.
+   * FieloPLTShoppingCart Implements design patterns defined by MDL at
+   * {@link https://github.com/jasonmayes/mdl-component-design-pattern}
+   *
+   * @version 1
+   * @author Ignacio Hurrell <ignacio@fielo.com>
+   * @param {HTMLElement} element - Element to be upgraded
+   * @constructor
+   */
+  var FieloPLTShoppingCartQuantity = function FieloPLTShoppingCartQuantity(element) {
+    this.element_ = element;
+
+    // Initialize instance.
+    this.init();
+  };
+  window.FieloPLTShoppingCartQuantity = FieloPLTShoppingCartQuantity;
+
+  // Properties
+
+  /**
+   * Css name classes
+   *
+   * @enum {string}
+   * @private
+   */
+  FieloPLTShoppingCartQuantity.prototype.CssClasses_ = {
+    ADD: 'fieloplt-add-to-cart__quantity-add',
+    REMOVE: 'fieloplt-add-to-cart__quantity-remove'
+  };
+
+  // Private methods
+
+  /**
+   * Set Defaults settings
+   *
+   * @private
+   */
+  FieloPLTShoppingCartQuantity.prototype.setDefaults_ = function() {
+    // if is showned
+    this.remove_ = document.createElement('span');
+    this.remove_.innerText = '▼';
+    this.remove_.classList.add(this.CssClasses_.REMOVE);
+    this.element_.parentNode.insertBefore(this.remove_, this.element_);
+
+    this.add_ = document.createElement('span');
+    this.add_.innerText = '▲';
+    this.add_.classList.add(this.CssClasses_.ADD);
+    this.element_.parentNode.insertBefore(this.add_, this.element_.nextSibling);
+  };
+
+  /**
+   * Sets Listeners
+   */
+  FieloPLTShoppingCartQuantity.prototype.setListeners_ = function() {
+    this.remove_.addEventListener('click', this.updateValue_.bind(this, -1));
+    this.add_.addEventListener('click', this.updateValue_.bind(this, 1));
+  };
+
+  /**
+   * Updates values
+   */
+  FieloPLTShoppingCartQuantity.prototype.updateValue_ = function(quantity) {
+    this.element_.value = Number(this.element_.value) + quantity;
+    if (Number(this.element_.value) < 0) {
+      this.element_.value = 0;
+    }
+    if ("createEvent" in document) {
+      var evt = document.createEvent("HTMLEvents");
+      evt.initEvent("change", false, true);
+      this.element_.dispatchEvent(evt);
+    } else{
+      this.element_.fireEvent("onchange")
+    }
+  };
+  
+  // Public methods
+
+  /**
+   * Inicializa el elemento
+   */
+  FieloPLTShoppingCartQuantity.prototype.init = function() {
+    if (
+      this.element_ &&
+      this.element_.currentStyle ? 
+      this.element_.currentStyle.display : 
+      getComputedStyle(this.element_, null).display !== 'none'
+    ) {
+      this.setDefaults_();
+      this.setListeners_();
+    }
+  };
+
+  // El componente se registra por si solo.
+  // Asume que el componentHandler esta habilitado en el scope global
+  componentHandler.register({
+    constructor: FieloPLTShoppingCartQuantity,
+    classAsString: 'FieloPLTShoppingCartQuantity',
+    cssClass: 'fieloplt-shopping-cart__quantity ',
+    widget: true
+  });
+
+  window.FieloPLTAddToCartQuantity = FieloPLTShoppingCartQuantity;
+  componentHandler.register({
+    constructor: FieloPLTAddToCartQuantity,
+    classAsString: 'FieloPLTAddToCartQuantity',
+    cssClass: 'fieloplt-add-to-cart__quantity',
     widget: true
   });
 })();
