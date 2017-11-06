@@ -1,6 +1,6 @@
 public with sharing class FieloCMSPLT_MemberService {
 
-	public static FieloPLT__Member__c getCurrentMember(Set<String> fields){
+    public static FieloPLT__Member__c getCurrentMember(Set<String> fields){
         return new FieloCMSPLT_MembersSelector(fields).selectById(new Set<Id>{getCurrentMemberId()})[0];
     }
 
@@ -76,11 +76,18 @@ public with sharing class FieloCMSPLT_MemberService {
             List<FieloCMS__Layout__c> ll = [SELECT Id FROM FieloCMS__Layout__c WHERE FieloCMS__Site__r.FieloCMS__SiteId__c = :siteId AND Name = 'Private' ];
             if ( !ll.isEmpty() ) {
                 redirectURL = '?layoutid=' + ll.get(0).Id;
-            }
-
+            }            
+            
             FieloPLT__Member__c member = new FieloCMSPLT_MembersSelector().selectById(new Set<Id>{memberId})[0];
             User user = [SELECT UserName FROM User WHERE Id =: member.FieloPLT__User__c LIMIT 1];
-            return Site.login(user.UserName, password, redirectURL);
+            PageReference redirectPage = Site.login(user.UserName, password, redirectURL);
+            
+            if(redirectPage != null){
+                redirectPage.getParameters().put('retURL', redirectPage.getParameters().get('retURL') + redirectURL);
+            }
+            return redirectPage;
+    
+            
         }catch(Exception e){
             Database.rollback(sp);
             throw e;

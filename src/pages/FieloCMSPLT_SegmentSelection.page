@@ -71,13 +71,13 @@
 		<apex:form >
 			<apex:pageBlock title="{!$ObjectType.FieloPLT__Segment__c.LabelPlural}"  >
 				<apex:pageBlockButtons >
-					<apex:commandButton styleClass='slds-button slds-button--neutral' action="{!saveAndExit}" value="{!$Label.FieloPLT__Save}"/>
-					<apex:commandButton styleClass='slds-button slds-button--neutral' action="{!save}" value="{!$Label.FieloPLT__QuickSave}"/>
-					<apex:commandButton styleClass='slds-button slds-button--neutral' action="{!cancel}" value="{!$Label.FieloPLT__Cancel}"/>
+					<apex:commandButton styleClass="slds-button slds-button--neutral" action="{!saveAndExit}" value="{!$Label.fieloplt__save}"/>
+					<apex:commandButton styleClass="slds-button slds-button--neutral" action="{!save}" value="{!$Label.fieloplt__quicksave}"/>
+					<apex:commandButton styleClass="slds-button slds-button--neutral" action="{!cancel}" value="{!$Label.fieloplt__cancel}"/>
 				</apex:pageBlockButtons>
 				<!-- AVAILABLE SEGMENTS -->
-				<apex:pageBlockSection id="AvailableList" columns="1" collapsible="false" title="{!$Label.FieloPLT__Available}">
-					<apex:pageBlockTable headerClass='slds-text-title--caps' styleClass='slds-table slds-table--bordered slds-table--cell-buffer' id="pageBlockTable" value="{!availableSegments}" var="segWrapper" >
+				<apex:pageBlockSection id="AvailableList" columns="1" collapsible="false" title="{!$Label.fieloplt__available}">
+					<apex:pageBlockTable headerClass="slds-text-title--caps" styleClass="slds-table slds-table--bordered slds-table--cell-buffer" id="pageBlockTable" value="{!availableSegments}" var="segWrapper" >
 						<apex:column >
 							<apex:inputCheckBox id="checkbox" value="{!segWrapper.checkbox}"/>
 						</apex:column>
@@ -87,14 +87,14 @@
 							</apex:column>
 						</apex:repeat>
 					</apex:pageBlockTable>
-					<apex:commandButton styleClass='slds-button slds-button--neutral' action="{!addSelected}" value="{!$Label.FieloPLT__Add}"/>
+					<apex:commandButton styleClass="slds-button slds-button--neutral" action="{!addSelected}" value="{!$Label.fieloplt__add}"/>
 				</apex:pageBlockSection>
 				<apex:variable id="counter" var="counter" value="0" />
 				<!-- SELECTED SEGMENTS -->
-				<apex:pageBlockSection id="SelectedList" columns="1" collapsible="false" title="{!$Label.FieloPLT__Selected}">
-					<apex:pageBlockTable headerClass='slds-text-title--caps' styleClass='slds-table slds-table--bordered slds-table--cell-buffer' id="pageBlockTable" value="{!selectedSegments}" var="segWrapper" >
+				<apex:pageBlockSection id="SelectedList" columns="1" collapsible="false" title="{!$Label.fieloplt__selected}">
+					<apex:pageBlockTable headerClass="slds-text-title--caps" styleClass="slds-table slds-table--bordered slds-table--cell-buffer" id="pageBlockTable" value="{!selectedSegments}" var="segWrapper" >
 					<apex:column >
-						<apex:commandLink action="{!remove}" value="{!$Label.FieloPLT__Delete}">
+						<apex:commandLink action="{!remove}" value="{!$Label.fieloplt__delete}">
 							<apex:param name="indexToRemove" value="{!counter}" />
 						</apex:commandLink>
 					</apex:column>

@@ -81,7 +81,7 @@ global with sharing class FieloCMSPLT_RewardAPI implements FieloCMS.DataInterfac
         Integer offset = Integer.valueOf(component.FieloCMS__Limit__c * (pageNumber - 1));
 
         FieloPLT__Member__c loggedMember = FieloCMSPLT_MemberService.getCurrentMember(new Set<String>{'FieloPLT__OrganizationFieloCMSPLT_Account__c','FieloPLT__Type__c','FieloPLT__IsManager__c'});
-        Id memberId = (loggedMember.FieloPLT__Type__c == 'Organization Contributor' && loggedMember.FieloPLT__OrganizationAccount__c != null && loggedMember.FieloPLT__IsManager__c) ? loggedMember.FieloPLT__OrganizationAccount__c : loggedMember.Id;
+        memberId = (loggedMember.FieloPLT__Type__c == 'Organization Contributor' && loggedMember.FieloPLT__OrganizationAccount__c != null && loggedMember.FieloPLT__IsManager__c) ? loggedMember.FieloPLT__OrganizationAccount__c : loggedMember.Id;
 
         return FieloPLT.RewardService.getRewards(FieloCMSPLT_OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c), memberId, component.FieloCMS__Limit__c.intValue(), offset, orderBy, filtersList.isEmpty() ? null : JSON.serialize(filtersList));
     }

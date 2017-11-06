@@ -4,7 +4,8 @@ public with sharing class FieloCMSPLT_ProgramsSelector extends FieloCMSPLT_SObje
         FieloPLT__Program__c.Id,
         FieloPLT__Program__c.Name,
         FieloPLT__Program__c.FieloPLT__RequestMemberAuthorization__c,
-        FieloPLT__Program__c.FieloPLT__UserCreationClass__c
+        FieloPLT__Program__c.FieloPLT__UserCreationClass__c,
+        FieloPLT__Program__c.FieloCMSPLT_SiteURL__c
       };
   }
 
@@ -76,9 +77,9 @@ public with sharing class FieloCMSPLT_ProgramsSelector extends FieloCMSPLT_SObje
         return fieldSet;
     }
 
-  //private static FieloPLT__Program__c programBySiteUrl;
+  private static FieloPLT__Program__c programBySiteUrl;
   public FieloPLT__Program__c selectBySiteUrl(String siteDomain){
-    //if(programBySiteUrl == null){
+    if(programBySiteUrl == null){
           if(siteDomain != null) siteDomain = siteDomain.replace('.secure.','.');
           System.debug(loggingLevel.Error, '*** siteDomain: ' + siteDomain);
 
@@ -95,14 +96,12 @@ public with sharing class FieloCMSPLT_ProgramsSelector extends FieloCMSPLT_SObje
             getOrderBy() } ) );
 
           if(!programs.isEmpty()){
-              //programBySiteUrl = programs.get(0);
-              return programs.get(0);
+              programBySiteUrl = programs.get(0);
           }else{
-              //programBySiteUrl = selectByDefault();
-              return selectByDefault();
+              programBySiteUrl = selectByGetParameter();
           }
-      //}
-      //return programBySiteUrl;
+      }
+      return programBySiteUrl;
   }
 
   /*FieloPLT__Program__c p = getProgramByDomain();
@@ -119,20 +118,23 @@ public with sharing class FieloCMSPLT_ProgramsSelector extends FieloCMSPLT_SObje
     }
     return returnProgram;*/
 
-  private static FieloPLT__Program__c programDefault;
-  public FieloPLT__Program__c selectByDefault(){
-    programDefault = (FieloPLT__Program__c) Database.query(
-        String.format(
-        'select {0} ' +
-          'from {1} ' +
-          'where FieloPLT__IsDefault__c = true ' +
-          'order by {2}',
-        new List<String> {
-          getFieldListString(),
-          getSObjectName(),
-          getOrderBy() } ) );
+  private static FieloPLT__Program__c programByUrl;
+  public FieloPLT__Program__c selectByGetParameter(){
+    String paramProgramId = ApexPages.currentPage().getParameters().get('programId');
+    if ( String.isNotBlank(paramProgramId) ) {
+        programByUrl = (FieloPLT__Program__c) Database.query(
+            String.format(
+            'select {0} ' +
+              'from {1} ' +
+              'where Id = :paramProgramId ' +
+              'order by {2}',
+            new List<String> {
+              getFieldListString(),
+              getSObjectName(),
+              getOrderBy() } ) );
+    }
 
-    return programDefault;
+    return programByUrl;
   }
 
   public List<FieloPLT__Program__c> selectAll(){
