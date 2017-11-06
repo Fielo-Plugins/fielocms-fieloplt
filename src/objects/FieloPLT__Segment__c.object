@@ -20,4 +20,14 @@
         </displayedFields>
         <label>Segments Selection</label>
     </fieldSets>
+    <recordTypes>
+        <fullName>Private</fullName>
+        <active>true</active>
+        <label>Private</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Public</fullName>
+        <active>true</active>
+        <label>Public</label>
+    </recordTypes>
 </CustomObject>
