@@ -37,10 +37,10 @@ public class FieloCMSPLT_LoginService {
                 startUrl = selectionPage.getUrl();
             }
         }*/
-
-        
         //login
-        return Site.login(username, password, startUrl);
+        Pagereference retUrl = Site.login(username, password, startUrl);
+        
+        return retUrl;
     }
 
     public static PageReference forgotPassword(String userName){
