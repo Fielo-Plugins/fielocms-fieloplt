@@ -27,10 +27,7 @@ public with sharing class FieloCMSPLT_AgreementAcceptCtrl {
         }catch(DMLException e){
             ApexPages.addMessage(new ApexPages.Message(ApexPages.SEVERITY.Error, e.getDMLMessage(0)));
             return null;                    
-        } /*catch(FieloPLT.FieloException e) { 
-            result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(ApexPages.Severity.ERROR, e.getMessage() )); 
-        }*/
-
+        }                
 
         //if no errors checks then returns to the ret url
         if(!ApexPages.hasMessages()){
