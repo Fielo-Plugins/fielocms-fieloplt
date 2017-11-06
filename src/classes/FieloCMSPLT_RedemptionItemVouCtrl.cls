@@ -67,7 +67,7 @@ public with sharing class FieloCMSPLT_RedemptionItemVouCtrl {
             if(!redemptionItem.isEmpty()){
                 program = new FieloCMSPLT_ProgramsSelector(new Set<String>{'FieloCMSPLT_ShowVoucherCode__c', 'FieloCMSPLT_CustomVoucherCss__c', 'FieloCMSPLT_VoucherInstructions__c', 'FieloCMSPLT_RewardInstructions__c'}).selectById(new Set<Id>{redemptionItem[0].FieloPLT__Redemption__r.FieloPLT__Member__r.FieloPLT__Program__c})[0];
             }else{
-                program = new FieloCMSPLT_ProgramsSelector(new Set<String>{'FieloCMSPLT_ShowVoucherCode__c', 'FieloCMSPLT_CustomVoucherCss__c', 'FieloCMSPLT_VoucherInstructions__c', 'FieloCMSPLT_RewardInstructions__c'}).selectByDefault();
+                program = new FieloCMSPLT_ProgramsSelector(new Set<String>{'FieloCMSPLT_ShowVoucherCode__c', 'FieloCMSPLT_CustomVoucherCss__c', 'FieloCMSPLT_VoucherInstructions__c', 'FieloCMSPLT_RewardInstructions__c'}).selectByGetParameter();
             }
 
             voucherCustomVoucher = program.FieloCMSPLT_CustomVoucherCss__c;
