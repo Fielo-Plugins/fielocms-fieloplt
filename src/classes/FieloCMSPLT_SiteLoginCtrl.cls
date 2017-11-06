@@ -4,9 +4,20 @@ global with sharing class FieloCMSPLT_SiteLoginCtrl {
     global static FieloCMS.RemoteActionResult login(String userName, String password){        
         FieloCMS.RemoteActionResult result = new FieloCMS.RemoteActionResult();                
         Pagereference redirectPage;
+
+        String redirectURL;
+        String siteId = site.getSiteId();
+        List<FieloCMS__Layout__c> ll = [SELECT Id FROM FieloCMS__Layout__c WHERE FieloCMS__Site__r.FieloCMS__SiteId__c = :siteId AND Name = 'Private' ];
+        if ( !ll.isEmpty() ) {
+            redirectURL = '?layoutid=' + ll.get(0).Id;
+        }
+        
         try{
-            redirectPage = FieloCMSPLT_LoginService.login(username, password, null);            
+            redirectPage = FieloCMSPLT_LoginService.login(username, password, redirectURL);            
+
             if(redirectPage != null){
+                redirectPage.getParameters().put('retURL', redirectPage.getParameters().get('retURL') + redirectURL);
+
                 result.redirectURL = redirectPage.getUrl().replace('%2Fapex','');
             }
         }catch(FieloCMSPLT_Exception e){
@@ -21,8 +32,7 @@ global with sharing class FieloCMSPLT_SiteLoginCtrl {
             for(ApexPages.Message m : ApexPages.getMessages()){
                 result.addMessage(new FieloCMS.RemoteActionResult.RemoteActionMessage(m));
             }
-        }
-
+        }        
         return result;
     }
 
