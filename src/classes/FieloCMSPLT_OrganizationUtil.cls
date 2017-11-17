@@ -12,6 +12,11 @@ public class FieloCMSPLT_OrganizationUtil {
                 }else if (attributesMap.containsKey( 'fieldName')) {
                     fields.add((String)attributesMap.get('fieldName'));
                 }
+                if ( attributesMap.get('type') == 'REFERENCE') {
+                    if (((String)attributesMap.get('apiName')).contains('__c')) {
+                        fields.add(((String)attributesMap.get('apiName')).replace('__c', '__r') + '.Name');
+                    }
+                }
             }
         }
         return fields;
