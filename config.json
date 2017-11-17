@@ -1,15 +1,15 @@
 {
 			"type":"repository",
-			"version":"v2.3.0",
+			"version":"v2.4.1",
 			"dependencies":[
 				{
 					"type":"package",
-					"version":"2.35",
+					"version":"2.36.2",
 					"name":"FieloPLT"
 				},
 				{
 					"type":"package",
-					"version":"1.81",
+					"version":"1.101",
 					"name":"FieloCMS"
 				}
 			]
