@@ -239,6 +239,7 @@
   FieloPLTShoppingCart.prototype.deleteClickHandler_ = function(click) {
     event.stopPropagation();
     this.deleteItem_(click);
+    this.updateTotalPoints();
   };
 
   /**
