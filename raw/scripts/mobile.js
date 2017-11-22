@@ -150,6 +150,10 @@
     DELETE: 'fielo-button__delete',
     EMPTY: 'fielo-button__empty-cart',
     RECORD: 'fielo-record',
+    POINTS: 'fielo-field--is-FieloPLT__Points__c',
+    FIELD_VALUE: 'fielo-field__value',
+    PARTIAL_TOTAL: 'fieloplt-shopping-cart__total',
+    TOTAL_POINTS: 'fieloplt-shopping-cart__total-points',
     QUANTITY: 'fieloplt-shopping-cart__quantity'
   };
 
@@ -163,8 +167,15 @@
   FieloPLTShoppingCart.prototype.setDefaults_ = function() {
     this.save_ =
       this.element_.getElementsByClassName(this.CssClasses_.SAVE)[0];
+    this.quantities_ =
+      this.element_.getElementsByClassName(this.CssClasses_.QUANTITY);
     this.deleteButtons_ =
       this.element_.getElementsByClassName(this.CssClasses_.DELETE);
+    this.partialTotals_ = 
+      this.element_.getElementsByClassName(this.CssClasses_.PARTIAL_TOTAL);
+    this.totalPoints_ = this.element_.querySelector(
+      '.' + this.CssClasses_.TOTAL_POINTS + ' .' + this.CssClasses_.FIELD_VALUE
+    );
     this.empty_ =
       this.element_.getElementsByClassName(this.CssClasses_.EMPTY)[0];
     this.success_ = this.element_.dataset.labelSuccess;
@@ -177,12 +188,12 @@
    */
   FieloPLTShoppingCart.prototype.saveCart_ = function(){
     var jsonShop = {};
-    var quantities_ =
+    var quantities =
       this.element_.getElementsByClassName(this.CssClasses_.QUANTITY);
-    for(var i = 0; i < quantities_.length; i++){
-      jsonShop[quantities_[i].name.split("quantities.")[1]] = parseInt(quantities_[i].value);
+    for(var i = 0; i < quantities.length; i++){
+      jsonShop[quantities[i].name.split("quantities.")[1]] = parseInt(quantities[i].value);
     }
-    quantities_ = null;
+    quantities = null;
     fieloUtils.setCookie("apex__shoppingCart", JSON.stringify(jsonShop).replace(/["]/g, "'"), 1);
     fieloUtils.message.FieloMessage.clear();
     fieloUtils.message.FieloMessage.addMessages(this.success_);
@@ -196,6 +207,13 @@
    * @private
    */
   FieloPLTShoppingCart.prototype.addEventListeners_ = function() {
+    [].forEach.call(this.quantities_, function(element){
+      element.addEventListener(
+        'change',
+        this.updatePartialPoints_.bind(this, element)
+      );
+    }, this);
+
     this.save_.addEventListener('click', this.saveClickHandler_.bind(this));
     [].forEach.call(this.deleteButtons_, function(button){
       button.addEventListener('click', this.deleteClickHandler_.bind(this));
@@ -221,6 +239,7 @@
   FieloPLTShoppingCart.prototype.deleteClickHandler_ = function(click) {
     event.stopPropagation();
     this.deleteItem_(click);
+    this.updateTotalPoints();
   };
 
   /**
@@ -261,6 +280,36 @@
     }
   };
 
+  /**
+   * Update Partial Points
+   *
+   * @private
+   */
+  FieloPLTShoppingCart.prototype.updatePartialPoints_ = function(quantity) {
+    var parent =
+      fieloUtils.getParentUntil(quantity, '.' + this.CssClasses_.RECORD);
+    var partialTotal =
+      parent.getElementsByClassName(this.CssClasses_.PARTIAL_TOTAL)[0];
+    var points = parent.getElementsByClassName(this.CssClasses_.POINTS)[0];
+    points = points.getElementsByClassName(this.CssClasses_.FIELD_VALUE)[0];
+    
+    partialTotal.innerHTML  = quantity.value * points.innerHTML.replace(',','');
+    this.updateTotalPoints();
+  };
+
+  /**
+   * Update Total Points
+   *
+   * @private
+   */
+  FieloPLTShoppingCart.prototype.updateTotalPoints = function() {
+    var total = 0;
+    [].forEach.call(this.partialTotals_, function(points) {
+      total += Number(points.innerHTML.replace(',',''));
+    });
+    this.totalPoints_.innerHTML = total;
+  };
+
 
 
   // Public methods
@@ -272,6 +321,7 @@
     if (this.element_) {
       this.setDefaults_();
       this.addEventListeners_();
+      this.updateTotalPoints();
     }
   };
 
