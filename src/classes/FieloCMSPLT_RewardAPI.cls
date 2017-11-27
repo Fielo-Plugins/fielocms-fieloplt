@@ -8,7 +8,7 @@ global with sharing class FieloCMSPLT_RewardAPI implements FieloCMS.DataInterfac
             if(c.FieloCMS__Limit__c == null)
                 c.FieloCMS__Limit__c = 5;
 
-            FieloPLT__Member__c loggedMember = FieloCMSPLT_MemberService.getCurrentMember(new Set<String>{'FieloPLT__OrganizationFieloCMSPLT_Account__c','FieloPLT__Type__c','FieloPLT__IsManager__c'});
+            FieloPLT__Member__c loggedMember = FieloCMSPLT_MemberService.getCurrentMember(new Set<String>{'FieloPLT__OrganizationAccount__c','FieloPLT__Type__c','FieloPLT__IsManager__c'});
             Id memberId = (loggedMember.FieloPLT__Type__c == 'Organization Contributor' && loggedMember.FieloPLT__OrganizationAccount__c != null && loggedMember.FieloPLT__IsManager__c) ? loggedMember.FieloPLT__OrganizationAccount__c : loggedMember.Id;
 
             List<FieloCMSPLT_FilterService.FilterWrapper> filters = new List<FieloCMSPLT_FilterService.FilterWrapper>();            
