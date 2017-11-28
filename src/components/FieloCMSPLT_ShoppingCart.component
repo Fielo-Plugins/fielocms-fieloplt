@@ -27,14 +27,12 @@
                                     <tr class="fielo-record fielo-record-set__template">
                                         <apex:repeat value="{!$ObjectType.FieloPLT__Reward__c.FieldSets.FieloCMSPLT_ShoppingCart}" var="field">
                                             <td class="fielo-field fielo-field--is-{!field} mdl-data-table__cell--non-numeric" data-th="{!field}">
-                                                <span id="{!record.Id}{!field}" class="fielo-field__value">
-                                                    <apex:outputField value="{!record[field]}" />
-                                                </span>
+                                                <span id="{!record.Id}{!field}" class="fielo-field__value">{!record[field]}</span>
                                             </td>
                                         </apex:repeat>
                                         <td class="fielo-field fielo-field--is-ShoppingQuantity mdl-data-table__cell--non-numeric" data-th="Shopping Quantity">
                                             <span class="fielo-field__value">
-                                                <input type="number" min="0" required="required" class="fieloplt-shopping-cart__quantity js-to-be-initialized" name="quantities.{!record.Id}" value="{!quantitiesMap[record.Id]}" onchange="document.getElementById('shoppingTotal{!record.Id}').innerHTML = this.value * document.getElementById('{!record.Id}FieloPLT__Points__c').children[0].innerHTML.replace(',','');" data-attribute-replace="value"/>
+                                                <input type="number" min="0" required="required" class="fieloplt-shopping-cart__quantity js-to-be-initialized" name="quantities.{!record.Id}" value="{!quantitiesMap[record.Id]}" data-attribute-replace="value"/>
                                             </span>
                                         </td>
                                         <td class="fielo-field fielo-field--is-ShoppingTotal mdl-data-table__cell--non-numeric" data-th="Shopping Total">
@@ -51,6 +49,12 @@
                                 </apex:repeat>
                             </tbody>
                         </table>
+                    </div>
+                    <div class="fieloplt-shopping-cart__total-points">
+                        <div class="fielo-field">
+                            <span class="fielo-field__label">{!$Label.FieloCMSPLT_TotalPoints}</span>
+                            <span class="fielo-field__value"></span>
+                        </div>
                     </div>
                     <div class="fielo-controls" >
                         <a class="fielo-button fielo-button--safe fielo-button__save" >{!$Label.FieloCMSPLT_Save}</a>
