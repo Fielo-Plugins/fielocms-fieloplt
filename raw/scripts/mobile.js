@@ -87,7 +87,7 @@
    *
    * @private
    */
-  FieloPLTAddToCart.prototype.addClickHandler_ = function() {
+  FieloPLTAddToCart.prototype.addClickHandler_ = function(event) {
     event.stopPropagation();
     this.addItemToCart_();
   };
