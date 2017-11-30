@@ -22,6 +22,25 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <fields>
+        <fullName>FieloCMSPLT_Hash__c</fullName>
+        <externalId>false</externalId>
+        <label>Hash</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieloCMSPLT_ExpirationDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Expiration Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+        <unique>false</unique>
+    </fields>
     <label>Session Cache</label>
     <visibility>Protected</visibility>
 </CustomObject>

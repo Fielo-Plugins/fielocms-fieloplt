@@ -87,8 +87,8 @@
    *
    * @private
    */
-  FieloPLTAddToCart.prototype.addClickHandler_ = function() {
-    event.stopPropagation();
+  FieloPLTAddToCart.prototype.addClickHandler_ = function(click) {
+    click.stopPropagation();
     this.addItemToCart_();
   };
 
@@ -226,8 +226,8 @@
    *
    * @private
    */
-  FieloPLTShoppingCart.prototype.saveClickHandler_ = function() {
-    event.stopPropagation();
+  FieloPLTShoppingCart.prototype.saveClickHandler_ = function(click) {
+    click.stopPropagation();
     this.saveCart_();
   };
 
@@ -237,7 +237,7 @@
    * @private
    */
   FieloPLTShoppingCart.prototype.deleteClickHandler_ = function(click) {
-    event.stopPropagation();
+    click.stopPropagation();
     this.deleteItem_(click);
     this.updateTotalPoints();
   };
@@ -248,7 +248,7 @@
    * @private
    */
   FieloPLTShoppingCart.prototype.emptyClickHandler_ = function(click) {
-    event.stopPropagation();
+    click.stopPropagation();
     this.emptyCart_(click);
   };
 
@@ -611,9 +611,9 @@ function FieloPLTcheckDeleteCookie(result, event){
    *
    * @private
    */
-  FieloPLTRegisterS2.prototype.submitClickHandler_ = function(event) {
+  FieloPLTRegisterS2.prototype.submitClickHandler_ = function(click) {
     if (this.password_.value !== this.confirmPassword_.value) {
-      event.preventDefault();
+      click.preventDefault();
       fieloUtils.message.FieloMessage.clear();
       fieloUtils.message.FieloMessage.setType(this.CssClasses_.TYPE_ERROR);
       fieloUtils.message.FieloMessage.addMessages(this.errorMsg_);
