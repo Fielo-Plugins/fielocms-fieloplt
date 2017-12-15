@@ -1,12 +1,17 @@
 @isTest
 private class FieloCMSPLT_MediaServiceTest
 {
+
+    public static Account getAccount() {
+        return new Account(
+            Name = 'Test',
+        );
+    }
+
   @isTest
-  static void itShould()
-  {
-    Fielo_SObjectForTest.setAbbreviation();
+  static void itShould(){
     
-    Account lAccount = Fielo_SObjectForTest.getAccount();
+    Account lAccount = getAccount();
     insert lAccount;
 
         FieloCMSPLT_MockupFactory.setProgramAndMember();
@@ -48,9 +53,8 @@ private class FieloCMSPLT_MediaServiceTest
   @isTest
   static void itShould2()
   {
-    Fielo_SObjectForTest.setAbbreviation();
     
-    Account lAccount = Fielo_SObjectForTest.getAccount();
+    Account lAccount = getAccount();
     insert lAccount;
 
         FieloCMSPLT_MockupFactory.setProgramAndMember();
