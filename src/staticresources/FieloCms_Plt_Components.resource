@@ -1,7 +1,7 @@
 {
   "plugins" : [ {
     "Name" : "PlatformPlugin",
-    "FieloCMS__Version__c" : 1.12,
+    "FieloCMS__Version__c" : 1.13,
     "components" : [ {
       "recordTypeName" : "Record",
       "Name" : "Redemption Detail",
@@ -42,7 +42,7 @@
       "FieloCMS__Icon__c" : "fa-shopping-bag",
       "FieloCMS__Layouts__c" : "View",
       "FieloCMS__RecordType__c" : "Record",
-      "FieloCMS__Subcomponents__c" : "[     {\"apiName\": \"AddtoCart\",\"label\": \"Add to Cart\", \"reflectionClass\": \"FieloCMSPLT_RewardAPI\", \"type\": \"Subcomponent\"},{\"apiName\": \"Checkout\",\"label\": \"Checkout\", \"reflectionClass\": \"CheckoutController\", \"type\": \"Subcomponent\",\"detailUrl\":\" \"},{         \"apiName\": \"ViewImage\",         \"fieldName\": \"FieloPLT__ExternalURL__c\",         \"label\": \"ViewImage\",         \"reflectionClass\": \"FieloCMS.Subcomponents.ImageView\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     },     {         \"apiName\": \"Tags\",         \"fieldName\": \"FieloPLT__ExternalURL__c\",         \"label\": \"Tags\",         \"reflectionClass\": \"FieloCMS.TagAPI\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     } ]",
+      "FieloCMS__Subcomponents__c" : "[   {\"apiName\": \"HTML\",\"label\": \"< HTML />\", \"reflectionClass\": \"FieloCMSPLT_HTML\", \"type\": \"Subcomponent\",\"fieldName\": \"FieloPLT__Description__c\"},   {\"apiName\": \"AddtoCart\",\"label\": \"Add to Cart\", \"reflectionClass\": \"FieloCMSPLT_RewardAPI\", \"type\": \"Subcomponent\"},{\"apiName\": \"Checkout\",\"label\": \"Checkout\", \"reflectionClass\": \"CheckoutController\", \"type\": \"Subcomponent\",\"detailUrl\":\" \"},{         \"apiName\": \"ViewImage\",         \"fieldName\": \"FieloPLT__ExternalURL__c\",         \"label\": \"ViewImage\",         \"reflectionClass\": \"FieloCMS.Subcomponents.ImageView\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     },     {         \"apiName\": \"Tags\",         \"fieldName\": \"FieloPLT__ExternalURL__c\",         \"label\": \"Tags\",         \"reflectionClass\": \"FieloCMS.TagAPI\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     } ]",
       "FieloCMS__sObject__c" : "FieloPLT__Reward__c"
     }, {
       "recordTypeName" : "Record",
@@ -72,7 +72,7 @@
       "FieloCMS__Icon__c" : "fa-shopping-bag",
       "FieloCMS__Layouts__c" : "Grid;Slider;Table",
       "FieloCMS__RecordType__c" : "List",
-      "FieloCMS__Subcomponents__c" : "[     {\"apiName\": \"AddtoCart\",\"label\": \"Add to Cart\", \"reflectionClass\": \"FieloCMSPLT_RewardAPI\", \"type\": \"Subcomponent\"},{\"apiName\": \"Checkout\",\"label\": \"Checkout\", \"reflectionClass\": \"CheckoutController\", \"type\": \"Subcomponent\",\"detailUrl\":\" \"},{         \"apiName\": \"ViewImage\",         \"fieldName\": \"FieloPLT__ExternalURL__c\",         \"label\": \"ViewImage\",         \"reflectionClass\": \"FieloCMS.Subcomponents.ImageView\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     },     {         \"apiName\": \"Tags\",         \"fieldName\": \"FieloPLT__ExternalURL__c\",         \"label\": \"Tags\",         \"reflectionClass\": \"FieloCMS.TagAPI\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     } ]",
+      "FieloCMS__Subcomponents__c" : "[  {\"apiName\": \"HTML\",\"label\": \"< HTML />\", \"reflectionClass\": \"FieloCMSPLT_HTML\", \"type\": \"Subcomponent\",\"fieldName\": \"FieloPLT__Description__c\"},   {\"apiName\": \"AddtoCart\",\"label\": \"Add to Cart\", \"reflectionClass\": \"FieloCMSPLT_RewardAPI\", \"type\": \"Subcomponent\"},{\"apiName\": \"Checkout\",\"label\": \"Checkout\", \"reflectionClass\": \"CheckoutController\", \"type\": \"Subcomponent\",\"detailUrl\":\" \"},{         \"apiName\": \"ViewImage\",         \"fieldName\": \"FieloPLT__ExternalURL__c\",         \"label\": \"ViewImage\",         \"reflectionClass\": \"FieloCMS.Subcomponents.ImageView\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     },     {         \"apiName\": \"Tags\",         \"fieldName\": \"FieloPLT__ExternalURL__c\",         \"label\": \"Tags\",         \"reflectionClass\": \"FieloCMS.TagAPI\",         \"showLabel\": false,         \"type\": \"Subcomponent\"     } ]",
       "FieloCMS__sObject__c" : "FieloPLT__Reward__c"
     }, {
       "recordTypeName" : "Record",
