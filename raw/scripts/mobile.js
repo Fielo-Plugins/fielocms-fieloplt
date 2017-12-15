@@ -733,3 +733,41 @@ function FieloPLTcheckDeleteCookie(result, event){
     widget: true
   });
 })();
+
+(function() {
+  'use strict';
+
+  /**
+   * @description Constructor for rendering html
+   * FieloHTML Implements design patterns defined by MDL at
+   * {@link https://github.com/jasonmayes/mdl-component-design-pattern}
+   *
+   * @version 1
+   * @author Hugo Gómez Mac Gregor <hugo.gomez@fielo.com>
+   * @param {HTMLElement} element - Element to be upgraded
+   * @constructor
+   */
+  var FieloHTML = function FieloHTML(element) {
+    this.element_ = element;
+
+    // Initialize instance.
+    this.init();
+  };
+  window.FieloHTML = FieloHTML;
+
+  /**
+   * Inicializa el elemento
+   */
+  FieloHTML.prototype.init = function() {
+    if (this.element_) {
+      this.element_.innerHTML = this.element_.getAttribute('data-html');
+    }
+  };
+
+  componentHandler.register({
+    constructor: FieloHTML,
+    classAsString: 'FieloHTML',
+    cssClass: 'cmsplt-html',
+    widget: true
+  });
+})();
