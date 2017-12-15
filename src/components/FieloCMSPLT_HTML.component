@@ -1,0 +1,5 @@
+<apex:component  layout="none">
+	<apex:attribute name="record" type="SObject" description="" />
+  <apex:attribute name="field" type="FieloCMS.Field" description="" />
+  <div class="fielo-html">{!record[field.attributes['fieldName']]}</div>
+</apex:component>
