@@ -4,7 +4,7 @@ private class FieloCMSPLT_MediaServiceTest
 
     public static Account getAccount() {
         return new Account(
-            Name = 'Test',
+            Name = 'Test'
         );
     }
 
