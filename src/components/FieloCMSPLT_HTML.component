@@ -1,0 +1,5 @@
+<apex:component  layout="none">
+	<apex:attribute name="record" type="SObject" description="" />
+  <apex:attribute name="field" type="FieloCMS.Field" description="" />
+  <div class="cmsplt-html" data-attribute-replace="data-html" data-html="{!record[field.attributes['fieldName']]}" data-object-property="{!field.attributes['fieldName']}"></div>
+</apex:component>
