@@ -1,4 +1,3 @@
-<apex:page showHeader="false" sidebar="false" standardStylesheets="false" >
-<!--<apex:page controller="LoginAsController" showHeader="false" sidebar="false" standardStylesheets="false" action="{!login}" >-->
-	<apex:pageMessages />	
+<apex:page controller="FieloCMSPLT_LoginAsCtrl" showHeader="false" sidebar="false" standardStylesheets="false" action="{!login}" >
+    <apex:pageMessages />   
 </apex:page>
