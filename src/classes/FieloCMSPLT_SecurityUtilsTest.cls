@@ -235,7 +235,7 @@ private class FieloCMSPLT_SecurityUtilsTest {
 
     @isTest
     static void sysadmin_objectAndField_access() {
-        User testUser = setupTestUser(new Set<String>{'System Administrator','Administrador del sistema'});
+        User testUser = setupTestUser(new Set<String>{'System Administrator','Administrador del sistema', 'Administrador do sistema' });
         System.runAs(testUser){
             FieloCMSPLT_SecurityUtils.checkInsert(
                 Account.SObjectType,
