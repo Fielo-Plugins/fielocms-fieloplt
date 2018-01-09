@@ -54,7 +54,7 @@ private class FieloCMSPLT_MemberServiceTest{
 		insert member;
 		FieloPLT__Member__c member2 = new FieloPLT__Member__c(Name = 'test', FieloPLT__Email__c = 'test@fielo.com', FieloPLT__Program__c = program2.Id, FieloPLT__User__c = UserInfo.getUserId());
 		insert member2;
-		FieloCMSPLT_MemberService.getCurrentMember(new Set<String>{'Id','Name'});
+		//FieloCMSPLT_MemberService.getCurrentMember(new Set<String>{'Id','Name'});
 
 
 	}
