@@ -53,7 +53,7 @@ private class FieloCMSPLT_SecurityUtilsTest {
 
     @isTest
     static void readonly_field_access() {
-        User testUser = setupTestUser(new Set<String>{'Read Only','Sólo lectura'});
+        User testUser = setupTestUser(new Set<String>{'Read Only','Sólo lectura','Somente leitura' });
         System.runAs(testUser){
             {
                 FieloCMSPLT_SecurityUtils.SecurityException ex;
@@ -96,7 +96,7 @@ private class FieloCMSPLT_SecurityUtilsTest {
 
     @isTest
     static void readonly_object_access() {
-        User testUser = setupTestUser(new Set<String>{'Read Only','Sólo lectura'});
+        User testUser = setupTestUser(new Set<String>{'Read Only','Sólo lectura', 'Somente leitura'});
         System.runAs(testUser){
             {
                 FieloCMSPLT_SecurityUtils.SecurityException ex;
@@ -150,7 +150,7 @@ private class FieloCMSPLT_SecurityUtilsTest {
 
     @isTest
     static void readonly_objectAndField_access() {
-        User testUser = setupTestUser(new Set<String>{'Read Only','Sólo lectura'});
+        User testUser = setupTestUser(new Set<String>{'Read Only','Sólo lectura', 'Somente leitura'});
         System.runAs(testUser){
             {
                 FieloCMSPLT_SecurityUtils.SecurityException ex;
