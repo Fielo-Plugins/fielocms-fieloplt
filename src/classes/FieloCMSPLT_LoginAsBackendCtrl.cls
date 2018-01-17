@@ -74,7 +74,7 @@ public with sharing class FieloCMSPLT_LoginAsBackendCtrl {
             if (siteURL.indexOf('https://') < 0){
                 siteURL = 'https://' + siteURL;
             }
-            retPage = new PageReference(siteURL + 'LoginAs');
+            retPage = new PageReference(siteURL + 'FieloCMSPLT_LoginAs');
             retPage.getParameters().put('testUser',siteUser.Id);        
             retPage.getParameters().put('hash',fe.FieloCMSPLT_Hash__c);
         } else {
