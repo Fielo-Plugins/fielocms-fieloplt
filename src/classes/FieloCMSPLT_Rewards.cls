@@ -13,7 +13,7 @@ public class FieloCMSPLT_Rewards extends FieloCMSPLT_SObjectDomain {
   	}
   
   	public override void onAfterDelete(){
-    	FieloCMS.CategoryService.updateCounters( records, -1);
+    	FieloCMS.CategoryService.updateCounters( records, -1, 'FieloCMSPLT_Category__c');
   	}
 
 	public class Constructor implements FieloCMSPLT_SObjectDomain.IConstructable{
