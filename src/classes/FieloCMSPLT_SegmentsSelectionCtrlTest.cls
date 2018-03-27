@@ -45,8 +45,8 @@ private class FieloCMSPLT_SegmentsSelectionCtrlTest {
 
 
 		List<String> segmentos = new List<String>();
-		segmentos.add(String.valueOf(segment2));
-		segmentos.add(String.valueOf(segment));
+		segmentos.add(String.valueOf(segment2.Id));
+		segmentos.add(String.valueOf(segment.Id));
 		FieloCMSPLT_SegmentsSelectionCtrl.getMetaSegmentId(segmentos, program.Id);
 
 	}
