@@ -24,7 +24,8 @@ global with sharing class FieloCMSPLT_RedemptionItemAPI implements FieloCMS.Data
     }
 
     global List<sObject> getData(FieloCMS__Component__c component, Integer pageNumber, String orderBy, String filters){        
-        
+        Map<String,Schema.SObjectField> redemptionItemFieldMap = Schema.SObjectType.FieloPLT__RedemptionItem__c.fields.getMap();
+
         if(component.FieloCMS__Limit__c == null)
             component.FieloCMS__Limit__c = 5;
 
@@ -46,6 +47,16 @@ global with sharing class FieloCMSPLT_RedemptionItemAPI implements FieloCMS.Data
 
         whereCondition += ' LIMIT ' + String.valueOf(component.FieloCMS__Limit__c);
         whereCondition += ' OFFSET ' + String.valueOf(offset);
-        return Database.query('SELECT ' + String.join(new List<String>(FieloCMSPLT_OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c)), ',') + ' FROM FieloPLT__RedemptionItem__c WHERE ' + whereCondition);
+
+        Set<String> fieldSet = new Set<String>();
+        for (String fieldName : FieloCMSPLT_OrganizationUtil.getFieldSet(component.FieloCMS__FieldSet__c)) {
+            if ( redemptionItemFieldMap.containsKey(fieldName) && redemptionItemFieldMap.get(fieldName).getDescribe().getType().name().toLowerCase() == 'picklist') {
+                fieldSet.add( 'toLabel(' + fieldName + ') ' + fieldName );
+            } else {
+                fieldSet.add(fieldName);
+            }
+        }
+
+        return Database.query('SELECT ' + String.join(new List<String>(fieldSet), ',') + ' FROM FieloPLT__RedemptionItem__c WHERE ' + whereCondition);
     }
 }
